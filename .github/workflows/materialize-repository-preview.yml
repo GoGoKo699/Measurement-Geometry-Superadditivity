@@ -1,0 +1,66 @@
+name: Materialize repository preview
+on:
+  push:
+    branches: [reader/project-site-v1]
+    paths: [.github/workflows/materialize-repository-preview.yml]
+permissions:
+  contents: write
+concurrency:
+  group: materialize-repository-preview
+  cancel-in-progress: false
+jobs:
+  materialize:
+    if: github.repository == 'GoGoKo699/Measurement-Geometry-Superadditivity'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: reader/project-site-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13.5'
+      - name: Generate reading pages without modifying science
+        run: |
+          python website/repository_preview.py --write
+          python website/repository_preview.py --check
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json
+          p=Path('README.md');s=p.read_text()
+          start=s.index('## Read the project')
+          end=s.index('A qubit either arrives intact',start)
+          introduction='''## Read the project directly on GitHub
+
+          **[Open the project overview](reader/README.md)** · **[Figure atlas](reader/figures.md)** · **[Gachet palette comparison](reader/visual-design.md)**
+
+          No ZIP download, installation or local server is needed for these reading pages. Follow the channel, proof guide, figures and source materials inside this private repository. The exact model and complete proof remain their original canonical documents, linked directly rather than rewritten.
+
+          [The channel](reader/channel.md) · [The proof route](reader/proof-guide.md) · [Scope and limits](reader/limits.md) · [Verification](reader/verification.md) · [All source materials](reader/materials.md)
+
+          The GitHub view shows the Gachet-inspired color study alongside links to the unchanged approved originals. It uses GitHub's Markdown, equation and image rendering. The separate custom HTML website still provides its own navigation, local search and interactive color switch; GitHub does not execute that interface inside a repository file page. See [website instructions](WEBSITE.md). Public hosting remains disabled, and manuscript drafting remains the final stage.
+
+          '''
+          s=s[:start]+introduction+s[end:]
+          s=s.replace('](figures/approved/figure_01_channel_and_witness_preview.png)','](reader/assets/figure_01_channel_and_witness.svg)')
+          p.write_text(s)
+          p=Path('STATUS.md');s=p.read_text()
+          needle='The site is built locally or as a private CI artifact; source-repository privacy is not a substitute for a website-access decision.'
+          replacement='The [project overview](reader/README.md), [figure atlas](reader/figures.md) and reading routes are available directly on GitHub. The custom HTML version can still be built locally or as a private CI artifact; public hosting remains a separate decision.'
+          if needle in s:s=s.replace(needle,replacement)
+          p.write_text(s)
+          p=Path('BASELINE_MANIFEST.json');m=json.loads(p.read_text())
+          for name in ['README.md','STATUS.md']:
+              m['files'][name]=hashlib.sha256(Path(name).read_bytes()).hexdigest()
+          p.write_text(json.dumps(m,indent=2,ensure_ascii=False)+'\n')
+          PY
+          python verify.py
+      - name: Commit only the reviewed preview and navigation
+        run: |
+          git fetch origin reader/project-site-v1
+          test "$(git rev-parse HEAD)" = "$(git rev-parse origin/reader/project-site-v1)"
+          git add -- reader README.md STATUS.md BASELINE_MANIFEST.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Make project reading routes and Gachet figures visible directly in the private repository'
+          git push origin HEAD:reader/project-site-v1
