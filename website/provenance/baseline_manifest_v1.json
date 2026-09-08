@@ -4,8 +4,8 @@
   "files": {
     ".gitignore": "474e99c1c59393bc0980720112c357c15a3caaf21ca51e1cb9a09bb973513da5",
     "ENVIRONMENT.json": "cc47f63afd139bb206ef106cd9510309afb1a788bcce902a422438570c56e336",
-    "README.md": "2864e6357b308c8a77e7e1e65b0eda802aa3d6cc52fd276e693e06af114bbaa4",
-    "STATUS.md": "7ef708030ad3d76f2e8c593beebc807c46e7694b7142fad5e91ea12ade38ca73",
+    "README.md": "e5aee7d52a7c4432ea0cfaf446bfda0fdad0113214c0a261e28934a821d62502",
+    "STATUS.md": "d8deea89e19e4b07ec41825bc9ed1e14634a62b2042ac161997c6181702a7efd",
     "baseline_tools.py": "be338f6c57f3f6524518246d6be7fb4e236b008faa88d3cb213d2ebc24196795",
     "certificates/common_noise_compact_certificate.json": "ab500804e56ba8c5ffb1ca7c1f38e3fd720b01561122b3a2bcc367a106ad66dd",
     "data/figures/BUILD_RECORD.json": "598638cffafc17d13b2a48166b5c03e65cbe80c722b01abacdade82c70626480",
@@ -168,15 +168,5 @@
     "verification/physical/physical_check.py": "aba22216e33bd4b132ef100a823131a1a3ec7aacd78e7815cc63e3eae5ce0db5",
     "verify.py": "95d71e42bcab78796ce6d6261defee9009536122198967cad9ab17e6fa72e585"
   },
-  "scope": "Complete clean scientific baseline; generated check outputs are kept outside the root or under ignored build/.",
-  "reader_edition": {
-    "date": "2026-09-08",
-    "baseline_commit": "9a1e4cb3bad843db9cec1fa348870ca7162df0e0",
-    "only_changed_baseline_members": [
-      "README.md",
-      "STATUS.md"
-    ],
-    "previous_manifest": "website/provenance/baseline_manifest_v1.json",
-    "scientific_members_unchanged": true
-  }
+  "scope": "Complete clean scientific baseline; generated check outputs are kept outside the root or under ignored build/."
 }

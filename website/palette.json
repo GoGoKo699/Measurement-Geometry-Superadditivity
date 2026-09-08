@@ -1,0 +1,44 @@
+{
+  "name": "Gachet study v1",
+  "status": "reader-site color study; approved scientific exports unchanged",
+  "reference": {
+    "requested_url": "https://en.wikipedia.org/wiki/Portrait_of_Dr._Gachet",
+    "chosen_version": "first version",
+    "viewed_reproduction": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Portrait_of_Dr._Gachet.jpg",
+    "viewed_date": "2026-09-08",
+    "method": "manually chosen visual interpretation, not pixel sampling or pigment measurement",
+    "painting_embedded": false
+  },
+  "roles": {
+    "ink": "#24343D",
+    "indigo": "#304E66",
+    "rust": "#A34E38",
+    "sage": "#658B7A",
+    "sage_ink": "#436856",
+    "yellow": "#DDC465",
+    "paper": "#F7F4EC",
+    "white": "#FFFFFF",
+    "muted": "#59676C",
+    "mist": "#E8EFEA",
+    "rule": "#CED9D3"
+  },
+  "svg_mapping": {
+    "#1b4264": "#304e66",
+    "#177d89": "#a34e38",
+    "#25313b": "#24343d",
+    "#66727c": "#59676c",
+    "#dcedef": "#dee9df",
+    "#edf2f5": "#e8efea",
+    "#d5dee4": "#ced9d3",
+    "#f7f9fa": "#f7f4ec"
+  },
+  "preserve": [
+    "all numerical inputs",
+    "SVG geometry and text paths",
+    "opacity values",
+    "line patterns and marker shapes",
+    "white drawing backgrounds",
+    "approved file bytes",
+    "captions and source assignments"
+  ]
+}

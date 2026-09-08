@@ -1,0 +1,129 @@
+{
+  "base_commit": "9a1e4cb3bad843db9cec1fa348870ca7162df0e0",
+  "repository": "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity",
+  "title": "Measurement Geometry",
+  "subtitle": "Coherent-information superadditivity",
+  "website_date": "2026-09-08",
+  "deployment": "disabled",
+  "pages": [
+    {
+      "slug": "index",
+      "source": "website/pages/index.md",
+      "title": "The project",
+      "group": "Understand",
+      "next": "channel"
+    },
+    {
+      "slug": "channel",
+      "source": "website/pages/channel.md",
+      "title": "The channel",
+      "group": "Understand",
+      "next": "proof-guide"
+    },
+    {
+      "slug": "proof-guide",
+      "source": "website/pages/proof-guide.md",
+      "title": "The proof route",
+      "group": "Understand",
+      "next": "figures"
+    },
+    {
+      "slug": "figures",
+      "source": "website/pages/figures.md",
+      "title": "Figure atlas",
+      "group": "Understand",
+      "next": "limits"
+    },
+    {
+      "slug": "limits",
+      "source": "website/pages/limits.md",
+      "title": "Scope and limits",
+      "group": "Understand",
+      "next": "model"
+    },
+    {
+      "slug": "model",
+      "source": "docs/MODEL_AND_CLAIMS.md",
+      "title": "Exact model and theorem",
+      "group": "Check the result",
+      "canonical": true,
+      "next": "proof"
+    },
+    {
+      "slug": "proof",
+      "source": "docs/COMPLETE_PROOF.md",
+      "title": "Complete proof",
+      "group": "Check the result",
+      "canonical": true,
+      "next": "verification"
+    },
+    {
+      "slug": "verification",
+      "source": "website/pages/verification.md",
+      "title": "Verification guide",
+      "group": "Check the result",
+      "next": "reproduce"
+    },
+    {
+      "slug": "reproduce",
+      "source": "docs/REPRODUCTION.md",
+      "title": "Exact reproduction commands",
+      "group": "Check the result",
+      "canonical": true,
+      "next": "references"
+    },
+    {
+      "slug": "references",
+      "source": "docs/REFERENCES.md",
+      "title": "References and their roles",
+      "group": "Check the result",
+      "canonical": true,
+      "next": "materials"
+    },
+    {
+      "slug": "materials",
+      "source": "website/pages/materials.md",
+      "title": "Source materials",
+      "group": "Use the materials",
+      "next": "status"
+    },
+    {
+      "slug": "notation",
+      "source": "docs/NOTATION_CROSSWALK.md",
+      "title": "Notation crosswalk",
+      "group": "Use the materials",
+      "canonical": true,
+      "next": "provenance"
+    },
+    {
+      "slug": "provenance",
+      "source": "docs/SOURCE_TO_CANONICAL.md",
+      "title": "Source and proof ledger",
+      "group": "Use the materials",
+      "canonical": true,
+      "next": "materials"
+    },
+    {
+      "slug": "argument",
+      "source": "docs/FROZEN_ARGUMENT.md",
+      "title": "Frozen scientific argument",
+      "group": "Use the materials",
+      "canonical": true,
+      "next": "materials"
+    },
+    {
+      "slug": "visual-design",
+      "source": "website/pages/visual-design.md",
+      "title": "Visual design",
+      "group": "About this site",
+      "next": "status"
+    },
+    {
+      "slug": "status",
+      "source": "website/pages/status.md",
+      "title": "Status and publication",
+      "group": "About this site",
+      "next": null
+    }
+  ]
+}
