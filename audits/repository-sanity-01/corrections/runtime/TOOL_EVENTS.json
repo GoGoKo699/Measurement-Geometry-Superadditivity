@@ -1,0 +1,7 @@
+{
+  "event": "Pandoc download session polling returned a tool error",
+  "tool": "write_stdin",
+  "session_id": 48037,
+  "message": "Unified exec process failed: network approval was cancelled before a decision was returned",
+  "interpretation": "This tool-level polling message is distinct from the completed subprocess result. The command recorder preserved curl return code 28 after 10.032130018997123 seconds and its Proxy CONNECT timeout stderr. No approval bypass or alternative restricted route was attempted."
+}

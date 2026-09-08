@@ -1,0 +1,10 @@
+{
+  "system_chromium": null,
+  "system_chromium_browser": null,
+  "system_google_chrome": null,
+  "playwright_chromium_path": "/root/.cache/ms-playwright/chromium-1200/chrome-linux64/chrome",
+  "playwright_chromium_exists": false,
+  "headless_shell_cache_paths": []
+}
+
+STDERR:

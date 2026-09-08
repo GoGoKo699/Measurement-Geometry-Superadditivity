@@ -1,0 +1,118 @@
+{
+  "passed": true,
+  "html_pages": 16,
+  "local_links_checked": 1035,
+  "external_links_not_fetched": 4,
+  "mathml_expressions": 664,
+  "canonical_sources": [
+    {
+      "source": "docs/MODEL_AND_CLAIMS.md",
+      "sha256": "02d9a34156d41f985df3bbcf8a728e9d2e550a498bb4e6d75c68366506c37b60",
+      "displayed_equations_retained": 18
+    },
+    {
+      "source": "docs/COMPLETE_PROOF.md",
+      "sha256": "dbc758b3d26d57815a70ac89d58a3996f9b3c7eb781a1de7d74e386e185033fa",
+      "displayed_equations_retained": 119
+    },
+    {
+      "source": "docs/REPRODUCTION.md",
+      "sha256": "1cb7447bcdd1475aad9f30f71868d8c0615acb2cba9c9f6bd22f05a9bc962526",
+      "displayed_equations_retained": 0
+    },
+    {
+      "source": "docs/REFERENCES.md",
+      "sha256": "bc79394fe8c349bc8415abe831cc0ab4c65ec181c67917d7a1c6168f33be5a9f",
+      "displayed_equations_retained": 0
+    },
+    {
+      "source": "docs/NOTATION_CROSSWALK.md",
+      "sha256": "3dc137c0cc419ca08ca996759bd76243c48e3932e6615277d73e329ab86772d8",
+      "displayed_equations_retained": 0
+    },
+    {
+      "source": "docs/SOURCE_TO_CANONICAL.md",
+      "sha256": "1bc1db9751dbdf3da8ef8841c1b4a40f5a2b4441006e0164b8a05a444375b2ff",
+      "displayed_equations_retained": 0
+    },
+    {
+      "source": "docs/FROZEN_ARGUMENT.md",
+      "sha256": "bdada1edb06c814ea563068317e38c09c3d96dfe539bbddf7523bd0a49ca2ad7",
+      "displayed_equations_retained": 1
+    }
+  ],
+  "palette_text_contrasts": [
+    {
+      "foreground": "ink",
+      "background": "paper",
+      "contrast": 11.695882755554589,
+      "at_least_4_5": true
+    },
+    {
+      "foreground": "muted",
+      "background": "paper",
+      "contrast": 5.3348619788933425,
+      "at_least_4_5": true
+    },
+    {
+      "foreground": "indigo",
+      "background": "paper",
+      "contrast": 7.936852261114904,
+      "at_least_4_5": true
+    },
+    {
+      "foreground": "rust",
+      "background": "paper",
+      "contrast": 5.15806473522964,
+      "at_least_4_5": true
+    },
+    {
+      "foreground": "sage_ink",
+      "background": "paper",
+      "contrast": 5.6980052112343405,
+      "at_least_4_5": true
+    },
+    {
+      "foreground": "white",
+      "background": "indigo",
+      "contrast": 8.723490718145428,
+      "at_least_4_5": true
+    },
+    {
+      "foreground": "ink",
+      "background": "yellow",
+      "contrast": 7.442678114892642,
+      "at_least_4_5": true
+    },
+    {
+      "foreground": "muted",
+      "background": "mist",
+      "contrast": 5.016421471006098,
+      "at_least_4_5": true
+    }
+  ],
+  "color_only_svg_derivatives": 10,
+  "source_preservation": {
+    "baseline_commit": "9a1e4cb3bad843db9cec1fa348870ca7162df0e0",
+    "baseline_members_byte_unchanged": 154,
+    "baseline_members_with_verified_editorial_corrections": 9,
+    "corrected_documentary_members": 5,
+    "updated_documentary_identity_members": 4,
+    "editorially_corrected_files": [
+      "data/figures/BUILD_RECORD.json",
+      "data/figures/SOURCE_IDENTITY.json",
+      "docs/MODEL_AND_CLAIMS.md",
+      "docs/REFERENCES.md",
+      "docs/SOURCE_TO_CANONICAL.md",
+      "figures/FIGURE_SPECIFICATIONS.md",
+      "provenance/CANONICAL_INPUTS.json",
+      "provenance/FIGURE_INPUTS.json",
+      "provenance/SECTION_LEDGER.json"
+    ],
+    "approved_graphical_artifacts_unchanged": 27,
+    "original_root_documents_preserved": true
+  },
+  "no_public_deployment": true,
+  "new_math_verification": false,
+  "browser_checks_separate": true
+}

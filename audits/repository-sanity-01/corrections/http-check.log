@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "mode": "actual loopback HTTP; no browser or JavaScript execution",
+  "bound_host": "127.0.0.1",
+  "resources_checked": 108,
+  "returned_bytes": 6397725,
+  "every_response_byte_identical_to_local_file": true,
+  "third_party_requests": 0
+}

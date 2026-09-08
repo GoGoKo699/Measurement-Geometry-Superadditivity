@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "pinned_commit": "f0015c56a19fd953c6797b2c64d9b507105234e3",
+  "pinned_files_checked": 208,
+  "pinned_files_byte_unchanged": 191,
+  "authorized_changed_files": [
+    "BASELINE_MANIFEST.json",
+    "STATUS.md",
+    "WEBSITE.md",
+    "data/figures/BUILD_RECORD.json",
+    "data/figures/SOURCE_IDENTITY.json",
+    "docs/MODEL_AND_CLAIMS.md",
+    "docs/REFERENCES.md",
+    "docs/SOURCE_TO_CANONICAL.md",
+    "figures/FIGURE_SPECIFICATIONS.md",
+    "provenance/CANONICAL_INPUTS.json",
+    "provenance/FIGURE_INPUTS.json",
+    "provenance/SECTION_LEDGER.json",
+    "reader/PREVIEW_MANIFEST.json",
+    "reader/status.md",
+    "website/build.py",
+    "website/pages/status.md",
+    "website/tests/test_default_style.py"
+  ],
+  "corrected_data_paths": [
+    "data/figures/figure1_comparison.csv",
+    "data/figures/figure1_original_witness140.json",
+    "data/figures/figure1_all_masks_not_for_display.csv",
+    "data/figures/figure2_pauli_guaranteed_region.csv",
+    "data/figures/cross_figure_witness_bound_check.json",
+    "data/figures/figure3_cone_gap.csv",
+    "data/figures/figure3_cone_geometry.csv",
+    "data/figures/figure3_small_lambda_controls_not_for_display.csv"
+  ],
+  "historical_audit_records_unchanged": 145,
+  "approved_graphics_byte_unchanged": 27,
+  "figure_input_files_byte_unchanged": [
+    "data/figures/cross_figure_witness_bound_check.json",
+    "data/figures/figure1_all_masks_not_for_display.csv",
+    "data/figures/figure1_comparison.csv",
+    "data/figures/figure1_original_witness140.json",
+    "data/figures/figure2_pauli_guaranteed_region.csv",
+    "data/figures/figure3_cone_gap.csv",
+    "data/figures/figure3_cone_geometry.csv",
+    "data/figures/figure3_small_lambda_controls_not_for_display.csv"
+  ],
+  "figure_source_identity_only": "updated model-document digest and dependent manifest digest",
+  "browser_validation": "not performed by this script"
+}

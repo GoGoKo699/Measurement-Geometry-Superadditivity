@@ -23,11 +23,11 @@
   "source_hashes": {
     "docs/COMPLETE_PROOF.md": "dbc758b3d26d57815a70ac89d58a3996f9b3c7eb781a1de7d74e386e185033fa",
     "docs/FROZEN_ARGUMENT.md": "bdada1edb06c814ea563068317e38c09c3d96dfe539bbddf7523bd0a49ca2ad7",
-    "docs/MODEL_AND_CLAIMS.md": "e15b0f0e64755ae2f6c707b467eb495045ebe13985c9990da506807b265cb708",
+    "docs/MODEL_AND_CLAIMS.md": "02d9a34156d41f985df3bbcf8a728e9d2e550a498bb4e6d75c68366506c37b60",
     "docs/NOTATION_CROSSWALK.md": "3dc137c0cc419ca08ca996759bd76243c48e3932e6615277d73e329ab86772d8",
-    "docs/REFERENCES.md": "25a57ce2595a27f3578e698e2cfaa119599c5b3f2452fadf9c91bb5276250c7f",
+    "docs/REFERENCES.md": "bc79394fe8c349bc8415abe831cc0ab4c65ec181c67917d7a1c6168f33be5a9f",
     "docs/REPRODUCTION.md": "1cb7447bcdd1475aad9f30f71868d8c0615acb2cba9c9f6bd22f05a9bc962526",
-    "docs/SOURCE_TO_CANONICAL.md": "6dc411858dc78e346b2a75e06b1e2871eb739051abe289ee74959c6442e4033f",
+    "docs/SOURCE_TO_CANONICAL.md": "1bc1db9751dbdf3da8ef8841c1b4a40f5a2b4441006e0164b8a05a444375b2ff",
     "figures/CAPTIONS.md": "e3d73825b33c7113eb2123ff2407acd63ccaad1b67a517589f7361ec9457e60b",
     "figures/approved/figure_01_channel_and_witness.svg": "ddd3ab75087861ac8940d89f6ce1f3f79967159647d89b80862fe9d581c1b261",
     "figures/approved/figure_02_guaranteed_region.svg": "91f5034233d395f5571c2a7af3740154b88c52af3df3e35e6acb812f10ab04ea",
@@ -39,7 +39,7 @@
     "website/pages/limits.md": "776c2d88bbbd814884e80ceb99c057f03c49a9ca74460576c0d2ff2b9a6b6c23",
     "website/pages/materials.md": "a974f20bcb32c2b272a29e629813963e5f04b89c11b4c98cb745af789ae52919",
     "website/pages/proof-guide.md": "4e3b80734de41674952aef4ae644c2210a8ae8224d70fe91d5366544500e9fd9",
-    "website/pages/status.md": "d40a0041ca798e83ef1ddea03dc6bf9c15cb9275c739d4df5bbf3e6ca53e6c4b",
+    "website/pages/status.md": "a1bb71b35d5a77d226df8cadb2a9dd6088be4900b9c8bb9aad0673f76859cade",
     "website/pages/verification.md": "4c93169aafc06dcdfb9eff418c6ccd4b07d8fc9d9d08f4218945a84f44e9f959",
     "website/pages/visual-design.md": "fc2c2ccdbe669d81283e878917862eb7b6c54a4b0cff5718f36d8f5d0b2cb1f0",
     "website/palette.json": "1e7c478696a2a6c4dd4b79404558edbe2f9869fb53b622b7c8e19158d88f2935"
@@ -54,7 +54,7 @@
     "reader/limits.md": "f3cea6a7f0b731c1d5933e7642d871274e82777d1416348ad372d6cf15979dbc",
     "reader/materials.md": "8222c02b9531417783685c7e7099644ffdbf3f6c6a1799b9a792e6db90104a73",
     "reader/proof-guide.md": "6d02d005f598f7cee43456ae4c17f54a722aaac0a892f05ce2d6c27ba80babfe",
-    "reader/status.md": "146fdf8dde47cb12bdbc6a47c3b32a4bf3892ee7fec10434a21ffbe36a6105ba",
+    "reader/status.md": "d3c3569f2186a19360e62f0c05423139e4eac609d394770f1a1dbd0b1b385b6a",
     "reader/verification.md": "fcf13c90bdf51cfebfb4e90181819c1310339b904758df4266457a2a025cfdfa",
     "reader/visual-design.md": "72580f17cd185718088547b2f432955a66ce0baa07880b72f269d3a519bc1871"
   },

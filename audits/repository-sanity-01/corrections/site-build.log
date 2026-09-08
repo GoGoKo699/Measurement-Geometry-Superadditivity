@@ -1,0 +1,26 @@
+{
+  "pages": 16,
+  "themed_svg_files": 10,
+  "mathml_expressions": 664,
+  "baseline_preservation": {
+    "baseline_commit": "9a1e4cb3bad843db9cec1fa348870ca7162df0e0",
+    "baseline_members_byte_unchanged": 154,
+    "baseline_members_with_verified_editorial_corrections": 9,
+    "corrected_documentary_members": 5,
+    "updated_documentary_identity_members": 4,
+    "editorially_corrected_files": [
+      "data/figures/BUILD_RECORD.json",
+      "data/figures/SOURCE_IDENTITY.json",
+      "docs/MODEL_AND_CLAIMS.md",
+      "docs/REFERENCES.md",
+      "docs/SOURCE_TO_CANONICAL.md",
+      "figures/FIGURE_SPECIFICATIONS.md",
+      "provenance/CANONICAL_INPUTS.json",
+      "provenance/FIGURE_INPUTS.json",
+      "provenance/SECTION_LEDGER.json"
+    ],
+    "approved_graphical_artifacts_unchanged": 27,
+    "original_root_documents_preserved": true
+  },
+  "output": "/workspace/scratch/323c19becda4/audit-work/build/audit-corrections-site"
+}

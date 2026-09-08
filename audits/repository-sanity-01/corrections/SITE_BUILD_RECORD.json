@@ -1,0 +1,246 @@
+{
+  "site_version": "reader-site-v1",
+  "date": "2026-09-08",
+  "base_commit": "9a1e4cb3bad843db9cec1fa348870ca7162df0e0",
+  "private_review_only": true,
+  "public_deployment_performed": false,
+  "canonical_materials": {
+    "baseline_commit": "9a1e4cb3bad843db9cec1fa348870ca7162df0e0",
+    "baseline_members_byte_unchanged": 154,
+    "baseline_members_with_verified_editorial_corrections": 9,
+    "corrected_documentary_members": 5,
+    "updated_documentary_identity_members": 4,
+    "editorially_corrected_files": [
+      "data/figures/BUILD_RECORD.json",
+      "data/figures/SOURCE_IDENTITY.json",
+      "docs/MODEL_AND_CLAIMS.md",
+      "docs/REFERENCES.md",
+      "docs/SOURCE_TO_CANONICAL.md",
+      "figures/FIGURE_SPECIFICATIONS.md",
+      "provenance/CANONICAL_INPUTS.json",
+      "provenance/FIGURE_INPUTS.json",
+      "provenance/SECTION_LEDGER.json"
+    ],
+    "approved_graphical_artifacts_unchanged": 27,
+    "original_root_documents_preserved": true
+  },
+  "pages": [
+    {
+      "page": "index.html",
+      "source": "website/pages/index.md",
+      "source_sha256": "413c28df80bb3d3f47ae7e958b82be602dfcdaccd08c6f56ed563aa352bb2695",
+      "canonical_source_rendered": false,
+      "heading_count": 4,
+      "mathml_count": 7
+    },
+    {
+      "page": "channel.html",
+      "source": "website/pages/channel.md",
+      "source_sha256": "a56337a60f12179c19740016b66f0878f0a336a0e7a1e15459c805ca30c46518",
+      "canonical_source_rendered": false,
+      "heading_count": 4,
+      "mathml_count": 21
+    },
+    {
+      "page": "proof-guide.html",
+      "source": "website/pages/proof-guide.md",
+      "source_sha256": "4e3b80734de41674952aef4ae644c2210a8ae8224d70fe91d5366544500e9fd9",
+      "canonical_source_rendered": false,
+      "heading_count": 4,
+      "mathml_count": 20
+    },
+    {
+      "page": "figures.html",
+      "source": "website/pages/figures.md",
+      "source_sha256": "418cca686bef24b9d2d9900144fa27b607b9bff1f326c806dfbfe5dd48a84086",
+      "canonical_source_rendered": false,
+      "heading_count": 4,
+      "mathml_count": 37
+    },
+    {
+      "page": "limits.html",
+      "source": "website/pages/limits.md",
+      "source_sha256": "776c2d88bbbd814884e80ceb99c057f03c49a9ca74460576c0d2ff2b9a6b6c23",
+      "canonical_source_rendered": false,
+      "heading_count": 5,
+      "mathml_count": 7
+    },
+    {
+      "page": "model.html",
+      "source": "docs/MODEL_AND_CLAIMS.md",
+      "source_sha256": "02d9a34156d41f985df3bbcf8a728e9d2e550a498bb4e6d75c68366506c37b60",
+      "canonical_source_rendered": true,
+      "heading_count": 1,
+      "mathml_count": 108
+    },
+    {
+      "page": "proof.html",
+      "source": "docs/COMPLETE_PROOF.md",
+      "source_sha256": "dbc758b3d26d57815a70ac89d58a3996f9b3c7eb781a1de7d74e386e185033fa",
+      "canonical_source_rendered": true,
+      "heading_count": 1,
+      "mathml_count": 373
+    },
+    {
+      "page": "verification.html",
+      "source": "website/pages/verification.md",
+      "source_sha256": "4c93169aafc06dcdfb9eff418c6ccd4b07d8fc9d9d08f4218945a84f44e9f959",
+      "canonical_source_rendered": false,
+      "heading_count": 5,
+      "mathml_count": 0
+    },
+    {
+      "page": "reproduce.html",
+      "source": "docs/REPRODUCTION.md",
+      "source_sha256": "1cb7447bcdd1475aad9f30f71868d8c0615acb2cba9c9f6bd22f05a9bc962526",
+      "canonical_source_rendered": true,
+      "heading_count": 6,
+      "mathml_count": 0
+    },
+    {
+      "page": "references.html",
+      "source": "docs/REFERENCES.md",
+      "source_sha256": "bc79394fe8c349bc8415abe831cc0ab4c65ec181c67917d7a1c6168f33be5a9f",
+      "canonical_source_rendered": true,
+      "heading_count": 4,
+      "mathml_count": 2
+    },
+    {
+      "page": "materials.html",
+      "source": "website/pages/materials.md",
+      "source_sha256": "a974f20bcb32c2b272a29e629813963e5f04b89c11b4c98cb745af789ae52919",
+      "canonical_source_rendered": false,
+      "heading_count": 5,
+      "mathml_count": 0
+    },
+    {
+      "page": "notation.html",
+      "source": "docs/NOTATION_CROSSWALK.md",
+      "source_sha256": "3dc137c0cc419ca08ca996759bd76243c48e3932e6615277d73e329ab86772d8",
+      "canonical_source_rendered": true,
+      "heading_count": 1,
+      "mathml_count": 78
+    },
+    {
+      "page": "provenance.html",
+      "source": "docs/SOURCE_TO_CANONICAL.md",
+      "source_sha256": "1bc1db9751dbdf3da8ef8841c1b4a40f5a2b4441006e0164b8a05a444375b2ff",
+      "canonical_source_rendered": true,
+      "heading_count": 45,
+      "mathml_count": 0
+    },
+    {
+      "page": "argument.html",
+      "source": "docs/FROZEN_ARGUMENT.md",
+      "source_sha256": "bdada1edb06c814ea563068317e38c09c3d96dfe539bbddf7523bd0a49ca2ad7",
+      "canonical_source_rendered": true,
+      "heading_count": 0,
+      "mathml_count": 11
+    },
+    {
+      "page": "visual-design.html",
+      "source": "website/pages/visual-design.md",
+      "source_sha256": "fc2c2ccdbe669d81283e878917862eb7b6c54a4b0cff5718f36d8f5d0b2cb1f0",
+      "canonical_source_rendered": false,
+      "heading_count": 3,
+      "mathml_count": 0
+    },
+    {
+      "page": "status.html",
+      "source": "website/pages/status.md",
+      "source_sha256": "a1bb71b35d5a77d226df8cadb2a9dd6088be4900b9c8bb9aad0673f76859cade",
+      "canonical_source_rendered": false,
+      "heading_count": 6,
+      "mathml_count": 0
+    }
+  ],
+  "themed_svgs": [
+    {
+      "source": "figures/approved/figure_01_channel_and_witness.svg",
+      "source_sha256": "ddd3ab75087861ac8940d89f6ce1f3f79967159647d89b80862fe9d581c1b261",
+      "output": "assets/theme/figure_01_channel_and_witness.svg",
+      "output_sha256": "ae55000c4817410b942b56e633f737782092a151b529511c92813d3928691ede",
+      "changed_color_occurrences": 115,
+      "only_declared_colors_changed": true
+    },
+    {
+      "source": "figures/approved/figure_02_guaranteed_region.svg",
+      "source_sha256": "91f5034233d395f5571c2a7af3740154b88c52af3df3e35e6acb812f10ab04ea",
+      "output": "assets/theme/figure_02_guaranteed_region.svg",
+      "output_sha256": "f6524780413bd0c6b75ab7373303dcc124d6ff0f98d6a72b99338b4539489d17",
+      "changed_color_occurrences": 87,
+      "only_declared_colors_changed": true
+    },
+    {
+      "source": "figures/approved/figure_03_coplanar_limit.svg",
+      "source_sha256": "a5a8fe378f3eb573a6d5b02fae2aa67d291e6232440ec8798bf7a477e76584cd",
+      "output": "assets/theme/figure_03_coplanar_limit.svg",
+      "output_sha256": "9143ac8065b44da015c84ac93f8f77b7c4d765c8941d01140519d9e9bbffb55b",
+      "changed_color_occurrences": 110,
+      "only_declared_colors_changed": true
+    },
+    {
+      "source": "figures/approved/panels/figure1a_channel.svg",
+      "source_sha256": "8e867f1025b9b5a2bc3185d7d8c4c394401a20e1b9420e882b0a0366f5229462",
+      "output": "assets/theme/panels/figure1a_channel.svg",
+      "output_sha256": "ec180a0a759b35e5df4736757f754aedaf95c715a7263d00eaa3b57c46063bec",
+      "changed_color_occurrences": 73,
+      "only_declared_colors_changed": true
+    },
+    {
+      "source": "figures/approved/panels/figure1b_witness.svg",
+      "source_sha256": "215769a12cd9cfefaed4bcf51b5eeb93588b639c8884a1eac4f39c7a6c710233",
+      "output": "assets/theme/panels/figure1b_witness.svg",
+      "output_sha256": "2529a295105280c80009da8a4a8429d57bdaface98924982da7fd3f04e98499b",
+      "changed_color_occurrences": 42,
+      "only_declared_colors_changed": true
+    },
+    {
+      "source": "figures/approved/panels/figure2_header.svg",
+      "source_sha256": "8c8ab9a2a5ccab39c114e3161d03fac6ca2b242098f97919d6951ad69b7721d1",
+      "output": "assets/theme/panels/figure2_header.svg",
+      "output_sha256": "6c5bd7eb0a22cb89d4ce5690a7678b15f55258affef7d25cdad956f8c69f95e8",
+      "changed_color_occurrences": 2,
+      "only_declared_colors_changed": true
+    },
+    {
+      "source": "figures/approved/panels/figure2_main.svg",
+      "source_sha256": "e9d5cd904b8a41eafde15222f3922c8f3705d602b8d18977b7385e34b0445dfc",
+      "output": "assets/theme/panels/figure2_main.svg",
+      "output_sha256": "34ab5fa0b07a0a2f8bfabc09b2fa613c73d5c7bca91ed1468e2007a3d1101691",
+      "changed_color_occurrences": 59,
+      "only_declared_colors_changed": true
+    },
+    {
+      "source": "figures/approved/panels/figure2_width.svg",
+      "source_sha256": "84f924b6233c21d317725269fcdbf588240799d2b8499a728e8713b177b2fd26",
+      "output": "assets/theme/panels/figure2_width.svg",
+      "output_sha256": "e85e185819a8d2dd837f81e5527899e3e82cc68f57e943383eec6b28acab121c",
+      "changed_color_occurrences": 26,
+      "only_declared_colors_changed": true
+    },
+    {
+      "source": "figures/approved/panels/figure3a_geometry.svg",
+      "source_sha256": "90d63e7d7ae6d76dd36a9008c5dc690f9f48184cadbce3a49ab0c46dbc73059b",
+      "output": "assets/theme/panels/figure3a_geometry.svg",
+      "output_sha256": "97076f8776d5de09e5c0b8489511b2307af27aceff52313b6555227332f57549",
+      "changed_color_occurrences": 55,
+      "only_declared_colors_changed": true
+    },
+    {
+      "source": "figures/approved/panels/figure3b_gap.svg",
+      "source_sha256": "5ac7b9634eea68b37543027bea3a1d1028b68999429c00f4224e7801a2a1aaa9",
+      "output": "assets/theme/panels/figure3b_gap.svg",
+      "output_sha256": "e7e6ed51a69a022c12643006f3bf6645c56938bcd047b2ea8e2aab20c3a1d688",
+      "changed_color_occurrences": 55,
+      "only_declared_colors_changed": true
+    }
+  ],
+  "build_dependencies": {
+    "pandoc": "pandoc 3.1.3"
+  },
+  "rendering": "native MathML; local CSS/JS/search; no CDN requests",
+  "new_scientific_claims": false,
+  "new_proof_or_numerical_audit": false,
+  "palette_source": "website/palette.json"
+}

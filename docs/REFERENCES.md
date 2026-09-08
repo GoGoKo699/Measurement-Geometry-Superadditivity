@@ -1,6 +1,6 @@
 # Attribution and standard tools carried from the supplied sources
 
-**Consolidation date: 8 September 2026. No external literature search was performed in this pass.** This record preserves the attribution and scope in the uploaded all-noise theory and final comparison. It does not freshly verify publication metadata, assert priority, or expand the set of relevant results.
+**Original consolidation: 8 September 2026.** The initial record carried attribution from the supplied sources without a new literature search. The dated correction below records a subsequent primary-source check. Neither step certifies absolute priority.
 
 ## Standard results used in the proof
 
@@ -21,6 +21,11 @@
 ## More recent neighboring works in the supplied final comparison
 
 Sujeet Bhalerao and Felix Leditzky, *Improving quantum communication rates with permutation-invariant codes*, arXiv:2508.09978v1, and Hao-Chung Cheng and Mario Berta, *Superadditivity for Entanglement-Assisted Communication*, arXiv:2607.15151v1, are explicitly identified in S6 §4. The source comparison distinguishes structured unassisted code improvements and entanglement-assisted reliability from the current geometric guarantee. That assessment is carried as source-reported context, not newly researched or used as a mathematical premise here.
+
+<a id="s6-correction"></a>
+## Correction after the independent audit, 8 September 2026
+
+The historical [S6 comparison](../provenance/text_sources/S6__PRIOR_WORK_COMPARISON.md), §4, overstates the dephrasure result as a threshold improvement. Bhalerao and Leditzky report improved dephrasure communication **rates**, without extending the threshold beyond weighted repetition codes; see [arXiv:2508.09978v1](https://arxiv.org/html/2508.09978v1), §5.2 after Eq. (5.34) and §6.1. Their comparison with neural-network codes is a separate benchmark. Read S6's dephrasure comparison with this correction. The historical S6 bytes are preserved, and the mathematical claims C1–C6 are unaffected.
 
 ## Claim boundary
 

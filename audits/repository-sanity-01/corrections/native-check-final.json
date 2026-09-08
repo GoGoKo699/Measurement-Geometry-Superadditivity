@@ -1,0 +1,21 @@
+{
+  "name": "native-check-final",
+  "command": [
+    "../audit-venv/bin/python",
+    "website/repository_preview.py",
+    "--check"
+  ],
+  "cwd": "/workspace/scratch/323c19becda4/audit-work",
+  "started_utc": "2026-09-08T15:01:32.242530+00:00",
+  "duration_seconds": 0.06862354899931233,
+  "returncode": 0,
+  "maxrss_children_kib": 12332,
+  "env_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MPLBACKEND": "Agg",
+    "PYTHONUNBUFFERED": "1"
+  },
+  "python_optimized": false
+}

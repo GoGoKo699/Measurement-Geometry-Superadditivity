@@ -12,7 +12,7 @@ The current claim has author-side analytical and computer-assisted support. The 
 
 ## What is preserved
 
-The canonical proof/model, frozen argument, scientific source, numerical inputs, evidence, and all 27 approved graphical artifacts remain unchanged. The Gachet-inspired palette is accepted for figures only. The repository uses GitHub's default presentation, and the optional HTML pages use a neutral documentation layout. The existing paper exports remain preserved as the previous color baseline. Their data, paths, labels, geometry and line styles are preserved. [Visual design and comparison](visual-design.md)
+The mathematical model, complete proof, frozen argument, historical scientific sources, numerical inputs, evidence, and all 27 approved graphical artifacts remain unchanged. Current attribution, figure-input paths and one obsolete model-status sentence have been corrected after the independent repository audit. The exact documentary edits preserve all equations and are recorded separately in [the correction record](../../provenance/EDITORIAL_CORRECTIONS.json). The Gachet-inspired palette is accepted for figures only. The repository uses GitHub's default presentation, and the optional HTML pages use a neutral documentation layout. The existing paper exports remain preserved as the previous color baseline. Their data, paths, labels, geometry and line styles are preserved. [Visual design and comparison](visual-design.md)
 
 ## What is not part of this project
 
@@ -23,3 +23,9 @@ No new noise model, quantum-capacity formula, decoder, simulation campaign, figu
 ## Before public deployment
 
 A public-site decision and a reuse-license decision must be made explicitly. The present artifact can be inspected locally, with no external scripts, analytics, web fonts, or content requests. GitHub Pages access is a separate concern from source-repository visibility. [GitHub's access-control documentation](https://docs.github.com/en/enterprise-cloud@latest/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site)
+
+## Audit corrections and remaining browser checks
+
+The independent audit of `f0015c56a19fd953c6797b2c64d9b507105234e3` completed the scientific reproduction and found three minor documentary issues. These are corrected in the current references, figure specifications and model status. The historical source files retain their original bytes; see [the attribution correction](../../docs/REFERENCES.md#s6-correction).
+
+The audit's static and loopback HTTP checks passed. Live browser checks remain incomplete because Chromium installation failed, including the bounded follow-up attempt. The available Pandoc 3.1.3 also differs from the recorded 3.1.11.1. These environment limitations are separate from the scientific result.

@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/323c19becda4/audit-work/verify.py", line 17, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/scratch/323c19becda4/audit-work/verify.py", line 14, in main
+    r=integrity()
+      ^^^^^^^^^^^
+  File "/workspace/scratch/323c19becda4/audit-work/baseline_tools.py", line 110, in integrity
+    p=check_provenance(root);n=check_protected(root);check_inputs(root);links=check_links(root);code_boundaries(root)
+                                                     ^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/323c19becda4/audit-work/baseline_tools.py", line 67, in check_inputs
+    for rel,h in m.items():require((root/rel).is_file() and sha(root/rel)==h,'input identity mismatch: '+rel)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/323c19becda4/audit-work/baseline_tools.py", line 13, in require
+    if not condition:raise ValueError(msg)
+                     ^^^^^^^^^^^^^^^^^^^^^
+ValueError: input identity mismatch: docs/MODEL_AND_CLAIMS.md

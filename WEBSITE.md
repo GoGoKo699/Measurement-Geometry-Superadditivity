@@ -10,10 +10,10 @@ Install the scientific dependencies from `requirements.txt`. The site additional
 python -m pip install -r website/requirements.txt
 python website/build.py --output build/project-site
 python website/check.py --site build/project-site
-python -m http.server 8000 --directory build/project-site
+python -m http.server 8000 --bind 127.0.0.1 --directory build/project-site
 ```
 
-Open `http://localhost:8000` in a modern browser. The build is designed to support directly opening `build/project-site/index.html`: search data, MathML, styles and images are local and do not require fetch calls. A new output directory is required; no existing build is overwritten or recursively removed.
+Open `http://127.0.0.1:8000` in a modern browser. The build is designed to support directly opening `build/project-site/index.html`: search data, MathML, styles and images are local and do not require fetch calls. A new output directory is required; no existing build is overwritten or recursively removed.
 
 The read-only CI workflow builds an artifact for local review, not a public URL. The optional browser test uses Chromium and Playwright; it checks desktop and mobile layout, local resources, search, color switching and the proof page. Browser tooling is not required to read the built site.
 
@@ -39,4 +39,4 @@ The CI workflow has only `contents: read` permission and no deployment action. T
 
 ## Preservation checks
 
-The original scientific manifest and old root documentation are retained in `website/provenance/`. The builder confirms that every old baseline file except README and STATUS is unchanged, and checks all approved graphics. The current root manifest records the two editorial updates. No verification implementation or equation is refactored by the website work.
+The original scientific manifest and old root documentation are retained in `website/provenance/`. The builder checks all approved graphics and reconstructs the original bytes of the five explicitly recorded documentary corrections and their four dependent source-identity records in `provenance/EDITORIAL_CORRECTIONS.json`. Every other old baseline file except README and STATUS must remain byte-identical. The current root manifest records the corrected documentation and its provenance. Equations and verification implementations remain unchanged.

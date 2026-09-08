@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/323c19becda4/audit-work/reproduce.py", line 85, in <module>
+    run(a.output,a.full,a.rebuild_certificate)
+  File "/workspace/scratch/323c19becda4/audit-work/reproduce.py", line 54, in run
+    write_json(output/'data_comparison.json',compare_data(output/'data/figures'))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/323c19becda4/audit-work/baseline_tools.py", line 133, in compare_data
+    require((out/p.name).is_file() and p.read_bytes()==(out/p.name).read_bytes(),'rebuilt figure input changed: '+p.name);records.append(p.name)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/323c19becda4/audit-work/baseline_tools.py", line 13, in require
+    if not condition:raise ValueError(msg)
+                     ^^^^^^^^^^^^^^^^^^^^^
+ValueError: rebuilt figure input changed: BUILD_RECORD.json

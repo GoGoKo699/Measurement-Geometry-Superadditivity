@@ -1,0 +1,24 @@
+{
+  "name": "correction-check",
+  "command": [
+    "../audit-venv/bin/python",
+    "audits/repository-sanity-01/corrections/check_corrections.py",
+    "--root",
+    ".",
+    "--output",
+    "audits/repository-sanity-01/corrections/CORRECTION_CHECK.json"
+  ],
+  "cwd": "/workspace/scratch/323c19becda4/audit-work",
+  "started_utc": "2026-09-08T15:01:31.617684+00:00",
+  "duration_seconds": 0.07447427199804224,
+  "returncode": 0,
+  "maxrss_children_kib": 13224,
+  "env_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MPLBACKEND": "Agg",
+    "PYTHONUNBUFFERED": "1"
+  },
+  "python_optimized": false
+}

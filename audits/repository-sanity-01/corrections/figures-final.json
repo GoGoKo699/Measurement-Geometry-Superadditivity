@@ -1,0 +1,22 @@
+{
+  "name": "figures-final",
+  "command": [
+    "../audit-venv/bin/python",
+    "reproduce.py",
+    "--output",
+    "build/audit-corrections-figures-final"
+  ],
+  "cwd": "/workspace/scratch/323c19becda4/audit-work",
+  "started_utc": "2026-09-08T15:01:07.840955+00:00",
+  "duration_seconds": 10.049833992998174,
+  "returncode": 0,
+  "maxrss_children_kib": 162736,
+  "env_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MPLBACKEND": "Agg",
+    "PYTHONUNBUFFERED": "1"
+  },
+  "python_optimized": false
+}

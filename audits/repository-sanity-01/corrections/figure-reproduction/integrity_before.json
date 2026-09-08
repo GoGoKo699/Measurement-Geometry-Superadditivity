@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "source_identities": 44,
+  "canonical_units": 23,
+  "source_fragments": 125,
+  "claims": 7,
+  "proof_graph_acyclic": true,
+  "approved_artifacts_unchanged": 27,
+  "current_document_links": 242,
+  "independent_verifier_boundaries": true,
+  "nested_archives_required": false,
+  "baseline_manifest_files": 166,
+  "scope": "Packaging/provenance integrity, not mathematical entropy verification."
+}
