@@ -37,7 +37,7 @@ The current claim has author-side analytical and computer-assisted support. The 
 
 ## What is preserved
 
-The canonical proof/model, frozen argument, scientific source, numerical inputs, evidence, and all 27 approved graphical artifacts remain unchanged. The website's Gachet-inspired color versions are generated derivatives for visual review, not replacements for the approved paper exports. Their data, paths, labels, geometry and line styles are preserved. [Visual design and comparison](visual-design.md)
+The canonical proof/model, frozen argument, scientific source, numerical inputs, evidence, and all 27 approved graphical artifacts remain unchanged. The Gachet-inspired palette is accepted for figures only. The repository uses GitHub's default presentation, and the optional HTML pages use a neutral documentation layout. The existing paper exports remain preserved as the previous color baseline. Their data, paths, labels, geometry and line styles are preserved. [Visual design and comparison](visual-design.md)
 
 ## What is not part of this project
 

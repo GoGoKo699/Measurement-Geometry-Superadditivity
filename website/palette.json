@@ -1,6 +1,6 @@
 {
-  "name": "Gachet study v1",
-  "status": "reader-site color study; approved scientific exports unchanged",
+  "name": "Gachet figure palette v1",
+  "status": "accepted by the author; figures only",
   "reference": {
     "requested_url": "https://en.wikipedia.org/wiki/Portrait_of_Dr._Gachet",
     "chosen_version": "first version",
@@ -40,5 +40,6 @@
     "white drawing backgrounds",
     "approved file bytes",
     "captions and source assignments"
-  ]
+  ],
+  "application_scope": "Figures and figure-color documentation only. Repository pages use default GitHub styling; the optional HTML site uses a neutral documentation layout."
 }

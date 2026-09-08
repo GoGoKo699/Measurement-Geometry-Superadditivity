@@ -34,15 +34,15 @@
     "figures/approved/figure_03_coplanar_limit.svg": "a5a8fe378f3eb573a6d5b02fae2aa67d291e6232440ec8798bf7a477e76584cd",
     "provenance/CLAIM_COVERAGE.json": "aa2dba34a6a80563977540577ec21d6f3b9b2afb1afedcf4e3713c77a273b82e",
     "website/pages/channel.md": "a56337a60f12179c19740016b66f0878f0a336a0e7a1e15459c805ca30c46518",
-    "website/pages/figures.md": "7c89c946ee8ae4455725ee5b8a4563ac76cc5485312ecdc7195d7cb7b7b0714f",
+    "website/pages/figures.md": "418cca686bef24b9d2d9900144fa27b607b9bff1f326c806dfbfe5dd48a84086",
     "website/pages/index.md": "413c28df80bb3d3f47ae7e958b82be602dfcdaccd08c6f56ed563aa352bb2695",
     "website/pages/limits.md": "776c2d88bbbd814884e80ceb99c057f03c49a9ca74460576c0d2ff2b9a6b6c23",
     "website/pages/materials.md": "a974f20bcb32c2b272a29e629813963e5f04b89c11b4c98cb745af789ae52919",
     "website/pages/proof-guide.md": "4e3b80734de41674952aef4ae644c2210a8ae8224d70fe91d5366544500e9fd9",
-    "website/pages/status.md": "78bcb24c34abfb60d59c2c7624b289cad89afcca76a10b027f9bf6dd71c86921",
+    "website/pages/status.md": "d40a0041ca798e83ef1ddea03dc6bf9c15cb9275c739d4df5bbf3e6ca53e6c4b",
     "website/pages/verification.md": "4c93169aafc06dcdfb9eff418c6ccd4b07d8fc9d9d08f4218945a84f44e9f959",
-    "website/pages/visual-design.md": "a7a3113e449976f0c16b48fe2b1a87245d948907ed8cc38aa06af15688a8cbca",
-    "website/palette.json": "e2f2d3923542c848d60786a4224cc30f29ac8bfd9a8b03d0055688ede79dcc84"
+    "website/pages/visual-design.md": "fc2c2ccdbe669d81283e878917862eb7b6c54a4b0cff5718f36d8f5d0b2cb1f0",
+    "website/palette.json": "1e7c478696a2a6c4dd4b79404558edbe2f9869fb53b622b7c8e19158d88f2935"
   },
   "generated_files": {
     "reader/README.md": "4a8269838023346273d56b3888047cfa065307bb2cd6d1f2d21ae1af707f1770",
@@ -50,13 +50,13 @@
     "reader/assets/figure_02_guaranteed_region.svg": "f6524780413bd0c6b75ab7373303dcc124d6ff0f98d6a72b99338b4539489d17",
     "reader/assets/figure_03_coplanar_limit.svg": "9143ac8065b44da015c84ac93f8f77b7c4d765c8941d01140519d9e9bbffb55b",
     "reader/channel.md": "fa298b3dc1d2d771849ae2f86ec79baef0d48f729db705dee5aae46509088bec",
-    "reader/figures.md": "a1233800079d434fae20e45c2d6f7260ff61c331c84cc4c2cd7d46b13968b7f4",
+    "reader/figures.md": "c905d5ca3d453586c47c764d891eab1709c6edf8566fdbfdef68c20a020be117",
     "reader/limits.md": "f3cea6a7f0b731c1d5933e7642d871274e82777d1416348ad372d6cf15979dbc",
     "reader/materials.md": "8222c02b9531417783685c7e7099644ffdbf3f6c6a1799b9a792e6db90104a73",
     "reader/proof-guide.md": "6d02d005f598f7cee43456ae4c17f54a722aaac0a892f05ce2d6c27ba80babfe",
-    "reader/status.md": "6cab23a566c690578cf4b9f1cab9aee5cd36c4bf1619ce70748503c767649ed0",
+    "reader/status.md": "146fdf8dde47cb12bdbc6a47c3b32a4bf3892ee7fec10434a21ffbe36a6105ba",
     "reader/verification.md": "fcf13c90bdf51cfebfb4e90181819c1310339b904758df4266457a2a025cfdfa",
-    "reader/visual-design.md": "f203ff986fa1976e3cd8f4ef9bca54b8214fb3e0f966728961e19da41b9cdab1"
+    "reader/visual-design.md": "72580f17cd185718088547b2f432955a66ce0baa07880b72f269d3a519bc1871"
   },
   "rebuild_command": "python website/repository_preview.py --write",
   "check_command": "python website/repository_preview.py --check"
