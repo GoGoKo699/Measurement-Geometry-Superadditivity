@@ -1,0 +1,76 @@
+name: Scientific baseline verification
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  integrity-and-figures:
+    if: github.event_name != 'pull_request' || !github.event.pull_request.draft
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MPLBACKEND: Agg
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13.5'
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - run: python -m pip install -r requirements.txt
+      - name: Check canonical sources, input hashes and independent checkers
+        run: python verify.py --report build/ci-integrity.json
+      - name: Run the test suite
+        run: python -m pytest -q -p no:cacheprovider tests
+      - name: Regenerate inputs and reproduce all approved graphics
+        run: python reproduce.py --output build/ci-figures
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: integrity-and-figures
+          path: |
+            build/ci-integrity.json
+            build/ci-figures/
+          if-no-files-found: warn
+          retention-days: 30
+
+  complete-scientific-check:
+    if: github.event_name != 'pull_request' || !github.event.pull_request.draft
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MPLBACKEND: Agg
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13.5'
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - run: python -m pip install -r requirements.txt
+      - name: Recheck three complete certificates, retained witness and controls
+        run: python reproduce.py --output build/ci-full --full
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: complete-scientific-check
+          path: build/ci-full/
+          if-no-files-found: warn
+          retention-days: 30

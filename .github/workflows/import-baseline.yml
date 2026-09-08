@@ -1,0 +1,75 @@
+name: Import verified scientific baseline
+
+on:
+  push:
+    branches: [setup/scientific-baseline-v1]
+    paths:
+      - 'Measurement-Geometry-scientific-baseline-v1-2026-09-08.zip'
+      - 'Measurement-Geometry-Superadditivity/**'
+      - 'BASELINE_MANIFEST.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: scientific-baseline-import
+  cancel-in-progress: false
+
+jobs:
+  import:
+    if: github.repository == 'GoGoKo699/Measurement-Geometry-Superadditivity' && github.ref == 'refs/heads/setup/scientific-baseline-v1'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    permissions:
+      contents: write
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MPLBACKEND: Agg
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Verify and materialize the approved archive
+        run: python .bootstrap/import_baseline.py --root .
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13.5'
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - name: Install the frozen dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Verify all source and protected-figure hashes
+        run: python verify.py --report build/import/INTEGRITY.json
+      - name: Execute the complete scientific and figure checks
+        run: python reproduce.py --output build/import-full --full
+      - name: Publish validation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: initial-baseline-import-validation
+          path: |
+            build/import/
+            build/import-full/
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Commit validated baseline only to the setup branch
+        env:
+          EXPECTED_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          branch='setup/scientific-baseline-v1'
+          actual="$(git ls-remote origin "refs/heads/$branch" | cut -f1)"
+          test "$actual" = "$EXPECTED_SHA" || { echo 'Branch moved; refusing to overwrite newer work.'; exit 1; }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --all --pathspec-from-file=.bootstrap/stage-paths --pathspec-file-nul
+          if git diff --cached --quiet; then
+            echo 'Approved baseline already present; no new content commit needed.'
+          else
+            git commit -m 'Import verified scientific baseline and approved figures'
+            git push origin "HEAD:refs/heads/$branch"
+          fi
+          echo 'The setup branch is populated. Main is unchanged; do not merge before final inspection.' >> "$GITHUB_STEP_SUMMARY"
