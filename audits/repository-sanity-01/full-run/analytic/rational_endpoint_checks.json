@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "low_c_upper": "1/268435456",
+  "low_noise_input_split": "1/100",
+  "low_noise_tail_margin_lower": "706479660745902522393/112589990684262400000",
+  "low_noise_compact_margin_lower": "167771999/16777215900",
+  "high_noise_a_upper": "1/25",
+  "high_noise_ratio_lower": "887/2500",
+  "high_noise_required_ratio_upper": "1084/3125",
+  "high_noise_margin": "99/12500",
+  "geometry_quadratic_minimum": "1/35",
+  "global_gap_coefficient_in_ca_lambda": "3/35",
+  "remarks": "Exact rational inequalities. Functional arguments are supplied in THEORY.md."
+}

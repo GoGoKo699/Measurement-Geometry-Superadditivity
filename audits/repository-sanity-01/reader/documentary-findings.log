@@ -1,0 +1,93 @@
+{
+  "baseline": "/workspace/scratch/323c19becda4/baseline",
+  "missing_documented_paths": [
+    {
+      "displayed_path": "data/cross_figure_witness_bound_check.json",
+      "exists": false,
+      "actual_path": "data/figures/cross_figure_witness_bound_check.json",
+      "actual_exists": true,
+      "lines": [
+        115
+      ]
+    },
+    {
+      "displayed_path": "data/figure1_all_masks_not_for_display.csv",
+      "exists": false,
+      "actual_path": "data/figures/figure1_all_masks_not_for_display.csv",
+      "actual_exists": true,
+      "lines": [
+        47
+      ]
+    },
+    {
+      "displayed_path": "data/figure1_comparison.csv",
+      "exists": false,
+      "actual_path": "data/figures/figure1_comparison.csv",
+      "actual_exists": true,
+      "lines": [
+        45
+      ]
+    },
+    {
+      "displayed_path": "data/figure1_original_witness140.json",
+      "exists": false,
+      "actual_path": "data/figures/figure1_original_witness140.json",
+      "actual_exists": true,
+      "lines": [
+        46
+      ]
+    },
+    {
+      "displayed_path": "data/figure2_pauli_guaranteed_region.csv",
+      "exists": false,
+      "actual_path": "data/figures/figure2_pauli_guaranteed_region.csv",
+      "actual_exists": true,
+      "lines": [
+        104
+      ]
+    },
+    {
+      "displayed_path": "data/figure3_cone_gap.csv",
+      "exists": false,
+      "actual_path": "data/figures/figure3_cone_gap.csv",
+      "actual_exists": true,
+      "lines": [
+        165
+      ]
+    },
+    {
+      "displayed_path": "data/figure3_cone_geometry.csv",
+      "exists": false,
+      "actual_path": "data/figures/figure3_cone_geometry.csv",
+      "actual_exists": true,
+      "lines": [
+        166
+      ]
+    },
+    {
+      "displayed_path": "data/figure3_small_lambda_controls_not_for_display.csv",
+      "exists": false,
+      "actual_path": "data/figures/figure3_small_lambda_controls_not_for_display.csv",
+      "actual_exists": true,
+      "lines": [
+        167
+      ]
+    }
+  ],
+  "website_commands_without_loopback_binding": [
+    {
+      "line": 13,
+      "command": "python -m http.server 8000 --directory build/project-site"
+    }
+  ],
+  "python_http_server_help": "usage: server.py [-h] [--cgi] [-b ADDRESS] [-d DIRECTORY] [-p VERSION] [port]\n\npositional arguments:\n  port                  bind to this port (default: 8000)\n\noptions:\n  -h, --help            show this help message and exit\n  --cgi                 run as CGI server\n  -b ADDRESS, --bind ADDRESS\n                        bind to this address (default: all interfaces)\n  -d DIRECTORY, --directory DIRECTORY\n                        serve this directory (default: current directory)\n  -p VERSION, --protocol VERSION\n                        conform to this HTTP version (default: HTTP/1.0)\n",
+  "stale_current_remote_repository_statement": [
+    {
+      "line": 181,
+      "text": "The three figures have now been visually approved. Their exact files and inputs are protected by the baseline manifest. This local scientific package consolidates the executable dependencies; see [REPRODUCTION.md](REPRODUCTION.md) for current commands and [STATUS.md](../STATUS.md) for the baseline state. No manuscript has been drafted and no remote repository has been created."
+    }
+  ],
+  "classification": "minor documentation defects; no source/output edits performed; no external disclosure claimed"
+}
+
+STDERR:

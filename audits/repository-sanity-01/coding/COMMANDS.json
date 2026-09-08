@@ -1,0 +1,50 @@
+{
+  "baseline": "f0015c56a19fd953c6797b2c64d9b507105234e3",
+  "commands": [
+    {
+      "command": "/workspace/scratch/323c19becda4/audit-venv/bin/python -c 'import sys,numpy; print(sys.version); print(numpy.__version__)'",
+      "return_code": 1,
+      "duration_seconds": 0.054893425,
+      "result": "numpy not yet installed while isolated environment setup was in progress; not a scientific defect or skipped pass"
+    },
+    {
+      "command": "/workspace/scratch/323c19becda4/audit-venv/bin/python -c 'import sys,numpy; print(sys.version); print(numpy.__version__)'",
+      "return_code": 0,
+      "duration_seconds": 0.379089109,
+      "result": "Python 3.12.13; numpy 2.3.5"
+    },
+    {
+      "command": "/workspace/scratch/323c19becda4/audit-venv/bin/python /workspace/scratch/323c19becda4/audit-notes/coding/independent_physical_repetition.py /workspace/scratch/323c19becda4/audit-notes/coding/physical_results.json",
+      "return_code": 0,
+      "duration_seconds": 0.807484545,
+      "result": "7 complete physical cases passed; 1259 reported branches and 7671 hidden terms"
+    }
+  ],
+  "limits": {
+    "RLIMIT_CPU": [
+      -1,
+      -1
+    ],
+    "RLIMIT_AS": [
+      -1,
+      -1
+    ],
+    "RLIMIT_DATA": [
+      -1,
+      -1
+    ],
+    "RLIMIT_STACK": [
+      8388608,
+      -1
+    ],
+    "RLIMIT_NOFILE": [
+      16384,
+      16384
+    ]
+  },
+  "hashes": {
+    "independent_physical_repetition.py": "db9720f7272f7d012fe503c9321ef9e790eb7111ab2d92331eb3c07502bfc7f2",
+    "physical_results.json": "7d6bccca467c055289ac3bee0d53c3f4ac584c41737082f8be0beb7a87d538fa"
+  },
+  "scope": "New independent evidence uses only pinned numpy 2.3.5. Python differs from source ENVIRONMENT.json 3.13.5; parent reproduction audit records full environment. No package source changed."
+}

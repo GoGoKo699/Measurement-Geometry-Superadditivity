@@ -1,0 +1,2073 @@
+{
+  "tree": {
+    "sha": "f0015c56a19fd953c6797b2c64d9b507105234e3",
+    "tree": [
+      {
+        "mode": "040000",
+        "path": ".github",
+        "sha": "6166428399999c3609eee5c291e8e9f358217fd1",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/6166428399999c3609eee5c291e8e9f358217fd1"
+      },
+      {
+        "mode": "040000",
+        "path": ".github/workflows",
+        "sha": "25cfaf3ed4e2d4d9e1a04215c0690ea050608f46",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/25cfaf3ed4e2d4d9e1a04215c0690ea050608f46"
+      },
+      {
+        "mode": "100644",
+        "path": ".github/workflows/reader-site.yml",
+        "sha": "095408da3249c7578ad82d621c95d1bfbe9378d0",
+        "size": 2883,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/095408da3249c7578ad82d621c95d1bfbe9378d0"
+      },
+      {
+        "mode": "100644",
+        "path": ".github/workflows/verify.yml",
+        "sha": "d97406770a0c3b3afedfa990bdd558a6adac6b12",
+        "size": 2364,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/d97406770a0c3b3afedfa990bdd558a6adac6b12"
+      },
+      {
+        "mode": "100644",
+        "path": ".gitignore",
+        "sha": "9637f4b6266942e769b46cff467cb30bcb1e916e",
+        "size": 62,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/9637f4b6266942e769b46cff467cb30bcb1e916e"
+      },
+      {
+        "mode": "100644",
+        "path": "BASELINE_MANIFEST.json",
+        "sha": "1d6b7dca3a72029289f79f711bc3390fdb85da0a",
+        "size": 19580,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/1d6b7dca3a72029289f79f711bc3390fdb85da0a"
+      },
+      {
+        "mode": "100644",
+        "path": "ENVIRONMENT.json",
+        "sha": "7452c861a6fd5ed65dd5f82d97a14c521dc8276a",
+        "size": 486,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/7452c861a6fd5ed65dd5f82d97a14c521dc8276a"
+      },
+      {
+        "mode": "100644",
+        "path": "README.md",
+        "sha": "831571e4fc9754491d8a32e3f8af7923fa2bd6a4",
+        "size": 7486,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/831571e4fc9754491d8a32e3f8af7923fa2bd6a4"
+      },
+      {
+        "mode": "100644",
+        "path": "STATUS.md",
+        "sha": "2a731965f3ed65468a4e550401dd417aa54ce70e",
+        "size": 2328,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/2a731965f3ed65468a4e550401dd417aa54ce70e"
+      },
+      {
+        "mode": "100644",
+        "path": "WEBSITE.md",
+        "sha": "825e493ff0f493a3cf404df9f04924e16fd11038",
+        "size": 4562,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/825e493ff0f493a3cf404df9f04924e16fd11038"
+      },
+      {
+        "mode": "100644",
+        "path": "baseline_tools.py",
+        "sha": "1339cf46e68266db4c0a73e726c6c18afbd62146",
+        "size": 7808,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/1339cf46e68266db4c0a73e726c6c18afbd62146"
+      },
+      {
+        "mode": "040000",
+        "path": "certificates",
+        "sha": "2128de2e3857ba1d0ce51271d3189c124f5a3314",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/2128de2e3857ba1d0ce51271d3189c124f5a3314"
+      },
+      {
+        "mode": "100644",
+        "path": "certificates/common_noise_compact_certificate.json",
+        "sha": "e43d467da3b1a4a18b12b543b16d6dedd6f6abd3",
+        "size": 2524387,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/e43d467da3b1a4a18b12b543b16d6dedd6f6abd3"
+      },
+      {
+        "mode": "040000",
+        "path": "data",
+        "sha": "cd52680c78722a64aa5fc851b28b723f7d94a836",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/cd52680c78722a64aa5fc851b28b723f7d94a836"
+      },
+      {
+        "mode": "040000",
+        "path": "data/figures",
+        "sha": "85624a8c60734ce58cfb4c919ef2832a3281e518",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/85624a8c60734ce58cfb4c919ef2832a3281e518"
+      },
+      {
+        "mode": "100644",
+        "path": "data/figures/BUILD_RECORD.json",
+        "sha": "796f2769c3301d47c972cf3d32c5a4eb8b1e0391",
+        "size": 1791,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/796f2769c3301d47c972cf3d32c5a4eb8b1e0391"
+      },
+      {
+        "mode": "100644",
+        "path": "data/figures/SOURCE_IDENTITY.json",
+        "sha": "0a6f90a16f5fb239749c280c396345838d8906b8",
+        "size": 875,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/0a6f90a16f5fb239749c280c396345838d8906b8"
+      },
+      {
+        "mode": "100644",
+        "path": "data/figures/cross_figure_witness_bound_check.json",
+        "sha": "296d7bbb936b48e33fcf73016888e23677465310",
+        "size": 826,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/296d7bbb936b48e33fcf73016888e23677465310"
+      },
+      {
+        "mode": "100644",
+        "path": "data/figures/figure1_all_masks_not_for_display.csv",
+        "sha": "f3b2f27a93abb4d329988c618378a10b8d46cb3c",
+        "size": 3555,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/f3b2f27a93abb4d329988c618378a10b8d46cb3c"
+      },
+      {
+        "mode": "100644",
+        "path": "data/figures/figure1_comparison.csv",
+        "sha": "0da0f279b059c57e7d5439ad31eaacbdc44f95ba",
+        "size": 805,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/0da0f279b059c57e7d5439ad31eaacbdc44f95ba"
+      },
+      {
+        "mode": "100644",
+        "path": "data/figures/figure1_original_witness140.json",
+        "sha": "f5144bc740807ce495c480e6b26f9f23970066ee",
+        "size": 6709,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/f5144bc740807ce495c480e6b26f9f23970066ee"
+      },
+      {
+        "mode": "100644",
+        "path": "data/figures/figure2_pauli_guaranteed_region.csv",
+        "sha": "630b2b3ee39f8af3de0d4305cf528e6345ad42c6",
+        "size": 565540,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/630b2b3ee39f8af3de0d4305cf528e6345ad42c6"
+      },
+      {
+        "mode": "100644",
+        "path": "data/figures/figure3_cone_gap.csv",
+        "sha": "480c0f0ef10fd3e261100e8682e6b68026d5fe05",
+        "size": 349870,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/480c0f0ef10fd3e261100e8682e6b68026d5fe05"
+      },
+      {
+        "mode": "100644",
+        "path": "data/figures/figure3_cone_geometry.csv",
+        "sha": "e4de1b3f375069989ac2f3b27a9de6e7f2fd7d4f",
+        "size": 5018,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/e4de1b3f375069989ac2f3b27a9de6e7f2fd7d4f"
+      },
+      {
+        "mode": "100644",
+        "path": "data/figures/figure3_small_lambda_controls_not_for_display.csv",
+        "sha": "2316f1b76fde6e8fa0528202b408760b21ac518a",
+        "size": 1764,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/2316f1b76fde6e8fa0528202b408760b21ac518a"
+      },
+      {
+        "mode": "040000",
+        "path": "docs",
+        "sha": "325c633f6cf2b6ce83448d38e8f7d9b48435beee",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/325c633f6cf2b6ce83448d38e8f7d9b48435beee"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/COMPLETE_PROOF.md",
+        "sha": "ae7a1ca720409b99347317997bc5d0bd76463f7e",
+        "size": 47491,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/ae7a1ca720409b99347317997bc5d0bd76463f7e"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/FROZEN_ARGUMENT.md",
+        "sha": "a62502b22b2af5485ccd39a7fb5f2f9e4d4ae41e",
+        "size": 4167,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/a62502b22b2af5485ccd39a7fb5f2f9e4d4ae41e"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/MODEL_AND_CLAIMS.md",
+        "sha": "82a34d19ef5c2d0330cc7642e0d2a93072cdcb61",
+        "size": 16209,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/82a34d19ef5c2d0330cc7642e0d2a93072cdcb61"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/NOTATION_CROSSWALK.md",
+        "sha": "a0457e82d40a8d584a110cb4f0f830cf94989d3b",
+        "size": 4823,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/a0457e82d40a8d584a110cb4f0f830cf94989d3b"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/REFERENCES.md",
+        "sha": "9857155c61bf980be3d501d7a79325d5785496db",
+        "size": 4609,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/9857155c61bf980be3d501d7a79325d5785496db"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/REPRODUCTION.md",
+        "sha": "3301dcfe4ad610003f147451f918202f66a59bdf",
+        "size": 7912,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/3301dcfe4ad610003f147451f918202f66a59bdf"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/SOURCE_TO_CANONICAL.md",
+        "sha": "992112502ef7e3c97deefb6ebb9ac25f3cd12893",
+        "size": 18449,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/992112502ef7e3c97deefb6ebb9ac25f3cd12893"
+      },
+      {
+        "mode": "040000",
+        "path": "evidence",
+        "sha": "d4b1e107e0d2b4d8399201f3b61b07b6db8507f7",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/d4b1e107e0d2b4d8399201f3b61b07b6db8507f7"
+      },
+      {
+        "mode": "040000",
+        "path": "evidence/controls",
+        "sha": "ec3446f95a3335c1064cf38b2074b960321eba72",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/ec3446f95a3335c1064cf38b2074b960321eba72"
+      },
+      {
+        "mode": "100644",
+        "path": "evidence/controls/mixed_input_control.json",
+        "sha": "7ec36ee33bd0f5c7ae6898d8b203252382391152",
+        "size": 463,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/7ec36ee33bd0f5c7ae6898d8b203252382391152"
+      },
+      {
+        "mode": "100644",
+        "path": "evidence/controls/rejected_float_candidate.json",
+        "sha": "8121725d678f520737dfee0a1b4760744ae7334d",
+        "size": 413,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/8121725d678f520737dfee0a1b4760744ae7334d"
+      },
+      {
+        "mode": "040000",
+        "path": "evidence/reference",
+        "sha": "f904e366db1ba4b29926092412d2e8d4ea490d32",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/f904e366db1ba4b29926092412d2e8d4ea490d32"
+      },
+      {
+        "mode": "100644",
+        "path": "evidence/reference/analytic_checks.json",
+        "sha": "f33675432288f4a7dfb213c961cf79c48c57dbe1",
+        "size": 630,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/f33675432288f4a7dfb213c961cf79c48c57dbe1"
+      },
+      {
+        "mode": "100644",
+        "path": "evidence/reference/decimal130.json",
+        "sha": "1ac5be401af2bdb80c96c5d388b6b78b6a46a094",
+        "size": 627,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/1ac5be401af2bdb80c96c5d388b6b78b6a46a094"
+      },
+      {
+        "mode": "100644",
+        "path": "evidence/reference/decimal90.json",
+        "sha": "45d900af8601591c24a28bf27719b14adf74364c",
+        "size": 546,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/45d900af8601591c24a28bf27719b14adf74364c"
+      },
+      {
+        "mode": "100644",
+        "path": "evidence/reference/integer224.json",
+        "sha": "fee1776930ec179bfbf243a51c9a99201ef308e7",
+        "size": 746,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/fee1776930ec179bfbf243a51c9a99201ef308e7"
+      },
+      {
+        "mode": "100644",
+        "path": "evidence/reference/mpmath85.json",
+        "sha": "85be64b4f5a83608a3fa9a64e81396a1ae9c722a",
+        "size": 335,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/85be64b4f5a83608a3fa9a64e81396a1ae9c722a"
+      },
+      {
+        "mode": "100644",
+        "path": "evidence/reference/physical_check.json",
+        "sha": "1e97dcc3ff6e4fbaf925f94d30265df9273fae3c",
+        "size": 2278,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/1e97dcc3ff6e4fbaf925f94d30265df9273fae3c"
+      },
+      {
+        "mode": "100644",
+        "path": "evidence/reference/witness100.json",
+        "sha": "ffeec7da7f15989321704740341c9376de74a2b0",
+        "size": 5749,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/ffeec7da7f15989321704740341c9376de74a2b0"
+      },
+      {
+        "mode": "040000",
+        "path": "figures",
+        "sha": "478ada21dc514b0902410fa71b82c1c52618c05c",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/478ada21dc514b0902410fa71b82c1c52618c05c"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/CAPTIONS.md",
+        "sha": "8c8d4bada024d6b429b0ae457bb22593d0f17df1",
+        "size": 4243,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/8c8d4bada024d6b429b0ae457bb22593d0f17df1"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/FIGURE_CONTRACT.json",
+        "sha": "9d1c1c16d7b5e829c87998324355c722bf45b14f",
+        "size": 8264,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/9d1c1c16d7b5e829c87998324355c722bf45b14f"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/FIGURE_OVERVIEW.md",
+        "sha": "09090fba1c3ddd95195a0ead37dade6dd068ac38",
+        "size": 4835,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/09090fba1c3ddd95195a0ead37dade6dd068ac38"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/FIGURE_SPECIFICATIONS.md",
+        "sha": "61d58fd684044f7cc18f6e6d9cfce82be7ca7458",
+        "size": 17315,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/61d58fd684044f7cc18f6e6d9cfce82be7ca7458"
+      },
+      {
+        "mode": "040000",
+        "path": "figures/approved",
+        "sha": "0e886880e01012a102e376ce266d70e536440347",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/0e886880e01012a102e376ce266d70e536440347"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/RENDER_RECORD.json",
+        "sha": "863faa3c54320891eb2dc320c89a991667406929",
+        "size": 183782,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/863faa3c54320891eb2dc320c89a991667406929"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/RENDER_VALIDATION.json",
+        "sha": "981c6a181ba688b96b35630c945697d3c96e43d8",
+        "size": 2079,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/981c6a181ba688b96b35630c945697d3c96e43d8"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/figure_01_channel_and_witness.pdf",
+        "sha": "80f9ef6c88c83fdbf4fecee17ee6c00817031e93",
+        "size": 51456,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/80f9ef6c88c83fdbf4fecee17ee6c00817031e93"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/figure_01_channel_and_witness.png",
+        "sha": "2569b45b39da2606e4063cb33e23052d1ef3f254",
+        "size": 166169,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/2569b45b39da2606e4063cb33e23052d1ef3f254"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/figure_01_channel_and_witness.svg",
+        "sha": "4d50fde06a7d7bcaff2f7684e2591e7b9f0de30c",
+        "size": 120173,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/4d50fde06a7d7bcaff2f7684e2591e7b9f0de30c"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/figure_01_channel_and_witness_preview.png",
+        "sha": "24e32a3309f5d92818117f30ad0ad9faabf7af16",
+        "size": 188687,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/24e32a3309f5d92818117f30ad0ad9faabf7af16"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/figure_02_guaranteed_region.pdf",
+        "sha": "8fc5c401ba4626b95aa1776d01b1582818ce3136",
+        "size": 94734,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/8fc5c401ba4626b95aa1776d01b1582818ce3136"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/figure_02_guaranteed_region.png",
+        "sha": "c5d19bee5759abf3391247a1f577157874363bd5",
+        "size": 155670,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/c5d19bee5759abf3391247a1f577157874363bd5"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/figure_02_guaranteed_region.svg",
+        "sha": "2ed143243a0d70b19a0be35264d77d99b52d8941",
+        "size": 218107,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/2ed143243a0d70b19a0be35264d77d99b52d8941"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/figure_02_guaranteed_region_preview.png",
+        "sha": "1f146ec9f2e9b7347fdcfda894eed90dcc375dad",
+        "size": 178165,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/1f146ec9f2e9b7347fdcfda894eed90dcc375dad"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/figure_03_coplanar_limit.pdf",
+        "sha": "57d24a0c60f74851a02d5483629fda83600cb2e1",
+        "size": 59798,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/57d24a0c60f74851a02d5483629fda83600cb2e1"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/figure_03_coplanar_limit.png",
+        "sha": "e410b48ef4df7e2cccf7069f67f89b979a49d6a1",
+        "size": 188994,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/e410b48ef4df7e2cccf7069f67f89b979a49d6a1"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/figure_03_coplanar_limit.svg",
+        "sha": "7c669898c6d81e1ed839dee2e107a12a3667bc44",
+        "size": 152197,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/7c669898c6d81e1ed839dee2e107a12a3667bc44"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/figure_03_coplanar_limit_preview.png",
+        "sha": "fffe0bd01751d0134a3af7f0e4f47ca0a12e2942",
+        "size": 218708,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/fffe0bd01751d0134a3af7f0e4f47ca0a12e2942"
+      },
+      {
+        "mode": "040000",
+        "path": "figures/approved/panels",
+        "sha": "58d819475af4805820c04eb5bf3e330e3efb1a2c",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/58d819475af4805820c04eb5bf3e330e3efb1a2c"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/panels/figure1a_channel.pdf",
+        "sha": "ddb9a7d2050e41bcee03caf54ba458f821188241",
+        "size": 27937,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/ddb9a7d2050e41bcee03caf54ba458f821188241"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/panels/figure1a_channel.svg",
+        "sha": "f3cfe9d022b9c016aa19cd433a990d03df5842fa",
+        "size": 62603,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/f3cfe9d022b9c016aa19cd433a990d03df5842fa"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/panels/figure1b_witness.pdf",
+        "sha": "1b0d735797c82e4d5cd82870d654bed5f949f811",
+        "size": 24428,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/1b0d735797c82e4d5cd82870d654bed5f949f811"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/panels/figure1b_witness.svg",
+        "sha": "fc4e465a02a524ef34444cd315c550ce7f41a1da",
+        "size": 46796,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/fc4e465a02a524ef34444cd315c550ce7f41a1da"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/panels/figure2_header.pdf",
+        "sha": "b72c9d7ca162c9b5e4beb5563d2640f1c761331a",
+        "size": 20997,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/b72c9d7ca162c9b5e4beb5563d2640f1c761331a"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/panels/figure2_header.svg",
+        "sha": "5349bed61e52cda8c5ffe7b7010f0dcd6600b4a8",
+        "size": 28065,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/5349bed61e52cda8c5ffe7b7010f0dcd6600b4a8"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/panels/figure2_main.pdf",
+        "sha": "67ec26230dac5d34f42f0740592629c3b60ba2ed",
+        "size": 52678,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/67ec26230dac5d34f42f0740592629c3b60ba2ed"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/panels/figure2_main.svg",
+        "sha": "596f08e17fb74bf66632a7ba5c21f6703ef3e426",
+        "size": 144440,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/596f08e17fb74bf66632a7ba5c21f6703ef3e426"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/panels/figure2_width.pdf",
+        "sha": "ff215296f65f3dfb60b521d0af29cf2cb1248fcd",
+        "size": 23037,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/ff215296f65f3dfb60b521d0af29cf2cb1248fcd"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/panels/figure2_width.svg",
+        "sha": "45ca630c268517b6d83c1c120b6849e9113c10f1",
+        "size": 39566,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/45ca630c268517b6d83c1c120b6849e9113c10f1"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/panels/figure3a_geometry.pdf",
+        "sha": "bc7ad489c1f15909eba2fc1b5b4f6ccd658569eb",
+        "size": 31018,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/bc7ad489c1f15909eba2fc1b5b4f6ccd658569eb"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/panels/figure3a_geometry.svg",
+        "sha": "c2efb9a4462d3806299c2e5552d3ffc57d3118d0",
+        "size": 77860,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/c2efb9a4462d3806299c2e5552d3ffc57d3118d0"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/panels/figure3b_gap.pdf",
+        "sha": "7c41232065b5d906a601a332dcc893f724211ff9",
+        "size": 32199,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/7c41232065b5d906a601a332dcc893f724211ff9"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/panels/figure3b_gap.svg",
+        "sha": "a8186d00881d506a8f057f356aadac4ea0d343ca",
+        "size": 66358,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/a8186d00881d506a8f057f356aadac4ea0d343ca"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/approved/three_figure_review.pdf",
+        "sha": "26f11d27e4f21558f9222bb298138c014d5ab96a",
+        "size": 253213,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/26f11d27e4f21558f9222bb298138c014d5ab96a"
+      },
+      {
+        "mode": "040000",
+        "path": "figures/code",
+        "sha": "a71f44265e85c09db3f3e51a826e0c650d9feccf",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/a71f44265e85c09db3f3e51a826e0c650d9feccf"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/code/build_review_pdf.py",
+        "sha": "8ecbb2edea1a76cec07cab94e800f37525b58602",
+        "size": 6068,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/8ecbb2edea1a76cec07cab94e800f37525b58602"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/code/render_figures.py",
+        "sha": "e8b3c5e30c74d0e61b9f1223884a584be7dd339e",
+        "size": 20277,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/e8b3c5e30c74d0e61b9f1223884a584be7dd339e"
+      },
+      {
+        "mode": "100644",
+        "path": "figures/code/verify_render.py",
+        "sha": "2b2c8b2d6edd8baad18294d4d7c9375625f324c8",
+        "size": 5974,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/2b2c8b2d6edd8baad18294d4d7c9375625f324c8"
+      },
+      {
+        "mode": "040000",
+        "path": "numerics",
+        "sha": "692f29367c80b621525648cbc2c049137994f625",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/692f29367c80b621525648cbc2c049137994f625"
+      },
+      {
+        "mode": "040000",
+        "path": "numerics/figure_inputs",
+        "sha": "1feae9fcde1324ef1c94fd66c60500251188e63d",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/1feae9fcde1324ef1c94fd66c60500251188e63d"
+      },
+      {
+        "mode": "100644",
+        "path": "numerics/figure_inputs/build_inputs.py",
+        "sha": "c80d4e6f32eb73a90430c2f1bda4a8fddbed9f4c",
+        "size": 12428,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/c80d4e6f32eb73a90430c2f1bda4a8fddbed9f4c"
+      },
+      {
+        "mode": "100644",
+        "path": "numerics/figure_inputs/verify_inputs.py",
+        "sha": "e9becc2e0df2591fdd8ac80d484c958c586357ca",
+        "size": 6734,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/e9becc2e0df2591fdd8ac80d484c958c586357ca"
+      },
+      {
+        "mode": "040000",
+        "path": "provenance",
+        "sha": "fb04fe24a33cce9dca235253023f9f01fc0eced8",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/fb04fe24a33cce9dca235253023f9f01fc0eced8"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/APPROVED_FIGURE_HASHES.json",
+        "sha": "d49c6bdf619d20815fbe8b0006836ed87ef349cf",
+        "size": 3713,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/d49c6bdf619d20815fbe8b0006836ed87ef349cf"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/CANONICAL_INPUTS.json",
+        "sha": "7b331360d8e0b3ecc37f6fcf90de7720fd2eaf34",
+        "size": 545,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/7b331360d8e0b3ecc37f6fcf90de7720fd2eaf34"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/CLAIM_COVERAGE.json",
+        "sha": "1377d767612432c6691c7482c3df6e6499948e27",
+        "size": 2738,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/1377d767612432c6691c7482c3df6e6499948e27"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/FIGURE_INPUTS.json",
+        "sha": "b0addb7aa955d89fca0a7708a4ca9d9439dbd504",
+        "size": 1269,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/b0addb7aa955d89fca0a7708a4ca9d9439dbd504"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/FILE_LINEAGE.json",
+        "sha": "1797969ec69c3a93d14527c6349560b7e957a2f0",
+        "size": 50641,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/1797969ec69c3a93d14527c6349560b7e957a2f0"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/INPUT_ARCHIVES.json",
+        "sha": "65144c948453326a691a4e8f68c7dd12104287bc",
+        "size": 1057,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/65144c948453326a691a4e8f68c7dd12104287bc"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/MATHEMATICAL_CONTENT_CHECK.json",
+        "sha": "315bfebe13f8aec5e2e3cd9cff31d325b382ed26",
+        "size": 449,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/315bfebe13f8aec5e2e3cd9cff31d325b382ed26"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/PROOF_GRAPH.json",
+        "sha": "a2fb9fbd42dfdcd2f60ee0d6371bd41c6ffe3abe",
+        "size": 847,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/a2fb9fbd42dfdcd2f60ee0d6371bd41c6ffe3abe"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/SECTION_LEDGER.json",
+        "sha": "5a95ef6e2287f65c8d3d566cc5870d0ed4e3e21c",
+        "size": 96931,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/5a95ef6e2287f65c8d3d566cc5870d0ed4e3e21c"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/SOURCE_REGISTER.json",
+        "sha": "14a316392fe770f532dd4a28a380989f6e26df68",
+        "size": 51314,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/14a316392fe770f532dd4a28a380989f6e26df68"
+      },
+      {
+        "mode": "040000",
+        "path": "provenance/original_records",
+        "sha": "ffda6fe0118e5af893e365e250946d7d4b16558c",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/ffda6fe0118e5af893e365e250946d7d4b16558c"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/original_records/R3__REPRODUCTION_COMPARISON.json",
+        "sha": "b4cc8a22d7f3e9f2024845ea532a941a227e488d",
+        "size": 1326,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/b4cc8a22d7f3e9f2024845ea532a941a227e488d"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/original_records/R4__reproduction_verification.json",
+        "sha": "14606a0a7870cb460f5714a1d99fe75ba3fb901a",
+        "size": 2333,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/14606a0a7870cb460f5714a1d99fe75ba3fb901a"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/original_records/S7__AUDIT_SUMMARY.json",
+        "sha": "c82ee903e70b939701cff1cb28da74f4709a339b",
+        "size": 2381,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/c82ee903e70b939701cff1cb28da74f4709a339b"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/original_records/V8__verification_224.json",
+        "sha": "fee1776930ec179bfbf243a51c9a99201ef308e7",
+        "size": 746,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/fee1776930ec179bfbf243a51c9a99201ef308e7"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/original_records/W4__finite_witnesses.csv",
+        "sha": "9e9a03dc1378be1f28a2c4a679de52c7b6591279",
+        "size": 1803,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/9e9a03dc1378be1f28a2c4a679de52c7b6591279"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/original_records/W8__finite_witnesses.json",
+        "sha": "82bc28c49aa37af1c63efae52dedba08e818d164",
+        "size": 97546,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/82bc28c49aa37af1c63efae52dedba08e818d164"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/original_records/W9__finite_witnesses_decimal.json",
+        "sha": "3defd55b87a1fb0bbb990ca7e1f599f28a6ec996",
+        "size": 2144,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/3defd55b87a1fb0bbb990ca7e1f599f28a6ec996"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/original_records/figure_BUILD_RECORD.json",
+        "sha": "2b507d0e432b8e3b67f85f773d7898ae62ff2fcb",
+        "size": 1776,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/2b507d0e432b8e3b67f85f773d7898ae62ff2fcb"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/original_records/figure_SOURCE_IDENTITY.json",
+        "sha": "3647fb5dbe0f82f0ec6f42d8f605a95aaac59421",
+        "size": 860,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/3647fb5dbe0f82f0ec6f42d8f605a95aaac59421"
+      },
+      {
+        "mode": "040000",
+        "path": "provenance/patches",
+        "sha": "6f6777547d763f269a3e7511e885a0524b0ad476",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/6f6777547d763f269a3e7511e885a0524b0ad476"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/patches/docs__COMPLETE_PROOF.md.patch",
+        "sha": "bdfe7f664dbcf6ed5c36c8b3db0593ba95948c93",
+        "size": 9044,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/bdfe7f664dbcf6ed5c36c8b3db0593ba95948c93"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/patches/docs__MODEL_AND_CLAIMS.md.patch",
+        "sha": "538de8837fb27f359fb01285b9a4c8c52851835d",
+        "size": 3699,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/538de8837fb27f359fb01285b9a4c8c52851835d"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/patches/figures__CAPTIONS.md.patch",
+        "sha": "1cc7ca2ef978754f305697f1cd0c06a08e673927",
+        "size": 1547,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/1cc7ca2ef978754f305697f1cd0c06a08e673927"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/patches/figures__FIGURE_SPECIFICATIONS.md.patch",
+        "sha": "34fc7f5b359abf21cd2d86fe190cf8789a162951",
+        "size": 1388,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/34fc7f5b359abf21cd2d86fe190cf8789a162951"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/patches/figures__code__build_review_pdf.py.patch",
+        "sha": "9ed3729178f6873474039f918462543d586e3fb1",
+        "size": 2214,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/9ed3729178f6873474039f918462543d586e3fb1"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/patches/figures__code__render_figures.py.patch",
+        "sha": "8c170189f5cc94046546c5c72aa369f977317615",
+        "size": 3060,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/8c170189f5cc94046546c5c72aa369f977317615"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/patches/figures__code__verify_render.py.patch",
+        "sha": "10fbb5491f5d912273dd0a2486587d3109e630a7",
+        "size": 2233,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/10fbb5491f5d912273dd0a2486587d3109e630a7"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/patches/numerics__figure_inputs__build_inputs.py.patch",
+        "sha": "3786453751417daf664bfc6f32ca4ce618c67d18",
+        "size": 3497,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/3786453751417daf664bfc6f32ca4ce618c67d18"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/patches/numerics__figure_inputs__verify_inputs.py.patch",
+        "sha": "ef427db4c3bd26bfdc4d02a96d951a240b9f027b",
+        "size": 1991,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/ef427db4c3bd26bfdc4d02a96d951a240b9f027b"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/patches/tests__certificates__test_audit.py.patch",
+        "sha": "35c022400829dbb12bcfaf0d67e494a9516dc22c",
+        "size": 832,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/35c022400829dbb12bcfaf0d67e494a9516dc22c"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/patches/tests__figure_inputs__test_inputs.py.patch",
+        "sha": "9db0a107a2350a3c2175ff15c6c54f55aac4be46",
+        "size": 4118,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/9db0a107a2350a3c2175ff15c6c54f55aac4be46"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/patches/tests__render__test_render.py.patch",
+        "sha": "41c8260c32a143a22e306744a6af317b62d404e8",
+        "size": 3263,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/41c8260c32a143a22e306744a6af317b62d404e8"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/patches/verification__mpmath__witness_formula.py.patch",
+        "sha": "275da8f6bae822db34f5ccd4f5814d2dd2920e9f",
+        "size": 2931,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/275da8f6bae822db34f5ccd4f5814d2dd2920e9f"
+      },
+      {
+        "mode": "040000",
+        "path": "provenance/text_sources",
+        "sha": "45029bab1495358a1583cadcd2cfb0559bd913ae",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/45029bab1495358a1583cadcd2cfb0559bd913ae"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/text_sources/H1__H1__START_HERE.md",
+        "sha": "dba082eb781b72030c2f1c444ec1eaf071d15427",
+        "size": 5108,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/dba082eb781b72030c2f1c444ec1eaf071d15427"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/text_sources/R1__reproduce.py.txt",
+        "sha": "b5b193f820edda61b50110cd95481be81c55395e",
+        "size": 3168,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/b5b193f820edda61b50110cd95481be81c55395e"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/text_sources/R2__reproduce.py.txt",
+        "sha": "c971030274183367aa9eece009bbb4c78134fd32",
+        "size": 1474,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/c971030274183367aa9eece009bbb4c78134fd32"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/text_sources/R5__requirements-reproducible.txt.txt",
+        "sha": "dc9d75e828eab17c1dec63c485fc71880cbbc60c",
+        "size": 55,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/dc9d75e828eab17c1dec63c485fc71880cbbc60c"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/text_sources/R6__requirements.txt.txt",
+        "sha": "97583951af15bf52664bd3a6fc61b1b1723b93cb",
+        "size": 72,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/97583951af15bf52664bd3a6fc61b1b1723b93cb"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/text_sources/S10__PRIOR_PROOF_AUDIT.md",
+        "sha": "81bdb2212b60873e5d963f6091ca90e024a9d567",
+        "size": 11660,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/81bdb2212b60873e5d963f6091ca90e024a9d567"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/text_sources/S11__LITERATURE.md",
+        "sha": "79cde530c24307c4dc596b5fe071957a9375837f",
+        "size": 2756,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/79cde530c24307c4dc596b5fe071957a9375837f"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/text_sources/S2__CLAIM_PROOF_MAP.md",
+        "sha": "103f82e04cc8612976302b4da35610e195695278",
+        "size": 13483,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/103f82e04cc8612976302b4da35610e195695278"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/text_sources/S3__THEOREM_STATEMENT.md",
+        "sha": "7487859644bc5f8943a848910ae344bd1d6ca773",
+        "size": 2777,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/7487859644bc5f8943a848910ae344bd1d6ca773"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/text_sources/S4__THEORY.md",
+        "sha": "670205f84bbb04772c0cc36efd18a5a10244a134",
+        "size": 17611,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/670205f84bbb04772c0cc36efd18a5a10244a134"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/text_sources/S5__PROOF_AUDIT.md",
+        "sha": "7299b4bd5cc155e3d66711abcccfe8138f58645b",
+        "size": 14875,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/7299b4bd5cc155e3d66711abcccfe8138f58645b"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/text_sources/S6__PRIOR_WORK_COMPARISON.md",
+        "sha": "66af9251dbf5fca29995cd87c522ed87ce757452",
+        "size": 7310,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/66af9251dbf5fca29995cd87c522ed87ce757452"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/text_sources/S8__THEORY.md",
+        "sha": "0d2310491337a0eb471fde795a82add81c1daba2",
+        "size": 21709,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/0d2310491337a0eb471fde795a82add81c1daba2"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/text_sources/S9__PROOF_AUDIT.md",
+        "sha": "d500a098c3c6bd824af4721495d56fd4583b51b6",
+        "size": 14428,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/d500a098c3c6bd824af4721495d56fd4583b51b6"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/text_sources/V11__test_audit.py.txt",
+        "sha": "fce61c67adcdc593787d9d65477422f2d688bf4e",
+        "size": 3267,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/fce61c67adcdc593787d9d65477422f2d688bf4e"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/text_sources/V12__test_global_noise.py.txt",
+        "sha": "86f03fdea692c7a0981ffdfb8225b3250434dce7",
+        "size": 3615,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/86f03fdea692c7a0981ffdfb8225b3250434dce7"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/text_sources/W10__independent_examples.py.txt",
+        "sha": "ca7c3f1f875fa8a1494db3fb60af6222526d0a72",
+        "size": 1201,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/ca7c3f1f875fa8a1494db3fb60af6222526d0a72"
+      },
+      {
+        "mode": "100644",
+        "path": "provenance/text_sources/W5__examples.py.txt",
+        "sha": "175706d0d718d44c9b0927284b968ac741a855a8",
+        "size": 5100,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/175706d0d718d44c9b0927284b968ac741a855a8"
+      },
+      {
+        "mode": "100644",
+        "path": "pyproject.toml",
+        "sha": "f6661ede1ef4ac7c031f8183478a04324a1ea2b4",
+        "size": 84,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/f6661ede1ef4ac7c031f8183478a04324a1ea2b4"
+      },
+      {
+        "mode": "040000",
+        "path": "reader",
+        "sha": "21c23b1af06073122449439412bae7b76bca6e4c",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/21c23b1af06073122449439412bae7b76bca6e4c"
+      },
+      {
+        "mode": "100644",
+        "path": "reader/PREVIEW_MANIFEST.json",
+        "sha": "65927eade1060bd9d5ed65febd6b506f7075732e",
+        "size": 4501,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/65927eade1060bd9d5ed65febd6b506f7075732e"
+      },
+      {
+        "mode": "100644",
+        "path": "reader/README.md",
+        "sha": "6a404434a5ab30dfce6a50afc422e370ef029150",
+        "size": 4347,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/6a404434a5ab30dfce6a50afc422e370ef029150"
+      },
+      {
+        "mode": "040000",
+        "path": "reader/assets",
+        "sha": "96655b409c8bcb46213a59e88dc6588cc69eeccd",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/96655b409c8bcb46213a59e88dc6588cc69eeccd"
+      },
+      {
+        "mode": "100644",
+        "path": "reader/assets/figure_01_channel_and_witness.svg",
+        "sha": "8af73ed4fb0a6988782c4e6ee02582c463e92c34",
+        "size": 120173,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/8af73ed4fb0a6988782c4e6ee02582c463e92c34"
+      },
+      {
+        "mode": "100644",
+        "path": "reader/assets/figure_02_guaranteed_region.svg",
+        "sha": "be5b9dc45a2360d9be0de56074351a1737225c69",
+        "size": 218107,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/be5b9dc45a2360d9be0de56074351a1737225c69"
+      },
+      {
+        "mode": "100644",
+        "path": "reader/assets/figure_03_coplanar_limit.svg",
+        "sha": "023e7468c1d552bd7822510f521d067464d5b28c",
+        "size": 152197,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/023e7468c1d552bd7822510f521d067464d5b28c"
+      },
+      {
+        "mode": "100644",
+        "path": "reader/channel.md",
+        "sha": "9901def8ff6aef315ca1820ee67191b17d9a7521",
+        "size": 4029,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/9901def8ff6aef315ca1820ee67191b17d9a7521"
+      },
+      {
+        "mode": "100644",
+        "path": "reader/figures.md",
+        "sha": "278d82d2e46c64ac96aa609e22efa8b6fb1a4ceb",
+        "size": 8359,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/278d82d2e46c64ac96aa609e22efa8b6fb1a4ceb"
+      },
+      {
+        "mode": "100644",
+        "path": "reader/limits.md",
+        "sha": "ff575520edfaf86bbbe745b568f2909e35d3b97d",
+        "size": 3681,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/ff575520edfaf86bbbe745b568f2909e35d3b97d"
+      },
+      {
+        "mode": "100644",
+        "path": "reader/materials.md",
+        "sha": "9afcdaaa315d2dc9465c8c5c14f3f64722241bd7",
+        "size": 6898,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/9afcdaaa315d2dc9465c8c5c14f3f64722241bd7"
+      },
+      {
+        "mode": "100644",
+        "path": "reader/proof-guide.md",
+        "sha": "aa919f59bd6f4890e2026c83499b979991e2edfe",
+        "size": 4703,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/aa919f59bd6f4890e2026c83499b979991e2edfe"
+      },
+      {
+        "mode": "100644",
+        "path": "reader/status.md",
+        "sha": "bd922cb61e0c13a5b72a36308ce64d0d40395a7b",
+        "size": 3889,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/bd922cb61e0c13a5b72a36308ce64d0d40395a7b"
+      },
+      {
+        "mode": "100644",
+        "path": "reader/verification.md",
+        "sha": "cc5293e42cb9e8afb6bde9a85dd75ae20274ce68",
+        "size": 4485,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/cc5293e42cb9e8afb6bde9a85dd75ae20274ce68"
+      },
+      {
+        "mode": "100644",
+        "path": "reader/visual-design.md",
+        "sha": "718fed4a2e5bf27871b1b34fa8680044b99bddbf",
+        "size": 4102,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/718fed4a2e5bf27871b1b34fa8680044b99bddbf"
+      },
+      {
+        "mode": "100644",
+        "path": "reproduce.py",
+        "sha": "8c6e0389739ac200e9727c4fee15bcea0d447cce",
+        "size": 7319,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/8c6e0389739ac200e9727c4fee15bcea0d447cce"
+      },
+      {
+        "mode": "100644",
+        "path": "requirements.txt",
+        "sha": "767bb2e04beef2260cee0a1c1ded8652731fcde8",
+        "size": 213,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/767bb2e04beef2260cee0a1c1ded8652731fcde8"
+      },
+      {
+        "mode": "040000",
+        "path": "tests",
+        "sha": "cc4186a5c63f40731f595e3cc39881b9ba2dbb61",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/cc4186a5c63f40731f595e3cc39881b9ba2dbb61"
+      },
+      {
+        "mode": "040000",
+        "path": "tests/certificates",
+        "sha": "c0a4ad70f474f9a1160e437702d1b08c08fdb95e",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/c0a4ad70f474f9a1160e437702d1b08c08fdb95e"
+      },
+      {
+        "mode": "100644",
+        "path": "tests/certificates/test_audit.py",
+        "sha": "b1cdbb0c11207044988cc553dd550f7f30206794",
+        "size": 3315,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/b1cdbb0c11207044988cc553dd550f7f30206794"
+      },
+      {
+        "mode": "040000",
+        "path": "tests/figure_inputs",
+        "sha": "cb314b5065fb4f9725e3bf7f933e0e2c5fcfc386",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/cb314b5065fb4f9725e3bf7f933e0e2c5fcfc386"
+      },
+      {
+        "mode": "100644",
+        "path": "tests/figure_inputs/test_inputs.py",
+        "sha": "9ee694fef464c1708bd99a4b8c2303e0144c2418",
+        "size": 4704,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/9ee694fef464c1708bd99a4b8c2303e0144c2418"
+      },
+      {
+        "mode": "040000",
+        "path": "tests/render",
+        "sha": "76ca159454d20f8f499044d09c396e601472775f",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/76ca159454d20f8f499044d09c396e601472775f"
+      },
+      {
+        "mode": "100644",
+        "path": "tests/render/test_render.py",
+        "sha": "7daa9ff1e41dc84b26683647ea2d87d8cdb3d994",
+        "size": 3755,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/7daa9ff1e41dc84b26683647ea2d87d8cdb3d994"
+      },
+      {
+        "mode": "100644",
+        "path": "tests/test_baseline.py",
+        "sha": "a2d1306e12f850fa8629eacb61f51cc637e195a0",
+        "size": 2594,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/a2d1306e12f850fa8629eacb61f51cc637e195a0"
+      },
+      {
+        "mode": "040000",
+        "path": "validation",
+        "sha": "0a299d032f22b00060d26749ddb96f03ced898f9",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/0a299d032f22b00060d26749ddb96f03ced898f9"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/BASELINE_REPORT.md",
+        "sha": "082b5db23a8a8cb2f72e86ced220d286fdb2c11d",
+        "size": 8398,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/082b5db23a8a8cb2f72e86ced220d286fdb2c11d"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/BASELINE_VALIDATION.json",
+        "sha": "ab40c7302672c30e1f223f23c61a35d02ca417c5",
+        "size": 4203,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/ab40c7302672c30e1f223f23c61a35d02ca417c5"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/REPRODUCTION_RESULT.json",
+        "sha": "1680d1ec3f8a37a757e52829c65c40d49d9ae493",
+        "size": 245,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/1680d1ec3f8a37a757e52829c65c40d49d9ae493"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/data_comparison.json",
+        "sha": "52ed70ad645d7aac21b82fa0da206a0ef598840a",
+        "size": 442,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/52ed70ad645d7aac21b82fa0da206a0ef598840a"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/data_validation.json",
+        "sha": "fa59c4c3dc17d09c6085366ea1885de53fb0d939",
+        "size": 1001,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/fa59c4c3dc17d09c6085366ea1885de53fb0d939"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/figure_comparison.json",
+        "sha": "9e45d356d6abd501e416dd5bf31a9f2bed185547",
+        "size": 1057,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/9e45d356d6abd501e416dd5bf31a9f2bed185547"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/full_reference_comparison.json",
+        "sha": "fffc0c771ed3b18fcbe7189920f4da75c6758bb7",
+        "size": 1531,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/fffc0c771ed3b18fcbe7189920f4da75c6758bb7"
+      },
+      {
+        "mode": "040000",
+        "path": "validation/logs",
+        "sha": "445107e846254a1d65125f0bdb0cb8eb9ec85222",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/445107e846254a1d65125f0bdb0cb8eb9ec85222"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/logs/analytic_rational.log",
+        "sha": "8eecad6b40a721a37dae927c3c7e1331726735fe",
+        "size": 543,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/8eecad6b40a721a37dae927c3c7e1331726735fe"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/logs/analytic_symbolic.log",
+        "sha": "2f817fb77dcbf232cf00db01919915c24550b64f",
+        "size": 600,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/2f817fb77dcbf232cf00db01919915c24550b64f"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/logs/certificate_decimal.log",
+        "sha": "a67073490803c83acef3ba15513ff5a3e80aa0f6",
+        "size": 932,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/a67073490803c83acef3ba15513ff5a3e80aa0f6"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/logs/certificate_integer.log",
+        "sha": "8bbd929808c278ee87a27aacde8943559c189ad0",
+        "size": 838,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/8bbd929808c278ee87a27aacde8943559c189ad0"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/logs/certificate_mpmath.log",
+        "sha": "3c1a1f1686ae1c7cf184a801d0a5bd7de76036a6",
+        "size": 466,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/3c1a1f1686ae1c7cf184a801d0a5bd7de76036a6"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/logs/certificate_reconstruction.log",
+        "sha": "0158c68ef89b33d8851828574d6ae84b3c817ae4",
+        "size": 1234,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/0158c68ef89b33d8851828574d6ae84b3c817ae4"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/logs/data_build.log",
+        "sha": "23a69c32012015da31592b5d4f4a5527558a17d4",
+        "size": 172,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/23a69c32012015da31592b5d4f4a5527558a17d4"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/logs/data_check.log",
+        "sha": "fa59c4c3dc17d09c6085366ea1885de53fb0d939",
+        "size": 1001,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/fa59c4c3dc17d09c6085366ea1885de53fb0d939"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/logs/figure_check.log",
+        "sha": "03d4031be8fe6d897126b53860b60d5650c12096",
+        "size": 2078,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/03d4031be8fe6d897126b53860b60d5650c12096"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/logs/figure_render.log",
+        "sha": "dddbdae7e0cbd2071868dcb6c08481609817e075",
+        "size": 67,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/dddbdae7e0cbd2071868dcb6c08481609817e075"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/logs/physical_checks.log",
+        "sha": "fe3faeaa463f57057d0af7e2362891c79ab8c988",
+        "size": 1946,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/fe3faeaa463f57057d0af7e2362891c79ab8c988"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/logs/review_render.log",
+        "sha": "af245342b61f59b3db7c01a3f5bddf4f104ef4b1",
+        "size": 83,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/af245342b61f59b3db7c01a3f5bddf4f104ef4b1"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/logs/tests.log",
+        "sha": "6a862ed78e7d314312f6605c5eda369d2ba2e496",
+        "size": 99,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/6a862ed78e7d314312f6605c5eda369d2ba2e496"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/logs/witness_decimal100.log",
+        "sha": "adc73a598a4d24eec9e52b693a6504264663b7d1",
+        "size": 262,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/adc73a598a4d24eec9e52b693a6504264663b7d1"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/logs/witness_decimal140.log",
+        "sha": "5b09349d8cb542f475c81808d490502919932856",
+        "size": 342,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/5b09349d8cb542f475c81808d490502919932856"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/logs/witness_mpmath_controls.log",
+        "sha": "e858fa3ace802b2ce7808434ce50c07d32b86084",
+        "size": 75,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/e858fa3ace802b2ce7808434ce50c07d32b86084"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/partition_rebuild.json",
+        "sha": "466ea7289056bf8bbc2376aaa54de1ee3c17960f",
+        "size": 579,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/466ea7289056bf8bbc2376aaa54de1ee3c17960f"
+      },
+      {
+        "mode": "100644",
+        "path": "validation/render_validation.json",
+        "sha": "03d4031be8fe6d897126b53860b60d5650c12096",
+        "size": 2078,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/03d4031be8fe6d897126b53860b60d5650c12096"
+      },
+      {
+        "mode": "040000",
+        "path": "verification",
+        "sha": "bba3376d0aa940ba3ae2db87f77b48fde96ed862",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/bba3376d0aa940ba3ae2db87f77b48fde96ed862"
+      },
+      {
+        "mode": "040000",
+        "path": "verification/analytic",
+        "sha": "8f4d39fbf7d726a51424f7aca3f432cdde8a1f6c",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/8f4d39fbf7d726a51424f7aca3f432cdde8a1f6c"
+      },
+      {
+        "mode": "100644",
+        "path": "verification/analytic/check_endpoints.py",
+        "sha": "ab11f8d84ad79eb3b7e815ae3344ada50bb28c99",
+        "size": 2579,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/ab11f8d84ad79eb3b7e815ae3344ada50bb28c99"
+      },
+      {
+        "mode": "100644",
+        "path": "verification/analytic/rational_endpoint_constants.py",
+        "sha": "b49c2d0f963fac4426265d082919779004f3bfa8",
+        "size": 1678,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/b49c2d0f963fac4426265d082919779004f3bfa8"
+      },
+      {
+        "mode": "100644",
+        "path": "verification/analytic/run_rational_checks.py",
+        "sha": "acbff8db306593fa458ba016f714f01ac0054c5b",
+        "size": 352,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/acbff8db306593fa458ba016f714f01ac0054c5b"
+      },
+      {
+        "mode": "040000",
+        "path": "verification/decimal",
+        "sha": "8beadaa7f08a8f9b8100560ed9d365aae6f9f23c",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/8beadaa7f08a8f9b8100560ed9d365aae6f9f23c"
+      },
+      {
+        "mode": "100644",
+        "path": "verification/decimal/check_witness.py",
+        "sha": "964434e36e6f3d43e170784cdcddbd9ef88fb0e0",
+        "size": 2399,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/964434e36e6f3d43e170784cdcddbd9ef88fb0e0"
+      },
+      {
+        "mode": "100644",
+        "path": "verification/decimal/decimal_interval.py",
+        "sha": "4bee959f8b189159fde008e61b625bb756a40f0d",
+        "size": 3748,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/4bee959f8b189159fde008e61b625bb756a40f0d"
+      },
+      {
+        "mode": "100644",
+        "path": "verification/decimal/verify_certificate.py",
+        "sha": "994c26a62bb154ee315325ff901ef3b23fce8a39",
+        "size": 4283,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/994c26a62bb154ee315325ff901ef3b23fce8a39"
+      },
+      {
+        "mode": "040000",
+        "path": "verification/integer",
+        "sha": "3d4db3f2c3009d01baa998daa7b587e03d7a541b",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/3d4db3f2c3009d01baa998daa7b587e03d7a541b"
+      },
+      {
+        "mode": "100644",
+        "path": "verification/integer/certify_all_noise.py",
+        "sha": "1b32c5e8328d16b6d1145612e457fc47577dcfd9",
+        "size": 5696,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/1b32c5e8328d16b6d1145612e457fc47577dcfd9"
+      },
+      {
+        "mode": "100644",
+        "path": "verification/integer/dyadic_interval.py",
+        "sha": "9000a0f76d806e8b3a837e5802d9413d4d6ab45d",
+        "size": 4907,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/9000a0f76d806e8b3a837e5802d9413d4d6ab45d"
+      },
+      {
+        "mode": "040000",
+        "path": "verification/mpmath",
+        "sha": "8130d47aab33b648b34a4589292caf59920df811",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/8130d47aab33b648b34a4589292caf59920df811"
+      },
+      {
+        "mode": "100644",
+        "path": "verification/mpmath/cross_backend.py",
+        "sha": "03d71cf64f77fa854ba4621308f44881819c742d",
+        "size": 3241,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/03d71cf64f77fa854ba4621308f44881819c742d"
+      },
+      {
+        "mode": "100644",
+        "path": "verification/mpmath/witness_and_controls.py",
+        "sha": "d2e80972d1525eeee313314a969d8793fc7fe847",
+        "size": 1725,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/d2e80972d1525eeee313314a969d8793fc7fe847"
+      },
+      {
+        "mode": "100644",
+        "path": "verification/mpmath/witness_formula.py",
+        "sha": "c2ec87f78454ce6e761bba2428ba839f56b03db6",
+        "size": 2485,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/c2ec87f78454ce6e761bba2428ba839f56b03db6"
+      },
+      {
+        "mode": "040000",
+        "path": "verification/physical",
+        "sha": "e38e39a71abada33db3b59872258d6139026c8de",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/e38e39a71abada33db3b59872258d6139026c8de"
+      },
+      {
+        "mode": "100644",
+        "path": "verification/physical/physical_check.py",
+        "sha": "22b3fab65ee987f6e4b91d25dfd9e89ed5412bc1",
+        "size": 6140,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/22b3fab65ee987f6e4b91d25dfd9e89ed5412bc1"
+      },
+      {
+        "mode": "100644",
+        "path": "verify.py",
+        "sha": "82a8f1599f451891881c1365fa5588f4b4b223a9",
+        "size": 666,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/82a8f1599f451891881c1365fa5588f4b4b223a9"
+      },
+      {
+        "mode": "040000",
+        "path": "website",
+        "sha": "883d20a04a4ba16cc1c900e714b6227d5d0a1b12",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/883d20a04a4ba16cc1c900e714b6227d5d0a1b12"
+      },
+      {
+        "mode": "040000",
+        "path": "website/assets",
+        "sha": "b64a3ea7cc17a7dccc720f0c3f8d461946e57fad",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/b64a3ea7cc17a7dccc720f0c3f8d461946e57fad"
+      },
+      {
+        "mode": "100644",
+        "path": "website/assets/site.js",
+        "sha": "84b684706303c4468e4321dfe1f989e1a30c4ad1",
+        "size": 4002,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/84b684706303c4468e4321dfe1f989e1a30c4ad1"
+      },
+      {
+        "mode": "100644",
+        "path": "website/assets/style.css",
+        "sha": "bcc44b12fac8ba83a1908eb9b860350c3c7d8695",
+        "size": 10389,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/bcc44b12fac8ba83a1908eb9b860350c3c7d8695"
+      },
+      {
+        "mode": "100644",
+        "path": "website/browser_check.py",
+        "sha": "03ca045f329ada54d8f3d151af1debf994e16206",
+        "size": 6910,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/03ca045f329ada54d8f3d151af1debf994e16206"
+      },
+      {
+        "mode": "100644",
+        "path": "website/build.py",
+        "sha": "9aad78e5767763d6a50b39d60039a314f4229f7d",
+        "size": 18858,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/9aad78e5767763d6a50b39d60039a314f4229f7d"
+      },
+      {
+        "mode": "100644",
+        "path": "website/check.py",
+        "sha": "7d701bd27fb7c6d86bc2994afa5e27e5d2f2d6d7",
+        "size": 5952,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/7d701bd27fb7c6d86bc2994afa5e27e5d2f2d6d7"
+      },
+      {
+        "mode": "100644",
+        "path": "website/editorial_map.json",
+        "sha": "8d522f06d5b7fa416c4f9c8d04b42890b2baad8a",
+        "size": 4802,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/8d522f06d5b7fa416c4f9c8d04b42890b2baad8a"
+      },
+      {
+        "mode": "040000",
+        "path": "website/pages",
+        "sha": "00705918883e6364c5f29f896e832980b41e48fe",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/00705918883e6364c5f29f896e832980b41e48fe"
+      },
+      {
+        "mode": "100644",
+        "path": "website/pages/channel.md",
+        "sha": "275f6fdb1e8d8ec2ad176a46b3de4537bd70bfe9",
+        "size": 2733,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/275f6fdb1e8d8ec2ad176a46b3de4537bd70bfe9"
+      },
+      {
+        "mode": "100644",
+        "path": "website/pages/figures.md",
+        "sha": "a47bad74c3c48ba7b38a631658a52f092a0993d9",
+        "size": 1379,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/a47bad74c3c48ba7b38a631658a52f092a0993d9"
+      },
+      {
+        "mode": "100644",
+        "path": "website/pages/index.md",
+        "sha": "0ac07161054c768d1258e88252c9a663e82ef554",
+        "size": 2792,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/0ac07161054c768d1258e88252c9a663e82ef554"
+      },
+      {
+        "mode": "100644",
+        "path": "website/pages/limits.md",
+        "sha": "82b436a713944c2823bceb905f45b33f0c204837",
+        "size": 2368,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/82b436a713944c2823bceb905f45b33f0c204837"
+      },
+      {
+        "mode": "100644",
+        "path": "website/pages/materials.md",
+        "sha": "33ba80892aa235742b2f8257fd8be384c06a811d",
+        "size": 2443,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/33ba80892aa235742b2f8257fd8be384c06a811d"
+      },
+      {
+        "mode": "100644",
+        "path": "website/pages/proof-guide.md",
+        "sha": "f2539cf1e2d0df45e9c8b9ce78576386abb60632",
+        "size": 3416,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/f2539cf1e2d0df45e9c8b9ce78576386abb60632"
+      },
+      {
+        "mode": "100644",
+        "path": "website/pages/status.md",
+        "sha": "b129e9e1a3809e36d50f17935dc445b96678768d",
+        "size": 2593,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/b129e9e1a3809e36d50f17935dc445b96678768d"
+      },
+      {
+        "mode": "100644",
+        "path": "website/pages/verification.md",
+        "sha": "2a07743a34e0b000f954256b435067f559e5de2c",
+        "size": 3166,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/2a07743a34e0b000f954256b435067f559e5de2c"
+      },
+      {
+        "mode": "100644",
+        "path": "website/pages/visual-design.md",
+        "sha": "b9ad70552064e093178a8b449660e3a2f8499ab9",
+        "size": 2577,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/b9ad70552064e093178a8b449660e3a2f8499ab9"
+      },
+      {
+        "mode": "100644",
+        "path": "website/palette.json",
+        "sha": "0e6ca5fbdfbec33d8426d69ef2831fcb6a9af8de",
+        "size": 1432,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/0e6ca5fbdfbec33d8426d69ef2831fcb6a9af8de"
+      },
+      {
+        "mode": "040000",
+        "path": "website/provenance",
+        "sha": "c0dd85b31aef926e42a37b985ea0c92b8481330a",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/c0dd85b31aef926e42a37b985ea0c92b8481330a"
+      },
+      {
+        "mode": "100644",
+        "path": "website/provenance/baseline_README.md",
+        "sha": "5c35209c8bd286c683cb570f7fb9f616c9217c05",
+        "size": 6337,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/5c35209c8bd286c683cb570f7fb9f616c9217c05"
+      },
+      {
+        "mode": "100644",
+        "path": "website/provenance/baseline_STATUS.md",
+        "sha": "9d42b7d1b2a8480343816ccd948be5d90ede4800",
+        "size": 2078,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/9d42b7d1b2a8480343816ccd948be5d90ede4800"
+      },
+      {
+        "mode": "100644",
+        "path": "website/provenance/baseline_manifest_v1.json",
+        "sha": "b5500b169a5c76fba504545d9971144bb03acb23",
+        "size": 19263,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/b5500b169a5c76fba504545d9971144bb03acb23"
+      },
+      {
+        "mode": "100644",
+        "path": "website/repository_preview.py",
+        "sha": "5e2d4dad1177ab5b32197bb4dd99ca58a4eb876a",
+        "size": 11108,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/5e2d4dad1177ab5b32197bb4dd99ca58a4eb876a"
+      },
+      {
+        "mode": "100644",
+        "path": "website/requirements-browser.txt",
+        "sha": "24b4715c902743f61e981e4f6e1b38da466c6bf2",
+        "size": 19,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/24b4715c902743f61e981e4f6e1b38da466c6bf2"
+      },
+      {
+        "mode": "100644",
+        "path": "website/requirements.txt",
+        "sha": "b084cd61994a83e0bfb296caaa9017d7bf1150a5",
+        "size": 23,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/b084cd61994a83e0bfb296caaa9017d7bf1150a5"
+      },
+      {
+        "mode": "100644",
+        "path": "website/site.json",
+        "sha": "a156162f4196d9362f1037cd5696745ebe5682e6",
+        "size": 3348,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/a156162f4196d9362f1037cd5696745ebe5682e6"
+      },
+      {
+        "mode": "040000",
+        "path": "website/tests",
+        "sha": "ef76446092312f73ddf7ef6c78092027d59aec42",
+        "type": "tree",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/ef76446092312f73ddf7ef6c78092027d59aec42"
+      },
+      {
+        "mode": "100644",
+        "path": "website/tests/test_default_style.py",
+        "sha": "0028387fa6b5a55f3f33e43f0ea460d8d1d38a34",
+        "size": 1547,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/0028387fa6b5a55f3f33e43f0ea460d8d1d38a34"
+      },
+      {
+        "mode": "100644",
+        "path": "website/tests/test_repository_preview.py",
+        "sha": "6c9761ddd2fa7e03e6b15c655d32f54e0a59dbb7",
+        "size": 2368,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/6c9761ddd2fa7e03e6b15c655d32f54e0a59dbb7"
+      },
+      {
+        "mode": "100644",
+        "path": "website/tests/test_site.py",
+        "sha": "c9ddcb6265f929479fd797ec282a433c20bf6471",
+        "size": 4270,
+        "type": "blob",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs/c9ddcb6265f929479fd797ec282a433c20bf6471"
+      }
+    ],
+    "truncated": false,
+    "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/f0015c56a19fd953c6797b2c64d9b507105234e3"
+  },
+  "commit": {
+    "sha": "f0015c56a19fd953c6797b2c64d9b507105234e3",
+    "node_id": "C_kwDOUSALgtoAKGYwMDE1YzU2YTE5ZmQ5NTNjNjc5N2IyYzY0ZDliNTA3MTA1MjM0ZTM",
+    "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/commits/f0015c56a19fd953c6797b2c64d9b507105234e3",
+    "html_url": "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/commit/f0015c56a19fd953c6797b2c64d9b507105234e3",
+    "author": {
+      "name": "Ruge Lin",
+      "email": "gogoko699@gmail.com",
+      "date": "2026-09-08T12:01:10Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-09-08T12:01:10Z"
+    },
+    "tree": {
+      "sha": "72e93a89a691ec4d2ea799bb3b1008bd6c0dee20",
+      "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/72e93a89a691ec4d2ea799bb3b1008bd6c0dee20"
+    },
+    "message": "Restrict the accepted palette to figures and restore plain page styling\n\nApply the author's figure-only palette acceptance. Keep GitHub-native pages in default GitHub formatting and replace the optional HTML site's painting-inspired chrome with neutral white surfaces, system fonts, standard links and no decorative mark.\n\nPreserve all figure SVG bytes and color mappings, all canonical scientific documents, numerical inputs and approved exports. Regenerate the affected reading pages and their manifest. The uploaded tree matches the checked local blobs.\n\nReader-site CI 34223404638 passed full rebuild, native regeneration, existing/new tests and real local HTTP browser checks. Scientific integrity/figure reproduction passed in 34223404538; its unchanged complete-certificate job is separately tracked and was still running at this merge. No numerical code was changed. No deployment, privacy/license change, manuscript or old-repository edit.",
+    "parents": [
+      {
+        "sha": "9f9acb5154b4b0228a057eb402ee35268e9f9ae9",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/commits/9f9acb5154b4b0228a057eb402ee35268e9f9ae9",
+        "html_url": "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/commit/9f9acb5154b4b0228a057eb402ee35268e9f9ae9"
+      }
+    ],
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqn/kGCRC1aQ7uu5UhlAAAgfoQAEro7aytCtfNjAgJepfWe4tB\n62Has10DbC0U7qTulcbKRkNi13rV22IcsCCLZjcAleYw+ck3JrEZfKR/dnNueCa6\n2XeTRa0gtLYbUHnKXNr4l8Ve8CcrZ/nUVOUvSML8DSkj6LwmnDmb4toxg5z8W+Ds\nS3OqaEeJe+XdVPJHogwC0pLqT15KTB0WBPJ78NfiHTciHTp/fbXWVIEA1h20YA4d\nHMHU1s9O7kfIeyaodBx5TXRbg1jDFE6jru+BzdMLzcC//IAFyvighl1RsFkyXogL\nopBDPTmEQf6ZIMn4+DBNKZ+TS8l8IKjhhGd6LRTPGi6q6x2M6SVQoLSqzvRfyk9F\n/8+04cg0lpbBfHXoorQUNnZqjXmGnkbN45ReRQPh5G6sn20CZl6roD7lsysJg8V4\nBS/A56mpOTyX70P/f0kaUS7UIf+iJ9ezhq/fHeARAWxm86XK1X4X3pmL2N21Juqx\ngOxEkpStRQSU2zDGc2by3Ym27VdXDoduMKK3lXMqKUyS18/+1K52VxZq6Y6o+kfM\ngD/t46t+h+gMfKUmGnPyM2z5VgC9W1Gh5SqpzLsgWRsuby2/66Yl/MLJXJheBc2/\nkELm4zWp/48VPyIb12zkVMCaAaGK8jH8N0kjZ9ev/mbLdaqx8hcKW/HWAK2LKAei\nEYT6Ms/1lQ3zTdb5Vj7w\n=6W2e\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 72e93a89a691ec4d2ea799bb3b1008bd6c0dee20\nparent 9f9acb5154b4b0228a057eb402ee35268e9f9ae9\nauthor Ruge Lin <gogoko699@gmail.com> 1788868870 +0800\ncommitter GitHub <noreply@github.com> 1788868870 +0800\n\nRestrict the accepted palette to figures and restore plain page styling\n\nApply the author's figure-only palette acceptance. Keep GitHub-native pages in default GitHub formatting and replace the optional HTML site's painting-inspired chrome with neutral white surfaces, system fonts, standard links and no decorative mark.\n\nPreserve all figure SVG bytes and color mappings, all canonical scientific documents, numerical inputs and approved exports. Regenerate the affected reading pages and their manifest. The uploaded tree matches the checked local blobs.\n\nReader-site CI 34223404638 passed full rebuild, native regeneration, existing/new tests and real local HTTP browser checks. Scientific integrity/figure reproduction passed in 34223404538; its unchanged complete-certificate job is separately tracked and was still running at this merge. No numerical code was changed. No deployment, privacy/license change, manuscript or old-repository edit.",
+      "verified_at": "2026-09-08T12:01:10Z"
+    }
+  },
+  "main": {
+    "name": "main",
+    "commit": {
+      "sha": "f0015c56a19fd953c6797b2c64d9b507105234e3",
+      "node_id": "C_kwDOUSALgtoAKGYwMDE1YzU2YTE5ZmQ5NTNjNjc5N2IyYzY0ZDliNTA3MTA1MjM0ZTM",
+      "commit": {
+        "author": {
+          "name": "Ruge Lin",
+          "email": "gogoko699@gmail.com",
+          "date": "2026-09-08T12:01:10Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2026-09-08T12:01:10Z"
+        },
+        "message": "Restrict the accepted palette to figures and restore plain page styling\n\nApply the author's figure-only palette acceptance. Keep GitHub-native pages in default GitHub formatting and replace the optional HTML site's painting-inspired chrome with neutral white surfaces, system fonts, standard links and no decorative mark.\n\nPreserve all figure SVG bytes and color mappings, all canonical scientific documents, numerical inputs and approved exports. Regenerate the affected reading pages and their manifest. The uploaded tree matches the checked local blobs.\n\nReader-site CI 34223404638 passed full rebuild, native regeneration, existing/new tests and real local HTTP browser checks. Scientific integrity/figure reproduction passed in 34223404538; its unchanged complete-certificate job is separately tracked and was still running at this merge. No numerical code was changed. No deployment, privacy/license change, manuscript or old-repository edit.",
+        "tree": {
+          "sha": "72e93a89a691ec4d2ea799bb3b1008bd6c0dee20",
+          "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees/72e93a89a691ec4d2ea799bb3b1008bd6c0dee20"
+        },
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/commits/f0015c56a19fd953c6797b2c64d9b507105234e3",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqn/kGCRC1aQ7uu5UhlAAAgfoQAEro7aytCtfNjAgJepfWe4tB\n62Has10DbC0U7qTulcbKRkNi13rV22IcsCCLZjcAleYw+ck3JrEZfKR/dnNueCa6\n2XeTRa0gtLYbUHnKXNr4l8Ve8CcrZ/nUVOUvSML8DSkj6LwmnDmb4toxg5z8W+Ds\nS3OqaEeJe+XdVPJHogwC0pLqT15KTB0WBPJ78NfiHTciHTp/fbXWVIEA1h20YA4d\nHMHU1s9O7kfIeyaodBx5TXRbg1jDFE6jru+BzdMLzcC//IAFyvighl1RsFkyXogL\nopBDPTmEQf6ZIMn4+DBNKZ+TS8l8IKjhhGd6LRTPGi6q6x2M6SVQoLSqzvRfyk9F\n/8+04cg0lpbBfHXoorQUNnZqjXmGnkbN45ReRQPh5G6sn20CZl6roD7lsysJg8V4\nBS/A56mpOTyX70P/f0kaUS7UIf+iJ9ezhq/fHeARAWxm86XK1X4X3pmL2N21Juqx\ngOxEkpStRQSU2zDGc2by3Ym27VdXDoduMKK3lXMqKUyS18/+1K52VxZq6Y6o+kfM\ngD/t46t+h+gMfKUmGnPyM2z5VgC9W1Gh5SqpzLsgWRsuby2/66Yl/MLJXJheBc2/\nkELm4zWp/48VPyIb12zkVMCaAaGK8jH8N0kjZ9ev/mbLdaqx8hcKW/HWAK2LKAei\nEYT6Ms/1lQ3zTdb5Vj7w\n=6W2e\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 72e93a89a691ec4d2ea799bb3b1008bd6c0dee20\nparent 9f9acb5154b4b0228a057eb402ee35268e9f9ae9\nauthor Ruge Lin <gogoko699@gmail.com> 1788868870 +0800\ncommitter GitHub <noreply@github.com> 1788868870 +0800\n\nRestrict the accepted palette to figures and restore plain page styling\n\nApply the author's figure-only palette acceptance. Keep GitHub-native pages in default GitHub formatting and replace the optional HTML site's painting-inspired chrome with neutral white surfaces, system fonts, standard links and no decorative mark.\n\nPreserve all figure SVG bytes and color mappings, all canonical scientific documents, numerical inputs and approved exports. Regenerate the affected reading pages and their manifest. The uploaded tree matches the checked local blobs.\n\nReader-site CI 34223404638 passed full rebuild, native regeneration, existing/new tests and real local HTTP browser checks. Scientific integrity/figure reproduction passed in 34223404538; its unchanged complete-certificate job is separately tracked and was still running at this merge. No numerical code was changed. No deployment, privacy/license change, manuscript or old-repository edit.",
+          "verified_at": "2026-09-08T12:01:10Z"
+        }
+      },
+      "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/commits/f0015c56a19fd953c6797b2c64d9b507105234e3",
+      "html_url": "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/commit/f0015c56a19fd953c6797b2c64d9b507105234e3",
+      "comments_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/commits/f0015c56a19fd953c6797b2c64d9b507105234e3/comments",
+      "author": {
+        "login": "GoGoKo699",
+        "id": 28149313,
+        "node_id": "MDQ6VXNlcjI4MTQ5MzEz",
+        "avatar_url": "https://avatars.githubusercontent.com/u/28149313?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/GoGoKo699",
+        "html_url": "https://github.com/GoGoKo699",
+        "followers_url": "https://api.github.com/users/GoGoKo699/followers",
+        "following_url": "https://api.github.com/users/GoGoKo699/following{/other_user}",
+        "gists_url": "https://api.github.com/users/GoGoKo699/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/GoGoKo699/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/GoGoKo699/subscriptions",
+        "organizations_url": "https://api.github.com/users/GoGoKo699/orgs",
+        "repos_url": "https://api.github.com/users/GoGoKo699/repos",
+        "events_url": "https://api.github.com/users/GoGoKo699/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/GoGoKo699/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "9f9acb5154b4b0228a057eb402ee35268e9f9ae9",
+          "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/commits/9f9acb5154b4b0228a057eb402ee35268e9f9ae9",
+          "html_url": "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/commit/9f9acb5154b4b0228a057eb402ee35268e9f9ae9"
+        }
+      ]
+    },
+    "_links": {
+      "self": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/branches/main",
+      "html": "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/tree/main"
+    },
+    "protected": false,
+    "protection": {
+      "enabled": false,
+      "required_status_checks": {
+        "enforcement_level": "off",
+        "contexts": [],
+        "checks": []
+      }
+    },
+    "protection_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/branches/main/protection"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "integrity",
+  "command": [
+    "../audit-venv/bin/python",
+    "verify.py"
+  ],
+  "cwd": "/workspace/scratch/323c19becda4/baseline",
+  "started_utc": "2026-09-08T13:43:39.215547+00:00",
+  "duration_seconds": 0.6834000250019017,
+  "returncode": 0,
+  "maxrss_children_kib": 29304,
+  "env_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MPLBACKEND": "Agg",
+    "PYTHONUNBUFFERED": "1"
+  },
+  "python_optimized": false
+}

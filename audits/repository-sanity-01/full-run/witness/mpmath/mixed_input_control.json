@@ -1,0 +1,11 @@
+{
+  "error": "1/5",
+  "p": "11/19",
+  "input": "maximally mixed",
+  "coherent_information": {
+    "lower": "0.0030942608546849564961308566114056876572028777226112245998778761065640767002696118762348854235225417",
+    "upper": "0.0030942608546849564961308566114056876572028777226112245998778761065640767002696118762348854235225418",
+    "decimal_places": 100
+  },
+  "conclusion": "At the nearly-pure zero line g=8/11 the true one-use optimum is still positive."
+}

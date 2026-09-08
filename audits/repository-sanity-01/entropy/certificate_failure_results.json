@@ -1,0 +1,350 @@
+{
+  "passed": true,
+  "positive_full_replay": false,
+  "exact_cover": {
+    "bands": 512,
+    "rectangles": 29635,
+    "input": [
+      "1/1000000",
+      "1/2"
+    ],
+    "c": [
+      "1/268435456",
+      "24/25"
+    ]
+  },
+  "malformed_certificate_rejections": [
+    {
+      "backend": "integer",
+      "case": "changed_polynomial",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "parameters",
+      "seconds": 0.05925017200206639
+    },
+    {
+      "backend": "integer",
+      "case": "changed_domain",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "parameters",
+      "seconds": 0.06201632100419374
+    },
+    {
+      "backend": "integer",
+      "case": "changed_tail_split",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "parameters",
+      "seconds": 0.09055135999369668
+    },
+    {
+      "backend": "integer",
+      "case": "empty_noise_cover",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "incomplete noise cover",
+      "seconds": 0.03524431400001049
+    },
+    {
+      "backend": "integer",
+      "case": "reversed_noise_band",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "noise cover",
+      "seconds": 0.036223586001142394
+    },
+    {
+      "backend": "integer",
+      "case": "noise_gap",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "noise cover",
+      "seconds": 0.04372145100205671
+    },
+    {
+      "backend": "integer",
+      "case": "nan_noise_endpoint",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "Invalid literal for Fraction: 'NaN'",
+      "seconds": 0.039339532995654736
+    },
+    {
+      "backend": "integer",
+      "case": "empty_input_cover",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "incomplete input cover",
+      "seconds": 0.04169752299640095
+    },
+    {
+      "backend": "integer",
+      "case": "missing_first_input_interval",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "input cover",
+      "seconds": 0.0677044640033273
+    },
+    {
+      "backend": "integer",
+      "case": "reversed_input_interval",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "input cover",
+      "seconds": 0.0829035839997232
+    },
+    {
+      "backend": "integer",
+      "case": "overlapping_input_intervals",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "input cover",
+      "seconds": 0.07999159600149142
+    },
+    {
+      "backend": "integer",
+      "case": "uncertifiable_single_coarse_interval",
+      "rejected": true,
+      "exception": "ArithmeticError",
+      "message": "leaf",
+      "seconds": 0.07908937799948035
+    },
+    {
+      "backend": "mpmath",
+      "case": "changed_polynomial",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "params",
+      "seconds": 0.03933888199389912
+    },
+    {
+      "backend": "mpmath",
+      "case": "changed_domain",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "params",
+      "seconds": 0.04176435399858747
+    },
+    {
+      "backend": "mpmath",
+      "case": "changed_tail_split",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "params",
+      "seconds": 0.07244110899773659
+    },
+    {
+      "backend": "mpmath",
+      "case": "empty_noise_cover",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "incomplete noise cover",
+      "seconds": 0.04182109099929221
+    },
+    {
+      "backend": "mpmath",
+      "case": "reversed_noise_band",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "noise cover",
+      "seconds": 0.040411413996480405
+    },
+    {
+      "backend": "mpmath",
+      "case": "noise_gap",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "noise cover",
+      "seconds": 0.04714260900072986
+    },
+    {
+      "backend": "mpmath",
+      "case": "nan_noise_endpoint",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "Invalid literal for Fraction: 'NaN'",
+      "seconds": 0.03417494599852944
+    },
+    {
+      "backend": "mpmath",
+      "case": "empty_input_cover",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "incomplete input cover",
+      "seconds": 0.044587284995941445
+    },
+    {
+      "backend": "mpmath",
+      "case": "missing_first_input_interval",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "input cover",
+      "seconds": 0.05918816600024002
+    },
+    {
+      "backend": "mpmath",
+      "case": "reversed_input_interval",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "input cover",
+      "seconds": 0.05647111200232757
+    },
+    {
+      "backend": "mpmath",
+      "case": "overlapping_input_intervals",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "input cover",
+      "seconds": 0.03947355200216407
+    },
+    {
+      "backend": "mpmath",
+      "case": "uncertifiable_single_coarse_interval",
+      "rejected": true,
+      "exception": "AssertionError",
+      "message": "(0, Fraction(1, 1000000), Fraction(1, 2), 'leaf')",
+      "seconds": 0.03845373899821425
+    },
+    {
+      "backend": "decimal",
+      "case": "changed_polynomial",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "Wrong claim parameters",
+      "seconds": 0.04099691999726929
+    },
+    {
+      "backend": "decimal",
+      "case": "changed_domain",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "Wrong claim parameters",
+      "seconds": 0.04198912999709137
+    },
+    {
+      "backend": "decimal",
+      "case": "changed_tail_split",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "Wrong claim parameters",
+      "seconds": 0.04407553799683228
+    },
+    {
+      "backend": "decimal",
+      "case": "empty_noise_cover",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "Incomplete noise domain",
+      "seconds": 0.044826646997535136
+    },
+    {
+      "backend": "decimal",
+      "case": "reversed_noise_band",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "Noise partition is not exact",
+      "seconds": 0.03801676999864867
+    },
+    {
+      "backend": "decimal",
+      "case": "noise_gap",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "Noise partition is not exact",
+      "seconds": 0.057216713998059276
+    },
+    {
+      "backend": "decimal",
+      "case": "nan_noise_endpoint",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "Invalid literal for Fraction: 'NaN'",
+      "seconds": 0.057123118996969424
+    },
+    {
+      "backend": "decimal",
+      "case": "empty_input_cover",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "Incomplete input partition",
+      "seconds": 0.03677113800222287
+    },
+    {
+      "backend": "decimal",
+      "case": "missing_first_input_interval",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "Input partition is not exact",
+      "seconds": 0.04008441800397122
+    },
+    {
+      "backend": "decimal",
+      "case": "reversed_input_interval",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "Input partition is not exact",
+      "seconds": 0.051606649001769256
+    },
+    {
+      "backend": "decimal",
+      "case": "overlapping_input_intervals",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "Input partition is not exact",
+      "seconds": 0.0398448929990991
+    },
+    {
+      "backend": "decimal",
+      "case": "uncertifiable_single_coarse_interval",
+      "rejected": true,
+      "exception": "ArithmeticError",
+      "message": "('Leaf', 0, '1/1000000', '1/2', '0.0031233614450966209791703952777851723291765914289439')",
+      "seconds": 0.04677661300229374
+    }
+  ],
+  "mpmath_low_precision_rejections": [
+    {
+      "digits": -20,
+      "rejected": true,
+      "exception": "AssertionError",
+      "message": "tail"
+    },
+    {
+      "digits": -1,
+      "rejected": true,
+      "exception": "AssertionError",
+      "message": "tail"
+    },
+    {
+      "digits": 0,
+      "rejected": true,
+      "exception": "AssertionError",
+      "message": "tail"
+    },
+    {
+      "digits": 1,
+      "rejected": true,
+      "exception": "AssertionError",
+      "message": "(0, Fraction(1, 1000000), Fraction(532767, 32768000000), 'leaf')"
+    },
+    {
+      "digits": 2,
+      "rejected": true,
+      "exception": "AssertionError",
+      "message": "(0, Fraction(1, 1000000), Fraction(532767, 32768000000), 'leaf')"
+    },
+    {
+      "digits": 5,
+      "rejected": true,
+      "exception": "AssertionError",
+      "message": "(0, Fraction(1, 1000000), Fraction(532767, 32768000000), 'leaf')"
+    },
+    {
+      "digits": 10,
+      "rejected": true,
+      "exception": "AssertionError",
+      "message": "(0, Fraction(1, 1000000), Fraction(532767, 32768000000), 'leaf')"
+    }
+  ]
+}

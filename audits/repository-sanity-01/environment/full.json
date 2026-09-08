@@ -1,0 +1,24 @@
+{
+  "name": "full",
+  "command": [
+    "../audit-venv/bin/python",
+    "reproduce.py",
+    "--output",
+    "build/audit-full",
+    "--full",
+    "--rebuild-certificate"
+  ],
+  "cwd": "/workspace/scratch/323c19becda4/baseline",
+  "started_utc": "2026-09-08T13:43:40.641104+00:00",
+  "duration_seconds": 1010.5281588209982,
+  "returncode": 0,
+  "maxrss_children_kib": 160120,
+  "env_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MPLBACKEND": "Agg",
+    "PYTHONUNBUFFERED": "1"
+  },
+  "python_optimized": false
+}

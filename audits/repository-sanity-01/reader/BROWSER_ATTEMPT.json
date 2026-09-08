@@ -1,0 +1,19 @@
+{
+  "status": "BLOCKED",
+  "browser_check_returncode": 1,
+  "browser_pages_tested": 0,
+  "browsers_actually_tested": [],
+  "intended_browser": "Chromium 143.0.7499.4, Playwright build1200",
+  "playwright_version": "1.57.0",
+  "python_version": "3.12.13",
+  "pandoc_version": "pandoc 3.1.3",
+  "inkscape_version": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+  "intended_mode": "actual loopback HTTP via --base-url",
+  "loopback_host": "127.0.0.1",
+  "reason": "Chromium full and headless runtime downloads failed; system package unavailable; launch executable missing",
+  "desktop_mobile_interaction_pass": false,
+  "authenticated_github_renderer_inspected": false,
+  "in_memory_mirror_used": false,
+  "separate_nonbrowser_http_check_passed": true,
+  "not_a_website_scientific_failure": true
+}

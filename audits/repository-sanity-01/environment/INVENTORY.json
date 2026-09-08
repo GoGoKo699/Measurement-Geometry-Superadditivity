@@ -1,0 +1,52 @@
+[
+  {
+    "area": "docs",
+    "files": 7,
+    "role": "canonical scientific proof/model and sources"
+  },
+  {
+    "area": "verification",
+    "files": 12,
+    "role": "active independent arithmetic, witnesses and physical checks"
+  },
+  {
+    "area": "tests",
+    "files": 4,
+    "role": "method and negative tests, not full theorem"
+  },
+  {
+    "area": "figures/code",
+    "files": 3,
+    "role": "active scientific rendering"
+  },
+  {
+    "area": "numerics",
+    "files": 2,
+    "role": "canonical plotting inputs"
+  },
+  {
+    "area": "website",
+    "files": 26,
+    "role": "optional HTML implementation and test routes"
+  },
+  {
+    "area": "reader",
+    "files": 13,
+    "role": "GitHub-native generated Markdown/figures"
+  },
+  {
+    "area": "provenance",
+    "files": 50,
+    "role": "source fragments, mappings and explicitly historical records"
+  },
+  {
+    "area": "evidence",
+    "files": 9,
+    "role": "immutable comparison targets"
+  },
+  {
+    "area": "validation",
+    "files": 25,
+    "role": "prior packaging executions, inspected not presumed correct"
+  }
+]

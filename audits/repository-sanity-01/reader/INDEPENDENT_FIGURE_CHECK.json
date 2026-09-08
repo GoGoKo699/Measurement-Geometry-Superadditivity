@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "method": "stdlib rational arithmetic; integer-square-root bounds at 120 decimal places; source modules not imported",
+  "figure2_rows": 1001,
+  "figure3_rows": 501,
+  "geometry_rows": 9,
+  "enclosures_checked": 5034,
+  "max_absolute_plotting_error": 4.999420399260776e-18,
+  "figure1_scope": "metadata, normalization and negative all-measured term only; independent entropy witness audit delegated separately",
+  "cross_figure_order": "59/86 < 0.7 < p_cert(0.1) < p_rep(0.1)",
+  "cone_slope": "18/289",
+  "color_only_derivatives": [
+    {
+      "figure": "figure_01_channel_and_witness.svg",
+      "original_sha256": "ddd3ab75087861ac8940d89f6ce1f3f79967159647d89b80862fe9d581c1b261",
+      "display_sha256": "ae55000c4817410b942b56e633f737782092a151b529511c92813d3928691ede"
+    },
+    {
+      "figure": "figure_02_guaranteed_region.svg",
+      "original_sha256": "91f5034233d395f5571c2a7af3740154b88c52af3df3e35e6acb812f10ab04ea",
+      "display_sha256": "f6524780413bd0c6b75ab7373303dcc124d6ff0f98d6a72b99338b4539489d17"
+    },
+    {
+      "figure": "figure_03_coplanar_limit.svg",
+      "original_sha256": "a5a8fe378f3eb573a6d5b02fae2aa67d291e6232440ec8798bf7a477e76584cd",
+      "display_sha256": "9143ac8065b44da015c84ac93f8f77b7c4d765c8941d01140519d9e9bbffb55b"
+    }
+  ]
+}

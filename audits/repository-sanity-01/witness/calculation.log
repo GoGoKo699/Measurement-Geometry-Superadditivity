@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/323c19becda4/audit-notes/witness/independent_hidden_outcomes.py", line 248, in <module>
+    main()
+  File "/workspace/scratch/323c19becda4/audit-notes/witness/independent_hidden_outcomes.py", line 231, in main
+    assert inside, label
+           ^^^^^^
+AssertionError: m=0

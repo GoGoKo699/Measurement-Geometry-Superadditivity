@@ -1,0 +1,16 @@
+{
+  "mathematical_and_test_results_unchanged": true,
+  "excluded_fields": [
+    "seconds",
+    "duration_seconds"
+  ],
+  "comparisons": {
+    "independent_entropy_results.json": true,
+    "certificate_failure_results.json": true
+  },
+  "adapter_changes_only": [
+    "explicit baseline argument",
+    "explicit new output argument",
+    "refuse existing outputs"
+  ]
+}

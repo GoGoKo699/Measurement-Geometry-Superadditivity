@@ -1,0 +1,28 @@
+{
+  "baseline_commit": "f0015c56a19fd953c6797b2c64d9b507105234e3",
+  "python": "3.12.13",
+  "full_positive_replay_performed_here": false,
+  "portable_adapter_has_no_mathematical_change": true,
+  "commands": [
+    {
+      "command": "audit-venv/bin/python audit-notes/entropy/independent_entropy_checks.py --output audit-notes/entropy/portable-check/independent.json",
+      "return_code": 0,
+      "duration_seconds": 10.218055968005501
+    },
+    {
+      "command": "audit-venv/bin/python audit-notes/entropy/certificate_failure_checks.py --baseline baseline --output audit-notes/entropy/portable-check/failure.json",
+      "return_code": 0,
+      "duration_seconds_malformed_subcases": 1.9820889069815166
+    }
+  ],
+  "files": {
+    "REPORT.md": "0ca4eec9c120e279cc9d26811e31e1e6de81ff0554ef818beffb242558e7b866",
+    "certificate_failure_checks.py": "0bec294d00fe5cdec18aee05933d7d347d8bd9d2cb135e1397b38025a105c9e9",
+    "certificate_failure_results.json": "5910d68d2ce19b9310bb5c56f70436a4a25320f72f2177ff82133ab8034271ae",
+    "independent_entropy_checks.py": "4c05d8131dbcd55a61ec607492f203b9d8c7a07815a58595c39502aef6041856",
+    "independent_entropy_results.json": "aa398985bd9f61748e060fe6a023fa11eebad2c70758019395dc6f0316ef2e69",
+    "portable-check/comparison.json": "98e8b860eafdb63ecc8e72a3f9eeec1e5d93881d3c2bcb4a33375f5f337fc34d",
+    "portable-check/failure.json": "a05b6dbb53daae607e1b08e644286c93e8ec1218d288f45bb251a62f52231159",
+    "portable-check/independent.json": "2db4f662e602e03277d17eeba4bedb71c09844e26effe7274054011c93d4ffc0"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "baseline": {
+    "commit": "f0015c56a19fd953c6797b2c64d9b507105234e3",
+    "tree": "72e93a89a691ec4d2ea799bb3b1008bd6c0dee20",
+    "git_status_short": "",
+    "identity_check_return_code": 0
+  },
+  "attempts": [
+    {
+      "command": "/usr/bin/time -v /workspace/scratch/323c19becda4/audit-venv/bin/python independent_hidden_outcomes.py --baseline /workspace/scratch/323c19becda4/baseline --output results.json",
+      "return_code": 127,
+      "log": "run.log",
+      "classification": "environment limitation: /usr/bin/time absent"
+    },
+    {
+      "command": "time /workspace/scratch/323c19becda4/audit-venv/bin/python independent_hidden_outcomes.py --baseline /workspace/scratch/323c19becda4/baseline --output results.json",
+      "return_code": 1,
+      "log": "calculation.log",
+      "wall_seconds": 3.759,
+      "user_seconds": 3.71,
+      "system_seconds": 0.039,
+      "classification": "audit-script zero-width rational comparison corrected; baseline unchanged"
+    },
+    {
+      "command": "time /workspace/scratch/323c19becda4/audit-venv/bin/python independent_hidden_outcomes.py --baseline /workspace/scratch/323c19becda4/baseline --output results.json",
+      "return_code": 0,
+      "log": "calculation-final.log",
+      "wall_seconds": 2.694,
+      "user_seconds": 2.668,
+      "system_seconds": 0.022,
+      "classification": "success; nearest arithmetic; exact-rational m=0 comparison"
+    }
+  ],
+  "limits": {
+    "cpu_time_seconds": "unlimited",
+    "virtual_memory_kib": "unlimited",
+    "data_size_kib": "unlimited",
+    "stack_size_kib": 8192,
+    "open_files": 16384
+  },
+  "file_hashes": {
+    "REPORT.md": "2113229dc631861da74cd7b3274188abdd4a5cfed34867f4204b0e207928da66",
+    "calculation-final.log": "7a308d78306f81cc686d9146eba13c6887930ed6d87987f069e4ef848a7ea232",
+    "calculation.log": "5ae5a25e9a1705eae35f7a92455521ba06b23bbaad642374343edc205991742a",
+    "independent_hidden_outcomes.py": "2d3b2084a69a03a6dc3d34dd12b0ec80e979768cb17e1516b6894bd55d800d2c",
+    "results.json": "2a47c3d6f4bf45adb2fe3c73acf1bbac7da7d027d6468fa35f83539312f4a039",
+    "run.log": "3e737f6a9117cec194b02103b357f8668fae9adb86a8a8cd0bf25efab8948548"
+  }
+}
