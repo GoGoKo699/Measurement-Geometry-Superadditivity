@@ -1,11 +1,5 @@
 # Measurement Geometry and Coherent-Information Superadditivity
 
-## Read the project
-
-The repository is also the source of a complete reader website. Start with [the channel](website/pages/channel.md), [the proof route](website/pages/proof-guide.md), or [the approved figure captions](figures/CAPTIONS.md). The exact model, complete proof, numerical evidence and reproduction commands are linked from each route. Everything needed for the scientific account remains here; manuscript drafting comes afterward.
-
-The website is a **private review build, not a publicly deployed site**. It has local search, native MathML, responsive navigation and a Gachet-inspired color study that leaves every approved scientific export unchanged. See [website build and privacy instructions](WEBSITE.md) and [the source-material inventory](website/pages/materials.md).
-
 A qubit either arrives intact or is destructively measured along a randomly chosen, known axis. In the measured branch, the receiver gets the axis label and an imperfect outcome record, but not the measured qubit or the hidden true sign.
 
 This scientific baseline establishes a geometric sufficient condition for a collective-coding advantage: for **every finite measurement ensemble spanning all three Bloch directions**, and every **common symmetric reporting error** $0<\epsilon<1/2$, there is a nonempty measurement-probability interval with

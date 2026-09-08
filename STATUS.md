@@ -1,13 +1,15 @@
-# Scientific baseline status
+# Project status
 
-**8 September 2026 · Baseline v1**
+**8 September 2026. Scientific baseline v1; reader-website review v1.**
 
-The user approved the three rendered figure versions. Their scientific content, layout and exact PDF/SVG/PNG bytes are frozen in `figures/approved/`. Their copied review PDF retains its original preapproval footer for byte preservation; that historical footer does not supersede the approval recorded here.
+The scientific baseline was merged into this dedicated repository at commit `9a1e4cb3bad843db9cec1fa348870ca7162df0e0`. The current stage is furnishing the project website and reader paths. The manuscript remains the final stage, after the reader-facing project material and website presentation are approved.
 
-This is the consolidated scientific source for the separate noisy-record channel paper, not the original many-body entanglement-response project. The main theorem, operation budget, common-error restriction, eight-use illustration, and scope of the coplanar/cone statements are unchanged. The complete mathematical proof and required computational dependencies are included directly, without requiring previous chats or archive extraction.
+The model and complete proof, frozen argument, numerical inputs, evidence, certificate and independent checking implementations remain unchanged. All 27 approved figure artifacts remain byte-identical in `figures/approved/`. The website generates Gachet-inspired SVG color studies separately; these are not replacements for the approved paper exports. No numerical quantity, geometry, line pattern, label or caption is changed by those derivatives.
 
-**Baseline v1 passed its clean-directory reproduction and is ready for the dedicated-repository stage.** The result is recorded in [BASELINE_VALIDATION.json](validation/BASELINE_VALIDATION.json), with a readable [completion report](validation/BASELINE_REPORT.md). It is a clean-directory execution check after relocation, not a fresh literature review or a new independent researcher’s audit. Separate checkers remain separate. The retained source package's author-side audit and attribution status have not been strengthened by relabeling a packaging test.
+The result retains its recorded author-side analytical and computer-assisted status. Site tests and browser checks do not constitute a new theorem audit, external review or absolute priority clearance. The prior scientific packaging results are recorded in [BASELINE_VALIDATION.json](validation/BASELINE_VALIDATION.json), and the exact scientific scope remains in [MODEL_AND_CLAIMS.md](docs/MODEL_AND_CLAIMS.md).
 
-The approved workflow remains: finish this scientific baseline; populate and verify a new dedicated repository; only then draft the manuscript. No remote repository has been created or modified by this package. `Measurement-Geometry-Superadditivity` is the proposed repository name. A license and release citation must be chosen explicitly before a public release; neither is fabricated here.
+Repository privacy and licensing are unchanged. No GitHub Pages deployment, public release or manuscript is included. The site is built locally or as a private CI artifact; source-repository privacy is not a substitute for a website-access decision. See [WEBSITE.md](WEBSITE.md).
 
-Remaining research questions outside the declared paper scope, such as exact capacity, efficient outer decoding, and arbitrary heterogeneous/correlated record errors, are not hidden requirements for this baseline. The original repository is not a dependency and has not been accessed by this consolidation.
+This is a separate noisy-record quantum-channel project. The earlier boundary-entangling-susceptibility repository is not a dependency and is not modified. Unrelated model extensions, efficient decoding and exact capacity remain outside the declared paper scope.
+
+The original baseline status text is preserved unchanged in [website/provenance/baseline_STATUS.md](website/provenance/baseline_STATUS.md). Its historical pre-repository wording does not describe the current stage. The only edits to previously frozen files in this reader pass are README navigation, this status page, and their manifest entries. The complete source material itself is untouched.
