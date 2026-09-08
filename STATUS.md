@@ -8,7 +8,7 @@ The model and complete proof, frozen argument, numerical inputs, evidence, certi
 
 The result retains its recorded author-side analytical and computer-assisted status. Site tests and browser checks do not constitute a new theorem audit, external review or absolute priority clearance. The prior scientific packaging results are recorded in [BASELINE_VALIDATION.json](validation/BASELINE_VALIDATION.json), and the exact scientific scope remains in [MODEL_AND_CLAIMS.md](docs/MODEL_AND_CLAIMS.md).
 
-Repository privacy and licensing are unchanged. No GitHub Pages deployment, public release or manuscript is included. The site is built locally or as a private CI artifact; source-repository privacy is not a substitute for a website-access decision. See [WEBSITE.md](WEBSITE.md).
+Repository privacy and licensing are unchanged. No GitHub Pages deployment, public release or manuscript is included. The [project overview](reader/README.md), [figure atlas](reader/figures.md) and reading routes are available directly on GitHub. The custom HTML version can still be built locally or as a private CI artifact; public hosting remains a separate decision. See [WEBSITE.md](WEBSITE.md).
 
 This is a separate noisy-record quantum-channel project. The earlier boundary-entangling-susceptibility repository is not a dependency and is not modified. Unrelated model extensions, efficient decoding and exact capacity remain outside the declared paper scope.
 

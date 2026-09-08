@@ -1,10 +1,14 @@
 # Measurement Geometry and Coherent-Information Superadditivity
 
-## Read the project
+## Read the project directly on GitHub
 
-The repository is also the source of a complete reader website. Start with [the channel](website/pages/channel.md), [the proof route](website/pages/proof-guide.md), or [the approved figure captions](figures/CAPTIONS.md). The exact model, complete proof, numerical evidence and reproduction commands are linked from each route. Everything needed for the scientific account remains here; manuscript drafting comes afterward.
+**[Open the project overview](reader/README.md)** · **[Figure atlas](reader/figures.md)** · **[Gachet palette comparison](reader/visual-design.md)**
 
-The website is a **private review build, not a publicly deployed site**. It has local search, native MathML, responsive navigation and a Gachet-inspired color study that leaves every approved scientific export unchanged. See [website build and privacy instructions](WEBSITE.md) and [the source-material inventory](website/pages/materials.md).
+No ZIP download, installation or local server is needed for these reading pages. Follow the channel, proof guide, figures and source materials inside this private repository. The exact model and complete proof remain their original canonical documents, linked directly rather than rewritten.
+
+[The channel](reader/channel.md) · [The proof route](reader/proof-guide.md) · [Scope and limits](reader/limits.md) · [Verification](reader/verification.md) · [All source materials](reader/materials.md)
+
+The GitHub view shows the Gachet-inspired color study alongside links to the unchanged approved originals. It uses GitHub's Markdown, equation and image rendering. The separate custom HTML website still provides its own navigation, local search and interactive color switch; GitHub does not execute that interface inside a repository file page. See [website instructions](WEBSITE.md). Public hosting remains disabled, and manuscript drafting remains the final stage.
 
 A qubit either arrives intact or is destructively measured along a randomly chosen, known axis. In the measured branch, the receiver gets the axis label and an imperfect outcome record, but not the measured qubit or the hidden true sign.
 
@@ -14,7 +18,7 @@ $$Q^{(1)}(\mathcal N)=0<Q(\mathcal N).$$
 
 Here $Q^{(1)}$ is coherent information optimized over every single-qubit input state. $Q$ is unassisted asymptotic quantum capacity. The result is a sufficient region, not an exact capacity formula or a practical finite-block decoding guarantee. The scalar inequality is partly computer assisted; all required certificates and separate verification implementations are included directly.
 
-![Channel and retained coding witness](figures/approved/figure_01_channel_and_witness_preview.png)
+![Channel and retained coding witness](reader/assets/figure_01_channel_and_witness.svg)
 
 For equal Pauli-axis weights, $p=0.70$ and $\epsilon=0.10$, the globally optimized one-use coherent information is zero. The included balanced eight-use construction has $I_8/8>7.47\times10^{-5}$ bits per physical use. Every mask and record contributes, including the all-measured loss. An outer coding theorem provides the asymptotic rate interpretation; one inner block alone is not a near-perfect decoder. [Model and claims](docs/MODEL_AND_CLAIMS.md#m05) · [Complete witness argument](docs/COMPLETE_PROOF.md#p13)
 
