@@ -27,7 +27,7 @@
 
 The figures follow the same scientific argument: what reaches the receiver, why the separation is systematic, and how it closes near a plane. Each figure below has its exact canonical caption and a direct path to its inputs and proof.
 
-The default images use the new Gachet color study. Open the approved originals beneath each figure to compare. **The approved downloads are unchanged.** The color study does not change scientific content or replace the frozen publication figures.
+The figures use the accepted Gachet-inspired palette. This palette applies only to the figures, not to the surrounding repository pages. Open the approved originals beneath each figure to compare. **The archived publication exports remain unchanged.** The current colors do not change any scientific content.
 
 [Approved figures and full captions](../figures/CAPTIONS.md) · [Scientific panel specifications](../figures/FIGURE_SPECIFICATIONS.md)
 

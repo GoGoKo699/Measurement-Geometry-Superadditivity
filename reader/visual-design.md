@@ -1,4 +1,4 @@
-# Color from a painting, structure from the science
+# Figure palette
 
 [Overview](README.md) · [Channel](channel.md) · [Proof route](proof-guide.md) · [Figures](figures.md) · [Exact theorem](../docs/MODEL_AND_CLAIMS.md) · [Complete proof](../docs/COMPLETE_PROOF.md) · [Materials](materials.md)
 
@@ -25,31 +25,29 @@
 </details>
 
 
-The reference is Vincent van Gogh's *Portrait of Dr. Gachet*, using the first version illustrated by the linked [Wikipedia article](https://en.wikipedia.org/wiki/Portrait_of_Dr._Gachet) and [Wikimedia file](https://commons.wikimedia.org/wiki/File:Portrait_of_Dr._Gachet.jpg). The palette below is a design interpretation of its dark blue clothing, pale blue-green background, yellow accents and warm red table. These are chosen display colors, not measured pigment values or an exact colorimetric extraction.
+**The Gachet-inspired palette is accepted for the figures only.** The repository uses GitHub's default Markdown, equation and image presentation. The optional HTML pages use a white reading surface, ordinary system typography and conventional links, without painting-inspired backgrounds, navigation colors or decorative branding.
 
-| Color role | Display value |
+## Figure colors
+
+The reference is Vincent van Gogh's *Portrait of Dr. Gachet*, using the first version illustrated by the linked [Wikipedia article](https://en.wikipedia.org/wiki/Portrait_of_Dr._Gachet). These are chosen display colors, not pigment measurements or an exact colorimetric extraction.
+
+| Figure role | Accepted color |
 |---|---|
-| ink | `#24343D` |
-| indigo | `#304E66` |
-| rust | `#A34E38` |
-| sage | `#658B7A` |
-| sage_ink | `#436856` |
-| yellow | `#DDC465` |
-| paper | `#F7F4EC` |
-| white | `#FFFFFF` |
-| muted | `#59676C` |
-| mist | `#E8EFEA` |
-| rule | `#CED9D3` |
+| Primary structure and bound | Indigo `#304E66` |
+| Secondary plotted contrast | Terracotta `#A34E38` |
+| Mathematical labels | Blue-black `#24343D` |
+| Secondary labels | Muted gray `#59676C` |
+| Supporting fills | Pale green `#DEE9DF` and `#E8EFEA` |
+| Figure annotation surfaces | Warm off-white `#F7F4EC` |
+| Drawing backgrounds | White `#FFFFFF` |
 
-## Roles, not decoration
+The palette entries describe figure drawing colors and their supporting surfaces. They are not a repository theme. Labels, line patterns, markers and caption definitions continue to distinguish the mathematical roles without relying on color alone.
 
-Indigo carries primary structural information. A muted rust supplies the secondary plotted contrast. Sage is reserved for quiet backgrounds and navigation details. Yellow is an accent with dark text, never a pale numerical curve on white. The reading surface is warm off-white; the figure drawing surface stays white.
+## Current palette and preserved exports
 
-Mathematical roles still use labels, line patterns, markers and caption definitions. Color is not the sole indication of a bound or branch. A dashed frontier remains dashed, the shaded region keeps its actual width, and no interval becomes a statistical error bar.
+The displayed figures use the accepted palette. Their numerical inputs, geometry, text paths, markers, line patterns, opacity and canonical captions are unchanged. The previous PDF, PNG and SVG exports remain available as preserved originals; accepting the palette does not alter their recorded hashes.
 
-## The approved figures remain the baseline
-
-The site generates themed SVG derivatives by changing only a declared set of color literals in the approved SVGs. An exact normalization test checks that no other SVG content changed. The original PDF, PNG, SVG, captions, numerical inputs, panel geometry and scientific renderer are untouched. The themed variants are a color study until separately approved for paper exports.
+The comparison below is an appearance reference, not a request for another approval.
 
 **Gachet-inspired study**
 
