@@ -9,6 +9,7 @@ import argparse,hashlib,html,json,os,re,shutil,subprocess,sys
 from pathlib import Path
 from urllib.parse import urlsplit,urlunsplit,unquote
 from bs4 import BeautifulSoup
+import xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
 WEB=ROOT/'website'
 FIGURES=[
@@ -91,7 +92,7 @@ def atlas():
  for i,(stem,title,alt,inputs,models,proofs) in enumerate(FIGURES,1):
   match=re.search(rf'## Figure {i}\. [^\n]+\n(.*?)(?=\n## |\Z)',text,re.S);require(match is not None,'Missing caption')
   caption=pandoc(match.group(1).strip())
-  sourceimg=ROOT/'figures/approved'/f'{stem}.svg';svg=BeautifulSoup(sourceimg.read_text(),'xml').svg
+  sourceimg=ROOT/'figures/approved'/f'{stem}.svg';svg=ET.parse(sourceimg).getroot()
   dims=svg.get('viewBox','0 0 720 400').split();ratio=f'{dims[2]}/{dims[3]}'
   pic=f'<img id="fig-{i}" src="assets/theme/{stem}.svg" data-themed="assets/theme/{stem}.svg" data-original="files/figures/approved/{stem}.svg" alt="{html.escape(alt)}" style="aspect-ratio:{ratio}" loading="eager">'
   downloads=''.join(f'<a href="files/figures/approved/{stem}.{ext}">Approved {ext.upper()}</a>' for ext in ('pdf','svg','png'))
