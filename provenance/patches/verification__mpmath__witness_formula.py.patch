@@ -1,0 +1,37 @@
+--- source/common_noise_range/code/examples.py
++++ verification/mpmath/witness_formula.py
+@@ -59,34 +59,3 @@
+         term=weight*(-C if m==n else A-C);total+=term
+         terms.append({'measured':m,'probability':record(weight),'contribution':record(term)})
+     return total/n,terms
+-
+-def main():
+-    out=Path(__file__).resolve().parents[1]/'results';out.mkdir(exist_ok=True)
+-    rows=[];full=[]
+-    for n,p,e in [(8,'7/10','1/10'),(16,'59/100','1/5'),(48,'67/125','3/10'),(64,'2539/5000','2/5')]:
+-        pa=parameters(e);zero_test=(1-q(p))-q(p)*pa['gamma_lower'];assert hi(zero_test)<0
+-        rate,terms=block(n,p,e);assert lo(rate)>0
+-        full.append({'n':n,'p':p,'error':e,'rate':record(rate),'single_use_coefficient_upper':record(zero_test),'all_mask_terms':terms})
+-        row={'n':n,'p':str(F(p)),'epsilon':str(F(e)), 'rate_lower':record(rate)['lower'],'rate_upper':record(rate)['upper'],
+-             'one_use_zero_sufficient_p_upper':record(1/(1+pa['gamma_lower']))['upper'],
+-             'repetition_boundary_lower':record(1/(1+pa['L']))['lower']}
+-        rows.append(row);print('certified',n,p,e,mp.nstr(lo(rate),30),flush=True)
+-    (out/'finite_witnesses.json').write_text(json.dumps(full,indent=2)+'\n')
+-    with (out/'finite_witnesses.csv').open('w',newline='') as f:w=csv.DictWriter(f,fieldnames=rows[0]);w.writeheader();w.writerows(rows)
+-    # Preserve a rejected exploratory witness: ordinary doubles spuriously
+-    # predicted positivity here; the directed calculation proves negativity.
+-    neg,_=block(64,'5083/10000','2/5');assert hi(neg)<0
+-    (out/'rejected_float_candidate.json').write_text(json.dumps({'n':64,'p':'5083/10000','epsilon':'2/5','certified_rate':record(neg),'interpretation':'Negative; not used as a positive witness.'},indent=2)+'\n')
+-    # A rigorous counterexample to blindly extending near-pure equality.
+-    p=q('11/19');v=1-p-p*h(q('1/5'));assert lo(v)>0
+-    (out/'mixed_input_control.json').write_text(json.dumps({'error':'1/5','p':'11/19','input':'maximally mixed','coherent_information':record(v),
+-         'conclusion':'At the nearly-pure zero line g=8/11 the true one-use optimum is still positive.'},indent=2)+'\n')
+-    # Guaranteed all-frame interval-width coefficients (arcsin only illustrative here).
+-    table=[]
+-    for es in ['1/10000','1/1000','1/100','1/10','1/5','2/5','49/100','4999/10000']:
+-        e=mp.mpf(F(es).numerator)/F(es).denominator;a=(1-2*e)**2;c=1-a;A=c*mp.asin(mp.sqrt(a))/mp.sqrt(a);d=mp.mpf(3)/35*c*a
+-        coeff=d/((1+A)*(1+A+d/3))
+-        table.append({'epsilon':es,'d_e':mp.nstr(d,50),'lower_width_coefficient_per_lambda':mp.nstr(coeff,50),
+-            'note':'Numerical evaluation of an analytically proved bound, not an extra certificate.'})
+-    with (out/'noise_gap_bounds.csv').open('w',newline='') as f:w=csv.DictWriter(f,fieldnames=table[0]);w.writeheader();w.writerows(table)
+-if __name__=='__main__':main()

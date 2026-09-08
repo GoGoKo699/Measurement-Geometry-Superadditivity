@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "files_byte_identical": 10,
+  "files": [
+    "BUILD_RECORD.json",
+    "SOURCE_IDENTITY.json",
+    "cross_figure_witness_bound_check.json",
+    "figure1_all_masks_not_for_display.csv",
+    "figure1_comparison.csv",
+    "figure1_original_witness140.json",
+    "figure2_pauli_guaranteed_region.csv",
+    "figure3_cone_gap.csv",
+    "figure3_cone_geometry.csv",
+    "figure3_small_lambda_controls_not_for_display.csv"
+  ]
+}

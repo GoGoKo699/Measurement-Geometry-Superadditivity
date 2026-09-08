@@ -1,0 +1,105 @@
+{
+  "date": "2026-09-08",
+  "baseline_version": "1",
+  "status": "passed; ready for the dedicated-repository stage",
+  "scope": "Scientific-source packaging and reproducibility after relocation, not a new theorem or external audit",
+  "scientific_theorem_changed": false,
+  "canonical_displayed_equations_byte_identical": 137,
+  "frozen_scientific_argument_byte_identical": true,
+  "canonical_units": 23,
+  "original_source_identities": 44,
+  "original_fragment_mappings": 125,
+  "claims_mapped": 7,
+  "visual_approval": "User approved the rendered v1 figures before this assembly",
+  "approved_main_figures": 3,
+  "protected_graphical_artifacts": 27,
+  "protected_graphical_artifacts_byte_identical": true,
+  "figure_input_files_reproduced_byte_identically": 10,
+  "scientific_figure_input_files_unchanged_from_spec": 8,
+  "two_figure_input_metadata_records_updated_for_local_paths": true,
+  "full_compact_verifiers": [
+    {
+      "route": "integer/dyadic",
+      "precision_bits": 224,
+      "noise_bands": 512,
+      "input_leaves": 29635,
+      "result_byte_identical_to_its_immutable_reference": true
+    },
+    {
+      "route": "mpmath.iv",
+      "precision_decimal_digits": 85,
+      "noise_bands": 512,
+      "input_leaves": 29635,
+      "result_byte_identical_to_its_immutable_reference": true
+    },
+    {
+      "route": "final-audit Decimal",
+      "precision_decimal_digits": 130,
+      "noise_bands": 512,
+      "input_leaves": 29635,
+      "result_byte_identical_to_its_immutable_reference": true
+    }
+  ],
+  "substantive_verifier_source_files_retained_byte_identically": 6,
+  "checker_numerical_implementations_remain_separate": true,
+  "retained_eight_use_witness_recalculated": {
+    "Decimal_digits": [
+      100,
+      140
+    ],
+    "separate_mpmath_effect_determinant_evaluator": true,
+    "all_measured_loss_included": true,
+    "independent_enclosures_nested": true
+  },
+  "exact_reference_result_comparisons": 9,
+  "stored_partition_reconstructed": {
+    "passed": true,
+    "noise_bands": 512,
+    "input_leaves": 29635,
+    "construction_bits": 128,
+    "new_directory": true,
+    "byte_identical_to_frozen_partition": true,
+    "sha256": "ab500804e56ba8c5ffb1ca7c1f38e3fd720b01561122b3a2bcc367a106ad66dd",
+    "performed_from": "the same clean-copy scientific code used for the complete entrypoint run",
+    "invocation": "python verification/integer/certify_all_noise.py --output NEW_DIRECTORY --bits 128",
+    "note": "Separately rebuilt in addition to the full documented verification run. Not a new mathematical proof or a new partition."
+  },
+  "tests_passed": 52,
+  "tests_breakdown": {
+    "certificate_audit_retained": 14,
+    "figure_input_retained": 16,
+    "figure_render_retained": 12,
+    "new_baseline_packaging": 10
+  },
+  "clean_directory_complete_entrypoint": {
+    "command": "python reproduce.py --output NEW_DIRECTORY --full",
+    "passed": true,
+    "source_integrity_before_and_after": true,
+    "fresh_dependency_install": false,
+    "same_pinned_installed_environment": true
+  },
+  "physical_checker_run": {
+    "small_block_cases": 5,
+    "reported_records": 455,
+    "hidden_true_outcome_terms": 2561,
+    "maximum_discrepancy": 1.4259426972529354e-15,
+    "full_eight_use_matrix_constructed": false
+  },
+  "nested_archive_runtime_dependency": false,
+  "external_research_data_dependency": false,
+  "previous_chat_dependency": false,
+  "old_repository_accessed_or_modified": false,
+  "new_remote_repository_created": false,
+  "manuscript_drafted": false,
+  "reuse_license_selected": false,
+  "pdf_and_png_visual_inspection": "The reproduced main figure previews were inspected; the protected graphic hashes match the approved source exactly.",
+  "not_claimed": [
+    "a new scientific theorem or mathematical audit",
+    "external peer review or absolute priority clearance",
+    "a clean download and installation of all software dependencies",
+    "cross-platform byte-identical rendering",
+    "high-fidelity standalone eight-use decoding",
+    "optimal capacity or practical finite rates"
+  ],
+  "next_stage": "Create/populate and verify Measurement-Geometry-Superadditivity as a separate repository; manuscript drafting follows that stage."
+}

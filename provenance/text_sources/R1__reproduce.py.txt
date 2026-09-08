@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+"""Reproduce the bounded final audit, without network or earlier ZIP archives.
+
+Default: new endpoint/certificate/witness/physical calculations and both test
+suites. --submitted also reruns the original 224-bit certificate checker.
+Uses a NEW output directory and will not overwrite existing audit records.
+"""
+from pathlib import Path
+import argparse,subprocess,sys,json,hashlib,os
+ROOT=Path(__file__).resolve().parent
+
+def source_integrity():
+    records={}
+    for name in ('common_noise_range','Noisy-record-PRL-story-and-proof-map-v1'):
+        base=ROOT/'source'/name
+        candidates=list(base.glob('MANIFEST*.json'))
+        if len(candidates)!=1:raise RuntimeError(f'Manifest ambiguity: {base}')
+        entries=json.loads(candidates[0].read_text())
+        bad=[rel for rel,digest in entries.items() if not (base/rel).is_file() or hashlib.sha256((base/rel).read_bytes()).hexdigest()!=digest]
+        if bad:raise RuntimeError(f'Source integrity failure: {bad}')
+        records[name]={'entries':len(entries),'mismatches':bad,'passed':True}
+    return records
+
+def main():
+    p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--output',type=Path,required=True)
+    p.add_argument('--precision',type=int,default=130)
+    p.add_argument('--submitted',action='store_true')
+    a=p.parse_args();a.output.mkdir(parents=True,exist_ok=False)
+    (a.output/'source_integrity.json').write_text(json.dumps(source_integrity(),indent=2)+'\n')
+    env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1',OPENBLAS_NUM_THREADS='1',OMP_NUM_THREADS='1')
+    def run(command,log,cwd=ROOT):
+        with (a.output/log).open('w') as f:subprocess.run(list(map(str,command)),cwd=cwd,env=env,stdout=f,stderr=subprocess.STDOUT,check=True)
+    run([sys.executable,ROOT/'code/check_endpoints.py','--output',a.output/'analytic_checks.json'],'endpoints.log')
+    run([sys.executable,ROOT/'code/verify_certificate.py','--certificate',ROOT/'source/common_noise_range/results/common_noise_compact_certificate.json','--precision',a.precision,'--output',a.output/'independent_certificate.json'],'certificate.log')
+    run([sys.executable,ROOT/'code/check_witness.py','--precision',140,'--output',a.output/'witness.json'],'witness.log')
+    run([sys.executable,ROOT/'code/physical_check.py','--output',a.output/'physical_check.json'],'physical.log')
+    run([sys.executable,'-m','pytest','-q','-p','no:cacheprovider',ROOT/'tests'],'audit_tests.log')
+    run([sys.executable,'-m','pytest','-q','-p','no:cacheprovider','tests'],'submitted_tests.log',ROOT/'source/common_noise_range')
+    if a.submitted:
+        (a.output/'submitted').mkdir()
+        run([sys.executable,ROOT/'source/common_noise_range/code/certify_all_noise.py','--verify',ROOT/'source/common_noise_range/results/common_noise_compact_certificate.json','--output',a.output/'submitted','--bits',224],'submitted_certificate.log')
+    (a.output/'REPRODUCED.json').write_text(json.dumps({'passed':True,'independent_decimal_digits':a.precision,'original_certificate_rerun':a.submitted,'external_research_rerun':False},indent=2)+'\n')
+    print('Completed:',a.output)
+if __name__=='__main__':main()

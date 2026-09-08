@@ -1,0 +1,70 @@
+--- tests/test_inputs.py
++++ tests/figure_inputs/test_inputs.py
+@@ -2,21 +2,21 @@
+ from fractions import Fraction as F
+ from decimal import Decimal as D
+ import csv,json,sys,tempfile,shutil,unittest
+-ROOT=Path(__file__).resolve().parents[1]
+-sys.path.insert(0,str(ROOT/'code'))
++ROOT=Path(__file__).resolve().parents[2]
++sys.path.insert(0,str(ROOT/'numerics/figure_inputs'))
+ import build_inputs as build
+ import verify_inputs as verify
+ 
+ def rows(name):
+-    with (ROOT/'data'/name).open()as f:return list(csv.DictReader(f))
++    with (ROOT/'data/figures'/name).open()as f:return list(csv.DictReader(f))
+ 
+ class FigureInputs(unittest.TestCase):
+     def test_source_identity(self):
+         _,r=build.validate_source(build.DEFAULT_SOURCE)
+-        self.assertEqual(r['verified_manifest_entries'],47)
++        self.assertEqual(r['verified_manifest_entries'],len(json.loads((ROOT/'provenance/CANONICAL_INPUTS.json').read_text())['files']))
+     def test_witness_bounds_are_source(self):
+         raw,_=build.validate_source(build.DEFAULT_SOURCE)
+-        self.assertEqual(raw[build.WITNESS],(ROOT/'data/figure1_original_witness140.json').read_bytes())
++        self.assertEqual(raw[build.WITNESS],(ROOT/'data/figures/figure1_original_witness140.json').read_bytes())
+     def test_global_zero_marker(self):
+         r=rows('figure1_comparison.csv')[0]
+         self.assertEqual(F(r['lower']),0);self.assertEqual(F(r['upper']),0)
+@@ -38,7 +38,7 @@
+     def test_strict_frontier_and_capacity_caveat(self):
+         self.assertTrue(all(x['upper_p_endpoint_included']=='False' and x['exact_capacity_boundary']=='False'for x in rows('figure2_pauli_guaranteed_region.csv')))
+     def test_witness_not_in_conservative_band(self):
+-        c=json.loads((ROOT/'data/cross_figure_witness_bound_check.json').read_text())
++        c=json.loads((ROOT/'data/figures/cross_figure_witness_bound_check.json').read_text())
+         self.assertLess(F(c['p_witness']),F(c['p_cert_from_uniform_3_over_35_bound']['lower']))
+         self.assertLess(F(c['p_single_use_exact']),F(c['p_witness']))
+     def test_safe_cone_domain(self):
+@@ -54,26 +54,26 @@
+         self.assertEqual(len(r),9)
+         self.assertEqual({F(x['lambda_exact'])for x in r},{F(0),F(1,16),F(1,4)})
+     def test_contract_keeps_distinctions(self):
+-        c=json.loads((ROOT/'FIGURE_CONTRACT.json').read_text())
++        c=json.loads((ROOT/'figures/FIGURE_CONTRACT.json').read_text())
+         self.assertFalse(c['figure_2']['overlay_figure1_witness'])
+         self.assertFalse(c['figure_3']['plot']['capacity_threshold_claim'])
+         self.assertFalse(c['figure_3']['plot']['fit_slope_from_data'])
+         self.assertFalse(c['rendered'])
+     def test_all_scalar_rows_independently_checked(self):
+-        self.assertTrue(verify.verify(ROOT/'data')['passed'])
++        self.assertTrue(verify.verify(ROOT/'data/figures')['passed'])
+     def test_tampered_witness_rejected(self):
+         with tempfile.TemporaryDirectory()as td:
+-            target=Path(td)/'data';shutil.copytree(ROOT/'data',target)
++            target=Path(td)/'data';shutil.copytree(ROOT/'data/figures',target)
+             p=target/'figure1_original_witness140.json';p.write_bytes(p.read_bytes()+b'\n')
+             with self.assertRaises(AssertionError):verify.verify(target)
+     def test_wrong_cone_interval_rejected(self):
+         with tempfile.TemporaryDirectory()as td:
+-            target=Path(td)/'data';shutil.copytree(ROOT/'data',target)
++            target=Path(td)/'data';shutil.copytree(ROOT/'data/figures',target)
+             p=target/'figure3_cone_gap.csv';rs=verify.read_csv(p);rs[-1]['gap_lower']='0.1'
+             build.save_csv(p,rs)
+             with self.assertRaises(AssertionError):verify.verify(target)
+     def test_generation_not_a_full_proof_audit(self):
+-        b=json.loads((ROOT/'data/BUILD_RECORD.json').read_text())
++        b=json.loads((ROOT/'data/figures/BUILD_RECORD.json').read_text())
+         self.assertFalse(b['new_theorem_or_global_certificate_audit'])
+         self.assertFalse(b['figures_rendered']);self.assertFalse(b['repository_changes'])
+ 

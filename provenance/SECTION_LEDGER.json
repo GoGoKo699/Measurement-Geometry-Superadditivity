@@ -1,0 +1,1935 @@
+{
+  "canonical_version": 1,
+  "date": "2026-09-08",
+  "source_fragment_line_numbers": "1-based, inclusive; preserves exact original line-ending bytes",
+  "units": [
+    {
+      "canonical_id": "M01",
+      "canonical_file": "docs/MODEL_AND_CLAIMS.md",
+      "canonical_anchor": "m01",
+      "canonical_line_start": 8,
+      "canonical_line_end": 36,
+      "canonical_fragment_sha256": "5184abe2a33ca649200a7a516c066e4193997213e7a778a325bf79be9a527759",
+      "claims": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "transformation": "combine current source model; epsilon spelling unified",
+      "sources": [
+        {
+          "source_id": "S3",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEOREM_STATEMENT.md",
+          "source_file_sha256": "9854266cf1ce580fdb9b0f9a2a0d15f85f57d63fb13c8da3a0a14cc4940cb19a",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 27,
+          "fragment_sha256": "9854266cf1ce580fdb9b0f9a2a0d15f85f57d63fb13c8da3a0a14cc4940cb19a",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S3__THEOREM_STATEMENT.md"
+        },
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "1",
+          "line_start": 7,
+          "line_end": 37,
+          "fragment_sha256": "29b099233f8a246dd1c87075f3ade3eea10d4fec6335911501a159ed59068134",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "2",
+          "line_start": 38,
+          "line_end": 72,
+          "fragment_sha256": "6bc112a3ed22c6158af7890f7a13f56e3047b5965638781b19c4d379bfa551f9",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "S5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+          "source_file_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+          "source_section": "1",
+          "line_start": 5,
+          "line_end": 18,
+          "fragment_sha256": "5449f575a445d75c77d554e7c178dff6f0d6287320ccdbcd26472bdc43591e3d",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "5184abe2a33ca649200a7a516c066e4193997213e7a778a325bf79be9a527759",
+      "baseline_change": "none"
+    },
+    {
+      "canonical_id": "M02",
+      "canonical_file": "docs/MODEL_AND_CLAIMS.md",
+      "canonical_anchor": "m02",
+      "canonical_line_start": 37,
+      "canonical_line_end": 71,
+      "canonical_fragment_sha256": "3ebeb9531d9d66a6bed96957225e78247b548eac8f4565c06a32bd0928deb89c",
+      "claims": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "transformation": "notation register; no mathematical change",
+      "sources": [
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "2",
+          "line_start": 38,
+          "line_end": 72,
+          "fragment_sha256": "6bc112a3ed22c6158af7890f7a13f56e3047b5965638781b19c4d379bfa551f9",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "S8",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/THEORY.md",
+          "source_file_sha256": "6d7f5d34d3918627656c32ebbb9da46311bc71ac82b04e342609f87a605593a8",
+          "source_section": "3",
+          "line_start": 57,
+          "line_end": 134,
+          "fragment_sha256": "ae71b952a0617b238cc67e1e2f87b80b0925ac87a0d96ffc7cd48c99973a99df",
+          "scope_note": "This dependency is invoked only under the current common-error theorem.",
+          "local_source_path": "provenance/text_sources/S8__THEORY.md"
+        },
+        {
+          "source_id": "S5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+          "source_file_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+          "source_section": "6",
+          "line_start": 123,
+          "line_end": 146,
+          "fragment_sha256": "cdd0c83ca76b9e35d8bd652834aaafd968fd26b474c7573eb4802a020d4db1f5",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "3ebeb9531d9d66a6bed96957225e78247b548eac8f4565c06a32bd0928deb89c",
+      "baseline_change": "none"
+    },
+    {
+      "canonical_id": "M03",
+      "canonical_file": "docs/MODEL_AND_CLAIMS.md",
+      "canonical_anchor": "m03",
+      "canonical_line_start": 72,
+      "canonical_line_end": 99,
+      "canonical_fragment_sha256": "5506d1277c94980b4454bb0544dee05f9ef1eaf521d7174149aa3924f77a3aa6",
+      "claims": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "transformation": "define distinct exact single-use and constructive frontiers",
+      "sources": [
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "2",
+          "line_start": 38,
+          "line_end": 72,
+          "fragment_sha256": "6bc112a3ed22c6158af7890f7a13f56e3047b5965638781b19c4d379bfa551f9",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "S8",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/THEORY.md",
+          "source_file_sha256": "6d7f5d34d3918627656c32ebbb9da46311bc71ac82b04e342609f87a605593a8",
+          "source_section": "3",
+          "line_start": 57,
+          "line_end": 134,
+          "fragment_sha256": "ae71b952a0617b238cc67e1e2f87b80b0925ac87a0d96ffc7cd48c99973a99df",
+          "scope_note": "This dependency is invoked only under the current common-error theorem.",
+          "local_source_path": "provenance/text_sources/S8__THEORY.md"
+        },
+        {
+          "source_id": "S8",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/THEORY.md",
+          "source_file_sha256": "6d7f5d34d3918627656c32ebbb9da46311bc71ac82b04e342609f87a605593a8",
+          "source_section": "4",
+          "line_start": 135,
+          "line_end": 148,
+          "fragment_sha256": "ebb4361718deedd49fc298b0e31ee6341092c78a4e1be0ede27eaf2d90d343bd",
+          "scope_note": "This dependency is invoked only under the current common-error theorem.",
+          "local_source_path": "provenance/text_sources/S8__THEORY.md"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "5506d1277c94980b4454bb0544dee05f9ef1eaf521d7174149aa3924f77a3aa6",
+      "baseline_change": "none"
+    },
+    {
+      "canonical_id": "M04",
+      "canonical_file": "docs/MODEL_AND_CLAIMS.md",
+      "canonical_anchor": "m04",
+      "canonical_line_start": 100,
+      "canonical_line_end": 117,
+      "canonical_fragment_sha256": "21f8d39861d53653eae8b42c5222f99147ab08559960dfa1f0cf68bcc78515b7",
+      "claims": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "transformation": "theorem and exact quantifiers preserved",
+      "sources": [
+        {
+          "source_id": "S3",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEOREM_STATEMENT.md",
+          "source_file_sha256": "9854266cf1ce580fdb9b0f9a2a0d15f85f57d63fb13c8da3a0a14cc4940cb19a",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 27,
+          "fragment_sha256": "9854266cf1ce580fdb9b0f9a2a0d15f85f57d63fb13c8da3a0a14cc4940cb19a",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S3__THEOREM_STATEMENT.md"
+        },
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "1",
+          "line_start": 7,
+          "line_end": 37,
+          "fragment_sha256": "29b099233f8a246dd1c87075f3ade3eea10d4fec6335911501a159ed59068134",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "4",
+          "line_start": 186,
+          "line_end": 227,
+          "fragment_sha256": "d49096b022126768b50fd49da1928c41a1ab78fcde04e9a321818ee805e3efed",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "S5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+          "source_file_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+          "source_section": "6",
+          "line_start": 123,
+          "line_end": 146,
+          "fragment_sha256": "cdd0c83ca76b9e35d8bd652834aaafd968fd26b474c7573eb4802a020d4db1f5",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "21f8d39861d53653eae8b42c5222f99147ab08559960dfa1f0cf68bcc78515b7",
+      "baseline_change": "none"
+    },
+    {
+      "canonical_id": "M05",
+      "canonical_file": "docs/MODEL_AND_CLAIMS.md",
+      "canonical_anchor": "m05",
+      "canonical_line_start": 118,
+      "canonical_line_end": 131,
+      "canonical_fragment_sha256": "bddcb98e7bbc9df19b53ad6a7cd438bceb1bcbfe00e63bd514d8068f2385a8a8",
+      "claims": [
+        "C5"
+      ],
+      "transformation": "read retained numerical record; no recomputation or new rounding policy",
+      "sources": [
+        {
+          "source_id": "S5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+          "source_file_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+          "source_section": "7",
+          "line_start": 147,
+          "line_end": 160,
+          "fragment_sha256": "3d56a95625de5f6f43b531ef9eed04de9df230c71b6694dd05acf64e6561f3b3",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "W1",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/results/witness140.json",
+          "source_file_sha256": "3aa5681b911b6b63dac8ddc9eb23ea6fb4882308315607b0b15b56a51eb1e2f8",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 149,
+          "fragment_sha256": "3aa5681b911b6b63dac8ddc9eb23ea6fb4882308315607b0b15b56a51eb1e2f8",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "data/figures/figure1_original_witness140.json"
+        },
+        {
+          "source_id": "W2",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/results/witness100.json",
+          "source_file_sha256": "090538ca37de9b9d7cc99b019c598f62ac30f0c294bb2ddf918bdc0728d1bb63",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 149,
+          "fragment_sha256": "090538ca37de9b9d7cc99b019c598f62ac30f0c294bb2ddf918bdc0728d1bb63",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "evidence/reference/witness100.json"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "bddcb98e7bbc9df19b53ad6a7cd438bceb1bcbfe00e63bd514d8068f2385a8a8",
+      "baseline_change": "none"
+    },
+    {
+      "canonical_id": "M06",
+      "canonical_file": "docs/MODEL_AND_CLAIMS.md",
+      "canonical_anchor": "m06",
+      "canonical_line_start": 132,
+      "canonical_line_end": 156,
+      "canonical_fragment_sha256": "b589cb40a2ac2c1adeba562e4e6c13c6bfae0edee9ed5a269481c89577ac80b1",
+      "claims": [
+        "C6"
+      ],
+      "transformation": "controls and exact cone-domain restrictions preserved",
+      "sources": [
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "5",
+          "line_start": 228,
+          "line_end": 237,
+          "fragment_sha256": "a623364ef7f308bcda220608e438e59a461ff4e17278a37df5387d7b68719f6e",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "6",
+          "line_start": 238,
+          "line_end": 263,
+          "fragment_sha256": "b22fc58b4eea25390f52cc0ae2c1d7c8ee025fa01b8372f75910f188a7933f7b",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "S5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+          "source_file_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+          "source_section": "8",
+          "line_start": 161,
+          "line_end": 170,
+          "fragment_sha256": "45fdb1cd959e4de94d9ce82eee27f7d0af6104ce0e9f2392abb7ff4e0be36347",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "b589cb40a2ac2c1adeba562e4e6c13c6bfae0edee9ed5a269481c89577ac80b1",
+      "baseline_change": "none"
+    },
+    {
+      "canonical_id": "M07",
+      "canonical_file": "docs/MODEL_AND_CLAIMS.md",
+      "canonical_anchor": "m07",
+      "canonical_line_start": 157,
+      "canonical_line_end": 173,
+      "canonical_fragment_sha256": "d5cd38c8ea29e7ae511a47692fcb24c2d5a15408a3c2d5dcf6a8277ca121d569",
+      "claims": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7"
+      ],
+      "transformation": "preserve frozen claim IDs and nonclaims",
+      "sources": [
+        {
+          "source_id": "S2",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/Noisy-record-PRL-story-and-proof-map-v1/CLAIM_PROOF_MAP.md",
+          "source_file_sha256": "230c934e45830cb013a8a0c0b9283ee717c619a76b85aafb87ed495a6f8b8275",
+          "source_section": "3",
+          "line_start": 63,
+          "line_end": 76,
+          "fragment_sha256": "dbfdfd2e01236526c1b1ba18beeb2dbb2b64fbe56556852a365b94b2d5cbcf68",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S2__CLAIM_PROOF_MAP.md"
+        },
+        {
+          "source_id": "S3",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEOREM_STATEMENT.md",
+          "source_file_sha256": "9854266cf1ce580fdb9b0f9a2a0d15f85f57d63fb13c8da3a0a14cc4940cb19a",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 27,
+          "fragment_sha256": "9854266cf1ce580fdb9b0f9a2a0d15f85f57d63fb13c8da3a0a14cc4940cb19a",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S3__THEOREM_STATEMENT.md"
+        },
+        {
+          "source_id": "S6",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PRIOR_WORK_COMPARISON.md",
+          "source_file_sha256": "d53b3911f1d831d715e0bf58f7570e1b044c81c7d7c51e242e12ee20e44c6faf",
+          "source_section": "5",
+          "line_start": 33,
+          "line_end": 44,
+          "fragment_sha256": "17979eb5a89fbf1bb3c7f5ef168fe4cb2531c967d682aa0fe673c8e50c26a908",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S6__PRIOR_WORK_COMPARISON.md"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "d5cd38c8ea29e7ae511a47692fcb24c2d5a15408a3c2d5dcf6a8277ca121d569",
+      "baseline_change": "none"
+    },
+    {
+      "canonical_id": "M08",
+      "canonical_file": "docs/MODEL_AND_CLAIMS.md",
+      "canonical_anchor": "m08",
+      "canonical_line_start": 174,
+      "canonical_line_end": 181,
+      "canonical_fragment_sha256": "25eb6c0494ff2a13594b42cb4800c2f40817b2e453a24105ba8b6b163e88b9d0",
+      "claims": [
+        "C7"
+      ],
+      "transformation": "explicit authority and status update, no historical source edits",
+      "sources": [
+        {
+          "source_id": "H1",
+          "source_container": "handover",
+          "archive_member": "Measurement-Geometry-new-chat/START_HERE.md",
+          "source_file_sha256": "4b9f42154285d88a3c3f216ee7a9d82d343a68401325e6df8ca489851303d9ad",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 42,
+          "fragment_sha256": "4b9f42154285d88a3c3f216ee7a9d82d343a68401325e6df8ca489851303d9ad",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/H1__H1__START_HERE.md"
+        },
+        {
+          "source_id": "S5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+          "source_file_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+          "source_section": "9",
+          "line_start": 171,
+          "line_end": 173,
+          "fragment_sha256": "c5c767f2a0f227c0b7c4041afdeaf68755e01fa7510b7cc66f7de96ae4d0b1a8",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "S7",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/results/AUDIT_SUMMARY.json",
+          "source_file_sha256": "e5f47f1ccc28e68393caa5c51953b6cc5b846ae72c97cf9f72d7ca8f73c78732",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 67,
+          "fragment_sha256": "e5f47f1ccc28e68393caa5c51953b6cc5b846ae72c97cf9f72d7ca8f73c78732",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/original_records/S7__AUDIT_SUMMARY.json"
+        },
+        {
+          "source_id": "S6",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PRIOR_WORK_COMPARISON.md",
+          "source_file_sha256": "d53b3911f1d831d715e0bf58f7570e1b044c81c7d7c51e242e12ee20e44c6faf",
+          "source_section": "6",
+          "line_start": 45,
+          "line_end": 52,
+          "fragment_sha256": "4c7004fba7f83568e4c961939e289d274b369914c39d5fb59089716dc3337b2d",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S6__PRIOR_WORK_COMPARISON.md"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "fdc1ab4d61b796f7e7319032560fb70346d4a00c2f24e9ff2669c30511bbcb80",
+      "baseline_change": "documentary paths/status/instructions only; no theorem or equation change"
+    },
+    {
+      "canonical_id": "P01",
+      "canonical_file": "docs/COMPLETE_PROOF.md",
+      "canonical_anchor": "p01",
+      "canonical_line_start": 13,
+      "canonical_line_end": 80,
+      "canonical_fragment_sha256": "89336deea20d3fc0f96862afd29566b4924294c4e6e1899ea016675769ed672e",
+      "claims": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "transformation": "physical and global-input derivations combined; transpose convention made explicit",
+      "sources": [
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "1",
+          "line_start": 7,
+          "line_end": 37,
+          "fragment_sha256": "29b099233f8a246dd1c87075f3ade3eea10d4fec6335911501a159ed59068134",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "2",
+          "line_start": 38,
+          "line_end": 72,
+          "fragment_sha256": "6bc112a3ed22c6158af7890f7a13f56e3047b5965638781b19c4d379bfa551f9",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "S5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+          "source_file_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+          "source_section": "1",
+          "line_start": 5,
+          "line_end": 18,
+          "fragment_sha256": "5449f575a445d75c77d554e7c178dff6f0d6287320ccdbcd26472bdc43591e3d",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "S8",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/THEORY.md",
+          "source_file_sha256": "6d7f5d34d3918627656c32ebbb9da46311bc71ac82b04e342609f87a605593a8",
+          "source_section": "2",
+          "line_start": 23,
+          "line_end": 56,
+          "fragment_sha256": "6383b83f9b0ac8d616729f307c3bba7c4eb801611643fc54f5766e5149a9d858",
+          "scope_note": "This dependency is invoked only under the current common-error theorem.",
+          "local_source_path": "provenance/text_sources/S8__THEORY.md"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "89336deea20d3fc0f96862afd29566b4924294c4e6e1899ea016675769ed672e",
+      "baseline_change": "none"
+    },
+    {
+      "canonical_id": "P02",
+      "canonical_file": "docs/COMPLETE_PROOF.md",
+      "canonical_anchor": "p02",
+      "canonical_line_start": 81,
+      "canonical_line_end": 106,
+      "canonical_fragment_sha256": "b95b3995338e4f3571cbdfba5b509f3f7b8afbb2a41651d85c672f46523e4f08",
+      "claims": [
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "transformation": "inherited entropy tools and their applications stated explicitly",
+      "sources": [
+        {
+          "source_id": "S8",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/THEORY.md",
+          "source_file_sha256": "6d7f5d34d3918627656c32ebbb9da46311bc71ac82b04e342609f87a605593a8",
+          "source_section": "3.2",
+          "line_start": 94,
+          "line_end": 120,
+          "fragment_sha256": "45085ae0eb9447e71b31e98047f2367fef3dfed70a2d6c65ef722e1f35be7980",
+          "scope_note": "This dependency is invoked only under the current common-error theorem.",
+          "local_source_path": "provenance/text_sources/S8__THEORY.md"
+        },
+        {
+          "source_id": "S10",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/source/PRIOR_PROOF_AUDIT.md",
+          "source_file_sha256": "cce98822cc91375ffda04714573df124a60344999d368422982a795a1246a2b7",
+          "source_section": "5",
+          "line_start": 92,
+          "line_end": 117,
+          "fragment_sha256": "2b3fdf0cc21db55e1ed1af6ed834b6db2d96fb2449dcd731604e3c58097b6acd",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S10__PRIOR_PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "S9",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/PROOF_AUDIT.md",
+          "source_file_sha256": "adb5355ad73a05cb1422a11925da628ed35cc025d1461bca5dad1a1f65aec7f1",
+          "source_section": "4",
+          "line_start": 89,
+          "line_end": 100,
+          "fragment_sha256": "b091b8b2306750fe41b2f7baf7f897fad1726d6a7121e0039c5950a55e24ee49",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S9__PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "2",
+          "line_start": 38,
+          "line_end": 72,
+          "fragment_sha256": "6bc112a3ed22c6158af7890f7a13f56e3047b5965638781b19c4d379bfa551f9",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "b95b3995338e4f3571cbdfba5b509f3f7b8afbb2a41651d85c672f46523e4f08",
+      "baseline_change": "none"
+    },
+    {
+      "canonical_id": "P03",
+      "canonical_file": "docs/COMPLETE_PROOF.md",
+      "canonical_anchor": "p03",
+      "canonical_line_start": 107,
+      "canonical_line_end": 188,
+      "canonical_fragment_sha256": "cb295b1e40b05bfb45e0928374b58c60eda90591c32388e43864f39bf2bbbaa7",
+      "claims": [
+        "C2",
+        "C4"
+      ],
+      "transformation": "integral derivation and curvature/chord argument integrated; endpoint costs renamed",
+      "sources": [
+        {
+          "source_id": "S9",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/PROOF_AUDIT.md",
+          "source_file_sha256": "adb5355ad73a05cb1422a11925da628ed35cc025d1461bca5dad1a1f65aec7f1",
+          "source_section": "2",
+          "line_start": 42,
+          "line_end": 54,
+          "fragment_sha256": "ae6d8bad71767b766648c873194fae45c3582be4bccec5dea20e8b4b987e7b94",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S9__PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "S9",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/PROOF_AUDIT.md",
+          "source_file_sha256": "adb5355ad73a05cb1422a11925da628ed35cc025d1461bca5dad1a1f65aec7f1",
+          "source_section": "3",
+          "line_start": 55,
+          "line_end": 88,
+          "fragment_sha256": "caca73872998213b39d934e5f565d0a3b14211b1c5b17ea100a911e2799039c7",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S9__PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "S9",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/PROOF_AUDIT.md",
+          "source_file_sha256": "adb5355ad73a05cb1422a11925da628ed35cc025d1461bca5dad1a1f65aec7f1",
+          "source_section": "4",
+          "line_start": 89,
+          "line_end": 100,
+          "fragment_sha256": "b091b8b2306750fe41b2f7baf7f897fad1726d6a7121e0039c5950a55e24ee49",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S9__PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "S10",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/source/PRIOR_PROOF_AUDIT.md",
+          "source_file_sha256": "cce98822cc91375ffda04714573df124a60344999d368422982a795a1246a2b7",
+          "source_section": "2",
+          "line_start": 19,
+          "line_end": 41,
+          "fragment_sha256": "e054f16298b8858cb8243630c7307d4d1e4f491edfdfa5833a0c12dcc2a19d1a",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S10__PRIOR_PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "S5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+          "source_file_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+          "source_section": "2",
+          "line_start": 19,
+          "line_end": 33,
+          "fragment_sha256": "2d390560ccc2c9f75e8e93e16af5c319d2e66b18d94d0f9e72e5369e97411696",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "2",
+          "line_start": 38,
+          "line_end": 72,
+          "fragment_sha256": "6bc112a3ed22c6158af7890f7a13f56e3047b5965638781b19c4d379bfa551f9",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "cb295b1e40b05bfb45e0928374b58c60eda90591c32388e43864f39bf2bbbaa7",
+      "baseline_change": "none"
+    },
+    {
+      "canonical_id": "P04",
+      "canonical_file": "docs/COMPLETE_PROOF.md",
+      "canonical_anchor": "p04",
+      "canonical_line_start": 189,
+      "canonical_line_end": 224,
+      "canonical_fragment_sha256": "40a5f8fe914af4303433c1b4e02491a2284fd546d28c1752d10ba53fb2d7903c",
+      "claims": [
+        "C2",
+        "C4"
+      ],
+      "transformation": "all-noise polynomial lemma and shared-beta step preserved",
+      "sources": [
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "3",
+          "line_start": 73,
+          "line_end": 185,
+          "fragment_sha256": "1b597ad9dba83a298bf775cfd947d1d9f1b2eca67582f98945bcc8c738c712c2",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "S5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+          "source_file_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+          "source_section": "2",
+          "line_start": 19,
+          "line_end": 33,
+          "fragment_sha256": "2d390560ccc2c9f75e8e93e16af5c319d2e66b18d94d0f9e72e5369e97411696",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "S5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+          "source_file_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+          "source_section": "3",
+          "line_start": 34,
+          "line_end": 76,
+          "fragment_sha256": "0e445f238623cca9f0a068e3bd0538050dfd8da34fb94e8e2ccc35180cb3379e",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "40a5f8fe914af4303433c1b4e02491a2284fd546d28c1752d10ba53fb2d7903c",
+      "baseline_change": "none"
+    },
+    {
+      "canonical_id": "P05",
+      "canonical_file": "docs/COMPLETE_PROOF.md",
+      "canonical_anchor": "p05",
+      "canonical_line_start": 225,
+      "canonical_line_end": 272,
+      "canonical_fragment_sha256": "880a5a320b4de479b981b9206187cd462660ebe78112918e27f9df70cd889fbc",
+      "claims": [
+        "C4"
+      ],
+      "transformation": "analytic low-noise input split and exact recorded constants preserved",
+      "sources": [
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "3.1",
+          "line_start": 98,
+          "line_end": 120,
+          "fragment_sha256": "18d79f23fc19c8651583cc9332e87f5e59105f3c84388f484b5ba8f0d1f0d7f1",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "S5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+          "source_file_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+          "source_section": "3",
+          "line_start": 34,
+          "line_end": 76,
+          "fragment_sha256": "0e445f238623cca9f0a068e3bd0538050dfd8da34fb94e8e2ccc35180cb3379e",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "C1",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/code/check_endpoints.py",
+          "source_file_sha256": "33c5937f265268006c65a2170b764a06c698ad896d9013da99e5d873974181a8",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 45,
+          "fragment_sha256": "33c5937f265268006c65a2170b764a06c698ad896d9013da99e5d873974181a8",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "verification/analytic/check_endpoints.py"
+        },
+        {
+          "source_id": "C2",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/results/analytic_checks.json",
+          "source_file_sha256": "58fe14a312b3404a0a071e112aeb7791f63240e678071182cd9e6db634142d23",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 16,
+          "fragment_sha256": "58fe14a312b3404a0a071e112aeb7791f63240e678071182cd9e6db634142d23",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "evidence/reference/analytic_checks.json"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "880a5a320b4de479b981b9206187cd462660ebe78112918e27f9df70cd889fbc",
+      "baseline_change": "none"
+    },
+    {
+      "canonical_id": "P06",
+      "canonical_file": "docs/COMPLETE_PROOF.md",
+      "canonical_anchor": "p06",
+      "canonical_line_start": 273,
+      "canonical_line_end": 317,
+      "canonical_fragment_sha256": "c075483e6a047626802a6cce81e17b7e23ea9251914967f6eb3d3ca4576dc3f2",
+      "claims": [
+        "C4"
+      ],
+      "transformation": "high-noise proof preserved; local J/H/K functions renamed",
+      "sources": [
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "3.2",
+          "line_start": 121,
+          "line_end": 157,
+          "fragment_sha256": "69f4bea8b5bab4b374fb7cea545a8a79df1a882b5215face17f339d936d72345",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "S5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+          "source_file_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+          "source_section": "3",
+          "line_start": 34,
+          "line_end": 76,
+          "fragment_sha256": "0e445f238623cca9f0a068e3bd0538050dfd8da34fb94e8e2ccc35180cb3379e",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "C1",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/code/check_endpoints.py",
+          "source_file_sha256": "33c5937f265268006c65a2170b764a06c698ad896d9013da99e5d873974181a8",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 45,
+          "fragment_sha256": "33c5937f265268006c65a2170b764a06c698ad896d9013da99e5d873974181a8",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "verification/analytic/check_endpoints.py"
+        },
+        {
+          "source_id": "C2",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/results/analytic_checks.json",
+          "source_file_sha256": "58fe14a312b3404a0a071e112aeb7791f63240e678071182cd9e6db634142d23",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 16,
+          "fragment_sha256": "58fe14a312b3404a0a071e112aeb7791f63240e678071182cd9e6db634142d23",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "evidence/reference/analytic_checks.json"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "c075483e6a047626802a6cce81e17b7e23ea9251914967f6eb3d3ca4576dc3f2",
+      "baseline_change": "none"
+    },
+    {
+      "canonical_id": "P07",
+      "canonical_file": "docs/COMPLETE_PROOF.md",
+      "canonical_anchor": "p07",
+      "canonical_line_start": 318,
+      "canonical_line_end": 387,
+      "canonical_fragment_sha256": "caef24b02630640099a9d1dcd0cc0ef73637e4acc1fc2332e3d8e489d9a3bec2",
+      "claims": [
+        "C2",
+        "C4"
+      ],
+      "transformation": "certificate proof obligation explicit; code and outputs unchanged; polynomial arguments normalized",
+      "sources": [
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "3.3",
+          "line_start": 158,
+          "line_end": 185,
+          "fragment_sha256": "13b48f20f1b4a2bd549ef15e5b7711af6123ba797aa3e3ad72cb1f2d56c3142e",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "S5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+          "source_file_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+          "source_section": "4",
+          "line_start": 77,
+          "line_end": 104,
+          "fragment_sha256": "c2e669d0722010d02f2be33b564f8e3f4b8f049a4e27392012721c6e6959f9b7",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "V1",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/results/common_noise_compact_certificate.json",
+          "source_file_sha256": "ab500804e56ba8c5ffb1ca7c1f38e3fd720b01561122b3a2bcc367a106ad66dd",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 122651,
+          "fragment_sha256": "ab500804e56ba8c5ffb1ca7c1f38e3fd720b01561122b3a2bcc367a106ad66dd",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "certificates/common_noise_compact_certificate.json"
+        },
+        {
+          "source_id": "V2",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/code/certify_all_noise.py",
+          "source_file_sha256": "84256314596bdc5a10a573d36d0435a85430c94f06c38c03eb20054c29dd5829",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 126,
+          "fragment_sha256": "84256314596bdc5a10a573d36d0435a85430c94f06c38c03eb20054c29dd5829",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "verification/integer/certify_all_noise.py"
+        },
+        {
+          "source_id": "V3",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/code/dyadic_interval.py",
+          "source_file_sha256": "9f2e0fd7399f55eaef58db9b9c6749b634053da7e563a394ee12524a89f9e949",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 123,
+          "fragment_sha256": "9f2e0fd7399f55eaef58db9b9c6749b634053da7e563a394ee12524a89f9e949",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "verification/integer/dyadic_interval.py"
+        },
+        {
+          "source_id": "V4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/code/cross_backend.py",
+          "source_file_sha256": "b542d89bd20f4dbd75923bee402d5a818d390a30ec88cc629623f9fd7d5cb79d",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 60,
+          "fragment_sha256": "b542d89bd20f4dbd75923bee402d5a818d390a30ec88cc629623f9fd7d5cb79d",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "verification/mpmath/cross_backend.py"
+        },
+        {
+          "source_id": "V5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/code/verify_certificate.py",
+          "source_file_sha256": "8ac88f9e2ffde9562c28cc5aba7ec66667cf74e5a83a9446b56e2f5dfce9deac",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 81,
+          "fragment_sha256": "8ac88f9e2ffde9562c28cc5aba7ec66667cf74e5a83a9446b56e2f5dfce9deac",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "verification/decimal/verify_certificate.py"
+        },
+        {
+          "source_id": "V6",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/code/decimal_interval.py",
+          "source_file_sha256": "6547a4975338602b4afcc546a0d811017021aeb14240bb3fc279e590b80360db",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 81,
+          "fragment_sha256": "6547a4975338602b4afcc546a0d811017021aeb14240bb3fc279e590b80360db",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "verification/decimal/decimal_interval.py"
+        },
+        {
+          "source_id": "V7",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/results/independent_certificate130.json",
+          "source_file_sha256": "b8d367c94a59b0a8bc691caa3ed86a4d9b45d8a3e24f066aa898a714746c524f",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 15,
+          "fragment_sha256": "b8d367c94a59b0a8bc691caa3ed86a4d9b45d8a3e24f066aa898a714746c524f",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "evidence/reference/decimal130.json"
+        },
+        {
+          "source_id": "V8",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/results/submitted/verification_224.json",
+          "source_file_sha256": "867fe0b8a685c656f5fd95d5dd10a48305eee5c15dcb3091481a59b164ab924d",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 20,
+          "fragment_sha256": "867fe0b8a685c656f5fd95d5dd10a48305eee5c15dcb3091481a59b164ab924d",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/original_records/V8__verification_224.json"
+        },
+        {
+          "source_id": "V9",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/results/verification_mpmath.json",
+          "source_file_sha256": "7a810d1450a1bace115b5b22e2174aa18d8759454f4584f57e5302eae1ceb75b",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 9,
+          "fragment_sha256": "7a810d1450a1bace115b5b22e2174aa18d8759454f4584f57e5302eae1ceb75b",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "evidence/reference/mpmath85.json"
+        },
+        {
+          "source_id": "V10",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/results/independent_certificate90.json",
+          "source_file_sha256": "a249e9fae3e80b914b56ade3089735c9d57bf3ea69a367b7b3a8c6abdff54a20",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 15,
+          "fragment_sha256": "a249e9fae3e80b914b56ade3089735c9d57bf3ea69a367b7b3a8c6abdff54a20",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "evidence/reference/decimal90.json"
+        },
+        {
+          "source_id": "V11",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/tests/test_audit.py",
+          "source_file_sha256": "771fb4e85ab4a37e45379e0612fc298bd6ae40248a01925ed7c7aa75d3a59278",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 85,
+          "fragment_sha256": "771fb4e85ab4a37e45379e0612fc298bd6ae40248a01925ed7c7aa75d3a59278",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/V11__test_audit.py.txt"
+        },
+        {
+          "source_id": "V12",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/tests/test_global_noise.py",
+          "source_file_sha256": "578f300e7e17507e40ea802a58dcfc2d66c1413546706029c550fa6671daee43",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 86,
+          "fragment_sha256": "578f300e7e17507e40ea802a58dcfc2d66c1413546706029c550fa6671daee43",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/V12__test_global_noise.py.txt"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "caef24b02630640099a9d1dcd0cc0ef73637e4acc1fc2332e3d8e489d9a3bec2",
+      "baseline_change": "none"
+    },
+    {
+      "canonical_id": "P08",
+      "canonical_file": "docs/COMPLETE_PROOF.md",
+      "canonical_anchor": "p08",
+      "canonical_line_start": 388,
+      "canonical_line_end": 445,
+      "canonical_fragment_sha256": "7fd36d6189386e7929bfb761d5c4871504061fa7e2b0799bf46a28cbfd725bab",
+      "claims": [
+        "C1",
+        "C4"
+      ],
+      "transformation": "pointwise comparison precedes minimization; threshold width status preserved",
+      "sources": [
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "4",
+          "line_start": 186,
+          "line_end": 227,
+          "fragment_sha256": "d49096b022126768b50fd49da1928c41a1ab78fcde04e9a321818ee805e3efed",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "S5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+          "source_file_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+          "source_section": "5",
+          "line_start": 105,
+          "line_end": 122,
+          "fragment_sha256": "e66b894390725fcb0f387555b3d44117a418d50547ff7020e948c1ffc55cb10b",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "C1",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/code/check_endpoints.py",
+          "source_file_sha256": "33c5937f265268006c65a2170b764a06c698ad896d9013da99e5d873974181a8",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 45,
+          "fragment_sha256": "33c5937f265268006c65a2170b764a06c698ad896d9013da99e5d873974181a8",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "verification/analytic/check_endpoints.py"
+        },
+        {
+          "source_id": "C2",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/results/analytic_checks.json",
+          "source_file_sha256": "58fe14a312b3404a0a071e112aeb7791f63240e678071182cd9e6db634142d23",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 16,
+          "fragment_sha256": "58fe14a312b3404a0a071e112aeb7791f63240e678071182cd9e6db634142d23",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "evidence/reference/analytic_checks.json"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "7fd36d6189386e7929bfb761d5c4871504061fa7e2b0799bf46a28cbfd725bab",
+      "baseline_change": "none"
+    },
+    {
+      "canonical_id": "P09",
+      "canonical_file": "docs/COMPLETE_PROOF.md",
+      "canonical_anchor": "p09",
+      "canonical_line_start": 446,
+      "canonical_line_end": 563,
+      "canonical_fragment_sha256": "aba8c5ad386e59aa4021e3dbb7a7b4c8c48240d85ab6ca895a63b86f3202328d",
+      "claims": [
+        "C3"
+      ],
+      "transformation": "full inherited record proof imported directly and explicitly specialized to common error",
+      "sources": [
+        {
+          "source_id": "S8",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/THEORY.md",
+          "source_file_sha256": "6d7f5d34d3918627656c32ebbb9da46311bc71ac82b04e342609f87a605593a8",
+          "source_section": "3.1",
+          "line_start": 76,
+          "line_end": 93,
+          "fragment_sha256": "06250ea5c5248f11b3ce5d937b733d307f01f53f854ffdccbfb84ab37bc3f3ca",
+          "scope_note": "This dependency is invoked only under the current common-error theorem.",
+          "local_source_path": "provenance/text_sources/S8__THEORY.md"
+        },
+        {
+          "source_id": "S8",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/THEORY.md",
+          "source_file_sha256": "6d7f5d34d3918627656c32ebbb9da46311bc71ac82b04e342609f87a605593a8",
+          "source_section": "3.2",
+          "line_start": 94,
+          "line_end": 120,
+          "fragment_sha256": "45085ae0eb9447e71b31e98047f2367fef3dfed70a2d6c65ef722e1f35be7980",
+          "scope_note": "This dependency is invoked only under the current common-error theorem.",
+          "local_source_path": "provenance/text_sources/S8__THEORY.md"
+        },
+        {
+          "source_id": "S8",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/THEORY.md",
+          "source_file_sha256": "6d7f5d34d3918627656c32ebbb9da46311bc71ac82b04e342609f87a605593a8",
+          "source_section": "3.3",
+          "line_start": 121,
+          "line_end": 134,
+          "fragment_sha256": "7fcc564fc553b2e1a34e543cd340efc4a7bfa597755cdba3483739d7ddcdd12c",
+          "scope_note": "This dependency is invoked only under the current common-error theorem.",
+          "local_source_path": "provenance/text_sources/S8__THEORY.md"
+        },
+        {
+          "source_id": "S5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+          "source_file_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+          "source_section": "6",
+          "line_start": 123,
+          "line_end": 146,
+          "fragment_sha256": "cdd0c83ca76b9e35d8bd652834aaafd968fd26b474c7573eb4802a020d4db1f5",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "S10",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/source/PRIOR_PROOF_AUDIT.md",
+          "source_file_sha256": "cce98822cc91375ffda04714573df124a60344999d368422982a795a1246a2b7",
+          "source_section": "5",
+          "line_start": 92,
+          "line_end": 117,
+          "fragment_sha256": "2b3fdf0cc21db55e1ed1af6ed834b6db2d96fb2449dcd731604e3c58097b6acd",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S10__PRIOR_PROOF_AUDIT.md"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "aba8c5ad386e59aa4021e3dbb7a7b4c8c48240d85ab6ca895a63b86f3202328d",
+      "baseline_change": "none"
+    },
+    {
+      "canonical_id": "P10",
+      "canonical_file": "docs/COMPLETE_PROOF.md",
+      "canonical_anchor": "p10",
+      "canonical_line_start": 564,
+      "canonical_line_end": 594,
+      "canonical_fragment_sha256": "627d1b50126f4cf544ff22a28dd14020a8e45ffe7d1b7fcda170323c4f8ef11f",
+      "claims": [
+        "C1",
+        "C3"
+      ],
+      "transformation": "finite-inner-block and outer-code limits separated; exponential bases renamed",
+      "sources": [
+        {
+          "source_id": "S8",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/THEORY.md",
+          "source_file_sha256": "6d7f5d34d3918627656c32ebbb9da46311bc71ac82b04e342609f87a605593a8",
+          "source_section": "3.3",
+          "line_start": 121,
+          "line_end": 134,
+          "fragment_sha256": "7fcc564fc553b2e1a34e543cd340efc4a7bfa597755cdba3483739d7ddcdd12c",
+          "scope_note": "This dependency is invoked only under the current common-error theorem.",
+          "local_source_path": "provenance/text_sources/S8__THEORY.md"
+        },
+        {
+          "source_id": "S8",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/THEORY.md",
+          "source_file_sha256": "6d7f5d34d3918627656c32ebbb9da46311bc71ac82b04e342609f87a605593a8",
+          "source_section": "4",
+          "line_start": 135,
+          "line_end": 148,
+          "fragment_sha256": "ebb4361718deedd49fc298b0e31ee6341092c78a4e1be0ede27eaf2d90d343bd",
+          "scope_note": "This dependency is invoked only under the current common-error theorem.",
+          "local_source_path": "provenance/text_sources/S8__THEORY.md"
+        },
+        {
+          "source_id": "S5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+          "source_file_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+          "source_section": "6",
+          "line_start": 123,
+          "line_end": 146,
+          "fragment_sha256": "cdd0c83ca76b9e35d8bd652834aaafd968fd26b474c7573eb4802a020d4db1f5",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "4",
+          "line_start": 186,
+          "line_end": 227,
+          "fragment_sha256": "d49096b022126768b50fd49da1928c41a1ab78fcde04e9a321818ee805e3efed",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "S6",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PRIOR_WORK_COMPARISON.md",
+          "source_file_sha256": "d53b3911f1d831d715e0bf58f7570e1b044c81c7d7c51e242e12ee20e44c6faf",
+          "source_section": "3",
+          "line_start": 21,
+          "line_end": 26,
+          "fragment_sha256": "dfaca065b0413a93cc0c220b42ad27029703cf94aef3da16db5abd95e2b74989",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S6__PRIOR_WORK_COMPARISON.md"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "627d1b50126f4cf544ff22a28dd14020a8e45ffe7d1b7fcda170323c4f8ef11f",
+      "baseline_change": "none"
+    },
+    {
+      "canonical_id": "P11",
+      "canonical_file": "docs/COMPLETE_PROOF.md",
+      "canonical_anchor": "p11",
+      "canonical_line_start": 595,
+      "canonical_line_end": 627,
+      "canonical_fragment_sha256": "26fcdfabb7c2da70bf3a33b0acd265d9590ebfacc70a86d13633602e78552cd1",
+      "claims": [
+        "C6"
+      ],
+      "transformation": "coplanar criterion and physical endpoint controls restricted correctly",
+      "sources": [
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "5",
+          "line_start": 228,
+          "line_end": 237,
+          "fragment_sha256": "a623364ef7f308bcda220608e438e59a461ff4e17278a37df5387d7b68719f6e",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "S5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+          "source_file_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+          "source_section": "8",
+          "line_start": 161,
+          "line_end": 170,
+          "fragment_sha256": "45fdb1cd959e4de94d9ce82eee27f7d0af6104ce0e9f2392abb7ff4e0be36347",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "S8",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/THEORY.md",
+          "source_file_sha256": "6d7f5d34d3918627656c32ebbb9da46311bc71ac82b04e342609f87a605593a8",
+          "source_section": "5",
+          "line_start": 149,
+          "line_end": 172,
+          "fragment_sha256": "0be7d58c3bc535beec229c90dc3f5569fd36a3cf76e9988b18386602eeafbddc",
+          "scope_note": "This dependency is invoked only under the current common-error theorem.",
+          "local_source_path": "provenance/text_sources/S8__THEORY.md"
+        },
+        {
+          "source_id": "S10",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/source/PRIOR_PROOF_AUDIT.md",
+          "source_file_sha256": "cce98822cc91375ffda04714573df124a60344999d368422982a795a1246a2b7",
+          "source_section": "7",
+          "line_start": 132,
+          "line_end": 149,
+          "fragment_sha256": "86d029809d48fecede4df2c36254a00f59807ed3918de40482f5e392408436a8",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S10__PRIOR_PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "S11",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/LITERATURE.md",
+          "source_file_sha256": "ae4339b3f6b58f7c4bce491e8bcaed9ce22598ad9a538b40615996ce4ca9bbba",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 14,
+          "fragment_sha256": "ae4339b3f6b58f7c4bce491e8bcaed9ce22598ad9a538b40615996ce4ca9bbba",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S11__LITERATURE.md"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "26fcdfabb7c2da70bf3a33b0acd265d9590ebfacc70a86d13633602e78552cd1",
+      "baseline_change": "none"
+    },
+    {
+      "canonical_id": "P12",
+      "canonical_file": "docs/COMPLETE_PROOF.md",
+      "canonical_anchor": "p12",
+      "canonical_line_start": 628,
+      "canonical_line_end": 662,
+      "canonical_fragment_sha256": "0a7b4010c6147ceb2ac42d893f613fcd9917f99df50e6f883f674944ab8fe3a9",
+      "claims": [
+        "C6"
+      ],
+      "transformation": "exact cone range and fixed-error expansion preserved; no figure parameter selection",
+      "sources": [
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "6",
+          "line_start": 238,
+          "line_end": 263,
+          "fragment_sha256": "b22fc58b4eea25390f52cc0ae2c1d7c8ee025fa01b8372f75910f188a7933f7b",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "S5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+          "source_file_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+          "source_section": "8",
+          "line_start": 161,
+          "line_end": 170,
+          "fragment_sha256": "45fdb1cd959e4de94d9ce82eee27f7d0af6104ce0e9f2392abb7ff4e0be36347",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "C1",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/code/check_endpoints.py",
+          "source_file_sha256": "33c5937f265268006c65a2170b764a06c698ad896d9013da99e5d873974181a8",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 45,
+          "fragment_sha256": "33c5937f265268006c65a2170b764a06c698ad896d9013da99e5d873974181a8",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "verification/analytic/check_endpoints.py"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "0a7b4010c6147ceb2ac42d893f613fcd9917f99df50e6f883f674944ab8fe3a9",
+      "baseline_change": "none"
+    },
+    {
+      "canonical_id": "P13",
+      "canonical_file": "docs/COMPLETE_PROOF.md",
+      "canonical_anchor": "p13",
+      "canonical_line_start": 663,
+      "canonical_line_end": 733,
+      "canonical_fragment_sha256": "d8332e8c91a0037da8d598571eb9c1712ae9420d01dc8d8e63b81792060ce2f0",
+      "claims": [
+        "C5",
+        "C2"
+      ],
+      "transformation": "retain only eight-use illustration in narrative; additional source rows are controls/evidence",
+      "sources": [
+        {
+          "source_id": "S5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+          "source_file_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+          "source_section": "7",
+          "line_start": 147,
+          "line_end": 160,
+          "fragment_sha256": "3d56a95625de5f6f43b531ef9eed04de9df230c71b6694dd05acf64e6561f3b3",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "6",
+          "line_start": 238,
+          "line_end": 263,
+          "fragment_sha256": "b22fc58b4eea25390f52cc0ae2c1d7c8ee025fa01b8372f75910f188a7933f7b",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "7",
+          "line_start": 264,
+          "line_end": 280,
+          "fragment_sha256": "53f3bd08ebf6bffaba87ed5c33bab78084e2e85487f867dd45172b30715c0fc6",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "S4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+          "source_file_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+          "source_section": "8",
+          "line_start": 281,
+          "line_end": 290,
+          "fragment_sha256": "0f0e4e781760233e92222414373405acd4e10da69a0037ab8bcdde45059f4e0a",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S4__THEORY.md"
+        },
+        {
+          "source_id": "W1",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/results/witness140.json",
+          "source_file_sha256": "3aa5681b911b6b63dac8ddc9eb23ea6fb4882308315607b0b15b56a51eb1e2f8",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 149,
+          "fragment_sha256": "3aa5681b911b6b63dac8ddc9eb23ea6fb4882308315607b0b15b56a51eb1e2f8",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "data/figures/figure1_original_witness140.json"
+        },
+        {
+          "source_id": "W2",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/results/witness100.json",
+          "source_file_sha256": "090538ca37de9b9d7cc99b019c598f62ac30f0c294bb2ddf918bdc0728d1bb63",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 149,
+          "fragment_sha256": "090538ca37de9b9d7cc99b019c598f62ac30f0c294bb2ddf918bdc0728d1bb63",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "evidence/reference/witness100.json"
+        },
+        {
+          "source_id": "W3",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/code/check_witness.py",
+          "source_file_sha256": "65f95c4c236acbf0681befe038a6e08dc41cfd4bee4fd28359d548f9618fd1b7",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 47,
+          "fragment_sha256": "65f95c4c236acbf0681befe038a6e08dc41cfd4bee4fd28359d548f9618fd1b7",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "verification/decimal/check_witness.py"
+        },
+        {
+          "source_id": "W4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/results/finite_witnesses.csv",
+          "source_file_sha256": "d1f182a49c4d1ad0891613d47867f0f6da609cf55db7aa15921ccddd713ddb15",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 5,
+          "fragment_sha256": "d1f182a49c4d1ad0891613d47867f0f6da609cf55db7aa15921ccddd713ddb15",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/original_records/W4__finite_witnesses.csv"
+        },
+        {
+          "source_id": "W5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/code/examples.py",
+          "source_file_sha256": "cce7ae1694db48e1ec03647704c59e65dadeb7c0042d1556f25c9145798a2e34",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 92,
+          "fragment_sha256": "cce7ae1694db48e1ec03647704c59e65dadeb7c0042d1556f25c9145798a2e34",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/W5__examples.py.txt"
+        },
+        {
+          "source_id": "W6",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/code/physical_check.py",
+          "source_file_sha256": "aba22216e33bd4b132ef100a823131a1a3ec7aacd78e7815cc63e3eae5ce0db5",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 127,
+          "fragment_sha256": "aba22216e33bd4b132ef100a823131a1a3ec7aacd78e7815cc63e3eae5ce0db5",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "verification/physical/physical_check.py"
+        },
+        {
+          "source_id": "W7",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/results/physical_check.json",
+          "source_file_sha256": "fd38892504503a826ea8d44e002cef97f32a40637a48a7757b51135ef7f92186",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 75,
+          "fragment_sha256": "fd38892504503a826ea8d44e002cef97f32a40637a48a7757b51135ef7f92186",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "evidence/reference/physical_check.json"
+        },
+        {
+          "source_id": "W8",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/results/finite_witnesses.json",
+          "source_file_sha256": "378085ef5854f3a5d046d0dc3acde2501b68b256a9a05864800c64e55ca7bde0",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 1890,
+          "fragment_sha256": "378085ef5854f3a5d046d0dc3acde2501b68b256a9a05864800c64e55ca7bde0",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/original_records/W8__finite_witnesses.json"
+        },
+        {
+          "source_id": "W9",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/results/finite_witnesses_decimal.json",
+          "source_file_sha256": "31c91d4937e464d12627b5a0aef9a1d132ac257e24f1d905cd4d43a87c9f9296",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 51,
+          "fragment_sha256": "31c91d4937e464d12627b5a0aef9a1d132ac257e24f1d905cd4d43a87c9f9296",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/original_records/W9__finite_witnesses_decimal.json"
+        },
+        {
+          "source_id": "W10",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/code/independent_examples.py",
+          "source_file_sha256": "eee5140b9eb837d763dbc306f11cd2acc10d9d5029aa4b71fc49403b5f251ecb",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 23,
+          "fragment_sha256": "eee5140b9eb837d763dbc306f11cd2acc10d9d5029aa4b71fc49403b5f251ecb",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/W10__independent_examples.py.txt"
+        },
+        {
+          "source_id": "C3",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/results/mixed_input_control.json",
+          "source_file_sha256": "89743c3bb483a1fd0ac3e6c7882a356286b83f57b17bfd577cb6302a93960728",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 11,
+          "fragment_sha256": "89743c3bb483a1fd0ac3e6c7882a356286b83f57b17bfd577cb6302a93960728",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "evidence/controls/mixed_input_control.json"
+        },
+        {
+          "source_id": "C4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/results/rejected_float_candidate.json",
+          "source_file_sha256": "9268f23074d43dfe50cd0870bd68a75b7863446a6af44a0409719588831e3135",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 11,
+          "fragment_sha256": "9268f23074d43dfe50cd0870bd68a75b7863446a6af44a0409719588831e3135",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "evidence/controls/rejected_float_candidate.json"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "178e7ce15fabd908b414afefa42e33caeb18304c71126a5b1b1c6e8ae4c9b195",
+      "baseline_change": "documentary paths/status/instructions only; no theorem or equation change"
+    },
+    {
+      "canonical_id": "P14",
+      "canonical_file": "docs/COMPLETE_PROOF.md",
+      "canonical_anchor": "p14",
+      "canonical_line_start": 734,
+      "canonical_line_end": 770,
+      "canonical_fragment_sha256": "64ed276114fef27f372710fe0d465694af9043068975d53a24f8fe9cb7a06ec9",
+      "claims": [
+        "C2",
+        "C4",
+        "C5"
+      ],
+      "transformation": "map unchanged implementations, evidence and source-context commands; no execution",
+      "sources": [
+        {
+          "source_id": "V1",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/results/common_noise_compact_certificate.json",
+          "source_file_sha256": "ab500804e56ba8c5ffb1ca7c1f38e3fd720b01561122b3a2bcc367a106ad66dd",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 122651,
+          "fragment_sha256": "ab500804e56ba8c5ffb1ca7c1f38e3fd720b01561122b3a2bcc367a106ad66dd",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "certificates/common_noise_compact_certificate.json"
+        },
+        {
+          "source_id": "V2",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/code/certify_all_noise.py",
+          "source_file_sha256": "84256314596bdc5a10a573d36d0435a85430c94f06c38c03eb20054c29dd5829",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 126,
+          "fragment_sha256": "84256314596bdc5a10a573d36d0435a85430c94f06c38c03eb20054c29dd5829",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "verification/integer/certify_all_noise.py"
+        },
+        {
+          "source_id": "V3",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/code/dyadic_interval.py",
+          "source_file_sha256": "9f2e0fd7399f55eaef58db9b9c6749b634053da7e563a394ee12524a89f9e949",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 123,
+          "fragment_sha256": "9f2e0fd7399f55eaef58db9b9c6749b634053da7e563a394ee12524a89f9e949",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "verification/integer/dyadic_interval.py"
+        },
+        {
+          "source_id": "V4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/code/cross_backend.py",
+          "source_file_sha256": "b542d89bd20f4dbd75923bee402d5a818d390a30ec88cc629623f9fd7d5cb79d",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 60,
+          "fragment_sha256": "b542d89bd20f4dbd75923bee402d5a818d390a30ec88cc629623f9fd7d5cb79d",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "verification/mpmath/cross_backend.py"
+        },
+        {
+          "source_id": "V5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/code/verify_certificate.py",
+          "source_file_sha256": "8ac88f9e2ffde9562c28cc5aba7ec66667cf74e5a83a9446b56e2f5dfce9deac",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 81,
+          "fragment_sha256": "8ac88f9e2ffde9562c28cc5aba7ec66667cf74e5a83a9446b56e2f5dfce9deac",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "verification/decimal/verify_certificate.py"
+        },
+        {
+          "source_id": "V6",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/code/decimal_interval.py",
+          "source_file_sha256": "6547a4975338602b4afcc546a0d811017021aeb14240bb3fc279e590b80360db",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 81,
+          "fragment_sha256": "6547a4975338602b4afcc546a0d811017021aeb14240bb3fc279e590b80360db",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "verification/decimal/decimal_interval.py"
+        },
+        {
+          "source_id": "V7",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/results/independent_certificate130.json",
+          "source_file_sha256": "b8d367c94a59b0a8bc691caa3ed86a4d9b45d8a3e24f066aa898a714746c524f",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 15,
+          "fragment_sha256": "b8d367c94a59b0a8bc691caa3ed86a4d9b45d8a3e24f066aa898a714746c524f",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "evidence/reference/decimal130.json"
+        },
+        {
+          "source_id": "V8",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/results/submitted/verification_224.json",
+          "source_file_sha256": "867fe0b8a685c656f5fd95d5dd10a48305eee5c15dcb3091481a59b164ab924d",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 20,
+          "fragment_sha256": "867fe0b8a685c656f5fd95d5dd10a48305eee5c15dcb3091481a59b164ab924d",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/original_records/V8__verification_224.json"
+        },
+        {
+          "source_id": "V9",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/results/verification_mpmath.json",
+          "source_file_sha256": "7a810d1450a1bace115b5b22e2174aa18d8759454f4584f57e5302eae1ceb75b",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 9,
+          "fragment_sha256": "7a810d1450a1bace115b5b22e2174aa18d8759454f4584f57e5302eae1ceb75b",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "evidence/reference/mpmath85.json"
+        },
+        {
+          "source_id": "R1",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/reproduce.py",
+          "source_file_sha256": "653a146f2b895c55481230d66c8f505a29195eca8d03554192ec952fef9572b6",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 45,
+          "fragment_sha256": "653a146f2b895c55481230d66c8f505a29195eca8d03554192ec952fef9572b6",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/R1__reproduce.py.txt"
+        },
+        {
+          "source_id": "R2",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/reproduce.py",
+          "source_file_sha256": "3d397e2c0a67e605996377e53cf30a7523a9fdd0ec266913d4e85aeff8811990",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 25,
+          "fragment_sha256": "3d397e2c0a67e605996377e53cf30a7523a9fdd0ec266913d4e85aeff8811990",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/R2__reproduce.py.txt"
+        },
+        {
+          "source_id": "R3",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/results/REPRODUCTION_COMPARISON.json",
+          "source_file_sha256": "53604ce9fa8ba84510bc22a1f5bc78a24832493f96414aa8b0a4e1fa2586a9ed",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 41,
+          "fragment_sha256": "53604ce9fa8ba84510bc22a1f5bc78a24832493f96414aa8b0a4e1fa2586a9ed",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/original_records/R3__REPRODUCTION_COMPARISON.json"
+        },
+        {
+          "source_id": "R4",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/results/reproduction_verification.json",
+          "source_file_sha256": "bdcc25cdaa9eb884ec7c810daf1717522c858bca4ab76d1eb848dbfa6bea70d0",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 71,
+          "fragment_sha256": "bdcc25cdaa9eb884ec7c810daf1717522c858bca4ab76d1eb848dbfa6bea70d0",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/original_records/R4__reproduction_verification.json"
+        },
+        {
+          "source_id": "R5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/requirements-reproducible.txt",
+          "source_file_sha256": "555144ce0107590dfce4b77cc7d60b83d84816edcf7abd32e8b3d9cdc08e4467",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 4,
+          "fragment_sha256": "555144ce0107590dfce4b77cc7d60b83d84816edcf7abd32e8b3d9cdc08e4467",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/R5__requirements-reproducible.txt.txt"
+        },
+        {
+          "source_id": "R6",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/requirements.txt",
+          "source_file_sha256": "118b3fd5c67f7cf195eb694025c2a855e8ba23461652216b1c8ca15d3c41d710",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 5,
+          "fragment_sha256": "118b3fd5c67f7cf195eb694025c2a855e8ba23461652216b1c8ca15d3c41d710",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/R6__requirements.txt.txt"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "5b468eb2c1c4f0b5e050d219682ebbe99d489079440350d4e3ecc598a069072d",
+      "baseline_change": "documentary paths/status/instructions only; no theorem or equation change"
+    },
+    {
+      "canonical_id": "P15",
+      "canonical_file": "docs/COMPLETE_PROOF.md",
+      "canonical_anchor": "p15",
+      "canonical_line_start": 771,
+      "canonical_line_end": 787,
+      "canonical_fragment_sha256": "63ddd596c07fd6da434f047b5fdaa36b7125632de1ef2835dd176a7c56a415cd",
+      "claims": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7"
+      ],
+      "transformation": "current completeness and attribution disposition, not new validation",
+      "sources": [
+        {
+          "source_id": "S2",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/source/Noisy-record-PRL-story-and-proof-map-v1/CLAIM_PROOF_MAP.md",
+          "source_file_sha256": "230c934e45830cb013a8a0c0b9283ee717c619a76b85aafb87ed495a6f8b8275",
+          "source_section": "3",
+          "line_start": 63,
+          "line_end": 76,
+          "fragment_sha256": "dbfdfd2e01236526c1b1ba18beeb2dbb2b64fbe56556852a365b94b2d5cbcf68",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S2__CLAIM_PROOF_MAP.md"
+        },
+        {
+          "source_id": "S5",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+          "source_file_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+          "source_section": "9",
+          "line_start": 171,
+          "line_end": 173,
+          "fragment_sha256": "c5c767f2a0f227c0b7c4041afdeaf68755e01fa7510b7cc66f7de96ae4d0b1a8",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+        },
+        {
+          "source_id": "S6",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PRIOR_WORK_COMPARISON.md",
+          "source_file_sha256": "d53b3911f1d831d715e0bf58f7570e1b044c81c7d7c51e242e12ee20e44c6faf",
+          "source_section": "5",
+          "line_start": 33,
+          "line_end": 44,
+          "fragment_sha256": "17979eb5a89fbf1bb3c7f5ef168fe4cb2531c967d682aa0fe673c8e50c26a908",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S6__PRIOR_WORK_COMPARISON.md"
+        },
+        {
+          "source_id": "S6",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/PRIOR_WORK_COMPARISON.md",
+          "source_file_sha256": "d53b3911f1d831d715e0bf58f7570e1b044c81c7d7c51e242e12ee20e44c6faf",
+          "source_section": "6",
+          "line_start": 45,
+          "line_end": 52,
+          "fragment_sha256": "4c7004fba7f83568e4c961939e289d274b369914c39d5fb59089716dc3337b2d",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/S6__PRIOR_WORK_COMPARISON.md"
+        },
+        {
+          "source_id": "S7",
+          "source_container": "final_audit",
+          "archive_member": "Noisy-record-PRL-final-audit/results/AUDIT_SUMMARY.json",
+          "source_file_sha256": "e5f47f1ccc28e68393caa5c51953b6cc5b846ae72c97cf9f72d7ca8f73c78732",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 67,
+          "fragment_sha256": "e5f47f1ccc28e68393caa5c51953b6cc5b846ae72c97cf9f72d7ca8f73c78732",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/original_records/S7__AUDIT_SUMMARY.json"
+        },
+        {
+          "source_id": "H1",
+          "source_container": "handover",
+          "archive_member": "Measurement-Geometry-new-chat/START_HERE.md",
+          "source_file_sha256": "4b9f42154285d88a3c3f216ee7a9d82d343a68401325e6df8ca489851303d9ad",
+          "source_section": "ALL",
+          "line_start": 1,
+          "line_end": 42,
+          "fragment_sha256": "4b9f42154285d88a3c3f216ee7a9d82d343a68401325e6df8ca489851303d9ad",
+          "scope_note": "Source status/content preserved; no rerun in this pass.",
+          "local_source_path": "provenance/text_sources/H1__H1__START_HERE.md"
+        }
+      ],
+      "scientific_computation_in_this_pass": false,
+      "previous_canonical_fragment_sha256": "6b620cfa2aebe151360d78bae7977f68a20f46c390e40207f35f7bcb53ea0956",
+      "baseline_change": "documentary paths/status/instructions only; no theorem or equation change"
+    }
+  ],
+  "baseline_date": "2026-09-08"
+}

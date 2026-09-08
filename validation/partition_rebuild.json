@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "noise_bands": 512,
+  "input_leaves": 29635,
+  "construction_bits": 128,
+  "new_directory": true,
+  "byte_identical_to_frozen_partition": true,
+  "sha256": "ab500804e56ba8c5ffb1ca7c1f38e3fd720b01561122b3a2bcc367a106ad66dd",
+  "performed_from": "the same clean-copy scientific code used for the complete entrypoint run",
+  "invocation": "python verification/integer/certify_all_noise.py --output NEW_DIRECTORY --bits 128",
+  "note": "Separately rebuilt in addition to the full documented verification run. Not a new mathematical proof or a new partition."
+}

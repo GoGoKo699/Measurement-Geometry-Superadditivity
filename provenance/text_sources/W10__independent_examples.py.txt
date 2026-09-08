@@ -1,0 +1,23 @@
+"""Re-evaluate finite witnesses using the inherited Decimal backend.
+
+Explicitly reuses the audited conditional-posterior block formula, different
+from the new mpmath unnormalized-effect determinant computation.
+"""
+import sys,json
+from pathlib import Path
+from decimal import Decimal
+ROOT=Path(__file__).resolve().parents[1]
+SOURCE=ROOT/'source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/source'
+sys.path.insert(0,str(SOURCE));import decimal_audit as da
+
+def main():
+    da.PREC=150
+    original=json.loads((ROOT/'results/finite_witnesses.json').read_text());out=[]
+    for w in original:
+        val,_=da.block(w['n'],w['p'],w['error'])
+        assert val.lo>0
+        assert Decimal(w['rate']['lower'])<=val.lo<=val.hi<=Decimal(w['rate']['upper'])
+        out.append({'n':w['n'],'p':w['p'],'epsilon':w['error'],'rate':val.record(),'positive':True,'inside_mpmath_outward_record':True})
+        print('independent block',w['n'],str(val.lo)[:45],flush=True)
+    (ROOT/'results/finite_witnesses_decimal.json').write_text(json.dumps({'passed':True,'backend':'inherited Decimal/libmpdec','digits':150,'witnesses':out},indent=2)+'\n')
+if __name__=='__main__':main()

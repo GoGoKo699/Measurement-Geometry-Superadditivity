@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "canonical_input_manifest_sha256": "eb196cc751733344474191e7f6c34039f9a9a8b7c5f89976ea131727e29b0b8a",
+  "source_manifest_entries": 5,
+  "witness_copied_byte_for_byte": true,
+  "witness_recomputed": false,
+  "all_nine_mask_terms_retained": true,
+  "independent_scalar_formula_checks": {
+    "100": {
+      "figure2_formula_rows": 1001,
+      "figure3_formula_rows": 501,
+      "passed": true
+    },
+    "130": {
+      "figure2_formula_rows": 1001,
+      "figure3_formula_rows": 501,
+      "passed": true
+    }
+  },
+  "cone_axes_checked": 9,
+  "asymptotic_formula_controls": 12,
+  "witness_outside_conservative_figure2_strip_explicitly_checked": true,
+  "curve_values_have_outward_mpmath_interval_records": true,
+  "alternative_scalar_checks": "Decimal ordinary high-precision point evaluations of equivalent expressions; not a new global interval certificate",
+  "proof_reaudit": false,
+  "physical_simulation": false,
+  "figures_rendered": false,
+  "repository_access": false
+}

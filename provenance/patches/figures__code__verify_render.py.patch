@@ -1,0 +1,37 @@
+--- code/verify_render.py
++++ figures/code/verify_render.py
+@@ -8,17 +8,18 @@
+ import fitz
+ from PIL import Image
+ 
+-ROOT=Path(__file__).resolve().parents[1]
+-SOURCE=ROOT/'source_spec'
++ROOT=Path(__file__).resolve().parents[2]
++SOURCE=ROOT/'figures'
++DATA=ROOT/'data/figures'
+ 
+ def rows(name):
+- with (SOURCE/'data'/name).open(newline='') as f:return list(csv.DictReader(f))
++ with (DATA/name).open(newline='') as f:return list(csv.DictReader(f))
+ def check_equal(a,b,label):
+  if not np.array_equal(np.asarray(a),np.asarray(b)):raise AssertionError(label)
+ def verify(out):
+- source_manifest=json.loads((SOURCE/'MANIFEST_SHA256.json').read_text())
++ source_manifest=json.loads((ROOT/'provenance/FIGURE_INPUTS.json').read_text())
+  for name,digest in source_manifest.items():
+-  if hashlib.sha256((SOURCE/name).read_bytes()).hexdigest()!=digest:raise AssertionError('changed source '+name)
++  if hashlib.sha256((ROOT/name).read_bytes()).hexdigest()!=digest:raise AssertionError('changed source '+name)
+  r=json.loads((out/'RENDER_RECORD.json').read_text())
+  f1=rows('figure1_comparison.csv');f2=rows('figure2_pauli_guaranteed_region.csv');f3=rows('figure3_cone_gap.csv');geom=rows('figure3_cone_geometry.csv')
+  vals=[float(v['value_plot']) for v in f1]
+@@ -83,8 +84,8 @@
+  'same_cone_camera_and_scale':True,'upper_frontier_strict_in_captions':True,'statistical_errorbars_added':False,
+  'all_drawn_pdf_and_svg_components_vector':True,'figures':figs,
+  'scope':'Rendering and scientific-input traceability checks. No theorem audit, witness recomputation, simulation, or repository operation.',
+- 'user_visual_approval':False}
++ 'user_visual_approval':True}
+ 
+ if __name__=='__main__':
+- p=argparse.ArgumentParser();p.add_argument('--output',type=Path,default=ROOT/'outputs');p.add_argument('--report',type=Path,default=ROOT/'provenance/RENDER_VALIDATION.json');a=p.parse_args()
++ p=argparse.ArgumentParser();p.add_argument('--output',type=Path,default=ROOT/'figures/approved');p.add_argument('--report',type=Path,default=ROOT/'build/RENDER_VALIDATION.json');a=p.parse_args()
+  res=verify(a.output);a.report.parent.mkdir(parents=True,exist_ok=True);a.report.write_text(json.dumps(res,indent=2)+'\n');print(json.dumps(res,indent=2))

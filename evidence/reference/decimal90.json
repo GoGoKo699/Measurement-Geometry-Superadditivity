@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "method": "independently written Decimal intervals and entropy-conjugate secant maximum",
+  "precision": 90,
+  "bands": 512,
+  "rectangles": 29635,
+  "largest_compact_upper": "-2.373556352152999186170381710179364422598999327120659885906096697020082766911807838437E-10",
+  "smallest_tail_lower_nats": "0.000281891361685757730111632472434563975778894704240385391536935692985179225385806473596899147",
+  "domain": [
+    "1/268435456",
+    "24/25"
+  ],
+  "input_tail": "1/1000000",
+  "imports_submitted_numerical_code": false
+}

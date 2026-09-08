@@ -1,0 +1,18 @@
+{
+  "epsilon": "1/10",
+  "p_witness": "7/10",
+  "p_single_use_exact": "59/86",
+  "p_cert_from_uniform_3_over_35_bound": {
+    "lower": "0.707978780259509526638497285857289443755025574361284796230011",
+    "upper": "0.707978780259509526638497285857289443755025574361284796230012",
+    "plot_value": "0.70797878025950953"
+  },
+  "p_rep": {
+    "lower": "0.711293781408885403711792705652957915728486673938210401923061",
+    "upper": "0.711293781408885403711792705652957915728486673938210401923062",
+    "plot_value": "0.71129378140888540"
+  },
+  "witness_below_conservative_lower_boundary": true,
+  "instruction": "Do not place the Figure 1 point inside the Figure 2 certified strip. Do not overlay it by default. Its proof uses the sharper canonical P13 bound.",
+  "no_exact_Q1_threshold_curve_plotted_over_all_epsilon": true
+}

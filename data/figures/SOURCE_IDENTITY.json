@@ -1,0 +1,15 @@
+{
+  "root": "baseline",
+  "manifest_sha256": "eb196cc751733344474191e7f6c34039f9a9a8b7c5f89976ea131727e29b0b8a",
+  "verified_manifest_entries": 5,
+  "selected_members": {
+    "docs/MODEL_AND_CLAIMS.md": "e15b0f0e64755ae2f6c707b467eb495045ebe13985c9990da506807b265cb708",
+    "docs/COMPLETE_PROOF.md": "dbc758b3d26d57815a70ac89d58a3996f9b3c7eb781a1de7d74e386e185033fa",
+    "docs/FROZEN_ARGUMENT.md": "bdada1edb06c814ea563068317e38c09c3d96dfe539bbddf7523bd0a49ca2ad7",
+    "provenance/SOURCE_REGISTER.json": "0d0a9eb677bb3f274dba5d83767970cea6d6756e9e0a2a73b87f4c596e66fd00",
+    "data/figures/figure1_original_witness140.json": "3aa5681b911b6b63dac8ddc9eb23ea6fb4882308315607b0b15b56a51eb1e2f8"
+  },
+  "source_claims_reaudited": false,
+  "source_files_modified": false,
+  "prior_canonical_archive_sha256": "34370f6f9c8f0eb9b8bcef813ac5c915ad12e734474add002cc4c448d9954622"
+}

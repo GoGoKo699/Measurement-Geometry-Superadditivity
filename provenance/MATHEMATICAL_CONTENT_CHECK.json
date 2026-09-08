@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "file": "docs/MODEL_AND_CLAIMS.md",
+      "display_equations": 18,
+      "display_equations_byte_identical": true
+    },
+    {
+      "file": "docs/COMPLETE_PROOF.md",
+      "display_equations": 119,
+      "display_equations_byte_identical": true
+    }
+  ],
+  "scope": "Displayed mathematical equations copied exactly; documentary status/paths changed and tracked in patches. Not a new theorem audit."
+}

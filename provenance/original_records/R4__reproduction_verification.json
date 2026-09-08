@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "fresh_directory_rerun": true,
+  "cover_rebuilt_from_scratch": true,
+  "compared_files": 12,
+  "all_byte_identical": true,
+  "new_tests_passed": 14,
+  "comparisons": [
+    {
+      "file": "analytic_endpoint_constants.json",
+      "byte_identical": true,
+      "sha256": "5b7c672234a01a877377372b7b9b9cdfa175d790b4dd8457764adff3206fd808"
+    },
+    {
+      "file": "common_noise_compact_certificate.json",
+      "byte_identical": true,
+      "sha256": "ab500804e56ba8c5ffb1ca7c1f38e3fd720b01561122b3a2bcc367a106ad66dd"
+    },
+    {
+      "file": "finite_witnesses.csv",
+      "byte_identical": true,
+      "sha256": "d1f182a49c4d1ad0891613d47867f0f6da609cf55db7aa15921ccddd713ddb15"
+    },
+    {
+      "file": "finite_witnesses.json",
+      "byte_identical": true,
+      "sha256": "378085ef5854f3a5d046d0dc3acde2501b68b256a9a05864800c64e55ca7bde0"
+    },
+    {
+      "file": "finite_witnesses_decimal.json",
+      "byte_identical": true,
+      "sha256": "31c91d4937e464d12627b5a0aef9a1d132ac257e24f1d905cd4d43a87c9f9296"
+    },
+    {
+      "file": "mixed_input_control.json",
+      "byte_identical": true,
+      "sha256": "89743c3bb483a1fd0ac3e6c7882a356286b83f57b17bfd577cb6302a93960728"
+    },
+    {
+      "file": "noise_gap_bounds.csv",
+      "byte_identical": true,
+      "sha256": "be494289e475b91a20c08e7aa65fcfe642b6f8ab36ec8d2a9f76bc42bb1420fd"
+    },
+    {
+      "file": "physical_checks.csv",
+      "byte_identical": true,
+      "sha256": "4a7cc3862f26b6c20951732f39c3c80caa6400babb68aea867986195f0f0a036"
+    },
+    {
+      "file": "physical_verification.json",
+      "byte_identical": true,
+      "sha256": "45d9249fb145a38c780bafe428b8728788b51816636183b61d8db62276b7f2a2"
+    },
+    {
+      "file": "rejected_float_candidate.json",
+      "byte_identical": true,
+      "sha256": "9268f23074d43dfe50cd0870bd68a75b7863446a6af44a0409719588831e3135"
+    },
+    {
+      "file": "verification_224.json",
+      "byte_identical": true,
+      "sha256": "867fe0b8a685c656f5fd95d5dd10a48305eee5c15dcb3091481a59b164ab924d"
+    },
+    {
+      "file": "verification_mpmath.json",
+      "byte_identical": true,
+      "sha256": "7a810d1450a1bace115b5b22e2174aa18d8759454f4584f57e5302eae1ceb75b"
+    }
+  ],
+  "scope": "Same installed environment. No external replication or cross-platform byte identity asserted."
+}

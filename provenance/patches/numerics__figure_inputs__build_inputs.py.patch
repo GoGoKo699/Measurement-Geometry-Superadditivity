@@ -1,0 +1,69 @@
+--- code/build_inputs.py
++++ numerics/figure_inputs/build_inputs.py
+@@ -7,37 +7,37 @@
+ CSV bounds are exactly converted from binary endpoints by Fraction arithmetic.
+ """
+ from __future__ import annotations
+-import argparse, csv, hashlib, io, json, math, platform
++import argparse, csv, hashlib, json, math, platform
+ from decimal import Decimal, localcontext
+ from fractions import Fraction as F
+ from pathlib import Path
+-import zipfile
+ from mpmath import mp, iv
+ 
+-ROOT = Path(__file__).resolve().parents[1]
+-DEFAULT_SOURCE=ROOT/'inputs/Measurement-Geometry-canonical-model-and-proof-v1-2026-09-08.zip'
+-SOURCE_SHA='34370f6f9c8f0eb9b8bcef813ac5c915ad12e734474add002cc4c448d9954622'
+-PREFIX='Measurement-Geometry-canonical-v1/'
+-WITNESS='provenance/snapshots/W1__witness140.json'
+-MODELPATH='MODEL_AND_CLAIMS.md'
+-PROOFPATH='COMPLETE_PROOF.md'
++ROOT = Path(__file__).resolve().parents[2]
++DEFAULT_SOURCE=ROOT
++WITNESS='data/figures/figure1_original_witness140.json'
++MODELPATH='docs/MODEL_AND_CLAIMS.md'
++PROOFPATH='docs/COMPLETE_PROOF.md'
+ 
+ 
+ def sha(b:bytes)->str:return hashlib.sha256(b).hexdigest()
+ 
+ def validate_source(source:Path):
+-    data=source.read_bytes()
+-    if sha(data)!=SOURCE_SHA:raise ValueError('Unexpected canonical archive: review provenance before use.')
+-    with zipfile.ZipFile(io.BytesIO(data)) as z:
+-        manifest=json.loads(z.read(PREFIX+'MANIFEST_SHA256.json'))
+-        for name,expected in manifest.items():
+-            raw=z.read(PREFIX+name)
+-            if sha(raw)!=expected:raise ValueError('Canonical member mismatch: '+name)
+-        needed=[MODELPATH,PROOFPATH,'FROZEN_ARGUMENT.md','provenance/SOURCE_REGISTER.json',WITNESS]
+-        raw={name:z.read(PREFIX+name) for name in needed}
+-    return raw, {'archive':source.name,'sha256':SOURCE_SHA,'canonical_root':PREFIX,
+-        'verified_manifest_entries':len(manifest),'selected_members':{n:sha(b)for n,b in raw.items()},
+-        'source_claims_reaudited':False,'source_files_modified':False}
++    """Verify direct local canonical inputs; no historical archive extraction."""
++    source=Path(source)
++    manifest=json.loads((source/'provenance/CANONICAL_INPUTS.json').read_text())
++    raw={}
++    for name,expected in manifest['files'].items():
++        p=source/name
++        if not p.is_file() or sha(p.read_bytes())!=expected:
++            raise ValueError('Canonical input mismatch: '+name)
++        raw[name]=p.read_bytes()
++    identity={'root':'baseline','manifest_sha256':sha((source/'provenance/CANONICAL_INPUTS.json').read_bytes()),
++        'verified_manifest_entries':len(manifest['files']),
++        'selected_members':{name:sha(value) for name,value in raw.items()},
++        'source_claims_reaudited':False,'source_files_modified':False,
++        'prior_canonical_archive_sha256':'34370f6f9c8f0eb9b8bcef813ac5c915ad12e734474add002cc4c448d9954622'}
++    return raw,identity
+ 
+ 
+ def exact(x):
+@@ -207,5 +207,5 @@
+     print(json.dumps(panel_counts,indent=2))
+ 
+ if __name__=='__main__':
+-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path,default=ROOT/'data');p.add_argument('--canonical-archive',type=Path,default=DEFAULT_SOURCE)
+-    args=p.parse_args();build(args.output,args.canonical_archive)
++    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path,default=ROOT/'build/data/figures');p.add_argument('--baseline',type=Path,default=DEFAULT_SOURCE)
++    args=p.parse_args();build(args.output,args.baseline)

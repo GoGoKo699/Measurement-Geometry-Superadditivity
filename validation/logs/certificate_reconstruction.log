@@ -1,0 +1,20 @@
+attempts 50 accepted 36 pending 6 c 0.125 seconds 6.1
+attempts 100 accepted 61 pending 6 c 0.25 seconds 12.9
+attempts 150 accepted 87 pending 4 c 0.34765625 seconds 21.7
+attempts 200 accepted 112 pending 4 c 0.4453125 seconds 31.8
+attempts 250 accepted 138 pending 2 c 0.4970703125 seconds 40.8
+attempts 300 accepted 161 pending 6 c 0.5188671875 seconds 48.2
+attempts 350 accepted 187 pending 4 c 0.5422265625 seconds 57.4
+attempts 400 accepted 210 pending 8 c 0.5583984375 seconds 66.6
+attempts 450 accepted 236 pending 6 c 0.570078125 seconds 75.7
+attempts 500 accepted 261 pending 6 c 0.5817578125 seconds 84.3
+attempts 550 accepted 287 pending 4 c 0.59298828125 seconds 93.5
+attempts 600 accepted 311 pending 6 c 0.60421875 seconds 101.8
+attempts 650 accepted 336 pending 6 c 0.62578125 seconds 112.3
+attempts 700 accepted 361 pending 6 c 0.64734375 seconds 121.0
+attempts 750 accepted 388 pending 2 c 0.6716015625 seconds 130.1
+attempts 800 accepted 412 pending 4 c 0.71203125 seconds 138.6
+attempts 850 accepted 437 pending 4 c 0.75515625 seconds 146.6
+attempts 900 accepted 463 pending 2 c 0.82703125 seconds 156.8
+attempts 950 accepted 488 pending 2 c 0.915078125 seconds 170.0
+FINAL 512 29635 deterministic covering complete

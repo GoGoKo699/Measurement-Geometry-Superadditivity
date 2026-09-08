@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "artifacts_byte_identical": 27,
+  "files": [
+    "figure_02_guaranteed_region.pdf",
+    "figure_03_coplanar_limit.pdf",
+    "figure_01_channel_and_witness.pdf",
+    "figure_03_coplanar_limit.svg",
+    "figure_02_guaranteed_region.svg",
+    "three_figure_review.pdf",
+    "figure_02_guaranteed_region_preview.png",
+    "figure_02_guaranteed_region.png",
+    "figure_01_channel_and_witness_preview.png",
+    "figure_03_coplanar_limit.png",
+    "figure_03_coplanar_limit_preview.png",
+    "figure_01_channel_and_witness.svg",
+    "figure_01_channel_and_witness.png",
+    "panels/figure2_width.pdf",
+    "panels/figure2_main.svg",
+    "panels/figure3a_geometry.pdf",
+    "panels/figure3b_gap.svg",
+    "panels/figure2_header.pdf",
+    "panels/figure1b_witness.pdf",
+    "panels/figure2_width.svg",
+    "panels/figure1b_witness.svg",
+    "panels/figure3a_geometry.svg",
+    "panels/figure1a_channel.pdf",
+    "panels/figure3b_gap.pdf",
+    "panels/figure2_header.svg",
+    "panels/figure1a_channel.svg",
+    "panels/figure2_main.pdf"
+  ]
+}

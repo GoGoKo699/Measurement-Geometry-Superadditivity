@@ -1,0 +1,20 @@
+--- MODEL_AND_CLAIMS.md
++++ docs/MODEL_AND_CLAIMS.md
+@@ -3,7 +3,7 @@
+ 
+ **8 September 2026. Scientific consolidation, not a manuscript or a new theorem.** This document fixes the notation, assumptions and claim scope for the supplied all-common-noise result. Its companion [complete proof](COMPLETE_PROOF.md) brings the required derivations into one sequence. The frozen one-page story is unchanged in [FROZEN_ARGUMENT.md](FROZEN_ARGUMENT.md).
+ 
+-The latest source reports that final mathematical audit obligations A–D passed and that a bounded distinction from inspected prior work supports drafting. This consolidation adopts that **recorded author-side status**; it does not rerun the certificates or certify priority. The management sequence remains scientific consolidation and figures, then a dedicated repository, then manuscript drafting. [Sources S1–S7](SOURCE_TO_CANONICAL.md)
++The latest source reports that final mathematical audit obligations A–D passed and that a bounded distinction from inspected prior work supports drafting. The canonical statement adopts that **recorded author-side status**. The present baseline reports its separate relocation/reproducibility checks without claiming a new external audit or priority clearance. The management sequence remains scientific consolidation and figures, then a dedicated repository, then manuscript drafting. [Sources S1–S7](SOURCE_TO_CANONICAL.md)
+ 
+ <a id="m01"></a>
+ ## 1. The channel and its operation budget
+@@ -176,6 +176,6 @@
+ 
+ The adopted scientific status is the **supplied final author-side audit**, not the superseded pending-audit footer in the frozen argument. Its stored results and source identities are preserved. Independent implementations do not constitute independent external researchers, and no proof-assistant formalization or absolute priority clearance is recorded.
+ 
+-This pass verifies source identities and document/evidence traceability, unifies notation, and consolidates proof prose. It does not execute the long certificate checks, alter the checking implementations, or add numerical claims. The analytical narrative is dependency complete for C1–C6, conditional on the explicitly identified standard background theorems and preserved computer-assisted certificate. See [CURRENT_STATUS.md](CURRENT_STATUS.md), [SOURCE_TO_CANONICAL.md](SOURCE_TO_CANONICAL.md) and [P14](COMPLETE_PROOF.md#p14).
++The earlier canonical consolidation verified source identities and documentary traceability without rerunning arithmetic. This baseline keeps its mathematical content and now relocates executable dependencies. Rechecks performed after relocation are reported separately in [BASELINE_VALIDATION.json](../validation/BASELINE_VALIDATION.json); they are reproducibility checks, not a new external theorem audit. The analytical narrative is dependency complete for C1–C6, conditional on the explicitly identified standard background theorems and preserved computer-assisted certificate. See [current baseline status](../STATUS.md), [SOURCE_TO_CANONICAL.md](SOURCE_TO_CANONICAL.md) and [P14](COMPLETE_PROOF.md#p14).
+ 
+-Scientific figure specifications and canonical figure data remain the next task. No dedicated repository is required at this stage, and no manuscript drafting or remote repository change is included.
++The three figures have now been visually approved. Their exact files and inputs are protected by the baseline manifest. This local scientific package consolidates the executable dependencies; see [REPRODUCTION.md](REPRODUCTION.md) for current commands and [STATUS.md](../STATUS.md) for the baseline state. No manuscript has been drafted and no remote repository has been created.

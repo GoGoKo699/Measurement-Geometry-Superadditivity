@@ -1,0 +1,19 @@
+--- code/verify_inputs.py
++++ numerics/figure_inputs/verify_inputs.py
+@@ -97,7 +97,7 @@
+     assert F(c['p_single_use_exact'])<F(c['p_witness'])
+     assert F(c['p_witness'])<F(c['p_cert_from_uniform_3_over_35_bound']['lower'])
+     assert F(c['p_witness'])<F(c['p_rep']['lower'])
+-    return {'passed':True,'source_archive_sha256':identity['sha256'],'source_manifest_entries':identity['verified_manifest_entries'],
++    return {'passed':True,'canonical_input_manifest_sha256':identity['manifest_sha256'],'source_manifest_entries':identity['verified_manifest_entries'],
+        'witness_copied_byte_for_byte':True,'witness_recomputed':False,'all_nine_mask_terms_retained':True,
+        'independent_scalar_formula_checks':counts,'cone_axes_checked':len(geometry),'asymptotic_formula_controls':len(controls),
+        'witness_outside_conservative_figure2_strip_explicitly_checked':True,
+@@ -106,5 +106,5 @@
+        'proof_reaudit':False,'physical_simulation':False,'figures_rendered':False,'repository_access':False}
+ 
+ if __name__=='__main__':
+-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--data',type=Path,default=ROOT/'data');p.add_argument('--canonical-archive',type=Path,default=DEFAULT_SOURCE);p.add_argument('--report',type=Path,default=ROOT/'provenance/INPUT_VALIDATION.json');args=p.parse_args()
+-    result=verify(args.data,args.canonical_archive);args.report.parent.mkdir(parents=True,exist_ok=True);args.report.write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
++    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--data',type=Path,default=ROOT/'data/figures');p.add_argument('--baseline',type=Path,default=DEFAULT_SOURCE);p.add_argument('--report',type=Path,default=ROOT/'build/INPUT_VALIDATION.json');args=p.parse_args()
++    result=verify(args.data,args.baseline);args.report.parent.mkdir(parents=True,exist_ok=True);args.report.write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
