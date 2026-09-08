@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+"""Verify the all-common-noise result without internet or earlier ZIP files.
+
+Default rechecks the shipped complete cover with both interval backends.
+--rebuild also reconstructs its rational cover from scratch.
+"""
+from pathlib import Path
+import argparse,subprocess,sys
+ROOT=Path(__file__).resolve().parent
+
+def run(*args):
+    cmd=[sys.executable,*map(str,args)]
+    print('+',' '.join(cmd),flush=True)
+    subprocess.run(cmd,cwd=ROOT,check=True)
+
+def main():
+    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--rebuild',action='store_true');ap.add_argument('--quick',action='store_true',help='Skip the slower second-precision integer pass; still recheck every rectangle with mpmath.');args=ap.parse_args()
+    results=ROOT/'results';results.mkdir(exist_ok=True);code=ROOT/'code';cert=results/'common_noise_compact_certificate.json'
+    if args.rebuild:run(code/'certify_all_noise.py','--output',results,'--bits','128')
+    if not cert.is_file():raise SystemExit('Missing compact certificate; run with --rebuild.')
+    if not args.quick:run(code/'certify_all_noise.py','--verify',cert,'--output',results,'--bits','224')
+    run(code/'cross_backend.py','--certificate',cert,'--output',results/'verification_mpmath.json','--digits','85')
+    run(code/'analytic_checks.py');run(code/'examples.py');run(code/'independent_examples.py');run(code/'physical_checks.py')
+    run('-m','pytest','-q','tests')
+if __name__=='__main__':main()

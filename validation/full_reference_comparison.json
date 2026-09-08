@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "reference_comparisons": [
+    {
+      "output": "certificate/integer/verification_224.json",
+      "reference": "evidence/reference/integer224.json",
+      "byte_identical": true
+    },
+    {
+      "output": "certificate/mpmath85.json",
+      "reference": "evidence/reference/mpmath85.json",
+      "byte_identical": true
+    },
+    {
+      "output": "certificate/decimal130.json",
+      "reference": "evidence/reference/decimal130.json",
+      "byte_identical": true
+    },
+    {
+      "output": "witness/decimal100.json",
+      "reference": "evidence/reference/witness100.json",
+      "byte_identical": true
+    },
+    {
+      "output": "witness/decimal140.json",
+      "reference": "data/figures/figure1_original_witness140.json",
+      "byte_identical": true
+    },
+    {
+      "output": "analytic/analytic_checks.json",
+      "reference": "evidence/reference/analytic_checks.json",
+      "byte_identical": true
+    },
+    {
+      "output": "physical/physical_check.json",
+      "reference": "evidence/reference/physical_check.json",
+      "byte_identical": true
+    },
+    {
+      "output": "witness/mpmath/mixed_input_control.json",
+      "reference": "evidence/controls/mixed_input_control.json",
+      "byte_identical": true
+    },
+    {
+      "output": "witness/mpmath/rejected_float_candidate.json",
+      "reference": "evidence/controls/rejected_float_candidate.json",
+      "byte_identical": true
+    }
+  ],
+  "independent_witness_enclosures_nested": true,
+  "mathematical_scope_changed": false
+}

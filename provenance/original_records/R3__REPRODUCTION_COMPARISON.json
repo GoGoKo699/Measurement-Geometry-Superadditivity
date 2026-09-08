@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "files_compared": 5,
+  "comparisons": [
+    {
+      "reference": "source_integrity.json",
+      "rerun": "source_integrity.json",
+      "byte_identical": true,
+      "sha256": "574b447b04ce3f886d9064ec354d8feec1b14f2558c8c86bf856b9ccabd5c2e0"
+    },
+    {
+      "reference": "analytic_checks.json",
+      "rerun": "analytic_checks.json",
+      "byte_identical": true,
+      "sha256": "58fe14a312b3404a0a071e112aeb7791f63240e678071182cd9e6db634142d23"
+    },
+    {
+      "reference": "independent_certificate130.json",
+      "rerun": "independent_certificate.json",
+      "byte_identical": true,
+      "sha256": "b8d367c94a59b0a8bc691caa3ed86a4d9b45d8a3e24f066aa898a714746c524f"
+    },
+    {
+      "reference": "witness140.json",
+      "rerun": "witness.json",
+      "byte_identical": true,
+      "sha256": "3aa5681b911b6b63dac8ddc9eb23ea6fb4882308315607b0b15b56a51eb1e2f8"
+    },
+    {
+      "reference": "physical_check.json",
+      "rerun": "physical_check.json",
+      "byte_identical": true,
+      "sha256": "fd38892504503a826ea8d44e002cef97f32a40637a48a7757b51135ef7f92186"
+    }
+  ],
+  "independent_full_certificate_repeated": true,
+  "original_full_certificate_repeated_in_clean_rerun": false,
+  "original_full_certificate_separately_completed": true,
+  "new_tests": 14,
+  "submitted_tests": 14
+}

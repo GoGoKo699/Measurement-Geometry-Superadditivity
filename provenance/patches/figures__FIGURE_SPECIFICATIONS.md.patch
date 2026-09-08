@@ -1,0 +1,11 @@
+--- FIGURE_SPECIFICATIONS.md
++++ figures/FIGURE_SPECIFICATIONS.md
+@@ -2,7 +2,7 @@
+ 
+ **Measurement geometry and coherent-information superadditivity · version 1 · 8 September 2026**
+ 
+-This specification implements the frozen three-figure roles in canonical source S2. It selects presentation parameters and calculates plotting inputs, but adds no scientific claim and renders no figure. The existing theorem, proof, independent certificate checkers and frozen one-page argument are unchanged. `inputs/` preserves the entire canonical scientific package; the source root and hashes are recorded in `data/SOURCE_IDENTITY.json`.
++This specification implements the frozen three-figure roles in canonical source S2. It selects presentation parameters and calculates plotting inputs, but adds no scientific claim and renders no figure. The existing theorem, proof, independent certificate checkers and frozen one-page argument are unchanged. The current baseline includes the canonical model and proof directly in `docs/` and the numerical inputs in `data/figures/`. `provenance/INPUT_ARCHIVES.json` preserves the specification-stage archive identities; those archives are not required or included as runtime dependencies. The original specification-stage rendered status is retained as historical metadata; the current approval is recorded in `STATUS.md`.
+ 
+ ## Design decision and scope
+ 

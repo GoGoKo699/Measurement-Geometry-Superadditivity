@@ -1,0 +1,9 @@
+checked 64 bands, 1831 rectangles, 4.8s
+checked 128 bands, 5549 rectangles, 14.9s
+checked 192 bands, 9342 rectangles, 25.9s
+checked 256 bands, 13040 rectangles, 36.9s
+checked 320 bands, 16680 rectangles, 47.6s
+checked 384 bands, 20318 rectangles, 58.4s
+checked 448 bands, 23773 rectangles, 68.2s
+checked 512 bands, 29635 rectangles, 86.0s
+{'passed': True, 'method': 'independently written Decimal intervals and entropy-conjugate secant maximum', 'precision': 130, 'bands': 512, 'rectangles': 29635, 'largest_compact_upper': '-2.3735563521529991861703817101793644225989993271206598859060966970200827669118079768573918057584886675929137356053421104192886E-10', 'smallest_tail_lower_nats': '0.0002818913616857577301116324724345639757788947042403853915369356929851792253858064735968993914405551952225673898579831763580270864021', 'domain': ['1/268435456', '24/25'], 'input_tail': '1/1000000', 'imports_submitted_numerical_code': False}

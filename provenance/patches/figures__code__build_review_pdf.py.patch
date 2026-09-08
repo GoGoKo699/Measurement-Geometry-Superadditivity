@@ -1,0 +1,20 @@
+--- code/build_review_pdf.py
++++ figures/code/build_review_pdf.py
+@@ -11,7 +11,7 @@
+ from reportlab.lib.pagesizes import A4
+ import matplotlib.font_manager as fm
+ 
+-ROOT=Path(__file__).resolve().parents[1]
++ROOT=Path(__file__).resolve().parents[2]
+ CAPTIONS=[
+ ('Figure 1. The channel and a concrete collective separation',
+ '''<b>(a)</b> An unknown logical input is encoded before independent channel uses. A qubit arrives intact with probability 1 − p; otherwise it is projectively measured along an axis b drawn from w and becomes inaccessible. The receiver gets the correct mask and axis label and the reported sign s = r ⊕ z, where z is an independent acquisition/report error with probability ε. The true sign r, error variable z, and measured qubit are unavailable. Every outcome is included. <b>(b)</b> For equal Pauli-axis weights, ε = 0.10 and p = 0.70, the globally optimized one-use coherent information is exactly zero: p exceeds its threshold 59/86. The balanced repetition input formed from the two eigenstates of (X + Y + Z)/√3 has I<sub>8</sub>/8 &gt; 7.47 × 10<super>−5</super> bits per physical use. This is one certified constructive value, not the optimal eight-use value or exact capacity. Positive block coherent information has an asymptotic rate interpretation through outer coding, not a demonstrated eight-qubit decoding fidelity. Numerical enclosures are smaller than the markers and are not statistical error bars.'''),
+@@ -22,7 +22,7 @@
+ FILES=['figure_01_channel_and_witness','figure_02_guaranteed_region','figure_03_coplanar_limit']
+ 
+ def main():
+- ap=argparse.ArgumentParser();ap.add_argument('--figures',type=Path,default=ROOT/'outputs');ap.add_argument('--output',type=Path,default=ROOT/'outputs/three_figure_review.pdf');args=ap.parse_args()
++ ap=argparse.ArgumentParser();ap.add_argument('--figures',type=Path,default=ROOT/'build/figures');ap.add_argument('--output',type=Path,default=ROOT/'build/figures/three_figure_review.pdf');args=ap.parse_args()
+  for face,weight in [('Review','normal'),('ReviewBold','bold')]:
+   path=fm.findfont(fm.FontProperties(family='DejaVu Sans',weight=weight),fallback_to_default=False)
+   pdfmetrics.registerFont(TTFont(face,path))

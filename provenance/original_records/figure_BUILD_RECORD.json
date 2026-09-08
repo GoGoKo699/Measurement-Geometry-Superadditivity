@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-08",
+  "source": {
+    "archive": "Measurement-Geometry-canonical-model-and-proof-v1-2026-09-08.zip",
+    "sha256": "34370f6f9c8f0eb9b8bcef813ac5c915ad12e734474add002cc4c448d9954622",
+    "canonical_root": "Measurement-Geometry-canonical-v1/",
+    "verified_manifest_entries": 47,
+    "selected_members": {
+      "MODEL_AND_CLAIMS.md": "74e36d5e67c1cd269b6179397901d9f8396aa31bb6b3cf853e31930a36837d81",
+      "COMPLETE_PROOF.md": "f6d6ee0f8012750be968544161c79a57341bf77776042d973050313b59afc787",
+      "FROZEN_ARGUMENT.md": "bdada1edb06c814ea563068317e38c09c3d96dfe539bbddf7523bd0a49ca2ad7",
+      "provenance/SOURCE_REGISTER.json": "ed2684e55d7aee70bb7320e6b72cd5acaf8c8f0bd82f52a78e065003567edd7f",
+      "provenance/snapshots/W1__witness140.json": "3aa5681b911b6b63dac8ddc9eb23ea6fb4882308315607b0b15b56a51eb1e2f8"
+    },
+    "source_claims_reaudited": false,
+    "source_files_modified": false
+  },
+  "rows": {
+    "figure1_comparison": 2,
+    "figure1_masks": 9,
+    "figure2_noise_grid": 1001,
+    "figure3_lambda_grid": 501,
+    "figure3_geometry_axes": 9,
+    "figure3_limit_checks": 12
+  },
+  "figure1": "unchanged certificate copied and transformed; not re-evaluated from a physical simulation",
+  "figure2_3": "new evaluations of canonical analytic formulas with 85-digit mpmath intervals and exact outward 60-place decimal serialization",
+  "plot_decimal_digits": 17,
+  "precision_is_not_statistical_confidence": true,
+  "new_theorem_or_global_certificate_audit": false,
+  "new_code_search": false,
+  "figure2_lower_boundary_name": "p_cert := 1/(1+L+d_epsilon lambda), new display-only shorthand",
+  "figure3_display_error": "1/10; no other error curves",
+  "figures_rendered": false,
+  "repository_changes": false
+}

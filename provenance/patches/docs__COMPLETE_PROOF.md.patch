@@ -1,0 +1,70 @@
+--- COMPLETE_PROOF.md
++++ docs/COMPLETE_PROOF.md
+@@ -4,7 +4,7 @@
+ 
+ This is a consolidation of the supplied theorem and its final author-side audit, not a new result, manuscript draft or repeated audit. Required inherited lemmas are written directly below. Section-level provenance, exact source hashes and code/evidence identities are in [SOURCE_TO_CANONICAL.md](SOURCE_TO_CANONICAL.md). The notation agrees with [MODEL_AND_CLAIMS.md](MODEL_AND_CLAIMS.md); documentary renamings are explicit in [NOTATION_CROSSWALK.md](NOTATION_CROSSWALK.md).
+ 
+-**Meaning of “complete.”** The analytical dependency chain for retained claims C1–C6 is present in this document. The computer-assisted scalar lemma is tied to the preserved rational certificate and separate checkers, not replaced by a narrative assertion. Standard external tools are quantum conditional-entropy concavity, Pinsker's inequality, the coherent-information coding theorem, and the erasure-capacity endpoint; their supplied references and roles are listed in [REFERENCES.md](REFERENCES.md). This pass imports the recorded verification status; it does not newly establish the library implementations or rerun their computations. Absolute priority is a separate, bounded source assessment.
++**Meaning of “complete.”** The analytical dependency chain for retained claims C1–C6 is present in this document. The computer-assisted scalar lemma is tied to the preserved rational certificate and separate checkers, not replaced by a narrative assertion. Standard external tools are quantum conditional-entropy concavity, Pinsker's inequality, the coherent-information coding theorem, and the erasure-capacity endpoint; their supplied references and roles are listed in [REFERENCES.md](REFERENCES.md). The earlier prose consolidation imported the recorded verification status. The current baseline separately reports checks after executable relocation in [BASELINE_VALIDATION.json](../validation/BASELINE_VALIDATION.json); these do not constitute external verification of the theorem or arithmetic libraries. Absolute priority is a separate, bounded source assessment.
+ 
+ ## Reading route
+ 
+@@ -718,7 +718,7 @@
+ 
+ The total block value is approximately $0.0005981981270524771$ bits. The exactly stored all-measured probability is $p^8=0.05764801$ and its weighted contribution is approximately $-0.01653160578649$ bits. All nine measured-count entries are present in W1.
+ 
+-These figures are source-reported enclosures and approximations. This consolidation preserves the original records and checks their identity; it does not rerun W3 or W5, create a new interval, choose a new plot-rounding policy, or claim an optimal eight-use code. A rigorous arithmetic interval is not a statistical confidence interval. The rate is achievable only with the stated asymptotic outer-coding interpretation.
++These figures are the retained source enclosures and approximations. The current baseline preserves their exact recorded bytes and re-evaluates the two substantive witness implementations in its full verification command. The regenerated values must agree with their own immutable reference; no new plot-rounding policy or optimal eight-use code is claimed. A rigorous arithmetic interval is not a statistical confidence interval. The rate is achievable only with the stated asymptotic outer-coding interpretation.
+ 
+ <a id="p134"></a>
+ ### P13.4 Safeguards kept as verification evidence, not extra headline results
+@@ -746,31 +746,27 @@
+ 
+ They share the mathematical statement and, where indicated, the rational partition. They do not become independent through differences in precision alone. Their source implementations, entropy expressions, arithmetic backends and envelope methods are identified individually. They are preserved unchanged; consolidation does not deduplicate these substantive routes into one evaluator.
+ 
+-The full original audit archive is retained once in `provenance/immutable/` for reproducibility and exact code dependencies. It is not the proposed active layout of the later clean repository. The model and proof above no longer require reading nested checkpoints for the mathematical argument. Source paths and hashes remain in the ledger for provenance and original execution.
+-
+-From the **extracted original final-audit root**, the preserved full audit entry point is:
++All runtime certificate inputs and substantive evaluators are now included directly in this scientific baseline. No original audit ZIP or earlier chat is required to execute them. Historical source paths and hashes are retained as provenance; the current reading path is this proof.
++
++From the package root, use:
+ 
+ ```bash
+-python reproduce.py --output /path/to/new-audit-output --precision 130 --submitted
++python verify.py
++python reproduce.py --output /path/to/new-output
++python reproduce.py --output /path/to/new-full-output --full
+ ```
+ 
+-For a targeted final-audit compact-certificate check, the original entry point is:
++`verify.py` checks package identity, claim/source coverage, local links, and approved artifact hashes; it does not certify an entropy inequality. The ordinary reproduction command checks numerical figure inputs and redraws the approved figures in a new output directory. `--full` additionally runs the distinct integer, mpmath, and Decimal compact-certificate paths, the endpoint checks, the retained witness and declared controls, and direct small physical checks. `--rebuild-certificate` may be added to reconstruct the rational cover as well. Output directories must not already exist and no command overwrites approved figures or reference evidence.
++
++Target a single substantive checker without changing the model:
+ 
+ ```bash
+-python code/verify_certificate.py \
+-  --certificate source/common_noise_range/results/common_noise_compact_certificate.json \
++python verification/decimal/verify_certificate.py \
++  --certificate certificates/common_noise_compact_certificate.json \
+   --output /path/to/independent-certificate.json --precision 130
+ ```
+ 
+-The original all-noise construction, in its own `source/common_noise_range/` working directory, supports:
+-
+-```bash
+-python reproduce.py --rebuild
+-```
+-
+-These are source-derived commands, not commands executed during this prose consolidation. Retain their documented directory and output requirements. Their source identities are R1–R2; environments are R5–R6; stored reproducibility reports are R3–R4. The original audit source includes the lower-level imports and tests needed by these commands.
+-
+-`verify_consolidation.py` in the present package has a different purpose: it verifies document provenance, immutable source identities, source-fragment hashes, local links and claim coverage. It does not execute an entropy checker, reestablish interval signs, or run a simulation. Later code relocation or refactoring must trigger the appropriate scientific rechecks before repository release.
++The three certificate algorithms and their arithmetic engines remain separate files in separate directories. Relocation did not make them independent merely by changing precision, nor merge their substantive entropy routines. The exact moved-file hashes, any adapter-only patches, and fresh runtime evidence are in `provenance/FILE_LINEAGE.json` and `validation/BASELINE_VALIDATION.json`. See [REPRODUCTION.md](REPRODUCTION.md) for dependencies, expected outputs, and scope of each check.
+ 
+ <a id="p15"></a>
+ ## P15. Completion boundary and attribution
+@@ -788,4 +784,4 @@
+ 
+ C7, significance and originality relative to prior work, is not an additional mathematical lemma. The current source comparison supports a bounded working distinction from the inspected incomplete-erasure, dephrasure and structured-code literature. Absolute priority and external peer review remain unrecorded. [REFERENCES.md](REFERENCES.md) carries the existing attribution and its scope without reopening a web search or extending the claim.
+ 
+-No missing internally named dependency was discovered in the inspected source set. This consolidation does not assert that a fresh external audit would find no issue. The canonical argument is a dependency-complete account of the supplied author-audited result, with its explicit computer certificate and named standard tools. Figure specifications, actual canonical plotting data and the later clean-checkout verification remain separate completion tasks.
++No missing internally named dependency was discovered in the inspected source set. This consolidation does not assert that a fresh external audit would find no issue. The canonical argument is a dependency-complete account of the supplied author-audited result, with its explicit computer certificate and named standard tools. The scientific specifications, canonical plotting data, and user-approved figures are included directly in this baseline. Clean-directory checks are recorded separately in the current validation report; the original canonical derivations and their source links remain traceable.

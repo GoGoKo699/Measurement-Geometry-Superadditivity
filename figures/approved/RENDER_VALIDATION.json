@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "date": "2026-09-08",
+  "source_members_verified": 26,
+  "all_source_bytes_unchanged": true,
+  "curve_coordinates_traced_to_csv": {
+    "figure2": 1001,
+    "figure3": 501
+  },
+  "witness_values_traced": 2,
+  "geometry_axis_records_traced": 9,
+  "actual_final_text_extents_inside_page": true,
+  "matplotlib_component_text_extents_inside_canvas": true,
+  "same_cone_camera_and_scale": true,
+  "upper_frontier_strict_in_captions": true,
+  "statistical_errorbars_added": false,
+  "all_drawn_pdf_and_svg_components_vector": true,
+  "figures": [
+    {
+      "figure": "figure_01_channel_and_witness",
+      "pdf_vector_image_count": 0,
+      "svg_raster_count": 0,
+      "pixel_size": [
+        2124,
+        1116
+      ],
+      "pdf_sha256": "7db89431580b22f88a28ef4b4979b6bd68ad94ca8767074e434a748ba8ca5906",
+      "svg_sha256": "ddd3ab75087861ac8940d89f6ce1f3f79967159647d89b80862fe9d581c1b261",
+      "png_sha256": "79a92a882423d8915c83c9e6e73fa9249a950866adba89392a0a8cc8557b106e"
+    },
+    {
+      "figure": "figure_02_guaranteed_region",
+      "pdf_vector_image_count": 0,
+      "svg_raster_count": 0,
+      "pixel_size": [
+        2124,
+        1221
+      ],
+      "pdf_sha256": "29aafa7cb7dc6777440f2804107c4c6d4b355a54ed1185cb9961bfb1383826b3",
+      "svg_sha256": "91f5034233d395f5571c2a7af3740154b88c52af3df3e35e6acb812f10ab04ea",
+      "png_sha256": "005902206380591143528b51665e0634f30af2acc283f10eda68f3555e001bcf"
+    },
+    {
+      "figure": "figure_03_coplanar_limit",
+      "pdf_vector_image_count": 0,
+      "svg_raster_count": 0,
+      "pixel_size": [
+        2124,
+        1407
+      ],
+      "pdf_sha256": "af61075e9bfb45b4544104e7747d6e5bc77927c39d9920aae563f1e20ed75cbd",
+      "svg_sha256": "a5a8fe378f3eb573a6d5b02fae2aa67d291e6232440ec8798bf7a477e76584cd",
+      "png_sha256": "4ad2b9357cff5dd4c39a4c419b53b5f38e4d5ebeae107ab3a4627eaa998884d6"
+    }
+  ],
+  "scope": "Rendering and scientific-input traceability checks. No theorem audit, witness recomputation, simulation, or repository operation.",
+  "user_visual_approval": false
+}

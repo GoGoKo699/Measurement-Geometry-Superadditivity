@@ -1,0 +1,86 @@
+from fractions import Fraction as F
+from pathlib import Path
+from copy import deepcopy
+import importlib.util,json,sys
+import pytest
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'code'))
+import analytic_checks as ac
+import certify_all_noise as cert
+import dyadic_interval as di
+
+@pytest.fixture(scope='module')
+def original(): return json.loads((ROOT/'results/common_noise_compact_certificate.json').read_text())
+
+def test_analytic_endpoints_and_geometry(): assert ac.run()['passed']
+def test_polynomial_factorization():
+    for a in [F(1,100),F(1,5),F(1,2),F(9,10),F(99,100)]:
+        c=1-a;P=1+a/4+a*a/4+a**3/10;V=F(3,4)+F(3,20)*a*a+a**3/10;W=F(1,4)+a/4+a*a/10
+        assert 1-c*P==a*V and P==V+W and P-1==a*W
+        assert 3*W-P==(2*a-1)*(5-a*a)/20
+
+def test_certificate_count_and_cover(original):
+    assert len(original['bands'])==512
+    assert sum(len(b['intervals'])for b in original['bands'])==29635
+    cprev=cert.CLOW
+    for b in original['bands']:
+        assert F(b['c_lower'])==cprev;cprev=F(b['c_upper']);tprev=cert.DELTA
+        for l,r in b['intervals']:assert F(l)==tprev;tprev=F(r)
+        assert tprev==F(1,2)
+    assert cprev==cert.CHIGH
+
+def test_noise_gap_rejected(original):
+    x=deepcopy(original);x['bands'][0]['c_lower']=str(cert.CLOW*2)
+    with pytest.raises(ValueError):cert.validate(x,128)
+
+def test_noise_overlap_rejected(original):
+    x=deepcopy(original);x['bands'][0]['c_upper']=str(cert.CLOW/2)
+    with pytest.raises(ValueError):cert.validate(x,128)
+
+def test_input_gap_rejected(original):
+    x=deepcopy(original);x['bands'][0]['intervals'].pop(0)
+    with pytest.raises(ValueError):cert.validate(x,128)
+
+def test_wrong_polynomial_rejected(original):
+    x=deepcopy(original);x['ell']='0.065'
+    with pytest.raises(ValueError):cert.validate(x,128)
+
+def test_wrong_tail_rejected(original):
+    x=deepcopy(original);x['t_tail']='1/100'
+    with pytest.raises(ValueError):cert.validate(x,128)
+
+def test_one_leaf_at_higher_precision(original):
+    di.set_precision(256);cert.costs.cache_clear();cert.ht.cache_clear()
+    b=original['bands'][240];l,r=map(F,b['intervals'][6]);cl,ch=F(b['c_lower']),F(b['c_upper'])
+    assert cert.upper_leaf(l,r,cl,ch,{})<0 and cert.tail_margin(cl,ch).lo>0
+
+def test_interval_rational_enclosures():
+    di.set_precision(128)
+    x=di.Box(F(2,7));y=di.Box(F(3,11))
+    assert (x/y).contains_rational(F(22,21))
+    assert (x+y).contains_rational(F(43,77))
+    assert di.Box(4).sqrt().contains_rational(2)
+
+def test_new_verifications_present():
+    for n in ['verification_224.json','verification_mpmath.json','physical_verification.json','finite_witnesses_decimal.json']:
+        assert json.loads((ROOT/'results'/n).read_text())['passed']
+
+def test_positive_witnesses_and_rejected_candidate():
+    w=json.loads((ROOT/'results/finite_witnesses.json').read_text())
+    assert len(w)==4
+    for r in w:
+        assert F(r['rate']['lower'])>0
+        assert F(r['single_use_coefficient_upper']['upper'])<0
+    neg=json.loads((ROOT/'results/rejected_float_candidate.json').read_text())
+    assert F(neg['certified_rate']['upper'])<0
+
+def test_nearpure_naive_extension_fails():
+    v=json.loads((ROOT/'results/mixed_input_control.json').read_text())
+    assert F(v['coherent_information']['lower'])>0
+
+def test_frame_direction_geometry():
+    # For cone frames the axial minimum is lambda and exact near-plane cost
+    # follows when lambda <= W/P. The domain always includes lambda<=1/4.
+    for a in [F(1,10**8),F(1,10),F(1,2),F(9,10),F(999,1000)]:
+        P=1+a/4+a*a/4+a**3/10;W=F(1,4)+a/4+a*a/10
+        assert W/P>=F(1,4)

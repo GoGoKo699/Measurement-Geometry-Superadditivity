@@ -1,0 +1,96 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "canonical_model_anchor": "m04",
+      "canonical_proof_sections": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P10"
+      ],
+      "role": "Headline full-span sufficient interval; construction-specific scope.",
+      "status": "Source-derived mathematical content consolidated; recorded final audit adopted, not rerun."
+    },
+    {
+      "id": "C2",
+      "canonical_model_anchor": "m03",
+      "canonical_proof_sections": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P13"
+      ],
+      "role": "Global one-use optimization; no trial-input substitution.",
+      "status": "Source-derived mathematical content consolidated; recorded final audit adopted, not rerun."
+    },
+    {
+      "id": "C3",
+      "canonical_model_anchor": "m03",
+      "canonical_proof_sections": [
+        "P01",
+        "P02",
+        "P09",
+        "P10"
+      ],
+      "role": "Every branch included; finite positive inner block before outer coding.",
+      "status": "Source-derived mathematical content consolidated; recorded final audit adopted, not rerun."
+    },
+    {
+      "id": "C4",
+      "canonical_model_anchor": "m04",
+      "canonical_proof_sections": [
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08"
+      ],
+      "role": "Computer-assisted scalar inequality plus geometric gap.",
+      "status": "Source-derived mathematical content consolidated; recorded final audit adopted, not rerun."
+    },
+    {
+      "id": "C5",
+      "canonical_model_anchor": "m05",
+      "canonical_proof_sections": [
+        "P12",
+        "P13",
+        "P14"
+      ],
+      "role": "One retained eight-use witness; source enclosures not newly calculated.",
+      "status": "Source-derived mathematical content consolidated; recorded final audit adopted, not rerun."
+    },
+    {
+      "id": "C6",
+      "canonical_model_anchor": "m06",
+      "canonical_proof_sections": [
+        "P11",
+        "P12"
+      ],
+      "role": "Coplanar criterion, physical noise endpoints, domain-restricted cone formulas.",
+      "status": "Source-derived mathematical content consolidated; recorded final audit adopted, not rerun."
+    },
+    {
+      "id": "C7",
+      "canonical_model_anchor": "m07",
+      "canonical_proof_sections": [
+        "P15"
+      ],
+      "role": "Source-reported bounded prior-work distinction only; absolute priority not certified.",
+      "status": "Attribution and source-reported assessment, not a new mathematical proof or priority clearance."
+    }
+  ]
+}

@@ -1,0 +1,1142 @@
+{
+  "date": "2026-09-08",
+  "input_archives": [
+    {
+      "key": "canonical",
+      "name": "Measurement-Geometry-canonical-model-and-proof-v1-2026-09-08.zip",
+      "sha256": "34370f6f9c8f0eb9b8bcef813ac5c915ad12e734474add002cc4c448d9954622",
+      "bytes": 1157206,
+      "manifest_entries": 47,
+      "manifest_valid": true
+    },
+    {
+      "key": "spec",
+      "name": "Measurement-Geometry-scientific-figure-specifications-v1-2026-09-08.zip",
+      "sha256": "991e98d6107dc8ea31bed7864218a5c21033f149a78dfd75b6db99a38c4299fa",
+      "bytes": 1392228,
+      "manifest_entries": 26,
+      "manifest_valid": true
+    },
+    {
+      "key": "render",
+      "name": "Measurement-Geometry-rendered-figures-v1-2026-09-08.zip",
+      "sha256": "995f6863b4d1c74c5d47a6d64e7f7dd4146e8209ca542298bda735d45a157935",
+      "bytes": 3394489,
+      "manifest_entries": 74,
+      "manifest_valid": true
+    },
+    {
+      "key": "audit",
+      "name": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "sha256": "3027a9cddd1b282cfcafc3d1c4f615cb9d5c6b219644019cb0682f124d4365c8",
+      "bytes": 1016934,
+      "manifest_entries": 196,
+      "manifest_valid": true
+    }
+  ],
+  "source_archive_sha256": "3027a9cddd1b282cfcafc3d1c4f615cb9d5c6b219644019cb0682f124d4365c8",
+  "sources": [
+    {
+      "id": "S1",
+      "path_from_audit_root": "source/Noisy-record-PRL-story-and-proof-map-v1/ONE_PAGE_ARGUMENT.md",
+      "sha256": "bdada1edb06c814ea563068317e38c09c3d96dfe539bbddf7523bd0a49ca2ad7",
+      "bytes": 4167,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# Measurement Geometry Guarantees Coherent-Information Superadditivity"
+        }
+      ],
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/Noisy-record-PRL-story-and-proof-map-v1/ONE_PAGE_ARGUMENT.md",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "docs/FROZEN_ARGUMENT.md",
+      "operational_status": "retained local source",
+      "baseline_sha256": "bdada1edb06c814ea563068317e38c09c3d96dfe539bbddf7523bd0a49ca2ad7",
+      "original_local_path": "docs/FROZEN_ARGUMENT.md"
+    },
+    {
+      "id": "S2",
+      "path_from_audit_root": "source/Noisy-record-PRL-story-and-proof-map-v1/CLAIM_PROOF_MAP.md",
+      "sha256": "230c934e45830cb013a8a0c0b9283ee717c619a76b85aafb87ed495a6f8b8275",
+      "bytes": 13483,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# Claim-to-proof map and final audit scope"
+        },
+        {
+          "line": 7,
+          "heading": "## 1. The claim contract"
+        },
+        {
+          "line": 43,
+          "heading": "## 2. Minimal proof dependency"
+        },
+        {
+          "line": 63,
+          "heading": "## 3. Claim ledger"
+        },
+        {
+          "line": 77,
+          "heading": "## 4. The bounded final audit"
+        },
+        {
+          "line": 79,
+          "heading": "### A. Verify the information available to the receiver"
+        },
+        {
+          "line": 83,
+          "heading": "### B. Audit the new global entropy inequality"
+        },
+        {
+          "line": 95,
+          "heading": "### C. Check the geometric and coding implications"
+        },
+        {
+          "line": 99,
+          "heading": "### D. Audit only the retained illustration and limits"
+        },
+        {
+          "line": 103,
+          "heading": "### E. Establish the contribution relative to the closest theory"
+        },
+        {
+          "line": 109,
+          "heading": "## 5. What the reader sees, and what stays in the supplement"
+        },
+        {
+          "line": 119,
+          "heading": "## 6. Source register and current status"
+        }
+      ],
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/Noisy-record-PRL-story-and-proof-map-v1/CLAIM_PROOF_MAP.md",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "provenance/text_sources/S2__CLAIM_PROOF_MAP.md",
+      "operational_status": "retained local source",
+      "baseline_sha256": "230c934e45830cb013a8a0c0b9283ee717c619a76b85aafb87ed495a6f8b8275",
+      "original_local_path": "provenance/text_sources/S2__CLAIM_PROOF_MAP.md"
+    },
+    {
+      "id": "S3",
+      "path_from_audit_root": "source/common_noise_range/THEOREM_STATEMENT.md",
+      "sha256": "9854266cf1ce580fdb9b0f9a2a0d15f85f57d63fb13c8da3a0a14cc4940cb19a",
+      "bytes": 2777,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# All-common-noise full-span separation"
+        }
+      ],
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEOREM_STATEMENT.md",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "provenance/text_sources/S3__THEOREM_STATEMENT.md",
+      "operational_status": "retained local source",
+      "baseline_sha256": "9854266cf1ce580fdb9b0f9a2a0d15f85f57d63fb13c8da3a0a14cc4940cb19a",
+      "original_local_path": "provenance/text_sources/S3__THEOREM_STATEMENT.md"
+    },
+    {
+      "id": "S4",
+      "path_from_audit_root": "source/common_noise_range/THEORY.md",
+      "sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+      "bytes": 17611,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# Full span at every nontrivial common reporting-error probability"
+        },
+        {
+          "line": 7,
+          "heading": "## 1. Model, scope, and main statement"
+        },
+        {
+          "line": 38,
+          "heading": "## 2. The globally optimized one-use benchmark"
+        },
+        {
+          "line": 73,
+          "heading": "## 3. New global scalar inequality"
+        },
+        {
+          "line": 98,
+          "heading": "### 3.1 Analytic low-error endpoint: $0<c\\leq2^{-28}$"
+        },
+        {
+          "line": 121,
+          "heading": "### 3.2 Analytic high-error endpoint: $0<a\\leq1/25$"
+        },
+        {
+          "line": 158,
+          "heading": "### 3.3 Compact noise domain and complete input coverage"
+        },
+        {
+          "line": 186,
+          "heading": "## 4. From the scalar inequality to the full-span gap"
+        },
+        {
+          "line": 228,
+          "heading": "## 5. Coplanar axes and the two noise endpoints"
+        },
+        {
+          "line": 238,
+          "heading": "## 6. Exact nearly coplanar family for the whole noise interval"
+        },
+        {
+          "line": 264,
+          "heading": "## 7. New finite witnesses far outside the original noise band"
+        },
+        {
+          "line": 281,
+          "heading": "## 8. A check against an incorrect noise extrapolation"
+        },
+        {
+          "line": 291,
+          "heading": "## 9. Evidence, dependency, and limits"
+        }
+      ],
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "provenance/text_sources/S4__THEORY.md",
+      "operational_status": "retained local source",
+      "baseline_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+      "original_local_path": "provenance/text_sources/S4__THEORY.md"
+    },
+    {
+      "id": "S5",
+      "path_from_audit_root": "PROOF_AUDIT.md",
+      "sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+      "bytes": 14875,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# Proof audit: the fixed all-common-noise claim"
+        },
+        {
+          "line": 5,
+          "heading": "## 1. Information available at the receiver (A; C2\u2013C3)"
+        },
+        {
+          "line": 19,
+          "heading": "## 2. The endpoint chord and a concavity needed for certificates (B; C4)"
+        },
+        {
+          "line": 34,
+          "heading": "## 3. Global entropy inequality and analytic endpoint regions (B; C4)"
+        },
+        {
+          "line": 45,
+          "heading": "### Low noise: 0<c<=2^-28"
+        },
+        {
+          "line": 60,
+          "heading": "### High noise: 0<a<=1/25"
+        },
+        {
+          "line": 77,
+          "heading": "## 4. Independently recomputed compact certificate (B; C4)"
+        },
+        {
+          "line": 89,
+          "heading": "### What is independent"
+        },
+        {
+          "line": 99,
+          "heading": "### Results"
+        },
+        {
+          "line": 105,
+          "heading": "## 5. From the entropy lemma to the geometric gap (C; C1, C4)"
+        },
+        {
+          "line": 123,
+          "heading": "## 6. All-record collective construction and quantifiers (C; C3)"
+        },
+        {
+          "line": 147,
+          "heading": "## 7. Retained illustration only (D; C5)"
+        },
+        {
+          "line": 161,
+          "heading": "## 8. Cone and noise endpoints (D; C6)"
+        },
+        {
+          "line": 171,
+          "heading": "## 9. Final mathematical disposition"
+        }
+      ],
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/PROOF_AUDIT.md",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "provenance/text_sources/S5__PROOF_AUDIT.md",
+      "operational_status": "retained local source",
+      "baseline_sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+      "original_local_path": "provenance/text_sources/S5__PROOF_AUDIT.md"
+    },
+    {
+      "id": "S6",
+      "path_from_audit_root": "PRIOR_WORK_COMPARISON.md",
+      "sha256": "d53b3911f1d831d715e0bf58f7570e1b044c81c7d7c51e242e12ee20e44c6faf",
+      "bytes": 7310,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# Bounded prior-work comparison"
+        },
+        {
+          "line": 5,
+          "heading": "## 1. Exact channel-class identification"
+        },
+        {
+          "line": 15,
+          "heading": "## 2. Closest repetition-code threshold precedent"
+        },
+        {
+          "line": 21,
+          "heading": "## 3. Operational implication of one positive block"
+        },
+        {
+          "line": 27,
+          "heading": "## 4. More recent neighboring work"
+        },
+        {
+          "line": 33,
+          "heading": "## 5. What is the defensible distinction?"
+        },
+        {
+          "line": 45,
+          "heading": "## 6. Search limits and stopping decision"
+        },
+        {
+          "line": 53,
+          "heading": "## Primary records"
+        }
+      ],
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/PRIOR_WORK_COMPARISON.md",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "provenance/text_sources/S6__PRIOR_WORK_COMPARISON.md",
+      "operational_status": "retained local source",
+      "baseline_sha256": "d53b3911f1d831d715e0bf58f7570e1b044c81c7d7c51e242e12ee20e44c6faf",
+      "original_local_path": "provenance/text_sources/S6__PRIOR_WORK_COMPARISON.md"
+    },
+    {
+      "id": "S7",
+      "path_from_audit_root": "results/AUDIT_SUMMARY.json",
+      "sha256": "e5f47f1ccc28e68393caa5c51953b6cc5b846ae72c97cf9f72d7ca8f73c78732",
+      "bytes": 2381,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/results/AUDIT_SUMMARY.json",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "provenance/original_records/S7__AUDIT_SUMMARY.json",
+      "operational_status": "retained local source",
+      "baseline_sha256": "e5f47f1ccc28e68393caa5c51953b6cc5b846ae72c97cf9f72d7ca8f73c78732",
+      "original_local_path": "provenance/original_records/S7__AUDIT_SUMMARY.json"
+    },
+    {
+      "id": "S8",
+      "path_from_audit_root": "source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/THEORY.md",
+      "sha256": "6d7f5d34d3918627656c32ebbb9da46311bc71ac82b04e342609f87a605593a8",
+      "bytes": 21709,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# Measurement geometry and collective threshold extension"
+        },
+        {
+          "line": 5,
+          "heading": "## 1. Channel and operational meaning"
+        },
+        {
+          "line": 23,
+          "heading": "## 2. Exact optimized one-use benchmark, defined without a weak-input shortcut"
+        },
+        {
+          "line": 57,
+          "heading": "## 3. Two record coefficients determine long balanced repetitions"
+        },
+        {
+          "line": 76,
+          "heading": "### 3.1 Exact record sum"
+        },
+        {
+          "line": 94,
+          "heading": "### 3.2 General polynomial envelopes: proof for unequal axes and errors"
+        },
+        {
+          "line": 121,
+          "heading": "### 3.3 Eventual sign theorem and its correct scope"
+        },
+        {
+          "line": 135,
+          "heading": "## 4. A criterion that compares with the actual global one-use benchmark"
+        },
+        {
+          "line": 149,
+          "heading": "## 5. Coplanar axes: incompatibility alone does not give this threshold gain"
+        },
+        {
+          "line": 173,
+          "heading": "## 6. A geometry-only sufficient condition for a broad class"
+        },
+        {
+          "line": 181,
+          "heading": "### 6.1 Frame lower bound on the globally optimized one-use cost"
+        },
+        {
+          "line": 213,
+          "heading": "### 6.2 Analytic orientation average bounds the repetition loss"
+        },
+        {
+          "line": 231,
+          "heading": "### 6.3 Class-wide separation"
+        },
+        {
+          "line": 247,
+          "heading": "### 6.4 Unequal reporting errors in an explicit robust region"
+        },
+        {
+          "line": 258,
+          "heading": "## 7. Unequal Pauli probabilities: a finite example and an exact geometric optimizer"
+        },
+        {
+          "line": 287,
+          "heading": "## 8. Interpretation and nonclaims"
+        },
+        {
+          "line": 297,
+          "heading": "## 9. Checks and sources"
+        }
+      ],
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/THEORY.md",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "provenance/text_sources/S8__THEORY.md",
+      "operational_status": "retained local source",
+      "baseline_sha256": "6d7f5d34d3918627656c32ebbb9da46311bc71ac82b04e342609f87a605593a8",
+      "original_local_path": "provenance/text_sources/S8__THEORY.md"
+    },
+    {
+      "id": "S9",
+      "path_from_audit_root": "source/common_noise_range/source/full_span_audit/PROOF_AUDIT.md",
+      "sha256": "adb5355ad73a05cb1422a11925da628ed35cc025d1461bca5dad1a1f65aec7f1",
+      "bytes": 14428,
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# Audit of the full-span noisy-record theorem"
+        },
+        {
+          "line": 5,
+          "heading": "## Decision and source boundary"
+        },
+        {
+          "line": 24,
+          "heading": "## 1. Start from the physical conditional state"
+        },
+        {
+          "line": 42,
+          "heading": "## 2. Integral identity: a direct proof"
+        },
+        {
+          "line": 55,
+          "heading": "## 3. The new concavity variable is valid"
+        },
+        {
+          "line": 89,
+          "heading": "## 4. Why the compact-domain certificate may use secants"
+        },
+        {
+          "line": 101,
+          "heading": "## 5. Independent scalar certificates"
+        },
+        {
+          "line": 119,
+          "heading": "### Near-pure tail"
+        },
+        {
+          "line": 128,
+          "heading": "### Results"
+        },
+        {
+          "line": 137,
+          "heading": "## 6. Completion of the full-span inequality"
+        },
+        {
+          "line": 163,
+          "heading": "## 7. The inherited repetition argument was checked for hidden restrictions"
+        },
+        {
+          "line": 176,
+          "heading": "## 8. Coplanar limit and exact cone family"
+        },
+        {
+          "line": 198,
+          "heading": "## 9. What this audit does not do"
+        },
+        {
+          "line": 204,
+          "heading": "## References and attribution"
+        }
+      ],
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/PROOF_AUDIT.md",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "provenance/text_sources/S9__PROOF_AUDIT.md",
+      "operational_status": "retained local source",
+      "baseline_sha256": "adb5355ad73a05cb1422a11925da628ed35cc025d1461bca5dad1a1f65aec7f1",
+      "original_local_path": "provenance/text_sources/S9__PROOF_AUDIT.md"
+    },
+    {
+      "id": "V1",
+      "path_from_audit_root": "source/common_noise_range/results/common_noise_compact_certificate.json",
+      "sha256": "ab500804e56ba8c5ffb1ca7c1f38e3fd720b01561122b3a2bcc367a106ad66dd",
+      "bytes": 2524387,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/results/common_noise_compact_certificate.json",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "certificates/common_noise_compact_certificate.json",
+      "operational_status": "retained local source",
+      "baseline_sha256": "ab500804e56ba8c5ffb1ca7c1f38e3fd720b01561122b3a2bcc367a106ad66dd",
+      "original_local_path": "certificates/common_noise_compact_certificate.json"
+    },
+    {
+      "id": "V2",
+      "path_from_audit_root": "source/common_noise_range/code/certify_all_noise.py",
+      "sha256": "84256314596bdc5a10a573d36d0435a85430c94f06c38c03eb20054c29dd5829",
+      "bytes": 5696,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/code/certify_all_noise.py",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "verification/integer/certify_all_noise.py",
+      "operational_status": "retained local source",
+      "baseline_sha256": "84256314596bdc5a10a573d36d0435a85430c94f06c38c03eb20054c29dd5829",
+      "original_local_path": "verification/integer/certify_all_noise.py"
+    },
+    {
+      "id": "V3",
+      "path_from_audit_root": "source/common_noise_range/code/dyadic_interval.py",
+      "sha256": "9f2e0fd7399f55eaef58db9b9c6749b634053da7e563a394ee12524a89f9e949",
+      "bytes": 4907,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/code/dyadic_interval.py",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "verification/integer/dyadic_interval.py",
+      "operational_status": "retained local source",
+      "baseline_sha256": "9f2e0fd7399f55eaef58db9b9c6749b634053da7e563a394ee12524a89f9e949",
+      "original_local_path": "verification/integer/dyadic_interval.py"
+    },
+    {
+      "id": "V4",
+      "path_from_audit_root": "source/common_noise_range/code/cross_backend.py",
+      "sha256": "b542d89bd20f4dbd75923bee402d5a818d390a30ec88cc629623f9fd7d5cb79d",
+      "bytes": 3241,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/code/cross_backend.py",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "verification/mpmath/cross_backend.py",
+      "operational_status": "retained local source",
+      "baseline_sha256": "b542d89bd20f4dbd75923bee402d5a818d390a30ec88cc629623f9fd7d5cb79d",
+      "original_local_path": "verification/mpmath/cross_backend.py"
+    },
+    {
+      "id": "V5",
+      "path_from_audit_root": "code/verify_certificate.py",
+      "sha256": "8ac88f9e2ffde9562c28cc5aba7ec66667cf74e5a83a9446b56e2f5dfce9deac",
+      "bytes": 4283,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/code/verify_certificate.py",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "verification/decimal/verify_certificate.py",
+      "operational_status": "retained local source",
+      "baseline_sha256": "8ac88f9e2ffde9562c28cc5aba7ec66667cf74e5a83a9446b56e2f5dfce9deac",
+      "original_local_path": "verification/decimal/verify_certificate.py"
+    },
+    {
+      "id": "V6",
+      "path_from_audit_root": "code/decimal_interval.py",
+      "sha256": "6547a4975338602b4afcc546a0d811017021aeb14240bb3fc279e590b80360db",
+      "bytes": 3748,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/code/decimal_interval.py",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "verification/decimal/decimal_interval.py",
+      "operational_status": "retained local source",
+      "baseline_sha256": "6547a4975338602b4afcc546a0d811017021aeb14240bb3fc279e590b80360db",
+      "original_local_path": "verification/decimal/decimal_interval.py"
+    },
+    {
+      "id": "V7",
+      "path_from_audit_root": "results/independent_certificate130.json",
+      "sha256": "b8d367c94a59b0a8bc691caa3ed86a4d9b45d8a3e24f066aa898a714746c524f",
+      "bytes": 627,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/results/independent_certificate130.json",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "evidence/reference/decimal130.json",
+      "operational_status": "retained local source",
+      "baseline_sha256": "b8d367c94a59b0a8bc691caa3ed86a4d9b45d8a3e24f066aa898a714746c524f",
+      "original_local_path": "evidence/reference/decimal130.json"
+    },
+    {
+      "id": "V8",
+      "path_from_audit_root": "results/submitted/verification_224.json",
+      "sha256": "867fe0b8a685c656f5fd95d5dd10a48305eee5c15dcb3091481a59b164ab924d",
+      "bytes": 746,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/results/submitted/verification_224.json",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "provenance/original_records/V8__verification_224.json",
+      "operational_status": "retained local source",
+      "baseline_sha256": "867fe0b8a685c656f5fd95d5dd10a48305eee5c15dcb3091481a59b164ab924d",
+      "original_local_path": "provenance/original_records/V8__verification_224.json"
+    },
+    {
+      "id": "V9",
+      "path_from_audit_root": "source/common_noise_range/results/verification_mpmath.json",
+      "sha256": "7a810d1450a1bace115b5b22e2174aa18d8759454f4584f57e5302eae1ceb75b",
+      "bytes": 335,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/results/verification_mpmath.json",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "evidence/reference/mpmath85.json",
+      "operational_status": "retained local source",
+      "baseline_sha256": "7a810d1450a1bace115b5b22e2174aa18d8759454f4584f57e5302eae1ceb75b",
+      "original_local_path": "evidence/reference/mpmath85.json"
+    },
+    {
+      "id": "W1",
+      "path_from_audit_root": "results/witness140.json",
+      "sha256": "3aa5681b911b6b63dac8ddc9eb23ea6fb4882308315607b0b15b56a51eb1e2f8",
+      "bytes": 6709,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/results/witness140.json",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "data/figures/figure1_original_witness140.json",
+      "operational_status": "retained local source",
+      "baseline_sha256": "3aa5681b911b6b63dac8ddc9eb23ea6fb4882308315607b0b15b56a51eb1e2f8",
+      "original_local_path": "data/figures/figure1_original_witness140.json"
+    },
+    {
+      "id": "W2",
+      "path_from_audit_root": "results/witness100.json",
+      "sha256": "090538ca37de9b9d7cc99b019c598f62ac30f0c294bb2ddf918bdc0728d1bb63",
+      "bytes": 5749,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/results/witness100.json",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "evidence/reference/witness100.json",
+      "operational_status": "retained local source",
+      "baseline_sha256": "090538ca37de9b9d7cc99b019c598f62ac30f0c294bb2ddf918bdc0728d1bb63",
+      "original_local_path": "evidence/reference/witness100.json"
+    },
+    {
+      "id": "W3",
+      "path_from_audit_root": "code/check_witness.py",
+      "sha256": "65f95c4c236acbf0681befe038a6e08dc41cfd4bee4fd28359d548f9618fd1b7",
+      "bytes": 2399,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/code/check_witness.py",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "verification/decimal/check_witness.py",
+      "operational_status": "retained local source",
+      "baseline_sha256": "65f95c4c236acbf0681befe038a6e08dc41cfd4bee4fd28359d548f9618fd1b7",
+      "original_local_path": "verification/decimal/check_witness.py"
+    },
+    {
+      "id": "W4",
+      "path_from_audit_root": "source/common_noise_range/results/finite_witnesses.csv",
+      "sha256": "d1f182a49c4d1ad0891613d47867f0f6da609cf55db7aa15921ccddd713ddb15",
+      "bytes": 1803,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/results/finite_witnesses.csv",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "provenance/original_records/W4__finite_witnesses.csv",
+      "operational_status": "retained local source",
+      "baseline_sha256": "d1f182a49c4d1ad0891613d47867f0f6da609cf55db7aa15921ccddd713ddb15",
+      "original_local_path": "provenance/original_records/W4__finite_witnesses.csv"
+    },
+    {
+      "id": "W5",
+      "path_from_audit_root": "source/common_noise_range/code/examples.py",
+      "sha256": "cce7ae1694db48e1ec03647704c59e65dadeb7c0042d1556f25c9145798a2e34",
+      "bytes": 5100,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/code/examples.py",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "verification/mpmath/witness_formula.py",
+      "operational_status": "retained local source",
+      "baseline_sha256": "2c92f0a725b245d461bf734287d17c4e83ed73fb44769d16563efdcbc1098fa0",
+      "original_local_path": "provenance/text_sources/W5__examples.py.txt"
+    },
+    {
+      "id": "W6",
+      "path_from_audit_root": "code/physical_check.py",
+      "sha256": "aba22216e33bd4b132ef100a823131a1a3ec7aacd78e7815cc63e3eae5ce0db5",
+      "bytes": 6140,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/code/physical_check.py",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "verification/physical/physical_check.py",
+      "operational_status": "retained local source",
+      "baseline_sha256": "aba22216e33bd4b132ef100a823131a1a3ec7aacd78e7815cc63e3eae5ce0db5",
+      "original_local_path": "verification/physical/physical_check.py"
+    },
+    {
+      "id": "W7",
+      "path_from_audit_root": "results/physical_check.json",
+      "sha256": "fd38892504503a826ea8d44e002cef97f32a40637a48a7757b51135ef7f92186",
+      "bytes": 2278,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/results/physical_check.json",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "evidence/reference/physical_check.json",
+      "operational_status": "retained local source",
+      "baseline_sha256": "fd38892504503a826ea8d44e002cef97f32a40637a48a7757b51135ef7f92186",
+      "original_local_path": "evidence/reference/physical_check.json"
+    },
+    {
+      "id": "C1",
+      "path_from_audit_root": "code/check_endpoints.py",
+      "sha256": "33c5937f265268006c65a2170b764a06c698ad896d9013da99e5d873974181a8",
+      "bytes": 2579,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/code/check_endpoints.py",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "verification/analytic/check_endpoints.py",
+      "operational_status": "retained local source",
+      "baseline_sha256": "33c5937f265268006c65a2170b764a06c698ad896d9013da99e5d873974181a8",
+      "original_local_path": "verification/analytic/check_endpoints.py"
+    },
+    {
+      "id": "C2",
+      "path_from_audit_root": "results/analytic_checks.json",
+      "sha256": "58fe14a312b3404a0a071e112aeb7791f63240e678071182cd9e6db634142d23",
+      "bytes": 630,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/results/analytic_checks.json",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "evidence/reference/analytic_checks.json",
+      "operational_status": "retained local source",
+      "baseline_sha256": "58fe14a312b3404a0a071e112aeb7791f63240e678071182cd9e6db634142d23",
+      "original_local_path": "evidence/reference/analytic_checks.json"
+    },
+    {
+      "id": "C3",
+      "path_from_audit_root": "source/common_noise_range/results/mixed_input_control.json",
+      "sha256": "89743c3bb483a1fd0ac3e6c7882a356286b83f57b17bfd577cb6302a93960728",
+      "bytes": 463,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/results/mixed_input_control.json",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "evidence/controls/mixed_input_control.json",
+      "operational_status": "retained local source",
+      "baseline_sha256": "89743c3bb483a1fd0ac3e6c7882a356286b83f57b17bfd577cb6302a93960728",
+      "original_local_path": "evidence/controls/mixed_input_control.json"
+    },
+    {
+      "id": "C4",
+      "path_from_audit_root": "source/common_noise_range/results/rejected_float_candidate.json",
+      "sha256": "9268f23074d43dfe50cd0870bd68a75b7863446a6af44a0409719588831e3135",
+      "bytes": 413,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/results/rejected_float_candidate.json",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "evidence/controls/rejected_float_candidate.json",
+      "operational_status": "retained local source",
+      "baseline_sha256": "9268f23074d43dfe50cd0870bd68a75b7863446a6af44a0409719588831e3135",
+      "original_local_path": "evidence/controls/rejected_float_candidate.json"
+    },
+    {
+      "id": "R1",
+      "path_from_audit_root": "reproduce.py",
+      "sha256": "653a146f2b895c55481230d66c8f505a29195eca8d03554192ec952fef9572b6",
+      "bytes": 3168,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/reproduce.py",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": null,
+      "operational_status": "identity retained only; superseded orchestration or nonessential historical comparison; not an operational dependency",
+      "original_local_path": "provenance/text_sources/R1__reproduce.py.txt"
+    },
+    {
+      "id": "R2",
+      "path_from_audit_root": "source/common_noise_range/reproduce.py",
+      "sha256": "3d397e2c0a67e605996377e53cf30a7523a9fdd0ec266913d4e85aeff8811990",
+      "bytes": 1474,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/reproduce.py",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": null,
+      "operational_status": "identity retained only; superseded orchestration or nonessential historical comparison; not an operational dependency",
+      "original_local_path": "provenance/text_sources/R2__reproduce.py.txt"
+    },
+    {
+      "id": "R3",
+      "path_from_audit_root": "results/REPRODUCTION_COMPARISON.json",
+      "sha256": "53604ce9fa8ba84510bc22a1f5bc78a24832493f96414aa8b0a4e1fa2586a9ed",
+      "bytes": 1326,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/results/REPRODUCTION_COMPARISON.json",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "provenance/original_records/R3__REPRODUCTION_COMPARISON.json",
+      "operational_status": "retained local source",
+      "baseline_sha256": "53604ce9fa8ba84510bc22a1f5bc78a24832493f96414aa8b0a4e1fa2586a9ed",
+      "original_local_path": "provenance/original_records/R3__REPRODUCTION_COMPARISON.json"
+    },
+    {
+      "id": "R4",
+      "path_from_audit_root": "source/common_noise_range/results/reproduction_verification.json",
+      "sha256": "bdcc25cdaa9eb884ec7c810daf1717522c858bca4ab76d1eb848dbfa6bea70d0",
+      "bytes": 2333,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/results/reproduction_verification.json",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "provenance/original_records/R4__reproduction_verification.json",
+      "operational_status": "retained local source",
+      "baseline_sha256": "bdcc25cdaa9eb884ec7c810daf1717522c858bca4ab76d1eb848dbfa6bea70d0",
+      "original_local_path": "provenance/original_records/R4__reproduction_verification.json"
+    },
+    {
+      "id": "R5",
+      "path_from_audit_root": "source/common_noise_range/requirements-reproducible.txt",
+      "sha256": "555144ce0107590dfce4b77cc7d60b83d84816edcf7abd32e8b3d9cdc08e4467",
+      "bytes": 55,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/requirements-reproducible.txt",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": null,
+      "operational_status": "identity retained only; superseded orchestration or nonessential historical comparison; not an operational dependency",
+      "original_local_path": "provenance/text_sources/R5__requirements-reproducible.txt.txt"
+    },
+    {
+      "id": "R6",
+      "path_from_audit_root": "requirements.txt",
+      "sha256": "118b3fd5c67f7cf195eb694025c2a855e8ba23461652216b1c8ca15d3c41d710",
+      "bytes": 72,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/requirements.txt",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": null,
+      "operational_status": "identity retained only; superseded orchestration or nonessential historical comparison; not an operational dependency",
+      "original_local_path": "provenance/text_sources/R6__requirements.txt.txt"
+    },
+    {
+      "id": "S10",
+      "path_from_audit_root": "source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/source/PRIOR_PROOF_AUDIT.md",
+      "sha256": "cce98822cc91375ffda04714573df124a60344999d368422982a795a1246a2b7",
+      "bytes": 11660,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/source/PRIOR_PROOF_AUDIT.md",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# Theorem audit: destructive Pauli measurements with noisy classical reports"
+        },
+        {
+          "line": 5,
+          "heading": "## 1. Scope and verdict"
+        },
+        {
+          "line": 19,
+          "heading": "## 2. Orientation reduction: rederived analytically"
+        },
+        {
+          "line": 42,
+          "heading": "## 3. Exact one-use zero at e=1/100"
+        },
+        {
+          "line": 50,
+          "heading": "### Pure-input tail"
+        },
+        {
+          "line": 58,
+          "heading": "### Compact interval"
+        },
+        {
+          "line": 75,
+          "heading": "## 4. All-record repetition formula"
+        },
+        {
+          "line": 92,
+          "heading": "## 5. The all-length achievability proof"
+        },
+        {
+          "line": 118,
+          "heading": "## 6. Converse and robustness: scope checked"
+        },
+        {
+          "line": 132,
+          "heading": "## 7. New audit comparison: known single-basis measurements"
+        },
+        {
+          "line": 150,
+          "heading": "## 8. Technical conclusion"
+        }
+      ],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "provenance/text_sources/S10__PRIOR_PROOF_AUDIT.md",
+      "operational_status": "retained local source",
+      "baseline_sha256": "cce98822cc91375ffda04714573df124a60344999d368422982a795a1246a2b7",
+      "original_local_path": "provenance/text_sources/S10__PRIOR_PROOF_AUDIT.md"
+    },
+    {
+      "id": "S11",
+      "path_from_audit_root": "source/common_noise_range/LITERATURE.md",
+      "sha256": "ae4339b3f6b58f7c4bce491e8bcaed9ce22598ad9a538b40615996ce4ca9bbba",
+      "bytes": 2756,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/LITERATURE.md",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# Literature scope and attribution"
+        }
+      ],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "provenance/text_sources/S11__LITERATURE.md",
+      "operational_status": "retained local source",
+      "baseline_sha256": "ae4339b3f6b58f7c4bce491e8bcaed9ce22598ad9a538b40615996ce4ca9bbba",
+      "original_local_path": "provenance/text_sources/S11__LITERATURE.md"
+    },
+    {
+      "id": "V10",
+      "path_from_audit_root": "results/independent_certificate90.json",
+      "sha256": "a249e9fae3e80b914b56ade3089735c9d57bf3ea69a367b7b3a8c6abdff54a20",
+      "bytes": 546,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/results/independent_certificate90.json",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "evidence/reference/decimal90.json",
+      "operational_status": "retained local source",
+      "baseline_sha256": "a249e9fae3e80b914b56ade3089735c9d57bf3ea69a367b7b3a8c6abdff54a20",
+      "original_local_path": "evidence/reference/decimal90.json"
+    },
+    {
+      "id": "V11",
+      "path_from_audit_root": "tests/test_audit.py",
+      "sha256": "771fb4e85ab4a37e45379e0612fc298bd6ae40248a01925ed7c7aa75d3a59278",
+      "bytes": 3267,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/tests/test_audit.py",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": null,
+      "operational_status": "identity retained only; superseded orchestration or nonessential historical comparison; not an operational dependency",
+      "original_local_path": "provenance/text_sources/V11__test_audit.py.txt"
+    },
+    {
+      "id": "V12",
+      "path_from_audit_root": "source/common_noise_range/tests/test_global_noise.py",
+      "sha256": "578f300e7e17507e40ea802a58dcfc2d66c1413546706029c550fa6671daee43",
+      "bytes": 3615,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/tests/test_global_noise.py",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": null,
+      "operational_status": "identity retained only; superseded orchestration or nonessential historical comparison; not an operational dependency",
+      "original_local_path": "provenance/text_sources/V12__test_global_noise.py.txt"
+    },
+    {
+      "id": "W8",
+      "path_from_audit_root": "source/common_noise_range/results/finite_witnesses.json",
+      "sha256": "378085ef5854f3a5d046d0dc3acde2501b68b256a9a05864800c64e55ca7bde0",
+      "bytes": 97546,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/results/finite_witnesses.json",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "provenance/original_records/W8__finite_witnesses.json",
+      "operational_status": "retained local source",
+      "baseline_sha256": "378085ef5854f3a5d046d0dc3acde2501b68b256a9a05864800c64e55ca7bde0",
+      "original_local_path": "provenance/original_records/W8__finite_witnesses.json"
+    },
+    {
+      "id": "W9",
+      "path_from_audit_root": "source/common_noise_range/results/finite_witnesses_decimal.json",
+      "sha256": "31c91d4937e464d12627b5a0aef9a1d132ac257e24f1d905cd4d43a87c9f9296",
+      "bytes": 2144,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/results/finite_witnesses_decimal.json",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "provenance/original_records/W9__finite_witnesses_decimal.json",
+      "operational_status": "retained local source",
+      "baseline_sha256": "31c91d4937e464d12627b5a0aef9a1d132ac257e24f1d905cd4d43a87c9f9296",
+      "original_local_path": "provenance/original_records/W9__finite_witnesses_decimal.json"
+    },
+    {
+      "id": "W10",
+      "path_from_audit_root": "source/common_noise_range/code/independent_examples.py",
+      "sha256": "eee5140b9eb837d763dbc306f11cd2acc10d9d5029aa4b71fc49403b5f251ecb",
+      "bytes": 1201,
+      "source_container": "final_audit",
+      "archive_filename": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+      "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/code/independent_examples.py",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": null,
+      "operational_status": "identity retained only; superseded orchestration or nonessential historical comparison; not an operational dependency",
+      "original_local_path": "provenance/text_sources/W10__independent_examples.py.txt"
+    },
+    {
+      "id": "H1",
+      "path_from_audit_root": null,
+      "original_path": "Measurement-Geometry-new-chat/START_HERE.md",
+      "sha256": "4b9f42154285d88a3c3f216ee7a9d82d343a68401325e6df8ca489851303d9ad",
+      "bytes": 5108,
+      "source_container": "handover",
+      "archive_filename": "Measurement-Geometry-Superadditivity-new-chat-handover-2026-09-08.zip",
+      "archive_member": "Measurement-Geometry-new-chat/START_HERE.md",
+      "current_pass_execution": "not executed; immutable identity and documentary usage checked",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# New project handover: measurement geometry and noisy records"
+        },
+        {
+          "line": 5,
+          "heading": "## What to read"
+        },
+        {
+          "line": 16,
+          "heading": "## Scientific boundary"
+        },
+        {
+          "line": 24,
+          "heading": "## User's required sequence"
+        },
+        {
+          "line": 34,
+          "heading": "## Boundary from the old project"
+        },
+        {
+          "line": 40,
+          "heading": "## First task in the new chat"
+        }
+      ],
+      "archive_path_is_provenance_only": true,
+      "baseline_path": "provenance/text_sources/H1__H1__START_HERE.md",
+      "operational_status": "retained local source",
+      "baseline_sha256": "4b9f42154285d88a3c3f216ee7a9d82d343a68401325e6df8ca489851303d9ad",
+      "original_local_path": "provenance/text_sources/H1__H1__START_HERE.md"
+    }
+  ],
+  "historical_provenance_is_not_an_operational_dependency": true
+}

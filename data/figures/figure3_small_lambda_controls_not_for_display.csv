@@ -1,0 +1,13 @@
+lambda_exact,gap_per_lambda,asymptotic_coefficient_exact,relative_excess_over_limit,purpose
+1/10,0.065853984046411893,18/289,0.057322299411835386,implementation control; not additional displayed curves or a fitted exponent
+1/100,0.062625366260689567,18/289,0.0054850471855158236,implementation control; not additional displayed curves or a fitted exponent
+1/1000,0.062317752883620747,18/289,0.00054614352035532093,implementation control; not additional displayed curves or a fitted exponent
+1/10000,0.062287137146111649,18/289,0.000054590845903700172,implementation control; not additional displayed curves or a fitted exponent
+1/100000,0.062284077021776540,18/289,0.0000054588496344434879,implementation control; not additional displayed curves or a fitted exponent
+1/1000000,0.062283771023830629,18/289,5.4588261399042965e-7,implementation control; not additional displayed curves or a fitted exponent
+1/10000000,0.062283740424180908,18/289,5.4588237904609115e-8,implementation control; not additional displayed curves or a fitted exponent
+1/100000000,0.062283737364217384,18/289,5.4588235555166783e-9,implementation control; not additional displayed curves or a fitted exponent
+1/1000000000,0.062283737058221046,18/289,5.4588235320222561e-10,implementation control; not additional displayed curves or a fitted exponent
+1/10000000000,0.062283737027621413,18/289,5.4588235296728138e-11,implementation control; not additional displayed curves or a fitted exponent
+1/100000000000,0.062283737024561449,18/289,5.4588235294378696e-12,implementation control; not additional displayed curves or a fitted exponent
+1/1000000000000,0.062283737024255453,18/289,5.4588235294143752e-13,implementation control; not additional displayed curves or a fitted exponent

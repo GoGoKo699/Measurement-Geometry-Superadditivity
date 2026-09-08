@@ -1,0 +1,34 @@
+[
+  {
+    "key": "canonical",
+    "name": "Measurement-Geometry-canonical-model-and-proof-v1-2026-09-08.zip",
+    "sha256": "34370f6f9c8f0eb9b8bcef813ac5c915ad12e734474add002cc4c448d9954622",
+    "bytes": 1157206,
+    "manifest_entries": 47,
+    "manifest_valid": true
+  },
+  {
+    "key": "spec",
+    "name": "Measurement-Geometry-scientific-figure-specifications-v1-2026-09-08.zip",
+    "sha256": "991e98d6107dc8ea31bed7864218a5c21033f149a78dfd75b6db99a38c4299fa",
+    "bytes": 1392228,
+    "manifest_entries": 26,
+    "manifest_valid": true
+  },
+  {
+    "key": "render",
+    "name": "Measurement-Geometry-rendered-figures-v1-2026-09-08.zip",
+    "sha256": "995f6863b4d1c74c5d47a6d64e7f7dd4146e8209ca542298bda735d45a157935",
+    "bytes": 3394489,
+    "manifest_entries": 74,
+    "manifest_valid": true
+  },
+  {
+    "key": "audit",
+    "name": "Noisy-record-PRL-final-audit-2026-09-08.zip",
+    "sha256": "3027a9cddd1b282cfcafc3d1c4f615cb9d5c6b219644019cb0682f124d4365c8",
+    "bytes": 1016934,
+    "manifest_entries": 196,
+    "manifest_valid": true
+  }
+]

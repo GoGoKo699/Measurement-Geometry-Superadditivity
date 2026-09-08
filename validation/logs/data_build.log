@@ -1,0 +1,8 @@
+{
+  "figure1_comparison": 2,
+  "figure1_masks": 9,
+  "figure2_noise_grid": 1001,
+  "figure3_lambda_grid": 501,
+  "figure3_geometry_axes": 9,
+  "figure3_limit_checks": 12
+}

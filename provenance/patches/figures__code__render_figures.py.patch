@@ -1,0 +1,48 @@
+--- code/render_figures.py
++++ figures/code/render_figures.py
+@@ -20,8 +20,9 @@
+ import fitz
+ from PIL import Image
+ 
+-ROOT=Path(__file__).resolve().parents[1]
+-SOURCE=ROOT/'source_spec'
++ROOT=Path(__file__).resolve().parents[2]
++SOURCE=ROOT/'figures'
++DATA=ROOT/'data/figures'
+ # The user's stated cold-tone preference; redundant dash/marker encodings remain.
+ NAVY='#1B4264'; TEAL='#177D89'; INK='#25313B'; GRAY='#66727C'
+ PALE='#DCEDEF'; LIGHT='#EDF2F5'; GRID='#D5DEE4'; WHITE='#FFFFFF'
+@@ -43,12 +44,12 @@
+ 
+ 
+ def rows(name):
+- with (SOURCE/'data'/name).open(newline='') as f:return list(csv.DictReader(f))
++ with (DATA/name).open(newline='') as f:return list(csv.DictReader(f))
+ def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+ def check_source():
+- m=json.loads((SOURCE/'MANIFEST_SHA256.json').read_text())
++ m=json.loads((ROOT/'provenance/FIGURE_INPUTS.json').read_text())
+  for path,h in m.items():
+-  p=SOURCE/path
++  p=ROOT/path
+   if not p.is_file() or digest(p)!=h:raise RuntimeError('Source mismatch: '+path)
+  return m
+ 
+@@ -300,7 +301,7 @@
+ 
+ 
+ def main():
+- ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--output',type=Path,default=ROOT/'outputs');args=ap.parse_args()
++ ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--output',type=Path,default=ROOT/'build/figures');args=ap.parse_args()
+  check_source();out=args.output;out.mkdir(parents=True,exist_ok=True);panels=out/'panels';panels.mkdir(exist_ok=True)
+  d1=rows('figure1_comparison.csv');d2=rows('figure2_pauli_guaranteed_region.csv');d3=rows('figure3_cone_gap.csv');geom=rows('figure3_cone_geometry.csv')
+  audit={};reports=[]
+@@ -313,7 +314,7 @@
+  composites.append(combine('figure_02_guaranteed_region',7.08,4.07,[('figure2_header',0,0,7.08,.54),('figure2_main',0,.54,7.08,3.53),('figure2_width',4.56,1.13,2.40,1.71)],panels,out))
+  composites.append(combine('figure_03_coplanar_limit',7.08,4.69,[('figure3a_geometry',0,0,7.08,1.93),('figure3b_gap',0,1.93,7.08,2.76)],panels,out))
+  audit['schematic_contract']=json.loads((SOURCE/'FIGURE_CONTRACT.json').read_text())['figure_1']['schematic']
+- audit['source_provenance']={'spec_manifest_sha256':digest(SOURCE/'MANIFEST_SHA256.json'),'data_hashes':{p.name:digest(p) for p in sorted((SOURCE/'data').iterdir()) if p.is_file()},'no_scientific_data_modified':True}
++ audit['source_provenance']={'spec_manifest_sha256':digest(ROOT/'provenance/FIGURE_INPUTS.json'),'data_hashes':{p.name:digest(p) for p in sorted(DATA.iterdir()) if p.is_file()},'no_scientific_data_modified':True}
+  audit['layout']={'units':'inches at intended final figure size','composites':composites,'font_family':'DejaVu Sans','palette':{'navy':NAVY,'teal':TEAL,'neutral':GRAY},'scalar_figures':'each numerical chart generated separately; vector composition only','text_extent_checks':reports}
+  (out/'RENDER_RECORD.json').write_text(json.dumps(audit,indent=2)+'\n')
+  print(json.dumps({'figures':len(composites),'component_figures':len(builders),'outside_text':[r for r in reports if r['outside_text']]},indent=2))

@@ -1,0 +1,6 @@
+cross verify 100 seconds 2.4
+cross verify 200 seconds 5.6
+cross verify 300 seconds 8.5
+cross verify 400 seconds 11.9
+cross verify 500 seconds 15.9
+{'passed': True, 'backend': 'mpmath.iv with entropy-difference C1', 'digits': 85, 'bands': 512, 'leaves': 29635, 'maximum_upper': '-0.000000000005719623661429715717748292585867697037435475246088469759985392238630462', 'minimum_tail_lower': '0.0002818913616857577301116324724345639757788947042403853915369356929851792'}

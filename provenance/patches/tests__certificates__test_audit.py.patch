@@ -1,0 +1,23 @@
+--- tests/test_audit.py
++++ tests/certificates/test_audit.py
+@@ -6,8 +6,9 @@
+ from pathlib import Path
+ from fractions import Fraction as F
+ import pytest
+-ROOT=Path(__file__).resolve().parents[1]
+-sys.path.insert(0,str(ROOT/'code'))
++ROOT=Path(__file__).resolve().parents[2]
++sys.path.insert(0,str(ROOT/'verification/decimal'))
++sys.path.insert(0,str(ROOT/'verification/analytic'))
+ import decimal_interval as d
+ from decimal_interval import Interval as I,h
+ import verify_certificate as v
+@@ -39,7 +40,7 @@
+     with pytest.raises(ArithmeticError):I(-1).sqrt()
+     with pytest.raises(ArithmeticError):I(0).ln()
+ 
+-CERT=ROOT/'source/common_noise_range/results/common_noise_compact_certificate.json'
++CERT=ROOT/'certificates/common_noise_compact_certificate.json'
+ @pytest.fixture
+ def cert():return json.loads(CERT.read_text())
+ 
