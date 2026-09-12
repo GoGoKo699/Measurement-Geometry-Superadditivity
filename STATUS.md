@@ -1,6 +1,6 @@
 # Project status
 
-**12 September 2026. Scientific baseline `f0015c5`; Preskill reader bridge v1.**
+**12 September 2026. Scientific baseline `f0015c5`; Preskill reader bridge v1; reuse terms confirmed.**
 
 The reader redesign starts at `f0015c56a19fd953c6797b2c64d9b507105234e3`, tree `72e93a89a691ec4d2ea799bb3b1008bd6c0dee20`. `main` was unchanged when the branch `reader/preskill-bridge-v1` was created. The work supplies an educational bridge using the single selected tutorial, Preskill's *Quantum Shannon Theory*, arXiv:1604.07450v5. It is documentation work, not another scientific audit or manuscript.
 
@@ -12,4 +12,6 @@ The completed audit and documentary corrections are recorded on the separate, un
 
 Actual redesign checks and limitations are in the [implementation report](website/review/PRESKILL_BRIDGE_REPORT.md). No full entropy certificate or large simulation is rerun for this documentation work. No new scientific PASS, peer-review status or absolute-priority claim is introduced.
 
-Repository privacy, licensing and hosting are unchanged. No other project was accessed. No merge, public deployment, release or manuscript is included. The original package status and initial reader status remain recoverable from the preserved provenance and pinned Git history.
+The owner confirmed MIT for original code, CC BY 4.0 for original prose, figures and data where rights exist, and Ruge Lin as rights holder and citation author. The operative [license scope](LICENSE.md), [citation](CITATION.cff) and [adoption record](publication/LICENSE_ADOPTION.json) are on `release/public-readiness-v1`. This branch remains unmerged; `main` still points to `f0015c56a19fd953c6797b2c64d9b507105234e3`.
+
+Repository privacy and hosting remain unchanged. The confirmation adopts reuse terms; it does not approve disclosure of private history or metadata. [PUBLICATION.md](PUBLICATION.md) records the remaining integration, distribution and publication decisions. No other project was accessed. No merge, public deployment, release or manuscript is included. The original package status, initial reader status and licensing proposal remain historical records.

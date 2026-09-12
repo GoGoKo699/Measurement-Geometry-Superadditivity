@@ -68,4 +68,10 @@ Use new output directories. The default reproduction rebuilds the plotting input
 
 This package concerns only the noisy-record channel paper. It includes none of the old monitored-many-body datasets or figures. No manuscript is included, and the old repository is neither required nor modified. All figure elements are Python-generated; there is no TeX/TikZ source or standalone font file.
 
-**Research status:** author-side analytical and computer-assisted verification, not external review or proof-assistant formalization. Exact capacity, efficient decoding, arbitrary heterogeneous/asymmetric/correlated errors, and noisy basis labels remain outside the claim. A reuse license and publication citation have not yet been selected; the local baseline is not a public release. [Current baseline status](STATUS.md)
+**Research status:** author-side analytical and computer-assisted verification, not external review or proof-assistant formalization. Exact capacity, efficient decoding, arbitrary heterogeneous/asymmetric/correlated errors, and noisy basis labels remain outside the claim. The repository remains private and is not a public release. [Current baseline status](STATUS.md)
+
+## Reuse and citation
+
+The owner has adopted **MIT for original code** and **CC BY 4.0 for original prose, figures and data**, where the relevant rights exist. [LICENSE.md](LICENSE.md) defines the scope and links both license texts; [third-party notices](THIRD_PARTY_NOTICES.md) preserve the separate terms of external components. Cite this repository using [CITATION.cff](CITATION.cff), with Ruge Lin as the confirmed author, and record the exact commit used.
+
+These terms are adopted on `release/public-readiness-v1`. The branch remains unmerged, and publication of the repository and private historical metadata is a separate decision. [Publication checklist](PUBLICATION.md) · [Adoption record](publication/LICENSE_ADOPTION.json)

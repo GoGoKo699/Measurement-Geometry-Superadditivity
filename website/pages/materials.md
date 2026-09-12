@@ -32,4 +32,6 @@ The [reference record](../../docs/REFERENCES.md) distinguishes standard tools, c
 
 ## Reuse and publication
 
-The repository remains private and no reuse license or public release has been selected. Its scientific source can be prepared for a public site later, but a private source repository alone does not guarantee a private hosted page. Public deployment is a separate decision. [Current project and site status](status.md)
+The owner has adopted MIT for original code and CC BY 4.0 for original prose, figures and data where rights exist. See the [license scope](../../LICENSE.md), [MIT terms](../../LICENSES/MIT.txt), [CC BY 4.0 terms](../../LICENSES/CC-BY-4.0.txt), [third-party notices](../../THIRD_PARTY_NOTICES.md) and [repository citation](../../CITATION.cff). Preskill's external tutorial and other cited sources retain their own terms.
+
+The repository remains private. The adopted terms are on the unmerged preparation branch; disclosure of private history and any public release require separate decisions. [Publication checklist](../../PUBLICATION.md) · [Current project and site status](status.md)

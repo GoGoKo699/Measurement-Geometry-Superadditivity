@@ -33,7 +33,7 @@ The Gachet-inspired palette is accepted for figures only. The protected older ex
 
 ## Privacy and release boundary
 
-Do not enable Pages, change repository visibility or add a public deploy action as part of a routine build. GitHub Pages from a private repository is not automatically a private website. The owner's publishing and reuse-license decisions are still outstanding. The preview includes a noindex directive, but that directive is not access control.
+Do not enable Pages, change repository visibility or add a public deploy action as part of a routine build. GitHub Pages from a private repository is not automatically a private website. The owner has adopted the [reuse terms](LICENSE.md) on `release/public-readiness-v1`; publication and historical-disclosure decisions remain outstanding. Reuse notices and the [citation](CITATION.cff) accompany the source downloads. The preview includes a noindex directive, but that directive is not access control.
 
 The CI workflow has only `contents: read` permission and no deployment action. The built site deliberately contains scientific source downloads and should be treated with the same access restriction as this repository. [GitHub Pages visibility documentation](https://docs.github.com/en/enterprise-cloud@latest/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site)
 

@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "comparison_commit": "a0ef38a9ea18145028a4e784242738d995e37e87",
+  "only_baseline_manifest_hash_updates": [
+    "README.md",
+    "STATUS.md"
+  ],
+  "restoring_those_entries_recovers_original_manifest": true,
+  "existing_math_comparisons": [
+    {
+      "file": "README.md",
+      "existing_math_spans_unchanged": 12
+    },
+    {
+      "file": "STATUS.md",
+      "existing_math_spans_unchanged": 0
+    },
+    {
+      "file": "WEBSITE.md",
+      "existing_math_spans_unchanged": 0
+    },
+    {
+      "file": "CONTRIBUTING.md",
+      "existing_math_spans_unchanged": 0
+    },
+    {
+      "file": "PUBLICATION.md",
+      "existing_math_spans_unchanged": 0
+    },
+    {
+      "file": "THIRD_PARTY_NOTICES.md",
+      "existing_math_spans_unchanged": 0
+    },
+    {
+      "file": "website/pages/status.md",
+      "existing_math_spans_unchanged": 0
+    },
+    {
+      "file": "website/pages/materials.md",
+      "existing_math_spans_unchanged": 0
+    }
+  ],
+  "scope": "Byte identity of inherited artifacts checked separately by check_preparation.py; this verifies the authorized root hash edits and preservation of existing math in edited prose."
+}

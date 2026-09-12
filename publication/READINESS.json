@@ -4,22 +4,15 @@
   "starting_tree": "d75a22453776a366d4860317f3708f0c5c00bc57",
   "scientific_pin": "f0015c56a19fd953c6797b2c64d9b507105234e3",
   "date": "2026-09-12",
-  "status": "prepared_pending_owner_decisions",
-  "license_active": false,
+  "status": "license_adopted_publication_pending",
+  "license_active": true,
   "public_visibility_changed": false,
   "merge_performed": false,
-  "proposed_holder": "Ruge Lin",
-  "proposed_licenses": {
-    "code": "MIT",
-    "original_content": "CC-BY-4.0",
-    "third_party": "unchanged component terms"
-  },
   "pending": [
-    "Owner license choice and rights/citation confirmation",
     "Historical contact and project metadata disclosure decision",
     "Complete inspection of two historical binary objects",
     "Authorized integration of reader and audit corrections",
-    "Final public-tree wording, downloads and CI review",
+    "Final integrated public-tree wording and CI review",
     "Explicit visibility instruction"
   ],
   "branches_inspected": [
@@ -47,5 +40,13 @@
       "name": "setup/scientific-baseline-v1",
       "head": "df4862a3c1823f4755a219ece70071adc84b03a8"
     }
-  ]
+  ],
+  "confirmed_holder": "Ruge Lin",
+  "adopted_licenses": {
+    "code": "MIT",
+    "original_content": "CC-BY-4.0",
+    "third_party": "unchanged component terms"
+  },
+  "adoption_record": "publication/LICENSE_ADOPTION.json",
+  "branches_inspected_note": "Historical preparation snapshot; license adoption did not integrate these branches."
 }

@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/workspace/scratch/323c19becda4/task-venv/bin/python",
+    "publication/check_preparation.py"
+  ],
+  "working_directory": "/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness",
+  "started_utc": "2026-09-12T09:14:59.526357+00:00",
+  "duration_seconds": 0.05,
+  "return_code": 0,
+  "log": "adoption-final-preservation.log",
+  "python_optimization_used": false,
+  "thread_limits": {
+    "OPENBLAS_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 1
+  }
+}

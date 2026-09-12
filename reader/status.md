@@ -30,7 +30,7 @@
 
 The reader redesign starts from commit `f0015c56a19fd953c6797b2c64d9b507105234e3`, with `main` still at that commit when work began on 12 September 2026. It adds a focused Preskill v5 bridge to the existing reader pages. The scientific claims, canonical documents and graphical artifacts are preserved. **Manuscript drafting remains a later, separately authorized stage.**
 
-The [GitHub reading pages](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/blob/reader/preskill-bridge-v1/reader/README.md) and optional local HTML site are different interfaces generated from the same editorial sources. The HTML site provides local search and interactive figure-color comparison; GitHub supplies its own Markdown renderer. No public site is deployed, and repository privacy and licensing are unchanged.
+The [GitHub reading pages](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/blob/reader/preskill-bridge-v1/reader/README.md) and optional local HTML site are different interfaces generated from the same editorial sources. The HTML site provides local search and interactive figure-color comparison; GitHub supplies its own Markdown renderer. No public site is deployed. Repository privacy is unchanged; the owner has adopted the [project reuse terms](../LICENSE.md) on `release/public-readiness-v1`, which remains separate from `main`.
 
 <a name="correction-record"></a>
 
@@ -47,6 +47,10 @@ Read the preserved documents with these qualifications: historical S6 overstates
 The canonical model, full proof, frozen argument, equations, inputs, evidence, certificate, independent numerical implementations and captions retain their starting bytes. All 27 protected original figure exports and the three accepted-palette reader SVGs remain unchanged. The accepted Gachet-inspired palette applies **only to figures**; both reading interfaces keep plain documentation styling.
 
 The [implementation report](../website/review/PRESKILL_BRIDGE_REPORT.md) records the actual commands, preservation comparisons, reader walkthroughs and any blocked browser checks for this redesign. Presentation tests check links, rendering and source preservation. They do not certify the accuracy of educational prose or establish a new scientific PASS, peer review or priority clearance. The exact scientific scope remains in [M07–M08](../docs/MODEL_AND_CLAIMS.md#m07).
+
+## Reuse and publication status
+
+The [license scope](../LICENSE.md) assigns MIT to original code and CC BY 4.0 to original prose, figures and data where rights exist. Ruge Lin is the confirmed rights holder and [citation author](../CITATION.cff). The [adoption record](../publication/LICENSE_ADOPTION.json) records that decision; the [publication checklist](../PUBLICATION.md) tracks the still-pending branch integration, historical-disclosure review and remaining file inspection. License approval does not change repository visibility.
 
 ## What remains outside this task?
 

@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/workspace/scratch/323c19becda4/task-venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "tests",
+    "website/tests"
+  ],
+  "working_directory": "/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness",
+  "started_utc": "2026-09-12T09:11:42.883815+00:00",
+  "duration_seconds": 10.042,
+  "return_code": 0,
+  "log": "adoption-tests.log",
+  "python_optimization_used": false,
+  "thread_limits": {
+    "OPENBLAS_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 1
+  }
+}

@@ -40,6 +40,49 @@ def test_every_reader_route_has_sources(site):
         doc=BeautifulSoup((site/(p['slug']+'.html')).read_text(),'html.parser')
         assert len(doc.select('a[aria-current="page"]'))==1
 
+
+def test_license_citation_and_third_party_downloads(site):
+    required={
+        'LICENSE.md','LICENSES/MIT.txt','LICENSES/CC-BY-4.0.txt',
+        'LICENSES/DejaVu.txt','LICENSES/STIX.txt','THIRD_PARTY_NOTICES.md',
+        'CITATION.cff','publication/LICENSE_ADOPTION.json',
+    }
+    assert set(builder.REUSE_DOWNLOADS)==required
+    record=json.loads((site/'files/BUILD_RECORD.json').read_text())
+    assert len(checker.check_reuse_downloads(site,record))==len(required)
+    for rel in required:
+        assert (site/'files'/rel).read_bytes()==(REPO/rel).read_bytes()
+    for rel in ('website/requirements.txt','website/requirements-browser.txt'):
+        assert (site/'files'/rel).read_bytes()==(REPO/rel).read_bytes()
+    for file in site.glob('*.html'):
+        page=BeautifulSoup(file.read_text(),'html.parser')
+        for rel in ('LICENSE.md','CITATION.cff','THIRD_PARTY_NOTICES.md'):
+            assert page.select_one(f'footer a[href="files/{rel}"]')
+
+
+@pytest.mark.parametrize('change',['missing','changed-bytes','forged-hash','missing-row','changed-path'])
+def test_invalid_license_downloads_fail(site,tmp_path,change):
+    import shutil
+    record=json.loads((site/'files/BUILD_RECORD.json').read_text())
+    for rel in builder.REUSE_DOWNLOADS:
+        target=tmp_path/'files'/rel
+        target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copy2(site/'files'/rel,target)
+    target=tmp_path/'files/LICENSE.md'
+    if change=='missing':
+        target.unlink()
+    elif change=='changed-bytes':
+        target.write_bytes(target.read_bytes()+b'\n')
+        record['reuse_source_downloads'][0]['sha256']=builder.sha(target)
+    elif change=='forged-hash':
+        record['reuse_source_downloads'][0]['sha256']='0'*64
+    elif change=='missing-row':
+        record['reuse_source_downloads'].pop()
+    else:
+        record['reuse_source_downloads'][0]['download']='../LICENSE.md'
+    with pytest.raises(ValueError,match='License/citation'):
+        checker.check_reuse_downloads(tmp_path,record)
+
 def test_palette_has_scientific_roles():
     palette=json.loads((ROOT/'palette.json').read_text())
     assert palette['roles']['indigo']=='#304E66'

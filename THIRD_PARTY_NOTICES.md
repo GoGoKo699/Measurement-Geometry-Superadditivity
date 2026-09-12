@@ -1,6 +1,6 @@
 # Third-party material and dependency notices
 
-These notices identify third-party material used by the repository. They do not select or grant a reuse license for the project's own work. The project license and citation remain pending owner confirmation; see the [licensing proposal](publication/LICENSING_PROPOSAL.md).
+These notices identify third-party material used by the repository. The owner's confirmed terms for original project material are defined in [LICENSE.md](LICENSE.md), with citation metadata in [CITATION.cff](CITATION.cff). Third-party components retain the terms recorded below.
 
 ## Fonts in the scientific figures
 
@@ -14,7 +14,7 @@ The figure bytes have not been changed to add these companion notices. The revie
 
 ## External educational and visual references
 
-John Preskill's *Quantum Shannon Theory*, Chapter 10 of *Quantum Information*, is linked at the selected edition [arXiv:1604.07450v5](https://arxiv.org/abs/1604.07450v5). The tutorial PDF, screenshots, textbook figures and chapter text are not distributed here. Its own front-matter notice restricts the draft to personal use and prohibits redistribution. The repository supplies original explanations and source references; its eventual license will grant no rights over that external tutorial.
+John Preskill's *Quantum Shannon Theory*, Chapter 10 of *Quantum Information*, is linked at the selected edition [arXiv:1604.07450v5](https://arxiv.org/abs/1604.07450v5). The tutorial PDF, screenshots, textbook figures and chapter text are not distributed here. Its own front-matter notice restricts the draft to personal use and prohibits redistribution. The repository supplies original explanations and source references; its license grants no rights over that external tutorial.
 
 The accepted figure palette is a manual visual interpretation of the first version of Vincent van Gogh's *Portrait of Dr. Gachet*. The consulted reproduction and method are recorded in [website/palette.json](website/palette.json). The painting image is not embedded or distributed, and the figure palette does not introduce third-party painting assets into the repository.
 
@@ -28,4 +28,4 @@ Dependencies retain their own licenses. In particular, PyMuPDF 1.26.7, used by t
 
 AGPL section 2 distinguishes generated output from covered program code. Using PyMuPDF to create a figure does not by itself put the figure under AGPL. That distinction is not a claim that importing PyMuPDF is categorically exempt from AGPL obligations. Distribution of combined software, bundled environments or a network service must be assessed under the dependency's applicable terms before that distribution or service is offered.
 
-The [attribution review](publication/ATTRIBUTION_REVIEW.md) records the inspected files, font versions, notice hashes and remaining ownership confirmation.
+The [attribution review](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/blob/a0ef38a9ea18145028a4e784242738d995e37e87/publication/ATTRIBUTION_REVIEW.md) records the inspected files, font versions, notice hashes and the ownership confirmation that was still pending at the time of that review. The later [adoption record](publication/LICENSE_ADOPTION.json) records the owner's confirmation.

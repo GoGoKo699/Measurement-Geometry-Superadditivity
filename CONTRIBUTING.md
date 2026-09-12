@@ -33,4 +33,4 @@ The website guide also gives HTML and loopback browser checks. [REPRODUCTION.md]
 
 ## Reuse and contribution terms
 
-A repository reuse license has not yet been selected. [The licensing proposal](publication/LICENSING_PROPOSAL.md) records the decision being prepared. This contribution guide grants no license, introduces no contributor agreement and does not assign an inbound license to submissions. Identify any third-party material and its source before proposing its inclusion.
+Original code is licensed under MIT; original prose, figures and data are licensed under CC BY 4.0 where the relevant rights exist. [LICENSE.md](LICENSE.md) defines the scope and third-party exceptions. Identify third-party material and its source before proposing its inclusion, and state that you have authority to submit your contribution under the applicable repository terms. This guide introduces no contributor agreement or copyright assignment.
