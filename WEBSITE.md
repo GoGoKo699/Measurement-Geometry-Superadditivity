@@ -39,7 +39,9 @@ The CI workflow has only `contents: read` permission and no deployment action. T
 
 ## Preservation checks
 
-The original scientific manifest and old root documentation are retained in `website/provenance/`. The builder confirms that every old baseline file except README and STATUS is unchanged, and checks all approved graphics. The current root manifest records the two editorial updates. No verification implementation or equation is refactored by the website work.
+The original scientific manifest and old root documentation are retained in `website/provenance/`. The builder checks unchanged baseline files directly and reconstructs the original bytes for the exact nine documentary and dependent identity corrections recorded in `provenance/EDITORIAL_CORRECTIONS.json`. It checks the permitted substitutions and mathematical-expression preservation, as well as all approved graphics. The current root manifest records those corrected identities, the correction record and the authorized README/STATUS updates. No substantive numerical verifier or equation is refactored by this work.
+
+The [candidate report](publication/integration/CANDIDATE_REPORT.md) and [candidate preservation check](publication/integration/check_candidate.py) compose this correction record with the completed reader and license-adoption state. Earlier preservation scripts and reports remain scoped to their recorded commits. In particular, the reader's `website/review/check_preservation.py` and the license adoption's `publication/check_preparation.py` describe their earlier edit sets; neither is presented as a check of subsequent integration changes.
 
 ## Maintain one editorial source
 
@@ -68,4 +70,4 @@ python website/browser_check.py --site build/preskill-reader-review --output bui
 
 Stop the server after review. HTTP mode performs real browser navigation. The default mirror mode is distinct and must not be reported as either loopback navigation or authenticated GitHub rendering. The [implementation report](website/review/PRESKILL_BRIDGE_REPORT.md) records which checks actually ran and the differences between the available local runtime and the recorded CI runtime. No public hosting is enabled by these commands.
 
-The [starting manifest](website/provenance/preskill_starting_manifest.json) records all 208 pinned file hashes. The redesign preserves scientific and graphical artifacts, records authorized root-document hash changes, and keeps the pending audit corrections visible without merging that separate branch. Documentation work does not require rerunning the full entropy certificate.
+The [starting manifest](website/provenance/preskill_starting_manifest.json) records all 208 pinned file hashes. This offline candidate retains the 17-route Preskill reader, adopted license downloads and protected scientific and graphical artifacts while applying only the recorded documentary corrections and their dependent identities. The [integration review](publication/INTEGRATION_REVIEW.md) explains the changes from the earlier reader baseline. No branch has been merged. Documentation work does not require rerunning the full entropy certificate.

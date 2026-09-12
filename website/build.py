@@ -6,6 +6,7 @@ Canonical technical pages are rendered from their source files, not rewritten.
 """
 from __future__ import annotations
 import argparse,hashlib,html,json,os,re,shutil,subprocess,sys
+from datetime import date
 from pathlib import Path
 from urllib.parse import urlsplit,urlunsplit,unquote
 from bs4 import BeautifulSoup
@@ -43,16 +44,98 @@ def pandoc(text):
  require(not p.stderr.strip(),'Pandoc warning requires review: '+p.stderr)
  return p.stdout
 
+EDITORIAL_DOCUMENT_FILES=frozenset({'docs/REFERENCES.md','docs/MODEL_AND_CLAIMS.md',
+ 'docs/SOURCE_TO_CANONICAL.md','figures/FIGURE_SPECIFICATIONS.md','provenance/SECTION_LEDGER.json'})
+DOCUMENTARY_IDENTITY_FILES=frozenset({'provenance/CANONICAL_INPUTS.json',
+ 'data/figures/SOURCE_IDENTITY.json','data/figures/BUILD_RECORD.json','provenance/FIGURE_INPUTS.json'})
+EDITORIAL_FILES=EDITORIAL_DOCUMENT_FILES|DOCUMENTARY_IDENTITY_FILES
+
+def verify_editorial_corrections(old):
+ """Reconstruct frozen bytes from documentary edits and their identity records.
+
+ The old manifest is never renewed. Its digests remain the final authority;
+ an after digest by itself does not authorize an edit.
+ """
+ path=ROOT/'provenance/EDITORIAL_CORRECTIONS.json'
+ if not path.exists():return {}
+ record=load(path)
+ required={'baseline_commit','audit_commit','date','files'};descriptive={'authorization','scope'}
+ require(isinstance(record,dict) and required<=set(record)<=required|descriptive,'Malformed editorial correction metadata')
+ require(all(isinstance(record[k],str) and record[k].strip() for k in descriptive&set(record)),'Malformed editorial correction description')
+ require(record['baseline_commit']=='f0015c56a19fd953c6797b2c64d9b507105234e3','Unexpected editorial baseline commit')
+ require(record['audit_commit']=='5e367b1e541bf7d5ba1af90e85796d59db9e03f4','Unexpected editorial audit commit')
+ require(isinstance(record['date'],str) and re.fullmatch(r'\d{4}-\d{2}-\d{2}',record['date']),'Malformed editorial correction date')
+ date.fromisoformat(record['date'])
+ files=record['files']
+ require(isinstance(files,dict) and files and set(files)<=EDITORIAL_FILES,'Unauthorized editorial correction file')
+ for rel,entry in files.items():
+  require(rel in old and isinstance(entry,dict) and set(entry)=={'before_sha256','after_sha256','replacements'},'Malformed editorial correction record: '+rel)
+  require(entry['before_sha256']==old[rel],'Editorial original hash differs from frozen manifest: '+rel)
+  require(isinstance(entry['after_sha256'],str) and re.fullmatch(r'[0-9a-f]{64}',entry['after_sha256']),'Malformed editorial current hash: '+rel)
+  require(entry['after_sha256']!=entry['before_sha256'],'No-op editorial correction: '+rel)
+  current=(ROOT/rel).read_bytes()
+  require(hashlib.sha256(current).hexdigest()==entry['after_sha256'],'Undeclared editorial file change: '+rel)
+  replacements=entry['replacements']
+  require(isinstance(replacements,list) and replacements,'Missing editorial replacements: '+rel)
+  for change in replacements:
+   require(isinstance(change,dict) and set(change)=={'before','after'},'Malformed editorial replacement: '+rel)
+   require(all(isinstance(change[k],str) and change[k] for k in ('before','after')) and change['before']!=change['after'],'Empty or no-op editorial replacement: '+rel)
+  original=current
+  for change in reversed(replacements):
+   before,after=change['before'].encode('utf-8'),change['after'].encode('utf-8')
+   require(current.count(after)==1 and original.count(after)==1,'Ambiguous or absent editorial replacement: '+rel)
+   original=original.replace(after,before,1)
+  require(hashlib.sha256(original).hexdigest()==old[rel],'Editorial reconstruction differs from frozen baseline: '+rel)
+  replay=original
+  for change in replacements:
+   before,after=change['before'].encode('utf-8'),change['after'].encode('utf-8')
+   require(original.count(before)==1 and replay.count(before)==1,'Ambiguous original editorial replacement: '+rel)
+   replay=replay.replace(before,after,1)
+  require(replay==current,'Editorial replacement round trip failed: '+rel)
+  if rel.endswith('.md'):
+   # Documentary permission does not allow changes to any recorded equation.
+   math=re.compile(rb'\$\$.*?\$\$|(?<!\$)\$[^$\n]+\$(?!\$)',re.S)
+   require(math.findall(original)==math.findall(current),'Mathematical source changed by editorial correction: '+rel)
+  elif rel=='provenance/SECTION_LEDGER.json':
+   before,after=json.loads(original),json.loads(current)
+   prior=[unit for unit in before['units'] if unit['canonical_id']=='M08']
+   now=[unit for unit in after['units'] if unit['canonical_id']=='M08']
+   require(len(prior)==len(now)==1,'Ambiguous M08 ledger correction')
+   now[0]['canonical_fragment_sha256']=prior[0]['canonical_fragment_sha256']
+   require(after==before,'Editorial ledger change extends beyond the M08 fragment hash')
+  else:
+   before,after=json.loads(original),json.loads(current)
+   model='docs/MODEL_AND_CLAIMS.md';manifest='provenance/CANONICAL_INPUTS.json';identity='data/figures/SOURCE_IDENTITY.json';build_record='data/figures/BUILD_RECORD.json'
+   if rel==manifest:
+    require(after['files'][model]==sha(ROOT/model),'Documentary manifest does not identify the current model')
+    after['files'][model]=before['files'][model]
+   elif rel==identity:
+    require(after['manifest_sha256']==sha(ROOT/manifest),'Source identity does not identify the current manifest')
+    require(after['selected_members'][model]==sha(ROOT/model),'Source identity does not identify the current model')
+    after['manifest_sha256']=before['manifest_sha256']
+    after['selected_members'][model]=before['selected_members'][model]
+   elif rel==build_record:
+    require(after['source']==load(ROOT/identity),'Figure build record does not identify the current source identity')
+    after['source']['manifest_sha256']=before['source']['manifest_sha256']
+    after['source']['selected_members'][model]=before['source']['selected_members'][model]
+   elif rel=='provenance/FIGURE_INPUTS.json':
+    for source in (identity,build_record):
+     require(after[source]==sha(ROOT/source),'Figure inputs do not identify the current source identity or build record')
+     after[source]=before[source]
+   require(after==before,'Documentary identity change extends beyond authorized hash fields: '+rel)
+ return files
+
 def verify_baseline():
  old=load(WEB/'provenance/baseline_manifest_v1.json')['files'];allow={'README.md','STATUS.md'}
+ corrected=verify_editorial_corrections(old)
  checked=0
  for rel,h in old.items():
-  if rel not in allow:require(sha(ROOT/rel)==h,'Protected scientific baseline changed: '+rel);checked+=1
+  if rel not in allow and rel not in corrected:require(sha(ROOT/rel)==h,'Protected scientific baseline changed: '+rel);checked+=1
  require(sha(WEB/'provenance/baseline_README.md')==old['README.md'],'Original README not preserved')
  require(sha(WEB/'provenance/baseline_STATUS.md')==old['STATUS.md'],'Original status not preserved')
  protected=load(ROOT/'provenance/APPROVED_FIGURE_HASHES.json')['files']
  for rel,h in protected.items():require(sha(ROOT/rel)==h,'Approved figure modified: '+rel)
- return {'baseline_commit':'9a1e4cb3bad843db9cec1fa348870ca7162df0e0','baseline_members_unchanged_except_root_editorial_pages':checked,'approved_graphical_artifacts_unchanged':len(protected),'original_root_documents_preserved':True}
+ return {'baseline_commit':'9a1e4cb3bad843db9cec1fa348870ca7162df0e0','baseline_members_byte_unchanged':checked,'baseline_members_with_verified_editorial_corrections':len(corrected),'corrected_documentary_members':len(set(corrected)&EDITORIAL_DOCUMENT_FILES),'updated_documentary_identity_members':len(set(corrected)&DOCUMENTARY_IDENTITY_FILES),'editorially_corrected_files':sorted(corrected),'approved_graphical_artifacts_unchanged':len(protected),'original_root_documents_preserved':True}
 
 def theme_svgs(out,palette):
  target=out/'assets/theme';target.mkdir(parents=True,exist_ok=True);m=palette['svg_mapping'];records=[]
@@ -174,6 +257,10 @@ def build(out):
  sources|={p['source'] for p in config['pages']};sources|={'WEBSITE.md','website/palette.json',METADATA,'website/site.json','website/editorial_map.json','website/learning_bridge.py','website/provenance/preskill_starting_manifest.json'}
  sources|=set(REUSE_DOWNLOADS)
  sources|={'PUBLICATION.md','CONTRIBUTING.md','website/requirements.txt','website/requirements-browser.txt'}
+ sources|={'publication/LICENSE_ADOPTION_REPORT.md','publication/INTEGRATION_REVIEW.md',
+  'publication/integration/CANDIDATE_REPORT.md','publication/integration/check_candidate.py',
+  'publication/integration/CANDIDATE_STARTING_FILES.json','publication/integration/CANDIDATE_EDITS.json',
+  'publication/integration/core-corrections.patch','publication/integration/CORE_PATCH_REPLAY.json'}
  sources|={p.relative_to(ROOT).as_posix() for p in (WEB/'review').rglob('*') if p.is_file() and p.suffix in {'.md','.json','.log','.txt'}}
  for rel in sorted(sources):
   require((ROOT/rel).is_file(),'Missing source: '+rel)

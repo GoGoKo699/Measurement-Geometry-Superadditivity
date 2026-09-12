@@ -52,7 +52,7 @@ The canonical proof is [COMPLETE_PROOF.md](COMPLETE_PROOF.md). The source IDs an
 - [P15](COMPLETE_PROOF.md#p15): C1, C2, C3, C4, C5, C6, C7; sources S2, S5, S6, S7, H1.
 
 
-Exact line ranges and fragment hashes are in [SECTION_LEDGER.json](../provenance/SECTION_LEDGER.json). Complete local/source identities are in [SOURCE_REGISTER.json](../provenance/SOURCE_REGISTER.json).
+Exact line ranges and fragment hashes are in [SECTION_LEDGER.json](../provenance/SECTION_LEDGER.json). Complete local/source identities are in [SOURCE_REGISTER.json](../provenance/SOURCE_REGISTER.json). Later documentary corrections and their dependent identity records are listed in [EDITORIAL_CORRECTIONS.json](../provenance/EDITORIAL_CORRECTIONS.json); original relocation hashes and historical source bytes remain preserved.
 
 <a id="s1"></a>
 
@@ -113,6 +113,8 @@ Original SHA-256: `d53b3911f1d831d715e0bf58f7570e1b044c81c7d7c51e242e12ee20e44c6
 Current retained file: [provenance/text_sources/S6__PRIOR_WORK_COMPARISON.md](../provenance/text_sources/S6__PRIOR_WORK_COMPARISON.md).
 
 Original member: `Noisy-record-PRL-final-audit/PRIOR_WORK_COMPARISON.md`.
+
+Current attribution correction: the historical dephrasure rate/threshold comparison is qualified in [REFERENCES.md](REFERENCES.md#s6-correction). The retained S6 file and its original hash are unchanged.
 
 <a id="s7"></a>
 

@@ -143,6 +143,9 @@ def test_native_learning_destinations_and_source_return_links():
 def test_starting_science_and_graphical_artifacts_are_unchanged():
     baseline = json.loads((ROOT / 'website/provenance/preskill_starting_manifest.json').read_text())
     assert baseline['commit'] == 'f0015c56a19fd953c6797b2c64d9b507105234e3'
+    import build as builder
+    corrections = builder.verify_editorial_corrections(baseline['files'])
+    assert set(corrections) == builder.EDITORIAL_FILES
     editable_files = {
         'README.md', 'STATUS.md', 'BASELINE_MANIFEST.json',
         'website/build.py', 'website/check.py', 'website/repository_preview.py',
@@ -154,6 +157,12 @@ def test_starting_science_and_graphical_artifacts_are_unchanged():
         if name in editable_files or name.startswith(('website/pages/', 'website/tests/')):
             continue
         if name.startswith('reader/') and name.endswith('.md'):
+            continue
+        if name in corrections:
+            # The same frozen hash is recovered by exact inverse substitutions,
+            # with equation and identity-field guards, rather than waived.
+            assert corrections[name]['before_sha256'] == expected
+            checked.append(name)
             continue
         assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == expected, name
         checked.append(name)

@@ -42,9 +42,9 @@ The positive label can be rounded to $7.48\times10^{-5}$; the scientific caption
 
 ### Canonical inputs and numerical status
 
-- `data/figure1_comparison.csv`: the two plotted quantities, source lower/upper bounds, status and normalization.
-- `data/figure1_original_witness140.json`: source W1 copied byte-for-byte.
-- `data/figure1_all_masks_not_for_display.csv`: all nine measured-count terms retained as verification inputs, not an extra plotted panel.
+- `data/figures/figure1_comparison.csv`: the two plotted quantities, source lower/upper bounds, status and normalization.
+- `data/figures/figure1_original_witness140.json`: source W1 copied byte-for-byte.
+- `data/figures/figure1_all_masks_not_for_display.csv`: all nine measured-count terms retained as verification inputs, not an extra plotted panel.
 - `FIGURE_CONTRACT.json`: the required schematic information and forbidden arrows.
 
 The exact single-use threshold is $p_1=59/86<7/10$, from canonical P13. The source's all-measured probability is $p^8=0.05764801$; its weighted block contribution is negative. Both are preserved and checked. The witness's entropy arithmetic was **not rerun** in this specification pass.
@@ -101,7 +101,7 @@ At $\epsilon=0$ and $1/2$, the algebraic limiting curves coincide at $p=1$ and $
 
 ### Canonical inputs and numerical status
 
-`data/figure2_pauli_guaranteed_region.csv` contains **1,001 exact-rational error coordinates**, $\epsilon=j/2000$, $j=0,\ldots,1000$. Every derived curve coordinate has an outward numerical enclosure and a 17-significant-digit plotting value. Endpoint rows are explicitly marked outside the theorem's interior domain. The same rows supply the inset.
+`data/figures/figure2_pauli_guaranteed_region.csv` contains **1,001 exact-rational error coordinates**, $\epsilon=j/2000$, $j=0,\ldots,1000$. Every derived curve coordinate has an outward numerical enclosure and a 17-significant-digit plotting value. Endpoint rows are explicitly marked outside the theorem's interior domain. The same rows supply the inset.
 
 The expressions come from canonical M03–M04, P08 and P12.1. **Only $L$ is evaluated using the Pauli symmetry here; no global single-use optimizer is used to create this plot.** There is no exact-$p_1$ curve extrapolated over the full error range.
 
@@ -112,7 +112,7 @@ At $\epsilon=0.1$ the two plotted boundaries are approximately
 $$p_{\mathrm{cert}}=0.70797878025951\ldots,\qquad
 p_{\mathrm{rep}}=0.71129378140889\ldots.$$
 
-The Figure 1 witness has $p=0.7$, **below the conservative shaded strip**. It is valid because canonical P13 uses the sharper exact one-use threshold $59/86$. Do not move its marker into the strip, truncate the band to include it, or imply it is proved by this particular conservative bound. By default do **not** overlay the witness on Figure 2. The caption should say that the Figure 1 point uses a sharper bound and that this strip need not exhaust the separation region. The relationship is machine-checked in `data/cross_figure_witness_bound_check.json`.
+The Figure 1 witness has $p=0.7$, **below the conservative shaded strip**. It is valid because canonical P13 uses the sharper exact one-use threshold $59/86$. Do not move its marker into the strip, truncate the band to include it, or imply it is proved by this particular conservative bound. By default do **not** overlay the witness on Figure 2. The caption should say that the Figure 1 point uses a sharper bound and that this strip need not exhaust the separation region. The relationship is machine-checked in `data/figures/cross_figure_witness_bound_check.json`.
 
 ### Caption content specification
 
@@ -162,9 +162,9 @@ Include the exact zero point at $\lambda=0$. Its interpretation is coincidence o
 
 ### Canonical inputs and numerical status
 
-- `data/figure3_cone_gap.csv`: **501 exact-rational coordinates**, $\lambda=j/2000$, $j=0,\ldots,500$, with exact rational $p_1$, outward enclosures of both frontiers, the stable gap, and the analytical tangent.
-- `data/figure3_cone_geometry.csv`: nine axis records, three per geometry snapshot, with equal weights and exact frame entries.
-- `data/figure3_small_lambda_controls_not_for_display.csv`: 12 checks of the source's limiting formula, not a fitted exponent or a second error sweep.
+- `data/figures/figure3_cone_gap.csv`: **501 exact-rational coordinates**, $\lambda=j/2000$, $j=0,\ldots,500$, with exact rational $p_1$, outward enclosures of both frontiers, the stable gap, and the analytical tangent.
+- `data/figures/figure3_cone_geometry.csv`: nine axis records, three per geometry snapshot, with equal weights and exact frame entries.
+- `data/figures/figure3_small_lambda_controls_not_for_display.csv`: 12 checks of the source's limiting formula, not a fitted exponent or a second error sweep.
 
 Gap values are evaluated stably as
 
