@@ -11,8 +11,7 @@
   "merge_status_source": "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/pull/5",
   "ci_status_source": "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/pull/5/checks",
   "pending": [
-    "Historical contact and project metadata disclosure decision",
-    "Explicit visibility instruction"
+    "Explicit visibility instruction, including retained project/history metadata disclosure"
   ],
   "branches_inspected": [
     {
@@ -57,5 +56,13 @@
   "integration_review": "publication/INTEGRATION_REVIEW.md",
   "integration_report": "publication/integration/INTEGRATION_REPORT.md",
   "integration_preservation_checker": "publication/integration/check_integrated.py",
-  "integration_authorization_scope": "Compose the reviewed reader, documentary corrections and licensing work; run existing integration CI gates and merge after inspecting their outcomes. Keep the repository private; no deployment, release or history rewrite."
+  "integration_authorization_scope": "Compose the reviewed reader, documentary corrections and licensing work; run existing integration CI gates and merge after inspecting their outcomes. Keep the repository private; no deployment, release or history rewrite.",
+  "contact_email_retention": {
+    "approved": true,
+    "date": "2026-09-12",
+    "scope": "Retain the author email in current contact information and existing records so readers can contact the author.",
+    "visibility_change_authorized_by_this_confirmation": false
+  },
+  "current_editorial_report": "publication/reader-status/REPORT.md",
+  "current_preservation_checker": "publication/reader-status/check_reader_status.py"
 }

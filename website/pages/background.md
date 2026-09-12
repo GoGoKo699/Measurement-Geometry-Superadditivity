@@ -30,7 +30,7 @@ Preskill's Section 10.7.4 already explains a qualitative threshold improvement u
 
 The repository supplies the remaining steps. [The channel page](channel.md#channel-operation) specifies everything the receiver can access, derives the reported-record entropy average, and explains the [eight-use witness](channel.md#eight-use-witness). [The proof guide](proof-guide.md#geometric-guarantee) then compares a bound valid for every one-use input with a sufficient block construction. Its full-span gap and computer-assisted scalar inequality are **project-specific mathematics**, not consequences supplied by Preskill's example. The [limits page](limits.md) fixes where the geometric picture applies.
 
-Incomplete-erasure channels, repetition and superadditivity are established ideas. The project's working contribution is its sufficient geometric condition over the stated finite-axis, common-error family. [Primary research attribution](../../docs/REFERENCES.md) remains available for that distinction; those papers are not another required tutorial. The [current status](status.md#correction-record) also identifies the separate correction to a historical rate/threshold comparison. No absolute-priority claim is added here.
+Incomplete-erasure channels, repetition and superadditivity are established ideas. The project's working contribution is its sufficient geometric condition over the stated finite-axis, common-error family. [Primary research attribution](../../docs/REFERENCES.md) remains available for that distinction; those papers are not another required tutorial. No absolute-priority claim is added here.
 
 <a id="edition-note"></a>
 

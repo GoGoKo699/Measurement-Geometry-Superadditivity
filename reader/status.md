@@ -1,4 +1,4 @@
-# Project status and boundaries
+# Project status
 
 [Overview](README.md) · [Background](background.md) · [Channel](channel.md) · [Proof route](proof-guide.md) · [Figures](figures.md) · [Exact theorem](../docs/MODEL_AND_CLAIMS.md) · [Complete proof](../docs/COMPLETE_PROOF.md) · [Materials](materials.md)
 
@@ -21,40 +21,41 @@
 - [Source and proof ledger](../docs/SOURCE_TO_CANONICAL.md)
 - [Frozen scientific argument](../docs/FROZEN_ARGUMENT.md)
 - [Visual design](visual-design.md)
-- [Status and publication](status.md)
+- [Project status](status.md)
 
 </details>
 
 
-## Current stage
+**The repository is complete for its stated scientific result.** The channel model, exact theorem, complete internal proof, computational certificate, three independent verification implementations, eight-use witness and all three figures are available here.
 
-The reader redesign starts from commit `f0015c56a19fd953c6797b2c64d9b507105234e3`, with `main` still at that commit when work began on 12 September 2026. The integrated source account retains the focused Preskill v5 bridge and confirmed licensing while carrying forward nine recorded documentary and dependent identity edits. The scientific claims, equations and graphical artifacts are preserved. The owner has authorized integration and merging with the existing CI gates; [PR #5](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/pull/5) records their observed outcomes and merge state. **Manuscript drafting remains a later, separately authorized stage.**
+[Read the result](README.md) · [Exact theorem and assumptions](../docs/MODEL_AND_CLAIMS.md#m04) · [Complete proof](../docs/COMPLETE_PROOF.md) · [Figures and downloads](figures.md)
 
-The [GitHub reading pages](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/blob/release/public-readiness-v1/reader/README.md) and optional local HTML site are different interfaces generated from the same editorial sources. The HTML site provides local search and interactive figure-color comparison; GitHub supplies its own Markdown renderer. No public site is deployed. Repository privacy is unchanged; the adopted [project reuse terms](../LICENSE.md) accompany the integrated source account.
+## What has been checked?
+
+The integrated scientific account passed the complete certificate checks, witness and control calculations, graphical reproduction, integrity checks, tests and browser checks. The [verification guide](verification.md#recorded-checks) gives the checked commit and actual run records. It also explains how to reproduce each part of the evidence.
+
+These are author-side analytical and computer-assisted checks. They do not constitute external peer review or proof-assistant formalization. The written proof identifies the background coding theorems and the computational inequality on which the result depends.
+
+## What does completion mean here?
+
+The result establishes a sufficient geometric condition over the stated finite-axis, common-error family. Exact capacity, efficient decoding, arbitrary heterogeneous or correlated reporting errors, and noisy axis labels remain outside the claim. A positive finite-block coherent information certifies a positive asymptotic rate through outer coding; it does not establish high-fidelity recovery from an isolated eight-use block. [Precise scope](../docs/MODEL_AND_CLAIMS.md#m07) · [Controlled limits](limits.md)
+
+A manuscript is not included. Its preparation is a separate writing stage, and is not needed to read or check the scientific argument supplied here.
+
+## Reading, reuse and contact
+
+The [GitHub reading pages](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/blob/main/reader/README.md) and optional local HTML site share the same editorial sources. GitHub supplies its Markdown renderer; the HTML site adds local search and figure-color comparison. [Build instructions](../WEBSITE.md)
+
+Original code is licensed under MIT; original prose, figures and data use CC BY 4.0 where rights exist. See the [license scope](../LICENSE.md), [third-party notices](../THIRD_PARTY_NOTICES.md) and [repository citation](../CITATION.cff). Contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
 
 <a name="correction-record"></a>
 
-## What do the audit and correction records say?
+<details>
+<summary>Provenance and maintenance records</summary>
 
-The [independent audit record](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/blob/5e367b1e541bf7d5ba1af90e85796d59db9e03f4/audits/repository-sanity-01/REPORT.md) concerns the same pinned scientific baseline. It records no invalidating defect within C1–C6, three documentary findings, and browser/runtime limitations. That is an inspected prior result, not a new scientific audit performed by this redesign.
+The [record index](../publication/PROJECT_HISTORY.md) retains the audit, documentary corrections and implementation history. These records describe their recorded versions; they are not pending steps in the current scientific account.
 
-The [completed correction record](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/blob/9ccecbf4cd3d975de2c498ba4fe2a9862f90778b/audits/repository-sanity-01/corrections/REPORT.md) is preserved at its original audit commit. This account applies its exact nine-file payload: a historical rate/threshold qualification, eight corrected figure-input paths, removal of an obsolete remote-repository clause and the associated document identities. The [local correction metadata](../provenance/EDITORIAL_CORRECTIONS.json) makes those substitutions inspectable and reversible.
-
-Historical S6 overstated a dephrasure **threshold** improvement where the cited work reports improved **rates** without extending the weighted-repetition threshold; the [dated corrective note](../docs/REFERENCES.md#s6-correction) now accompanies the retained source history in this tree. The eight plotting-input paths in the figure specifications now point to `data/figures/`, as the [atlas links](figures.md) do. The obsolete statement that no remote repository exists has been removed from M08. None of these changes alters the theorem.
-
-## What is preserved, and what has been checked?
-
-The model, references, source-to-canonical map and figure specifications contain the documented editorial edits. Their mathematical expressions are preserved, and the correction checks reconstruct their original bytes. The full proof, frozen argument, numerical inputs, certificate, substantive reference evidence, independent numerical implementations and captions retain their starting bytes; only the listed dependent provenance and source-identity records change. All 27 protected original figure exports and the three accepted-palette reader SVGs remain unchanged. The accepted Gachet-inspired palette applies **only to figures**; both reading interfaces keep plain documentation styling.
-
-The [reader implementation report](../website/review/PRESKILL_BRIDGE_REPORT.md) records the redesign's commands, preservation comparisons, walkthroughs and runtime limitations. The subsequent [license-adoption report](../publication/LICENSE_ADOPTION_REPORT.md) records its own successful reader CI and browser checks. Earlier browser limitations belong to those earlier checks, and later successes do not establish a result for an untested combined tree. The [integration report](../publication/integration/INTEGRATION_REPORT.md) records checks of the combined source account, with a separate [integrated preservation check](../publication/integration/check_integrated.py). Presentation tests check links, rendering and source preservation. They do not certify the accuracy of educational prose or establish a new scientific PASS, peer review or priority clearance. The exact scientific scope remains in [M07–M08](../docs/MODEL_AND_CLAIMS.md#m07).
-
-## Reuse and publication status
-
-The [license scope](../LICENSE.md) assigns MIT to original code and CC BY 4.0 to original prose, figures and data where rights exist. Ruge Lin is the confirmed rights holder and [citation author](../CITATION.cff). The [adoption record](../publication/LICENSE_ADOPTION.json) records that decision; the [publication checklist](../PUBLICATION.md) tracks validation and the remaining historical-disclosure and visibility decisions. The two historical binary inspections are complete. Integration and license approval do not change repository visibility.
-
-## What remains outside this task?
-
-There is no manuscript, new channel model, decoder, numerical study, fourth figure, public release or deployment. The separate many-body project is not a dependency and has not been accessed. My-tone was not consulted or modified in this redesign; its earlier recorded use remains historical editorial provenance.
+</details>
 
 [Return to the project](README.md) · [Verification guide](verification.md) · [Source materials](materials.md)
 

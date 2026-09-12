@@ -8,7 +8,7 @@ A readable theorem, an immutable input file, and an executed proof check are dif
 
 Start with the [model and claims](../../docs/MODEL_AND_CLAIMS.md), [complete proof](../../docs/COMPLETE_PROOF.md), and [reference roles](../../docs/REFERENCES.md). The technical documents are the canonical scientific sources. This website renders them directly rather than maintaining a rewritten second proof.
 
-The reader redesign preserves the scientific files at `f0015c56a19fd953c6797b2c64d9b507105234e3`. The earlier import checks and later audit are recorded prior results. The [current status](status.md#correction-record) distinguishes them from the actual presentation checks in this redesign. Reading this page does not execute a computation. [Recorded baseline validation](../../validation/BASELINE_VALIDATION.json)
+The scientific argument is available without running software. The commands below check distinct parts of its supporting evidence; reading a stored result does not execute a new computation.
 
 ## Check file identity and method tests
 
@@ -47,3 +47,11 @@ The canonical cover has 512 noise bands and 29,635 input leaves. Evidence record
 The stored records do not establish external peer review or proof-assistant formalization. No stronger assurance is implied by the reading interface.
 
 To return to the explanation, see [the all-record witness](channel.md#eight-use-witness) and [where the scalar proof enters](proof-guide.md#scalar-proof). The [selected background](background.md) explains the coding quantities; it is not an additional certificate or a software dependency.
+
+<a id="recorded-checks"></a>
+
+## Completed verification runs
+
+The integrated scientific account at commit `ba5fe59a31b7b833a458ee3761fbc9777d8c47e4` passed the [scientific verification workflow](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/actions/runs/34689242223). That run executed all three full certificate verifiers, witness and control calculations, and graphical reproduction. It checked the stored rational covering; it did not rebuild that covering. The [reader workflow](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/actions/runs/34689242004) passed 175 tests and actual loopback HTTP checks in Chromium on desktop and mobile layouts. Those browser checks include navigation, sources, search, keyboard controls, mathematics, figures and no-JavaScript reading. They do not test GitHub's authenticated Markdown renderer.
+
+The [current editorial report](../../publication/reader-status/REPORT.md) records checks of the status-page cleanup and its comparison with that scientific account. [Provenance and maintenance records](../../publication/PROJECT_HISTORY.md)

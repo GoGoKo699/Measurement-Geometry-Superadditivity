@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/workspace/scratch/323c19becda4/task-venv/bin/python",
+    "publication/reader-status/check_reader_status.py",
+    "--output",
+    "build/current-reader-preservation.json"
+  ],
+  "working_directory": "/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness",
+  "started_utc": "2026-09-12T12:17:54.323937+00:00",
+  "duration_seconds": 0.142,
+  "return_code": 0,
+  "log": "reader-status-preservation.log",
+  "python_optimization_used": false,
+  "thread_limits": {
+    "OPENBLAS_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 1
+  }
+}

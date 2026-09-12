@@ -1,4 +1,4 @@
-"""Current integration records cannot authorize scientific or historical edits."""
+"""Keep the integration checker mutation tests in their original commit scope."""
 import hashlib
 import importlib.util
 import json
@@ -12,6 +12,10 @@ spec = importlib.util.spec_from_file_location(
     "integrated_preservation", ROOT / "publication/integration/check_integrated.py")
 CHECKER = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(CHECKER)
+current_spec = importlib.util.spec_from_file_location(
+    "reader_status_preservation", ROOT / "publication/reader-status/check_reader_status.py")
+CURRENT = importlib.util.module_from_spec(current_spec)
+current_spec.loader.exec_module(CURRENT)
 PROOF = "docs/COMPLETE_PROOF.md"
 INPUT = "data/figures/figure1_original_witness140.json"
 HISTORY = "publication/check_followup.py"
@@ -21,13 +25,21 @@ def dump(path, value):
     path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n")
 
 
+@pytest.fixture(scope="module")
+def historical():
+    # The old checker and its records remain unchanged. Current editorial edits
+    # are checked first, then exactly reversed in a temporary historical tree.
+    with CURRENT.historical_checkpoint(ROOT) as checkpoint:
+        yield checkpoint
+
+
 @pytest.fixture
-def checkout(tmp_path):
-    inventory = json.loads((ROOT / CHECKER.INVENTORY_PATH).read_text())
+def checkout(tmp_path, historical):
+    inventory = json.loads((historical / CHECKER.INVENTORY_PATH).read_text())
     for name in set(inventory["files"]) | {CHECKER.INVENTORY_PATH, CHECKER.EDITS_PATH}:
         target = tmp_path / name
         target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(ROOT / name, target)
+        shutil.copyfile(historical / name, target)
     return tmp_path
 
 
@@ -41,9 +53,9 @@ def record_current_change(root, name):
     dump(root / CHECKER.EDITS_PATH, record)
 
 
-def test_current_integrated_tree_has_complete_checkpoint_coverage():
-    result = CHECKER.check(ROOT)
-    inventory = json.loads((ROOT / CHECKER.INVENTORY_PATH).read_text())
+def test_historical_integrated_tree_has_complete_checkpoint_coverage(historical):
+    result = CHECKER.check(historical)
+    inventory = json.loads((historical / CHECKER.INVENTORY_PATH).read_text())
     assert result["starting_files_checked"] == len(inventory["files"])
     assert result["starting_files_byte_unchanged"] + len(result["recorded_stage_changes"]) == len(inventory["files"])
     assert result["protected_original_graphics"] == 27

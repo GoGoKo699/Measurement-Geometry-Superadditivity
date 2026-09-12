@@ -21,6 +21,9 @@ def test_native_no_site_placeholders_or_html_destinations():
         t=p.read_text();assert '<!-- SITE:' not in t
         assert not re.search(r'\]\([^)]*\.html(?:#.*?)?\)',t)
         for dest in re.findall(r'\]\(([^\s)]+)\)',t):
+            if dest.startswith('mailto:'):
+                assert re.fullmatch(r'mailto:[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}',dest),dest
+                continue
             if '://' in dest or dest.startswith('#'):continue
             base=dest.split('#')[0]
             assert (p.parent/base).resolve().is_file(),(p,dest)
