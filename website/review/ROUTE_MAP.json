@@ -1,0 +1,156 @@
+{
+  "before": {
+    "index": {
+      "source": "website/pages/index.md",
+      "next": "channel"
+    },
+    "channel": {
+      "source": "website/pages/channel.md",
+      "next": "proof-guide"
+    },
+    "proof-guide": {
+      "source": "website/pages/proof-guide.md",
+      "next": "figures"
+    },
+    "figures": {
+      "source": "website/pages/figures.md",
+      "next": "limits"
+    },
+    "limits": {
+      "source": "website/pages/limits.md",
+      "next": "model"
+    },
+    "model": {
+      "source": "docs/MODEL_AND_CLAIMS.md",
+      "next": "proof"
+    },
+    "proof": {
+      "source": "docs/COMPLETE_PROOF.md",
+      "next": "verification"
+    },
+    "verification": {
+      "source": "website/pages/verification.md",
+      "next": "reproduce"
+    },
+    "reproduce": {
+      "source": "docs/REPRODUCTION.md",
+      "next": "references"
+    },
+    "references": {
+      "source": "docs/REFERENCES.md",
+      "next": "materials"
+    },
+    "materials": {
+      "source": "website/pages/materials.md",
+      "next": "status"
+    },
+    "notation": {
+      "source": "docs/NOTATION_CROSSWALK.md",
+      "next": "provenance"
+    },
+    "provenance": {
+      "source": "docs/SOURCE_TO_CANONICAL.md",
+      "next": "materials"
+    },
+    "argument": {
+      "source": "docs/FROZEN_ARGUMENT.md",
+      "next": "materials"
+    },
+    "visual-design": {
+      "source": "website/pages/visual-design.md",
+      "next": "status"
+    },
+    "status": {
+      "source": "website/pages/status.md",
+      "next": null
+    }
+  },
+  "after": {
+    "index": {
+      "source": "website/pages/index.md",
+      "previous": null,
+      "next": "background"
+    },
+    "background": {
+      "source": "website/pages/background.md",
+      "previous": "index",
+      "next": "channel"
+    },
+    "channel": {
+      "source": "website/pages/channel.md",
+      "previous": "background",
+      "next": "proof-guide"
+    },
+    "proof-guide": {
+      "source": "website/pages/proof-guide.md",
+      "previous": "channel",
+      "next": "model"
+    },
+    "figures": {
+      "source": "website/pages/figures.md",
+      "previous": "proof-guide",
+      "next": "limits"
+    },
+    "limits": {
+      "source": "website/pages/limits.md",
+      "previous": "proof",
+      "next": "verification"
+    },
+    "model": {
+      "source": "docs/MODEL_AND_CLAIMS.md",
+      "previous": "proof-guide",
+      "next": "proof"
+    },
+    "proof": {
+      "source": "docs/COMPLETE_PROOF.md",
+      "previous": "model",
+      "next": "limits"
+    },
+    "verification": {
+      "source": "website/pages/verification.md",
+      "previous": "limits",
+      "next": "reproduce"
+    },
+    "reproduce": {
+      "source": "docs/REPRODUCTION.md",
+      "previous": "verification",
+      "next": "references"
+    },
+    "references": {
+      "source": "docs/REFERENCES.md",
+      "previous": "reproduce",
+      "next": "materials"
+    },
+    "materials": {
+      "source": "website/pages/materials.md",
+      "previous": "references",
+      "next": "status"
+    },
+    "notation": {
+      "source": "docs/NOTATION_CROSSWALK.md",
+      "previous": "materials",
+      "next": "provenance"
+    },
+    "provenance": {
+      "source": "docs/SOURCE_TO_CANONICAL.md",
+      "previous": "notation",
+      "next": "materials"
+    },
+    "argument": {
+      "source": "docs/FROZEN_ARGUMENT.md",
+      "previous": "provenance",
+      "next": "materials"
+    },
+    "visual-design": {
+      "source": "website/pages/visual-design.md",
+      "previous": "argument",
+      "next": "status"
+    },
+    "status": {
+      "source": "website/pages/status.md",
+      "previous": "materials",
+      "next": null
+    }
+  },
+  "canonical_documents_duplicated": false
+}

@@ -1,0 +1,541 @@
+{
+  "schema_version": 1,
+  "source": {
+    "id": "preskill-qst-v5",
+    "author": "John Preskill",
+    "title": "Quantum Shannon Theory, Chapter 10 of Quantum Information",
+    "version": "1604.07450v5",
+    "abs_url": "https://arxiv.org/abs/1604.07450v5",
+    "pdf_url": "https://arxiv.org/pdf/1604.07450v5",
+    "arxiv_version_date": "2025-07-08",
+    "pdf_title_update": "June 2025",
+    "verified_date": "2026-09-12",
+    "pdf_page_offset": 6,
+    "pdf_pages": 103,
+    "pdf_sha256": "c1228be6d7547ee51451616e5646cf276cea33e0effe452765238c87e286b104",
+    "pagination": "printed k = zero-based PDF index k+5 = one-based viewer page k+6",
+    "redistribution": "Link to the official source. Its front-matter notice permits personal use and prohibits redistribution; no source PDF, extract, screenshot or textbook figure is included.",
+    "required_external_tutorials": 1
+  },
+  "scope": "Educational source-location map, separate from provenance/CLAIM_COVERAGE.json and not a certificate of theorem correctness. No online fetch is required to build or test.",
+  "passages": [
+    {
+      "id": "coherent-information",
+      "role": "background",
+      "tier": "core",
+      "sections": [
+        "10.7.1"
+      ],
+      "printed_pages": [
+        51,
+        53
+      ],
+      "pdf_viewer_pages": [
+        57,
+        59
+      ],
+      "equations": [
+        {
+          "id": "10.273",
+          "printed_page": 52
+        },
+        {
+          "id": "10.275",
+          "printed_page": 53
+        },
+        {
+          "id": "10.278",
+          "printed_page": 53
+        }
+      ],
+      "question": "What is optimized, and what is a capacity?",
+      "retain": "Input optimization differs from asymptotic regularization.",
+      "destination": "website/pages/channel.md#reference-state",
+      "canonical_anchors": [
+        "docs/MODEL_AND_CLAIMS.md#m02",
+        "docs/COMPLETE_PROOF.md#p01"
+      ],
+      "destination_label": "Channel: reference-state quantities"
+    },
+    {
+      "id": "decoupling",
+      "role": "background",
+      "tier": "core",
+      "sections": [
+        "10.7.2"
+      ],
+      "printed_pages": [
+        53,
+        56
+      ],
+      "pdf_viewer_pages": [
+        59,
+        62
+      ],
+      "equations": [
+        {
+          "id": "10.281",
+          "printed_page": 54
+        },
+        {
+          "id": "10.282",
+          "printed_page": 54
+        },
+        {
+          "id": "10.289",
+          "printed_page": 55
+        },
+        {
+          "id": "10.297",
+          "printed_page": 56
+        }
+      ],
+      "question": "Why do reference correlations matter for recovery?",
+      "retain": "Decoupling connects the environment to recoverability.",
+      "destination": "website/pages/channel.md#eight-use-witness",
+      "canonical_anchors": [
+        "docs/MODEL_AND_CLAIMS.md#m02",
+        "docs/COMPLETE_PROOF.md#p10"
+      ],
+      "destination_label": "Channel: finite-block meaning"
+    },
+    {
+      "id": "repetition",
+      "role": "background",
+      "tier": "core",
+      "sections": [
+        "10.7.4"
+      ],
+      "printed_pages": [
+        58,
+        60
+      ],
+      "pdf_viewer_pages": [
+        64,
+        66
+      ],
+      "equations": [
+        {
+          "id": "10.310",
+          "printed_page": 58
+        },
+        {
+          "id": "10.316",
+          "printed_page": 60
+        }
+      ],
+      "question": "How can a repetition inner code help?",
+      "retain": "A coherent code subspace can be combined with an outer code.",
+      "destination": "website/pages/channel.md#coherent-repetition",
+      "canonical_anchors": [
+        "docs/COMPLETE_PROOF.md#p09",
+        "docs/COMPLETE_PROOF.md#p13"
+      ],
+      "destination_label": "Channel: coherent repetition"
+    },
+    {
+      "id": "unassisted-achievability",
+      "role": "background",
+      "tier": "completion",
+      "sections": [
+        "10.9.4"
+      ],
+      "printed_pages": [
+        75,
+        76
+      ],
+      "pdf_viewer_pages": [
+        81,
+        82
+      ],
+      "equations": [
+        {
+          "id": "10.366",
+          "printed_page": 75
+        },
+        {
+          "id": "10.367",
+          "printed_page": 75
+        },
+        {
+          "id": "10.368",
+          "printed_page": 76
+        }
+      ],
+      "question": "Why does a positive block value give an unassisted rate?",
+      "retain": "Read the unassisted-achievability statement; its full derivation is optional.",
+      "destination": "website/pages/proof-guide.md#finite-before-asymptotic",
+      "canonical_anchors": [
+        "docs/COMPLETE_PROOF.md#p10",
+        "docs/REFERENCES.md"
+      ],
+      "destination_label": "Proof route: fixed inner block, then outer coding"
+    },
+    {
+      "id": "classical-entropy",
+      "role": "background",
+      "tier": "optional",
+      "sections": [
+        "10.1"
+      ],
+      "printed_pages": [
+        1,
+        13
+      ],
+      "pdf_viewer_pages": [
+        7,
+        19
+      ],
+      "equations": [
+        {
+          "id": "10.5",
+          "printed_page": 2
+        },
+        {
+          "id": "10.7",
+          "printed_page": 3
+        }
+      ],
+      "question": "What do binary entropy and rate mean?",
+      "retain": "Entropy and rate notation.",
+      "destination": "website/pages/channel.md#flagged-information",
+      "canonical_anchors": [
+        "docs/MODEL_AND_CLAIMS.md#m02"
+      ],
+      "destination_label": "Channel: flagged entropy average"
+    },
+    {
+      "id": "bipartite-entropy",
+      "role": "background",
+      "tier": "optional",
+      "sections": [
+        "10.2.1"
+      ],
+      "printed_pages": [
+        15,
+        16
+      ],
+      "pdf_viewer_pages": [
+        21,
+        22
+      ],
+      "equations": [
+        {
+          "id": "10.68",
+          "printed_page": 15
+        },
+        {
+          "id": "10.73",
+          "printed_page": 16
+        }
+      ],
+      "question": "Why can quantum conditional entropy be negative?",
+      "retain": "Pure bipartitions have equal marginal entropies.",
+      "destination": "website/pages/channel.md#reference-state",
+      "canonical_anchors": [
+        "docs/COMPLETE_PROOF.md#p01"
+      ],
+      "destination_label": "Channel: reference and environment"
+    },
+    {
+      "id": "measurement",
+      "role": "background",
+      "tier": "optional",
+      "sections": [
+        "10.2.2"
+      ],
+      "printed_pages": [
+        16,
+        17
+      ],
+      "pdf_viewer_pages": [
+        22,
+        23
+      ],
+      "equations": [
+        {
+          "id": "10.74",
+          "printed_page": 17
+        }
+      ],
+      "question": "How does a measurement enter an entropy calculation?",
+      "retain": "Distinguish a measured record from an unobserved mixture.",
+      "destination": "website/pages/channel.md#channel-operation",
+      "canonical_anchors": [
+        "docs/COMPLETE_PROOF.md#p01"
+      ],
+      "destination_label": "Channel: accessible records"
+    },
+    {
+      "id": "strong-subadditivity",
+      "role": "background",
+      "tier": "optional",
+      "sections": [
+        "10.2.3"
+      ],
+      "printed_pages": [
+        17,
+        19
+      ],
+      "pdf_viewer_pages": [
+        23,
+        25
+      ],
+      "equations": [
+        {
+          "id": "10.80",
+          "printed_page": 18
+        },
+        {
+          "id": "10.84",
+          "printed_page": 18
+        },
+        {
+          "id": "10.85",
+          "printed_page": 19
+        }
+      ],
+      "question": "Which entropy inequality supports data processing?",
+      "retain": "Strong subadditivity.",
+      "destination": "website/pages/proof-guide.md#two-costs",
+      "canonical_anchors": [
+        "docs/COMPLETE_PROOF.md#p02"
+      ],
+      "destination_label": "Proof route: two costs"
+    },
+    {
+      "id": "data-processing",
+      "role": "background",
+      "tier": "optional",
+      "sections": [
+        "10.2.4"
+      ],
+      "printed_pages": [
+        19,
+        19
+      ],
+      "pdf_viewer_pages": [
+        25,
+        25
+      ],
+      "equations": [
+        {
+          "id": "10.89",
+          "printed_page": 19
+        },
+        {
+          "id": "10.91",
+          "printed_page": 19
+        }
+      ],
+      "question": "Can processing the output restore lost correlations by itself?",
+      "retain": "Data processing.",
+      "destination": "website/pages/channel.md#eight-use-witness",
+      "canonical_anchors": [
+        "docs/COMPLETE_PROOF.md#p10"
+      ],
+      "destination_label": "Channel: what the witness establishes"
+    },
+    {
+      "id": "entanglement-breaking",
+      "role": "background",
+      "tier": "optional",
+      "sections": [
+        "10.6.6"
+      ],
+      "printed_pages": [
+        50,
+        51
+      ],
+      "pdf_viewer_pages": [
+        56,
+        57
+      ],
+      "equations": [
+        {
+          "id": "10.269",
+          "printed_page": 51
+        }
+      ],
+      "question": "Why is a measured-only output insufficient?",
+      "retain": "Entanglement breaking.",
+      "destination": "website/pages/channel.md#channel-operation",
+      "canonical_anchors": [
+        "docs/MODEL_AND_CLAIMS.md#m01"
+      ],
+      "destination_label": "Channel: destructive branch"
+    },
+    {
+      "id": "degradable-channels",
+      "role": "background",
+      "tier": "optional",
+      "sections": [
+        "10.7.3"
+      ],
+      "printed_pages": [
+        56,
+        58
+      ],
+      "pdf_viewer_pages": [
+        62,
+        64
+      ],
+      "equations": [
+        {
+          "id": "10.298",
+          "printed_page": 56
+        },
+        {
+          "id": "10.303",
+          "printed_page": 57
+        },
+        {
+          "id": "10.309",
+          "printed_page": 58
+        }
+      ],
+      "question": "When can a single-use expression give the capacity?",
+      "retain": "Degradability and antidegradability describe special cases.",
+      "destination": "website/pages/limits.md#noise-endpoints",
+      "canonical_anchors": [
+        "docs/COMPLETE_PROOF.md#p11"
+      ],
+      "destination_label": "Limits: reporting-noise endpoints"
+    }
+  ],
+  "notation": [
+    {
+      "tutorial": "$H$",
+      "project": "$S$, with $h_2$ for binary entropy",
+      "meaning": "Information entropies are in bits; the project reserves $\\ln$ for natural logarithms in estimates."
+    },
+    {
+      "tutorial": "$Q_1(\\mathcal N)$, Eq. (10.273)",
+      "project": "$Q^{(1)}(\\mathcal N)$",
+      "meaning": "The maximum of coherent information over all one-use input states. Preskill calls it “one-shot”; here it is not an operational finite-error one-shot capacity."
+    },
+    {
+      "tutorial": "Input $A$, reference $R$",
+      "project": "Input qubit (state $\\rho$), reference $\\mathsf R$",
+      "meaning": "The reference purifies the chosen input and is not sent through the channel."
+    },
+    {
+      "tutorial": "Receiver $B$, environment $E$",
+      "project": "Receiver $\\mathsf B$; environment of a dilation",
+      "meaning": "With a pure $RBE$ dilation, $H(RB)=H(E)$. A classical output flag does not give access to the environment."
+    },
+    {
+      "tutorial": "$p$ in Eq. (10.310)",
+      "project": "$p$ and $\\epsilon$ in M01",
+      "meaning": "Preskill uses total Pauli-error probability, $p/3$ per error. Here $p$ selects destructive measurement and $\\epsilon$ flips its report. These are different channels."
+    },
+    {
+      "tutorial": "$\\epsilon,\\delta$ in the capacity definition, p. 52",
+      "project": "Physical reporting error $\\epsilon$",
+      "meaning": "The tutorial symbols are accuracy/rate tolerances, not this fixed noise parameter."
+    }
+  ],
+  "bridges": [
+    {
+      "id": "reported-channel",
+      "role": "project",
+      "concept": "Physical operation budget and hidden-outcome averaging",
+      "destination": "website/pages/channel.md#channel-operation",
+      "canonical_anchors": [
+        "docs/MODEL_AND_CLAIMS.md#m01",
+        "docs/COMPLETE_PROOF.md#p01"
+      ]
+    },
+    {
+      "id": "flagged-cost",
+      "role": "project",
+      "concept": "Reference-state and all-record entropy cost",
+      "destination": "website/pages/channel.md#flagged-information",
+      "canonical_anchors": [
+        "docs/MODEL_AND_CLAIMS.md#m03",
+        "docs/COMPLETE_PROOF.md#p01",
+        "docs/COMPLETE_PROOF.md#p04"
+      ]
+    },
+    {
+      "id": "finite-witness",
+      "role": "project",
+      "concept": "Eight-use value, global one-use zero, and per-use normalization",
+      "destination": "website/pages/channel.md#eight-use-witness",
+      "canonical_anchors": [
+        "docs/MODEL_AND_CLAIMS.md#m05",
+        "docs/COMPLETE_PROOF.md#p13",
+        "data/figures/figure1_original_witness140.json",
+        "data/figures/figure1_all_masks_not_for_display.csv"
+      ]
+    },
+    {
+      "id": "geometric-gap",
+      "role": "project",
+      "concept": "Global obstruction, repetition cost, and full-span gap",
+      "destination": "website/pages/proof-guide.md#geometric-guarantee",
+      "canonical_anchors": [
+        "docs/MODEL_AND_CLAIMS.md#m04",
+        "docs/COMPLETE_PROOF.md#p04",
+        "docs/COMPLETE_PROOF.md#p07",
+        "docs/COMPLETE_PROOF.md#p08",
+        "docs/COMPLETE_PROOF.md#p10"
+      ]
+    },
+    {
+      "id": "fixed-inner-block",
+      "role": "project",
+      "concept": "Select a finite positive block before invoking outer coding",
+      "destination": "website/pages/proof-guide.md#finite-before-asymptotic",
+      "canonical_anchors": [
+        "docs/COMPLETE_PROOF.md#p09",
+        "docs/COMPLETE_PROOF.md#p10"
+      ]
+    },
+    {
+      "id": "controlled-limits",
+      "role": "project",
+      "concept": "Coplanar and noise-endpoint controls; restricted cone domain",
+      "destination": "website/pages/limits.md#cone-domain",
+      "canonical_anchors": [
+        "docs/MODEL_AND_CLAIMS.md#m06",
+        "docs/COMPLETE_PROOF.md#p11",
+        "docs/COMPLETE_PROOF.md#p12"
+      ]
+    },
+    {
+      "id": "verification-roles",
+      "role": "project",
+      "concept": "Integrity, full certificate, witness and graphics have different obligations",
+      "destination": "website/pages/verification.md#verification-roles",
+      "canonical_anchors": [
+        "docs/REPRODUCTION.md",
+        "docs/COMPLETE_PROOF.md#p14",
+        "provenance/CLAIM_COVERAGE.json"
+      ]
+    }
+  ],
+  "edition_note": {
+    "destination": "website/pages/background.md#edition-note",
+    "confirmed_visually": true,
+    "incorrect_equation": {
+      "id": "10.368",
+      "printed_page": 76,
+      "pdf_viewer_page": 82
+    },
+    "supporting_equations": [
+      {
+        "id": "10.275",
+        "printed_page": 53,
+        "pdf_viewer_page": 59
+      },
+      {
+        "id": "10.367",
+        "printed_page": 75,
+        "pdf_viewer_page": 81
+      }
+    ],
+    "correct_entropy_difference": "H(B)-H(E)",
+    "scope": "A source sign note only, not a chapter audit."
+  }
+}

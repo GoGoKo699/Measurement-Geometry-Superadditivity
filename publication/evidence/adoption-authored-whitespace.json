@@ -1,0 +1,21 @@
+{
+  "command": [
+    "git",
+    "diff",
+    "--cached",
+    "--check",
+    "--",
+    ".",
+    ":(exclude)LICENSES/CC-BY-4.0.txt"
+  ],
+  "working_directory": "/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness",
+  "started_utc": "2026-09-12T09:16:21.657487+00:00",
+  "duration_seconds": 0.004,
+  "return_code": 0,
+  "log": "adoption-authored-whitespace.log",
+  "python_optimization_used": false,
+  "thread_limits": {
+    "OPENBLAS_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 1
+  }
+}

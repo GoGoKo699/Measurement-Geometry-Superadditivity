@@ -1,0 +1,237 @@
+{
+  "scope": "Documentation and presentation checks only; commands run without Python optimization",
+  "principal_checks": [
+    {
+      "command": [
+        "/workspace/scratch/323c19becda4/task-venv/bin/python",
+        "verify.py"
+      ],
+      "working_directory": "/workspace/scratch/323c19becda4/Measurement-Geometry-Superadditivity",
+      "started_utc": "2026-09-12T07:37:14.965660+00:00",
+      "duration_seconds": 0.154,
+      "return_code": 0,
+      "environment_overrides": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MPLBACKEND": "Agg",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "assertions_enabled": true,
+      "child_maxrss_kib": 29372,
+      "log": "logs/integrity.log"
+    },
+    {
+      "command": [
+        "/workspace/scratch/323c19becda4/task-venv/bin/python",
+        "website/repository_preview.py",
+        "--check"
+      ],
+      "working_directory": "/workspace/scratch/323c19becda4/Measurement-Geometry-Superadditivity",
+      "started_utc": "2026-09-12T07:49:21.041423+00:00",
+      "duration_seconds": 0.12,
+      "return_code": 0,
+      "environment_overrides": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MPLBACKEND": "Agg",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "assertions_enabled": true,
+      "child_maxrss_kib": 12792,
+      "log": "logs/native-check-final.log"
+    },
+    {
+      "command": [
+        "/workspace/scratch/323c19becda4/task-venv/bin/python",
+        "website/repository_preview.py",
+        "--check"
+      ],
+      "working_directory": "/workspace/scratch/323c19becda4/Measurement-Geometry-Superadditivity",
+      "started_utc": "2026-09-12T07:37:14.971047+00:00",
+      "duration_seconds": 0.1,
+      "return_code": 0,
+      "environment_overrides": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MPLBACKEND": "Agg",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "assertions_enabled": true,
+      "child_maxrss_kib": 13396,
+      "log": "logs/native-check.log"
+    },
+    {
+      "command": [
+        "/workspace/scratch/323c19becda4/task-venv/bin/python",
+        "website/repository_preview.py",
+        "--write"
+      ],
+      "working_directory": "/workspace/scratch/323c19becda4/Measurement-Geometry-Superadditivity",
+      "started_utc": "2026-09-12T07:43:17.792472+00:00",
+      "duration_seconds": 0.107,
+      "return_code": 0,
+      "environment_overrides": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MPLBACKEND": "Agg",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "assertions_enabled": true,
+      "child_maxrss_kib": 12792,
+      "log": "logs/native-write-final.log"
+    },
+    {
+      "command": [
+        "/workspace/scratch/323c19becda4/task-venv/bin/python",
+        "website/repository_preview.py",
+        "--write"
+      ],
+      "working_directory": "/workspace/scratch/323c19becda4/Measurement-Geometry-Superadditivity",
+      "started_utc": "2026-09-12T07:37:14.304431+00:00",
+      "duration_seconds": 0.112,
+      "return_code": 0,
+      "environment_overrides": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MPLBACKEND": "Agg",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "assertions_enabled": true,
+      "child_maxrss_kib": 13396,
+      "log": "logs/native-write.log"
+    },
+    {
+      "command": [
+        "/workspace/scratch/323c19becda4/task-venv/bin/python",
+        "website/review/check_preservation.py",
+        "--output",
+        "website/review/PRESERVATION.json"
+      ],
+      "working_directory": "/workspace/scratch/323c19becda4/Measurement-Geometry-Superadditivity",
+      "started_utc": "2026-09-12T07:43:18.443456+00:00",
+      "duration_seconds": 0.037,
+      "return_code": 0,
+      "environment_overrides": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MPLBACKEND": "Agg",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "assertions_enabled": true,
+      "child_maxrss_kib": 12800,
+      "log": "logs/preservation.log"
+    },
+    {
+      "command": [
+        "/workspace/scratch/323c19becda4/task-venv/bin/python",
+        "website/build.py",
+        "--output",
+        "build/preskill-reader-review"
+      ],
+      "working_directory": "/workspace/scratch/323c19becda4/Measurement-Geometry-Superadditivity",
+      "started_utc": "2026-09-12T07:43:18.444148+00:00",
+      "duration_seconds": 3.639,
+      "return_code": 0,
+      "environment_overrides": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MPLBACKEND": "Agg",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "assertions_enabled": true,
+      "child_maxrss_kib": 71296,
+      "log": "logs/site-build.log"
+    },
+    {
+      "command": [
+        "/workspace/scratch/323c19becda4/task-venv/bin/python",
+        "website/check.py",
+        "--site",
+        "build/preskill-reader-review",
+        "--report",
+        "website/review/SITE_CHECK.json"
+      ],
+      "working_directory": "/workspace/scratch/323c19becda4/Measurement-Geometry-Superadditivity",
+      "started_utc": "2026-09-12T07:43:58.336808+00:00",
+      "duration_seconds": 1.563,
+      "return_code": 0,
+      "environment_overrides": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MPLBACKEND": "Agg",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "assertions_enabled": true,
+      "child_maxrss_kib": 40020,
+      "log": "logs/site-check.log"
+    },
+    {
+      "command": [
+        "/workspace/scratch/323c19becda4/task-venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "tests",
+        "website/tests"
+      ],
+      "working_directory": "/workspace/scratch/323c19becda4/Measurement-Geometry-Superadditivity",
+      "started_utc": "2026-09-12T07:43:18.445735+00:00",
+      "duration_seconds": 9.689,
+      "return_code": 0,
+      "environment_overrides": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MPLBACKEND": "Agg",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "assertions_enabled": true,
+      "child_maxrss_kib": 186512,
+      "log": "logs/tests-after-heading-fix.log"
+    },
+    {
+      "command": [
+        "/workspace/scratch/323c19becda4/task-venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "tests",
+        "website/tests"
+      ],
+      "working_directory": "/workspace/scratch/323c19becda4/Measurement-Geometry-Superadditivity",
+      "started_utc": "2026-09-12T07:37:14.964617+00:00",
+      "duration_seconds": 8.835,
+      "return_code": 1,
+      "environment_overrides": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MPLBACKEND": "Agg",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "assertions_enabled": true,
+      "child_maxrss_kib": 182716,
+      "log": "logs/tests.log"
+    }
+  ],
+  "browser": "See LOCAL_BROWSER_CHECK.json and CI evidence; local launch was blocked",
+  "full_certificate_or_large_simulation_run": false,
+  "reader_ci": {
+    "commit": "4dba83be51ca8113f7082edf06a7e04b999f4a27",
+    "run_id": 34681565631,
+    "conclusion": "success",
+    "tests_passed": 96,
+    "pytest_seconds": 13.36,
+    "browser": "Chromium 152.0.7977.0",
+    "actual_loopback_http_browser": true,
+    "browser_report": "ci/CHECKPOINT_BROWSER_CHECK.json",
+    "artifact_evidence": "ci/ARTIFACT_VERIFICATION.json"
+  },
+  "scientific_ci": {
+    "run_id": 34681565622,
+    "conclusion": "skipped",
+    "reason": "Existing draft-PR condition; no full certificate campaign authorized"
+  }
+}

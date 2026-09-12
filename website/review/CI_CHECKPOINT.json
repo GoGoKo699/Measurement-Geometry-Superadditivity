@@ -1,0 +1,365 @@
+{
+  "run": {
+    "actor": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/28149313?v=4",
+      "events_url": "https://api.github.com/users/GoGoKo699/events{/privacy}",
+      "followers_url": "https://api.github.com/users/GoGoKo699/followers",
+      "following_url": "https://api.github.com/users/GoGoKo699/following{/other_user}",
+      "gists_url": "https://api.github.com/users/GoGoKo699/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.com/GoGoKo699",
+      "id": 28149313,
+      "login": "GoGoKo699",
+      "node_id": "MDQ6VXNlcjI4MTQ5MzEz",
+      "organizations_url": "https://api.github.com/users/GoGoKo699/orgs",
+      "received_events_url": "https://api.github.com/users/GoGoKo699/received_events",
+      "repos_url": "https://api.github.com/users/GoGoKo699/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/GoGoKo699/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/GoGoKo699/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/GoGoKo699",
+      "user_view_type": "public"
+    },
+    "artifacts_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/actions/runs/34681565631/artifacts",
+    "cancel_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/actions/runs/34681565631/cancel",
+    "check_suite_id": 93946532055,
+    "check_suite_node_id": "CS_kwDOUSALgs8AAAAV36ZQ1w",
+    "check_suite_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/check-suites/93946532055",
+    "conclusion": "success",
+    "created_at": "2026-09-12T07:45:47Z",
+    "display_title": "Connect the reader route to Preskill v5 while preserving the scientific baseline",
+    "event": "pull_request",
+    "head_branch": "reader/preskill-bridge-v1",
+    "head_commit": {
+      "author": {
+        "email": "gogoko699@gmail.com",
+        "name": "Ruge Lin"
+      },
+      "committer": {
+        "email": "gogoko699@gmail.com",
+        "name": "Ruge Lin"
+      },
+      "id": "4dba83be51ca8113f7082edf06a7e04b999f4a27",
+      "message": "Build the focused Preskill v5 reader bridge\n\nAdd one shared background map and crosswalk, explain the flagged channel and finite-block coding route, and preserve direct expert access. Generate native pages from the existing editorial sources. Fix anchor-heading separation in the HTML conversion without changing canonical files or equations.\n\nLocal integrity, 96 tests, 17-route HTML checks and starting-byte preservation pass. Recorded local browser/Pandoc installation limits remain explicit. The implementation report is a checkpoint pending browser CI and final walkthrough records. No scientific evaluation, source repair, protected figure change or deployment.",
+      "timestamp": "2026-09-12T07:45:17Z",
+      "tree_id": "d1f0f8fcc203df35575f03584d66f9f1ab1f809c"
+    },
+    "head_repository": {
+      "archive_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/{archive_format}{/ref}",
+      "assignees_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/assignees{/user}",
+      "blobs_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs{/sha}",
+      "branches_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/branches{/branch}",
+      "collaborators_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/collaborators{/collaborator}",
+      "comments_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/comments{/number}",
+      "commits_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/commits{/sha}",
+      "compare_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/compare/{base}...{head}",
+      "contents_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/contents/{+path}",
+      "contributors_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/contributors",
+      "deployments_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/deployments",
+      "description": null,
+      "downloads_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/downloads",
+      "events_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/events",
+      "fork": false,
+      "forks_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/forks",
+      "full_name": "GoGoKo699/Measurement-Geometry-Superadditivity",
+      "git_commits_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/commits{/sha}",
+      "git_refs_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/refs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/tags{/sha}",
+      "hooks_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/hooks",
+      "html_url": "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity",
+      "id": 1361054594,
+      "issue_comment_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/issues/comments{/number}",
+      "issue_events_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/issues/events{/number}",
+      "issues_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/issues{/number}",
+      "keys_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/keys{/key_id}",
+      "labels_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/labels{/name}",
+      "languages_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/languages",
+      "merges_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/merges",
+      "milestones_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/milestones{/number}",
+      "name": "Measurement-Geometry-Superadditivity",
+      "node_id": "R_kgDOUSALgg",
+      "notifications_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/notifications{?since,all,participating}",
+      "owner": {
+        "avatar_url": "https://avatars.githubusercontent.com/u/28149313?v=4",
+        "events_url": "https://api.github.com/users/GoGoKo699/events{/privacy}",
+        "followers_url": "https://api.github.com/users/GoGoKo699/followers",
+        "following_url": "https://api.github.com/users/GoGoKo699/following{/other_user}",
+        "gists_url": "https://api.github.com/users/GoGoKo699/gists{/gist_id}",
+        "gravatar_id": "",
+        "html_url": "https://github.com/GoGoKo699",
+        "id": 28149313,
+        "login": "GoGoKo699",
+        "node_id": "MDQ6VXNlcjI4MTQ5MzEz",
+        "organizations_url": "https://api.github.com/users/GoGoKo699/orgs",
+        "received_events_url": "https://api.github.com/users/GoGoKo699/received_events",
+        "repos_url": "https://api.github.com/users/GoGoKo699/repos",
+        "site_admin": false,
+        "starred_url": "https://api.github.com/users/GoGoKo699/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/GoGoKo699/subscriptions",
+        "type": "User",
+        "url": "https://api.github.com/users/GoGoKo699",
+        "user_view_type": "public"
+      },
+      "private": true,
+      "pulls_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/pulls{/number}",
+      "releases_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/releases{/id}",
+      "stargazers_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/stargazers",
+      "statuses_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/statuses/{sha}",
+      "subscribers_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/subscribers",
+      "subscription_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/subscription",
+      "tags_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/tags",
+      "teams_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/teams",
+      "trees_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees{/sha}",
+      "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity"
+    },
+    "head_sha": "4dba83be51ca8113f7082edf06a7e04b999f4a27",
+    "html_url": "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/actions/runs/34681565631",
+    "id": 34681565631,
+    "jobs_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/actions/runs/34681565631/jobs",
+    "logs_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/actions/runs/34681565631/logs",
+    "name": "Project reader site",
+    "node_id": "WFR_kwLOUSALgs8AAAAIEy6xvw",
+    "path": ".github/workflows/reader-site.yml",
+    "previous_attempt_url": null,
+    "pull_requests": [
+      {
+        "base": {
+          "ref": "main",
+          "repo": {
+            "id": 1361054594,
+            "name": "Measurement-Geometry-Superadditivity",
+            "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity"
+          },
+          "sha": "f0015c56a19fd953c6797b2c64d9b507105234e3"
+        },
+        "head": {
+          "ref": "reader/preskill-bridge-v1",
+          "repo": {
+            "id": 1361054594,
+            "name": "Measurement-Geometry-Superadditivity",
+            "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity"
+          },
+          "sha": "4dba83be51ca8113f7082edf06a7e04b999f4a27"
+        },
+        "id": 4512255591,
+        "number": 4,
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/pulls/4"
+      }
+    ],
+    "referenced_workflows": [],
+    "repository": {
+      "archive_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/{archive_format}{/ref}",
+      "assignees_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/assignees{/user}",
+      "blobs_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/blobs{/sha}",
+      "branches_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/branches{/branch}",
+      "collaborators_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/collaborators{/collaborator}",
+      "comments_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/comments{/number}",
+      "commits_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/commits{/sha}",
+      "compare_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/compare/{base}...{head}",
+      "contents_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/contents/{+path}",
+      "contributors_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/contributors",
+      "deployments_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/deployments",
+      "description": null,
+      "downloads_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/downloads",
+      "events_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/events",
+      "fork": false,
+      "forks_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/forks",
+      "full_name": "GoGoKo699/Measurement-Geometry-Superadditivity",
+      "git_commits_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/commits{/sha}",
+      "git_refs_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/refs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/tags{/sha}",
+      "hooks_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/hooks",
+      "html_url": "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity",
+      "id": 1361054594,
+      "issue_comment_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/issues/comments{/number}",
+      "issue_events_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/issues/events{/number}",
+      "issues_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/issues{/number}",
+      "keys_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/keys{/key_id}",
+      "labels_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/labels{/name}",
+      "languages_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/languages",
+      "merges_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/merges",
+      "milestones_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/milestones{/number}",
+      "name": "Measurement-Geometry-Superadditivity",
+      "node_id": "R_kgDOUSALgg",
+      "notifications_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/notifications{?since,all,participating}",
+      "owner": {
+        "avatar_url": "https://avatars.githubusercontent.com/u/28149313?v=4",
+        "events_url": "https://api.github.com/users/GoGoKo699/events{/privacy}",
+        "followers_url": "https://api.github.com/users/GoGoKo699/followers",
+        "following_url": "https://api.github.com/users/GoGoKo699/following{/other_user}",
+        "gists_url": "https://api.github.com/users/GoGoKo699/gists{/gist_id}",
+        "gravatar_id": "",
+        "html_url": "https://github.com/GoGoKo699",
+        "id": 28149313,
+        "login": "GoGoKo699",
+        "node_id": "MDQ6VXNlcjI4MTQ5MzEz",
+        "organizations_url": "https://api.github.com/users/GoGoKo699/orgs",
+        "received_events_url": "https://api.github.com/users/GoGoKo699/received_events",
+        "repos_url": "https://api.github.com/users/GoGoKo699/repos",
+        "site_admin": false,
+        "starred_url": "https://api.github.com/users/GoGoKo699/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/GoGoKo699/subscriptions",
+        "type": "User",
+        "url": "https://api.github.com/users/GoGoKo699",
+        "user_view_type": "public"
+      },
+      "private": true,
+      "pulls_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/pulls{/number}",
+      "releases_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/releases{/id}",
+      "stargazers_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/stargazers",
+      "statuses_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/statuses/{sha}",
+      "subscribers_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/subscribers",
+      "subscription_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/subscription",
+      "tags_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/tags",
+      "teams_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/teams",
+      "trees_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/git/trees{/sha}",
+      "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity"
+    },
+    "rerun_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/actions/runs/34681565631/rerun",
+    "run_attempt": 1,
+    "run_number": 18,
+    "run_started_at": "2026-09-12T07:45:47Z",
+    "status": "completed",
+    "triggering_actor": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/28149313?v=4",
+      "events_url": "https://api.github.com/users/GoGoKo699/events{/privacy}",
+      "followers_url": "https://api.github.com/users/GoGoKo699/followers",
+      "following_url": "https://api.github.com/users/GoGoKo699/following{/other_user}",
+      "gists_url": "https://api.github.com/users/GoGoKo699/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.com/GoGoKo699",
+      "id": 28149313,
+      "login": "GoGoKo699",
+      "node_id": "MDQ6VXNlcjI4MTQ5MzEz",
+      "organizations_url": "https://api.github.com/users/GoGoKo699/orgs",
+      "received_events_url": "https://api.github.com/users/GoGoKo699/received_events",
+      "repos_url": "https://api.github.com/users/GoGoKo699/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/GoGoKo699/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/GoGoKo699/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/GoGoKo699",
+      "user_view_type": "public"
+    },
+    "updated_at": "2026-09-12T07:49:28Z",
+    "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/actions/runs/34681565631",
+    "workflow_id": 352998740,
+    "workflow_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/actions/workflows/352998740"
+  },
+  "jobs": {
+    "jobs": [
+      {
+        "conclusion": "success",
+        "id": 103521021174,
+        "logs_url": null,
+        "name": "build-and-review",
+        "run_id": 34681565631,
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Install pinned Markdown converter",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Install recorded dependencies and browser",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Preserve the scientific baseline",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Existing and reader-site tests",
+            "number": 7,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Build a private review artifact",
+            "number": 8,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Test real local navigation, layouts and controls",
+            "number": 9,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Upload review files only",
+            "number": 10,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 19,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 20,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 21,
+            "status": "completed"
+          }
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "artifacts": [
+      {
+        "archive_download_url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/actions/artifacts/10294019625/zip",
+        "created_at": "2026-09-12T07:49:26Z",
+        "digest": "sha256:b1cacac2e96550f59c7d33c78dddee096eff948eb49f51b9ba5ac93aa58b38f8",
+        "expired": false,
+        "expires_at": "2026-10-12T07:49:25Z",
+        "id": 10294019625,
+        "name": "private-project-reader-site",
+        "size_in_bytes": 10209911,
+        "updated_at": "2026-09-12T07:49:26Z",
+        "url": "https://api.github.com/repos/GoGoKo699/Measurement-Geometry-Superadditivity/actions/artifacts/10294019625",
+        "workflow_run": {
+          "head_branch": "reader/preskill-bridge-v1",
+          "head_repository_id": 1361054594,
+          "head_sha": "4dba83be51ca8113f7082edf06a7e04b999f4a27",
+          "id": 34681565631,
+          "repository_id": 1361054594
+        }
+      }
+    ]
+  }
+}

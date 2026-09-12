@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/workspace/scratch/323c19becda4/task-venv/bin/python",
+    "website/check.py",
+    "--site",
+    "build/preskill-reader-review",
+    "--report",
+    "website/review/SITE_CHECK.json"
+  ],
+  "working_directory": "/workspace/scratch/323c19becda4/Measurement-Geometry-Superadditivity",
+  "started_utc": "2026-09-12T07:43:58.336808+00:00",
+  "duration_seconds": 1.563,
+  "return_code": 0,
+  "environment_overrides": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MPLBACKEND": "Agg",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "assertions_enabled": true,
+  "child_maxrss_kib": 40020,
+  "log": "logs/site-check.log"
+}

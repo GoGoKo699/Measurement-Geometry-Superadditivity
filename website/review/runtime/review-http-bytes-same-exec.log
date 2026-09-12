@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "scope": "Actual loopback HTTP bytes and internal HTML anchors; browser layout, MathML display, JavaScript controls and GitHub renderer were not tested",
+  "base_url": "http://127.0.0.1:8765/",
+  "configured_pages": 17,
+  "http_resources_checked": 112,
+  "total_http_bytes": 6587240,
+  "html_anchor_references_checked": 571,
+  "failures": []
+}

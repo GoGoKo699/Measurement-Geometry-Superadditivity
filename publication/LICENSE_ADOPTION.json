@@ -1,0 +1,52 @@
+{
+  "repository": "GoGoKo699/Measurement-Geometry-Superadditivity",
+  "adopted_date": "2026-09-12",
+  "adoption_starting_commit": "a0ef38a9ea18145028a4e784242738d995e37e87",
+  "adoption_starting_tree": "c1b4bb1f03b875cf3d9206400d91d59fa3acfac8",
+  "branch": "release/public-readiness-v1",
+  "owner_confirmation": {
+    "status": "explicitly_confirmed_in_task",
+    "rights_holder": "Ruge Lin",
+    "citation_author": {
+      "family-names": "Lin",
+      "given-names": "Ruge"
+    },
+    "authority_to_license_original_material": true,
+    "scope": "MIT for original code; CC BY 4.0 for original prose, figures and data where applicable rights exist; existing third-party terms preserved."
+  },
+  "license_active": true,
+  "licenses_by_material": {
+    "original_code": "MIT",
+    "original_noncode_content": "CC-BY-4.0",
+    "third_party": "unchanged component terms"
+  },
+  "operative_scope": "LICENSE.md",
+  "files_sha256": {
+    "LICENSE.md": "edc3204a97de004499f6392d10b936dcbdfc113d6cea2911789e5571ea543cf5",
+    "LICENSES/MIT.txt": "a92600540b1ab7a18301e2632a29334b3df227ad836e88df9967d69e3c86db66",
+    "LICENSES/CC-BY-4.0.txt": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+    "CITATION.cff": "a2b17ad519b172286230b6f75284a4b3078d2a4006b427072d2ab9a1ef764457"
+  },
+  "legal_text_sources": {
+    "LICENSES/MIT.txt": {
+      "source": "https://opensource.org/license/mit",
+      "method": "Standard text inspected; confirmed holder/year inserted; exact copy of the reviewed candidate."
+    },
+    "LICENSES/CC-BY-4.0.txt": {
+      "source": "https://creativecommons.org/licenses/by/4.0/legalcode.txt",
+      "retrieved_date": "2026-09-12",
+      "method": "Exact complete bytes downloaded from the official Creative Commons plaintext endpoint; no substitutions."
+    }
+  },
+  "not_authorized_by_this_confirmation": [
+    "merge",
+    "visibility change",
+    "history rewrite",
+    "publication of retained private historical metadata",
+    "release",
+    "deployment"
+  ],
+  "public_visibility_changed": false,
+  "merge_performed": false,
+  "historical_records": "publication/proposed/ and the initial preparation reviews retain their original pending-decision language as dated evidence, not operative license notices."
+}

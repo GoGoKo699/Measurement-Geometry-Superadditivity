@@ -1,0 +1,62 @@
+........................................................................ [ 77%]
+.......F............F                                                    [100%]
+=================================== FAILURES ===================================
+______________________________ test_complete_site ______________________________
+
+site = PosixPath('/workspace/scratch/323c19becda4/Measurement-Geometry-Superadditivity/build/reader-tests-oiv9o1bl/site')
+
+    def test_complete_site(site):
+>       r=checker.check(site)
+          ^^^^^^^^^^^^^^^^^^^
+
+website/tests/test_site.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+website/check.py:58: in check
+    require(not missing,'Broken links: '+repr(missing[:25]))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ok = False
+message = "Broken links: [('index.html', 'files/WEBSITE.md', 'missing file'), ('status.html', 'files/reader/README.md', 'missing file')]"
+
+    def require(ok,message):
+>    if not ok:raise ValueError(message)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+E    ValueError: Broken links: [('index.html', 'files/WEBSITE.md', 'missing file'), ('status.html', 'files/reader/README.md', 'missing file')]
+
+website/build.py:24: ValueError
+---------------------------- Captured stdout setup -----------------------------
+{
+  "pages": 17,
+  "themed_svg_files": 10,
+  "mathml_expressions": 761,
+  "baseline_preservation": {
+    "baseline_commit": "9a1e4cb3bad843db9cec1fa348870ca7162df0e0",
+    "baseline_members_unchanged_except_root_editorial_pages": 163,
+    "approved_graphical_artifacts_unchanged": 27,
+    "original_root_documents_preserved": true
+  },
+  "output": "/workspace/scratch/323c19becda4/Measurement-Geometry-Superadditivity/build/reader-tests-oiv9o1bl/site"
+}
+__________ test_learning_navigation_and_search_cover_required_routes ___________
+
+site = PosixPath('/workspace/scratch/323c19becda4/Measurement-Geometry-Superadditivity/build/reader-tests-oiv9o1bl/site')
+
+    def test_learning_navigation_and_search_cover_required_routes(site):
+        config=json.loads((ROOT/'site.json').read_text())
+        expected={p['slug']+'.html' for p in config['pages']}
+        for row in config['pages']:
+            page=BeautifulSoup((site/(row['slug']+'.html')).read_text(),'html.parser')
+            assert {a['href'] for a in page.select('nav .nav-link')}==expected
+            if row.get('previous'):
+                assert page.select_one('a[rel="prev"]')['href']==row['previous']+'.html'
+            assert page.select_one('.next-link')['href']==(row.get('next') or 'index')+'.html'
+        search=json.loads((site/'assets/search-index.js').read_text().removeprefix('window.PROJECT_SEARCH = ').strip().rstrip(';'))
+>       assert any(row['url'].startswith('background.html#') and 'Preskill' in row['text'] for row in search)
+E       assert False
+E        +  where False = any(<generator object test_learning_navigation_and_search_cover_required_routes.<locals>.<genexpr> at 0x7ff98c64e400>)
+
+website/tests/test_site.py:126: AssertionError
+=========================== short test summary info ============================
+FAILED website/tests/test_site.py::test_complete_site - ValueError: Broken li...
+FAILED website/tests/test_site.py::test_learning_navigation_and_search_cover_required_routes
+2 failed, 91 passed in 8.22s

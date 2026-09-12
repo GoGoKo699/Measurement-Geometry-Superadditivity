@@ -1,6 +1,6 @@
 {
   "baseline_commit": "9a1e4cb3bad843db9cec1fa348870ca7162df0e0",
-  "scope": "new reader guides, navigation and visual theme; protected science unchanged",
+  "scope": "Reader guides and plain navigation; scientific sources and protected graphics unchanged",
   "my_tone": {
     "repository": "GoGoKo699/My-tone",
     "commit": "005873301782c06f21b1c6e73a5ce3b08c630cc4",
@@ -32,7 +32,7 @@
         "docs/MODEL_AND_CLAIMS.md#m06"
       ],
       "scientific_additions_authorized": false,
-      "comment": "Reader-facing explanation of referenced source; website/status/palette content is new presentation metadata."
+      "comment": "Reader explanation traced to canonical sources; no scientific additions. Preskill redesign metadata is separate from the proof ledger."
     },
     {
       "path": "website/pages/channel.md",
@@ -40,10 +40,13 @@
         "docs/MODEL_AND_CLAIMS.md#m01",
         "docs/MODEL_AND_CLAIMS.md#m02",
         "docs/COMPLETE_PROOF.md#p01",
-        "docs/COMPLETE_PROOF.md#p04"
+        "docs/COMPLETE_PROOF.md#p04",
+        "docs/COMPLETE_PROOF.md#p09",
+        "docs/COMPLETE_PROOF.md#p10",
+        "docs/COMPLETE_PROOF.md#p13"
       ],
       "scientific_additions_authorized": false,
-      "comment": "Reader-facing explanation of referenced source; website/status/palette content is new presentation metadata."
+      "comment": "Reader explanation traced to canonical sources; no scientific additions. Preskill redesign metadata is separate from the proof ledger."
     },
     {
       "path": "website/pages/proof-guide.md",
@@ -53,10 +56,14 @@
         "docs/COMPLETE_PROOF.md#p07",
         "docs/COMPLETE_PROOF.md#p08",
         "docs/COMPLETE_PROOF.md#p09",
-        "docs/COMPLETE_PROOF.md#p10"
+        "docs/COMPLETE_PROOF.md#p10",
+        "docs/MODEL_AND_CLAIMS.md#m04",
+        "docs/MODEL_AND_CLAIMS.md#m07",
+        "docs/COMPLETE_PROOF.md#p03",
+        "docs/COMPLETE_PROOF.md#p13"
       ],
       "scientific_additions_authorized": false,
-      "comment": "Reader-facing explanation of referenced source; website/status/palette content is new presentation metadata."
+      "comment": "Reader explanation traced to canonical sources; no scientific additions. Preskill redesign metadata is separate from the proof ledger."
     },
     {
       "path": "website/pages/limits.md",
@@ -65,10 +72,11 @@
         "docs/MODEL_AND_CLAIMS.md#m06",
         "docs/MODEL_AND_CLAIMS.md#m07",
         "docs/COMPLETE_PROOF.md#p11",
-        "docs/COMPLETE_PROOF.md#p12"
+        "docs/COMPLETE_PROOF.md#p12",
+        "docs/COMPLETE_PROOF.md#p04"
       ],
       "scientific_additions_authorized": false,
-      "comment": "Reader-facing explanation of referenced source; website/status/palette content is new presentation metadata."
+      "comment": "Reader explanation traced to canonical sources; no scientific additions. Preskill redesign metadata is separate from the proof ledger."
     },
     {
       "path": "website/pages/verification.md",
@@ -79,7 +87,7 @@
         "reproduce.py"
       ],
       "scientific_additions_authorized": false,
-      "comment": "Reader-facing explanation of referenced source; website/status/palette content is new presentation metadata."
+      "comment": "Reader explanation traced to canonical sources; no scientific additions. Preskill redesign metadata is separate from the proof ledger."
     },
     {
       "path": "website/pages/materials.md",
@@ -90,7 +98,7 @@
         "docs/REFERENCES.md"
       ],
       "scientific_additions_authorized": false,
-      "comment": "Reader-facing explanation of referenced source; website/status/palette content is new presentation metadata."
+      "comment": "Reader explanation traced to canonical sources; no scientific additions. Preskill redesign metadata is separate from the proof ledger."
     },
     {
       "path": "website/pages/figures.md",
@@ -100,7 +108,7 @@
         "data/figures/cross_figure_witness_bound_check.json"
       ],
       "scientific_additions_authorized": false,
-      "comment": "Reader-facing explanation of referenced source; website/status/palette content is new presentation metadata."
+      "comment": "Reader explanation traced to canonical sources; no scientific additions. Preskill redesign metadata is separate from the proof ledger."
     },
     {
       "path": "website/pages/status.md",
@@ -109,7 +117,7 @@
         "website/provenance/baseline_STATUS.md"
       ],
       "scientific_additions_authorized": false,
-      "comment": "Reader-facing explanation of referenced source; website/status/palette content is new presentation metadata."
+      "comment": "Reader explanation traced to canonical sources; no scientific additions. Preskill redesign metadata is separate from the proof ledger."
     },
     {
       "path": "website/pages/visual-design.md",
@@ -118,7 +126,34 @@
         "figures/approved/figure_02_guaranteed_region.svg"
       ],
       "scientific_additions_authorized": false,
-      "comment": "Reader-facing explanation of referenced source; website/status/palette content is new presentation metadata."
+      "comment": "Reader explanation traced to canonical sources; no scientific additions. Preskill redesign metadata is separate from the proof ledger."
+    },
+    {
+      "path": "website/pages/background.md",
+      "source_anchors": [
+        "docs/MODEL_AND_CLAIMS.md#m01",
+        "docs/MODEL_AND_CLAIMS.md#m02",
+        "docs/MODEL_AND_CLAIMS.md#m04",
+        "docs/MODEL_AND_CLAIMS.md#m07",
+        "docs/COMPLETE_PROOF.md#p10"
+      ],
+      "scientific_additions_authorized": false,
+      "external_source": "preskill-qst-v5",
+      "learning_metadata": "website/learning_bridge.json",
+      "comment": "Original educational crosswalk; exact v5 passages verified directly. Project mathematics is not attributed to the tutorial."
     }
-  ]
+  ],
+  "preskill_bridge": {
+    "starting_commit": "f0015c56a19fd953c6797b2c64d9b507105234e3",
+    "branch": "reader/preskill-bridge-v1",
+    "date": "2026-09-12",
+    "source_of_truth": "website/pages/",
+    "learning_metadata": "website/learning_bridge.json",
+    "my_tone_consulted": false,
+    "prior_my_tone_record": "The top-level my_tone entry describes the earlier reader pass, not this redesign.",
+    "science_audit_performed": false,
+    "manuscript_authorized": false,
+    "pending_correction_commit": "9ccecbf4cd3d975de2c498ba4fe2a9862f90778b",
+    "pending_corrections_merged": false
+  }
 }

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "starting_commit": "857d173c79140b5c2643c1a7d16b4a2321ed8dd4",
+  "inherited_files_unchanged": 344,
+  "recorded_editorial_changes": [
+    "PUBLICATION.md",
+    "publication/READINESS.json"
+  ],
+  "historical_objects_reviewed": 2,
+  "archive_identity_mappings": 166,
+  "core_corrections_applied_to_live_source": false,
+  "scope": "Offline record consistency and preservation; no live settings query, scientific re-evaluation or public clearance."
+}

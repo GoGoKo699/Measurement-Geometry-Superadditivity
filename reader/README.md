@@ -1,11 +1,12 @@
 # Measurement geometry and collective quantum coding
 
-[Overview](README.md) · [Channel](channel.md) · [Proof route](proof-guide.md) · [Figures](figures.md) · [Exact theorem](../docs/MODEL_AND_CLAIMS.md) · [Complete proof](../docs/COMPLETE_PROOF.md) · [Materials](materials.md)
+[Overview](README.md) · [Background](background.md) · [Channel](channel.md) · [Proof route](proof-guide.md) · [Figures](figures.md) · [Exact theorem](../docs/MODEL_AND_CLAIMS.md) · [Complete proof](../docs/COMPLETE_PROOF.md) · [Materials](materials.md)
 
 <details>
 <summary>All reading routes</summary>
 
 - [The project](README.md)
+- [Selected background](background.md)
 - [The channel](channel.md)
 - [The proof route](proof-guide.md)
 - [Figure atlas](figures.md)
@@ -25,15 +26,15 @@
 </details>
 
 
-A qubit either arrives intact or is measured and lost. In the second case, a classical record remains. **How much does the geometry of the possible measurements matter when that record is imperfect?**
+A qubit either arrives intact or is measured and lost. In the second case, an imperfect classical record remains. **The geometry of those measurements can guarantee quantum communication beyond the globally optimized single-use coherent-information benchmark.**
 
-For the channel studied here, every finite measurement ensemble spanning all three Bloch directions guarantees a nonempty range of measurement probabilities with
+For every permitted finite measurement ensemble spanning all three Bloch directions, and every **common symmetric reporting error** $0<\epsilon<1/2$, the project proves a nonempty interval of measurement probabilities with
 
-$$Q^{(1)}(\mathcal N)=0<Q(\mathcal N),$$
+$$Q^{(1)}(\mathcal N)=0<Q(\mathcal N).$$
 
-for every **common symmetric reporting error** $0<\epsilon<1/2$. Here $Q^{(1)}$ is coherent information optimized over all single-qubit input states; $Q$ is unassisted asymptotic quantum capacity. The theorem supplies a guaranteed region, not an exact capacity formula. Its scalar entropy inequality is partly computer assisted.
+Here $Q^{(1)}$ maximizes coherent information over every single-qubit input state. $Q$ is unassisted asymptotic quantum capacity. A suitable collective encoding certifies a positive asymptotic rate where this fully optimized single-use quantity is zero. The theorem gives a sufficient region, not an exact capacity formula or a practical finite-block decoder.
 
-[The model and exact statement](../docs/MODEL_AND_CLAIMS.md#m01) · [How the proof works](proof-guide.md)
+**Expert bypass:** [exact theorem and assumptions](../docs/MODEL_AND_CLAIMS.md#m04) · [complete proof](../docs/COMPLETE_PROOF.md) · [figure atlas and downloads](figures.md) · [verification and evidence](verification.md).
 
 ![The channel and retained coding witness in the Gachet-inspired palette](assets/figure_01_channel_and_witness.svg)
 
@@ -41,33 +42,35 @@ for every **common symmetric reporting error** $0<\epsilon<1/2$. Here $Q^{(1)}$ 
 
 ## Start with the channel
 
-The receiver knows which qubits survived and which axes were measured. For a measured qubit, only the reported sign is available. The true outcome, the reporting error, and the discarded quantum system are not available to the receiver. The encoder acts before these random choices; every outcome is included.
+The receiver gets surviving qubits and the correct measurement mask and axis labels, but only the reported signs. True outcomes, error bits and discarded qubits stay inaccessible. Encoding happens before those random choices, and every outcome enters the calculation.
 
-[Follow a single use](channel.md)
+If coherent information is familiar, [continue directly to the channel and eight-use illustration](channel.md). Otherwise, the [focused Preskill reading map and crosswalk](background.md) supplies the selected background and returns you to the exact place each concept is used. Preskill is the one external tutorial; the project supplies its own physical and geometric bridge.
 
 ## Then compare one use with a block
 
-For equally likely Pauli axes, a measurement probability of $0.70$ and a reporting error of $0.10$, every single-use input has nonpositive coherent information. A balanced eight-use repetition input instead gives
+For equally likely Pauli axes, measurement probability $0.70$ and reporting error $0.10$, every one-use input has nonpositive coherent information and pure inputs attain zero. A balanced eight-use repetition input gives
 
 $$I_8/8>7.47\times10^{-5}\ \text{bits per physical use}.$$
 
-An outer code gives this positive block value its asymptotic communication meaning. It is not a demonstration that an isolated eight-qubit block decodes nearly perfectly. [Exact witness and all outcome branches](../docs/COMPLETE_PROOF.md#p13)
+The [channel guide](channel.md#eight-use-witness) explains the coherent encoder, its purified test input and every measured-count contribution, including the negative all-measured term. [Figure 1](figures.md#figure-1) shows this comparison. A finite positive inner block is chosen before outer coding gives it an asymptotic rate interpretation; an isolated eight-use decoding fidelity is not established.
 
 ## What geometry guarantees
 
-Full span removes the common perpendicular direction available to coplanar measurements. The proof turns that distinction into a strictly positive gap between a global single-use entropy bound and a constructive repetition bound. Near a plane, the gap can become arbitrarily small. Other codes are not excluded for a coplanar channel; the reverse statement concerns this construction's strict threshold criterion.
+The [proof guide](proof-guide.md#geometric-guarantee) joins an obstruction for every one-use input, a sufficient repetition construction and a geometric inequality separating their costs. Full span removes a common perpendicular direction, but the quantitative guarantee also needs the project's computer-assisted scalar entropy inequality.
 
-[Read the result](../docs/MODEL_AND_CLAIMS.md#m04) · [See its limits](limits.md)
+[Figure 2](figures.md#figure-2) illustrates the guaranteed band for equally weighted Pauli axes. Its conservative band is distinct from the sharper bound supporting the eight-use witness. [Figure 3](figures.md#figure-3) follows a controlled approach to a plane; the [limits page](limits.md) explains the cone domain, coplanarity and both reporting-noise endpoints.
 
 ## Read, inspect, reproduce
 
-The project has three entry routes. **Understand the result:** channel, proof guide, then figures. **Check the argument:** exact model, complete proof, and verification record. **Use the materials:** figure inputs, independent checkers, references, and the claim-to-evidence inventory.
+The learning route is **selected background → channel and witness → geometric proof guide → exact theorem and proof → limits and verification**. Every stage can be opened directly. You do not need to run software to read the argument.
 
-[View the figures](figures.md) · [Run the checks](verification.md) · [Find the source materials](materials.md)
+Incomplete-erasure channels, repetition coding and superadditivity are established. The working contribution is the sufficient geometric condition over the stated family, subject to the [canonical priority qualifiers](../docs/MODEL_AND_CLAIMS.md#m07). [Primary citations](../docs/REFERENCES.md) serve attribution, not an additional prerequisite list.
+
+[Source materials](materials.md) · [Current status and correction record](status.md) · [GitHub and optional HTML instructions](../WEBSITE.md)
 
 
 ---
 
-[Continue: The channel](channel.md)
+[Continue: Selected background](background.md)
 
 GitHub reading view generated from [the website source](../website/pages/index.md). The equations, figure data and canonical captions retain their source meaning. Custom website navigation, local search and interactive color switching are not executed in this GitHub view.

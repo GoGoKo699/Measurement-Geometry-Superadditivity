@@ -1,0 +1,3788 @@
+{
+  "passed": true,
+  "scope": "Actual loopback HTTP bytes and internal HTML anchors; browser layout, MathML display, JavaScript controls and GitHub renderer were not tested",
+  "base_url": "http://127.0.0.1:8765/",
+  "configured_pages": 17,
+  "http_resources_checked": 112,
+  "total_http_bytes": 6587240,
+  "html_anchor_references_checked": 571,
+  "non_html_anchor_references_not_evaluated": [],
+  "external_links_observed_but_not_requested": [
+    "https://arxiv.org/abs/1604.07450v5",
+    "https://arxiv.org/pdf/1604.07450v5",
+    "https://arxiv.org/pdf/1604.07450v5#page=21",
+    "https://arxiv.org/pdf/1604.07450v5#page=22",
+    "https://arxiv.org/pdf/1604.07450v5#page=23",
+    "https://arxiv.org/pdf/1604.07450v5#page=25",
+    "https://arxiv.org/pdf/1604.07450v5#page=56",
+    "https://arxiv.org/pdf/1604.07450v5#page=57",
+    "https://arxiv.org/pdf/1604.07450v5#page=59",
+    "https://arxiv.org/pdf/1604.07450v5#page=62",
+    "https://arxiv.org/pdf/1604.07450v5#page=64",
+    "https://arxiv.org/pdf/1604.07450v5#page=7",
+    "https://arxiv.org/pdf/1604.07450v5#page=81",
+    "https://arxiv.org/pdf/1604.07450v5#page=82",
+    "https://en.wikipedia.org/wiki/Portrait_of_Dr._Gachet",
+    "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity",
+    "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/blob/5e367b1e541bf7d5ba1af90e85796d59db9e03f4/audits/repository-sanity-01/REPORT.md",
+    "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/blob/9ccecbf4cd3d975de2c498ba4fe2a9862f90778b/audits/repository-sanity-01/corrections/REPORT.md",
+    "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/blob/9ccecbf4cd3d975de2c498ba4fe2a9862f90778b/docs/REFERENCES.md#s6-correction",
+    "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/blob/reader/preskill-bridge-v1/reader/README.md"
+  ],
+  "failures": [],
+  "resources": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 12729,
+      "sha256": "bba924b4df784a62bcab7e1dc871f09a26ba613bad1f621098af5a883506392a",
+      "matches_build_bytes": true,
+      "content_type": "text/html"
+    },
+    {
+      "path": "background.html",
+      "status": 200,
+      "bytes": 25230,
+      "sha256": "4f2d676ec1170097bd2f3ec67c5c4b42268c875b773f1eae1817b6e697cb80f7",
+      "matches_build_bytes": true,
+      "content_type": "text/html"
+    },
+    {
+      "path": "channel.html",
+      "status": 200,
+      "bytes": 34593,
+      "sha256": "a04854ac223262f2e25f14177245fd83742eb2fbb068db979721ca9a47e81a79",
+      "matches_build_bytes": true,
+      "content_type": "text/html"
+    },
+    {
+      "path": "proof-guide.html",
+      "status": 200,
+      "bytes": 27430,
+      "sha256": "4f255aaf226b2e59be36ca745b09205ad302e0a5c1e22c53f0e3779f383e67a7",
+      "matches_build_bytes": true,
+      "content_type": "text/html"
+    },
+    {
+      "path": "figures.html",
+      "status": 200,
+      "bytes": 26965,
+      "sha256": "690be522aa93376b518e7e4f619683295a4c2dcb8c629ea5b84c44ad47f3da48",
+      "matches_build_bytes": true,
+      "content_type": "text/html"
+    },
+    {
+      "path": "limits.html",
+      "status": 200,
+      "bytes": 18524,
+      "sha256": "010c7b301f43eea8fda42ea5ca3fe01f7cbcf2aadc3dc02de376d941659afdc4",
+      "matches_build_bytes": true,
+      "content_type": "text/html"
+    },
+    {
+      "path": "model.html",
+      "status": 200,
+      "bytes": 67457,
+      "sha256": "50a923bad65bc0f07f798815729c6f06ade6e2555b5695ba08992ba3e7d17b3f",
+      "matches_build_bytes": true,
+      "content_type": "text/html"
+    },
+    {
+      "path": "proof.html",
+      "status": 200,
+      "bytes": 243723,
+      "sha256": "5a15ef99e3cb321976aba2e5aea0d63b2bb49906a86bf20b8049fd15c8126ca3",
+      "matches_build_bytes": true,
+      "content_type": "text/html"
+    },
+    {
+      "path": "verification.html",
+      "status": 200,
+      "bytes": 10888,
+      "sha256": "ab73bc65e819a4a025a831bb8d3ec63077211c39b8efae2c5c365f337382cf3f",
+      "matches_build_bytes": true,
+      "content_type": "text/html"
+    },
+    {
+      "path": "reproduce.html",
+      "status": 200,
+      "bytes": 15850,
+      "sha256": "c0cf3f0c95e28650ddece6aa86461e47b0e1a641fad09ee744220ba61b8681cf",
+      "matches_build_bytes": true,
+      "content_type": "text/html"
+    },
+    {
+      "path": "references.html",
+      "status": 200,
+      "bytes": 11607,
+      "sha256": "ef2c842b268c74d2c6a10d3717ed3b0f9e89adcb983867fa85fefaaa8a00c8fd",
+      "matches_build_bytes": true,
+      "content_type": "text/html"
+    },
+    {
+      "path": "materials.html",
+      "status": 200,
+      "bytes": 13261,
+      "sha256": "3ef91e16296112c7c1d4a14cc51d963665e0855d2263e8823bc83ec1dd00520a",
+      "matches_build_bytes": true,
+      "content_type": "text/html"
+    },
+    {
+      "path": "notation.html",
+      "status": 200,
+      "bytes": 35534,
+      "sha256": "c563b099659ea53e2d5598c5a2103277d76dc8c9e12f972f15e300bf3b2dcb74",
+      "matches_build_bytes": true,
+      "content_type": "text/html"
+    },
+    {
+      "path": "provenance.html",
+      "status": 200,
+      "bytes": 32746,
+      "sha256": "7d23bf3c9151c271bbb517ecf2bb827dd6e1794fed13ab32f0a1dc45cb5c85fc",
+      "matches_build_bytes": true,
+      "content_type": "text/html"
+    },
+    {
+      "path": "argument.html",
+      "status": 200,
+      "bytes": 13044,
+      "sha256": "29391a383caa4de73e7ca777356d6953aba61bb2424556b36023df2bd016dc55",
+      "matches_build_bytes": true,
+      "content_type": "text/html"
+    },
+    {
+      "path": "visual-design.html",
+      "status": 200,
+      "bytes": 9109,
+      "sha256": "fc856452b73feb9fc47f423cc0ad29faadc1d191bfead88d05f70ba19eb02c91",
+      "matches_build_bytes": true,
+      "content_type": "text/html"
+    },
+    {
+      "path": "status.html",
+      "status": 200,
+      "bytes": 10014,
+      "sha256": "5dbaa15aad63fb17de5ecb6f92732254bbe93eb5ff62121760c38d39c6e09b4b",
+      "matches_build_bytes": true,
+      "content_type": "text/html"
+    },
+    {
+      "path": "assets/style.css",
+      "status": 200,
+      "bytes": 10389,
+      "sha256": "aa1f00682a52ecfa0cc2cf8bdbdad20338ed74172ae3e429d8112b75a3b92262",
+      "matches_build_bytes": true,
+      "content_type": "text/css"
+    },
+    {
+      "path": "assets/search-index.js",
+      "status": 200,
+      "bytes": 161149,
+      "sha256": "46f1d0a0b7c26ccd397380acc5ac45fa16025132360948cc6217681f7d84a0da",
+      "matches_build_bytes": true,
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/site.js",
+      "status": 200,
+      "bytes": 4008,
+      "sha256": "46387e718bafc89d4974bef159219c8407050100e7471417f5ca70dd50badcc0",
+      "matches_build_bytes": true,
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "files/website/pages/index.md",
+      "status": 200,
+      "bytes": 4088,
+      "sha256": "b35b19b23be49f5f70dbeb33236a4e50feb2a3ff29f8a6fc54bef60844971bc7",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "assets/theme/figure_01_channel_and_witness.svg",
+      "status": 200,
+      "bytes": 120173,
+      "sha256": "ae55000c4817410b942b56e633f737782092a151b529511c92813d3928691ede",
+      "matches_build_bytes": true,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "path": "files/WEBSITE.md",
+      "status": 200,
+      "bytes": 7240,
+      "sha256": "cb30e8cd4e03bf43f35ea761287ff6788c9d5ed484e23e9a7dc47e47a34635e6",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/BUILD_RECORD.json",
+      "status": 200,
+      "bytes": 9712,
+      "sha256": "f6fc6139fd427ccdcff5f007cb2cadefe51a707941326e9d7dc60ece97ee71ef",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/website/pages/background.md",
+      "status": 200,
+      "bytes": 5108,
+      "sha256": "225e84c9233f1cc4b5d1ac2479920a422021b68211e5b06ada740fbe6058a73c",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/website/learning_bridge.json",
+      "status": 200,
+      "bytes": 14934,
+      "sha256": "366a452b9647dbbfa388fc1eb7db2c9475c54efbc36731da534a4d268692e700",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/website/pages/channel.md",
+      "status": 200,
+      "bytes": 9275,
+      "sha256": "9520e182130fd0582d74b37b87d9a6f58e3fd2a861362e05b3707eed6a200dc3",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/website/pages/proof-guide.md",
+      "status": 200,
+      "bytes": 8264,
+      "sha256": "a0b6276e0534a613a930d6ee552168249238be94c4f32f35da905f2c6b10413c",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/website/pages/figures.md",
+      "status": 200,
+      "bytes": 1630,
+      "sha256": "d143a37de6865030b14c3dfa8e67fb34ed4f33baf1b0f9e111937942e1f5f4af",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/figures/CAPTIONS.md",
+      "status": 200,
+      "bytes": 4243,
+      "sha256": "e3d73825b33c7113eb2123ff2407acd63ccaad1b67a517589f7361ec9457e60b",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/figures/FIGURE_SPECIFICATIONS.md",
+      "status": 200,
+      "bytes": 17315,
+      "sha256": "88814c16103b3f946c0743807bff3f0f013910244caa77e520d06660b03e8bc8",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/figures/approved/figure_01_channel_and_witness.pdf",
+      "status": 200,
+      "bytes": 51456,
+      "sha256": "7db89431580b22f88a28ef4b4979b6bd68ad94ca8767074e434a748ba8ca5906",
+      "matches_build_bytes": true,
+      "content_type": "application/pdf"
+    },
+    {
+      "path": "files/figures/approved/figure_01_channel_and_witness.svg",
+      "status": 200,
+      "bytes": 120173,
+      "sha256": "ddd3ab75087861ac8940d89f6ce1f3f79967159647d89b80862fe9d581c1b261",
+      "matches_build_bytes": true,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "path": "files/figures/approved/figure_01_channel_and_witness.png",
+      "status": 200,
+      "bytes": 166169,
+      "sha256": "79a92a882423d8915c83c9e6e73fa9249a950866adba89392a0a8cc8557b106e",
+      "matches_build_bytes": true,
+      "content_type": "image/png"
+    },
+    {
+      "path": "files/data/figures/figure1_comparison.csv",
+      "status": 200,
+      "bytes": 805,
+      "sha256": "e56d9bf2817f2f535fcfd92d8d21d4f0c6be34c5c8dee9667d3e192e9d2e30bd",
+      "matches_build_bytes": true,
+      "content_type": "text/csv"
+    },
+    {
+      "path": "files/data/figures/figure1_all_masks_not_for_display.csv",
+      "status": 200,
+      "bytes": 3555,
+      "sha256": "3737b1f525e51aeb6b85c84a5e7b96c50d9066fc499d5c5498af4fec09f4a09c",
+      "matches_build_bytes": true,
+      "content_type": "text/csv"
+    },
+    {
+      "path": "files/data/figures/figure1_original_witness140.json",
+      "status": 200,
+      "bytes": 6709,
+      "sha256": "3aa5681b911b6b63dac8ddc9eb23ea6fb4882308315607b0b15b56a51eb1e2f8",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "assets/theme/figure_02_guaranteed_region.svg",
+      "status": 200,
+      "bytes": 218107,
+      "sha256": "f6524780413bd0c6b75ab7373303dcc124d6ff0f98d6a72b99338b4539489d17",
+      "matches_build_bytes": true,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "path": "files/figures/approved/figure_02_guaranteed_region.pdf",
+      "status": 200,
+      "bytes": 94734,
+      "sha256": "29aafa7cb7dc6777440f2804107c4c6d4b355a54ed1185cb9961bfb1383826b3",
+      "matches_build_bytes": true,
+      "content_type": "application/pdf"
+    },
+    {
+      "path": "files/figures/approved/figure_02_guaranteed_region.svg",
+      "status": 200,
+      "bytes": 218107,
+      "sha256": "91f5034233d395f5571c2a7af3740154b88c52af3df3e35e6acb812f10ab04ea",
+      "matches_build_bytes": true,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "path": "files/figures/approved/figure_02_guaranteed_region.png",
+      "status": 200,
+      "bytes": 155670,
+      "sha256": "005902206380591143528b51665e0634f30af2acc283f10eda68f3555e001bcf",
+      "matches_build_bytes": true,
+      "content_type": "image/png"
+    },
+    {
+      "path": "files/data/figures/figure2_pauli_guaranteed_region.csv",
+      "status": 200,
+      "bytes": 565540,
+      "sha256": "2a65b808133a2b0b6c8a58ae01b5df28637ad8ba5fa05f15cdd50682ab9e8fd2",
+      "matches_build_bytes": true,
+      "content_type": "text/csv"
+    },
+    {
+      "path": "files/data/figures/cross_figure_witness_bound_check.json",
+      "status": 200,
+      "bytes": 826,
+      "sha256": "26953a2cc3b2c60fc23cdc177211265ffaf5a801e1b598f211f96076bf373bf8",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "assets/theme/figure_03_coplanar_limit.svg",
+      "status": 200,
+      "bytes": 152197,
+      "sha256": "9143ac8065b44da015c84ac93f8f77b7c4d765c8941d01140519d9e9bbffb55b",
+      "matches_build_bytes": true,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "path": "files/figures/approved/figure_03_coplanar_limit.pdf",
+      "status": 200,
+      "bytes": 59798,
+      "sha256": "af61075e9bfb45b4544104e7747d6e5bc77927c39d9920aae563f1e20ed75cbd",
+      "matches_build_bytes": true,
+      "content_type": "application/pdf"
+    },
+    {
+      "path": "files/figures/approved/figure_03_coplanar_limit.svg",
+      "status": 200,
+      "bytes": 152197,
+      "sha256": "a5a8fe378f3eb573a6d5b02fae2aa67d291e6232440ec8798bf7a477e76584cd",
+      "matches_build_bytes": true,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "path": "files/figures/approved/figure_03_coplanar_limit.png",
+      "status": 200,
+      "bytes": 188994,
+      "sha256": "4ad2b9357cff5dd4c39a4c419b53b5f38e4d5ebeae107ab3a4627eaa998884d6",
+      "matches_build_bytes": true,
+      "content_type": "image/png"
+    },
+    {
+      "path": "files/data/figures/figure3_cone_geometry.csv",
+      "status": 200,
+      "bytes": 5018,
+      "sha256": "b8a2620053f48dea8bb10c68ee97a4cb77a64028782cd8023dd42bc66c96b294",
+      "matches_build_bytes": true,
+      "content_type": "text/csv"
+    },
+    {
+      "path": "files/data/figures/figure3_cone_gap.csv",
+      "status": 200,
+      "bytes": 349870,
+      "sha256": "e4b6855d428ff645e9a15439dad70035b698df13324c75c922c5ab1904f8bd2d",
+      "matches_build_bytes": true,
+      "content_type": "text/csv"
+    },
+    {
+      "path": "files/website/pages/limits.md",
+      "status": 200,
+      "bytes": 4434,
+      "sha256": "4a5df0b875f9ee66deb13598cdaefe8ef290b69dce2b5663db62223f1ace2c79",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/docs/MODEL_AND_CLAIMS.md",
+      "status": 200,
+      "bytes": 16209,
+      "sha256": "e15b0f0e64755ae2f6c707b467eb495045ebe13985c9990da506807b265cb708",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/validation/BASELINE_VALIDATION.json",
+      "status": 200,
+      "bytes": 4203,
+      "sha256": "387faf5ede682f382a10f375298f33cbe39f748baac073908da663a9191a7a2d",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/docs/COMPLETE_PROOF.md",
+      "status": 200,
+      "bytes": 47491,
+      "sha256": "dbc758b3d26d57815a70ac89d58a3996f9b3c7eb781a1de7d74e386e185033fa",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/website/pages/verification.md",
+      "status": 200,
+      "bytes": 3507,
+      "sha256": "c2eb125f9bad1258ec1c956da244b815917d8a800e3d5e1e68ef222304ccdd9e",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/docs/REPRODUCTION.md",
+      "status": 200,
+      "bytes": 7912,
+      "sha256": "1cb7447bcdd1475aad9f30f71868d8c0615acb2cba9c9f6bd22f05a9bc962526",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/certificates/common_noise_compact_certificate.json",
+      "status": 200,
+      "bytes": 2524387,
+      "sha256": "ab500804e56ba8c5ffb1ca7c1f38e3fd720b01561122b3a2bcc367a106ad66dd",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/provenance/MATHEMATICAL_CONTENT_CHECK.json",
+      "status": 200,
+      "bytes": 449,
+      "sha256": "276ca343de54a8af61a7913158ace0fd1b7387bd6ad099a581765802c6a7ab48",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/provenance/APPROVED_FIGURE_HASHES.json",
+      "status": 200,
+      "bytes": 3713,
+      "sha256": "ece7a20a64fb11d4f61db24736bc5885abd354cf007e9b8852a3660f23538b42",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/docs/REFERENCES.md",
+      "status": 200,
+      "bytes": 4609,
+      "sha256": "25a57ce2595a27f3578e698e2cfaa119599c5b3f2452fadf9c91bb5276250c7f",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/website/pages/materials.md",
+      "status": 200,
+      "bytes": 2928,
+      "sha256": "bc1ed853835411db8c44efe8f8ebf093067f888bf5a647824e310cf1d6adc920",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/website/review/PRESKILL_BRIDGE_REPORT.md",
+      "status": 200,
+      "bytes": 887,
+      "sha256": "701454733b31e711ee515f4a262277b0cb945385dc5ff8c977dc3ff8cfbdd2e5",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/provenance/CLAIM_COVERAGE.json",
+      "status": 200,
+      "bytes": 2738,
+      "sha256": "aa2dba34a6a80563977540577ec21d6f3b9b2afb1afedcf4e3713c77a273b82e",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/verification/integer/certify_all_noise.py",
+      "status": 200,
+      "bytes": 5696,
+      "sha256": "84256314596bdc5a10a573d36d0435a85430c94f06c38c03eb20054c29dd5829",
+      "matches_build_bytes": true,
+      "content_type": "text/x-python"
+    },
+    {
+      "path": "files/verification/mpmath/cross_backend.py",
+      "status": 200,
+      "bytes": 3241,
+      "sha256": "b542d89bd20f4dbd75923bee402d5a818d390a30ec88cc629623f9fd7d5cb79d",
+      "matches_build_bytes": true,
+      "content_type": "text/x-python"
+    },
+    {
+      "path": "files/verification/decimal/verify_certificate.py",
+      "status": 200,
+      "bytes": 4283,
+      "sha256": "8ac88f9e2ffde9562c28cc5aba7ec66667cf74e5a83a9446b56e2f5dfce9deac",
+      "matches_build_bytes": true,
+      "content_type": "text/x-python"
+    },
+    {
+      "path": "files/evidence/reference/integer224.json",
+      "status": 200,
+      "bytes": 746,
+      "sha256": "867fe0b8a685c656f5fd95d5dd10a48305eee5c15dcb3091481a59b164ab924d",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/evidence/reference/mpmath85.json",
+      "status": 200,
+      "bytes": 335,
+      "sha256": "7a810d1450a1bace115b5b22e2174aa18d8759454f4584f57e5302eae1ceb75b",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/evidence/reference/decimal130.json",
+      "status": 200,
+      "bytes": 627,
+      "sha256": "b8d367c94a59b0a8bc691caa3ed86a4d9b45d8a3e24f066aa898a714746c524f",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/docs/NOTATION_CROSSWALK.md",
+      "status": 200,
+      "bytes": 4823,
+      "sha256": "3dc137c0cc419ca08ca996759bd76243c48e3932e6615277d73e329ab86772d8",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/docs/SOURCE_TO_CANONICAL.md",
+      "status": 200,
+      "bytes": 18449,
+      "sha256": "6dc411858dc78e346b2a75e06b1e2871eb739051abe289ee74959c6442e4033f",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/provenance/SECTION_LEDGER.json",
+      "status": 200,
+      "bytes": 96931,
+      "sha256": "5cd5dba43acb597ecbab499ec873e6d3b25adff157350c5292e4548ffc9bf9ea",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/provenance/SOURCE_REGISTER.json",
+      "status": 200,
+      "bytes": 51314,
+      "sha256": "0d0a9eb677bb3f274dba5d83767970cea6d6756e9e0a2a73b87f4c596e66fd00",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/provenance/text_sources/S2__CLAIM_PROOF_MAP.md",
+      "status": 200,
+      "bytes": 13483,
+      "sha256": "230c934e45830cb013a8a0c0b9283ee717c619a76b85aafb87ed495a6f8b8275",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/provenance/text_sources/S3__THEOREM_STATEMENT.md",
+      "status": 200,
+      "bytes": 2777,
+      "sha256": "9854266cf1ce580fdb9b0f9a2a0d15f85f57d63fb13c8da3a0a14cc4940cb19a",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/provenance/text_sources/S4__THEORY.md",
+      "status": 200,
+      "bytes": 17611,
+      "sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/provenance/text_sources/S5__PROOF_AUDIT.md",
+      "status": 200,
+      "bytes": 14875,
+      "sha256": "374583496ca8a6e8910850e81aad0a52ed7084d552c32677b81aaa2860b6f64c",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/provenance/text_sources/S6__PRIOR_WORK_COMPARISON.md",
+      "status": 200,
+      "bytes": 7310,
+      "sha256": "d53b3911f1d831d715e0bf58f7570e1b044c81c7d7c51e242e12ee20e44c6faf",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/provenance/original_records/S7__AUDIT_SUMMARY.json",
+      "status": 200,
+      "bytes": 2381,
+      "sha256": "e5f47f1ccc28e68393caa5c51953b6cc5b846ae72c97cf9f72d7ca8f73c78732",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/provenance/text_sources/S8__THEORY.md",
+      "status": 200,
+      "bytes": 21709,
+      "sha256": "6d7f5d34d3918627656c32ebbb9da46311bc71ac82b04e342609f87a605593a8",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/provenance/text_sources/S9__PROOF_AUDIT.md",
+      "status": 200,
+      "bytes": 14428,
+      "sha256": "adb5355ad73a05cb1422a11925da628ed35cc025d1461bca5dad1a1f65aec7f1",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/verification/integer/dyadic_interval.py",
+      "status": 200,
+      "bytes": 4907,
+      "sha256": "9f2e0fd7399f55eaef58db9b9c6749b634053da7e563a394ee12524a89f9e949",
+      "matches_build_bytes": true,
+      "content_type": "text/x-python"
+    },
+    {
+      "path": "files/verification/decimal/decimal_interval.py",
+      "status": 200,
+      "bytes": 3748,
+      "sha256": "6547a4975338602b4afcc546a0d811017021aeb14240bb3fc279e590b80360db",
+      "matches_build_bytes": true,
+      "content_type": "text/x-python"
+    },
+    {
+      "path": "files/provenance/original_records/V8__verification_224.json",
+      "status": 200,
+      "bytes": 746,
+      "sha256": "867fe0b8a685c656f5fd95d5dd10a48305eee5c15dcb3091481a59b164ab924d",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/evidence/reference/witness100.json",
+      "status": 200,
+      "bytes": 5749,
+      "sha256": "090538ca37de9b9d7cc99b019c598f62ac30f0c294bb2ddf918bdc0728d1bb63",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/verification/decimal/check_witness.py",
+      "status": 200,
+      "bytes": 2399,
+      "sha256": "65f95c4c236acbf0681befe038a6e08dc41cfd4bee4fd28359d548f9618fd1b7",
+      "matches_build_bytes": true,
+      "content_type": "text/x-python"
+    },
+    {
+      "path": "files/provenance/original_records/W4__finite_witnesses.csv",
+      "status": 200,
+      "bytes": 1803,
+      "sha256": "d1f182a49c4d1ad0891613d47867f0f6da609cf55db7aa15921ccddd713ddb15",
+      "matches_build_bytes": true,
+      "content_type": "text/csv"
+    },
+    {
+      "path": "files/verification/mpmath/witness_formula.py",
+      "status": 200,
+      "bytes": 2485,
+      "sha256": "2c92f0a725b245d461bf734287d17c4e83ed73fb44769d16563efdcbc1098fa0",
+      "matches_build_bytes": true,
+      "content_type": "text/x-python"
+    },
+    {
+      "path": "files/provenance/text_sources/W5__examples.py.txt",
+      "status": 200,
+      "bytes": 5100,
+      "sha256": "cce7ae1694db48e1ec03647704c59e65dadeb7c0042d1556f25c9145798a2e34",
+      "matches_build_bytes": true,
+      "content_type": "text/plain"
+    },
+    {
+      "path": "files/verification/physical/physical_check.py",
+      "status": 200,
+      "bytes": 6140,
+      "sha256": "aba22216e33bd4b132ef100a823131a1a3ec7aacd78e7815cc63e3eae5ce0db5",
+      "matches_build_bytes": true,
+      "content_type": "text/x-python"
+    },
+    {
+      "path": "files/evidence/reference/physical_check.json",
+      "status": 200,
+      "bytes": 2278,
+      "sha256": "fd38892504503a826ea8d44e002cef97f32a40637a48a7757b51135ef7f92186",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/verification/analytic/check_endpoints.py",
+      "status": 200,
+      "bytes": 2579,
+      "sha256": "33c5937f265268006c65a2170b764a06c698ad896d9013da99e5d873974181a8",
+      "matches_build_bytes": true,
+      "content_type": "text/x-python"
+    },
+    {
+      "path": "files/evidence/reference/analytic_checks.json",
+      "status": 200,
+      "bytes": 630,
+      "sha256": "58fe14a312b3404a0a071e112aeb7791f63240e678071182cd9e6db634142d23",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/evidence/controls/mixed_input_control.json",
+      "status": 200,
+      "bytes": 463,
+      "sha256": "89743c3bb483a1fd0ac3e6c7882a356286b83f57b17bfd577cb6302a93960728",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/evidence/controls/rejected_float_candidate.json",
+      "status": 200,
+      "bytes": 413,
+      "sha256": "9268f23074d43dfe50cd0870bd68a75b7863446a6af44a0409719588831e3135",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/provenance/text_sources/R1__reproduce.py.txt",
+      "status": 200,
+      "bytes": 3168,
+      "sha256": "653a146f2b895c55481230d66c8f505a29195eca8d03554192ec952fef9572b6",
+      "matches_build_bytes": true,
+      "content_type": "text/plain"
+    },
+    {
+      "path": "files/provenance/text_sources/R2__reproduce.py.txt",
+      "status": 200,
+      "bytes": 1474,
+      "sha256": "3d397e2c0a67e605996377e53cf30a7523a9fdd0ec266913d4e85aeff8811990",
+      "matches_build_bytes": true,
+      "content_type": "text/plain"
+    },
+    {
+      "path": "files/provenance/original_records/R3__REPRODUCTION_COMPARISON.json",
+      "status": 200,
+      "bytes": 1326,
+      "sha256": "53604ce9fa8ba84510bc22a1f5bc78a24832493f96414aa8b0a4e1fa2586a9ed",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/provenance/original_records/R4__reproduction_verification.json",
+      "status": 200,
+      "bytes": 2333,
+      "sha256": "bdcc25cdaa9eb884ec7c810daf1717522c858bca4ab76d1eb848dbfa6bea70d0",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/provenance/text_sources/R5__requirements-reproducible.txt.txt",
+      "status": 200,
+      "bytes": 55,
+      "sha256": "555144ce0107590dfce4b77cc7d60b83d84816edcf7abd32e8b3d9cdc08e4467",
+      "matches_build_bytes": true,
+      "content_type": "text/plain"
+    },
+    {
+      "path": "files/provenance/text_sources/R6__requirements.txt.txt",
+      "status": 200,
+      "bytes": 72,
+      "sha256": "118b3fd5c67f7cf195eb694025c2a855e8ba23461652216b1c8ca15d3c41d710",
+      "matches_build_bytes": true,
+      "content_type": "text/plain"
+    },
+    {
+      "path": "files/provenance/text_sources/S10__PRIOR_PROOF_AUDIT.md",
+      "status": 200,
+      "bytes": 11660,
+      "sha256": "cce98822cc91375ffda04714573df124a60344999d368422982a795a1246a2b7",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/provenance/text_sources/S11__LITERATURE.md",
+      "status": 200,
+      "bytes": 2756,
+      "sha256": "ae4339b3f6b58f7c4bce491e8bcaed9ce22598ad9a538b40615996ce4ca9bbba",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/evidence/reference/decimal90.json",
+      "status": 200,
+      "bytes": 546,
+      "sha256": "a249e9fae3e80b914b56ade3089735c9d57bf3ea69a367b7b3a8c6abdff54a20",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/provenance/text_sources/V11__test_audit.py.txt",
+      "status": 200,
+      "bytes": 3267,
+      "sha256": "771fb4e85ab4a37e45379e0612fc298bd6ae40248a01925ed7c7aa75d3a59278",
+      "matches_build_bytes": true,
+      "content_type": "text/plain"
+    },
+    {
+      "path": "files/provenance/text_sources/V12__test_global_noise.py.txt",
+      "status": 200,
+      "bytes": 3615,
+      "sha256": "578f300e7e17507e40ea802a58dcfc2d66c1413546706029c550fa6671daee43",
+      "matches_build_bytes": true,
+      "content_type": "text/plain"
+    },
+    {
+      "path": "files/provenance/original_records/W8__finite_witnesses.json",
+      "status": 200,
+      "bytes": 97546,
+      "sha256": "378085ef5854f3a5d046d0dc3acde2501b68b256a9a05864800c64e55ca7bde0",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/provenance/original_records/W9__finite_witnesses_decimal.json",
+      "status": 200,
+      "bytes": 2144,
+      "sha256": "31c91d4937e464d12627b5a0aef9a1d132ac257e24f1d905cd4d43a87c9f9296",
+      "matches_build_bytes": true,
+      "content_type": "application/json"
+    },
+    {
+      "path": "files/provenance/text_sources/W10__independent_examples.py.txt",
+      "status": 200,
+      "bytes": 1201,
+      "sha256": "eee5140b9eb837d763dbc306f11cd2acc10d9d5029aa4b71fc49403b5f251ecb",
+      "matches_build_bytes": true,
+      "content_type": "text/plain"
+    },
+    {
+      "path": "files/provenance/text_sources/H1__H1__START_HERE.md",
+      "status": 200,
+      "bytes": 5108,
+      "sha256": "4b9f42154285d88a3c3f216ee7a9d82d343a68401325e6df8ca489851303d9ad",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/docs/FROZEN_ARGUMENT.md",
+      "status": 200,
+      "bytes": 4167,
+      "sha256": "bdada1edb06c814ea563068317e38c09c3d96dfe539bbddf7523bd0a49ca2ad7",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/website/pages/visual-design.md",
+      "status": 200,
+      "bytes": 2721,
+      "sha256": "7bffe4771f0bd6fd75cec51e4cb06cb1b89ada4f44c9c8621b25253da321e84f",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    },
+    {
+      "path": "files/website/pages/status.md",
+      "status": 200,
+      "bytes": 3998,
+      "sha256": "ab8ae62c54c26279d2c5a490cc24993712b8ae8f8695c591ab591297c51939cb",
+      "matches_build_bytes": true,
+      "content_type": "text/markdown"
+    }
+  ],
+  "html_anchor_checks": [
+    {
+      "source": "index.html",
+      "target": "index.html",
+      "anchor": "main"
+    },
+    {
+      "source": "index.html",
+      "target": "model.html",
+      "anchor": "m04"
+    },
+    {
+      "source": "index.html",
+      "target": "figures.html",
+      "anchor": "figure-1"
+    },
+    {
+      "source": "index.html",
+      "target": "figures.html",
+      "anchor": "figure-1"
+    },
+    {
+      "source": "index.html",
+      "target": "index.html",
+      "anchor": "start-with-the-channel"
+    },
+    {
+      "source": "index.html",
+      "target": "index.html",
+      "anchor": "then-compare-one-use-with-a-block"
+    },
+    {
+      "source": "index.html",
+      "target": "channel.html",
+      "anchor": "eight-use-witness"
+    },
+    {
+      "source": "index.html",
+      "target": "figures.html",
+      "anchor": "figure-1"
+    },
+    {
+      "source": "index.html",
+      "target": "index.html",
+      "anchor": "what-geometry-guarantees"
+    },
+    {
+      "source": "index.html",
+      "target": "proof-guide.html",
+      "anchor": "geometric-guarantee"
+    },
+    {
+      "source": "index.html",
+      "target": "figures.html",
+      "anchor": "figure-2"
+    },
+    {
+      "source": "index.html",
+      "target": "figures.html",
+      "anchor": "figure-3"
+    },
+    {
+      "source": "index.html",
+      "target": "index.html",
+      "anchor": "read-inspect-reproduce"
+    },
+    {
+      "source": "index.html",
+      "target": "model.html",
+      "anchor": "m07"
+    },
+    {
+      "source": "index.html",
+      "target": "index.html",
+      "anchor": "start-with-the-channel"
+    },
+    {
+      "source": "index.html",
+      "target": "index.html",
+      "anchor": "then-compare-one-use-with-a-block"
+    },
+    {
+      "source": "index.html",
+      "target": "index.html",
+      "anchor": "what-geometry-guarantees"
+    },
+    {
+      "source": "index.html",
+      "target": "index.html",
+      "anchor": "read-inspect-reproduce"
+    },
+    {
+      "source": "background.html",
+      "target": "background.html",
+      "anchor": "main"
+    },
+    {
+      "source": "background.html",
+      "target": "model.html",
+      "anchor": "m04"
+    },
+    {
+      "source": "background.html",
+      "target": "background.html",
+      "anchor": "which-passages-answer-the-main-questions"
+    },
+    {
+      "source": "background.html",
+      "target": "channel.html",
+      "anchor": "reference-state"
+    },
+    {
+      "source": "background.html",
+      "target": "model.html",
+      "anchor": "m02"
+    },
+    {
+      "source": "background.html",
+      "target": "proof.html",
+      "anchor": "p01"
+    },
+    {
+      "source": "background.html",
+      "target": "channel.html",
+      "anchor": "eight-use-witness"
+    },
+    {
+      "source": "background.html",
+      "target": "model.html",
+      "anchor": "m02"
+    },
+    {
+      "source": "background.html",
+      "target": "proof.html",
+      "anchor": "p10"
+    },
+    {
+      "source": "background.html",
+      "target": "channel.html",
+      "anchor": "coherent-repetition"
+    },
+    {
+      "source": "background.html",
+      "target": "proof.html",
+      "anchor": "p09"
+    },
+    {
+      "source": "background.html",
+      "target": "proof.html",
+      "anchor": "p13"
+    },
+    {
+      "source": "background.html",
+      "target": "proof-guide.html",
+      "anchor": "finite-before-asymptotic"
+    },
+    {
+      "source": "background.html",
+      "target": "proof.html",
+      "anchor": "p10"
+    },
+    {
+      "source": "background.html",
+      "target": "background.html",
+      "anchor": "which-symbols-change-on-the-way-here"
+    },
+    {
+      "source": "background.html",
+      "target": "background.html",
+      "anchor": "what-changes-after-the-tutorials-example"
+    },
+    {
+      "source": "background.html",
+      "target": "channel.html",
+      "anchor": "channel-operation"
+    },
+    {
+      "source": "background.html",
+      "target": "channel.html",
+      "anchor": "eight-use-witness"
+    },
+    {
+      "source": "background.html",
+      "target": "proof-guide.html",
+      "anchor": "geometric-guarantee"
+    },
+    {
+      "source": "background.html",
+      "target": "status.html",
+      "anchor": "correction-record"
+    },
+    {
+      "source": "background.html",
+      "target": "background.html",
+      "anchor": "one-v5-sign-note"
+    },
+    {
+      "source": "background.html",
+      "target": "background.html",
+      "anchor": "what-if-one-background-concept-is-unfamiliar"
+    },
+    {
+      "source": "background.html",
+      "target": "channel.html",
+      "anchor": "flagged-information"
+    },
+    {
+      "source": "background.html",
+      "target": "model.html",
+      "anchor": "m02"
+    },
+    {
+      "source": "background.html",
+      "target": "channel.html",
+      "anchor": "reference-state"
+    },
+    {
+      "source": "background.html",
+      "target": "proof.html",
+      "anchor": "p01"
+    },
+    {
+      "source": "background.html",
+      "target": "channel.html",
+      "anchor": "channel-operation"
+    },
+    {
+      "source": "background.html",
+      "target": "proof.html",
+      "anchor": "p01"
+    },
+    {
+      "source": "background.html",
+      "target": "proof-guide.html",
+      "anchor": "two-costs"
+    },
+    {
+      "source": "background.html",
+      "target": "proof.html",
+      "anchor": "p02"
+    },
+    {
+      "source": "background.html",
+      "target": "channel.html",
+      "anchor": "eight-use-witness"
+    },
+    {
+      "source": "background.html",
+      "target": "proof.html",
+      "anchor": "p10"
+    },
+    {
+      "source": "background.html",
+      "target": "channel.html",
+      "anchor": "channel-operation"
+    },
+    {
+      "source": "background.html",
+      "target": "model.html",
+      "anchor": "m01"
+    },
+    {
+      "source": "background.html",
+      "target": "limits.html",
+      "anchor": "noise-endpoints"
+    },
+    {
+      "source": "background.html",
+      "target": "proof.html",
+      "anchor": "p11"
+    },
+    {
+      "source": "background.html",
+      "target": "background.html",
+      "anchor": "which-passages-answer-the-main-questions"
+    },
+    {
+      "source": "background.html",
+      "target": "background.html",
+      "anchor": "which-symbols-change-on-the-way-here"
+    },
+    {
+      "source": "background.html",
+      "target": "background.html",
+      "anchor": "what-changes-after-the-tutorials-example"
+    },
+    {
+      "source": "background.html",
+      "target": "background.html",
+      "anchor": "one-v5-sign-note"
+    },
+    {
+      "source": "background.html",
+      "target": "background.html",
+      "anchor": "what-if-one-background-concept-is-unfamiliar"
+    },
+    {
+      "source": "channel.html",
+      "target": "channel.html",
+      "anchor": "main"
+    },
+    {
+      "source": "channel.html",
+      "target": "background.html",
+      "anchor": "after-the-tutorial"
+    },
+    {
+      "source": "channel.html",
+      "target": "channel.html",
+      "anchor": "an-intact-qubit-or-a-classical-record"
+    },
+    {
+      "source": "channel.html",
+      "target": "model.html",
+      "anchor": "m01"
+    },
+    {
+      "source": "channel.html",
+      "target": "channel.html",
+      "anchor": "the-channel-in-one-expression"
+    },
+    {
+      "source": "channel.html",
+      "target": "proof.html",
+      "anchor": "p01"
+    },
+    {
+      "source": "channel.html",
+      "target": "channel.html",
+      "anchor": "what-is-being-compared"
+    },
+    {
+      "source": "channel.html",
+      "target": "background.html",
+      "anchor": "notation"
+    },
+    {
+      "source": "channel.html",
+      "target": "model.html",
+      "anchor": "m02"
+    },
+    {
+      "source": "channel.html",
+      "target": "channel.html",
+      "anchor": "how-do-the-classical-records-enter-the-entropy-difference"
+    },
+    {
+      "source": "channel.html",
+      "target": "proof-guide.html",
+      "anchor": "two-costs"
+    },
+    {
+      "source": "channel.html",
+      "target": "proof.html",
+      "anchor": "p01"
+    },
+    {
+      "source": "channel.html",
+      "target": "channel.html",
+      "anchor": "does-repetition-copy-an-unknown-qubit"
+    },
+    {
+      "source": "channel.html",
+      "target": "proof.html",
+      "anchor": "p09"
+    },
+    {
+      "source": "channel.html",
+      "target": "channel.html",
+      "anchor": "what-does-the-eight-use-example-establish"
+    },
+    {
+      "source": "channel.html",
+      "target": "proof.html",
+      "anchor": "p13"
+    },
+    {
+      "source": "channel.html",
+      "target": "figures.html",
+      "anchor": "figure-1"
+    },
+    {
+      "source": "channel.html",
+      "target": "proof-guide.html",
+      "anchor": "finite-before-asymptotic"
+    },
+    {
+      "source": "channel.html",
+      "target": "channel.html",
+      "anchor": "why-use-a-common-error"
+    },
+    {
+      "source": "channel.html",
+      "target": "proof.html",
+      "anchor": "p04"
+    },
+    {
+      "source": "channel.html",
+      "target": "channel.html",
+      "anchor": "an-intact-qubit-or-a-classical-record"
+    },
+    {
+      "source": "channel.html",
+      "target": "channel.html",
+      "anchor": "the-channel-in-one-expression"
+    },
+    {
+      "source": "channel.html",
+      "target": "channel.html",
+      "anchor": "what-is-being-compared"
+    },
+    {
+      "source": "channel.html",
+      "target": "channel.html",
+      "anchor": "how-do-the-classical-records-enter-the-entropy-difference"
+    },
+    {
+      "source": "channel.html",
+      "target": "channel.html",
+      "anchor": "does-repetition-copy-an-unknown-qubit"
+    },
+    {
+      "source": "channel.html",
+      "target": "channel.html",
+      "anchor": "what-does-the-eight-use-example-establish"
+    },
+    {
+      "source": "channel.html",
+      "target": "channel.html",
+      "anchor": "why-use-a-common-error"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "proof-guide.html",
+      "anchor": "main"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "channel.html",
+      "anchor": "eight-use-witness"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "model.html",
+      "anchor": "m04"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "proof.html",
+      "anchor": "p01"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "background.html",
+      "anchor": "reading-map"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "proof-guide.html",
+      "anchor": "bound-every-single-use-input"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "proof.html",
+      "anchor": "p01"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "proof-guide.html",
+      "anchor": "construct-a-positive-finite-block"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "channel.html",
+      "anchor": "coherent-repetition"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "proof.html",
+      "anchor": "p09"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "proof.html",
+      "anchor": "p10"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "background.html",
+      "anchor": "reading-map"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "proof-guide.html",
+      "anchor": "separate-the-two-costs-geometrically"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "proof.html",
+      "anchor": "p08"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "proof.html",
+      "anchor": "p10"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "figures.html",
+      "anchor": "figure-2"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "proof.html",
+      "anchor": "p13"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "proof-guide.html",
+      "anchor": "where-the-computer-assisted-proof-enters"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "proof.html",
+      "anchor": "p04"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "proof.html",
+      "anchor": "p07"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "proof-guide.html",
+      "anchor": "what-is-added-to-the-familiar-superadditivity-story"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "model.html",
+      "anchor": "m07"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "limits.html",
+      "anchor": "coplanar-control"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "proof-guide.html",
+      "anchor": "bound-every-single-use-input"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "proof-guide.html",
+      "anchor": "construct-a-positive-finite-block"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "proof-guide.html",
+      "anchor": "separate-the-two-costs-geometrically"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "proof-guide.html",
+      "anchor": "where-the-computer-assisted-proof-enters"
+    },
+    {
+      "source": "proof-guide.html",
+      "target": "proof-guide.html",
+      "anchor": "what-is-added-to-the-familiar-superadditivity-story"
+    },
+    {
+      "source": "figures.html",
+      "target": "figures.html",
+      "anchor": "main"
+    },
+    {
+      "source": "figures.html",
+      "target": "channel.html",
+      "anchor": "eight-use-witness"
+    },
+    {
+      "source": "figures.html",
+      "target": "proof-guide.html",
+      "anchor": "geometric-guarantee"
+    },
+    {
+      "source": "figures.html",
+      "target": "limits.html",
+      "anchor": "cone-domain"
+    },
+    {
+      "source": "figures.html",
+      "target": "figures.html",
+      "anchor": "figure-1"
+    },
+    {
+      "source": "figures.html",
+      "target": "model.html",
+      "anchor": "m01"
+    },
+    {
+      "source": "figures.html",
+      "target": "model.html",
+      "anchor": "m05"
+    },
+    {
+      "source": "figures.html",
+      "target": "proof.html",
+      "anchor": "p01"
+    },
+    {
+      "source": "figures.html",
+      "target": "proof.html",
+      "anchor": "p13"
+    },
+    {
+      "source": "figures.html",
+      "target": "figures.html",
+      "anchor": "figure-2"
+    },
+    {
+      "source": "figures.html",
+      "target": "model.html",
+      "anchor": "m03"
+    },
+    {
+      "source": "figures.html",
+      "target": "model.html",
+      "anchor": "m04"
+    },
+    {
+      "source": "figures.html",
+      "target": "proof.html",
+      "anchor": "p08"
+    },
+    {
+      "source": "figures.html",
+      "target": "proof.html",
+      "anchor": "p10"
+    },
+    {
+      "source": "figures.html",
+      "target": "figures.html",
+      "anchor": "figure-3"
+    },
+    {
+      "source": "figures.html",
+      "target": "model.html",
+      "anchor": "m06"
+    },
+    {
+      "source": "figures.html",
+      "target": "proof.html",
+      "anchor": "p11"
+    },
+    {
+      "source": "figures.html",
+      "target": "proof.html",
+      "anchor": "p12"
+    },
+    {
+      "source": "figures.html",
+      "target": "figures.html",
+      "anchor": "reading-the-bounds-correctly"
+    },
+    {
+      "source": "figures.html",
+      "target": "figures.html",
+      "anchor": "figure-1"
+    },
+    {
+      "source": "figures.html",
+      "target": "figures.html",
+      "anchor": "figure-2"
+    },
+    {
+      "source": "figures.html",
+      "target": "figures.html",
+      "anchor": "figure-3"
+    },
+    {
+      "source": "figures.html",
+      "target": "figures.html",
+      "anchor": "reading-the-bounds-correctly"
+    },
+    {
+      "source": "limits.html",
+      "target": "limits.html",
+      "anchor": "main"
+    },
+    {
+      "source": "limits.html",
+      "target": "proof-guide.html",
+      "anchor": "geometric-guarantee"
+    },
+    {
+      "source": "limits.html",
+      "target": "limits.html",
+      "anchor": "coplanarity-is-a-construction-boundary"
+    },
+    {
+      "source": "limits.html",
+      "target": "proof.html",
+      "anchor": "p11"
+    },
+    {
+      "source": "limits.html",
+      "target": "limits.html",
+      "anchor": "the-two-record-noise-endpoints-are-different"
+    },
+    {
+      "source": "limits.html",
+      "target": "proof.html",
+      "anchor": "p11"
+    },
+    {
+      "source": "limits.html",
+      "target": "limits.html",
+      "anchor": "a-nonzero-gap-need-not-be-useful-in-practice"
+    },
+    {
+      "source": "limits.html",
+      "target": "model.html",
+      "anchor": "m04"
+    },
+    {
+      "source": "limits.html",
+      "target": "limits.html",
+      "anchor": "an-exact-special-case-is-not-an-exact-capacity-formula"
+    },
+    {
+      "source": "limits.html",
+      "target": "figures.html",
+      "anchor": "figure-3"
+    },
+    {
+      "source": "limits.html",
+      "target": "proof.html",
+      "anchor": "p04"
+    },
+    {
+      "source": "limits.html",
+      "target": "proof.html",
+      "anchor": "p12"
+    },
+    {
+      "source": "limits.html",
+      "target": "limits.html",
+      "anchor": "no-silent-extension-of-the-noise-model"
+    },
+    {
+      "source": "limits.html",
+      "target": "model.html",
+      "anchor": "m07"
+    },
+    {
+      "source": "limits.html",
+      "target": "limits.html",
+      "anchor": "coplanarity-is-a-construction-boundary"
+    },
+    {
+      "source": "limits.html",
+      "target": "limits.html",
+      "anchor": "the-two-record-noise-endpoints-are-different"
+    },
+    {
+      "source": "limits.html",
+      "target": "limits.html",
+      "anchor": "a-nonzero-gap-need-not-be-useful-in-practice"
+    },
+    {
+      "source": "limits.html",
+      "target": "limits.html",
+      "anchor": "an-exact-special-case-is-not-an-exact-capacity-formula"
+    },
+    {
+      "source": "limits.html",
+      "target": "limits.html",
+      "anchor": "no-silent-extension-of-the-noise-model"
+    },
+    {
+      "source": "model.html",
+      "target": "model.html",
+      "anchor": "main"
+    },
+    {
+      "source": "model.html",
+      "target": "model.html",
+      "anchor": "canonical-model-and-claims-version-1"
+    },
+    {
+      "source": "model.html",
+      "target": "model.html",
+      "anchor": "the-channel-and-its-operation-budget"
+    },
+    {
+      "source": "model.html",
+      "target": "proof.html",
+      "anchor": "p01"
+    },
+    {
+      "source": "model.html",
+      "target": "provenance.html",
+      "anchor": "s3"
+    },
+    {
+      "source": "model.html",
+      "target": "provenance.html",
+      "anchor": "s4"
+    },
+    {
+      "source": "model.html",
+      "target": "provenance.html",
+      "anchor": "s5"
+    },
+    {
+      "source": "model.html",
+      "target": "model.html",
+      "anchor": "information-quantities-and-notation"
+    },
+    {
+      "source": "model.html",
+      "target": "model.html",
+      "anchor": "exact-single-use-benchmark-and-the-constructed-frontier"
+    },
+    {
+      "source": "model.html",
+      "target": "provenance.html",
+      "anchor": "s4"
+    },
+    {
+      "source": "model.html",
+      "target": "provenance.html",
+      "anchor": "s5"
+    },
+    {
+      "source": "model.html",
+      "target": "provenance.html",
+      "anchor": "s8"
+    },
+    {
+      "source": "model.html",
+      "target": "model.html",
+      "anchor": "the-retained-theorem-and-quantifier-order-c1c4"
+    },
+    {
+      "source": "model.html",
+      "target": "proof.html",
+      "anchor": "p01"
+    },
+    {
+      "source": "model.html",
+      "target": "provenance.html",
+      "anchor": "s3"
+    },
+    {
+      "source": "model.html",
+      "target": "provenance.html",
+      "anchor": "s4"
+    },
+    {
+      "source": "model.html",
+      "target": "provenance.html",
+      "anchor": "s5"
+    },
+    {
+      "source": "model.html",
+      "target": "provenance.html",
+      "anchor": "s8"
+    },
+    {
+      "source": "model.html",
+      "target": "model.html",
+      "anchor": "one-retained-numerical-illustration-c5"
+    },
+    {
+      "source": "model.html",
+      "target": "proof.html",
+      "anchor": "p13"
+    },
+    {
+      "source": "model.html",
+      "target": "provenance.html",
+      "anchor": "s5"
+    },
+    {
+      "source": "model.html",
+      "target": "provenance.html",
+      "anchor": "w1"
+    },
+    {
+      "source": "model.html",
+      "target": "provenance.html",
+      "anchor": "w7"
+    },
+    {
+      "source": "model.html",
+      "target": "model.html",
+      "anchor": "retained-controls-and-limiting-family-c6"
+    },
+    {
+      "source": "model.html",
+      "target": "proof.html",
+      "anchor": "p11"
+    },
+    {
+      "source": "model.html",
+      "target": "proof.html",
+      "anchor": "p11"
+    },
+    {
+      "source": "model.html",
+      "target": "proof.html",
+      "anchor": "p12"
+    },
+    {
+      "source": "model.html",
+      "target": "provenance.html",
+      "anchor": "s4"
+    },
+    {
+      "source": "model.html",
+      "target": "provenance.html",
+      "anchor": "s5"
+    },
+    {
+      "source": "model.html",
+      "target": "model.html",
+      "anchor": "claim-register-and-nonclaims"
+    },
+    {
+      "source": "model.html",
+      "target": "model.html",
+      "anchor": "verification-status-and-next-boundary"
+    },
+    {
+      "source": "model.html",
+      "target": "proof.html",
+      "anchor": "p14"
+    },
+    {
+      "source": "model.html",
+      "target": "model.html",
+      "anchor": "canonical-model-and-claims-version-1"
+    },
+    {
+      "source": "model.html",
+      "target": "model.html",
+      "anchor": "the-channel-and-its-operation-budget"
+    },
+    {
+      "source": "model.html",
+      "target": "model.html",
+      "anchor": "information-quantities-and-notation"
+    },
+    {
+      "source": "model.html",
+      "target": "model.html",
+      "anchor": "exact-single-use-benchmark-and-the-constructed-frontier"
+    },
+    {
+      "source": "model.html",
+      "target": "model.html",
+      "anchor": "the-retained-theorem-and-quantifier-order-c1c4"
+    },
+    {
+      "source": "model.html",
+      "target": "model.html",
+      "anchor": "one-retained-numerical-illustration-c5"
+    },
+    {
+      "source": "model.html",
+      "target": "model.html",
+      "anchor": "retained-controls-and-limiting-family-c6"
+    },
+    {
+      "source": "model.html",
+      "target": "model.html",
+      "anchor": "claim-register-and-nonclaims"
+    },
+    {
+      "source": "model.html",
+      "target": "model.html",
+      "anchor": "verification-status-and-next-boundary"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "main"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "reading-route"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p01"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p02"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p04"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p08"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p09"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p11"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p14"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p01.-physical-channel-and-exact-single-use-positivity-criterion"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s3"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s4"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s5"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p134"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p02.-elementary-entropy-tools-used-below"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s8"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s9"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s10"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s4"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s5"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p07"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p03.-entropy-integral-and-the-comparison-variable"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s9"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s5"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s4"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s10"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p03.1-integral-identity"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p03.2-two-compatible-curvature-statements"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p03.3-the-endpoint-chord"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p04.-the-all-common-noise-scalar-lemma"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s4"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s5"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "c1"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "c2"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "v1"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "v9"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p05"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p06"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p07"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p05.-analytical-low-noise-endpoint"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s4"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s5"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "c1"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "c2"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p05.1-input-weights-delta_0leq-tleq12"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p05.2-arbitrarily-nearly-pure-inputs"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p06.-analytical-high-noise-endpoint"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s4"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s5"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "c1"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "c2"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p11"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p07.-complete-compact-domain-certificate-and-its-verification-boundary"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s4"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s5"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "v1"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "v9"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "c1"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "c2"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p07.1-precisely-what-is-certified"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p07.2-lower-input-tail-in-every-band"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p07.3-every-remaining-rectangle"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p07.4-recorded-evidence-explicitly-not-rerun-here"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p14"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p08.-geometry-separates-the-global-costs"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s4"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s5"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "c1"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "c2"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p09.-complete-all-record-repetition-construction"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s8"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s5"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s9"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s10"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p09.1-fixed-code-and-its-record-coefficients"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p09.2-exact-conditional-states-and-the-all-measured-contribution"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p09.3-upper-envelopes"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p09.4-polynomial-lower-envelopes-without-postselection"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p10.-finite-inner-blocks-outer-coding-and-the-main-theorem"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s8"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s5"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s4"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p11.-coplanar-geometry-and-the-two-reporting-noise-endpoints"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s4"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s5"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s8"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s10"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p11.1-coplanarity-and-the-restricted-converse"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p11.2-perfect-records-epsilon0"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p11.3-completely-random-records-epsilon12"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p12.-the-exact-near-coplanar-family-and-its-valid-domain"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s4"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s5"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p13.-the-retained-eight-use-witness-and-two-numerical-safeguards"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s5"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s4"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "w1"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "w7"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "c3"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "c4"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p13.1-a-global-single-use-zero-at-the-witness-parameters"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p13.2-exact-input-and-all-record-formula"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p13.3-canonical-retained-evidence"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p13.4-safeguards-kept-as-verification-evidence-not-extra-headline-results"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p14.-certificate-and-evidence-dependencies-without-merging-independent-evaluators"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "v1"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "v9"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "w1"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "w7"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "c1"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "c4"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "r1"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "r6"
+    },
+    {
+      "source": "proof.html",
+      "target": "provenance.html",
+      "anchor": "s7"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "cb1-1"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "cb1-2"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "cb1-3"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "cb2-1"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "cb2-2"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "cb2-3"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p15.-completion-boundary-and-attribution"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "reading-route"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p01.-physical-channel-and-exact-single-use-positivity-criterion"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p02.-elementary-entropy-tools-used-below"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p03.-entropy-integral-and-the-comparison-variable"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p04.-the-all-common-noise-scalar-lemma"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p05.-analytical-low-noise-endpoint"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p06.-analytical-high-noise-endpoint"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p07.-complete-compact-domain-certificate-and-its-verification-boundary"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p08.-geometry-separates-the-global-costs"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p09.-complete-all-record-repetition-construction"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p10.-finite-inner-blocks-outer-coding-and-the-main-theorem"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p11.-coplanar-geometry-and-the-two-reporting-noise-endpoints"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p12.-the-exact-near-coplanar-family-and-its-valid-domain"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p13.-the-retained-eight-use-witness-and-two-numerical-safeguards"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p14.-certificate-and-evidence-dependencies-without-merging-independent-evaluators"
+    },
+    {
+      "source": "proof.html",
+      "target": "proof.html",
+      "anchor": "p15.-completion-boundary-and-attribution"
+    },
+    {
+      "source": "verification.html",
+      "target": "verification.html",
+      "anchor": "main"
+    },
+    {
+      "source": "verification.html",
+      "target": "verification.html",
+      "anchor": "inspect-the-sources"
+    },
+    {
+      "source": "verification.html",
+      "target": "status.html",
+      "anchor": "correction-record"
+    },
+    {
+      "source": "verification.html",
+      "target": "verification.html",
+      "anchor": "check-file-identity-and-method-tests"
+    },
+    {
+      "source": "verification.html",
+      "target": "verification.html",
+      "anchor": "cb1-1"
+    },
+    {
+      "source": "verification.html",
+      "target": "verification.html",
+      "anchor": "cb1-2"
+    },
+    {
+      "source": "verification.html",
+      "target": "verification.html",
+      "anchor": "cb1-3"
+    },
+    {
+      "source": "verification.html",
+      "target": "verification.html",
+      "anchor": "cb1-4"
+    },
+    {
+      "source": "verification.html",
+      "target": "verification.html",
+      "anchor": "cb1-5"
+    },
+    {
+      "source": "verification.html",
+      "target": "verification.html",
+      "anchor": "rebuild-the-approved-figures"
+    },
+    {
+      "source": "verification.html",
+      "target": "verification.html",
+      "anchor": "cb2-1"
+    },
+    {
+      "source": "verification.html",
+      "target": "verification.html",
+      "anchor": "recheck-the-mathematical-evidence"
+    },
+    {
+      "source": "verification.html",
+      "target": "verification.html",
+      "anchor": "cb3-1"
+    },
+    {
+      "source": "verification.html",
+      "target": "verification.html",
+      "anchor": "inspect-the-outputs-before-claiming-a-result"
+    },
+    {
+      "source": "verification.html",
+      "target": "channel.html",
+      "anchor": "eight-use-witness"
+    },
+    {
+      "source": "verification.html",
+      "target": "proof-guide.html",
+      "anchor": "scalar-proof"
+    },
+    {
+      "source": "verification.html",
+      "target": "verification.html",
+      "anchor": "inspect-the-sources"
+    },
+    {
+      "source": "verification.html",
+      "target": "verification.html",
+      "anchor": "check-file-identity-and-method-tests"
+    },
+    {
+      "source": "verification.html",
+      "target": "verification.html",
+      "anchor": "rebuild-the-approved-figures"
+    },
+    {
+      "source": "verification.html",
+      "target": "verification.html",
+      "anchor": "recheck-the-mathematical-evidence"
+    },
+    {
+      "source": "verification.html",
+      "target": "verification.html",
+      "anchor": "inspect-the-outputs-before-claiming-a-result"
+    },
+    {
+      "source": "reproduce.html",
+      "target": "reproduce.html",
+      "anchor": "main"
+    },
+    {
+      "source": "reproduce.html",
+      "target": "reproduce.html",
+      "anchor": "environment"
+    },
+    {
+      "source": "reproduce.html",
+      "target": "reproduce.html",
+      "anchor": "four-different-kinds-of-check"
+    },
+    {
+      "source": "reproduce.html",
+      "target": "reproduce.html",
+      "anchor": "complete-certificate-and-independent-routes"
+    },
+    {
+      "source": "reproduce.html",
+      "target": "proof.html",
+      "anchor": "p05"
+    },
+    {
+      "source": "reproduce.html",
+      "target": "reproduce.html",
+      "anchor": "cb1-1"
+    },
+    {
+      "source": "reproduce.html",
+      "target": "reproduce.html",
+      "anchor": "retained-witness-and-controls"
+    },
+    {
+      "source": "reproduce.html",
+      "target": "reproduce.html",
+      "anchor": "figure-reproducibility-and-approval"
+    },
+    {
+      "source": "reproduce.html",
+      "target": "reproduce.html",
+      "anchor": "provenance-and-independent-execution"
+    },
+    {
+      "source": "reproduce.html",
+      "target": "reproduce.html",
+      "anchor": "environment"
+    },
+    {
+      "source": "reproduce.html",
+      "target": "reproduce.html",
+      "anchor": "four-different-kinds-of-check"
+    },
+    {
+      "source": "reproduce.html",
+      "target": "reproduce.html",
+      "anchor": "complete-certificate-and-independent-routes"
+    },
+    {
+      "source": "reproduce.html",
+      "target": "reproduce.html",
+      "anchor": "retained-witness-and-controls"
+    },
+    {
+      "source": "reproduce.html",
+      "target": "reproduce.html",
+      "anchor": "figure-reproducibility-and-approval"
+    },
+    {
+      "source": "reproduce.html",
+      "target": "reproduce.html",
+      "anchor": "provenance-and-independent-execution"
+    },
+    {
+      "source": "references.html",
+      "target": "references.html",
+      "anchor": "main"
+    },
+    {
+      "source": "references.html",
+      "target": "references.html",
+      "anchor": "standard-results-used-in-the-proof"
+    },
+    {
+      "source": "references.html",
+      "target": "references.html",
+      "anchor": "closest-framework-attribution"
+    },
+    {
+      "source": "references.html",
+      "target": "references.html",
+      "anchor": "more-recent-neighboring-works-in-the-supplied-final-comparison"
+    },
+    {
+      "source": "references.html",
+      "target": "references.html",
+      "anchor": "claim-boundary"
+    },
+    {
+      "source": "references.html",
+      "target": "references.html",
+      "anchor": "standard-results-used-in-the-proof"
+    },
+    {
+      "source": "references.html",
+      "target": "references.html",
+      "anchor": "closest-framework-attribution"
+    },
+    {
+      "source": "references.html",
+      "target": "references.html",
+      "anchor": "more-recent-neighboring-works-in-the-supplied-final-comparison"
+    },
+    {
+      "source": "references.html",
+      "target": "references.html",
+      "anchor": "claim-boundary"
+    },
+    {
+      "source": "materials.html",
+      "target": "materials.html",
+      "anchor": "main"
+    },
+    {
+      "source": "materials.html",
+      "target": "materials.html",
+      "anchor": "background-and-project-reasoning"
+    },
+    {
+      "source": "materials.html",
+      "target": "status.html",
+      "anchor": "correction-record"
+    },
+    {
+      "source": "materials.html",
+      "target": "materials.html",
+      "anchor": "claim-to-evidence-inventory"
+    },
+    {
+      "source": "materials.html",
+      "target": "model.html",
+      "anchor": "m04"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p01"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p02"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p03"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p04"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p05"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p06"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p07"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p08"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p09"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p10"
+    },
+    {
+      "source": "materials.html",
+      "target": "model.html",
+      "anchor": "m03"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p01"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p02"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p03"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p04"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p05"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p06"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p07"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p08"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p13"
+    },
+    {
+      "source": "materials.html",
+      "target": "model.html",
+      "anchor": "m03"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p01"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p02"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p09"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p10"
+    },
+    {
+      "source": "materials.html",
+      "target": "model.html",
+      "anchor": "m04"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p02"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p03"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p04"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p05"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p06"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p07"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p08"
+    },
+    {
+      "source": "materials.html",
+      "target": "model.html",
+      "anchor": "m05"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p12"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p13"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p14"
+    },
+    {
+      "source": "materials.html",
+      "target": "model.html",
+      "anchor": "m06"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p11"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p12"
+    },
+    {
+      "source": "materials.html",
+      "target": "model.html",
+      "anchor": "m07"
+    },
+    {
+      "source": "materials.html",
+      "target": "proof.html",
+      "anchor": "p15"
+    },
+    {
+      "source": "materials.html",
+      "target": "materials.html",
+      "anchor": "figure-and-numerical-inputs"
+    },
+    {
+      "source": "materials.html",
+      "target": "materials.html",
+      "anchor": "proof-certificate-and-separate-checkers"
+    },
+    {
+      "source": "materials.html",
+      "target": "materials.html",
+      "anchor": "canonical-writing-material"
+    },
+    {
+      "source": "materials.html",
+      "target": "materials.html",
+      "anchor": "reuse-and-publication"
+    },
+    {
+      "source": "materials.html",
+      "target": "materials.html",
+      "anchor": "background-and-project-reasoning"
+    },
+    {
+      "source": "materials.html",
+      "target": "materials.html",
+      "anchor": "claim-to-evidence-inventory"
+    },
+    {
+      "source": "materials.html",
+      "target": "materials.html",
+      "anchor": "figure-and-numerical-inputs"
+    },
+    {
+      "source": "materials.html",
+      "target": "materials.html",
+      "anchor": "proof-certificate-and-separate-checkers"
+    },
+    {
+      "source": "materials.html",
+      "target": "materials.html",
+      "anchor": "canonical-writing-material"
+    },
+    {
+      "source": "materials.html",
+      "target": "materials.html",
+      "anchor": "reuse-and-publication"
+    },
+    {
+      "source": "notation.html",
+      "target": "notation.html",
+      "anchor": "main"
+    },
+    {
+      "source": "notation.html",
+      "target": "notation.html",
+      "anchor": "terms-that-must-not-be-interchanged"
+    },
+    {
+      "source": "notation.html",
+      "target": "notation.html",
+      "anchor": "terms-that-must-not-be-interchanged"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "main"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "canonical-units"
+    },
+    {
+      "source": "provenance.html",
+      "target": "model.html",
+      "anchor": "m01"
+    },
+    {
+      "source": "provenance.html",
+      "target": "model.html",
+      "anchor": "m02"
+    },
+    {
+      "source": "provenance.html",
+      "target": "model.html",
+      "anchor": "m03"
+    },
+    {
+      "source": "provenance.html",
+      "target": "model.html",
+      "anchor": "m04"
+    },
+    {
+      "source": "provenance.html",
+      "target": "model.html",
+      "anchor": "m05"
+    },
+    {
+      "source": "provenance.html",
+      "target": "model.html",
+      "anchor": "m06"
+    },
+    {
+      "source": "provenance.html",
+      "target": "model.html",
+      "anchor": "m07"
+    },
+    {
+      "source": "provenance.html",
+      "target": "model.html",
+      "anchor": "m08"
+    },
+    {
+      "source": "provenance.html",
+      "target": "proof.html",
+      "anchor": "p01"
+    },
+    {
+      "source": "provenance.html",
+      "target": "proof.html",
+      "anchor": "p02"
+    },
+    {
+      "source": "provenance.html",
+      "target": "proof.html",
+      "anchor": "p03"
+    },
+    {
+      "source": "provenance.html",
+      "target": "proof.html",
+      "anchor": "p04"
+    },
+    {
+      "source": "provenance.html",
+      "target": "proof.html",
+      "anchor": "p05"
+    },
+    {
+      "source": "provenance.html",
+      "target": "proof.html",
+      "anchor": "p06"
+    },
+    {
+      "source": "provenance.html",
+      "target": "proof.html",
+      "anchor": "p07"
+    },
+    {
+      "source": "provenance.html",
+      "target": "proof.html",
+      "anchor": "p08"
+    },
+    {
+      "source": "provenance.html",
+      "target": "proof.html",
+      "anchor": "p09"
+    },
+    {
+      "source": "provenance.html",
+      "target": "proof.html",
+      "anchor": "p10"
+    },
+    {
+      "source": "provenance.html",
+      "target": "proof.html",
+      "anchor": "p11"
+    },
+    {
+      "source": "provenance.html",
+      "target": "proof.html",
+      "anchor": "p12"
+    },
+    {
+      "source": "provenance.html",
+      "target": "proof.html",
+      "anchor": "p13"
+    },
+    {
+      "source": "provenance.html",
+      "target": "proof.html",
+      "anchor": "p14"
+    },
+    {
+      "source": "provenance.html",
+      "target": "proof.html",
+      "anchor": "p15"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s1"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s2"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s3"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s4"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s5"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s6"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s7"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s8"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s9"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v1"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v2"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v3"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v4"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v5"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v6"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v7"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v8"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v9"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-w1"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-w2"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-w3"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-w4"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-w5"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-w6"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-w7"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-c1"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-c2"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-c3"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-c4"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-r1"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-r2"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-r3"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-r4"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-r5"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-r6"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s10"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s11"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v10"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v11"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v12"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-w8"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-w9"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-w10"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-h1"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "canonical-units"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s1"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s2"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s3"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s4"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s5"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s6"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s7"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s8"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s9"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v1"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v2"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v3"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v4"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v5"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v6"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v7"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v8"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v9"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-w1"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-w2"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-w3"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-w4"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-w5"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-w6"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-w7"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-c1"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-c2"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-c3"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-c4"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-r1"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-r2"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-r3"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-r4"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-r5"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-r6"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s10"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-s11"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v10"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v11"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-v12"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-w8"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-w9"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-w10"
+    },
+    {
+      "source": "provenance.html",
+      "target": "provenance.html",
+      "anchor": "source-h1"
+    },
+    {
+      "source": "argument.html",
+      "target": "argument.html",
+      "anchor": "main"
+    },
+    {
+      "source": "visual-design.html",
+      "target": "visual-design.html",
+      "anchor": "main"
+    },
+    {
+      "source": "visual-design.html",
+      "target": "visual-design.html",
+      "anchor": "figure-colors"
+    },
+    {
+      "source": "visual-design.html",
+      "target": "visual-design.html",
+      "anchor": "current-palette-and-preserved-exports"
+    },
+    {
+      "source": "visual-design.html",
+      "target": "visual-design.html",
+      "anchor": "writing-and-mathematics"
+    },
+    {
+      "source": "visual-design.html",
+      "target": "visual-design.html",
+      "anchor": "figure-colors"
+    },
+    {
+      "source": "visual-design.html",
+      "target": "visual-design.html",
+      "anchor": "current-palette-and-preserved-exports"
+    },
+    {
+      "source": "visual-design.html",
+      "target": "visual-design.html",
+      "anchor": "writing-and-mathematics"
+    },
+    {
+      "source": "status.html",
+      "target": "status.html",
+      "anchor": "main"
+    },
+    {
+      "source": "status.html",
+      "target": "status.html",
+      "anchor": "current-stage"
+    },
+    {
+      "source": "status.html",
+      "target": "status.html",
+      "anchor": "what-do-the-audit-and-correction-records-say"
+    },
+    {
+      "source": "status.html",
+      "target": "status.html",
+      "anchor": "what-is-preserved-and-what-has-been-checked"
+    },
+    {
+      "source": "status.html",
+      "target": "model.html",
+      "anchor": "m07"
+    },
+    {
+      "source": "status.html",
+      "target": "status.html",
+      "anchor": "what-remains-outside-this-task"
+    },
+    {
+      "source": "status.html",
+      "target": "status.html",
+      "anchor": "current-stage"
+    },
+    {
+      "source": "status.html",
+      "target": "status.html",
+      "anchor": "what-do-the-audit-and-correction-records-say"
+    },
+    {
+      "source": "status.html",
+      "target": "status.html",
+      "anchor": "what-is-preserved-and-what-has-been-checked"
+    },
+    {
+      "source": "status.html",
+      "target": "status.html",
+      "anchor": "what-remains-outside-this-task"
+    }
+  ]
+}

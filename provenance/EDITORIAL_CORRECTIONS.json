@@ -1,0 +1,147 @@
+{
+  "baseline_commit": "f0015c56a19fd953c6797b2c64d9b507105234e3",
+  "audit_commit": "5e367b1e541bf7d5ba1af90e85796d59db9e03f4",
+  "date": "2026-09-08",
+  "authorization": "User requested implementation of the documented audit corrections after the audit was committed.",
+  "scope": "Five current documentary/ledger corrections and four dependent source-identity records only; exact reverse replacements recover the immutable website baseline. No scientific formula, numerical value, historical source excerpt, verification implementation, certificate or approved figure is changed.",
+  "files": {
+    "docs/MODEL_AND_CLAIMS.md": {
+      "before_sha256": "e15b0f0e64755ae2f6c707b467eb495045ebe13985c9990da506807b265cb708",
+      "after_sha256": "02d9a34156d41f985df3bbcf8a728e9d2e550a498bb4e6d75c68366506c37b60",
+      "replacements": [
+        {
+          "before": "No manuscript has been drafted and no remote repository has been created.",
+          "after": "No manuscript has been drafted."
+        }
+      ]
+    },
+    "docs/REFERENCES.md": {
+      "before_sha256": "25a57ce2595a27f3578e698e2cfaa119599c5b3f2452fadf9c91bb5276250c7f",
+      "after_sha256": "bc79394fe8c349bc8415abe831cc0ab4c65ec181c67917d7a1c6168f33be5a9f",
+      "replacements": [
+        {
+          "before": "**Consolidation date: 8 September 2026. No external literature search was performed in this pass.** This record preserves the attribution and scope in the uploaded all-noise theory and final comparison. It does not freshly verify publication metadata, assert priority, or expand the set of relevant results.",
+          "after": "**Original consolidation: 8 September 2026.** The initial record carried attribution from the supplied sources without a new literature search. The dated correction below records a subsequent primary-source check. Neither step certifies absolute priority."
+        },
+        {
+          "before": "## Claim boundary",
+          "after": "<a id=\"s6-correction\"></a>\n## Correction after the independent audit, 8 September 2026\n\nThe historical [S6 comparison](../provenance/text_sources/S6__PRIOR_WORK_COMPARISON.md), §4, overstates the dephrasure result as a threshold improvement. Bhalerao and Leditzky report improved dephrasure communication **rates**, without extending the threshold beyond weighted repetition codes; see [arXiv:2508.09978v1](https://arxiv.org/html/2508.09978v1), §5.2 after Eq. (5.34) and §6.1. Their comparison with neural-network codes is a separate benchmark. Read S6's dephrasure comparison with this correction. The historical S6 bytes are preserved, and the mathematical claims C1–C6 are unaffected.\n\n## Claim boundary"
+        }
+      ]
+    },
+    "docs/SOURCE_TO_CANONICAL.md": {
+      "before_sha256": "6dc411858dc78e346b2a75e06b1e2871eb739051abe289ee74959c6442e4033f",
+      "after_sha256": "1bc1db9751dbdf3da8ef8841c1b4a40f5a2b4441006e0164b8a05a444375b2ff",
+      "replacements": [
+        {
+          "before": "Original member: `Noisy-record-PRL-final-audit/PRIOR_WORK_COMPARISON.md`.",
+          "after": "Original member: `Noisy-record-PRL-final-audit/PRIOR_WORK_COMPARISON.md`.\n\nCurrent attribution correction: the historical dephrasure rate/threshold comparison is qualified in [REFERENCES.md](REFERENCES.md#s6-correction). The retained S6 file and its original hash are unchanged."
+        },
+        {
+          "before": "Exact line ranges and fragment hashes are in [SECTION_LEDGER.json](../provenance/SECTION_LEDGER.json). Complete local/source identities are in [SOURCE_REGISTER.json](../provenance/SOURCE_REGISTER.json).",
+          "after": "Exact line ranges and fragment hashes are in [SECTION_LEDGER.json](../provenance/SECTION_LEDGER.json). Complete local/source identities are in [SOURCE_REGISTER.json](../provenance/SOURCE_REGISTER.json). Later documentary corrections and their dependent identity records are listed in [EDITORIAL_CORRECTIONS.json](../provenance/EDITORIAL_CORRECTIONS.json); original relocation hashes and historical source bytes remain preserved."
+        }
+      ]
+    },
+    "figures/FIGURE_SPECIFICATIONS.md": {
+      "before_sha256": "88814c16103b3f946c0743807bff3f0f013910244caa77e520d06660b03e8bc8",
+      "after_sha256": "ea5a7dc293a69087cedee07ad04655130ba42c8b3017f4a2ed32d95f7adc1e8c",
+      "replacements": [
+        {
+          "before": "`data/figure1_comparison.csv`",
+          "after": "`data/figures/figure1_comparison.csv`"
+        },
+        {
+          "before": "`data/figure1_original_witness140.json`",
+          "after": "`data/figures/figure1_original_witness140.json`"
+        },
+        {
+          "before": "`data/figure1_all_masks_not_for_display.csv`",
+          "after": "`data/figures/figure1_all_masks_not_for_display.csv`"
+        },
+        {
+          "before": "`data/figure2_pauli_guaranteed_region.csv`",
+          "after": "`data/figures/figure2_pauli_guaranteed_region.csv`"
+        },
+        {
+          "before": "`data/cross_figure_witness_bound_check.json`",
+          "after": "`data/figures/cross_figure_witness_bound_check.json`"
+        },
+        {
+          "before": "`data/figure3_cone_gap.csv`",
+          "after": "`data/figures/figure3_cone_gap.csv`"
+        },
+        {
+          "before": "`data/figure3_cone_geometry.csv`",
+          "after": "`data/figures/figure3_cone_geometry.csv`"
+        },
+        {
+          "before": "`data/figure3_small_lambda_controls_not_for_display.csv`",
+          "after": "`data/figures/figure3_small_lambda_controls_not_for_display.csv`"
+        }
+      ]
+    },
+    "provenance/SECTION_LEDGER.json": {
+      "before_sha256": "5cd5dba43acb597ecbab499ec873e6d3b25adff157350c5292e4548ffc9bf9ea",
+      "after_sha256": "84235a84496c7f2def56762d65125cfe770d8ebf7090f673ca56f84354d30d56",
+      "replacements": [
+        {
+          "before": "25eb6c0494ff2a13594b42cb4800c2f40817b2e453a24105ba8b6b163e88b9d0",
+          "after": "d3cb55e32ab91b5086560496f2c388af0aafb33744b2a16164772ce1eb211992"
+        }
+      ]
+    },
+    "provenance/CANONICAL_INPUTS.json": {
+      "before_sha256": "eb196cc751733344474191e7f6c34039f9a9a8b7c5f89976ea131727e29b0b8a",
+      "after_sha256": "6fc51098f715b0daba55dd17f03be053e64669ba62e609dbe04b922964448b66",
+      "replacements": [
+        {
+          "before": "e15b0f0e64755ae2f6c707b467eb495045ebe13985c9990da506807b265cb708",
+          "after": "02d9a34156d41f985df3bbcf8a728e9d2e550a498bb4e6d75c68366506c37b60"
+        }
+      ]
+    },
+    "data/figures/SOURCE_IDENTITY.json": {
+      "before_sha256": "8ef60afdb9471bd65ad2f3f35bd205f4b9f2526556d64c783eacbede877f7e58",
+      "after_sha256": "c92ef8ea1c62eaad099d9c8a28811b78dda36d3669f3a376c79268b2b38f497d",
+      "replacements": [
+        {
+          "before": "eb196cc751733344474191e7f6c34039f9a9a8b7c5f89976ea131727e29b0b8a",
+          "after": "6fc51098f715b0daba55dd17f03be053e64669ba62e609dbe04b922964448b66"
+        },
+        {
+          "before": "e15b0f0e64755ae2f6c707b467eb495045ebe13985c9990da506807b265cb708",
+          "after": "02d9a34156d41f985df3bbcf8a728e9d2e550a498bb4e6d75c68366506c37b60"
+        }
+      ]
+    },
+    "provenance/FIGURE_INPUTS.json": {
+      "before_sha256": "45628114ab78e3a229916e77c6351a2e7acccd869c244812d0fbafa22f096efa",
+      "after_sha256": "1ea166670eeea658dd63b5a4d4318534cefece37233058af58321b858a2a330d",
+      "replacements": [
+        {
+          "before": "8ef60afdb9471bd65ad2f3f35bd205f4b9f2526556d64c783eacbede877f7e58",
+          "after": "c92ef8ea1c62eaad099d9c8a28811b78dda36d3669f3a376c79268b2b38f497d"
+        },
+        {
+          "before": "598638cffafc17d13b2a48166b5c03e65cbe80c722b01abacdade82c70626480",
+          "after": "5eb0c69c1d30d2264d845cbefb5edf34100cc386b392edc05b1961d7b87e5cea"
+        }
+      ]
+    },
+    "data/figures/BUILD_RECORD.json": {
+      "before_sha256": "598638cffafc17d13b2a48166b5c03e65cbe80c722b01abacdade82c70626480",
+      "after_sha256": "5eb0c69c1d30d2264d845cbefb5edf34100cc386b392edc05b1961d7b87e5cea",
+      "replacements": [
+        {
+          "before": "eb196cc751733344474191e7f6c34039f9a9a8b7c5f89976ea131727e29b0b8a",
+          "after": "6fc51098f715b0daba55dd17f03be053e64669ba62e609dbe04b922964448b66"
+        },
+        {
+          "before": "e15b0f0e64755ae2f6c707b467eb495045ebe13985c9990da506807b265cb708",
+          "after": "02d9a34156d41f985df3bbcf8a728e9d2e550a498bb4e6d75c68366506c37b60"
+        }
+      ]
+    }
+  }
+}

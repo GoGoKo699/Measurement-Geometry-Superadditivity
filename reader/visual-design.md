@@ -1,11 +1,12 @@
 # Figure palette
 
-[Overview](README.md) · [Channel](channel.md) · [Proof route](proof-guide.md) · [Figures](figures.md) · [Exact theorem](../docs/MODEL_AND_CLAIMS.md) · [Complete proof](../docs/COMPLETE_PROOF.md) · [Materials](materials.md)
+[Overview](README.md) · [Background](background.md) · [Channel](channel.md) · [Proof route](proof-guide.md) · [Figures](figures.md) · [Exact theorem](../docs/MODEL_AND_CLAIMS.md) · [Complete proof](../docs/COMPLETE_PROOF.md) · [Materials](materials.md)
 
 <details>
 <summary>All reading routes</summary>
 
 - [The project](README.md)
+- [Selected background](background.md)
 - [The channel](channel.md)
 - [The proof route](proof-guide.md)
 - [Figure atlas](figures.md)
@@ -49,7 +50,7 @@ The displayed figures use the accepted palette. Their numerical inputs, geometry
 
 The comparison below is an appearance reference, not a request for another approval.
 
-**Gachet-inspired study**
+**Accepted figure palette**
 
 ![Figure 2 in the Gachet-inspired palette](assets/figure_02_guaranteed_region.svg)
 
@@ -59,13 +60,15 @@ The comparison below is an appearance reference, not a request for another appro
 
 ## Writing and mathematics
 
-The new explanatory pages use My-tone's repository mode: concrete tasks, visible reasoning, exact commands, and local qualifications. Guidance was read from `GoGoKo699/My-tone` at commit `005873301782c06f21b1c6e73a5ce3b08c630cc4`. It is presentation guidance, not a scientific reviewer or an automated guarantee of semantic preservation. No private examples or unrelated personal writing are imported into this project.
+The initial reader pass recorded use of My-tone's repository mode: concrete tasks, visible reasoning, exact commands, and local qualifications. Guidance was read from `GoGoKo699/My-tone` at commit `005873301782c06f21b1c6e73a5ce3b08c630cc4`. It is presentation guidance, not a scientific reviewer or an automated guarantee of semantic preservation. No private examples or unrelated personal writing are imported into this project.
+
+The Preskill bridge follows the author's explicit presentation requirements; My-tone was not consulted or modified in this redesign.
 
 The canonical technical documents are rendered directly. New reader-facing paragraphs link to their exact scientific sources. Equations, labels, proof fragments and evidence are not edited to achieve a stylistic preference. The site uses native MathML, local styles and local search, so the offline build does not fetch a third-party mathematics renderer or font.
 
 
 ---
 
-[Continue: Status and publication](status.md)
+[Previous: Frozen scientific argument](../docs/FROZEN_ARGUMENT.md) · [Continue: Status and publication](status.md)
 
 GitHub reading view generated from [the website source](../website/pages/visual-design.md). The equations, figure data and canonical captions retain their source meaning. Custom website navigation, local search and interactive color switching are not executed in this GitHub view.

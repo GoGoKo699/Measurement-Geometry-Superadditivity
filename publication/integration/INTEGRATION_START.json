@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-12",
+  "starting_release_commit": "fa65dca608e92f6816522d4ae119c2229588555e",
+  "starting_main_commit": "f0015c56a19fd953c6797b2c64d9b507105234e3",
+  "applied_candidate_commit": "deba96a1a2fb3781a357a5d4d2660e6edda638da",
+  "applied_candidate_tree": "1bbe9651bb1b524c2083df66374bc6a2464e6971",
+  "candidate_patch_sha256": "d752d46e89a53abdb683cd597765773ef6bc94f6ec5a16748a2977707e1ec176",
+  "authorization": "User explicitly instructed proceeding with integration and merge after the review packet. Repository remains private.",
+  "resolved_preparation_attempts": [
+    {
+      "operation": "Read workflow named website.yml",
+      "result": "Path absent; actual reader-site.yml then read. No files changed."
+    },
+    {
+      "operation": "Prepare candidate upload from changed_or_added_paths",
+      "result": "Field was a count, not a path list. Retried using files map; no mutation occurred before type error."
+    },
+    {
+      "operation": "Combined apply_patch workflow replacement",
+      "result": "Rejected duplicate target operations before applying changes. Reissued valid patch and exact file replacement."
+    }
+  ],
+  "historical_records_preserved": true,
+  "visibility_change_authorized": false
+}

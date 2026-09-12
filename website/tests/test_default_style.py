@@ -27,7 +27,17 @@ def test_acceptance_is_figure_only():
 
 def test_presentation_change_preserves_math_sources():
     original=json.loads((ROOT/'website/provenance/baseline_manifest_v1.json').read_text())['files']
-    import hashlib
+    import hashlib,importlib.util
+    spec=importlib.util.spec_from_file_location('style_preservation_builder',ROOT/'website/build.py')
+    builder=importlib.util.module_from_spec(spec);spec.loader.exec_module(builder)
+    corrections=builder.verify_editorial_corrections(original)
+    assert set(corrections)==builder.EDITORIAL_FILES
     for name,digest in original.items():
-        if name not in {'README.md','STATUS.md'}:
+        if name not in {'README.md','STATUS.md'}|set(corrections):
             assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==digest,name
+    result=builder.verify_baseline()
+    assert result['baseline_members_byte_unchanged']+result['baseline_members_with_verified_editorial_corrections']==len(original)-2
+    assert result['baseline_members_with_verified_editorial_corrections']==9
+    assert result['corrected_documentary_members']==5
+    assert result['updated_documentary_identity_members']==4
+    assert result['original_root_documents_preserved']

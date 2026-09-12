@@ -1,15 +1,5 @@
 # Measurement Geometry and Coherent-Information Superadditivity
 
-## Read the project directly on GitHub
-
-**[Open the project overview](reader/README.md)** · **[Figure atlas](reader/figures.md)** · **[Gachet palette comparison](reader/visual-design.md)**
-
-No ZIP download, installation or local server is needed for these reading pages. Follow the channel, proof guide, figures and source materials inside this private repository. The exact model and complete proof remain their original canonical documents, linked directly rather than rewritten.
-
-[The channel](reader/channel.md) · [The proof route](reader/proof-guide.md) · [Scope and limits](reader/limits.md) · [Verification](reader/verification.md) · [All source materials](reader/materials.md)
-
-The GitHub view shows the Gachet-inspired color study alongside links to the unchanged approved originals. It uses GitHub's Markdown, equation and image rendering. The separate custom HTML website still provides its own navigation, local search and interactive color switch; GitHub does not execute that interface inside a repository file page. See [website instructions](WEBSITE.md). Public hosting remains disabled, and manuscript drafting remains the final stage.
-
 A qubit either arrives intact or is destructively measured along a randomly chosen, known axis. In the measured branch, the receiver gets the axis label and an imperfect outcome record, but not the measured qubit or the hidden true sign.
 
 This scientific baseline establishes a geometric sufficient condition for a collective-coding advantage: for **every finite measurement ensemble spanning all three Bloch directions**, and every **common symmetric reporting error** $0<\epsilon<1/2$, there is a nonempty measurement-probability interval with
@@ -17,6 +7,16 @@ This scientific baseline establishes a geometric sufficient condition for a coll
 $$Q^{(1)}(\mathcal N)=0<Q(\mathcal N).$$
 
 Here $Q^{(1)}$ is coherent information optimized over every single-qubit input state. $Q$ is unassisted asymptotic quantum capacity. The result is a sufficient region, not an exact capacity formula or a practical finite-block decoding guarantee. The scalar inequality is partly computer assisted; all required certificates and separate verification implementations are included directly.
+
+**[Read the project overview](reader/README.md)** · [Selected Preskill background and crosswalk](reader/background.md) · [Channel and eight-use illustration](reader/channel.md)
+
+**Expert bypass:** [exact theorem](docs/MODEL_AND_CLAIMS.md#m04) · [complete proof](docs/COMPLETE_PROOF.md) · [figures and downloads](reader/figures.md) · [verification and evidence](reader/verification.md).
+
+The learning route connects the result to selected passages from **John Preskill, Quantum Shannon Theory, arXiv:1604.07450v5**, then supplies this project's channel, coding and geometric explanations. It does not require the whole chapter or another tutorial. [Start at the focused reading map](reader/background.md), or bypass it and follow [the proof guide](reader/proof-guide.md).
+
+These pages use ordinary GitHub Markdown and need no installation or ZIP download. The optional HTML site has its own navigation, local search and color controls; those controls are not executed by GitHub's file renderer. Both views are generated from `website/pages/`, with shared tutorial metadata in `website/learning_bridge.json`. [Build and maintenance instructions](WEBSITE.md)
+
+## One finite illustration
 
 ![Channel and retained coding witness](reader/assets/figure_01_channel_and_witness.svg)
 
@@ -68,4 +68,10 @@ Use new output directories. The default reproduction rebuilds the plotting input
 
 This package concerns only the noisy-record channel paper. It includes none of the old monitored-many-body datasets or figures. No manuscript is included, and the old repository is neither required nor modified. All figure elements are Python-generated; there is no TeX/TikZ source or standalone font file.
 
-**Research status:** author-side analytical and computer-assisted verification, not external review or proof-assistant formalization. Exact capacity, efficient decoding, arbitrary heterogeneous/asymmetric/correlated errors, and noisy basis labels remain outside the claim. A reuse license and publication citation have not yet been selected; the local baseline is not a public release. [Current baseline status](STATUS.md)
+**Research status:** author-side analytical and computer-assisted verification, not external review or proof-assistant formalization. Exact capacity, efficient decoding, arbitrary heterogeneous/asymmetric/correlated errors, and noisy basis labels remain outside the claim. The repository remains private and is not a public release. [Current baseline status](STATUS.md)
+
+## Reuse and citation
+
+The owner has adopted **MIT for original code** and **CC BY 4.0 for original prose, figures and data**, where the relevant rights exist. [LICENSE.md](LICENSE.md) defines the scope and links both license texts; [third-party notices](THIRD_PARTY_NOTICES.md) preserve the separate terms of external components. Cite this repository using [CITATION.cff](CITATION.cff), with Ruge Lin as the confirmed author, and record the exact commit used.
+
+These terms were adopted on `release/public-readiness-v1`. [PR #5](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/pull/5) records integration and its checks. Publication of the repository and private historical metadata remains a separate decision. [Publication checklist](PUBLICATION.md) · [Adoption record](publication/LICENSE_ADOPTION.json)

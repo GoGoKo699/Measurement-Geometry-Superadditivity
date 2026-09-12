@@ -1,0 +1,10 @@
+{
+  "cff-version": "1.2.0",
+  "message": "Please cite this research repository and identify the exact commit or release used. These metadata describe the repository, not a published paper.",
+  "type": "software",
+  "title": "Measurement Geometry and Coherent-Information Superadditivity",
+  "authors": [{"family-names": "Lin", "given-names": "Ruge"}],
+  "repository-code": "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity",
+  "url": "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity",
+  "keywords": ["quantum information", "coherent information", "quantum capacity", "computer-assisted proof"]
+}

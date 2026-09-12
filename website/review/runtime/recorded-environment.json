@@ -1,0 +1,13 @@
+{
+  "name": "recorded-environment",
+  "argv": [
+    "/workspace/scratch/323c19becda4/task-venv/bin/python",
+    "-m",
+    "pip",
+    "freeze"
+  ],
+  "cwd": "/workspace/scratch/323c19becda4/Measurement-Geometry-Superadditivity",
+  "started_utc": "2026-09-12T07:29:34.404795+00:00",
+  "duration_seconds": 0.193,
+  "return_code": 0
+}

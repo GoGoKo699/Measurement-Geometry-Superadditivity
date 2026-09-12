@@ -9,9 +9,11 @@ preview=importlib.util.module_from_spec(spec);spec.loader.exec_module(preview)
 def test_repository_preview_exact():
     preview.run(check=True)
 
-def test_all_sixteen_routes_exist():
+def test_required_learning_and_expert_routes_exist():
     m=json.loads((ROOT/'reader/PREVIEW_MANIFEST.json').read_text())
-    assert len(m['routes'])==16 and not m['canonical_technical_documents_duplicated']
+    from learning_bridge import REQUIRED_ROUTES
+    assert REQUIRED_ROUTES <= set(m['routes'])
+    assert not m['canonical_technical_documents_duplicated']
     assert all((ROOT/p).is_file() for p in m['routes'].values())
 
 def test_native_no_site_placeholders_or_html_destinations():

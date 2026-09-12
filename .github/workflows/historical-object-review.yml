@@ -1,0 +1,43 @@
+name: Historical object distribution check
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - .github/workflows/historical-object-review.yml
+      - publication/inspect_historical_objects.py
+      - website/tests/test_historical_objects.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: historical-objects-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  inspect-two-objects:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - name: Read complete repository history
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4, observed in reader CI 34685435836
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Check the current integrated preservation record
+        run: python3 publication/integration/check_integrated.py
+      - name: Inspect the two recorded objects without executing archive code
+        run: python3 publication/inspect_historical_objects.py --output build/historical-object-review
+      - name: Retain private review evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4, observed in reader CI 34685435836
+        with:
+          name: historical-object-review
+          path: build/historical-object-review/
+          if-no-files-found: error
+          retention-days: 7
+          include-hidden-files: false

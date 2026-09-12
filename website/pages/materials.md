@@ -2,6 +2,10 @@
 
 The manuscript comes last. The repository already contains the model, complete proof, retained numerical inputs, figure specifications, approved figures, captions, and the declared computational evidence. This page connects those materials without drafting the paper.
 
+## Background and project reasoning
+
+The [focused Preskill map](background.md) is the one external educational route. Its [structured learning metadata](../learning_bridge.json) records the pinned edition, passage locations, return links and the canonical project anchors used by the bridge. It is separate from the scientific claim ledger below. [Current attribution correction](status.md#correction-record) · [Reader implementation and checks](../review/PRESKILL_BRIDGE_REPORT.md)
+
 ## Claim-to-evidence inventory
 
 [Canonical claim map](../../provenance/CLAIM_COVERAGE.json) · [Full source-to-proof ledger](../../docs/SOURCE_TO_CANONICAL.md)
@@ -28,4 +32,6 @@ The [reference record](../../docs/REFERENCES.md) distinguishes standard tools, c
 
 ## Reuse and publication
 
-The repository remains private and no reuse license or public release has been selected. Its scientific source can be prepared for a public site later, but a private source repository alone does not guarantee a private hosted page. Public deployment is a separate decision. [Current project and site status](status.md)
+The owner has adopted MIT for original code and CC BY 4.0 for original prose, figures and data where rights exist. See the [license scope](../../LICENSE.md), [MIT terms](../../LICENSES/MIT.txt), [CC BY 4.0 terms](../../LICENSES/CC-BY-4.0.txt), [third-party notices](../../THIRD_PARTY_NOTICES.md) and [repository citation](../../CITATION.cff). Preskill's external tutorial and other cited sources retain their own terms.
+
+The repository remains private. The terms were adopted on `release/public-readiness-v1`; [PR #5](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/pull/5) records integration and its checks. Disclosure of private history and any public release require separate decisions. [Publication checklist](../../PUBLICATION.md) · [Current project and site status](status.md)

@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "starting_commit": "f0015c56a19fd953c6797b2c64d9b507105234e3",
+  "starting_tree": "72e93a89a691ec4d2ea799bb3b1008bd6c0dee20",
+  "starting_files_checked": 208,
+  "unchanged_count": 176,
+  "approved_original_graphics_unchanged": 27,
+  "accepted_reader_svgs_unchanged": 3,
+  "root_manifest_changes": [
+    "README.md identity",
+    "STATUS.md identity"
+  ],
+  "science_recomputed": false,
+  "scope": "Byte preservation and authorized editorial scope, not theorem correctness."
+}

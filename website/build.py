@@ -6,12 +6,22 @@ Canonical technical pages are rendered from their source files, not rewritten.
 """
 from __future__ import annotations
 import argparse,hashlib,html,json,os,re,shutil,subprocess,sys
+from datetime import date
 from pathlib import Path
 from urllib.parse import urlsplit,urlunsplit,unquote
 from bs4 import BeautifulSoup
 import xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
 WEB=ROOT/'website'
+sys.path.insert(0,str(WEB))
+from learning_bridge import METADATA, expand_background, load_bridge, validate_routes
+# Download inventory only. License scope and owner authority remain in the
+# operative root license and the separate adoption record, never in this list.
+REUSE_DOWNLOADS=(
+ 'LICENSE.md','LICENSES/MIT.txt','LICENSES/CC-BY-4.0.txt',
+ 'LICENSES/DejaVu.txt','LICENSES/STIX.txt','THIRD_PARTY_NOTICES.md',
+ 'CITATION.cff','publication/LICENSE_ADOPTION.json',
+)
 FIGURES=[
  ('figure_01_channel_and_witness','The channel and a concrete separation','Figure 1: hidden true outcomes stay inside the channel; the eight-use per-use value is positive while optimized single-use coherent information is zero.',['figure1_comparison.csv','figure1_all_masks_not_for_display.csv','figure1_original_witness140.json'],['m01','m05'],['p01','p13']),
  ('figure_02_guaranteed_region','The geometric guarantee across reporting noise','Figure 2: equal-Pauli slice of the theorem. A solid sufficient lower bound and a dashed strict repetition frontier enclose a narrow certified region; the inset displays its width.',['figure2_pauli_guaranteed_region.csv','cross_figure_witness_bound_check.json'],['m03','m04'],['p08','p10']),
@@ -23,22 +33,109 @@ def require(ok,message):
 def load(p):return json.loads(p.read_text())
 def dump(p,x):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n')
 def digest_string(s):return hashlib.sha256(s.encode()).hexdigest()
+def prepare_markdown(text):
+ # A blank line keeps an empty explicit anchor from swallowing the next heading
+ # in Pandoc. This changes only rendering input, never the source or its math.
+ return re.sub(r'(?m)^(<a (?:id|name)="[^"]+"></a>)\n(?=#{1,6}\s)',r'\1\n\n',text)
+
 def pandoc(text):
- p=subprocess.run(['pandoc','--from=markdown+tex_math_dollars+raw_html','--to=html5','--mathml','--wrap=none'],input=text,capture_output=True,text=True,check=False)
+ p=subprocess.run(['pandoc','--from=markdown+tex_math_dollars+raw_html','--to=html5','--mathml','--wrap=none'],input=prepare_markdown(text),capture_output=True,text=True,check=False)
  require(p.returncode==0,'Pandoc failed: '+p.stderr)
  require(not p.stderr.strip(),'Pandoc warning requires review: '+p.stderr)
  return p.stdout
 
+EDITORIAL_DOCUMENT_FILES=frozenset({'docs/REFERENCES.md','docs/MODEL_AND_CLAIMS.md',
+ 'docs/SOURCE_TO_CANONICAL.md','figures/FIGURE_SPECIFICATIONS.md','provenance/SECTION_LEDGER.json'})
+DOCUMENTARY_IDENTITY_FILES=frozenset({'provenance/CANONICAL_INPUTS.json',
+ 'data/figures/SOURCE_IDENTITY.json','data/figures/BUILD_RECORD.json','provenance/FIGURE_INPUTS.json'})
+EDITORIAL_FILES=EDITORIAL_DOCUMENT_FILES|DOCUMENTARY_IDENTITY_FILES
+
+def verify_editorial_corrections(old):
+ """Reconstruct frozen bytes from documentary edits and their identity records.
+
+ The old manifest is never renewed. Its digests remain the final authority;
+ an after digest by itself does not authorize an edit.
+ """
+ path=ROOT/'provenance/EDITORIAL_CORRECTIONS.json'
+ if not path.exists():return {}
+ record=load(path)
+ required={'baseline_commit','audit_commit','date','files'};descriptive={'authorization','scope'}
+ require(isinstance(record,dict) and required<=set(record)<=required|descriptive,'Malformed editorial correction metadata')
+ require(all(isinstance(record[k],str) and record[k].strip() for k in descriptive&set(record)),'Malformed editorial correction description')
+ require(record['baseline_commit']=='f0015c56a19fd953c6797b2c64d9b507105234e3','Unexpected editorial baseline commit')
+ require(record['audit_commit']=='5e367b1e541bf7d5ba1af90e85796d59db9e03f4','Unexpected editorial audit commit')
+ require(isinstance(record['date'],str) and re.fullmatch(r'\d{4}-\d{2}-\d{2}',record['date']),'Malformed editorial correction date')
+ date.fromisoformat(record['date'])
+ files=record['files']
+ require(isinstance(files,dict) and files and set(files)<=EDITORIAL_FILES,'Unauthorized editorial correction file')
+ for rel,entry in files.items():
+  require(rel in old and isinstance(entry,dict) and set(entry)=={'before_sha256','after_sha256','replacements'},'Malformed editorial correction record: '+rel)
+  require(entry['before_sha256']==old[rel],'Editorial original hash differs from frozen manifest: '+rel)
+  require(isinstance(entry['after_sha256'],str) and re.fullmatch(r'[0-9a-f]{64}',entry['after_sha256']),'Malformed editorial current hash: '+rel)
+  require(entry['after_sha256']!=entry['before_sha256'],'No-op editorial correction: '+rel)
+  current=(ROOT/rel).read_bytes()
+  require(hashlib.sha256(current).hexdigest()==entry['after_sha256'],'Undeclared editorial file change: '+rel)
+  replacements=entry['replacements']
+  require(isinstance(replacements,list) and replacements,'Missing editorial replacements: '+rel)
+  for change in replacements:
+   require(isinstance(change,dict) and set(change)=={'before','after'},'Malformed editorial replacement: '+rel)
+   require(all(isinstance(change[k],str) and change[k] for k in ('before','after')) and change['before']!=change['after'],'Empty or no-op editorial replacement: '+rel)
+  original=current
+  for change in reversed(replacements):
+   before,after=change['before'].encode('utf-8'),change['after'].encode('utf-8')
+   require(current.count(after)==1 and original.count(after)==1,'Ambiguous or absent editorial replacement: '+rel)
+   original=original.replace(after,before,1)
+  require(hashlib.sha256(original).hexdigest()==old[rel],'Editorial reconstruction differs from frozen baseline: '+rel)
+  replay=original
+  for change in replacements:
+   before,after=change['before'].encode('utf-8'),change['after'].encode('utf-8')
+   require(original.count(before)==1 and replay.count(before)==1,'Ambiguous original editorial replacement: '+rel)
+   replay=replay.replace(before,after,1)
+  require(replay==current,'Editorial replacement round trip failed: '+rel)
+  if rel.endswith('.md'):
+   # Documentary permission does not allow changes to any recorded equation.
+   math=re.compile(rb'\$\$.*?\$\$|(?<!\$)\$[^$\n]+\$(?!\$)',re.S)
+   require(math.findall(original)==math.findall(current),'Mathematical source changed by editorial correction: '+rel)
+  elif rel=='provenance/SECTION_LEDGER.json':
+   before,after=json.loads(original),json.loads(current)
+   prior=[unit for unit in before['units'] if unit['canonical_id']=='M08']
+   now=[unit for unit in after['units'] if unit['canonical_id']=='M08']
+   require(len(prior)==len(now)==1,'Ambiguous M08 ledger correction')
+   now[0]['canonical_fragment_sha256']=prior[0]['canonical_fragment_sha256']
+   require(after==before,'Editorial ledger change extends beyond the M08 fragment hash')
+  else:
+   before,after=json.loads(original),json.loads(current)
+   model='docs/MODEL_AND_CLAIMS.md';manifest='provenance/CANONICAL_INPUTS.json';identity='data/figures/SOURCE_IDENTITY.json';build_record='data/figures/BUILD_RECORD.json'
+   if rel==manifest:
+    require(after['files'][model]==sha(ROOT/model),'Documentary manifest does not identify the current model')
+    after['files'][model]=before['files'][model]
+   elif rel==identity:
+    require(after['manifest_sha256']==sha(ROOT/manifest),'Source identity does not identify the current manifest')
+    require(after['selected_members'][model]==sha(ROOT/model),'Source identity does not identify the current model')
+    after['manifest_sha256']=before['manifest_sha256']
+    after['selected_members'][model]=before['selected_members'][model]
+   elif rel==build_record:
+    require(after['source']==load(ROOT/identity),'Figure build record does not identify the current source identity')
+    after['source']['manifest_sha256']=before['source']['manifest_sha256']
+    after['source']['selected_members'][model]=before['source']['selected_members'][model]
+   elif rel=='provenance/FIGURE_INPUTS.json':
+    for source in (identity,build_record):
+     require(after[source]==sha(ROOT/source),'Figure inputs do not identify the current source identity or build record')
+     after[source]=before[source]
+   require(after==before,'Documentary identity change extends beyond authorized hash fields: '+rel)
+ return files
+
 def verify_baseline():
  old=load(WEB/'provenance/baseline_manifest_v1.json')['files'];allow={'README.md','STATUS.md'}
+ corrected=verify_editorial_corrections(old)
  checked=0
  for rel,h in old.items():
-  if rel not in allow:require(sha(ROOT/rel)==h,'Protected scientific baseline changed: '+rel);checked+=1
+  if rel not in allow and rel not in corrected:require(sha(ROOT/rel)==h,'Protected scientific baseline changed: '+rel);checked+=1
  require(sha(WEB/'provenance/baseline_README.md')==old['README.md'],'Original README not preserved')
  require(sha(WEB/'provenance/baseline_STATUS.md')==old['STATUS.md'],'Original status not preserved')
  protected=load(ROOT/'provenance/APPROVED_FIGURE_HASHES.json')['files']
  for rel,h in protected.items():require(sha(ROOT/rel)==h,'Approved figure modified: '+rel)
- return {'baseline_commit':'9a1e4cb3bad843db9cec1fa348870ca7162df0e0','baseline_members_unchanged_except_root_editorial_pages':checked,'approved_graphical_artifacts_unchanged':len(protected),'original_root_documents_preserved':True}
+ return {'baseline_commit':'9a1e4cb3bad843db9cec1fa348870ca7162df0e0','baseline_members_byte_unchanged':checked,'baseline_members_with_verified_editorial_corrections':len(corrected),'corrected_documentary_members':len(set(corrected)&EDITORIAL_DOCUMENT_FILES),'updated_documentary_identity_members':len(set(corrected)&DOCUMENTARY_IDENTITY_FILES),'editorially_corrected_files':sorted(corrected),'approved_graphical_artifacts_unchanged':len(protected),'original_root_documents_preserved':True}
 
 def theme_svgs(out,palette):
  target=out/'assets/theme';target.mkdir(parents=True,exist_ok=True);m=palette['svg_mapping'];records=[]
@@ -96,10 +193,10 @@ def atlas():
   dims=svg.get('viewBox','0 0 720 400').split();ratio=f'{dims[2]}/{dims[3]}'
   pic=f'<img id="fig-{i}" src="assets/theme/{stem}.svg" data-themed="assets/theme/{stem}.svg" data-original="files/figures/approved/{stem}.svg" alt="{html.escape(alt)}" style="aspect-ratio:{ratio}" loading="eager">'
   downloads=''.join(f'<a href="files/figures/approved/{stem}.{ext}">Approved {ext.upper()}</a>' for ext in ('pdf','svg','png'))
-  downloads+=f'<a href="assets/theme/{stem}.svg">Color-study SVG</a>'
+  downloads+=f'<a href="assets/theme/{stem}.svg">Accepted-palette SVG</a>'
   data=' · '.join(f'<a href="files/data/figures/{p}">{html.escape(p)}</a>' for p in inputs)
   proofs_links=' · '.join(f'<a href="model.html#{p}">{p.upper()}</a>'for p in models)+' · '+' · '.join(f'<a href="proof.html#{p}">{p.upper()}</a>'for p in proofs)
-  items.append(f'<section class="figure-atlas-item"><h2 id="figure-{i}">Figure {i}. {title}</h2><div class="figure-image-wrap">{pic}</div><div class="figure-controls"><button type="button" data-figure-toggle="fig-{i}" aria-pressed="false">Show approved colors</button><span id="fig-{i}-status" class="figure-status" aria-live="polite">Gachet color study; scientific content unchanged.</span></div><div class="asset-links">{downloads}</div><p class="data-line">Canonical sources: {proofs_links}. <a href="files/figures/CAPTIONS.md">Unchanged caption source</a>.</p><div class="figure-caption">{caption}</div><p class="data-line">Numerical inputs: {data}</p></section>')
+  items.append(f'<section class="figure-atlas-item"><h2 id="figure-{i}">Figure {i}. {title}</h2><div class="figure-image-wrap">{pic}</div><div class="figure-controls"><button type="button" data-figure-toggle="fig-{i}" aria-pressed="false">Show approved colors</button><span id="fig-{i}-status" class="figure-status" aria-live="polite">Accepted figure palette; protected originals remain available.</span></div><div class="asset-links">{downloads}</div><p class="data-line">Canonical sources: {proofs_links}. <a href="files/figures/CAPTIONS.md">Unchanged caption source</a>.</p><div class="figure-caption">{caption}</div><p class="data-line">Numerical inputs: {data}</p></section>')
  return '\n'.join(items)
 
 def palette_grid(palette):
@@ -131,39 +228,52 @@ def site_html(page,body,title,toc,config):
  toc_html=''.join(f'<a href="#{html.escape(i)}">{html.escape(t)}</a>' for i,t in toc)
  source=f'files/{page["source"]}'
  canonical='<p class="source-note">Canonical source, rendered without editorial rewriting. Historical status statements belong to the source version; <a href="status.html">current site and project status</a> is recorded separately.</p>' if page.get('canonical') else ''
+ previous=next((p for p in config['pages'] if p['slug']==page.get('previous')),None)
  nextpage=next((p for p in config['pages'] if p['slug']==page.get('next')),None)
  next_html=f'<a class="next-link" href="{nextpage["slug"]}.html"><small>Continue reading</small>{html.escape(nextpage["title"])}</a>' if nextpage else '<a class="next-link" href="index.html"><small>Return to</small>The project</a>'
+ if previous:next_html=f'<p><a href="{previous["slug"]}.html" rel="prev">Previous: {html.escape(previous["title"])}</a></p>'+next_html
  if page['slug']=='index':
   soup=BeautifulSoup(body,'html.parser');first=soup.find('p')
   if first:first['class']='lead'
   h2=soup.find('h2')
-  img='<figure class="home-figure"><a href="figures.html#figure-1"><img src="assets/theme/figure_01_channel_and_witness.svg" alt="The noisy-record channel and the retained eight-use separation" width="900" height="450"></a><figcaption>One channel, every outcome retained. <a href="figures.html#figure-1">Read Figure 1 and inspect its source.</a> <span class="review-label">Gachet color study</span></figcaption></figure>'
+  img='<figure class="home-figure"><a href="figures.html#figure-1"><img src="assets/theme/figure_01_channel_and_witness.svg" alt="The noisy-record channel and the retained eight-use separation" width="900" height="450"></a><figcaption>One channel, every outcome retained. <a href="figures.html#figure-1">Read Figure 1 and inspect its source.</a> <span class="review-label">Accepted figure palette</span></figcaption></figure>'
   if h2:h2.insert_before(BeautifulSoup(img,'html.parser'))
   body=str(soup)
  return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="color-scheme" content="light"><meta name="description" content="Measurement geometry, noisy classical records, and a geometric guarantee of coherent-information superadditivity. Scientific source, proof, figures, and reproducibility."><title>{html.escape(page['title'])} | Measurement Geometry</title><link rel="stylesheet" href="assets/style.css"><script src="assets/search-index.js" defer></script><script src="assets/site.js" defer></script></head>
 <body><noscript><style>.search-open,.menu-open,.figure-controls button{{display:none!important}}@media(max-width:780px){{.sidebar{{display:block!important;position:static;width:100%;max-height:none;box-shadow:none;columns:2}}.sidebar a,.nav-label{{break-inside:avoid}}.nav-note{{column-span:all}}}}</style></noscript><a class="skip" href="#main">Skip to content</a><header class="topbar"><a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span><span><strong>Measurement Geometry</strong><small>Coherent-information superadditivity</small></span></a><div class="top-actions"><a href="materials.html">Source materials</a><a href="{config['repository']}" rel="noreferrer">GitHub</a><button class="search-open" type="button" aria-haspopup="dialog">Search <kbd>/</kbd></button><button class="menu-open" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button></div></header>
-<div class="shell"><nav id="site-navigation" class="sidebar" aria-label="Project navigation">{''.join(links)}<p class="nav-note">Private review build.<br>No public deployment.<br>Scientific baseline: <code>{config['base_commit'][:7]}</code></p></nav><main id="main" class="content {'home' if page['slug']=='index' else ''}"><div class="eyebrow">{html.escape(page['group'])}</div><h1>{html.escape(title or page['title'])}</h1><div class="page-meta"><a href="{source}">Read source Markdown</a><a href="status.html">Scope and status</a></div>{canonical}<article class="document">{body}</article><footer class="article-footer">{next_html}<p class="fineprint">Scientific content is grounded in the canonical sources. The color study does not replace the approved figures.<br>Author-side analytical and computer-assisted support; no external review or priority clearance is implied.<br><a href="references.html">References</a> · <a href="visual-design.html">Visual design</a> · <a href="files/BUILD_RECORD.json">Build record</a></p></footer></main><aside class="toc" aria-label="On this page"><div class="toc-label">On this page</div>{toc_html}</aside></div>
+<div class="shell"><nav id="site-navigation" class="sidebar" aria-label="Project navigation">{''.join(links)}<p class="nav-note">Private review build.<br>No public deployment.<br>Reader starting baseline: <code>{config['reader_baseline_commit'][:7]}</code></p></nav><main id="main" class="content {'home' if page['slug']=='index' else ''}"><div class="eyebrow">{html.escape(page['group'])}</div><h1>{html.escape(title or page['title'])}</h1><div class="page-meta"><a href="{source}">Read source Markdown</a><a href="status.html">Scope and status</a></div>{canonical}<article class="document">{body}</article><footer class="article-footer">{next_html}<p class="fineprint">Canonical sources and evidence remain available directly. The accepted figure palette does not replace the protected original exports.<br><a href="references.html">References</a> · <a href="visual-design.html">Visual design</a> · <a href="files/BUILD_RECORD.json">Build record</a><br><a href="files/LICENSE.md">License scope</a> · <a href="files/CITATION.cff">Citation</a> · <a href="files/THIRD_PARTY_NOTICES.md">Third-party notices</a></p></footer></main><aside class="toc" aria-label="On this page"><div class="toc-label">On this page</div>{toc_html}</aside></div>
 <dialog class="search-dialog" aria-labelledby="search-heading"><div class="search-heading"><h2 id="search-heading">Search the project</h2><button class="search-close" aria-label="Close search" type="button">Close</button></div><label class="visually-hidden" for="search-input">Words or quantities</label><input id="search-input" class="search-input" type="search" placeholder="Try: coplanar, eight-use, certificate" autocomplete="off"><p class="search-message" aria-live="polite">Search the explanations, proof sections, and figure captions.</p><ul class="search-results"></ul></dialog><noscript><p>JavaScript is disabled. Every page, equation, figure and download remains available through the navigation; search and color switching are optional enhancements.</p></noscript></body></html>'''
 
 def build(out):
  out=out.resolve();require(out.is_relative_to(ROOT/'build'),'Output must be under this checkout\'s ignored build/ directory')
  require(not out.exists(),'Use a fresh output directory: '+str(out));out.mkdir(parents=True)
  checked=verify_baseline();config=load(WEB/'site.json');palette=load(WEB/'palette.json')
+ validate_routes(config);bridge=load_bridge()
  page_map={p['source']:p['slug']+'.html' for p in config['pages']};page_map.update({'README.md':'index.html','STATUS.md':'status.html'})
  shutil.copytree(WEB/'assets',out/'assets')
  # Explicit allowlist: scientific baseline files, followed by website Markdown pages.
  baseline=load(ROOT/'BASELINE_MANIFEST.json')['files'];sources=set(baseline)|{'BASELINE_MANIFEST.json'}
- sources|={p['source'] for p in config['pages']};sources.add('website/palette.json')
+ sources|={p['source'] for p in config['pages']};sources|={'WEBSITE.md','website/palette.json',METADATA,'website/site.json','website/editorial_map.json','website/learning_bridge.py','website/provenance/preskill_starting_manifest.json'}
+ sources|=set(REUSE_DOWNLOADS)
+ sources|={'PUBLICATION.md','CONTRIBUTING.md','website/requirements.txt','website/requirements-browser.txt'}
+ sources|={'publication/LICENSE_ADOPTION_REPORT.md','publication/INTEGRATION_REVIEW.md',
+  'publication/integration/CANDIDATE_REPORT.md','publication/integration/check_candidate.py',
+  'publication/integration/CANDIDATE_STARTING_FILES.json','publication/integration/CANDIDATE_EDITS.json',
+  'publication/integration/core-corrections.patch','publication/integration/CORE_PATCH_REPLAY.json'}
+ sources|={'publication/integration/INTEGRATION_REPORT.md','publication/integration/check_integrated.py',
+  'publication/integration/INTEGRATED_STARTING_FILES.json','publication/integration/INTEGRATED_EDITS.json'}
+ sources|={p.relative_to(ROOT).as_posix() for p in (WEB/'review').rglob('*') if p.is_file() and p.suffix in {'.md','.json','.log','.txt'}}
  for rel in sorted(sources):
   require((ROOT/rel).is_file(),'Missing source: '+rel)
   target=out/'files'/rel;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(ROOT/rel,target)
  theme=theme_svgs(out,palette);search=[];page_records=[]
  for page in config['pages']:
-  src=ROOT/page['source'];text=src.read_text()
+  src=ROOT/page['source'];text=expand_background(src.read_text(),page['source'],bridge)
   frag=rewrite_links(pandoc(text),src,page_map)
-  for key,value in [('<!-- SITE:CLAIM_TABLE -->',claim_table()),('<!-- SITE:CHECKER_TABLE -->',checker_table()),('<!-- SITE:FIGURE_ATLAS -->',atlas()),('<!-- SITE:PALETTE -->',palette_grid(palette)),('<!-- SITE:FIGURE_COMPARISON -->','<div class="compare-grid"><figure><img src="files/figures/approved/figure_02_guaranteed_region.svg" alt="Figure 2 in its approved original colors"><figcaption>Approved v1 colors</figcaption></figure><figure><img src="assets/theme/figure_02_guaranteed_region.svg" alt="The identical Figure 2 geometry in the Gachet color study"><figcaption>Gachet color study</figcaption></figure></div>')]:
+  for key,value in [('<!-- SITE:CLAIM_TABLE -->',claim_table()),('<!-- SITE:CHECKER_TABLE -->',checker_table()),('<!-- SITE:FIGURE_ATLAS -->',atlas()),('<!-- SITE:PALETTE -->',palette_grid(palette)),('<!-- SITE:FIGURE_COMPARISON -->','<div class="compare-grid"><figure><img src="files/figures/approved/figure_02_guaranteed_region.svg" alt="Figure 2 in its approved original colors"><figcaption>Approved v1 colors</figcaption></figure><figure><img src="assets/theme/figure_02_guaranteed_region.svg" alt="The identical Figure 2 geometry in the Accepted figure palette"><figcaption>Accepted figure palette</figcaption></figure></div>')]:
    frag=frag.replace('<p>'+key+'</p>',value).replace(key,value)
+  require('<!-- SITE:' not in frag,'Unexpanded reader content marker: '+page['slug'])
   title,body,toc=decorate(frag)
   target=out/(page['slug']+'.html');target.write_text(site_html(page,body,title,toc,config))
   parsed=BeautifulSoup(body,'html.parser')
@@ -176,9 +286,10 @@ def build(out):
    search.append({'title':page['title']+' / '+h2.get_text(' ',strip=True).rstrip('§').strip(),'url':target.name+'#'+h2['id'],'text':' '.join(snippets)[:4000]})
   page_records.append({'page':target.name,'source':page['source'],'source_sha256':sha(src),'canonical_source_rendered':page.get('canonical',False),'heading_count':len(toc),'mathml_count':len(parsed.find_all('math'))})
  (out/'assets/search-index.js').write_text('window.PROJECT_SEARCH = '+json.dumps(search,ensure_ascii=False).replace('</','<\\/')+';\n')
- record={'site_version':'reader-site-v1','date':'2026-09-08','base_commit':config['base_commit'],'private_review_only':True,'public_deployment_performed':False,'canonical_materials':checked,'pages':page_records,'themed_svgs':theme,'build_dependencies':{'pandoc':subprocess.run(['pandoc','--version'],capture_output=True,text=True).stdout.splitlines()[0]},'rendering':'native MathML; local CSS/JS/search; no CDN requests','new_scientific_claims':False,'new_proof_or_numerical_audit':False,'palette_source':'website/palette.json'}
+ record={'site_version':'reader-site-v1','date':config['website_date'],'base_commit':config['base_commit'],'reader_baseline_commit':config['reader_baseline_commit'],'learning_bridge':{'source':METADATA,'sha256':sha(ROOT/METADATA),'tutorial_version':bridge['source']['version'],'scope':'editorial learning map, not a proof certificate'},'private_review_only':True,'public_deployment_performed':False,'canonical_materials':checked,'pages':page_records,'themed_svgs':theme,'build_dependencies':{'pandoc':subprocess.run(['pandoc','--version'],capture_output=True,text=True).stdout.splitlines()[0]},'rendering':'native MathML; local CSS/JS/search; no CDN requests','new_scientific_claims':False,'new_proof_or_numerical_audit':False,'palette_source':'website/palette.json'}
+ record['reuse_source_downloads']=[{'source':rel,'download':'files/'+rel,'sha256':sha(ROOT/rel)} for rel in REUSE_DOWNLOADS]
  dump(out/'files/BUILD_RECORD.json',record)
- (out/'START_HERE.txt').write_text('Open index.html in a modern browser, or run: python -m http.server 8000\nThis is a private local review artifact, not a deployed public website.\n')
+ (out/'START_HERE.txt').write_text('Open index.html in a modern browser, or run: python -m http.server 8000 --bind 127.0.0.1\nThis is a private local review artifact, not a deployed public website.\n')
  print(json.dumps({'pages':len(page_records),'themed_svg_files':len(theme),'mathml_expressions':sum(p['mathml_count'] for p in page_records),'baseline_preservation':checked,'output':str(out)},indent=2))
  return record
 

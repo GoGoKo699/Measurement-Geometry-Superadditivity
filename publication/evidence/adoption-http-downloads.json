@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "interface": "actual loopback HTTP downloads; not a browser/layout check",
+  "bind_address": "127.0.0.1",
+  "port": 36613,
+  "duration_seconds": 0.511,
+  "files": [
+    {
+      "path": "files/LICENSE.md",
+      "status": 200,
+      "bytes": 2664,
+      "sha256": "edc3204a97de004499f6392d10b936dcbdfc113d6cea2911789e5571ea543cf5",
+      "equals_repository_bytes": true
+    },
+    {
+      "path": "files/LICENSES/MIT.txt",
+      "status": 200,
+      "bytes": 1065,
+      "sha256": "a92600540b1ab7a18301e2632a29334b3df227ad836e88df9967d69e3c86db66",
+      "equals_repository_bytes": true
+    },
+    {
+      "path": "files/LICENSES/CC-BY-4.0.txt",
+      "status": 200,
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "equals_repository_bytes": true
+    },
+    {
+      "path": "files/LICENSES/DejaVu.txt",
+      "status": 200,
+      "bytes": 4816,
+      "sha256": "d75938dec098f06f0ac3c00853065d94f020be1c3c62ef1dc2975ba15b4d9b0e",
+      "equals_repository_bytes": true
+    },
+    {
+      "path": "files/LICENSES/STIX.txt",
+      "status": 200,
+      "bytes": 5476,
+      "sha256": "bab3d31dfef07f483624f2f65f2711e76065b8e7273278b1c071ede1041c9959",
+      "equals_repository_bytes": true
+    },
+    {
+      "path": "files/THIRD_PARTY_NOTICES.md",
+      "status": 200,
+      "bytes": 4513,
+      "sha256": "040ed45e27b3f4a7f1d5c3d60b2e2f82bf3b6d59490eea7ddc79fae08daf69a4",
+      "equals_repository_bytes": true
+    },
+    {
+      "path": "files/CITATION.cff",
+      "status": 200,
+      "bytes": 631,
+      "sha256": "a2b17ad519b172286230b6f75284a4b3078d2a4006b427072d2ab9a1ef764457",
+      "equals_repository_bytes": true
+    },
+    {
+      "path": "files/publication/LICENSE_ADOPTION.json",
+      "status": 200,
+      "bytes": 2253,
+      "sha256": "150cf01caa5aba1d684a970619d445ead83aeab9b9f5aa826d48fb13b7cf4104",
+      "equals_repository_bytes": true
+    }
+  ],
+  "reproduce": "Build the site, serve it with python -m http.server --bind 127.0.0.1 --directory build/license-adoption-review, then request each listed path and compare SHA-256 with the repository file."
+}
