@@ -1,0 +1,77 @@
+........................................................................ [ 36%]
+........................................................................ [ 73%]
+..........................F...F......................                    [100%]
+=================================== FAILURES ===================================
+____________ test_native_no_site_placeholders_or_html_destinations _____________
+
+    def test_native_no_site_placeholders_or_html_destinations():
+        for p in (ROOT/'reader').glob('*.md'):
+            t=p.read_text();assert '<!-- SITE:' not in t
+            assert not re.search(r'\]\([^)]*\.html(?:#.*?)?\)',t)
+            for dest in re.findall(r'\]\(([^\s)]+)\)',t):
+                if '://' in dest or dest.startswith('#'):continue
+                base=dest.split('#')[0]
+>               assert (p.parent/base).resolve().is_file(),(p,dest)
+E               AssertionError: (PosixPath('/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness/reader/materials.md'), 'mailto:gogoko699@gmail.com')
+E               assert False
+E                +  where False = is_file()
+E                +    where is_file = PosixPath('/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness/reader/mailto:gogoko699@gmail.com').is_file
+E                +      where PosixPath('/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness/reader/mailto:gogoko699@gmail.com') = resolve()
+E                +        where resolve = (PosixPath('/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness/reader') / 'mailto:gogoko699@gmail.com').resolve
+E                +          where PosixPath('/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness/reader') = PosixPath('/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness/reader/materials.md').parent
+
+website/tests/test_repository_preview.py:26: AssertionError
+______________________________ test_complete_site ______________________________
+
+site = PosixPath('/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness/build/reader-tests-n5h9ra0s/site')
+
+    def test_complete_site(site):
+>       r=checker.check(site)
+          ^^^^^^^^^^^^^^^^^^^
+
+website/tests/test_site.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+website/check.py:52: in check
+    ids=[x['id'] for x in soup.find_all(id=True)];require(len(set(ids))==len(ids),'Duplicate HTML IDs: '+p.name)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ok = False, message = 'Duplicate HTML IDs: verification.html'
+
+    def require(ok,message):
+>    if not ok:raise ValueError(message)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+E    ValueError: Duplicate HTML IDs: verification.html
+
+website/build.py:32: ValueError
+---------------------------- Captured stdout setup -----------------------------
+{
+  "pages": 17,
+  "themed_svg_files": 10,
+  "mathml_expressions": 761,
+  "baseline_preservation": {
+    "baseline_commit": "9a1e4cb3bad843db9cec1fa348870ca7162df0e0",
+    "baseline_members_byte_unchanged": 154,
+    "baseline_members_with_verified_editorial_corrections": 9,
+    "corrected_documentary_members": 5,
+    "updated_documentary_identity_members": 4,
+    "editorially_corrected_files": [
+      "data/figures/BUILD_RECORD.json",
+      "data/figures/SOURCE_IDENTITY.json",
+      "docs/MODEL_AND_CLAIMS.md",
+      "docs/REFERENCES.md",
+      "docs/SOURCE_TO_CANONICAL.md",
+      "figures/FIGURE_SPECIFICATIONS.md",
+      "provenance/CANONICAL_INPUTS.json",
+      "provenance/FIGURE_INPUTS.json",
+      "provenance/SECTION_LEDGER.json"
+    ],
+    "approved_graphical_artifacts_unchanged": 27,
+    "original_root_documents_preserved": true
+  },
+  "output": "/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness/build/reader-tests-n5h9ra0s/site"
+}
+=========================== short test summary info ============================
+FAILED website/tests/test_repository_preview.py::test_native_no_site_placeholders_or_html_destinations
+FAILED website/tests/test_site.py::test_complete_site - ValueError: Duplicate...
+2 failed, 195 passed in 9.85s

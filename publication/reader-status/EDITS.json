@@ -1,0 +1,131 @@
+{
+  "status": "authorized_reader_status_cleanup",
+  "starting_commit": "ba5fe59a31b7b833a458ee3761fbc9777d8c47e4",
+  "authorization": "Owner requested removing historical information from the reader route and retaining the contact email; existing merge authorization persists.",
+  "files": {
+    ".github/workflows/historical-object-review.yml": {
+      "before_sha256": "54401df4e02b4dcd395dae284f5490a1278f111f8b7dbc44da39878ac3644244",
+      "after_sha256": "deb2b5a4ca8a9bb2bd546c470151cce21cd6b9804c783e33fade807b3f856747"
+    },
+    ".github/workflows/integration-candidate.yml": {
+      "before_sha256": "df6fea5b170b63df84e3336a3d0fc82170796fe672e73abfefcd7b427674369b",
+      "after_sha256": "ee41e99d4f491f86dad203d9c2d28034a03178c2fc6b28ee63e524b97c95e3b6"
+    },
+    "BASELINE_MANIFEST.json": {
+      "before_sha256": "38f30553a7bea500369442df0295a1ac3e12875bec7c5183e5b596fd9e69e341",
+      "after_sha256": "892f5794c7989ba871dc91075acc915c2929fbf8e83952533fc2cd16513473d7"
+    },
+    "PUBLICATION.md": {
+      "before_sha256": "d86870256bc59d3343e125837e0a824c446eb0cf9df44d43934833ce4cbe322c",
+      "after_sha256": "36adac020a36d3b275f025d4fbc0cc4abd6b16c23989375e797b40726e0a1256"
+    },
+    "README.md": {
+      "before_sha256": "043653daabb6aa54846875e73cadd774215b5d44d5a1601f5a85a653937f60cd",
+      "after_sha256": "37eb1864323c8bf73e8f973ae853e03ce8514368d4e1aad77715670a41de9a3b"
+    },
+    "STATUS.md": {
+      "before_sha256": "0c6c04fbd32e582b7dfe880d1769733f91b890e223a74c5be472c5eb7a703c4d",
+      "after_sha256": "73f960f08cc2674357c4473e254c4a2ab1c164a3c5362c98777f081f6ea17e3d"
+    },
+    "WEBSITE.md": {
+      "before_sha256": "9d8ff2265ed23288d14de07eabf3b84517ae1c7eed237f3046681b1f9744e628",
+      "after_sha256": "cd734df0a7e4ab6ee9d84e08c43572dbb77f7e2e2f264477f819aa6e2b93e2fc"
+    },
+    "publication/READINESS.json": {
+      "before_sha256": "55806b0f33d02bb6035e9bee8e43eb654005ee0049866e8bdebe86181b8bedcb",
+      "after_sha256": "9e638ab1375543f46b0e3b4c15b5c98fb90cafbfbd9ba8c6151d585b4875696f"
+    },
+    "reader/PREVIEW_MANIFEST.json": {
+      "before_sha256": "8f5ee0481f1f5418b0aef5cf45526e49b7f0c1c22349522c3d07f50f74841bd9",
+      "after_sha256": "601e6c8eabac6b1650331c5e51153bcca7e9378c8e15f764c9ee434757545109"
+    },
+    "reader/README.md": {
+      "before_sha256": "dce0c18ed4597ddc097f8f974f044d9481db6acea3f4603fb9ca546c7a1b9ca2",
+      "after_sha256": "349fe32759a22b0b6f983c6f844604b241fe33ad2264047c33490010f5d536b3"
+    },
+    "reader/background.md": {
+      "before_sha256": "b0c1e039f5505f8c8bd69ff7c58e7fa857ccec79c5975e3243e9c2a65038d288",
+      "after_sha256": "3a6a9ecfbad6789989c7fb2de0dcee627b0e1257e4ed383e56e2fb5398fdaa8e"
+    },
+    "reader/channel.md": {
+      "before_sha256": "7b0f2d1fd7abf4da42cf8c247d209fc186a2c200b3418588935666651c963ab2",
+      "after_sha256": "79d1d7c84d0c2860dd2ffaaa2f1cedd81268f717b9283e3814fe2bd16d8d5e02"
+    },
+    "reader/figures.md": {
+      "before_sha256": "abb578d457df094cf34049119b0bcdfc5d601ccc4298830740b684eebf573181",
+      "after_sha256": "9df41ab5d7791370fcc2174f42169d91d00a49e65120f63a9b6ec56871283b23"
+    },
+    "reader/limits.md": {
+      "before_sha256": "3ed0f7c776f8bb6e8032404ca8c9dbb301c627ff7fd494cae76fd0102e24d4cd",
+      "after_sha256": "209a4891da67c297ea2fd373815645c6955dd218e92987a5c2f548e3de452fc6"
+    },
+    "reader/materials.md": {
+      "before_sha256": "636aea0329a4c3d028fc9a17ec568e6095e943e66e5ad3c4783fc76631779134",
+      "after_sha256": "a928506401a03005e78567d004030e9f93238d9c0e41c6aa37896fc4352d886e"
+    },
+    "reader/proof-guide.md": {
+      "before_sha256": "5431145de159a36bea7db80630c309c88b40c2d5cd14accf926c9281c0fc2583",
+      "after_sha256": "182d217a16c5ceec0593ac6af50339f79fedb6664022297204f8f01a01c2338a"
+    },
+    "reader/status.md": {
+      "before_sha256": "f04bbf6f60d6b7761ecdbf1f050605aa9ca99881ac500315acab2cd1f3c7858a",
+      "after_sha256": "764da630c3debb4cc74b4486a1444ded3f575c69a17457c0cdb55a65f812bdb3"
+    },
+    "reader/verification.md": {
+      "before_sha256": "950561252b79035703d9719c53dfdf8e36debec8d0a0e4660ff09e80f05171cb",
+      "after_sha256": "c55b06a2d6e1c3b6d34d9f9c2e6eb20c42c7618e95333ac9ef9178661102e700"
+    },
+    "reader/visual-design.md": {
+      "before_sha256": "7fd6b664841a0c79ee6d0721e2edb66735af641e184b43823535016510c0d764",
+      "after_sha256": "8b79ef62e93e8fecc832d2cea3d8fd39cac44e0f20777bca1f9a0a889a2b30b0"
+    },
+    "website/build.py": {
+      "before_sha256": "11dec2ff2bbdd1b67328a004d6bbbf7c50cb1cff0ea4c57ec0183b03fcf073e8",
+      "after_sha256": "90fe8b4779836606c819aa97d75291ddc6bffcc45aea3f62a10faa8a560aec3c"
+    },
+    "website/editorial_map.json": {
+      "before_sha256": "e15ac0cfe1708d25ced8c5667105728f41c3091ed595b1240294e109df873a59",
+      "after_sha256": "c407c171f56b01c66dc4ad471272f6d09e0f90b534851928d0594a5c14b68358"
+    },
+    "website/pages/background.md": {
+      "before_sha256": "225e84c9233f1cc4b5d1ac2479920a422021b68211e5b06ada740fbe6058a73c",
+      "after_sha256": "3226106076ec7f997e72695c5fb5d5c29d0031d1db6a10c3ffc200f8612ab45c"
+    },
+    "website/pages/index.md": {
+      "before_sha256": "b35b19b23be49f5f70dbeb33236a4e50feb2a3ff29f8a6fc54bef60844971bc7",
+      "after_sha256": "c6ef1ab65cc822fbcb0928234a186bf0de7b8c2368fe4d25f3b56fc0b50f5041"
+    },
+    "website/pages/materials.md": {
+      "before_sha256": "b43b89b2d46576d67e27e200cb99ba672d7f4d4c1b5551f73de6e47edb58bb85",
+      "after_sha256": "60ed7a8334f9e71544c6d051144d8d964301911f741771dc7aa3fe41d6279dde"
+    },
+    "website/pages/status.md": {
+      "before_sha256": "7bf92656012c90a730b1b0cfa50951f426c32420d11f68d6a920f84fa3579a0a",
+      "after_sha256": "ae849e2a1ea986d90963d76f7d2cc832170c0466b5ca3d1ff407d80a864980cf"
+    },
+    "website/pages/verification.md": {
+      "before_sha256": "c2eb125f9bad1258ec1c956da244b815917d8a800e3d5e1e68ef222304ccdd9e",
+      "after_sha256": "c8b44fe42b9aee3f5a78c3b388bea5fc8b8d6c140b7185fe9f813898b085d841"
+    },
+    "website/pages/visual-design.md": {
+      "before_sha256": "7bffe4771f0bd6fd75cec51e4cb06cb1b89ada4f44c9c8621b25253da321e84f",
+      "after_sha256": "ce5cf0470fcc006b861a05314d4520bb36cf4f1bfccc25fc2679bd93b3324e53"
+    },
+    "website/repository_preview.py": {
+      "before_sha256": "dd34281da354bb0611f3617fb8a6b137775c8f14572a4cd3c5def93cbfe5a894",
+      "after_sha256": "08b667cfda1fbf5aecb68ab71b7fbc8bcaf7ed741ba89c3e8c18f4432f446e29"
+    },
+    "website/site.json": {
+      "before_sha256": "fc6d7b2d8694429fde416e6342378d712c667281584692648dfba00209d1e47b",
+      "after_sha256": "d181864f2a6fe35330972f5f117e6938f244fe6eca98b49630ba563a9e01541e"
+    },
+    "website/tests/test_integrated_preservation.py": {
+      "before_sha256": "a76cc522a463418a8e76b199c2cf9705ebe096731e8ba884ea3723faa389bbe6",
+      "after_sha256": "bf466bcda8fc350dc954a2a85a6278ba2e619d3f1735bcd7aafb14411a3cfd72"
+    },
+    "website/tests/test_repository_preview.py": {
+      "before_sha256": "dc43fdc93fbffe1ae2e1c922215fcfb9d05cfe55e40c66bb4d92dbdbbcd2b1b2",
+      "after_sha256": "689d164b2e6f9e641addcadf0d87392f054dba436fe46a012dd818afa2d7debc"
+    }
+  }
+}

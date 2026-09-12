@@ -145,8 +145,6 @@ def expected_files():
             '**Approved original**\n\n![The same Figure 2 in its approved original palette](../figures/approved/figure_02_guaranteed_region.svg)')
         if '<!-- SITE:' in body:
             raise ValueError('Unexpanded website content marker in '+origin)
-        if page['slug']=='status':
-            body = body.replace('The website is a review draft, not a public deployment.', 'The reader version is available inside the private repository. Public website deployment remains disabled.')
         previous = by_slug.get(page.get('previous'))
         nxt = by_slug.get(page.get('next'))
         tail = linked('Continue: '+nxt['title'],page_path(nxt),origin) if nxt else linked('Return to the overview','reader/README.md',origin)

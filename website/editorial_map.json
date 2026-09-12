@@ -114,7 +114,8 @@
       "path": "website/pages/status.md",
       "source_anchors": [
         "docs/MODEL_AND_CLAIMS.md#m07",
-        "website/provenance/baseline_STATUS.md"
+        "docs/MODEL_AND_CLAIMS.md#m08",
+        "publication/PROJECT_HISTORY.md"
       ],
       "scientific_additions_authorized": false,
       "comment": "Reader explanation traced to canonical sources; no scientific additions. Preskill redesign metadata is separate from the proof ledger."
@@ -155,5 +156,15 @@
     "manuscript_authorized": false,
     "pending_correction_commit": "9ccecbf4cd3d975de2c498ba4fe2a9862f90778b",
     "pending_corrections_merged": false
+  },
+  "current_reader_status": {
+    "date": "2026-09-12",
+    "starting_commit": "ba5fe59a31b7b833a458ee3761fbc9777d8c47e4",
+    "scope": "Present completed scientific account first; retain provenance behind an optional record index; keep owner-approved contact email.",
+    "source_of_truth": "website/pages/",
+    "history_index": "publication/PROJECT_HISTORY.md",
+    "report": "publication/reader-status/REPORT.md",
+    "scientific_changes": false,
+    "previous_stage_entries": "Historical snapshots; pending fields in those entries describe their original stages, not current project status."
   }
 }

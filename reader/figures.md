@@ -21,7 +21,7 @@
 - [Source and proof ledger](../docs/SOURCE_TO_CANONICAL.md)
 - [Frozen scientific argument](../docs/FROZEN_ARGUMENT.md)
 - [Visual design](visual-design.md)
-- [Status and publication](status.md)
+- [Project status](status.md)
 
 </details>
 

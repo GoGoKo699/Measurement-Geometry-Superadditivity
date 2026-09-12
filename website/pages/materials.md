@@ -1,10 +1,10 @@
 # From a claim to its supporting material
 
-The manuscript comes last. The repository already contains the model, complete proof, retained numerical inputs, figure specifications, approved figures, captions, and the declared computational evidence. This page connects those materials without drafting the paper.
+The repository contains the complete model and proof, numerical inputs, figures and captions, and computational evidence for the stated result. This page connects each claim to the material that supports it.
 
 ## Background and project reasoning
 
-The [focused Preskill map](background.md) is the one external educational route. Its [structured learning metadata](../learning_bridge.json) records the pinned edition, passage locations, return links and the canonical project anchors used by the bridge. It is separate from the scientific claim ledger below. [Current attribution correction](status.md#correction-record) · [Reader implementation and checks](../review/PRESKILL_BRIDGE_REPORT.md)
+The [focused Preskill map](background.md) is the one external educational route. Its [structured learning metadata](../learning_bridge.json) records the pinned edition, passage locations, return links and the canonical project anchors used by the bridge. It is separate from the scientific claim ledger below.
 
 ## Claim-to-evidence inventory
 
@@ -24,14 +24,21 @@ The [figure atlas](figures.md) gives each panel's question, exact caption, sourc
 
 <!-- SITE:CHECKER_TABLE -->
 
-## Canonical writing material
+## Canonical scientific account
 
-The [model](../../docs/MODEL_AND_CLAIMS.md) fixes definitions, assumptions and notation. The [complete proof](../../docs/COMPLETE_PROOF.md) supplies the entire internal argument. The [frozen short argument](../../docs/FROZEN_ARGUMENT.md) records the intended story; its historical planning footer does not change the later audit status. The [notation crosswalk](../../docs/NOTATION_CROSSWALK.md) and [source ledger](../../docs/SOURCE_TO_CANONICAL.md) explain how source fragments became the canonical account.
+The [model](../../docs/MODEL_AND_CLAIMS.md) fixes definitions, assumptions and notation. The [complete proof](../../docs/COMPLETE_PROOF.md) supplies the entire internal argument. The [short argument](../../docs/FROZEN_ARGUMENT.md) gives a compact route through the result. The [notation crosswalk](../../docs/NOTATION_CROSSWALK.md) and [source ledger](../../docs/SOURCE_TO_CANONICAL.md) explain how source fragments became the canonical account.
 
-The [reference record](../../docs/REFERENCES.md) distinguishes standard tools, closest antecedents, and the bounded priority assessment. It does not certify an absolute-first claim. No manuscript or publication metadata has been invented for this reader site.
+The [reference record](../../docs/REFERENCES.md) distinguishes standard tools, closest antecedents, and the bounded priority assessment. It does not certify an absolute-first claim.
 
-## Reuse and publication
+## Reuse and citation
 
-The owner has adopted MIT for original code and CC BY 4.0 for original prose, figures and data where rights exist. See the [license scope](../../LICENSE.md), [MIT terms](../../LICENSES/MIT.txt), [CC BY 4.0 terms](../../LICENSES/CC-BY-4.0.txt), [third-party notices](../../THIRD_PARTY_NOTICES.md) and [repository citation](../../CITATION.cff). Preskill's external tutorial and other cited sources retain their own terms.
+The project uses MIT for original code and CC BY 4.0 for original prose, figures and data where rights exist. See the [license scope](../../LICENSE.md), [MIT terms](../../LICENSES/MIT.txt), [CC BY 4.0 terms](../../LICENSES/CC-BY-4.0.txt), [third-party notices](../../THIRD_PARTY_NOTICES.md) and [repository citation](../../CITATION.cff). Preskill's external tutorial and other cited sources retain their own terms.
 
-The repository remains private. The terms were adopted on `release/public-readiness-v1`; [PR #5](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/pull/5) records integration and its checks. Disclosure of private history and any public release require separate decisions. [Publication checklist](../../PUBLICATION.md) · [Current project and site status](status.md)
+Contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com). [Current project status](status.md)
+
+<details>
+<summary>Provenance and maintenance records</summary>
+
+The [record index](../../publication/PROJECT_HISTORY.md) links the source history, audit, documentary corrections and reader implementation records. These are retained for traceability and are not prerequisites for reading the result.
+
+</details>

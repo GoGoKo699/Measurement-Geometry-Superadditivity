@@ -144,7 +144,7 @@
     {
       "slug": "status",
       "source": "website/pages/status.md",
-      "title": "Status and publication",
+      "title": "Project status",
       "group": "About this site",
       "next": null,
       "previous": "materials"

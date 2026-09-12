@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/workspace/scratch/323c19becda4/task-venv/bin/python",
+    "website/build.py",
+    "--output",
+    "build/current-reader-review-final"
+  ],
+  "working_directory": "/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness",
+  "started_utc": "2026-09-12T12:19:27.306418+00:00",
+  "duration_seconds": 3.723,
+  "return_code": 0,
+  "log": "reader-status-html-final.log",
+  "python_optimization_used": false,
+  "thread_limits": {
+    "OPENBLAS_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 1
+  }
+}

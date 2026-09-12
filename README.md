@@ -2,7 +2,7 @@
 
 A qubit either arrives intact or is destructively measured along a randomly chosen, known axis. In the measured branch, the receiver gets the axis label and an imperfect outcome record, but not the measured qubit or the hidden true sign.
 
-This scientific baseline establishes a geometric sufficient condition for a collective-coding advantage: for **every finite measurement ensemble spanning all three Bloch directions**, and every **common symmetric reporting error** $0<\epsilon<1/2$, there is a nonempty measurement-probability interval with
+This project establishes a geometric sufficient condition for a collective-coding advantage: for **every finite measurement ensemble spanning all three Bloch directions**, and every **common symmetric reporting error** $0<\epsilon<1/2$, there is a nonempty measurement-probability interval with
 
 $$Q^{(1)}(\mathcal N)=0<Q(\mathcal N).$$
 
@@ -42,7 +42,7 @@ The coding direction and finite block length may depend on the known channel par
 
 [All three with captions](figures/approved/three_figure_review.pdf) · [Scientific captions](figures/CAPTIONS.md) · [Panel specifications](figures/FIGURE_SPECIFICATIONS.md)
 
-The exact approved PDF/SVG/PNG files and separate vector panels are protected by [their hash record](provenance/APPROVED_FIGURE_HASHES.json). The earlier review PDF's preapproval footer remains unchanged for byte preservation; [STATUS.md](STATUS.md) records the actual approval. Figure 2 shows a conservative sufficient band, not an exact capacity phase diagram. The Figure 1 witness uses a sharper one-use bound and is not falsely placed inside that band. Figure 3's dashed line is an analytical asymptote, not a fitted slope.
+The PDF/SVG/PNG downloads and separate vector panels are available with [their identity record](provenance/APPROVED_FIGURE_HASHES.json). Figure 2 shows a conservative sufficient band, not an exact capacity phase diagram. The Figure 1 witness uses a sharper one-use bound and is not falsely placed inside that band. Figure 3's dashed line is an analytical asymptote, not a fitted slope.
 
 ## Read and reproduce
 
@@ -62,16 +62,14 @@ Use new output directories. The default reproduction rebuilds the plotting input
 
 `verify.py` alone is an integrity/provenance check, **not** an entropy-inequality verification. No command requires a historical ZIP, previous chat, credentials, or an existing repository. See [REPRODUCTION.md](docs/REPRODUCTION.md) for exact command scopes, software versions, outputs, and byte-reproduction limitations.
 
-## What this baseline contains
+## Project status and contents
 
-`docs/` is the canonical scientific account; `certificates/` holds the rational proof input; `verification/` keeps independent arithmetic implementations separate; `data/figures/` contains the plotted values and their numerical bounds; `figures/` holds the approved artifacts, captions, contract and Python renderer. `evidence/` is immutable reference output, while `validation/` records checks of this reorganized package. `provenance/` links retained source fragments to the current files and records path-only changes. Its historical texts are provenance, not executable archive dependencies.
+**The repository is complete for its stated scientific result:** the channel model, theorem, full proof, computational certificate, independent verification implementations, finite witness and three figures are included. The [current status](STATUS.md) explains the scope and links the recorded checks. This is an author-verified research account; it has not undergone external peer review, and a manuscript is not included.
 
-This package concerns only the noisy-record channel paper. It includes none of the old monitored-many-body datasets or figures. No manuscript is included, and the old repository is neither required nor modified. All figure elements are Python-generated; there is no TeX/TikZ source or standalone font file.
+`docs/` contains the canonical scientific account; `certificates/` holds the rational proof input; `verification/` contains the independent arithmetic implementations; `data/figures/` contains plotting inputs; and `figures/` contains the figures, captions and renderer. The [evidence guide](reader/verification.md) explains how to inspect and reproduce the computational results.
 
-**Research status:** author-side analytical and computer-assisted verification, not external review or proof-assistant formalization. Exact capacity, efficient decoding, arbitrary heterogeneous/asymmetric/correlated errors, and noisy basis labels remain outside the claim. The repository remains private and is not a public release. [Current baseline status](STATUS.md)
+## Reuse, citation and contact
 
-## Reuse and citation
+Original code is licensed under **MIT**. Original prose, figures and data are licensed under **CC BY 4.0**, where the relevant rights exist. [LICENSE.md](LICENSE.md) defines the scope; [third-party notices](THIRD_PARTY_NOTICES.md) retain the separate terms of external components. Cite the repository using [CITATION.cff](CITATION.cff) and identify the exact commit used.
 
-The owner has adopted **MIT for original code** and **CC BY 4.0 for original prose, figures and data**, where the relevant rights exist. [LICENSE.md](LICENSE.md) defines the scope and links both license texts; [third-party notices](THIRD_PARTY_NOTICES.md) preserve the separate terms of external components. Cite this repository using [CITATION.cff](CITATION.cff), with Ruge Lin as the confirmed author, and record the exact commit used.
-
-These terms were adopted on `release/public-readiness-v1`. [PR #5](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/pull/5) records integration and its checks. Publication of the repository and private historical metadata remains a separate decision. [Publication checklist](PUBLICATION.md) · [Adoption record](publication/LICENSE_ADOPTION.json)
+Contact: **Ruge Lin**, [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
