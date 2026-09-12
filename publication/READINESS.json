@@ -10,7 +10,6 @@
   "merge_performed": false,
   "pending": [
     "Historical contact and project metadata disclosure decision",
-    "Complete inspection of two historical binary objects",
     "Authorized integration of reader and audit corrections",
     "Final integrated public-tree wording and CI review",
     "Explicit visibility instruction"
@@ -48,5 +47,12 @@
     "third_party": "unchanged component terms"
   },
   "adoption_record": "publication/LICENSE_ADOPTION.json",
-  "branches_inspected_note": "Historical preparation snapshot; license adoption did not integrate these branches."
+  "branches_inspected_note": "Historical preparation snapshot; license adoption did not integrate these branches.",
+  "historical_binary_review": {
+    "status": "completed",
+    "record": "publication/evidence/HISTORICAL_OBJECTS_REVIEW.json",
+    "scope": "Two exact Git objects; not blanket public clearance"
+  },
+  "followup_starting_commit": "857d173c79140b5c2643c1a7d16b4a2321ed8dd4",
+  "integration_review": "publication/INTEGRATION_REVIEW.md"
 }

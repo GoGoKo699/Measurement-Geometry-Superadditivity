@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/workspace/scratch/323c19becda4/task-venv/bin/python",
+    "publication/inspect_historical_objects.py",
+    "--output",
+    "build/historical-object-local-review"
+  ],
+  "working_directory": "/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness",
+  "started_utc": "2026-09-12T09:39:05.882929+00:00",
+  "duration_seconds": 0.327,
+  "return_code": 0,
+  "log": "followup-local-objects.log",
+  "python_optimization_used": false,
+  "thread_limits": {
+    "OPENBLAS_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 1
+  }
+}
