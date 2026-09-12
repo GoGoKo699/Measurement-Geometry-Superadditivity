@@ -1,5 +1,4 @@
 {
-  "base_commit": "9a1e4cb3bad843db9cec1fa348870ca7162df0e0",
   "repository": "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity",
   "title": "Measurement Geometry",
   "subtitle": "Coherent-information superadditivity",
@@ -149,6 +148,5 @@
       "next": null,
       "previous": "materials"
     }
-  ],
-  "reader_baseline_commit": "f0015c56a19fd953c6797b2c64d9b507105234e3"
+  ]
 }

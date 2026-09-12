@@ -20,7 +20,7 @@ Page numbers are **printed pages**. In this v5 PDF, printed page $k$ is viewer p
 
 <!-- SITE:BACKGROUND_NOTATION -->
 
-The repository's [canonical notation crosswalk](../../docs/NOTATION_CROSSWALK.md) serves a different purpose: it reconciles the project's historical source fragments. It remains unchanged. The tutorial crosswalk above does not rename canonical mathematical symbols.
+The repository's [canonical notation crosswalk](../../docs/NOTATION_CROSSWALK.md) connects the symbols used across the project's source materials. The tutorial crosswalk above explains how Preskill's notation relates to those symbols without renaming the canonical mathematics.
 
 <a id="after-the-tutorial"></a>
 

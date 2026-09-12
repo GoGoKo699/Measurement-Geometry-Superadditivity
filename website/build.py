@@ -6,7 +6,6 @@ Canonical technical pages are rendered from their source files, not rewritten.
 """
 from __future__ import annotations
 import argparse,hashlib,html,json,os,re,shutil,subprocess,sys
-from datetime import date
 from pathlib import Path
 from urllib.parse import urlsplit,urlunsplit,unquote
 from bs4 import BeautifulSoup
@@ -15,13 +14,13 @@ ROOT=Path(__file__).resolve().parents[1]
 WEB=ROOT/'website'
 sys.path.insert(0,str(WEB))
 from learning_bridge import METADATA, expand_background, load_bridge, validate_routes
-# Download inventory only. License scope and owner authority remain in the
-# operative root license and the separate adoption record, never in this list.
+# Download inventory only. The operative root license defines reuse scope.
 REUSE_DOWNLOADS=(
  'LICENSE.md','LICENSES/MIT.txt','LICENSES/CC-BY-4.0.txt',
  'LICENSES/DejaVu.txt','LICENSES/STIX.txt','THIRD_PARTY_NOTICES.md',
- 'CITATION.cff','publication/LICENSE_ADOPTION.json',
+ 'CITATION.cff',
 )
+INTEGRITY_DOWNLOADS=('integrity/check_scientific.py','integrity/SCIENTIFIC_FILES.json')
 FIGURES=[
  ('figure_01_channel_and_witness','The channel and a concrete separation','Figure 1: hidden true outcomes stay inside the channel; the eight-use per-use value is positive while optimized single-use coherent information is zero.',['figure1_comparison.csv','figure1_all_masks_not_for_display.csv','figure1_original_witness140.json'],['m01','m05'],['p01','p13']),
  ('figure_02_guaranteed_region','The geometric guarantee across reporting noise','Figure 2: equal-Pauli slice of the theorem. A solid sufficient lower bound and a dashed strict repetition frontier enclose a narrow certified region; the inset displays its width.',['figure2_pauli_guaranteed_region.csv','cross_figure_witness_bound_check.json'],['m03','m04'],['p08','p10']),
@@ -44,98 +43,12 @@ def pandoc(text):
  require(not p.stderr.strip(),'Pandoc warning requires review: '+p.stderr)
  return p.stdout
 
-EDITORIAL_DOCUMENT_FILES=frozenset({'docs/REFERENCES.md','docs/MODEL_AND_CLAIMS.md',
- 'docs/SOURCE_TO_CANONICAL.md','figures/FIGURE_SPECIFICATIONS.md','provenance/SECTION_LEDGER.json'})
-DOCUMENTARY_IDENTITY_FILES=frozenset({'provenance/CANONICAL_INPUTS.json',
- 'data/figures/SOURCE_IDENTITY.json','data/figures/BUILD_RECORD.json','provenance/FIGURE_INPUTS.json'})
-EDITORIAL_FILES=EDITORIAL_DOCUMENT_FILES|DOCUMENTARY_IDENTITY_FILES
-
-def verify_editorial_corrections(old):
- """Reconstruct frozen bytes from documentary edits and their identity records.
-
- The old manifest is never renewed. Its digests remain the final authority;
- an after digest by itself does not authorize an edit.
- """
- path=ROOT/'provenance/EDITORIAL_CORRECTIONS.json'
- if not path.exists():return {}
- record=load(path)
- required={'baseline_commit','audit_commit','date','files'};descriptive={'authorization','scope'}
- require(isinstance(record,dict) and required<=set(record)<=required|descriptive,'Malformed editorial correction metadata')
- require(all(isinstance(record[k],str) and record[k].strip() for k in descriptive&set(record)),'Malformed editorial correction description')
- require(record['baseline_commit']=='f0015c56a19fd953c6797b2c64d9b507105234e3','Unexpected editorial baseline commit')
- require(record['audit_commit']=='5e367b1e541bf7d5ba1af90e85796d59db9e03f4','Unexpected editorial audit commit')
- require(isinstance(record['date'],str) and re.fullmatch(r'\d{4}-\d{2}-\d{2}',record['date']),'Malformed editorial correction date')
- date.fromisoformat(record['date'])
- files=record['files']
- require(isinstance(files,dict) and files and set(files)<=EDITORIAL_FILES,'Unauthorized editorial correction file')
- for rel,entry in files.items():
-  require(rel in old and isinstance(entry,dict) and set(entry)=={'before_sha256','after_sha256','replacements'},'Malformed editorial correction record: '+rel)
-  require(entry['before_sha256']==old[rel],'Editorial original hash differs from frozen manifest: '+rel)
-  require(isinstance(entry['after_sha256'],str) and re.fullmatch(r'[0-9a-f]{64}',entry['after_sha256']),'Malformed editorial current hash: '+rel)
-  require(entry['after_sha256']!=entry['before_sha256'],'No-op editorial correction: '+rel)
-  current=(ROOT/rel).read_bytes()
-  require(hashlib.sha256(current).hexdigest()==entry['after_sha256'],'Undeclared editorial file change: '+rel)
-  replacements=entry['replacements']
-  require(isinstance(replacements,list) and replacements,'Missing editorial replacements: '+rel)
-  for change in replacements:
-   require(isinstance(change,dict) and set(change)=={'before','after'},'Malformed editorial replacement: '+rel)
-   require(all(isinstance(change[k],str) and change[k] for k in ('before','after')) and change['before']!=change['after'],'Empty or no-op editorial replacement: '+rel)
-  original=current
-  for change in reversed(replacements):
-   before,after=change['before'].encode('utf-8'),change['after'].encode('utf-8')
-   require(current.count(after)==1 and original.count(after)==1,'Ambiguous or absent editorial replacement: '+rel)
-   original=original.replace(after,before,1)
-  require(hashlib.sha256(original).hexdigest()==old[rel],'Editorial reconstruction differs from frozen baseline: '+rel)
-  replay=original
-  for change in replacements:
-   before,after=change['before'].encode('utf-8'),change['after'].encode('utf-8')
-   require(original.count(before)==1 and replay.count(before)==1,'Ambiguous original editorial replacement: '+rel)
-   replay=replay.replace(before,after,1)
-  require(replay==current,'Editorial replacement round trip failed: '+rel)
-  if rel.endswith('.md'):
-   # Documentary permission does not allow changes to any recorded equation.
-   math=re.compile(rb'\$\$.*?\$\$|(?<!\$)\$[^$\n]+\$(?!\$)',re.S)
-   require(math.findall(original)==math.findall(current),'Mathematical source changed by editorial correction: '+rel)
-  elif rel=='provenance/SECTION_LEDGER.json':
-   before,after=json.loads(original),json.loads(current)
-   prior=[unit for unit in before['units'] if unit['canonical_id']=='M08']
-   now=[unit for unit in after['units'] if unit['canonical_id']=='M08']
-   require(len(prior)==len(now)==1,'Ambiguous M08 ledger correction')
-   now[0]['canonical_fragment_sha256']=prior[0]['canonical_fragment_sha256']
-   require(after==before,'Editorial ledger change extends beyond the M08 fragment hash')
-  else:
-   before,after=json.loads(original),json.loads(current)
-   model='docs/MODEL_AND_CLAIMS.md';manifest='provenance/CANONICAL_INPUTS.json';identity='data/figures/SOURCE_IDENTITY.json';build_record='data/figures/BUILD_RECORD.json'
-   if rel==manifest:
-    require(after['files'][model]==sha(ROOT/model),'Documentary manifest does not identify the current model')
-    after['files'][model]=before['files'][model]
-   elif rel==identity:
-    require(after['manifest_sha256']==sha(ROOT/manifest),'Source identity does not identify the current manifest')
-    require(after['selected_members'][model]==sha(ROOT/model),'Source identity does not identify the current model')
-    after['manifest_sha256']=before['manifest_sha256']
-    after['selected_members'][model]=before['selected_members'][model]
-   elif rel==build_record:
-    require(after['source']==load(ROOT/identity),'Figure build record does not identify the current source identity')
-    after['source']['manifest_sha256']=before['source']['manifest_sha256']
-    after['source']['selected_members'][model]=before['source']['selected_members'][model]
-   elif rel=='provenance/FIGURE_INPUTS.json':
-    for source in (identity,build_record):
-     require(after[source]==sha(ROOT/source),'Figure inputs do not identify the current source identity or build record')
-     after[source]=before[source]
-   require(after==before,'Documentary identity change extends beyond authorized hash fields: '+rel)
- return files
-
 def verify_baseline():
- old=load(WEB/'provenance/baseline_manifest_v1.json')['files'];allow={'README.md','STATUS.md'}
- corrected=verify_editorial_corrections(old)
- checked=0
- for rel,h in old.items():
-  if rel not in allow and rel not in corrected:require(sha(ROOT/rel)==h,'Protected scientific baseline changed: '+rel);checked+=1
- require(sha(WEB/'provenance/baseline_README.md')==old['README.md'],'Original README not preserved')
- require(sha(WEB/'provenance/baseline_STATUS.md')==old['STATUS.md'],'Original status not preserved')
- protected=load(ROOT/'provenance/APPROVED_FIGURE_HASHES.json')['files']
- for rel,h in protected.items():require(sha(ROOT/rel)==h,'Approved figure modified: '+rel)
- return {'baseline_commit':'9a1e4cb3bad843db9cec1fa348870ca7162df0e0','baseline_members_byte_unchanged':checked,'baseline_members_with_verified_editorial_corrections':len(corrected),'corrected_documentary_members':len(set(corrected)&EDITORIAL_DOCUMENT_FILES),'updated_documentary_identity_members':len(set(corrected)&DOCUMENTARY_IDENTITY_FILES),'editorially_corrected_files':sorted(corrected),'approved_graphical_artifacts_unchanged':len(protected),'original_root_documents_preserved':True}
+ """Check the current protected sources directly, without replaying old trees."""
+ sys.path.insert(0,str(ROOT))
+ from integrity.check_scientific import check
+ return check(ROOT)
+
 
 def theme_svgs(out,palette):
  target=out/'assets/theme';target.mkdir(parents=True,exist_ok=True);m=palette['svg_mapping'];records=[]
@@ -252,21 +165,15 @@ def build(out):
  validate_routes(config);bridge=load_bridge()
  page_map={p['source']:p['slug']+'.html' for p in config['pages']};page_map.update({'README.md':'index.html','STATUS.md':'status.html'})
  shutil.copytree(WEB/'assets',out/'assets')
- # Explicit allowlist: scientific baseline files, followed by website Markdown pages.
+ # Explicit allowlist: scientific sources, current reader sources and reuse terms.
  baseline=load(ROOT/'BASELINE_MANIFEST.json')['files'];sources=set(baseline)|{'BASELINE_MANIFEST.json'}
- sources|={p['source'] for p in config['pages']};sources|={'WEBSITE.md','website/palette.json',METADATA,'website/site.json','website/editorial_map.json','website/learning_bridge.py','website/provenance/preskill_starting_manifest.json'}
+ sources|=set(load(ROOT/'integrity/SCIENTIFIC_FILES.json')['files'])
+ sources|={p['source'] for p in config['pages']}
+ sources|={'WEBSITE.md','website/palette.json',METADATA,'website/site.json',
+  'website/editorial_map.json','website/learning_bridge.py'}
  sources|=set(REUSE_DOWNLOADS)
- sources|={'PUBLICATION.md','CONTRIBUTING.md','website/requirements.txt','website/requirements-browser.txt'}
- sources|={'publication/LICENSE_ADOPTION_REPORT.md','publication/INTEGRATION_REVIEW.md',
-  'publication/integration/CANDIDATE_REPORT.md','publication/integration/check_candidate.py',
-  'publication/integration/CANDIDATE_STARTING_FILES.json','publication/integration/CANDIDATE_EDITS.json',
-  'publication/integration/core-corrections.patch','publication/integration/CORE_PATCH_REPLAY.json'}
- sources|={'publication/PROJECT_HISTORY.md','publication/reader-status/REPORT.md',
-  'publication/reader-status/check_reader_status.py','publication/reader-status/STARTING_FILES.json',
-  'publication/reader-status/EDITS.json','publication/reader-status/BEFORE_TEXT.json'}
- sources|={'publication/integration/INTEGRATION_REPORT.md','publication/integration/check_integrated.py',
-  'publication/integration/INTEGRATED_STARTING_FILES.json','publication/integration/INTEGRATED_EDITS.json'}
- sources|={p.relative_to(ROOT).as_posix() for p in (WEB/'review').rglob('*') if p.is_file() and p.suffix in {'.md','.json','.log','.txt'}}
+ sources|=set(INTEGRITY_DOWNLOADS)
+ sources|={'CONTRIBUTING.md','website/requirements.txt','website/requirements-browser.txt'}
  for rel in sorted(sources):
   require((ROOT/rel).is_file(),'Missing source: '+rel)
   target=out/'files'/rel;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(ROOT/rel,target)
@@ -289,8 +196,9 @@ def build(out):
    search.append({'title':page['title']+' / '+h2.get_text(' ',strip=True).rstrip('§').strip(),'url':target.name+'#'+h2['id'],'text':' '.join(snippets)[:4000]})
   page_records.append({'page':target.name,'source':page['source'],'source_sha256':sha(src),'canonical_source_rendered':page.get('canonical',False),'heading_count':len(toc),'mathml_count':len(parsed.find_all('math'))})
  (out/'assets/search-index.js').write_text('window.PROJECT_SEARCH = '+json.dumps(search,ensure_ascii=False).replace('</','<\\/')+';\n')
- record={'site_version':'reader-site-v1','date':config['website_date'],'base_commit':config['base_commit'],'reader_baseline_commit':config['reader_baseline_commit'],'learning_bridge':{'source':METADATA,'sha256':sha(ROOT/METADATA),'tutorial_version':bridge['source']['version'],'scope':'editorial learning map, not a proof certificate'},'private_review_only':True,'public_deployment_performed':False,'canonical_materials':checked,'pages':page_records,'themed_svgs':theme,'build_dependencies':{'pandoc':subprocess.run(['pandoc','--version'],capture_output=True,text=True).stdout.splitlines()[0]},'rendering':'native MathML; local CSS/JS/search; no CDN requests','new_scientific_claims':False,'new_proof_or_numerical_audit':False,'palette_source':'website/palette.json'}
+ record={'site_version':'reader-site-v1','date':config['website_date'],'learning_bridge':{'source':METADATA,'sha256':sha(ROOT/METADATA),'tutorial_version':bridge['source']['version'],'scope':'editorial learning map, not a proof certificate'},'local_reading_edition':True,'public_deployment_performed':False,'canonical_materials':checked,'pages':page_records,'themed_svgs':theme,'build_dependencies':{'pandoc':subprocess.run(['pandoc','--version'],capture_output=True,text=True).stdout.splitlines()[0]},'rendering':'native MathML; local CSS/JS/search; no CDN requests','new_scientific_claims':False,'new_proof_or_numerical_audit':False,'palette_source':'website/palette.json'}
  record['reuse_source_downloads']=[{'source':rel,'download':'files/'+rel,'sha256':sha(ROOT/rel)} for rel in REUSE_DOWNLOADS]
+ record['integrity_source_downloads']=[{'source':rel,'download':'files/'+rel,'sha256':sha(ROOT/rel)} for rel in INTEGRITY_DOWNLOADS]
  dump(out/'files/BUILD_RECORD.json',record)
  (out/'START_HERE.txt').write_text('Open index.html in a modern browser, or run: python -m http.server 8000 --bind 127.0.0.1\nThis is a local reading artifact, not a deployed website.\n')
  print(json.dumps({'pages':len(page_records),'themed_svg_files':len(theme),'mathml_expressions':sum(p['mathml_count'] for p in page_records),'baseline_preservation':checked,'output':str(out)},indent=2))

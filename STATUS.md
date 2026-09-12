@@ -6,7 +6,7 @@ For every permitted finite full-span measurement ensemble and every common symme
 
 ## Verification and scope
 
-The integrated scientific account passed the complete certificate checks, retained witness and control calculations, figure reproduction, integrity checks, tests and actual browser checks. The [verification guide](reader/verification.md) identifies the checked commit and run records and explains what each check establishes.
+The integrated scientific account passed the complete certificate checks, retained witness and control calculations, figure reproduction, integrity checks, tests and actual browser checks. The [verification guide](reader/verification.md) explains what each check establishes and links the current CI results.
 
 This is author-side analytical and computer-assisted verification, not external peer review or proof-assistant formalization. The result gives a sufficient region. It does not determine the exact capacity boundary or provide a practical decoder; heterogeneous reporting errors and noisy axis labels are outside its assumptions. [Claim boundaries](docs/MODEL_AND_CLAIMS.md#m07)
 
@@ -17,5 +17,3 @@ A manuscript is not included. Preparing one is a separate writing stage; the rep
 Start with [the overview](reader/README.md), or go directly to the [proof](docs/COMPLETE_PROOF.md), [figures](reader/figures.md) and [source inventory](reader/materials.md). The GitHub reading pages and optional local HTML site use the same editorial sources. [Build instructions](WEBSITE.md)
 
 Original code uses MIT; original content uses CC BY 4.0 where rights exist. See [license scope](LICENSE.md), [third-party notices](THIRD_PARTY_NOTICES.md) and [citation metadata](CITATION.cff). Contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
-
-[Provenance and maintenance records](publication/PROJECT_HISTORY.md)

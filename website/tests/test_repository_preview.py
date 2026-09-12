@@ -45,8 +45,9 @@ def test_only_three_color_derivatives():
     for f in derivatives:
         assert stripped(f.read_text())==stripped((ROOT/'figures/approved'/f.name).read_text())
 
-def test_private_no_manuscript_or_public_hosting():
+def test_canonical_routes_and_no_public_hosting():
     m=json.loads((ROOT/'reader/PREVIEW_MANIFEST.json').read_text())
     assert not m['public_deployment']
+    assert 'reader_baseline_commit' not in m
     assert m['routes']['proof']=='docs/COMPLETE_PROOF.md'
     assert m['routes']['model']=='docs/MODEL_AND_CLAIMS.md'

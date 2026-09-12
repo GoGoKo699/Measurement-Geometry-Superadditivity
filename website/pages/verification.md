@@ -48,10 +48,10 @@ The stored records do not establish external peer review or proof-assistant form
 
 To return to the explanation, see [the all-record witness](channel.md#eight-use-witness) and [where the scalar proof enters](proof-guide.md#scalar-proof). The [selected background](background.md) explains the coding quantities; it is not an additional certificate or a software dependency.
 
-<a id="recorded-checks"></a>
+## Check the current revision
 
-## Completed verification runs
+Run `python integrity/check_scientific.py` to compare the current scientific files and figure exports with their protected SHA-256 identities. This check is direct and works without Git history. It does not execute a certificate verifier.
 
-The integrated scientific account at commit `ba5fe59a31b7b833a458ee3761fbc9777d8c47e4` passed the [scientific verification workflow](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/actions/runs/34689242223). That run executed all three full certificate verifiers, witness and control calculations, and graphical reproduction. It checked the stored rational covering; it did not rebuild that covering. The [reader workflow](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/actions/runs/34689242004) passed 175 tests and actual loopback HTTP checks in Chromium on desktop and mobile layouts. Those browser checks include navigation, sources, search, keyboard controls, mathematics, figures and no-JavaScript reading. They do not test GitHub's authenticated Markdown renderer.
+[Protected file identities](../../integrity/SCIENTIFIC_FILES.json) · [Integrity checker source](../../integrity/check_scientific.py)
 
-The [current editorial report](../../publication/reader-status/REPORT.md) records checks of the status-page cleanup and its comparison with that scientific account. [Provenance and maintenance records](../../publication/PROJECT_HISTORY.md)
+[GitHub Actions](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/actions) shows the workflows for each commit. Open the run for the revision you are using and inspect its commands and result; a configured, skipped or running check is not a pass. Fresh local output directories let you inspect the same obligations yourself. The [website guide](../../WEBSITE.md) includes the separate Markdown, HTML and loopback browser checks.

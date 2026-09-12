@@ -140,36 +140,16 @@ def test_native_learning_destinations_and_source_return_links():
         assert re.search(r'\]\(background\.md(?:#[^)]+)?\)', (ROOT / ('reader/' + slug + '.md')).read_text())
 
 
-def test_starting_science_and_graphical_artifacts_are_unchanged():
-    baseline = json.loads((ROOT / 'website/provenance/preskill_starting_manifest.json').read_text())
-    assert baseline['commit'] == 'f0015c56a19fd953c6797b2c64d9b507105234e3'
-    import build as builder
-    corrections = builder.verify_editorial_corrections(baseline['files'])
-    assert set(corrections) == builder.EDITORIAL_FILES
-    editable_files = {
-        'README.md', 'STATUS.md', 'BASELINE_MANIFEST.json',
-        'website/build.py', 'website/check.py', 'website/repository_preview.py',
-        'website/browser_check.py', 'website/site.json', 'website/editorial_map.json',
-        'WEBSITE.md', 'reader/PREVIEW_MANIFEST.json', 'website/assets/site.js',
-    }
-    checked = []
-    for name, expected in baseline['files'].items():
-        if name in editable_files or name.startswith(('website/pages/', 'website/tests/')):
-            continue
-        if name.startswith('reader/') and name.endswith('.md'):
-            continue
-        if name in corrections:
-            # The same frozen hash is recovered by exact inverse substitutions,
-            # with equation and identity-field guards, rather than waived.
-            assert corrections[name]['before_sha256'] == expected
-            checked.append(name)
-            continue
-        assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == expected, name
-        checked.append(name)
+def test_current_science_and_graphical_artifacts_are_unchanged():
+    from integrity.check_scientific import check
+    result = check(ROOT)
+    assert result['passed']
+    assert result['approved_graphical_artifacts_unchanged'] == 27
+    assert result['accepted_reader_svgs_unchanged'] == 3
+    protected = json.loads((ROOT / 'integrity/SCIENTIFIC_FILES.json').read_text())['files']
     for required in ('docs/COMPLETE_PROOF.md', 'docs/MODEL_AND_CLAIMS.md',
                      'figures/CAPTIONS.md', 'certificates/common_noise_compact_certificate.json',
                      'verification/integer/certify_all_noise.py',
                      'verification/mpmath/cross_backend.py',
-                     'verification/decimal/verify_certificate.py'):
-        assert required in checked
-    assert len([p for p in checked if p.startswith('reader/assets/')]) == 3
+                     'verification/decimal/verify_certificate.py', 'website/learning_bridge.json'):
+        assert required in protected

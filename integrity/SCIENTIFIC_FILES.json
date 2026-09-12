@@ -1,11 +1,14 @@
 {
-  "baseline_version": "1",
-  "date": "2026-09-08",
+  "schema_version": 1,
+  "scope": "Current scientific, accepted figure-presentation, and reuse identities. Identity verification is not mathematical proof verification.",
   "files": {
     ".gitignore": "474e99c1c59393bc0980720112c357c15a3caaf21ca51e1cb9a09bb973513da5",
+    "CITATION.cff": "a2b17ad519b172286230b6f75284a4b3078d2a4006b427072d2ab9a1ef764457",
     "ENVIRONMENT.json": "cc47f63afd139bb206ef106cd9510309afb1a788bcce902a422438570c56e336",
-    "README.md": "61d31818a9618db59e5c0dd6bf1038e839ba520cbca25e4165ce17c871e0810b",
-    "STATUS.md": "2e7a11feff44e63f631bc06b1404e681744757a1bbcfabe15d1cb7ac0db39441",
+    "LICENSES/CC-BY-4.0.txt": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+    "LICENSES/DejaVu.txt": "d75938dec098f06f0ac3c00853065d94f020be1c3c62ef1dc2975ba15b4d9b0e",
+    "LICENSES/MIT.txt": "a92600540b1ab7a18301e2632a29334b3df227ad836e88df9967d69e3c86db66",
+    "LICENSES/STIX.txt": "bab3d31dfef07f483624f2f65f2711e76065b8e7273278b1c071ede1041c9959",
     "baseline_tools.py": "be338f6c57f3f6524518246d6be7fb4e236b008faa88d3cb213d2ebc24196795",
     "certificates/common_noise_compact_certificate.json": "ab500804e56ba8c5ffb1ca7c1f38e3fd720b01561122b3a2bcc367a106ad66dd",
     "data/figures/BUILD_RECORD.json": "5eb0c69c1d30d2264d845cbefb5edf34100cc386b392edc05b1961d7b87e5cea",
@@ -124,6 +127,9 @@
     "provenance/text_sources/W10__independent_examples.py.txt": "eee5140b9eb837d763dbc306f11cd2acc10d9d5029aa4b71fc49403b5f251ecb",
     "provenance/text_sources/W5__examples.py.txt": "cce7ae1694db48e1ec03647704c59e65dadeb7c0042d1556f25c9145798a2e34",
     "pyproject.toml": "55b681d6e5d2f729c19e13df901e770d4de3f646171571c5e6e66e4c37f26d4a",
+    "reader/assets/figure_01_channel_and_witness.svg": "ae55000c4817410b942b56e633f737782092a151b529511c92813d3928691ede",
+    "reader/assets/figure_02_guaranteed_region.svg": "f6524780413bd0c6b75ab7373303dcc124d6ff0f98d6a72b99338b4539489d17",
+    "reader/assets/figure_03_coplanar_limit.svg": "9143ac8065b44da015c84ac93f8f77b7c4d765c8941d01140519d9e9bbffb55b",
     "reproduce.py": "6e2bd5d8faab49d6eddcfaaf7cae1bb72de88bc3368a09abacb20aec0fd58d94",
     "requirements.txt": "5251b895e7a9b19b24ed6ad49bf45c67caadecf659be3674a66c12c73a7159d0",
     "tests/certificates/test_audit.py": "06ea58c232626af205a8229a6064f3e1620566f7dac790f51f0fa4c0d9318b37",
@@ -167,7 +173,8 @@
     "verification/mpmath/witness_and_controls.py": "b170355c5c81e06573adf558013d33c27466901178db666ef8c14d831bed67a6",
     "verification/mpmath/witness_formula.py": "2c92f0a725b245d461bf734287d17c4e83ed73fb44769d16563efdcbc1098fa0",
     "verification/physical/physical_check.py": "aba22216e33bd4b132ef100a823131a1a3ec7aacd78e7815cc63e3eae5ce0db5",
-    "verify.py": "95d71e42bcab78796ce6d6261defee9009536122198967cad9ab17e6fa72e585"
-  },
-  "scope": "Complete clean scientific baseline; generated check outputs are kept outside the root or under ignored build/."
+    "verify.py": "95d71e42bcab78796ce6d6261defee9009536122198967cad9ab17e6fa72e585",
+    "website/learning_bridge.json": "366a452b9647dbbfa388fc1eb7db2c9475c54efbc36731da534a4d268692e700",
+    "website/palette.json": "1e7c478696a2a6c4dd4b79404558edbe2f9869fb53b622b7c8e19158d88f2935"
+  }
 }

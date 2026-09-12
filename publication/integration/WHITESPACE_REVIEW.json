@@ -1,7 +1,0 @@
-{
-  "command": "git diff --cached --check",
-  "return_code": 2,
-  "finding": "Raw preserved pytest failure log contains a whitespace-only diagnostic line at publication/evidence/merge-tests.log:44.",
-  "treatment": "Preserve exact diagnostic bytes. Scoped source whitespace check excludes only that raw log.",
-  "scoped_command": "git diff --cached --check -- :(exclude)publication/evidence/merge-tests.log"
-}

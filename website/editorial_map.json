@@ -1,26 +1,15 @@
 {
-  "baseline_commit": "9a1e4cb3bad843db9cec1fa348870ca7162df0e0",
-  "scope": "Reader guides and plain navigation; scientific sources and protected graphics unchanged",
-  "my_tone": {
-    "repository": "GoGoKo699/My-tone",
-    "commit": "005873301782c06f21b1c6e73a5ce3b08c630cc4",
-    "read_files": {
-      "SKILL.md": "7ea3baf71c94ba4943d029787b5ecd82697228a6",
-      "README.md": "de9c654ab0c4c74ef72c20e7c3c5df1b8cde4188",
-      "docs/MODES.md": "52830a71b198c057cfb42fcdb3b21c7040d52c8b"
-    },
-    "mode": "repository",
-    "private_examples_copied": false,
-    "preservation_check_py_run": false,
-    "meaning_review": "assistant source-to-guide review, not independent human review",
-    "rules_applied": [
-      "preserve assumptions, necessity/sufficiency and attribution",
-      "retain global one-use versus constructed block distinction",
-      "leave canonical equations and approved captions unchanged",
-      "keep actual versus recorded checks separate",
-      "no em dash in new authored prose"
-    ]
-  },
+  "scope": "Reader explanations and plain navigation, mapped to canonical scientific sources.",
+  "source_of_truth": "website/pages/",
+  "learning_metadata": "website/learning_bridge.json",
+  "scientific_proof_ledger": "provenance/CLAIM_COVERAGE.json",
+  "rules": [
+    "Preserve assumptions, necessity, sufficiency and attribution.",
+    "Distinguish global one-use optimization from a constructed block.",
+    "Keep canonical equations, captions and protected graphics unchanged.",
+    "Keep verification command roles separate.",
+    "Use no em dash in reader prose."
+  ],
   "new_pages": [
     {
       "path": "website/pages/index.md",
@@ -32,7 +21,7 @@
         "docs/MODEL_AND_CLAIMS.md#m06"
       ],
       "scientific_additions_authorized": false,
-      "comment": "Reader explanation traced to canonical sources; no scientific additions. Preskill redesign metadata is separate from the proof ledger."
+      "comment": "Reader explanation traced to canonical sources; no scientific additions."
     },
     {
       "path": "website/pages/channel.md",
@@ -46,7 +35,7 @@
         "docs/COMPLETE_PROOF.md#p13"
       ],
       "scientific_additions_authorized": false,
-      "comment": "Reader explanation traced to canonical sources; no scientific additions. Preskill redesign metadata is separate from the proof ledger."
+      "comment": "Reader explanation traced to canonical sources; no scientific additions."
     },
     {
       "path": "website/pages/proof-guide.md",
@@ -63,7 +52,7 @@
         "docs/COMPLETE_PROOF.md#p13"
       ],
       "scientific_additions_authorized": false,
-      "comment": "Reader explanation traced to canonical sources; no scientific additions. Preskill redesign metadata is separate from the proof ledger."
+      "comment": "Reader explanation traced to canonical sources; no scientific additions."
     },
     {
       "path": "website/pages/limits.md",
@@ -76,7 +65,7 @@
         "docs/COMPLETE_PROOF.md#p04"
       ],
       "scientific_additions_authorized": false,
-      "comment": "Reader explanation traced to canonical sources; no scientific additions. Preskill redesign metadata is separate from the proof ledger."
+      "comment": "Reader explanation traced to canonical sources; no scientific additions."
     },
     {
       "path": "website/pages/verification.md",
@@ -87,7 +76,7 @@
         "reproduce.py"
       ],
       "scientific_additions_authorized": false,
-      "comment": "Reader explanation traced to canonical sources; no scientific additions. Preskill redesign metadata is separate from the proof ledger."
+      "comment": "Reader explanation traced to canonical sources; no scientific additions."
     },
     {
       "path": "website/pages/materials.md",
@@ -98,7 +87,7 @@
         "docs/REFERENCES.md"
       ],
       "scientific_additions_authorized": false,
-      "comment": "Reader explanation traced to canonical sources; no scientific additions. Preskill redesign metadata is separate from the proof ledger."
+      "comment": "Reader explanation traced to canonical sources; no scientific additions."
     },
     {
       "path": "website/pages/figures.md",
@@ -108,17 +97,16 @@
         "data/figures/cross_figure_witness_bound_check.json"
       ],
       "scientific_additions_authorized": false,
-      "comment": "Reader explanation traced to canonical sources; no scientific additions. Preskill redesign metadata is separate from the proof ledger."
+      "comment": "Reader explanation traced to canonical sources; no scientific additions."
     },
     {
       "path": "website/pages/status.md",
       "source_anchors": [
         "docs/MODEL_AND_CLAIMS.md#m07",
-        "docs/MODEL_AND_CLAIMS.md#m08",
-        "publication/PROJECT_HISTORY.md"
+        "docs/MODEL_AND_CLAIMS.md#m08"
       ],
       "scientific_additions_authorized": false,
-      "comment": "Reader explanation traced to canonical sources; no scientific additions. Preskill redesign metadata is separate from the proof ledger."
+      "comment": "Reader explanation traced to canonical sources; no scientific additions."
     },
     {
       "path": "website/pages/visual-design.md",
@@ -127,7 +115,7 @@
         "figures/approved/figure_02_guaranteed_region.svg"
       ],
       "scientific_additions_authorized": false,
-      "comment": "Reader explanation traced to canonical sources; no scientific additions. Preskill redesign metadata is separate from the proof ledger."
+      "comment": "Reader explanation traced to canonical sources; no scientific additions."
     },
     {
       "path": "website/pages/background.md",
@@ -143,28 +131,5 @@
       "learning_metadata": "website/learning_bridge.json",
       "comment": "Original educational crosswalk; exact v5 passages verified directly. Project mathematics is not attributed to the tutorial."
     }
-  ],
-  "preskill_bridge": {
-    "starting_commit": "f0015c56a19fd953c6797b2c64d9b507105234e3",
-    "branch": "reader/preskill-bridge-v1",
-    "date": "2026-09-12",
-    "source_of_truth": "website/pages/",
-    "learning_metadata": "website/learning_bridge.json",
-    "my_tone_consulted": false,
-    "prior_my_tone_record": "The top-level my_tone entry describes the earlier reader pass, not this redesign.",
-    "science_audit_performed": false,
-    "manuscript_authorized": false,
-    "pending_correction_commit": "9ccecbf4cd3d975de2c498ba4fe2a9862f90778b",
-    "pending_corrections_merged": false
-  },
-  "current_reader_status": {
-    "date": "2026-09-12",
-    "starting_commit": "ba5fe59a31b7b833a458ee3761fbc9777d8c47e4",
-    "scope": "Present completed scientific account first; retain provenance behind an optional record index; keep owner-approved contact email.",
-    "source_of_truth": "website/pages/",
-    "history_index": "publication/PROJECT_HISTORY.md",
-    "report": "publication/reader-status/REPORT.md",
-    "scientific_changes": false,
-    "previous_stage_entries": "Historical snapshots; pending fields in those entries describe their original stages, not current project status."
-  }
+  ]
 }

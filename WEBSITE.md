@@ -6,9 +6,9 @@ GitHub provides its own Markdown and mathematics renderer. The HTML site adds lo
 
 ## Maintain one source
 
-Edit `website/pages/` for reader prose, `website/site.json` for routes, and `website/learning_bridge.json` for the selected Preskill v5 passages, crosswalk and return links. `website/editorial_map.json` records the project-source anchors and editorial stages. The tutorial map is a learning aid, not a proof certificate.
+Edit `website/pages/` for reader prose, `website/site.json` for routes, and `website/learning_bridge.json` for the selected Preskill v5 passages, crosswalk and return links. `website/editorial_map.json` records the current project-source anchors. The tutorial map is a learning aid, not a proof certificate.
 
-Generate `reader/` before checking it; do not hand-edit those outputs. Keep canonical mathematics, numerical inputs, independent evaluators, reference evidence, captions and protected graphical files unchanged during editorial work. The accepted palette applies only to figures. The [provenance index](publication/PROJECT_HISTORY.md) retains earlier implementation and approval records without making them part of the learning route.
+Generate `reader/` before checking it; do not hand-edit those outputs. Keep canonical mathematics, numerical inputs, independent evaluators, reference evidence, captions and protected graphical files unchanged during editorial work. The accepted palette applies only to figures.
 
 ## Generate and check
 
@@ -19,12 +19,13 @@ python -m pip install -r requirements.txt -r website/requirements.txt
 python website/repository_preview.py --write
 python website/repository_preview.py --check
 python verify.py
+python integrity/check_scientific.py
 python -m pytest -q -p no:cacheprovider tests website/tests
 python website/build.py --output build/reader-review
 python website/check.py --site build/reader-review
 ```
 
-Use a fresh output directory. Do not use Python `-O`, because some checks depend on assertions. The builder checks the protected scientific sources, approved graphics and exact documented substitutions behind earlier corrections. The current [editorial preservation check](publication/reader-status/check_reader_status.py) also compares against the integrated account. [Current editorial report](publication/reader-status/REPORT.md)
+Use a fresh output directory. Do not use Python `-O`, because some checks depend on assertions. The builder directly checks the protected scientific sources, provenance, numerical inputs and approved graphics against [their current integrity inventory](integrity/SCIENTIFIC_FILES.json). The [integrity checker](integrity/check_scientific.py) verifies those identities without reconstructing an earlier checkout. Scientific expected values and figure approval hashes must not be refreshed to accept a changed result.
 
 ## Browser review
 
@@ -48,4 +49,4 @@ The CI reader workflow produces a review artifact and exercises desktop and mobi
 
 ## Scientific verification
 
-[REPRODUCTION.md](docs/REPRODUCTION.md) distinguishes integrity checks, figure reproduction, witness calculations and complete certificate verification. Documentation work does not require another local full entropy-certificate run. The existing scientific CI gates remain in force. The [verification guide](reader/verification.md) links the recorded scientific checks and explains their scope.
+[REPRODUCTION.md](docs/REPRODUCTION.md) distinguishes integrity checks, figure reproduction, witness calculations and complete certificate verification. Documentation work does not require another local full entropy-certificate run. The existing scientific CI gates remain in force. The [verification guide](reader/verification.md) explains their scope and links current CI results.

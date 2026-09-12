@@ -9,7 +9,7 @@ from urllib.parse import urlsplit,unquote
 from bs4 import BeautifulSoup
 import argparse,json,re,hashlib,sys
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'website'))
-from build import REUSE_DOWNLOADS,verify_baseline,require,load,dump,sha
+from build import INTEGRITY_DOWNLOADS,REUSE_DOWNLOADS,verify_baseline,require,load,dump,sha
 from learning_bridge import METADATA, load_bridge, validate_routes
 
 def luminance(color):
@@ -28,6 +28,17 @@ def check_reuse_downloads(site,record):
   require(source.is_file() and download.is_file(),'License/citation download missing: '+rel)
   require(source.read_bytes()==download.read_bytes(),'License/citation download byte mismatch: '+rel)
   require(row.get('sha256')==sha(source),'License/citation download hash mismatch: '+rel)
+ return rows
+
+def check_integrity_downloads(site,record):
+ rows=record.get('integrity_source_downloads',[])
+ require([row.get('source') for row in rows]==list(INTEGRITY_DOWNLOADS),'Integrity download inventory mismatch')
+ for row in rows:
+  rel=row['source'];source=ROOT/rel;download=site/'files'/rel
+  require(row.get('download')=='files/'+rel,'Integrity download path mismatch: '+rel)
+  require(source.is_file() and download.is_file(),'Integrity download missing: '+rel)
+  require(source.read_bytes()==download.read_bytes(),'Integrity download byte mismatch: '+rel)
+  require(row.get('sha256')==sha(source),'Integrity download hash mismatch: '+rel)
  return rows
 
 def check(site):
@@ -85,6 +96,7 @@ def check(site):
   ratio=contrast(colors[fg],colors['white']);require(ratio>=3,'Curve contrast insufficient')
  record=load(site/'files/BUILD_RECORD.json')
  reuse=check_reuse_downloads(site,record)
+ integrity_downloads=check_integrity_downloads(site,record)
  require(record['learning_bridge']['sha256']==sha(ROOT/METADATA),'Learning metadata hash mismatch')
  require((site/'files'/METADATA).read_bytes()==(ROOT/METADATA).read_bytes(),'Learning metadata download mismatch')
  require(record['learning_bridge']['tutorial_version']==bridge['source']['version'],'Unpinned tutorial build record')
@@ -97,7 +109,7 @@ def check(site):
  # No new em dash in authored reader copy; inherited exact source is not restyled.
  for p in (ROOT/'website/pages').glob('*.md'):require('—' not in p.read_text(),'New authored em dash')
  return {'passed':True,'html_pages':len(files),'routes_checked':sorted(p['slug'] for p in config['pages']),'learning_bridge_metadata_verified':True,'local_links_checked':links,'external_links_not_fetched':len(set(outside)),
-  'mathml_expressions':math,'canonical_sources':sources,'reuse_source_downloads':reuse,'palette_text_contrasts':pairs,'color_only_svg_derivatives':len(record['themed_svgs']),
+  'mathml_expressions':math,'canonical_sources':sources,'reuse_source_downloads':reuse,'integrity_source_downloads':integrity_downloads,'palette_text_contrasts':pairs,'color_only_svg_derivatives':len(record['themed_svgs']),
   'source_preservation':pres,'no_public_deployment':True,'new_math_verification':False,'browser_checks_separate':True}
 
 if __name__=='__main__':

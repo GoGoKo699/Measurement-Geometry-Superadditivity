@@ -60,7 +60,7 @@ python reproduce.py --output build/full-check --full
 
 Use new output directories. The default reproduction rebuilds the plotting inputs, redraws every approved figure and checks their exact bytes in the recorded environment. `--full` additionally runs **all three full compact-certificate verifiers**, endpoint constants, independent retained-witness calculations, both declared controls, and direct small physical checks. Add `--rebuild-certificate` to regenerate the rational covering as well.
 
-`verify.py` alone is an integrity/provenance check, **not** an entropy-inequality verification. No command requires a historical ZIP, previous chat, credentials, or an existing repository. See [REPRODUCTION.md](docs/REPRODUCTION.md) for exact command scopes, software versions, outputs, and byte-reproduction limitations.
+`verify.py` alone is an integrity/provenance check, **not** an entropy-inequality verification. See [REPRODUCTION.md](docs/REPRODUCTION.md) for exact command scopes, software versions, outputs, and byte-reproduction limitations.
 
 ## Project status and contents
 

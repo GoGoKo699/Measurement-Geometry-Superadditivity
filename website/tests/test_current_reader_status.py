@@ -1,4 +1,4 @@
-"""Reader completion, contact and optional provenance routes stay coherent."""
+"""Reader completion, contact and direct evidence routes stay coherent."""
 from pathlib import Path
 import re
 
@@ -18,17 +18,19 @@ def test_current_completion_pages_keep_local_scope_and_expert_routes():
         assert 'authorized integration' not in text
 
 
-def test_history_is_optional_and_old_correction_anchor_still_resolves():
-    status = (ROOT / 'website/pages/status.md').read_text()
-    assert '<a id="correction-record"></a>' in status
-    for name in ('status', 'materials'):
+def test_reader_pages_do_not_depend_on_administrative_history():
+    for name in ('status', 'materials', 'verification'):
         text = (ROOT / f'website/pages/{name}.md').read_text()
-        details = re.search(r'<details>\s*<summary>Provenance and maintenance records</summary>(.*?)</details>', text, re.S)
-        assert details and '../../publication/PROJECT_HISTORY.md' in details.group(1)
+        assert 'publication/' not in text
+        assert 'Provenance and maintenance records' not in text
         assert 'PR #5' not in text
-    history = (ROOT / 'publication/PROJECT_HISTORY.md').read_text()
-    for destination in ('../STATUS.md', '../reader/README.md', '../docs/REFERENCES.md#s6-correction'):
-        assert destination in history
+        assert 'actions/runs/' not in text
+    verification = (ROOT / 'website/pages/verification.md').read_text()
+    assert 'python integrity/check_scientific.py' in verification
+    assert 'without Git history' in verification
+    assert 'a configured, skipped or running check is not a pass' in verification
+    for path in ('publication', 'website/review', 'website/provenance'):
+        assert not (ROOT / path).exists()
 
 
 def test_learning_route_does_not_assign_preparation_records():
