@@ -1,0 +1,21 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+  "python_optimization": 0,
+  "pandoc": "pandoc 3.1.3",
+  "chromium": null,
+  "resource_limits": {
+    "address_space": [
+      -1,
+      -1
+    ],
+    "cpu_seconds": [
+      -1,
+      -1
+    ],
+    "file_descriptors": [
+      16384,
+      16384
+    ]
+  }
+}

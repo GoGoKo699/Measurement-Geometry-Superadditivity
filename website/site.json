@@ -3,7 +3,7 @@
   "repository": "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity",
   "title": "Measurement Geometry",
   "subtitle": "Coherent-information superadditivity",
-  "website_date": "2026-09-08",
+  "website_date": "2026-09-12",
   "deployment": "disabled",
   "pages": [
     {
@@ -11,35 +11,48 @@
       "source": "website/pages/index.md",
       "title": "The project",
       "group": "Understand",
-      "next": "channel"
+      "next": "background",
+      "previous": null
+    },
+    {
+      "slug": "background",
+      "source": "website/pages/background.md",
+      "title": "Selected background",
+      "group": "Understand",
+      "next": "channel",
+      "previous": "index"
     },
     {
       "slug": "channel",
       "source": "website/pages/channel.md",
       "title": "The channel",
       "group": "Understand",
-      "next": "proof-guide"
+      "next": "proof-guide",
+      "previous": "background"
     },
     {
       "slug": "proof-guide",
       "source": "website/pages/proof-guide.md",
       "title": "The proof route",
       "group": "Understand",
-      "next": "figures"
+      "next": "model",
+      "previous": "channel"
     },
     {
       "slug": "figures",
       "source": "website/pages/figures.md",
       "title": "Figure atlas",
       "group": "Understand",
-      "next": "limits"
+      "next": "limits",
+      "previous": "proof-guide"
     },
     {
       "slug": "limits",
       "source": "website/pages/limits.md",
       "title": "Scope and limits",
       "group": "Understand",
-      "next": "model"
+      "next": "verification",
+      "previous": "proof"
     },
     {
       "slug": "model",
@@ -47,7 +60,8 @@
       "title": "Exact model and theorem",
       "group": "Check the result",
       "canonical": true,
-      "next": "proof"
+      "next": "proof",
+      "previous": "proof-guide"
     },
     {
       "slug": "proof",
@@ -55,14 +69,16 @@
       "title": "Complete proof",
       "group": "Check the result",
       "canonical": true,
-      "next": "verification"
+      "next": "limits",
+      "previous": "model"
     },
     {
       "slug": "verification",
       "source": "website/pages/verification.md",
       "title": "Verification guide",
       "group": "Check the result",
-      "next": "reproduce"
+      "next": "reproduce",
+      "previous": "limits"
     },
     {
       "slug": "reproduce",
@@ -70,7 +86,8 @@
       "title": "Exact reproduction commands",
       "group": "Check the result",
       "canonical": true,
-      "next": "references"
+      "next": "references",
+      "previous": "verification"
     },
     {
       "slug": "references",
@@ -78,14 +95,16 @@
       "title": "References and their roles",
       "group": "Check the result",
       "canonical": true,
-      "next": "materials"
+      "next": "materials",
+      "previous": "reproduce"
     },
     {
       "slug": "materials",
       "source": "website/pages/materials.md",
       "title": "Source materials",
       "group": "Use the materials",
-      "next": "status"
+      "next": "status",
+      "previous": "references"
     },
     {
       "slug": "notation",
@@ -93,7 +112,8 @@
       "title": "Notation crosswalk",
       "group": "Use the materials",
       "canonical": true,
-      "next": "provenance"
+      "next": "provenance",
+      "previous": "materials"
     },
     {
       "slug": "provenance",
@@ -101,7 +121,8 @@
       "title": "Source and proof ledger",
       "group": "Use the materials",
       "canonical": true,
-      "next": "materials"
+      "next": "materials",
+      "previous": "notation"
     },
     {
       "slug": "argument",
@@ -109,21 +130,25 @@
       "title": "Frozen scientific argument",
       "group": "Use the materials",
       "canonical": true,
-      "next": "materials"
+      "next": "materials",
+      "previous": "provenance"
     },
     {
       "slug": "visual-design",
       "source": "website/pages/visual-design.md",
       "title": "Visual design",
       "group": "About this site",
-      "next": "status"
+      "next": "status",
+      "previous": "argument"
     },
     {
       "slug": "status",
       "source": "website/pages/status.md",
       "title": "Status and publication",
       "group": "About this site",
-      "next": null
+      "next": null,
+      "previous": "materials"
     }
-  ]
+  ],
+  "reader_baseline_commit": "f0015c56a19fd953c6797b2c64d9b507105234e3"
 }

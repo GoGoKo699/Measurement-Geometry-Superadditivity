@@ -12,6 +12,8 @@ from urllib.parse import unquote, urlsplit, urlunsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 WEB = ROOT / 'website'
+sys.path.insert(0, str(WEB))
+from learning_bridge import METADATA, expand_background, load_bridge, validate_routes
 
 def read_json(p):
     return json.loads(p.read_text(encoding='utf-8'))
@@ -29,6 +31,8 @@ def relative(target, origin):
 
 def expected_files():
     config = read_json(WEB / 'site.json')
+    validate_routes(config)
+    bridge = load_bridge()
     pages = config['pages']
     by_slug = {p['slug']: p for p in pages}
     by_source = {p['source']: page_path(p) for p in pages}
@@ -46,6 +50,8 @@ def expected_files():
     # Read canonical sources to verify availability and track their unchanged hashes.
     for p in pages:
         source(p['source'])
+    source(METADATA)
+    source('website/site.json')
     palette = json.loads(source('website/palette.json'))
     mapping = {a.lower(): b.lower() for a, b in palette['svg_mapping'].items()}
     figdefs = [
@@ -87,9 +93,12 @@ def expected_files():
         if page.get('canonical'):
             continue
         origin = page_path(page)
-        body = rewrite(source(page['source']), page['source'], origin)
+        expanded = expand_background(source(page['source']), page['source'], bridge)
+        body = rewrite(expanded, page['source'], origin)
+        # GitHub custom anchors use name; canonical technical files stay untouched.
+        body = re.sub(r'<a id="([^"]+)"></a>', r'<a name="\1"></a>', body)
         nav = ' · '.join(linked(label, page_path(by_slug[s]), origin) for s,label in [
-            ('index','Overview'), ('channel','Channel'), ('proof-guide','Proof route'),
+            ('index','Overview'), ('background','Background'), ('channel','Channel'), ('proof-guide','Proof route'),
             ('figures','Figures'), ('model','Exact theorem'), ('proof','Complete proof'), ('materials','Materials')])
         toc = '\n'.join('- ' + linked(p['title'], page_path(p), origin) for p in pages)
         menu = '<details>\n<summary>All reading routes</summary>\n\n' + toc + '\n\n</details>'
@@ -110,11 +119,12 @@ def expected_files():
                     raise ValueError('Missing canonical caption')
                 caption = rewrite(match.group(1).strip(), 'figures/CAPTIONS.md', origin)
                 download = ' · '.join(linked('Approved '+ext.upper(),'figures/approved/'+stem+'.'+ext,origin) for ext in ('pdf','svg','png'))
+                palette_download = linked('Accepted-palette SVG','reader/assets/'+stem+'.svg',origin)
                 data = ' · '.join(linked(n,'data/figures/'+n,origin) for n in inputs)
                 proof = ' · '.join(linked(p.upper(),'docs/COMPLETE_PROOF.md',origin,p) for p in proofs)
                 atlas.append(f'<a name="figure-{number}"></a>\n\n## Figure {number}. {title}\n\n'
                     f'![Figure {number}: {title}; only the colors differ from the approved original](assets/{stem}.svg)\n\n'
-                    f'Gachet color study. {download}.\n\n{caption}\n\n'
+                    f'Accepted figure palette: {palette_download}. Protected originals: {download}.\n\n{caption}\n\n'
                     f'**Proof:** {proof}. **Unchanged caption source:** '
                     f'{linked("CAPTIONS.md","figures/CAPTIONS.md",origin)}.\n\n**Numerical inputs:** {data}.\n')
             body = body.replace('<!-- SITE:FIGURE_ATLAS -->', '\n'.join(atlas))
@@ -131,20 +141,24 @@ def expected_files():
         palette_rows = ['| Color role | Display value |','|---|---|'] + ['| '+name+' | `'+value+'` |' for name,value in palette['roles'].items()]
         body = body.replace('<!-- SITE:PALETTE -->', '\n'.join(palette_rows))
         body = body.replace('<!-- SITE:FIGURE_COMPARISON -->',
-            '**Gachet-inspired study**\n\n![Figure 2 in the Gachet-inspired palette](assets/figure_02_guaranteed_region.svg)\n\n'
+            '**Accepted figure palette**\n\n![Figure 2 in the Gachet-inspired palette](assets/figure_02_guaranteed_region.svg)\n\n'
             '**Approved original**\n\n![The same Figure 2 in its approved original palette](../figures/approved/figure_02_guaranteed_region.svg)')
         if '<!-- SITE:' in body:
             raise ValueError('Unexpanded website content marker in '+origin)
         if page['slug']=='status':
             body = body.replace('The website is a review draft, not a public deployment.', 'The reader version is available inside the private repository. Public website deployment remains disabled.')
+        previous = by_slug.get(page.get('previous'))
         nxt = by_slug.get(page.get('next'))
         tail = linked('Continue: '+nxt['title'],page_path(nxt),origin) if nxt else linked('Return to the overview','reader/README.md',origin)
+        if previous:
+            tail = linked('Previous: '+previous['title'], page_path(previous), origin) + ' · ' + tail
         body += '\n\n---\n\n'+tail+'\n\n'
         body += 'GitHub reading view generated from '+linked('the website source',page['source'],origin)+'. '
         body += 'The equations, figure data and canonical captions retain their source meaning. '
         body += 'Custom website navigation, local search and interactive color switching are not executed in this GitHub view.\n'
         outputs[origin] = body.encode('utf-8')
     record = {'format':'GitHub Markdown with linked canonical technical documents','public_deployment':False,
+              'reader_baseline_commit':config['reader_baseline_commit'],
               'canonical_technical_documents_duplicated':False,'routes':{p['slug']:page_path(p) for p in pages},
               'source_hashes':dict(sorted(source_hashes.items())),
               'generated_files':{n:sha(b) for n,b in sorted(outputs.items())},
@@ -168,7 +182,8 @@ def run(check=False):
         extra={p.relative_to(ROOT).as_posix() for p in (ROOT/'reader').rglob('*') if p.is_file()}-set(outputs)
         if extra:
             raise ValueError('Untracked preview outputs: '+str(sorted(extra)))
-    print(json.dumps({'passed':True,'mode':'check' if check else 'write','files':len(outputs),'reader_pages':9,'canonical_routes':7,'derived_figures':3,'public_deployment':False}))
+    pages = read_json(WEB / 'site.json')['pages']
+    print(json.dumps({'passed':True,'mode':'check' if check else 'write','files':len(outputs),'reader_pages':sum(not p.get('canonical', False) for p in pages),'canonical_routes':sum(bool(p.get('canonical')) for p in pages),'derived_figures':len([name for name in outputs if name.endswith('.svg')]),'public_deployment':False}))
 
 if __name__=='__main__':
     ap=argparse.ArgumentParser(description=__doc__)

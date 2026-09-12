@@ -2,6 +2,10 @@
 
 The manuscript comes last. The repository already contains the model, complete proof, retained numerical inputs, figure specifications, approved figures, captions, and the declared computational evidence. This page connects those materials without drafting the paper.
 
+## Background and project reasoning
+
+The [focused Preskill map](background.md) is the one external educational route. Its [structured learning metadata](../learning_bridge.json) records the pinned edition, passage locations, return links and the canonical project anchors used by the bridge. It is separate from the scientific claim ledger below. [Current attribution correction](status.md#correction-record) · [Reader implementation and checks](../review/PRESKILL_BRIDGE_REPORT.md)
+
 ## Claim-to-evidence inventory
 
 [Canonical claim map](../../provenance/CLAIM_COVERAGE.json) · [Full source-to-proof ledger](../../docs/SOURCE_TO_CANONICAL.md)

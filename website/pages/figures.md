@@ -1,8 +1,8 @@
 # Three figures, three questions
 
-The figures follow the same scientific argument: what reaches the receiver, why the separation is systematic, and how it closes near a plane. Each figure below has its exact canonical caption and a direct path to its inputs and proof.
+The figures answer questions introduced along the reading route. [Figure 1 explains the channel and finite witness](channel.md#eight-use-witness); [Figure 2 illustrates the geometric guarantee](proof-guide.md#geometric-guarantee); [Figure 3 follows the controlled approach to a plane](limits.md#cone-domain). This atlas consolidates their unchanged canonical captions, proof anchors, inputs and downloads.
 
-The figures use the accepted Gachet-inspired palette. This palette applies only to the figures, not to the surrounding repository pages. Switch to the approved colors to compare. **The archived publication exports remain unchanged.** The current colors do not change any scientific content.
+The figures use the accepted Gachet-inspired palette. This palette applies only to the figures, not to the surrounding repository pages. Switch to the approved colors to compare. **The protected original exports remain unchanged.** The accepted display palette changes no data, geometry, labels or caption. The original PDF/SVG/PNG downloads retain their approved bytes.
 
 [Approved figures and full captions](../../figures/CAPTIONS.md) · [Scientific panel specifications](../../figures/FIGURE_SPECIFICATIONS.md)
 

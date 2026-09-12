@@ -12,6 +12,8 @@ from bs4 import BeautifulSoup
 import xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
 WEB=ROOT/'website'
+sys.path.insert(0,str(WEB))
+from learning_bridge import METADATA, expand_background, load_bridge, validate_routes
 FIGURES=[
  ('figure_01_channel_and_witness','The channel and a concrete separation','Figure 1: hidden true outcomes stay inside the channel; the eight-use per-use value is positive while optimized single-use coherent information is zero.',['figure1_comparison.csv','figure1_all_masks_not_for_display.csv','figure1_original_witness140.json'],['m01','m05'],['p01','p13']),
  ('figure_02_guaranteed_region','The geometric guarantee across reporting noise','Figure 2: equal-Pauli slice of the theorem. A solid sufficient lower bound and a dashed strict repetition frontier enclose a narrow certified region; the inset displays its width.',['figure2_pauli_guaranteed_region.csv','cross_figure_witness_bound_check.json'],['m03','m04'],['p08','p10']),
@@ -23,8 +25,13 @@ def require(ok,message):
 def load(p):return json.loads(p.read_text())
 def dump(p,x):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n')
 def digest_string(s):return hashlib.sha256(s.encode()).hexdigest()
+def prepare_markdown(text):
+ # A blank line keeps an empty explicit anchor from swallowing the next heading
+ # in Pandoc. This changes only rendering input, never the source or its math.
+ return re.sub(r'(?m)^(<a (?:id|name)="[^"]+"></a>)\n(?=#{1,6}\s)',r'\1\n\n',text)
+
 def pandoc(text):
- p=subprocess.run(['pandoc','--from=markdown+tex_math_dollars+raw_html','--to=html5','--mathml','--wrap=none'],input=text,capture_output=True,text=True,check=False)
+ p=subprocess.run(['pandoc','--from=markdown+tex_math_dollars+raw_html','--to=html5','--mathml','--wrap=none'],input=prepare_markdown(text),capture_output=True,text=True,check=False)
  require(p.returncode==0,'Pandoc failed: '+p.stderr)
  require(not p.stderr.strip(),'Pandoc warning requires review: '+p.stderr)
  return p.stdout
@@ -96,10 +103,10 @@ def atlas():
   dims=svg.get('viewBox','0 0 720 400').split();ratio=f'{dims[2]}/{dims[3]}'
   pic=f'<img id="fig-{i}" src="assets/theme/{stem}.svg" data-themed="assets/theme/{stem}.svg" data-original="files/figures/approved/{stem}.svg" alt="{html.escape(alt)}" style="aspect-ratio:{ratio}" loading="eager">'
   downloads=''.join(f'<a href="files/figures/approved/{stem}.{ext}">Approved {ext.upper()}</a>' for ext in ('pdf','svg','png'))
-  downloads+=f'<a href="assets/theme/{stem}.svg">Color-study SVG</a>'
+  downloads+=f'<a href="assets/theme/{stem}.svg">Accepted-palette SVG</a>'
   data=' · '.join(f'<a href="files/data/figures/{p}">{html.escape(p)}</a>' for p in inputs)
   proofs_links=' · '.join(f'<a href="model.html#{p}">{p.upper()}</a>'for p in models)+' · '+' · '.join(f'<a href="proof.html#{p}">{p.upper()}</a>'for p in proofs)
-  items.append(f'<section class="figure-atlas-item"><h2 id="figure-{i}">Figure {i}. {title}</h2><div class="figure-image-wrap">{pic}</div><div class="figure-controls"><button type="button" data-figure-toggle="fig-{i}" aria-pressed="false">Show approved colors</button><span id="fig-{i}-status" class="figure-status" aria-live="polite">Gachet color study; scientific content unchanged.</span></div><div class="asset-links">{downloads}</div><p class="data-line">Canonical sources: {proofs_links}. <a href="files/figures/CAPTIONS.md">Unchanged caption source</a>.</p><div class="figure-caption">{caption}</div><p class="data-line">Numerical inputs: {data}</p></section>')
+  items.append(f'<section class="figure-atlas-item"><h2 id="figure-{i}">Figure {i}. {title}</h2><div class="figure-image-wrap">{pic}</div><div class="figure-controls"><button type="button" data-figure-toggle="fig-{i}" aria-pressed="false">Show approved colors</button><span id="fig-{i}-status" class="figure-status" aria-live="polite">Accepted figure palette; protected originals remain available.</span></div><div class="asset-links">{downloads}</div><p class="data-line">Canonical sources: {proofs_links}. <a href="files/figures/CAPTIONS.md">Unchanged caption source</a>.</p><div class="figure-caption">{caption}</div><p class="data-line">Numerical inputs: {data}</p></section>')
  return '\n'.join(items)
 
 def palette_grid(palette):
@@ -131,39 +138,44 @@ def site_html(page,body,title,toc,config):
  toc_html=''.join(f'<a href="#{html.escape(i)}">{html.escape(t)}</a>' for i,t in toc)
  source=f'files/{page["source"]}'
  canonical='<p class="source-note">Canonical source, rendered without editorial rewriting. Historical status statements belong to the source version; <a href="status.html">current site and project status</a> is recorded separately.</p>' if page.get('canonical') else ''
+ previous=next((p for p in config['pages'] if p['slug']==page.get('previous')),None)
  nextpage=next((p for p in config['pages'] if p['slug']==page.get('next')),None)
  next_html=f'<a class="next-link" href="{nextpage["slug"]}.html"><small>Continue reading</small>{html.escape(nextpage["title"])}</a>' if nextpage else '<a class="next-link" href="index.html"><small>Return to</small>The project</a>'
+ if previous:next_html=f'<p><a href="{previous["slug"]}.html" rel="prev">Previous: {html.escape(previous["title"])}</a></p>'+next_html
  if page['slug']=='index':
   soup=BeautifulSoup(body,'html.parser');first=soup.find('p')
   if first:first['class']='lead'
   h2=soup.find('h2')
-  img='<figure class="home-figure"><a href="figures.html#figure-1"><img src="assets/theme/figure_01_channel_and_witness.svg" alt="The noisy-record channel and the retained eight-use separation" width="900" height="450"></a><figcaption>One channel, every outcome retained. <a href="figures.html#figure-1">Read Figure 1 and inspect its source.</a> <span class="review-label">Gachet color study</span></figcaption></figure>'
+  img='<figure class="home-figure"><a href="figures.html#figure-1"><img src="assets/theme/figure_01_channel_and_witness.svg" alt="The noisy-record channel and the retained eight-use separation" width="900" height="450"></a><figcaption>One channel, every outcome retained. <a href="figures.html#figure-1">Read Figure 1 and inspect its source.</a> <span class="review-label">Accepted figure palette</span></figcaption></figure>'
   if h2:h2.insert_before(BeautifulSoup(img,'html.parser'))
   body=str(soup)
  return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="color-scheme" content="light"><meta name="description" content="Measurement geometry, noisy classical records, and a geometric guarantee of coherent-information superadditivity. Scientific source, proof, figures, and reproducibility."><title>{html.escape(page['title'])} | Measurement Geometry</title><link rel="stylesheet" href="assets/style.css"><script src="assets/search-index.js" defer></script><script src="assets/site.js" defer></script></head>
 <body><noscript><style>.search-open,.menu-open,.figure-controls button{{display:none!important}}@media(max-width:780px){{.sidebar{{display:block!important;position:static;width:100%;max-height:none;box-shadow:none;columns:2}}.sidebar a,.nav-label{{break-inside:avoid}}.nav-note{{column-span:all}}}}</style></noscript><a class="skip" href="#main">Skip to content</a><header class="topbar"><a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span><span><strong>Measurement Geometry</strong><small>Coherent-information superadditivity</small></span></a><div class="top-actions"><a href="materials.html">Source materials</a><a href="{config['repository']}" rel="noreferrer">GitHub</a><button class="search-open" type="button" aria-haspopup="dialog">Search <kbd>/</kbd></button><button class="menu-open" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button></div></header>
-<div class="shell"><nav id="site-navigation" class="sidebar" aria-label="Project navigation">{''.join(links)}<p class="nav-note">Private review build.<br>No public deployment.<br>Scientific baseline: <code>{config['base_commit'][:7]}</code></p></nav><main id="main" class="content {'home' if page['slug']=='index' else ''}"><div class="eyebrow">{html.escape(page['group'])}</div><h1>{html.escape(title or page['title'])}</h1><div class="page-meta"><a href="{source}">Read source Markdown</a><a href="status.html">Scope and status</a></div>{canonical}<article class="document">{body}</article><footer class="article-footer">{next_html}<p class="fineprint">Scientific content is grounded in the canonical sources. The color study does not replace the approved figures.<br>Author-side analytical and computer-assisted support; no external review or priority clearance is implied.<br><a href="references.html">References</a> · <a href="visual-design.html">Visual design</a> · <a href="files/BUILD_RECORD.json">Build record</a></p></footer></main><aside class="toc" aria-label="On this page"><div class="toc-label">On this page</div>{toc_html}</aside></div>
+<div class="shell"><nav id="site-navigation" class="sidebar" aria-label="Project navigation">{''.join(links)}<p class="nav-note">Private review build.<br>No public deployment.<br>Reader starting baseline: <code>{config['reader_baseline_commit'][:7]}</code></p></nav><main id="main" class="content {'home' if page['slug']=='index' else ''}"><div class="eyebrow">{html.escape(page['group'])}</div><h1>{html.escape(title or page['title'])}</h1><div class="page-meta"><a href="{source}">Read source Markdown</a><a href="status.html">Scope and status</a></div>{canonical}<article class="document">{body}</article><footer class="article-footer">{next_html}<p class="fineprint">Canonical sources and evidence remain available directly. The accepted figure palette does not replace the protected original exports.<br><a href="references.html">References</a> · <a href="visual-design.html">Visual design</a> · <a href="files/BUILD_RECORD.json">Build record</a></p></footer></main><aside class="toc" aria-label="On this page"><div class="toc-label">On this page</div>{toc_html}</aside></div>
 <dialog class="search-dialog" aria-labelledby="search-heading"><div class="search-heading"><h2 id="search-heading">Search the project</h2><button class="search-close" aria-label="Close search" type="button">Close</button></div><label class="visually-hidden" for="search-input">Words or quantities</label><input id="search-input" class="search-input" type="search" placeholder="Try: coplanar, eight-use, certificate" autocomplete="off"><p class="search-message" aria-live="polite">Search the explanations, proof sections, and figure captions.</p><ul class="search-results"></ul></dialog><noscript><p>JavaScript is disabled. Every page, equation, figure and download remains available through the navigation; search and color switching are optional enhancements.</p></noscript></body></html>'''
 
 def build(out):
  out=out.resolve();require(out.is_relative_to(ROOT/'build'),'Output must be under this checkout\'s ignored build/ directory')
  require(not out.exists(),'Use a fresh output directory: '+str(out));out.mkdir(parents=True)
  checked=verify_baseline();config=load(WEB/'site.json');palette=load(WEB/'palette.json')
+ validate_routes(config);bridge=load_bridge()
  page_map={p['source']:p['slug']+'.html' for p in config['pages']};page_map.update({'README.md':'index.html','STATUS.md':'status.html'})
  shutil.copytree(WEB/'assets',out/'assets')
  # Explicit allowlist: scientific baseline files, followed by website Markdown pages.
  baseline=load(ROOT/'BASELINE_MANIFEST.json')['files'];sources=set(baseline)|{'BASELINE_MANIFEST.json'}
- sources|={p['source'] for p in config['pages']};sources.add('website/palette.json')
+ sources|={p['source'] for p in config['pages']};sources|={'WEBSITE.md','website/palette.json',METADATA,'website/site.json','website/editorial_map.json','website/learning_bridge.py','website/provenance/preskill_starting_manifest.json'}
+ sources|={p.relative_to(ROOT).as_posix() for p in (WEB/'review').rglob('*') if p.is_file() and p.suffix in {'.md','.json','.log','.txt'}}
  for rel in sorted(sources):
   require((ROOT/rel).is_file(),'Missing source: '+rel)
   target=out/'files'/rel;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(ROOT/rel,target)
  theme=theme_svgs(out,palette);search=[];page_records=[]
  for page in config['pages']:
-  src=ROOT/page['source'];text=src.read_text()
+  src=ROOT/page['source'];text=expand_background(src.read_text(),page['source'],bridge)
   frag=rewrite_links(pandoc(text),src,page_map)
-  for key,value in [('<!-- SITE:CLAIM_TABLE -->',claim_table()),('<!-- SITE:CHECKER_TABLE -->',checker_table()),('<!-- SITE:FIGURE_ATLAS -->',atlas()),('<!-- SITE:PALETTE -->',palette_grid(palette)),('<!-- SITE:FIGURE_COMPARISON -->','<div class="compare-grid"><figure><img src="files/figures/approved/figure_02_guaranteed_region.svg" alt="Figure 2 in its approved original colors"><figcaption>Approved v1 colors</figcaption></figure><figure><img src="assets/theme/figure_02_guaranteed_region.svg" alt="The identical Figure 2 geometry in the Gachet color study"><figcaption>Gachet color study</figcaption></figure></div>')]:
+  for key,value in [('<!-- SITE:CLAIM_TABLE -->',claim_table()),('<!-- SITE:CHECKER_TABLE -->',checker_table()),('<!-- SITE:FIGURE_ATLAS -->',atlas()),('<!-- SITE:PALETTE -->',palette_grid(palette)),('<!-- SITE:FIGURE_COMPARISON -->','<div class="compare-grid"><figure><img src="files/figures/approved/figure_02_guaranteed_region.svg" alt="Figure 2 in its approved original colors"><figcaption>Approved v1 colors</figcaption></figure><figure><img src="assets/theme/figure_02_guaranteed_region.svg" alt="The identical Figure 2 geometry in the Accepted figure palette"><figcaption>Accepted figure palette</figcaption></figure></div>')]:
    frag=frag.replace('<p>'+key+'</p>',value).replace(key,value)
+  require('<!-- SITE:' not in frag,'Unexpanded reader content marker: '+page['slug'])
   title,body,toc=decorate(frag)
   target=out/(page['slug']+'.html');target.write_text(site_html(page,body,title,toc,config))
   parsed=BeautifulSoup(body,'html.parser')
@@ -176,9 +188,9 @@ def build(out):
    search.append({'title':page['title']+' / '+h2.get_text(' ',strip=True).rstrip('§').strip(),'url':target.name+'#'+h2['id'],'text':' '.join(snippets)[:4000]})
   page_records.append({'page':target.name,'source':page['source'],'source_sha256':sha(src),'canonical_source_rendered':page.get('canonical',False),'heading_count':len(toc),'mathml_count':len(parsed.find_all('math'))})
  (out/'assets/search-index.js').write_text('window.PROJECT_SEARCH = '+json.dumps(search,ensure_ascii=False).replace('</','<\\/')+';\n')
- record={'site_version':'reader-site-v1','date':'2026-09-08','base_commit':config['base_commit'],'private_review_only':True,'public_deployment_performed':False,'canonical_materials':checked,'pages':page_records,'themed_svgs':theme,'build_dependencies':{'pandoc':subprocess.run(['pandoc','--version'],capture_output=True,text=True).stdout.splitlines()[0]},'rendering':'native MathML; local CSS/JS/search; no CDN requests','new_scientific_claims':False,'new_proof_or_numerical_audit':False,'palette_source':'website/palette.json'}
+ record={'site_version':'reader-site-v1','date':config['website_date'],'base_commit':config['base_commit'],'reader_baseline_commit':config['reader_baseline_commit'],'learning_bridge':{'source':METADATA,'sha256':sha(ROOT/METADATA),'tutorial_version':bridge['source']['version'],'scope':'editorial learning map, not a proof certificate'},'private_review_only':True,'public_deployment_performed':False,'canonical_materials':checked,'pages':page_records,'themed_svgs':theme,'build_dependencies':{'pandoc':subprocess.run(['pandoc','--version'],capture_output=True,text=True).stdout.splitlines()[0]},'rendering':'native MathML; local CSS/JS/search; no CDN requests','new_scientific_claims':False,'new_proof_or_numerical_audit':False,'palette_source':'website/palette.json'}
  dump(out/'files/BUILD_RECORD.json',record)
- (out/'START_HERE.txt').write_text('Open index.html in a modern browser, or run: python -m http.server 8000\nThis is a private local review artifact, not a deployed public website.\n')
+ (out/'START_HERE.txt').write_text('Open index.html in a modern browser, or run: python -m http.server 8000 --bind 127.0.0.1\nThis is a private local review artifact, not a deployed public website.\n')
  print(json.dumps({'pages':len(page_records),'themed_svg_files':len(theme),'mathml_expressions':sum(p['mathml_count'] for p in page_records),'baseline_preservation':checked,'output':str(out)},indent=2))
  return record
 

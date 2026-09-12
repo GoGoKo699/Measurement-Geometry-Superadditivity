@@ -2,11 +2,13 @@
 
 A readable theorem, an immutable input file, and an executed proof check are different things. The repository includes each, with their roles kept separate.
 
+<a id="verification-roles"></a>
+
 ## Inspect the sources
 
 Start with the [model and claims](../../docs/MODEL_AND_CLAIMS.md), [complete proof](../../docs/COMPLETE_PROOF.md), and [reference roles](../../docs/REFERENCES.md). The technical documents are the canonical scientific sources. This website renders them directly rather than maintaining a rewritten second proof.
 
-The preserved scientific baseline is commit `9a1e4cb3bad843db9cec1fa348870ca7162df0e0`. Its read-only GitHub checks passed during import and on merged main. That is a recorded baseline result, not a claim that opening this page reruns a computation. [Recorded baseline validation](../../validation/BASELINE_VALIDATION.json)
+The reader redesign preserves the scientific files at `f0015c56a19fd953c6797b2c64d9b507105234e3`. The earlier import checks and later audit are recorded prior results. The [current status](status.md#correction-record) distinguishes them from the actual presentation checks in this redesign. Reading this page does not execute a computation. [Recorded baseline validation](../../validation/BASELINE_VALIDATION.json)
 
 ## Check file identity and method tests
 
@@ -26,7 +28,7 @@ python -m pytest -q -p no:cacheprovider tests
 python reproduce.py --output build/figures-check
 ```
 
-Use a new output directory. The default command regenerates plotting inputs and reproduces approved graphical files in the recorded environment. It does not recalculate the entire mathematical certificate. The new website colors are a separate presentation study and do not replace those approved outputs.
+Use a new output directory. The default command regenerates plotting inputs and reproduces approved graphical files in the recorded environment. It does not recalculate the entire mathematical certificate. The accepted figure palette remains separate from the protected original exports.
 
 ## Recheck the mathematical evidence
 
@@ -42,4 +44,6 @@ The integer, mpmath, and Decimal routes remain separate. Their agreement support
 
 The canonical cover has 512 noise bands and 29,635 input leaves. Evidence records and comparisons are in [the material inventory](materials.md). Ordinary floating-point physical controls use declared tolerances; exact certificates and approved graphical files have stronger identity contracts. Fresh results belong in a new build directory, not on top of reference evidence.
 
-The stored audit is author-side work with independently written implementations, not an independent external researcher or a proof-assistant formalization. No stronger assurance is implied by this website.
+The stored records do not establish external peer review or proof-assistant formalization. No stronger assurance is implied by the reading interface.
+
+To return to the explanation, see [the all-record witness](channel.md#eight-use-witness) and [where the scalar proof enters](proof-guide.md#scalar-proof). The [selected background](background.md) explains the coding quantities; it is not an additional certificate or a software dependency.

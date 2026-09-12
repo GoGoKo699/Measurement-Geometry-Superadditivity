@@ -1,0 +1,355 @@
+{
+  "passed": true,
+  "starting_commit": "f0015c56a19fd953c6797b2c64d9b507105234e3",
+  "starting_tree": "72e93a89a691ec4d2ea799bb3b1008bd6c0dee20",
+  "starting_files_checked": 208,
+  "unchanged_count": 176,
+  "unchanged_files": [
+    ".github/workflows/reader-site.yml",
+    ".github/workflows/verify.yml",
+    ".gitignore",
+    "ENVIRONMENT.json",
+    "baseline_tools.py",
+    "certificates/common_noise_compact_certificate.json",
+    "data/figures/BUILD_RECORD.json",
+    "data/figures/SOURCE_IDENTITY.json",
+    "data/figures/cross_figure_witness_bound_check.json",
+    "data/figures/figure1_all_masks_not_for_display.csv",
+    "data/figures/figure1_comparison.csv",
+    "data/figures/figure1_original_witness140.json",
+    "data/figures/figure2_pauli_guaranteed_region.csv",
+    "data/figures/figure3_cone_gap.csv",
+    "data/figures/figure3_cone_geometry.csv",
+    "data/figures/figure3_small_lambda_controls_not_for_display.csv",
+    "docs/COMPLETE_PROOF.md",
+    "docs/FROZEN_ARGUMENT.md",
+    "docs/MODEL_AND_CLAIMS.md",
+    "docs/NOTATION_CROSSWALK.md",
+    "docs/REFERENCES.md",
+    "docs/REPRODUCTION.md",
+    "docs/SOURCE_TO_CANONICAL.md",
+    "evidence/controls/mixed_input_control.json",
+    "evidence/controls/rejected_float_candidate.json",
+    "evidence/reference/analytic_checks.json",
+    "evidence/reference/decimal130.json",
+    "evidence/reference/decimal90.json",
+    "evidence/reference/integer224.json",
+    "evidence/reference/mpmath85.json",
+    "evidence/reference/physical_check.json",
+    "evidence/reference/witness100.json",
+    "figures/CAPTIONS.md",
+    "figures/FIGURE_CONTRACT.json",
+    "figures/FIGURE_OVERVIEW.md",
+    "figures/FIGURE_SPECIFICATIONS.md",
+    "figures/approved/RENDER_RECORD.json",
+    "figures/approved/RENDER_VALIDATION.json",
+    "figures/approved/figure_01_channel_and_witness.pdf",
+    "figures/approved/figure_01_channel_and_witness.png",
+    "figures/approved/figure_01_channel_and_witness.svg",
+    "figures/approved/figure_01_channel_and_witness_preview.png",
+    "figures/approved/figure_02_guaranteed_region.pdf",
+    "figures/approved/figure_02_guaranteed_region.png",
+    "figures/approved/figure_02_guaranteed_region.svg",
+    "figures/approved/figure_02_guaranteed_region_preview.png",
+    "figures/approved/figure_03_coplanar_limit.pdf",
+    "figures/approved/figure_03_coplanar_limit.png",
+    "figures/approved/figure_03_coplanar_limit.svg",
+    "figures/approved/figure_03_coplanar_limit_preview.png",
+    "figures/approved/panels/figure1a_channel.pdf",
+    "figures/approved/panels/figure1a_channel.svg",
+    "figures/approved/panels/figure1b_witness.pdf",
+    "figures/approved/panels/figure1b_witness.svg",
+    "figures/approved/panels/figure2_header.pdf",
+    "figures/approved/panels/figure2_header.svg",
+    "figures/approved/panels/figure2_main.pdf",
+    "figures/approved/panels/figure2_main.svg",
+    "figures/approved/panels/figure2_width.pdf",
+    "figures/approved/panels/figure2_width.svg",
+    "figures/approved/panels/figure3a_geometry.pdf",
+    "figures/approved/panels/figure3a_geometry.svg",
+    "figures/approved/panels/figure3b_gap.pdf",
+    "figures/approved/panels/figure3b_gap.svg",
+    "figures/approved/three_figure_review.pdf",
+    "figures/code/build_review_pdf.py",
+    "figures/code/render_figures.py",
+    "figures/code/verify_render.py",
+    "numerics/figure_inputs/build_inputs.py",
+    "numerics/figure_inputs/verify_inputs.py",
+    "provenance/APPROVED_FIGURE_HASHES.json",
+    "provenance/CANONICAL_INPUTS.json",
+    "provenance/CLAIM_COVERAGE.json",
+    "provenance/FIGURE_INPUTS.json",
+    "provenance/FILE_LINEAGE.json",
+    "provenance/INPUT_ARCHIVES.json",
+    "provenance/MATHEMATICAL_CONTENT_CHECK.json",
+    "provenance/PROOF_GRAPH.json",
+    "provenance/SECTION_LEDGER.json",
+    "provenance/SOURCE_REGISTER.json",
+    "provenance/original_records/R3__REPRODUCTION_COMPARISON.json",
+    "provenance/original_records/R4__reproduction_verification.json",
+    "provenance/original_records/S7__AUDIT_SUMMARY.json",
+    "provenance/original_records/V8__verification_224.json",
+    "provenance/original_records/W4__finite_witnesses.csv",
+    "provenance/original_records/W8__finite_witnesses.json",
+    "provenance/original_records/W9__finite_witnesses_decimal.json",
+    "provenance/original_records/figure_BUILD_RECORD.json",
+    "provenance/original_records/figure_SOURCE_IDENTITY.json",
+    "provenance/patches/docs__COMPLETE_PROOF.md.patch",
+    "provenance/patches/docs__MODEL_AND_CLAIMS.md.patch",
+    "provenance/patches/figures__CAPTIONS.md.patch",
+    "provenance/patches/figures__FIGURE_SPECIFICATIONS.md.patch",
+    "provenance/patches/figures__code__build_review_pdf.py.patch",
+    "provenance/patches/figures__code__render_figures.py.patch",
+    "provenance/patches/figures__code__verify_render.py.patch",
+    "provenance/patches/numerics__figure_inputs__build_inputs.py.patch",
+    "provenance/patches/numerics__figure_inputs__verify_inputs.py.patch",
+    "provenance/patches/tests__certificates__test_audit.py.patch",
+    "provenance/patches/tests__figure_inputs__test_inputs.py.patch",
+    "provenance/patches/tests__render__test_render.py.patch",
+    "provenance/patches/verification__mpmath__witness_formula.py.patch",
+    "provenance/text_sources/H1__H1__START_HERE.md",
+    "provenance/text_sources/R1__reproduce.py.txt",
+    "provenance/text_sources/R2__reproduce.py.txt",
+    "provenance/text_sources/R5__requirements-reproducible.txt.txt",
+    "provenance/text_sources/R6__requirements.txt.txt",
+    "provenance/text_sources/S10__PRIOR_PROOF_AUDIT.md",
+    "provenance/text_sources/S11__LITERATURE.md",
+    "provenance/text_sources/S2__CLAIM_PROOF_MAP.md",
+    "provenance/text_sources/S3__THEOREM_STATEMENT.md",
+    "provenance/text_sources/S4__THEORY.md",
+    "provenance/text_sources/S5__PROOF_AUDIT.md",
+    "provenance/text_sources/S6__PRIOR_WORK_COMPARISON.md",
+    "provenance/text_sources/S8__THEORY.md",
+    "provenance/text_sources/S9__PROOF_AUDIT.md",
+    "provenance/text_sources/V11__test_audit.py.txt",
+    "provenance/text_sources/V12__test_global_noise.py.txt",
+    "provenance/text_sources/W10__independent_examples.py.txt",
+    "provenance/text_sources/W5__examples.py.txt",
+    "pyproject.toml",
+    "reader/assets/figure_01_channel_and_witness.svg",
+    "reader/assets/figure_02_guaranteed_region.svg",
+    "reader/assets/figure_03_coplanar_limit.svg",
+    "reproduce.py",
+    "requirements.txt",
+    "tests/certificates/test_audit.py",
+    "tests/figure_inputs/test_inputs.py",
+    "tests/render/test_render.py",
+    "tests/test_baseline.py",
+    "validation/BASELINE_REPORT.md",
+    "validation/BASELINE_VALIDATION.json",
+    "validation/REPRODUCTION_RESULT.json",
+    "validation/data_comparison.json",
+    "validation/data_validation.json",
+    "validation/figure_comparison.json",
+    "validation/full_reference_comparison.json",
+    "validation/logs/analytic_rational.log",
+    "validation/logs/analytic_symbolic.log",
+    "validation/logs/certificate_decimal.log",
+    "validation/logs/certificate_integer.log",
+    "validation/logs/certificate_mpmath.log",
+    "validation/logs/certificate_reconstruction.log",
+    "validation/logs/data_build.log",
+    "validation/logs/data_check.log",
+    "validation/logs/figure_check.log",
+    "validation/logs/figure_render.log",
+    "validation/logs/physical_checks.log",
+    "validation/logs/review_render.log",
+    "validation/logs/tests.log",
+    "validation/logs/witness_decimal100.log",
+    "validation/logs/witness_decimal140.log",
+    "validation/logs/witness_mpmath_controls.log",
+    "validation/partition_rebuild.json",
+    "validation/render_validation.json",
+    "verification/analytic/check_endpoints.py",
+    "verification/analytic/rational_endpoint_constants.py",
+    "verification/analytic/run_rational_checks.py",
+    "verification/decimal/check_witness.py",
+    "verification/decimal/decimal_interval.py",
+    "verification/decimal/verify_certificate.py",
+    "verification/integer/certify_all_noise.py",
+    "verification/integer/dyadic_interval.py",
+    "verification/mpmath/cross_backend.py",
+    "verification/mpmath/witness_and_controls.py",
+    "verification/mpmath/witness_formula.py",
+    "verification/physical/physical_check.py",
+    "verify.py",
+    "website/assets/style.css",
+    "website/palette.json",
+    "website/provenance/baseline_README.md",
+    "website/provenance/baseline_STATUS.md",
+    "website/provenance/baseline_manifest_v1.json",
+    "website/requirements-browser.txt",
+    "website/requirements.txt",
+    "website/tests/test_default_style.py"
+  ],
+  "authorized_editorial_changes": [
+    {
+      "file": "BASELINE_MANIFEST.json",
+      "before_sha256": "4e8f2e4b4b12ac0871fd98bab84366b7a2c9e4e2e14994f6eebadadb46314fda",
+      "after_sha256": "5113d1a3bf26038cae42d77fd1039aefe73fa3a0cbc0e0b156bb170323ca35d6"
+    },
+    {
+      "file": "README.md",
+      "before_sha256": "2864e6357b308c8a77e7e1e65b0eda802aa3d6cc52fd276e693e06af114bbaa4",
+      "after_sha256": "9b8fc13d5aceef927a7e5f7d95cfb045b47970e6ed856bbbee023fb9d4b77808"
+    },
+    {
+      "file": "STATUS.md",
+      "before_sha256": "7ef708030ad3d76f2e8c593beebc807c46e7694b7142fad5e91ea12ade38ca73",
+      "after_sha256": "122b049a94761a4c531648efbb2e4d1cd1718bf3066e6824b79494213f0fd0ac"
+    },
+    {
+      "file": "WEBSITE.md",
+      "before_sha256": "328f02e7fd13da740dd01aea28781eec090d9dcf594f5f973f2168ced5941b23",
+      "after_sha256": "cb30e8cd4e03bf43f35ea761287ff6788c9d5ed484e23e9a7dc47e47a34635e6"
+    },
+    {
+      "file": "reader/PREVIEW_MANIFEST.json",
+      "before_sha256": "3f01bf5ee3ab24a483ea34d6e2aa9fb30e7299117fd2258c80a0d5f3e64ab40c",
+      "after_sha256": "8d3951cc1ff580afdde76d58bb48814935c2c8395c705d504784c8f61a28c8f4"
+    },
+    {
+      "file": "reader/README.md",
+      "before_sha256": "4a8269838023346273d56b3888047cfa065307bb2cd6d1f2d21ae1af707f1770",
+      "after_sha256": "dce0c18ed4597ddc097f8f974f044d9481db6acea3f4603fb9ca546c7a1b9ca2"
+    },
+    {
+      "file": "reader/channel.md",
+      "before_sha256": "fa298b3dc1d2d771849ae2f86ec79baef0d48f729db705dee5aae46509088bec",
+      "after_sha256": "7b0f2d1fd7abf4da42cf8c247d209fc186a2c200b3418588935666651c963ab2"
+    },
+    {
+      "file": "reader/figures.md",
+      "before_sha256": "c905d5ca3d453586c47c764d891eab1709c6edf8566fdbfdef68c20a020be117",
+      "after_sha256": "abb578d457df094cf34049119b0bcdfc5d601ccc4298830740b684eebf573181"
+    },
+    {
+      "file": "reader/limits.md",
+      "before_sha256": "f3cea6a7f0b731c1d5933e7642d871274e82777d1416348ad372d6cf15979dbc",
+      "after_sha256": "3ed0f7c776f8bb6e8032404ca8c9dbb301c627ff7fd494cae76fd0102e24d4cd"
+    },
+    {
+      "file": "reader/materials.md",
+      "before_sha256": "8222c02b9531417783685c7e7099644ffdbf3f6c6a1799b9a792e6db90104a73",
+      "after_sha256": "0f0151ccf880eec44fe8f3d446e0673892cb4e6ac1d609db0084a7245fd8e5c6"
+    },
+    {
+      "file": "reader/proof-guide.md",
+      "before_sha256": "6d02d005f598f7cee43456ae4c17f54a722aaac0a892f05ce2d6c27ba80babfe",
+      "after_sha256": "5431145de159a36bea7db80630c309c88b40c2d5cd14accf926c9281c0fc2583"
+    },
+    {
+      "file": "reader/status.md",
+      "before_sha256": "146fdf8dde47cb12bdbc6a47c3b32a4bf3892ee7fec10434a21ffbe36a6105ba",
+      "after_sha256": "141539336ab0ccd14df43079b67bda42af407978486176d33d6f247d3540c3c8"
+    },
+    {
+      "file": "reader/verification.md",
+      "before_sha256": "fcf13c90bdf51cfebfb4e90181819c1310339b904758df4266457a2a025cfdfa",
+      "after_sha256": "950561252b79035703d9719c53dfdf8e36debec8d0a0e4660ff09e80f05171cb"
+    },
+    {
+      "file": "reader/visual-design.md",
+      "before_sha256": "72580f17cd185718088547b2f432955a66ce0baa07880b72f269d3a519bc1871",
+      "after_sha256": "7fd6b664841a0c79ee6d0721e2edb66735af641e184b43823535016510c0d764"
+    },
+    {
+      "file": "website/assets/site.js",
+      "before_sha256": "73899fff1565b2e16807945884960788f940c9f25474daa276a5255fae03bf3c",
+      "after_sha256": "46387e718bafc89d4974bef159219c8407050100e7471417f5ca70dd50badcc0"
+    },
+    {
+      "file": "website/browser_check.py",
+      "before_sha256": "1d918bf33288e884e5110ed55fac07e1f9f1cd2e62dce287d3304de9bb2bab90",
+      "after_sha256": "8ce760d639fb808263518c233fb7169af83f53c6befa03107badb8ae9c2723c8"
+    },
+    {
+      "file": "website/build.py",
+      "before_sha256": "60324dfa345e89bdadcb23aecd57cc33e12344e6f95ea480e920107e9e943b7f",
+      "after_sha256": "992ca4e596abfd862cfe6cfad64bb7f3323a90aec1836086cc03789323e310ab"
+    },
+    {
+      "file": "website/check.py",
+      "before_sha256": "154c5268a17619dec6935e6325ba6d413e699f71bb8eb7d243e17b5c06b5defd",
+      "after_sha256": "6c89343c09ec643a0abffe836dd07b9fec48ceab614368018d793dbf37f04aac"
+    },
+    {
+      "file": "website/editorial_map.json",
+      "before_sha256": "da8df4ddd77abf38dc5121a761c3016d2685ff028bab3317eeac9492e42551d7",
+      "after_sha256": "e15ac0cfe1708d25ced8c5667105728f41c3091ed595b1240294e109df873a59"
+    },
+    {
+      "file": "website/pages/channel.md",
+      "before_sha256": "a56337a60f12179c19740016b66f0878f0a336a0e7a1e15459c805ca30c46518",
+      "after_sha256": "9520e182130fd0582d74b37b87d9a6f58e3fd2a861362e05b3707eed6a200dc3"
+    },
+    {
+      "file": "website/pages/figures.md",
+      "before_sha256": "418cca686bef24b9d2d9900144fa27b607b9bff1f326c806dfbfe5dd48a84086",
+      "after_sha256": "d143a37de6865030b14c3dfa8e67fb34ed4f33baf1b0f9e111937942e1f5f4af"
+    },
+    {
+      "file": "website/pages/index.md",
+      "before_sha256": "413c28df80bb3d3f47ae7e958b82be602dfcdaccd08c6f56ed563aa352bb2695",
+      "after_sha256": "b35b19b23be49f5f70dbeb33236a4e50feb2a3ff29f8a6fc54bef60844971bc7"
+    },
+    {
+      "file": "website/pages/limits.md",
+      "before_sha256": "776c2d88bbbd814884e80ceb99c057f03c49a9ca74460576c0d2ff2b9a6b6c23",
+      "after_sha256": "4a5df0b875f9ee66deb13598cdaefe8ef290b69dce2b5663db62223f1ace2c79"
+    },
+    {
+      "file": "website/pages/materials.md",
+      "before_sha256": "a974f20bcb32c2b272a29e629813963e5f04b89c11b4c98cb745af789ae52919",
+      "after_sha256": "bc1ed853835411db8c44efe8f8ebf093067f888bf5a647824e310cf1d6adc920"
+    },
+    {
+      "file": "website/pages/proof-guide.md",
+      "before_sha256": "4e3b80734de41674952aef4ae644c2210a8ae8224d70fe91d5366544500e9fd9",
+      "after_sha256": "a0b6276e0534a613a930d6ee552168249238be94c4f32f35da905f2c6b10413c"
+    },
+    {
+      "file": "website/pages/status.md",
+      "before_sha256": "d40a0041ca798e83ef1ddea03dc6bf9c15cb9275c739d4df5bbf3e6ca53e6c4b",
+      "after_sha256": "ab8ae62c54c26279d2c5a490cc24993712b8ae8f8695c591ab591297c51939cb"
+    },
+    {
+      "file": "website/pages/verification.md",
+      "before_sha256": "4c93169aafc06dcdfb9eff418c6ccd4b07d8fc9d9d08f4218945a84f44e9f959",
+      "after_sha256": "c2eb125f9bad1258ec1c956da244b815917d8a800e3d5e1e68ef222304ccdd9e"
+    },
+    {
+      "file": "website/pages/visual-design.md",
+      "before_sha256": "fc2c2ccdbe669d81283e878917862eb7b6c54a4b0cff5718f36d8f5d0b2cb1f0",
+      "after_sha256": "7bffe4771f0bd6fd75cec51e4cb06cb1b89ada4f44c9c8621b25253da321e84f"
+    },
+    {
+      "file": "website/repository_preview.py",
+      "before_sha256": "e47e225a0e4d4623a75496d2d7c7bd9b95ce0d9bead517041c40843e1c2042fa",
+      "after_sha256": "dd34281da354bb0611f3617fb8a6b137775c8f14572a4cd3c5def93cbfe5a894"
+    },
+    {
+      "file": "website/site.json",
+      "before_sha256": "dacb722b961639bc1d1a4e3b8d0add637556c883d40f405eaccacd4fcda1b27e",
+      "after_sha256": "fc6d7b2d8694429fde416e6342378d712c667281584692648dfba00209d1e47b"
+    },
+    {
+      "file": "website/tests/test_repository_preview.py",
+      "before_sha256": "2699bf4ad6484f197d7379f4923d5eb73af25e4c8ef46f43f1b8518d9de81a00",
+      "after_sha256": "dc43fdc93fbffe1ae2e1c922215fcfb9d05cfe55e40c66bb4d92dbdbbcd2b1b2"
+    },
+    {
+      "file": "website/tests/test_site.py",
+      "before_sha256": "d05643645b4021fd7816c9cbe94112e0a52bda5e78ea983d3bbac040db087924",
+      "after_sha256": "491841a2cf8fcc1e41bec8fc41081e1b4a94e0008f7831947871e57ffb0d9ce7"
+    }
+  ],
+  "approved_original_graphics_unchanged": 27,
+  "accepted_reader_svgs_unchanged": 3,
+  "root_manifest_changes": [
+    "README.md identity",
+    "STATUS.md identity"
+  ],
+  "science_recomputed": false,
+  "scope": "Byte preservation and authorized editorial scope, not theorem correctness."
+}

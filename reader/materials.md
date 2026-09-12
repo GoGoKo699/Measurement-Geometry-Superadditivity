@@ -1,11 +1,12 @@
 # From a claim to its supporting material
 
-[Overview](README.md) · [Channel](channel.md) · [Proof route](proof-guide.md) · [Figures](figures.md) · [Exact theorem](../docs/MODEL_AND_CLAIMS.md) · [Complete proof](../docs/COMPLETE_PROOF.md) · [Materials](materials.md)
+[Overview](README.md) · [Background](background.md) · [Channel](channel.md) · [Proof route](proof-guide.md) · [Figures](figures.md) · [Exact theorem](../docs/MODEL_AND_CLAIMS.md) · [Complete proof](../docs/COMPLETE_PROOF.md) · [Materials](materials.md)
 
 <details>
 <summary>All reading routes</summary>
 
 - [The project](README.md)
+- [Selected background](background.md)
 - [The channel](channel.md)
 - [The proof route](proof-guide.md)
 - [Figure atlas](figures.md)
@@ -26,6 +27,10 @@
 
 
 The manuscript comes last. The repository already contains the model, complete proof, retained numerical inputs, figure specifications, approved figures, captions, and the declared computational evidence. This page connects those materials without drafting the paper.
+
+## Background and project reasoning
+
+The [focused Preskill map](background.md) is the one external educational route. Its [structured learning metadata](../website/learning_bridge.json) records the pinned edition, passage locations, return links and the canonical project anchors used by the bridge. It is separate from the scientific claim ledger below. [Current attribution correction](status.md#correction-record) · [Reader implementation and checks](../website/review/PRESKILL_BRIDGE_REPORT.md)
 
 ## Claim-to-evidence inventory
 
@@ -74,6 +79,6 @@ The repository remains private and no reuse license or public release has been s
 
 ---
 
-[Continue: Status and publication](status.md)
+[Previous: References and their roles](../docs/REFERENCES.md) · [Continue: Status and publication](status.md)
 
 GitHub reading view generated from [the website source](../website/pages/materials.md). The equations, figure data and canonical captions retain their source meaning. Custom website navigation, local search and interactive color switching are not executed in this GitHub view.
