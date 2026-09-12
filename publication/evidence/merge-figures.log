@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness/reproduce.py", line 85, in <module>
+    run(a.output,a.full,a.rebuild_certificate)
+  File "/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness/reproduce.py", line 77, in run
+    command(['-m','pytest','-q','-p','no:cacheprovider',ROOT/'tests'],output/'logs/tests.log')
+  File "/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness/reproduce.py", line 19, in command
+    subprocess.run([sys.executable,*map(str,args)],cwd=ROOT,env=env,stdout=stream,stderr=subprocess.STDOUT,check=True)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/workspace/scratch/323c19becda4/task-venv/bin/python', '-m', 'pytest', '-q', '-p', 'no:cacheprovider', '/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness/tests']' returned non-zero exit status 1.

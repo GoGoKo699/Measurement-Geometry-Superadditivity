@@ -74,4 +74,4 @@ This package concerns only the noisy-record channel paper. It includes none of t
 
 The owner has adopted **MIT for original code** and **CC BY 4.0 for original prose, figures and data**, where the relevant rights exist. [LICENSE.md](LICENSE.md) defines the scope and links both license texts; [third-party notices](THIRD_PARTY_NOTICES.md) preserve the separate terms of external components. Cite this repository using [CITATION.cff](CITATION.cff), with Ruge Lin as the confirmed author, and record the exact commit used.
 
-These terms are adopted on `release/public-readiness-v1`. The branch remains unmerged, and publication of the repository and private historical metadata is a separate decision. [Publication checklist](PUBLICATION.md) · [Adoption record](publication/LICENSE_ADOPTION.json)
+These terms were adopted on `release/public-readiness-v1`. [PR #5](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/pull/5) records integration and its checks. Publication of the repository and private historical metadata remains a separate decision. [Publication checklist](PUBLICATION.md) · [Adoption record](publication/LICENSE_ADOPTION.json)

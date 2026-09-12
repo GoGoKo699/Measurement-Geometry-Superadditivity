@@ -76,7 +76,7 @@ The [reference record](../docs/REFERENCES.md) distinguishes standard tools, clos
 
 The owner has adopted MIT for original code and CC BY 4.0 for original prose, figures and data where rights exist. See the [license scope](../LICENSE.md), [MIT terms](../LICENSES/MIT.txt), [CC BY 4.0 terms](../LICENSES/CC-BY-4.0.txt), [third-party notices](../THIRD_PARTY_NOTICES.md) and [repository citation](../CITATION.cff). Preskill's external tutorial and other cited sources retain their own terms.
 
-The repository remains private. The adopted terms are on the unmerged preparation branch; disclosure of private history and any public release require separate decisions. [Publication checklist](../PUBLICATION.md) · [Current project and site status](status.md)
+The repository remains private. The terms were adopted on `release/public-readiness-v1`; [PR #5](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/pull/5) records integration and its checks. Disclosure of private history and any public release require separate decisions. [Publication checklist](../PUBLICATION.md) · [Current project and site status](status.md)
 
 
 ---

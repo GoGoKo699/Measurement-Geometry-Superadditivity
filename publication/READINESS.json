@@ -4,14 +4,14 @@
   "starting_tree": "d75a22453776a366d4860317f3708f0c5c00bc57",
   "scientific_pin": "f0015c56a19fd953c6797b2c64d9b507105234e3",
   "date": "2026-09-12",
-  "status": "license_adopted_publication_pending",
+  "status": "integrated_source_account_publication_pending",
   "license_active": true,
   "public_visibility_changed": false,
-  "merge_performed": false,
+  "merge_authorized": true,
+  "merge_status_source": "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/pull/5",
+  "ci_status_source": "https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/pull/5/checks",
   "pending": [
     "Historical contact and project metadata disclosure decision",
-    "Authorized integration of reader and audit corrections",
-    "Final integrated public-tree wording and CI review",
     "Explicit visibility instruction"
   ],
   "branches_inspected": [
@@ -47,12 +47,15 @@
     "third_party": "unchanged component terms"
   },
   "adoption_record": "publication/LICENSE_ADOPTION.json",
-  "branches_inspected_note": "Historical preparation snapshot; license adoption did not integrate these branches.",
+  "branches_inspected_note": "Historical preparation snapshot; these heads describe the original licensing review, not current branch or merge state. See merge_status_source for the observed integration outcome.",
   "historical_binary_review": {
     "status": "completed",
     "record": "publication/evidence/HISTORICAL_OBJECTS_REVIEW.json",
     "scope": "Two exact Git objects; not blanket public clearance"
   },
   "followup_starting_commit": "857d173c79140b5c2643c1a7d16b4a2321ed8dd4",
-  "integration_review": "publication/INTEGRATION_REVIEW.md"
+  "integration_review": "publication/INTEGRATION_REVIEW.md",
+  "integration_report": "publication/integration/INTEGRATION_REPORT.md",
+  "integration_preservation_checker": "publication/integration/check_integrated.py",
+  "integration_authorization_scope": "Compose the reviewed reader, documentary corrections and licensing work; run existing integration CI gates and merge after inspecting their outcomes. Keep the repository private; no deployment, release or history rewrite."
 }

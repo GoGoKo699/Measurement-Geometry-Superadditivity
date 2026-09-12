@@ -261,6 +261,8 @@ def build(out):
   'publication/integration/CANDIDATE_REPORT.md','publication/integration/check_candidate.py',
   'publication/integration/CANDIDATE_STARTING_FILES.json','publication/integration/CANDIDATE_EDITS.json',
   'publication/integration/core-corrections.patch','publication/integration/CORE_PATCH_REPLAY.json'}
+ sources|={'publication/integration/INTEGRATION_REPORT.md','publication/integration/check_integrated.py',
+  'publication/integration/INTEGRATED_STARTING_FILES.json','publication/integration/INTEGRATED_EDITS.json'}
  sources|={p.relative_to(ROOT).as_posix() for p in (WEB/'review').rglob('*') if p.is_file() and p.suffix in {'.md','.json','.log','.txt'}}
  for rel in sorted(sources):
   require((ROOT/rel).is_file(),'Missing source: '+rel)

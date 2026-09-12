@@ -1,0 +1,52 @@
+.............................................F.......................... [ 41%]
+........................................................................ [ 82%]
+.F.............................                                          [100%]
+=================================== FAILURES ===================================
+________________________ test_no_nested_archive_runtime ________________________
+
+    def test_no_nested_archive_runtime():
+>    assert not list(ROOT.rglob('*.zip'))
+E    AssertionError: assert not [PosixPath('/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness/build/historical-object-local-review/baseline.zip')]
+E     +  where [PosixPath('/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness/build/historical-object-local-review/baseline.zip')] = list(<generator object Path.rglob at 0x7fd49ac26df0>)
+E     +    where <generator object Path.rglob at 0x7fd49ac26df0> = rglob('*.zip')
+E     +      where rglob = PosixPath('/workspace/scratch/323c19becda4/Measurement-Geometry-public-readiness').rglob
+
+tests/test_baseline.py:20: AssertionError
+_________ test_starting_science_and_graphical_artifacts_are_unchanged __________
+
+    def test_starting_science_and_graphical_artifacts_are_unchanged():
+        baseline = json.loads((ROOT / 'website/provenance/preskill_starting_manifest.json').read_text())
+        assert baseline['commit'] == 'f0015c56a19fd953c6797b2c64d9b507105234e3'
+        import build as builder
+        corrections = builder.verify_editorial_corrections(baseline['files'])
+        assert set(corrections) == builder.EDITORIAL_FILES
+        editable_files = {
+            'README.md', 'STATUS.md', 'BASELINE_MANIFEST.json',
+            'website/build.py', 'website/check.py', 'website/repository_preview.py',
+            'website/browser_check.py', 'website/site.json', 'website/editorial_map.json',
+            'WEBSITE.md', 'reader/PREVIEW_MANIFEST.json', 'website/assets/site.js',
+        }
+        checked = []
+        for name, expected in baseline['files'].items():
+            if name in editable_files or name.startswith(('website/pages/', 'website/tests/')):
+                continue
+            if name.startswith('reader/') and name.endswith('.md'):
+                continue
+            if name in corrections:
+                # The same frozen hash is recovered by exact inverse substitutions,
+                # with equation and identity-field guards, rather than waived.
+                assert corrections[name]['before_sha256'] == expected
+                checked.append(name)
+                continue
+>           assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == expected, name
+E           AssertionError: .github/workflows/reader-site.yml
+E           assert 'e20d01b5b54c...4d433cc777733' == '65778c4b3d04...029184f96a0ea'
+E             
+E             - 65778c4b3d04d9bfcd2f7cc0732a90e6e62a11603dba6119bd0029184f96a0ea
+E             + e20d01b5b54cef0f25dad32cac74d479941561e18377ab637814d433cc777733
+
+website/tests/test_learning_bridge.py:167: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_baseline.py::test_no_nested_archive_runtime - AssertionErro...
+FAILED website/tests/test_learning_bridge.py::test_starting_science_and_graphical_artifacts_are_unchanged
+2 failed, 173 passed in 12.16s

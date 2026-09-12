@@ -1,0 +1,64 @@
+{
+  "status": "authorized_integration",
+  "starting_commit": "deba96a1a2fb3781a357a5d4d2660e6edda638da",
+  "scope": "Exact current-stage prose, generated native pages, README/STATUS manifest identities, source-download list and CI composition; no scientific or historical-record changes.",
+  "authorization": "Owner explicitly instructed proceeding with integration and merging while keeping the repository private.",
+  "files": {
+    ".github/workflows/historical-object-review.yml": {
+      "before_sha256": "e69bbfd60724dd0b88565a232cfc247d59de272f900916cbd3022c67cc8f3302",
+      "after_sha256": "54401df4e02b4dcd395dae284f5490a1278f111f8b7dbc44da39878ac3644244"
+    },
+    ".github/workflows/integration-candidate.yml": {
+      "before_sha256": "2cbd25f9a03440d64fe5a43ec390d342461170f7cdaae70bc7a1a0a66d7c9670",
+      "after_sha256": "df6fea5b170b63df84e3336a3d0fc82170796fe672e73abfefcd7b427674369b"
+    },
+    "BASELINE_MANIFEST.json": {
+      "before_sha256": "3104abba7a5cb883e68e9645128652e9ea10e54ecdcdb65dc20808942dbed18d",
+      "after_sha256": "38f30553a7bea500369442df0295a1ac3e12875bec7c5183e5b596fd9e69e341"
+    },
+    "PUBLICATION.md": {
+      "before_sha256": "fdd615a3d2e480d718efa854d9a89a913e288e25c02d0feb5af81c58f1981c67",
+      "after_sha256": "d86870256bc59d3343e125837e0a824c446eb0cf9df44d43934833ce4cbe322c"
+    },
+    "README.md": {
+      "before_sha256": "6cec6ed1d90ffd3536f7e42b93a16b9b573b8fcd4f261e159a83621099e9c24e",
+      "after_sha256": "043653daabb6aa54846875e73cadd774215b5d44d5a1601f5a85a653937f60cd"
+    },
+    "STATUS.md": {
+      "before_sha256": "61ee92b0eece2549293920a027d00ed9e12a56724815c42bbb5f595dee84a36d",
+      "after_sha256": "0c6c04fbd32e582b7dfe880d1769733f91b890e223a74c5be472c5eb7a703c4d"
+    },
+    "WEBSITE.md": {
+      "before_sha256": "5c528ee76b71d997226be133fa51e4fb2b20c469977a6ea8d008d619d834632e",
+      "after_sha256": "9d8ff2265ed23288d14de07eabf3b84517ae1c7eed237f3046681b1f9744e628"
+    },
+    "publication/READINESS.json": {
+      "before_sha256": "5ea0d6a3d8e39874d7f6b2208e8cd5a4cd7dc314c333ab34cd8c154dcfbc437f",
+      "after_sha256": "55806b0f33d02bb6035e9bee8e43eb654005ee0049866e8bdebe86181b8bedcb"
+    },
+    "reader/PREVIEW_MANIFEST.json": {
+      "before_sha256": "bf7e705604e3e1c05016a6e4174af571a032f86f33b82a49d5d760fd1b05d958",
+      "after_sha256": "8f5ee0481f1f5418b0aef5cf45526e49b7f0c1c22349522c3d07f50f74841bd9"
+    },
+    "reader/materials.md": {
+      "before_sha256": "0ff7420413233a0536f621471a0a389852a69adcfa79de14e5643c699427f314",
+      "after_sha256": "636aea0329a4c3d028fc9a17ec568e6095e943e66e5ad3c4783fc76631779134"
+    },
+    "reader/status.md": {
+      "before_sha256": "1da97206e4ffcc16a275adccd822eb9c4c474800c70b0776e94c32807867acbf",
+      "after_sha256": "f04bbf6f60d6b7761ecdbf1f050605aa9ca99881ac500315acab2cd1f3c7858a"
+    },
+    "website/build.py": {
+      "before_sha256": "0ab2676c7825cc20076463190c3d90c91f71fc328c190fe5acc671cb72c42a6b",
+      "after_sha256": "11dec2ff2bbdd1b67328a004d6bbbf7c50cb1cff0ea4c57ec0183b03fcf073e8"
+    },
+    "website/pages/materials.md": {
+      "before_sha256": "a7b978a9928e2caf0d3fcf4316a84d39bd27462e1da7e0b8c3f89327e4ee1901",
+      "after_sha256": "b43b89b2d46576d67e27e200cb99ba672d7f4d4c1b5551f73de6e47edb58bb85"
+    },
+    "website/pages/status.md": {
+      "before_sha256": "1cd5cffa920a178d3b7551e3439afa39b43b016caed39332bd9f6537818738d5",
+      "after_sha256": "7bf92656012c90a730b1b0cfa50951f426c32420d11f68d6a920f84fa3579a0a"
+    }
+  }
+}

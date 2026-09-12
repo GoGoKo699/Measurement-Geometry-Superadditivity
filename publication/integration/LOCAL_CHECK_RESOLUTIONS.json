@@ -1,0 +1,24 @@
+{
+  "first_suite": "publication/evidence/merge-tests.json",
+  "first_figure_replay": "publication/evidence/merge-figures.json",
+  "issues": [
+    {
+      "type": "local environment residue",
+      "failure": "Untracked historical-review baseline.zip under build triggered the unchanged recursive no-ZIP test.",
+      "resolution": "Moved the complete prior review directory outside the checkout with all file hashes unchanged. No test or scientific source changed.",
+      "preserved_location": "/workspace/scratch/323c19becda4/task-state/historical-object-local-review-preserved",
+      "files_sha256": {
+        "REPORT.json": "fa59708c1f1b73c7f701adbe4ed396f1e5679dd6eee440fb641d53cb89b06457",
+        "figure.png": "7042b846104338d2f6b79d476fab88e439164ea78f15cdda969c26ddb3cb8842",
+        "baseline.zip": "087dbe4b1128a1494abc411415434df2c9a52aa5967053783779a041a32c8944"
+      }
+    },
+    {
+      "type": "integration engineering",
+      "failure": "Preskill preservation test correctly rejected a modification to the preserved reader-site.yml workflow.",
+      "resolution": "Restored reader-site.yml byte-for-byte; moved explicit current/native checks to the separate integration workflow. The original reader tests/build/browser and scientific workflows remain unchanged."
+    }
+  ],
+  "tolerances_weakened": false,
+  "historical_results_overwritten": false
+}

@@ -28,8 +28,8 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-      - name: Check the current follow-up preservation record
-        run: python3 publication/check_followup.py
+      - name: Check the current integrated preservation record
+        run: python3 publication/integration/check_integrated.py
       - name: Inspect the two recorded objects without executing archive code
         run: python3 publication/inspect_historical_objects.py --output build/historical-object-review
       - name: Retain private review evidence
