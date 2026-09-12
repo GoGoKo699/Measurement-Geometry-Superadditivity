@@ -1,0 +1,13 @@
+{
+  "name": "review-http-bytes",
+  "argv": [
+    "/workspace/scratch/323c19becda4/task-venv/bin/python",
+    "build/preskill-runtime/check_http_bytes.py",
+    "build/preskill-reader-review",
+    "build/preskill-runtime/HTTP_BYTE_CHECK.json"
+  ],
+  "cwd": "/workspace/scratch/323c19becda4/Measurement-Geometry-Superadditivity",
+  "started_utc": "2026-09-12T07:44:43.899822+00:00",
+  "duration_seconds": 0.099,
+  "return_code": 1
+}

@@ -1,0 +1,20 @@
+{
+  "server_argv": [
+    "/workspace/scratch/323c19becda4/task-venv/bin/python",
+    "-m",
+    "http.server",
+    "8765",
+    "--bind",
+    "127.0.0.1",
+    "--directory",
+    "build/preskill-reader-review"
+  ],
+  "server_bound_only": "127.0.0.1",
+  "browser_and_http_clients_run_with_server_in_same_exec_context": true,
+  "server_reachable_before_checks": true,
+  "browser_return_code": 1,
+  "http_return_code": 0,
+  "server_return_code": -15,
+  "server_stopped": true,
+  "duration_seconds": 28.238
+}
