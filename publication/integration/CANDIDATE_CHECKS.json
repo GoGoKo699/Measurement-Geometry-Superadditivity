@@ -1,0 +1,400 @@
+{
+  "status": "offline_candidate_verified_not_applied_to_release",
+  "created_utc": "2026-09-12T09:50:12.186885+00:00",
+  "patch": "publication/integration/complete-candidate.patch",
+  "patch_sha256": "d752d46e89a53abdb683cd597765773ef6bc94f6ec5a16748a2977707e1ec176",
+  "patch_bytes": 141559,
+  "starting_commit": "234e86439f44d7387134648ff088cf480ee1cd12",
+  "starting_tree": "20149d6b68826f01b5a33ada7ff89ced5fc0afab",
+  "initial_candidate_basis": "5ec87029cb3ef0067ad2a8f1f1a66027041c9513",
+  "candidate_checker": "publication/integration/check_candidate.py",
+  "candidate_tree_sha": "d304a4e73800fe070280168a7b4b54b3e1c5f5d7",
+  "files": {
+    "BASELINE_MANIFEST.json": {
+      "after_sha256": "3104abba7a5cb883e68e9645128652e9ea10e54ecdcdb65dc20808942dbed18d"
+    },
+    "STATUS.md": {
+      "after_sha256": "61ee92b0eece2549293920a027d00ed9e12a56724815c42bbb5f595dee84a36d"
+    },
+    "WEBSITE.md": {
+      "after_sha256": "5c528ee76b71d997226be133fa51e4fb2b20c469977a6ea8d008d619d834632e"
+    },
+    "data/figures/BUILD_RECORD.json": {
+      "after_sha256": "5eb0c69c1d30d2264d845cbefb5edf34100cc386b392edc05b1961d7b87e5cea"
+    },
+    "data/figures/SOURCE_IDENTITY.json": {
+      "after_sha256": "c92ef8ea1c62eaad099d9c8a28811b78dda36d3669f3a376c79268b2b38f497d"
+    },
+    "docs/MODEL_AND_CLAIMS.md": {
+      "after_sha256": "02d9a34156d41f985df3bbcf8a728e9d2e550a498bb4e6d75c68366506c37b60"
+    },
+    "docs/REFERENCES.md": {
+      "after_sha256": "bc79394fe8c349bc8415abe831cc0ab4c65ec181c67917d7a1c6168f33be5a9f"
+    },
+    "docs/SOURCE_TO_CANONICAL.md": {
+      "after_sha256": "1bc1db9751dbdf3da8ef8841c1b4a40f5a2b4441006e0164b8a05a444375b2ff"
+    },
+    "figures/FIGURE_SPECIFICATIONS.md": {
+      "after_sha256": "ea5a7dc293a69087cedee07ad04655130ba42c8b3017f4a2ed32d95f7adc1e8c"
+    },
+    "provenance/CANONICAL_INPUTS.json": {
+      "after_sha256": "6fc51098f715b0daba55dd17f03be053e64669ba62e609dbe04b922964448b66"
+    },
+    "provenance/EDITORIAL_CORRECTIONS.json": {
+      "after_sha256": "3e3207a166379b4f8714e711e73b9e4a1ec25d299abdc248e5c0a9815c4e56d8"
+    },
+    "provenance/FIGURE_INPUTS.json": {
+      "after_sha256": "1ea166670eeea658dd63b5a4d4318534cefece37233058af58321b858a2a330d"
+    },
+    "provenance/SECTION_LEDGER.json": {
+      "after_sha256": "84235a84496c7f2def56762d65125cfe770d8ebf7090f673ca56f84354d30d56"
+    },
+    "publication/integration/CANDIDATE_EDITS.json": {
+      "after_sha256": "63db86761f103dcf090739db41e41256af61d23a8fd121b4be54e32b26e178c1"
+    },
+    "publication/integration/CANDIDATE_REPORT.md": {
+      "after_sha256": "81c4d522f554a26531a0baaeb7e3bbb5e8dadced8c1a75f3cc2e9958edb5ef76"
+    },
+    "publication/integration/CANDIDATE_STARTING_FILES.json": {
+      "after_sha256": "45ea1482a7e08bcc6ea2c086069e23b0dfbbec69836989258813a9639f608b5e"
+    },
+    "publication/integration/check_candidate.py": {
+      "after_sha256": "b4bbd513fb6799d045a23a50ffbf52ee02e117b9dfee9e53fd56fc025fcc3b55"
+    },
+    "reader/PREVIEW_MANIFEST.json": {
+      "after_sha256": "bf7e705604e3e1c05016a6e4174af571a032f86f33b82a49d5d760fd1b05d958"
+    },
+    "reader/status.md": {
+      "after_sha256": "1da97206e4ffcc16a275adccd822eb9c4c474800c70b0776e94c32807867acbf"
+    },
+    "website/build.py": {
+      "after_sha256": "0ab2676c7825cc20076463190c3d90c91f71fc328c190fe5acc671cb72c42a6b"
+    },
+    "website/pages/status.md": {
+      "after_sha256": "1cd5cffa920a178d3b7551e3439afa39b43b016caed39332bd9f6537818738d5"
+    },
+    "website/tests/test_default_style.py": {
+      "after_sha256": "5f90d56c82714251fa128b0a0d79b7c9a8e9e4b62ea400d82b7b799742a65202"
+    },
+    "website/tests/test_editorial_preservation.py": {
+      "after_sha256": "87a43a586e962f697ba6ab8cee311c55adaf8d76fc3adee5fdc2c55557c262b8"
+    },
+    "website/tests/test_learning_bridge.py": {
+      "after_sha256": "b3635c81a2d1e98ccb142a68cb3d68a04f24ace5705ea0f02efa522006ce7a01"
+    }
+  },
+  "changed_or_added_paths": 24,
+  "local_commands": [
+    {
+      "name": "verify",
+      "argv": [
+        "/workspace/scratch/323c19becda4/task-venv/bin/python",
+        "verify.py"
+      ],
+      "started_utc": "2026-09-12T09:45:35.781918+00:00",
+      "duration_seconds": 0.156857,
+      "return_code": 0,
+      "log": "build/integration-candidate-checks/verify.log",
+      "log_sha256": "54150fdee38d967d6d27e7d19c686f2a3c74efc3946724845980de22833fd193",
+      "output": "{\n  \"passed\": true,\n  \"source_identities\": 44,\n  \"canonical_units\": 23,\n  \"source_fragments\": 125,\n  \"claims\": 7,\n  \"proof_graph_acyclic\": true,\n  \"approved_artifacts_unchanged\": 27,\n  \"current_document_links\": 298,\n  \"independent_verifier_boundaries\": true,\n  \"nested_archives_required\": false,\n  \"baseline_manifest_files\": 166,\n  \"scope\": \"Packaging/provenance integrity, not mathematical entropy verification.\"\n}\n"
+    },
+    {
+      "name": "tests",
+      "argv": [
+        "/workspace/scratch/323c19becda4/task-venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "tests",
+        "website/tests"
+      ],
+      "started_utc": "2026-09-12T09:45:35.939053+00:00",
+      "duration_seconds": 10.858555,
+      "return_code": 0,
+      "log": "build/integration-candidate-checks/tests.log",
+      "log_sha256": "a545e0a6288e0a7d88e29c532f092b55850124f6690fc8401756800d4904cfe2",
+      "output": "........................................................................ [ 47%]\n........................................................................ [ 95%]\n.......                                                                  [100%]\n151 passed in 10.08s\n"
+    },
+    {
+      "name": "native",
+      "argv": [
+        "/workspace/scratch/323c19becda4/task-venv/bin/python",
+        "website/repository_preview.py",
+        "--check"
+      ],
+      "started_utc": "2026-09-12T09:45:46.798825+00:00",
+      "duration_seconds": 0.166153,
+      "return_code": 0,
+      "log": "build/integration-candidate-checks/native.log",
+      "log_sha256": "e916ed5b71c1bf62333d533d45b9efca5ae4cd64ecde00c6eab563483bba5b1b",
+      "output": "{\"passed\": true, \"mode\": \"check\", \"files\": 14, \"reader_pages\": 10, \"canonical_routes\": 7, \"derived_figures\": 3, \"public_deployment\": false}\n"
+    },
+    {
+      "name": "preservation",
+      "argv": [
+        "/workspace/scratch/323c19becda4/task-venv/bin/python",
+        "publication/integration/check_candidate.py",
+        "--output",
+        "build/integration-candidate-checks/preservation-result.json"
+      ],
+      "started_utc": "2026-09-12T09:45:46.965276+00:00",
+      "duration_seconds": 0.146366,
+      "return_code": 0,
+      "log": "build/integration-candidate-checks/preservation.log",
+      "log_sha256": "7dc8880ab08e81b864ee8af9bc65f30017f9744cb9788c51f909f9f844403cf9",
+      "output": "{\n  \"passed\": true,\n  \"scope\": \"Exact documentary integration and preservation, not public clearance or a scientific proof check\",\n  \"starting_commit\": \"234e86439f44d7387134648ff088cf480ee1cd12\",\n  \"starting_files_checked\": 368,\n  \"starting_files_byte_unchanged\": 350,\n  \"recorded_existing_file_changes\": 18,\n  \"exact_core_documentary_and_identity_changes\": 9,\n  \"ancillary_reader_and_preservation_changes\": 9,\n  \"protected_original_graphics\": 27,\n  \"accepted_reader_svgs_unchanged\": 3,\n  \"historical_adoption_and_reader_records_unchanged\": true,\n  \"full_science_recomputed\": false,\n  \"release_sources_modified\": false,\n  \"merge_performed\": false\n}\n"
+    },
+    {
+      "name": "figures",
+      "argv": [
+        "/workspace/scratch/323c19becda4/task-venv/bin/python",
+        "reproduce.py",
+        "--output",
+        "build/integration-candidate-figures"
+      ],
+      "started_utc": "2026-09-12T09:45:47.112095+00:00",
+      "duration_seconds": 6.173785,
+      "return_code": 0,
+      "log": "build/integration-candidate-checks/figures.log",
+      "log_sha256": "c03114e34e1cb30fea74b1623629f76697ba8c7326fb9c5f1e77d41cc1326c99",
+      "output": "{\n  \"passed\": true,\n  \"mode\": \"figures\",\n  \"rebuilt_certificate\": false,\n  \"approved_artifacts_unchanged\": 27,\n  \"nested_archive_extraction\": false,\n  \"old_repository_access\": false,\n  \"scientific_scope_changed\": false,\n  \"external_audit\": false\n}\n"
+    },
+    {
+      "name": "site-build",
+      "argv": [
+        "/workspace/scratch/323c19becda4/task-venv/bin/python",
+        "website/build.py",
+        "--output",
+        "build/integration-candidate-site"
+      ],
+      "started_utc": "2026-09-12T09:45:53.287029+00:00",
+      "duration_seconds": 3.557002,
+      "return_code": 0,
+      "log": "build/integration-candidate-checks/site-build.log",
+      "log_sha256": "608a2682d4e21170f701638b0bd60f7d9ad5e2d7be2a6a70c96b2b7c5f779a1b",
+      "output": "{\n  \"pages\": 17,\n  \"themed_svg_files\": 10,\n  \"mathml_expressions\": 761,\n  \"baseline_preservation\": {\n    \"baseline_commit\": \"9a1e4cb3bad843db9cec1fa348870ca7162df0e0\",\n    \"baseline_members_byte_unchanged\": 154,\n    \"baseline_members_with_verified_editorial_corrections\": 9,\n    \"corrected_documentary_members\": 5,\n    \"updated_documentary_identity_members\": 4,\n    \"editorially_corrected_files\": [\n      \"data/figures/BUILD_RECORD.json\",\n      \"data/figures/SOURCE_IDENTITY.json\",\n      \"docs/MODEL_AND_CLAIMS.md\",\n      \"docs/REFERENCES.md\",\n      \"docs/SOURCE_TO_CANONICAL.md\",\n      \"figures/FIGURE_SPECIFICATIONS.md\",\n      \"provenance/CANONICAL_INPUTS.json\",\n      \"provenance/FIGURE_INPUTS.json\",\n      \"provenance/SECTION_LEDGER.json\"\n    ],\n    \"approved_graphical_artifacts_unchanged\": 27,\n    \"original_root_documents_preserved\": true\n  },\n  \"output\": \"/workspace/scratch/323c19becda4/Measurement-Geometry-integration-candidate/build/integration-candidate-site\"\n}\n"
+    },
+    {
+      "name": "site-check",
+      "argv": [
+        "/workspace/scratch/323c19becda4/task-venv/bin/python",
+        "website/check.py",
+        "--site",
+        "build/integration-candidate-site",
+        "--report",
+        "build/integration-candidate-checks/site-result.json"
+      ],
+      "started_utc": "2026-09-12T09:45:56.844625+00:00",
+      "duration_seconds": 1.702407,
+      "return_code": 0,
+      "log": "build/integration-candidate-checks/site-check.log",
+      "log_sha256": "d49e93717ddd464a04680c1374a11542d79d00c0e280e1b1d9e015b8a8c7d86f",
+      "output": "{\n  \"passed\": true,\n  \"html_pages\": 17,\n  \"routes_checked\": [\n    \"argument\",\n    \"background\",\n    \"channel\",\n    \"figures\",\n    \"index\",\n    \"limits\",\n    \"materials\",\n    \"model\",\n    \"notation\",\n    \"proof\",\n    \"proof-guide\",\n    \"provenance\",\n    \"references\",\n    \"reproduce\",\n    \"status\",\n    \"verification\",\n    \"visual-design\"\n  ],\n  \"learning_bridge_metadata_verified\": true,\n  \"local_links_checked\": 1315,\n  \"external_links_not_fetched\": 20,\n  \"mathml_expressions\": 761,\n  \"canonical_sources\": [\n    {\n      \"source\": \"docs/MODEL_AND_CLAIMS.md\",\n      \"sha256\": \"02d9a34156d41f985df3bbcf8a728e9d2e550a498bb4e6d75c68366506c37b60\",\n      \"displayed_equations_retained\": 18\n    },\n    {\n      \"source\": \"docs/COMPLETE_PROOF.md\",\n      \"sha256\": \"dbc758b3d26d57815a70ac89d58a3996f9b3c7eb781a1de7d74e386e185033fa\",\n      \"displayed_equations_retained\": 119\n    },\n    {\n      \"source\": \"docs/REPRODUCTION.md\",\n      \"sha256\": \"1cb7447bcdd1475aad9f30f71868d8c0615acb2cba9c9f6bd22f05a9bc962526\",\n      \"displayed_equations_retained\": 0\n    },\n    {\n      \"source\": \"docs/REFERENCES.md\",\n      \"sha256\": \"bc79394fe8c349bc8415abe831cc0ab4c65ec181c67917d7a1c6168f33be5a9f\",\n      \"displayed_equations_retained\": 0\n    },\n    {\n      \"source\": \"docs/NOTATION_CROSSWALK.md\",\n      \"sha256\": \"3dc137c0cc419ca08ca996759bd76243c48e3932e6615277d73e329ab86772d8\",\n      \"displayed_equations_retained\": 0\n    },\n    {\n      \"source\": \"docs/SOURCE_TO_CANONICAL.md\",\n      \"sha256\": \"1bc1db9751dbdf3da8ef8841c1b4a40f5a2b4441006e0164b8a05a444375b2ff\",\n      \"displayed_equations_retained\": 0\n    },\n    {\n      \"source\": \"docs/FROZEN_ARGUMENT.md\",\n      \"sha256\": \"bdada1edb06c814ea563068317e38c09c3d96dfe539bbddf7523bd0a49ca2ad7\",\n      \"displayed_equations_retained\": 1\n    }\n  ],\n  \"reuse_source_downloads\": [\n    {\n      \"source\": \"LICENSE.md\",\n      \"download\": \"files/LICENSE.md\",\n      \"sha256\": \"edc3204a97de004499f6392d10b936dcbdfc113d6cea2911789e5571ea543cf5\"\n    },\n    {\n      \"source\": \"LICENSES/MIT.txt\",\n      \"download\": \"files/LICENSES/MIT.txt\",\n      \"sha256\": \"a92600540b1ab7a18301e2632a29334b3df227ad836e88df9967d69e3c86db66\"\n    },\n    {\n      \"source\": \"LICENSES/CC-BY-4.0.txt\",\n      \"download\": \"files/LICENSES/CC-BY-4.0.txt\",\n      \"sha256\": \"9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411\"\n    },\n    {\n      \"source\": \"LICENSES/DejaVu.txt\",\n      \"download\": \"files/LICENSES/DejaVu.txt\",\n      \"sha256\": \"d75938dec098f06f0ac3c00853065d94f020be1c3c62ef1dc2975ba15b4d9b0e\"\n    },\n    {\n      \"source\": \"LICENSES/STIX.txt\",\n      \"download\": \"files/LICENSES/STIX.txt\",\n      \"sha256\": \"bab3d31dfef07f483624f2f65f2711e76065b8e7273278b1c071ede1041c9959\"\n    },\n    {\n      \"source\": \"THIRD_PARTY_NOTICES.md\",\n      \"download\": \"files/THIRD_PARTY_NOTICES.md\",\n      \"sha256\": \"040ed45e27b3f4a7f1d5c3d60b2e2f82bf3b6d59490eea7ddc79fae08daf69a4\"\n    },\n    {\n      \"source\": \"CITATION.cff\",\n      \"download\": \"files/CITATION.cff\",\n      \"sha256\": \"a2b17ad519b172286230b6f75284a4b3078d2a4006b427072d2ab9a1ef764457\"\n    },\n    {\n      \"source\": \"publication/LICENSE_ADOPTION.json\",\n      \"download\": \"files/publication/LICENSE_ADOPTION.json\",\n      \"sha256\": \"150cf01caa5aba1d684a970619d445ead83aeab9b9f5aa826d48fb13b7cf4104\"\n    }\n  ],\n  \"palette_text_contrasts\": [\n    {\n      \"foreground\": \"ink\",\n      \"background\": \"paper\",\n      \"contrast\": 11.695882755554589,\n      \"at_least_4_5\": true\n    },\n    {\n      \"foreground\": \"muted\",\n      \"background\": \"paper\",\n      \"contrast\": 5.3348619788933425,\n      \"at_least_4_5\": true\n    },\n    {\n      \"foreground\": \"indigo\",\n      \"background\": \"paper\",\n      \"contrast\": 7.936852261114904,\n      \"at_least_4_5\": true\n    },\n    {\n      \"foreground\": \"rust\",\n      \"background\": \"paper\",\n      \"contrast\": 5.15806473522964,\n      \"at_least_4_5\": true\n    },\n    {\n      \"foreground\": \"sage_ink\",\n      \"background\": \"paper\",\n      \"contrast\": 5.6980052112343405,\n      \"at_least_4_5\": true\n    },\n    {\n      \"foreground\": \"white\",\n      \"background\": \"indigo\",\n      \"contrast\": 8.723490718145428,\n      \"at_least_4_5\": true\n    },\n    {\n      \"foreground\": \"ink\",\n      \"background\": \"yellow\",\n      \"contrast\": 7.442678114892642,\n      \"at_least_4_5\": true\n    },\n    {\n      \"foreground\": \"muted\",\n      \"background\": \"mist\",\n      \"contrast\": 5.016421471006098,\n      \"at_least_4_5\": true\n    }\n  ],\n  \"color_only_svg_derivatives\": 10,\n  \"source_preservation\": {\n    \"baseline_commit\": \"9a1e4cb3bad843db9cec1fa348870ca7162df0e0\",\n    \"baseline_members_byte_unchanged\": 154,\n    \"baseline_members_with_verified_editorial_corrections\": 9,\n    \"corrected_documentary_members\": 5,\n    \"updated_documentary_identity_members\": 4,\n    \"editorially_corrected_files\": [\n      \"data/figures/BUILD_RECORD.json\",\n      \"data/figures/SOURCE_IDENTITY.json\",\n      \"docs/MODEL_AND_CLAIMS.md\",\n      \"docs/REFERENCES.md\",\n      \"docs/SOURCE_TO_CANONICAL.md\",\n      \"figures/FIGURE_SPECIFICATIONS.md\",\n      \"provenance/CANONICAL_INPUTS.json\",\n      \"provenance/FIGURE_INPUTS.json\",\n      \"provenance/SECTION_LEDGER.json\"\n    ],\n    \"approved_graphical_artifacts_unchanged\": 27,\n    \"original_root_documents_preserved\": true\n  },\n  \"no_public_deployment\": true,\n  \"new_math_verification\": false,\n  \"browser_checks_separate\": true\n}\n"
+    },
+    {
+      "name": "site-build-final",
+      "argv": [
+        "/workspace/scratch/323c19becda4/task-venv/bin/python",
+        "website/build.py",
+        "--output",
+        "build/integration-candidate-site-final"
+      ],
+      "started_utc": "2026-09-12T09:48:44.519973+00:00",
+      "duration_seconds": 3.574745,
+      "return_code": 0,
+      "log": "build/integration-candidate-checks/site-build-final.log",
+      "log_sha256": "22ab2ddb75de0300307dfb1d22d0ce59a9ab42c1fe10893b585c5477e5accb2c",
+      "output": "{\n  \"pages\": 17,\n  \"themed_svg_files\": 10,\n  \"mathml_expressions\": 761,\n  \"baseline_preservation\": {\n    \"baseline_commit\": \"9a1e4cb3bad843db9cec1fa348870ca7162df0e0\",\n    \"baseline_members_byte_unchanged\": 154,\n    \"baseline_members_with_verified_editorial_corrections\": 9,\n    \"corrected_documentary_members\": 5,\n    \"updated_documentary_identity_members\": 4,\n    \"editorially_corrected_files\": [\n      \"data/figures/BUILD_RECORD.json\",\n      \"data/figures/SOURCE_IDENTITY.json\",\n      \"docs/MODEL_AND_CLAIMS.md\",\n      \"docs/REFERENCES.md\",\n      \"docs/SOURCE_TO_CANONICAL.md\",\n      \"figures/FIGURE_SPECIFICATIONS.md\",\n      \"provenance/CANONICAL_INPUTS.json\",\n      \"provenance/FIGURE_INPUTS.json\",\n      \"provenance/SECTION_LEDGER.json\"\n    ],\n    \"approved_graphical_artifacts_unchanged\": 27,\n    \"original_root_documents_preserved\": true\n  },\n  \"output\": \"/workspace/scratch/323c19becda4/Measurement-Geometry-integration-candidate/build/integration-candidate-site-final\"\n}\n"
+    },
+    {
+      "name": "site-check-final",
+      "argv": [
+        "/workspace/scratch/323c19becda4/task-venv/bin/python",
+        "website/check.py",
+        "--site",
+        "build/integration-candidate-site-final",
+        "--report",
+        "build/integration-candidate-checks/site-final-result.json"
+      ],
+      "started_utc": "2026-09-12T09:48:48.095098+00:00",
+      "duration_seconds": 1.641368,
+      "return_code": 0,
+      "log": "build/integration-candidate-checks/site-check-final.log",
+      "log_sha256": "d49e93717ddd464a04680c1374a11542d79d00c0e280e1b1d9e015b8a8c7d86f",
+      "output": "{\n  \"passed\": true,\n  \"html_pages\": 17,\n  \"routes_checked\": [\n    \"argument\",\n    \"background\",\n    \"channel\",\n    \"figures\",\n    \"index\",\n    \"limits\",\n    \"materials\",\n    \"model\",\n    \"notation\",\n    \"proof\",\n    \"proof-guide\",\n    \"provenance\",\n    \"references\",\n    \"reproduce\",\n    \"status\",\n    \"verification\",\n    \"visual-design\"\n  ],\n  \"learning_bridge_metadata_verified\": true,\n  \"local_links_checked\": 1315,\n  \"external_links_not_fetched\": 20,\n  \"mathml_expressions\": 761,\n  \"canonical_sources\": [\n    {\n      \"source\": \"docs/MODEL_AND_CLAIMS.md\",\n      \"sha256\": \"02d9a34156d41f985df3bbcf8a728e9d2e550a498bb4e6d75c68366506c37b60\",\n      \"displayed_equations_retained\": 18\n    },\n    {\n      \"source\": \"docs/COMPLETE_PROOF.md\",\n      \"sha256\": \"dbc758b3d26d57815a70ac89d58a3996f9b3c7eb781a1de7d74e386e185033fa\",\n      \"displayed_equations_retained\": 119\n    },\n    {\n      \"source\": \"docs/REPRODUCTION.md\",\n      \"sha256\": \"1cb7447bcdd1475aad9f30f71868d8c0615acb2cba9c9f6bd22f05a9bc962526\",\n      \"displayed_equations_retained\": 0\n    },\n    {\n      \"source\": \"docs/REFERENCES.md\",\n      \"sha256\": \"bc79394fe8c349bc8415abe831cc0ab4c65ec181c67917d7a1c6168f33be5a9f\",\n      \"displayed_equations_retained\": 0\n    },\n    {\n      \"source\": \"docs/NOTATION_CROSSWALK.md\",\n      \"sha256\": \"3dc137c0cc419ca08ca996759bd76243c48e3932e6615277d73e329ab86772d8\",\n      \"displayed_equations_retained\": 0\n    },\n    {\n      \"source\": \"docs/SOURCE_TO_CANONICAL.md\",\n      \"sha256\": \"1bc1db9751dbdf3da8ef8841c1b4a40f5a2b4441006e0164b8a05a444375b2ff\",\n      \"displayed_equations_retained\": 0\n    },\n    {\n      \"source\": \"docs/FROZEN_ARGUMENT.md\",\n      \"sha256\": \"bdada1edb06c814ea563068317e38c09c3d96dfe539bbddf7523bd0a49ca2ad7\",\n      \"displayed_equations_retained\": 1\n    }\n  ],\n  \"reuse_source_downloads\": [\n    {\n      \"source\": \"LICENSE.md\",\n      \"download\": \"files/LICENSE.md\",\n      \"sha256\": \"edc3204a97de004499f6392d10b936dcbdfc113d6cea2911789e5571ea543cf5\"\n    },\n    {\n      \"source\": \"LICENSES/MIT.txt\",\n      \"download\": \"files/LICENSES/MIT.txt\",\n      \"sha256\": \"a92600540b1ab7a18301e2632a29334b3df227ad836e88df9967d69e3c86db66\"\n    },\n    {\n      \"source\": \"LICENSES/CC-BY-4.0.txt\",\n      \"download\": \"files/LICENSES/CC-BY-4.0.txt\",\n      \"sha256\": \"9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411\"\n    },\n    {\n      \"source\": \"LICENSES/DejaVu.txt\",\n      \"download\": \"files/LICENSES/DejaVu.txt\",\n      \"sha256\": \"d75938dec098f06f0ac3c00853065d94f020be1c3c62ef1dc2975ba15b4d9b0e\"\n    },\n    {\n      \"source\": \"LICENSES/STIX.txt\",\n      \"download\": \"files/LICENSES/STIX.txt\",\n      \"sha256\": \"bab3d31dfef07f483624f2f65f2711e76065b8e7273278b1c071ede1041c9959\"\n    },\n    {\n      \"source\": \"THIRD_PARTY_NOTICES.md\",\n      \"download\": \"files/THIRD_PARTY_NOTICES.md\",\n      \"sha256\": \"040ed45e27b3f4a7f1d5c3d60b2e2f82bf3b6d59490eea7ddc79fae08daf69a4\"\n    },\n    {\n      \"source\": \"CITATION.cff\",\n      \"download\": \"files/CITATION.cff\",\n      \"sha256\": \"a2b17ad519b172286230b6f75284a4b3078d2a4006b427072d2ab9a1ef764457\"\n    },\n    {\n      \"source\": \"publication/LICENSE_ADOPTION.json\",\n      \"download\": \"files/publication/LICENSE_ADOPTION.json\",\n      \"sha256\": \"150cf01caa5aba1d684a970619d445ead83aeab9b9f5aa826d48fb13b7cf4104\"\n    }\n  ],\n  \"palette_text_contrasts\": [\n    {\n      \"foreground\": \"ink\",\n      \"background\": \"paper\",\n      \"contrast\": 11.695882755554589,\n      \"at_least_4_5\": true\n    },\n    {\n      \"foreground\": \"muted\",\n      \"background\": \"paper\",\n      \"contrast\": 5.3348619788933425,\n      \"at_least_4_5\": true\n    },\n    {\n      \"foreground\": \"indigo\",\n      \"background\": \"paper\",\n      \"contrast\": 7.936852261114904,\n      \"at_least_4_5\": true\n    },\n    {\n      \"foreground\": \"rust\",\n      \"background\": \"paper\",\n      \"contrast\": 5.15806473522964,\n      \"at_least_4_5\": true\n    },\n    {\n      \"foreground\": \"sage_ink\",\n      \"background\": \"paper\",\n      \"contrast\": 5.6980052112343405,\n      \"at_least_4_5\": true\n    },\n    {\n      \"foreground\": \"white\",\n      \"background\": \"indigo\",\n      \"contrast\": 8.723490718145428,\n      \"at_least_4_5\": true\n    },\n    {\n      \"foreground\": \"ink\",\n      \"background\": \"yellow\",\n      \"contrast\": 7.442678114892642,\n      \"at_least_4_5\": true\n    },\n    {\n      \"foreground\": \"muted\",\n      \"background\": \"mist\",\n      \"contrast\": 5.016421471006098,\n      \"at_least_4_5\": true\n    }\n  ],\n  \"color_only_svg_derivatives\": 10,\n  \"source_preservation\": {\n    \"baseline_commit\": \"9a1e4cb3bad843db9cec1fa348870ca7162df0e0\",\n    \"baseline_members_byte_unchanged\": 154,\n    \"baseline_members_with_verified_editorial_corrections\": 9,\n    \"corrected_documentary_members\": 5,\n    \"updated_documentary_identity_members\": 4,\n    \"editorially_corrected_files\": [\n      \"data/figures/BUILD_RECORD.json\",\n      \"data/figures/SOURCE_IDENTITY.json\",\n      \"docs/MODEL_AND_CLAIMS.md\",\n      \"docs/REFERENCES.md\",\n      \"docs/SOURCE_TO_CANONICAL.md\",\n      \"figures/FIGURE_SPECIFICATIONS.md\",\n      \"provenance/CANONICAL_INPUTS.json\",\n      \"provenance/FIGURE_INPUTS.json\",\n      \"provenance/SECTION_LEDGER.json\"\n    ],\n    \"approved_graphical_artifacts_unchanged\": 27,\n    \"original_root_documents_preserved\": true\n  },\n  \"no_public_deployment\": true,\n  \"new_math_verification\": false,\n  \"browser_checks_separate\": true\n}\n"
+    },
+    {
+      "name": "preservation-final",
+      "argv": [
+        "/workspace/scratch/323c19becda4/task-venv/bin/python",
+        "publication/integration/check_candidate.py",
+        "--output",
+        "build/integration-candidate-checks/preservation-final-result.json"
+      ],
+      "started_utc": "2026-09-12T09:48:49.737121+00:00",
+      "duration_seconds": 0.116152,
+      "return_code": 0,
+      "log": "build/integration-candidate-checks/preservation-final.log",
+      "log_sha256": "7dc8880ab08e81b864ee8af9bc65f30017f9744cb9788c51f909f9f844403cf9",
+      "output": "{\n  \"passed\": true,\n  \"scope\": \"Exact documentary integration and preservation, not public clearance or a scientific proof check\",\n  \"starting_commit\": \"234e86439f44d7387134648ff088cf480ee1cd12\",\n  \"starting_files_checked\": 368,\n  \"starting_files_byte_unchanged\": 350,\n  \"recorded_existing_file_changes\": 18,\n  \"exact_core_documentary_and_identity_changes\": 9,\n  \"ancillary_reader_and_preservation_changes\": 9,\n  \"protected_original_graphics\": 27,\n  \"accepted_reader_svgs_unchanged\": 3,\n  \"historical_adoption_and_reader_records_unchanged\": true,\n  \"full_science_recomputed\": false,\n  \"release_sources_modified\": false,\n  \"merge_performed\": false\n}\n"
+    }
+  ],
+  "preservation": {
+    "passed": true,
+    "scope": "Exact documentary integration and preservation, not public clearance or a scientific proof check",
+    "starting_commit": "234e86439f44d7387134648ff088cf480ee1cd12",
+    "starting_files_checked": 368,
+    "starting_files_byte_unchanged": 350,
+    "recorded_existing_file_changes": 18,
+    "exact_core_documentary_and_identity_changes": 9,
+    "ancillary_reader_and_preservation_changes": 9,
+    "protected_original_graphics": 27,
+    "accepted_reader_svgs_unchanged": 3,
+    "historical_adoption_and_reader_records_unchanged": true,
+    "full_science_recomputed": false,
+    "release_sources_modified": false,
+    "merge_performed": false
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+    "pandoc": "pandoc 3.1.3",
+    "dependencies": {
+      "numpy": {
+        "recorded": "2.3.5",
+        "installed": "2.3.5"
+      },
+      "scipy": {
+        "recorded": "1.17.0",
+        "installed": "1.17.0"
+      },
+      "mpmath": {
+        "recorded": "1.3.0",
+        "installed": "1.3.0"
+      },
+      "sympy": {
+        "recorded": "1.14.0",
+        "installed": "1.14.0"
+      },
+      "matplotlib": {
+        "recorded": "3.10.8",
+        "installed": "3.10.8"
+      },
+      "PyMuPDF": {
+        "recorded": "1.26.7",
+        "installed": "1.26.7"
+      },
+      "Pillow": {
+        "recorded": "12.3.0",
+        "installed": "12.3.0"
+      },
+      "reportlab": {
+        "recorded": "4.4.9",
+        "installed": "4.4.9"
+      },
+      "pytest": {
+        "recorded": "9.0.2",
+        "installed": "9.0.2"
+      },
+      "beautifulsoup4": {
+        "recorded": "4.14.3",
+        "installed": "4.14.3"
+      },
+      "playwright": {
+        "recorded": "1.57.0",
+        "installed": "1.57.0"
+      }
+    },
+    "assertions_disabled": false,
+    "thread_limits": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1"
+    },
+    "browser_install_attempted": false,
+    "full_certificate_run": false
+  },
+  "figure_reproduction": {
+    "data": {
+      "passed": true,
+      "files_byte_identical": 10,
+      "files": [
+        "BUILD_RECORD.json",
+        "SOURCE_IDENTITY.json",
+        "cross_figure_witness_bound_check.json",
+        "figure1_all_masks_not_for_display.csv",
+        "figure1_comparison.csv",
+        "figure1_original_witness140.json",
+        "figure2_pauli_guaranteed_region.csv",
+        "figure3_cone_gap.csv",
+        "figure3_cone_geometry.csv",
+        "figure3_small_lambda_controls_not_for_display.csv"
+      ]
+    },
+    "figures": {
+      "passed": true,
+      "artifacts_byte_identical": 27,
+      "files": [
+        "figure_02_guaranteed_region.pdf",
+        "figure_03_coplanar_limit.pdf",
+        "figure_01_channel_and_witness.pdf",
+        "figure_03_coplanar_limit.svg",
+        "figure_02_guaranteed_region.svg",
+        "three_figure_review.pdf",
+        "figure_02_guaranteed_region_preview.png",
+        "figure_02_guaranteed_region.png",
+        "figure_01_channel_and_witness_preview.png",
+        "figure_03_coplanar_limit.png",
+        "figure_03_coplanar_limit_preview.png",
+        "figure_01_channel_and_witness.svg",
+        "figure_01_channel_and_witness.png",
+        "panels/figure2_width.pdf",
+        "panels/figure2_main.svg",
+        "panels/figure3a_geometry.pdf",
+        "panels/figure3b_gap.svg",
+        "panels/figure2_header.pdf",
+        "panels/figure1b_witness.pdf",
+        "panels/figure2_width.svg",
+        "panels/figure1b_witness.svg",
+        "panels/figure3a_geometry.svg",
+        "panels/figure1a_channel.pdf",
+        "panels/figure3b_gap.pdf",
+        "panels/figure2_header.svg",
+        "panels/figure1a_channel.svg",
+        "panels/figure2_main.pdf"
+      ]
+    }
+  },
+  "failed_attempts": [
+    {
+      "phase": "initial candidate before closure delta",
+      "command": "/workspace/scratch/323c19becda4/task-venv/bin/python verify.py",
+      "return_code": 1,
+      "error": "ValueError: broken explicit anchor reader/status.md#correction-record",
+      "cause": "New root status linked a generated GitHub name-anchor through the unchanged canonical checker, which recognizes id anchors.",
+      "correction": "Removed only the unnecessary fragment from that root status link. Verifier and native generator unchanged.",
+      "later_verification": "verify exit0 and151tests passed",
+      "duration_recorded": false
+    },
+    {
+      "phase": "environment inventory helper",
+      "command": "python - (system interpreter; importlib.metadata.version for recorded requirements)",
+      "return_code": 1,
+      "error": "importlib.metadata.PackageNotFoundError: No package metadata was found for mpmath",
+      "cause": "Inventory helper initially used system Python rather than the isolated interpreter used by all principal commands.",
+      "correction": "Reran inventory using /workspace/scratch/323c19becda4/task-venv/bin/python; all11recorded package versions matched.",
+      "duration_recorded": false
+    }
+  ],
+  "browser_checks": "not run locally for this candidate; exact patch browser CI remains pending",
+  "full_certificate_run": false,
+  "merged": false,
+  "release_scientific_files_changed": false,
+  "public_visibility_changed": false,
+  "release_dry_run": {
+    "command": "git apply --check publication/integration/complete-candidate.patch",
+    "return_code": 0,
+    "live_sources_changed": false
+  }
+}
