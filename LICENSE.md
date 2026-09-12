@@ -22,4 +22,4 @@ Internal rules protecting scientific reference files do not restrict downstream 
 
 No additional patent or trademark rights are granted beyond the license terms. Their warranty and liability provisions apply. Licensing does not establish scientific correctness, publication or peer-review status.
 
-The [adoption record](publication/LICENSE_ADOPTION.json) records the owner's confirmation. Earlier proposals and review copies are historical; this root notice defines the operative scope for the original material in this revision.
+Ruge Lin has confirmed authority to license the included original material under these terms. This notice defines the operative scope for the original material in this revision.

@@ -45,7 +45,7 @@ def test_license_citation_and_third_party_downloads(site):
     required={
         'LICENSE.md','LICENSES/MIT.txt','LICENSES/CC-BY-4.0.txt',
         'LICENSES/DejaVu.txt','LICENSES/STIX.txt','THIRD_PARTY_NOTICES.md',
-        'CITATION.cff','publication/LICENSE_ADOPTION.json',
+        'CITATION.cff',
     }
     assert set(builder.REUSE_DOWNLOADS)==required
     record=json.loads((site/'files/BUILD_RECORD.json').read_text())
@@ -58,6 +58,52 @@ def test_license_citation_and_third_party_downloads(site):
         page=BeautifulSoup(file.read_text(),'html.parser')
         for rel in ('LICENSE.md','CITATION.cff','THIRD_PARTY_NOTICES.md'):
             assert page.select_one(f'footer a[href="files/{rel}"]')
+
+
+def test_current_integrity_sources_are_exact_downloads(site):
+    required={'integrity/check_scientific.py','integrity/SCIENTIFIC_FILES.json'}
+    assert set(builder.INTEGRITY_DOWNLOADS)==required
+    record=json.loads((site/'files/BUILD_RECORD.json').read_text())
+    assert len(checker.check_integrity_downloads(site,record))==len(required)
+    page=BeautifulSoup((site/'verification.html').read_text(),'html.parser')
+    for rel in required:
+        assert page.select_one(f'a[href="files/{rel}"]')
+    for path in ('publication','website/review','website/provenance'):
+        assert not (site/'files'/path).exists()
+    assert 'base_commit' not in record and 'reader_baseline_commit' not in record
+    assert record['local_reading_edition'] and not record['public_deployment_performed']
+
+
+def test_downloaded_scientific_bundle_passes_its_own_offline_check(site):
+    from integrity.check_scientific import check
+    result=check(site/'files')
+    assert result['passed']
+    assert result['approved_graphical_artifacts_unchanged']==27
+    assert result['accepted_reader_svgs_unchanged']==3
+
+
+@pytest.mark.parametrize('change',['missing','changed-bytes','forged-hash','missing-row','changed-path'])
+def test_invalid_integrity_downloads_fail(site,tmp_path,change):
+    import shutil
+    record=json.loads((site/'files/BUILD_RECORD.json').read_text())
+    for rel in builder.INTEGRITY_DOWNLOADS:
+        target=tmp_path/'files'/rel
+        target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copy2(site/'files'/rel,target)
+    target=tmp_path/'files/integrity/check_scientific.py'
+    if change=='missing':
+        target.unlink()
+    elif change=='changed-bytes':
+        target.write_bytes(target.read_bytes()+b'\n')
+        record['integrity_source_downloads'][0]['sha256']=builder.sha(target)
+    elif change=='forged-hash':
+        record['integrity_source_downloads'][0]['sha256']='0'*64
+    elif change=='missing-row':
+        record['integrity_source_downloads'].pop()
+    else:
+        record['integrity_source_downloads'][0]['download']='../check_scientific.py'
+    with pytest.raises(ValueError,match='Integrity download'):
+        checker.check_integrity_downloads(tmp_path,record)
 
 
 @pytest.mark.parametrize('change',['missing','changed-bytes','forged-hash','missing-row','changed-path'])
@@ -125,7 +171,11 @@ def test_existing_directory_rejected(site):
 
 def test_editorial_source_anchors():
     e=json.loads((ROOT/'editorial_map.json').read_text())
-    assert e['my_tone']['mode']=='repository' and not e['my_tone']['private_examples_copied']
+    assert e['source_of_truth']=='website/pages/'
+    assert e['learning_metadata']=='website/learning_bridge.json'
+    assert e['scientific_proof_ledger']=='provenance/CLAIM_COVERAGE.json'
+    assert {p['path'] for p in e['new_pages']} == {p['source'] for p in json.loads((ROOT/'site.json').read_text())['pages'] if not p.get('canonical')}
+    assert not {'my_tone','preskill_bridge','current_reader_status'} & set(e)
     for entry in e['new_pages']:
         for source in entry['source_anchors']:
             path,_,anchor=source.partition('#')

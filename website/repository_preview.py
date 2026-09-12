@@ -156,7 +156,6 @@ def expected_files():
         body += 'Custom website navigation, local search and interactive color switching are not executed in this GitHub view.\n'
         outputs[origin] = body.encode('utf-8')
     record = {'format':'GitHub Markdown with linked canonical technical documents','public_deployment':False,
-              'reader_baseline_commit':config['reader_baseline_commit'],
               'canonical_technical_documents_duplicated':False,'routes':{p['slug']:page_path(p) for p in pages},
               'source_hashes':dict(sorted(source_hashes.items())),
               'generated_files':{n:sha(b) for n,b in sorted(outputs.items())},

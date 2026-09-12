@@ -78,13 +78,6 @@ The project uses MIT for original code and CC BY 4.0 for original prose, figures
 
 Contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com). [Current project status](status.md)
 
-<details>
-<summary>Provenance and maintenance records</summary>
-
-The [record index](../publication/PROJECT_HISTORY.md) links the source history, audit, documentary corrections and reader implementation records. These are retained for traceability and are not prerequisites for reading the result.
-
-</details>
-
 
 ---
 

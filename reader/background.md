@@ -58,7 +58,7 @@ Page numbers are **printed pages**. In this v5 PDF, printed page $k$ is viewer p
 | $p$ in Eq. (10.310) | $p$ and $\epsilon$ in M01 | Preskill uses total Pauli-error probability, $p/3$ per error. Here $p$ selects destructive measurement and $\epsilon$ flips its report. These are different channels. |
 | $\epsilon,\delta$ in the capacity definition, p. 52 | Physical reporting error $\epsilon$ | The tutorial symbols are accuracy/rate tolerances, not this fixed noise parameter. |
 
-The repository's [canonical notation crosswalk](../docs/NOTATION_CROSSWALK.md) serves a different purpose: it reconciles the project's historical source fragments. It remains unchanged. The tutorial crosswalk above does not rename canonical mathematical symbols.
+The repository's [canonical notation crosswalk](../docs/NOTATION_CROSSWALK.md) connects the symbols used across the project's source materials. The tutorial crosswalk above explains how Preskill's notation relates to those symbols without renaming the canonical mathematics.
 
 <a name="after-the-tutorial"></a>
 
