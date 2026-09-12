@@ -1,0 +1,397 @@
+{
+  "scope": "Credential-shaped pattern scan of available logs from all 40 enumerated workflow runs, not a dependency or security certification. Raw logs not republished.",
+  "run_count": 40,
+  "job_count": 54,
+  "scanned_logs": 32,
+  "skipped_jobs": 22,
+  "jobs": [
+    {
+      "candidates": [],
+      "characters": 112033,
+      "conclusion": "success",
+      "job": 103522892404,
+      "log_status": "scanned",
+      "run": 34682243712
+    },
+    {
+      "conclusion": "skipped",
+      "job": 103522892882,
+      "log_status": "skipped; no execution log expected",
+      "run": 34682243670
+    },
+    {
+      "conclusion": "skipped",
+      "job": 103522892932,
+      "log_status": "skipped; no execution log expected",
+      "run": 34682243670
+    },
+    {
+      "candidates": [],
+      "characters": 111959,
+      "conclusion": "success",
+      "job": 103521021174,
+      "log_status": "scanned",
+      "run": 34681565631
+    },
+    {
+      "conclusion": "skipped",
+      "job": 103521021656,
+      "log_status": "skipped; no execution log expected",
+      "run": 34681565622
+    },
+    {
+      "conclusion": "skipped",
+      "job": 103521039706,
+      "log_status": "skipped; no execution log expected",
+      "run": 34681565622
+    },
+    {
+      "candidates": [],
+      "characters": 30222,
+      "conclusion": "success",
+      "job": 102052778994,
+      "log_status": "scanned",
+      "run": 34223760487
+    },
+    {
+      "candidates": [],
+      "characters": 33648,
+      "conclusion": "success",
+      "job": 102052779384,
+      "log_status": "scanned",
+      "run": 34223760487
+    },
+    {
+      "candidates": [],
+      "characters": 74297,
+      "conclusion": "success",
+      "job": 102052778906,
+      "log_status": "scanned",
+      "run": 34223760453
+    },
+    {
+      "candidates": [],
+      "characters": 75449,
+      "conclusion": "success",
+      "job": 102051629744,
+      "log_status": "scanned",
+      "run": 34223404638
+    },
+    {
+      "candidates": [],
+      "characters": 31287,
+      "conclusion": "success",
+      "job": 102051629362,
+      "log_status": "scanned",
+      "run": 34223404538
+    },
+    {
+      "candidates": [],
+      "characters": 34685,
+      "conclusion": "success",
+      "job": 102051629683,
+      "log_status": "scanned",
+      "run": 34223404538
+    },
+    {
+      "candidates": [],
+      "characters": 30272,
+      "conclusion": "success",
+      "job": 102030758775,
+      "log_status": "scanned",
+      "run": 34216921230
+    },
+    {
+      "candidates": [],
+      "characters": 33648,
+      "conclusion": "success",
+      "job": 102030759160,
+      "log_status": "scanned",
+      "run": 34216921230
+    },
+    {
+      "candidates": [],
+      "characters": 74942,
+      "conclusion": "success",
+      "job": 102030758812,
+      "log_status": "scanned",
+      "run": 34216921217
+    },
+    {
+      "candidates": [],
+      "characters": 34872,
+      "conclusion": "success",
+      "job": 102030692967,
+      "log_status": "scanned",
+      "run": 34216900992
+    },
+    {
+      "candidates": [],
+      "characters": 31444,
+      "conclusion": "success",
+      "job": 102030693101,
+      "log_status": "scanned",
+      "run": 34216900992
+    },
+    {
+      "candidates": [],
+      "characters": 75484,
+      "conclusion": "success",
+      "job": 102030693029,
+      "log_status": "scanned",
+      "run": 34216900953
+    },
+    {
+      "candidates": [],
+      "characters": 75445,
+      "conclusion": "success",
+      "job": 102028302579,
+      "log_status": "scanned",
+      "run": 34216169713
+    },
+    {
+      "conclusion": "skipped",
+      "job": 102028303412,
+      "log_status": "skipped; no execution log expected",
+      "run": 34216169682
+    },
+    {
+      "conclusion": "skipped",
+      "job": 102028329530,
+      "log_status": "skipped; no execution log expected",
+      "run": 34216169682
+    },
+    {
+      "candidates": [],
+      "characters": 74394,
+      "conclusion": "success",
+      "job": 102028294934,
+      "log_status": "scanned",
+      "run": 34216167380
+    },
+    {
+      "conclusion": "skipped",
+      "job": 102027500135,
+      "log_status": "skipped; no execution log expected",
+      "run": 34215916732
+    },
+    {
+      "conclusion": "skipped",
+      "job": 102027500753,
+      "log_status": "skipped; no execution log expected",
+      "run": 34215916732
+    },
+    {
+      "candidates": [],
+      "characters": 75250,
+      "conclusion": "success",
+      "job": 102027593913,
+      "log_status": "scanned",
+      "run": 34215916685
+    },
+    {
+      "candidates": [],
+      "characters": 23990,
+      "conclusion": "success",
+      "job": 102027485796,
+      "log_status": "scanned",
+      "run": 34215913169
+    },
+    {
+      "candidates": [],
+      "characters": 74522,
+      "conclusion": "success",
+      "job": 102027526995,
+      "log_status": "scanned",
+      "run": 34215913082
+    },
+    {
+      "conclusion": "skipped",
+      "job": 102027230673,
+      "log_status": "skipped; no execution log expected",
+      "run": 34215834489
+    },
+    {
+      "conclusion": "skipped",
+      "job": 102027272185,
+      "log_status": "skipped; no execution log expected",
+      "run": 34215834489
+    },
+    {
+      "candidates": [],
+      "characters": 50941,
+      "conclusion": "cancelled",
+      "job": 102027228931,
+      "log_status": "scanned",
+      "run": 34215834453
+    },
+    {
+      "candidates": [],
+      "characters": 54036,
+      "conclusion": "cancelled",
+      "job": 102027212736,
+      "log_status": "scanned",
+      "run": 34215829618
+    },
+    {
+      "conclusion": "skipped",
+      "job": 102014689406,
+      "log_status": "skipped; no execution log expected",
+      "run": 34211927194
+    },
+    {
+      "conclusion": "skipped",
+      "job": 102014689957,
+      "log_status": "skipped; no execution log expected",
+      "run": 34211927194
+    },
+    {
+      "candidates": [],
+      "characters": 76005,
+      "conclusion": "success",
+      "job": 102014728465,
+      "log_status": "scanned",
+      "run": 34211927046
+    },
+    {
+      "candidates": [],
+      "characters": 75375,
+      "conclusion": "success",
+      "job": 102014771659,
+      "log_status": "scanned",
+      "run": 34211923225
+    },
+    {
+      "conclusion": "skipped",
+      "job": 102014426106,
+      "log_status": "skipped; no execution log expected",
+      "run": 34211835691
+    },
+    {
+      "conclusion": "skipped",
+      "job": 102014431899,
+      "log_status": "skipped; no execution log expected",
+      "run": 34211835691
+    },
+    {
+      "candidates": [],
+      "characters": 55177,
+      "conclusion": "cancelled",
+      "job": 102014396386,
+      "log_status": "scanned",
+      "run": 34211835655
+    },
+    {
+      "candidates": [],
+      "characters": 44086,
+      "conclusion": "cancelled",
+      "job": 102014381463,
+      "log_status": "scanned",
+      "run": 34211830932
+    },
+    {
+      "conclusion": "skipped",
+      "job": 102012800364,
+      "log_status": "skipped; no execution log expected",
+      "run": 34211336680
+    },
+    {
+      "conclusion": "skipped",
+      "job": 102012800884,
+      "log_status": "skipped; no execution log expected",
+      "run": 34211336680
+    },
+    {
+      "candidates": [],
+      "characters": 182581,
+      "conclusion": "failure",
+      "job": 102012798895,
+      "log_status": "scanned",
+      "run": 34211336608
+    },
+    {
+      "candidates": [],
+      "characters": 181730,
+      "conclusion": "failure",
+      "job": 102012642928,
+      "log_status": "scanned",
+      "run": 34211288529
+    },
+    {
+      "candidates": [],
+      "characters": 30617,
+      "conclusion": "success",
+      "job": 101987897783,
+      "log_status": "scanned",
+      "run": 34203618783
+    },
+    {
+      "candidates": [],
+      "characters": 34393,
+      "conclusion": "success",
+      "job": 101987898175,
+      "log_status": "scanned",
+      "run": 34203618783
+    },
+    {
+      "candidates": [],
+      "characters": 35462,
+      "conclusion": "success",
+      "job": 101983982721,
+      "log_status": "scanned",
+      "run": 34202397867
+    },
+    {
+      "candidates": [],
+      "characters": 31677,
+      "conclusion": "success",
+      "job": 101983983185,
+      "log_status": "scanned",
+      "run": 34202397867
+    },
+    {
+      "conclusion": "skipped",
+      "job": 101983826524,
+      "log_status": "skipped; no execution log expected",
+      "run": 34202349247
+    },
+    {
+      "conclusion": "skipped",
+      "job": 101983827160,
+      "log_status": "skipped; no execution log expected",
+      "run": 34202349247
+    },
+    {
+      "conclusion": "skipped",
+      "job": 101980556578,
+      "log_status": "skipped; no execution log expected",
+      "run": 34201332406
+    },
+    {
+      "conclusion": "skipped",
+      "job": 101980589542,
+      "log_status": "skipped; no execution log expected",
+      "run": 34201332406
+    },
+    {
+      "candidates": [],
+      "characters": 52755,
+      "conclusion": "success",
+      "job": 101980544425,
+      "log_status": "scanned",
+      "run": 34201328738
+    },
+    {
+      "conclusion": "skipped",
+      "job": 101976607435,
+      "log_status": "skipped; no execution log expected",
+      "run": 34200074862
+    },
+    {
+      "conclusion": "skipped",
+      "job": 101976608292,
+      "log_status": "skipped; no execution log expected",
+      "run": 34200074862
+    }
+  ]
+}

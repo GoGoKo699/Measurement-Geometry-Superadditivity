@@ -1,0 +1,43 @@
+# Before making this repository public
+
+**Preparation branch: `release/public-readiness-v1`. The repository remains private, and no project license has been activated.** This branch starts from the completed reader redesign at `1107ac899d2e267c6cf03509168623c13db4038c`, tree `d75a22453776a366d4860317f3708f0c5c00bc57`. The scientific starting point remains `f0015c56a19fd953c6797b2c64d9b507105234e3`; `main` still points there.
+
+The proposed reuse terms are MIT for original code and CC BY 4.0 for original scientific content. Read the short [licensing proposal](publication/LICENSING_PROPOSAL.md) and [candidate citation](publication/proposed/CITATION.cff). They await confirmation of the rights holder, authority to license the included original work, and complete citation-author list. A request to prepare publication is not treated as permission to change visibility or publish private historical material.
+
+## Prepared in this branch
+
+- The proposed license scope and concrete MIT text, with the unmodified official CC BY 4.0 terms linked for review.
+- Candidate repository citation metadata, with no invented article, DOI, release date, version, ORCID or affiliation.
+- [Third-party notices](THIRD_PARTY_NOTICES.md), including exact companion DejaVu and STIX notices for existing figure components.
+- [Contribution guidance](CONTRIBUTING.md), preserving the scientific and reader maintenance boundaries.
+- An [attribution inventory](publication/ATTRIBUTION_REVIEW.md), [current-file exposure review](publication/EXPOSURE_REVIEW.md), [history/log review](publication/HISTORY_REVIEW.md), and [implementation/check record](publication/IMPLEMENTATION_REPORT.md).
+
+All files inherited from the reader commit remain unchanged. This preparation adds documents and supporting checks; it does not alter mathematics, dependencies, verifiers, expected results, captions, original figures or generated reader pages.
+
+## Resolve before changing visibility
+
+| Item | Current state | Smallest next action |
+|---|---|---|
+| License and attribution identity | Proposed, not adopted | Confirm the split, rights-holder name, included original-material rights and citation authors. Install approved root license/citation files and update live reuse wording together. |
+| Intended public scientific account | Reader [PR #4](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/pull/4) and audit corrections remain separate | Review and integrate the intended branches under explicit merge authorization. The audit correction commit is `9ccecbf4cd3d975de2c498ba4fe2a9862f90778b`; its rate/threshold qualification, input paths and stale repository wording must not be lost. |
+| Historical exposure | Actual contact and project metadata identified | Approve publication of the retained history, or specify a separate redaction plan. Deleting a current file alone does not erase past commits. No history rewrite is performed here. |
+| Two historical binary objects | Connector returned incomplete bytes; not passed | Inspect the exact ZIP and PNG listed in [HISTORY_REVIEW.md](publication/HISTORY_REVIEW.md) from a complete authenticated checkout. This is a small remaining distribution check, not a science rerun. |
+| Public-facing status and downloads | Current wording accurately describes private preparation | Once the release tree is agreed, update live “private review” and “license not selected” language, root metadata identities, generated views, and license/notice source downloads. Keep historical snapshots labeled historical. |
+| Validation at the final intended tree | Prior scientific and reader results retain their exact commit scopes | Run applicable checks on the integrated tree and inspect real CI outcomes. Do not call skipped jobs passes. Existing ready-PR/main workflows run the full scientific route, so schedule that explicitly at integration, not through this preparation PR. |
+| Visibility | Still private; Pages disabled | Obtain the final owner instruction to make this existing repository public. Recheck live repository state immediately before that action. Do not create a public site or release as an automatic side effect. |
+
+The contact exposure includes a non-noreply author address in Git history and copied CI metadata. Preserved provenance also names historical project/archive references and the earlier My-tone revision. No other project repository was accessed to assess those references. The exact local locations are recorded without repeating contact values.
+
+GitHub's [visibility documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility) explains that Actions history and logs become visible when a private repository becomes public. Artifact names containing “private” and HTML `noindex` are not access controls. The optional website includes downloadable scientific sources and review records; it must be treated as a distribution of those files.
+
+## Repository metadata and first release
+
+Proposed description: **Geometric sufficient conditions for coherent-information superadditivity in qubit channels with noisy measurement records.**
+
+Suggested topics: `quantum-information`, `quantum-capacity`, `coherent-information`, `computer-assisted-proof`. These are suggestions only; repository settings were not edited.
+
+Use the existing GitHub reader as the public interface. Public repository visibility does not require Pages or another hosted website. A tag and an archival DOI can be added after an actual release has been agreed; neither is needed to invent a paper citation now. Retain the exact commit with any scientific result citation.
+
+Do not advertise a private vulnerability-reporting channel until one is configured and checked. The contribution guide says not to post sensitive details and does not invent a contact address or response-time promise. Pinning Actions by reviewed commit and adding narrow credential-file ignore patterns are optional maintenance improvements, not findings of a vulnerability in this review.
+
+This is a bounded publication-preparation check, not external peer review, a new scientific audit, a dependency vulnerability certification or a legal ownership determination. The [implementation report](publication/IMPLEMENTATION_REPORT.md) distinguishes completed checks, owner decisions and access limitations. No manuscript, merge, public release, deployment, privacy change or history rewrite is included.

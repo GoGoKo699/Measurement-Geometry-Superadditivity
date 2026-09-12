@@ -1,0 +1,36 @@
+{
+  "scope": "File blobs reachable from six pre-existing branch heads; UTF-8 text pattern scan. Two unverified binary responses excluded. Not a security guarantee.",
+  "reachable_blobs": 464,
+  "identity_verified_blobs": 462,
+  "text_blobs_scanned": 440,
+  "blocked_blobs": [
+    {
+      "sha": "0bac8266cbd5495b9b3a3ef7eecfd642b347af6d",
+      "paths": [
+        "audits/repository-sanity-01/reader/figure_02_guaranteed_region-display.png"
+      ],
+      "expected_bytes": 85639,
+      "received_bytes": 60000,
+      "reason": "Connector base64 response incomplete; UTF-8 blob route rejects this binary. Not scanned."
+    },
+    {
+      "sha": "f4442ae622a7d96a2346c66acedcea54783a598f",
+      "paths": [
+        "Measurement-Geometry-scientific-baseline-v1-2026-09-08.zip"
+      ],
+      "expected_bytes": 2540928,
+      "received_bytes": 0,
+      "reason": "Connector base64 response incomplete; UTF-8 blob route rejects this binary. Not scanned."
+    }
+  ],
+  "credential_pattern_candidates": [],
+  "patterns": {
+    "private_key": "-----BEGIN (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----",
+    "github_token": "\\b(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,})\\b",
+    "aws_key": "\\b(?:AKIA|ASIA)[A-Z0-9]{16}\\b",
+    "api_key": "\\bsk-(?:proj-|svcacct-)?[A-Za-z0-9_-]{24,}\\b",
+    "slack_token": "\\bxox[baprs]-[A-Za-z0-9-]{20,}\\b",
+    "signed_url": "https?://[^\\s<>\"\\']+[?&](?:sig|X-Amz-Signature|token)=[A-Za-z0-9%+/_-]{12,}",
+    "credential_url": "https?://[^\\s/@:]+:[^\\s/@]+@"
+  }
+}

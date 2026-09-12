@@ -1,0 +1,55 @@
+{
+  "candidates": [],
+  "comment_bodies": 2,
+  "endpoints": [
+    {
+      "count": 1,
+      "endpoint": "issues/1/comments"
+    },
+    {
+      "count": 0,
+      "endpoint": "pulls/1/comments"
+    },
+    {
+      "count": 0,
+      "endpoint": "pulls/1/reviews"
+    },
+    {
+      "count": 1,
+      "endpoint": "issues/2/comments"
+    },
+    {
+      "count": 0,
+      "endpoint": "pulls/2/comments"
+    },
+    {
+      "count": 0,
+      "endpoint": "pulls/2/reviews"
+    },
+    {
+      "count": 0,
+      "endpoint": "issues/3/comments"
+    },
+    {
+      "count": 0,
+      "endpoint": "pulls/3/comments"
+    },
+    {
+      "count": 0,
+      "endpoint": "pulls/3/reviews"
+    },
+    {
+      "count": 0,
+      "endpoint": "issues/4/comments"
+    },
+    {
+      "count": 0,
+      "endpoint": "pulls/4/comments"
+    },
+    {
+      "count": 0,
+      "endpoint": "pulls/4/reviews"
+    }
+  ],
+  "pr_bodies": 4
+}
