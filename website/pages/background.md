@@ -12,7 +12,7 @@ Start with Sections 10.7.1–10.7.2, printed pp. 51–56, then 10.7.4, printed p
 
 <!-- SITE:BACKGROUND_CORE -->
 
-Page numbers are **printed pages**. In this v5 PDF, printed page $k$ is viewer page $k+6$ (zero-based PDF index $k+5$). The PDF links in the map use viewer numbers. The arXiv version is dated 8 July 2025; the title page says updated June 2025.
+Page numbers are **printed pages**. In this v5 PDF, printed page $`k`$ is viewer page $`k+6`$ (zero-based PDF index $`k+5`$). The PDF links in the map use viewer numbers. The arXiv version is dated 8 July 2025; the title page says updated June 2025.
 
 <a id="notation"></a>
 
@@ -36,7 +36,7 @@ Incomplete-erasure channels, repetition and superadditivity are established idea
 
 ## One v5 sign note
 
-In the rendered PDF, [Eq. (10.368), printed p. 76](https://arxiv.org/pdf/1604.07450v5#page=82), reverses the entropy difference. Read its rate as $H(B)-H(E)-o(1)$, consistent with [definition (10.275), p. 53](https://arxiv.org/pdf/1604.07450v5#page=59). The exponent in [bound (10.367), p. 75](https://arxiv.org/pdf/1604.07450v5#page=81), has the opposite order, so decay requires a rate below $H(B)-H(E)$. This note follows visual inspection of the actual v5 pages; it does not change the source.
+In the rendered PDF, [Eq. (10.368), printed p. 76](https://arxiv.org/pdf/1604.07450v5#page=82), reverses the entropy difference. Read its rate as $`H(B)-H(E)-o(1)`$, consistent with [definition (10.275), p. 53](https://arxiv.org/pdf/1604.07450v5#page=59). The exponent in [bound (10.367), p. 75](https://arxiv.org/pdf/1604.07450v5#page=81), has the opposite order, so decay requires a rate below $`H(B)-H(E)`$. This note follows visual inspection of the actual v5 pages; it does not change the source.
 
 <a id="optional-refreshers"></a>
 

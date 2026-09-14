@@ -3,11 +3,11 @@
   "date": "2026-09-08",
   "source": {
     "root": "baseline",
-    "manifest_sha256": "6eed42f2bfd8be44e104aa2dc0dac0a217afec7265c5699ee0686a5ab32bbc43",
+    "manifest_sha256": "8a60154899c0b34e2a9b83a1727dc4d18aaf322fafecdb22c6e499a800cbc175",
     "verified_manifest_entries": 5,
     "selected_members": {
-      "docs/MODEL_AND_CLAIMS.md": "49faf18792663cb87aadd27dd4e0663fbf77f776a841575bd4932375a9163a2f",
-      "docs/COMPLETE_PROOF.md": "5c23a61376011b65273a533a634af8e051b2966ba8175380a375e9687d27af73",
+      "docs/MODEL_AND_CLAIMS.md": "4e7c147f75a68d0f76ace087328337d494ab5f2be77526fd9e36b83db4fdd3ef",
+      "docs/COMPLETE_PROOF.md": "9bfc9bad2843e5751835c64c2c8f43639bf85c4f27911993a2185cfd8a5033ca",
       "docs/FROZEN_ARGUMENT.md": "bdada1edb06c814ea563068317e38c09c3d96dfe539bbddf7523bd0a49ca2ad7",
       "provenance/SOURCE_REGISTER.json": "7af71a2682b5965aac7a25346b01b9893845471f040c613413a04dc523f8ff17",
       "data/figures/figure1_original_witness140.json": "3aa5681b911b6b63dac8ddc9eb23ea6fb4882308315607b0b15b56a51eb1e2f8"

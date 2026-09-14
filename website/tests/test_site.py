@@ -188,6 +188,7 @@ def test_public_deployment_is_absent():
     assert 'contents: read' in cfg and 'deploy-pages' not in cfg and 'pages: write' not in cfg
 
 def test_pinned_background_map_and_metadata_download(site):
+    from markdown_math import math_spans
     from learning_bridge import METADATA, expand_background, load_bridge
     data=load_bridge()
     page=BeautifulSoup((site/'background.html').read_text(),'html.parser')
@@ -202,8 +203,8 @@ def test_pinned_background_map_and_metadata_download(site):
     expanded=expand_background((REPO/'website/pages/background.md').read_text(),
                                'website/pages/background.md',data)
     annotations={re.sub(r'\s+','',a.get_text()) for a in page.select('math annotation[encoding="application/x-tex"]')}
-    for equation in re.findall(r'(?<!\$)\$([^$\n]+)\$(?!\$)',expanded):
-        assert re.sub(r'\s+','',equation) in annotations
+    for equation in math_spans(expanded):
+        assert re.sub(r'\s+','',equation.tex) in annotations
 
 
 def test_learning_navigation_and_search_cover_required_routes(site):
@@ -245,9 +246,11 @@ def test_canonical_section_headings_survive_rendering(site):
         assert [key(h) for h in expected.find_all(re.compile('^h[2-6]$'))] == [key(h) for h in page.select_one('article').find_all(re.compile('^h[2-6]$'))],row['slug']
 
 
-def test_anchor_separator_changes_only_rendering_whitespace():
+def test_preparation_changes_only_math_wrappers_and_anchor_whitespace():
+    from markdown_math import to_dollar_math
     source=(REPO/'docs/COMPLETE_PROOF.md').read_text()
     prepared=builder.prepare_markdown(source)
+    source=to_dollar_math(source)
     assert prepared!=source
     assert re.sub(r'\s+','',prepared)==re.sub(r'\s+','',source)
     equations=lambda text:re.findall(r'\$\$(.*?)\$\$|(?<!\$)\$([^$\n]+)\$(?!\$)',text,re.S)

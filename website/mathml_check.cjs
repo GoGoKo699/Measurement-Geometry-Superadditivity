@@ -59,11 +59,13 @@ const escapeHtml = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;
 const source = fs.readFileSync(sourcePath, 'utf8');
 const failures = [];
 const expressions = [];
-for (const match of source.matchAll(/\$\$([\s\S]*?)\$\$/g)) {
+// The proof uses GitHub's protected math fences. Legacy dollar displays remain
+// readable here so the same detector can still inspect pre-migration controls.
+for (const match of source.matchAll(/^```math\r?\n([\s\S]*?)\r?\n```[ \t]*(?=\r?$)|\$\$([\s\S]*?)\$\$/gm)) {
   const after = source.slice(match.index + match[0].length);
   const label = after.match(/^\s*\*\*\((P\d+\.\d+)\)\*\*/)?.[1] || null;
   const line = source.slice(0, match.index).split('\n').length;
-  const entry = {index: expressions.length + 1, label, line, tex: match[1].trim()};
+  const entry = {index: expressions.length + 1, label, line, tex: (match[1] ?? match[2]).trim()};
   try {
     entry.mathml = nativeMathML(entry.tex);
     entry.mlabeledtr_count = labeledRows(entry.mathml);

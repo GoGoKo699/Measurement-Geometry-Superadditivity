@@ -28,11 +28,13 @@
 
 A qubit either arrives intact or is measured and lost. In the second case, an imperfect classical record remains. **The geometry of those measurements can guarantee quantum communication beyond the globally optimized single-use coherent-information benchmark.**
 
-For every permitted finite measurement ensemble spanning all three Bloch directions, and every **common symmetric reporting error** $0<\epsilon<1/2$, the project proves a nonempty interval of measurement probabilities with
+For every permitted finite measurement ensemble spanning all three Bloch directions, and every **common symmetric reporting error** $`0<\epsilon<1/2`$, the project proves a nonempty interval of measurement probabilities with
 
-$$Q^{(1)}(\mathcal N)=0<Q(\mathcal N).$$
+```math
+Q^{(1)}(\mathcal N)=0<Q(\mathcal N).
+```
 
-Here $Q^{(1)}$ maximizes coherent information over every single-qubit input state. $Q$ is unassisted asymptotic quantum capacity. A suitable collective encoding certifies a positive asymptotic rate where this fully optimized single-use quantity is zero. The theorem gives a sufficient region, not an exact capacity formula or a practical finite-block decoder.
+Here $`Q^{(1)}`$ maximizes coherent information over every single-qubit input state. $`Q`$ is unassisted asymptotic quantum capacity. A suitable collective encoding certifies a positive asymptotic rate where this fully optimized single-use quantity is zero. The theorem gives a sufficient region, not an exact capacity formula or a practical finite-block decoder.
 
 **Expert bypass:** [exact theorem and assumptions](../docs/MODEL_AND_CLAIMS.md#m04) · [complete proof](../docs/COMPLETE_PROOF.md) · [figure atlas and downloads](figures.md) · [verification and evidence](verification.md).
 
@@ -48,9 +50,11 @@ If coherent information is familiar, [continue directly to the channel and eight
 
 ## Then compare one use with a block
 
-For equally likely Pauli axes, measurement probability $0.70$ and reporting error $0.10$, every one-use input has nonpositive coherent information and pure inputs attain zero. A balanced eight-use repetition input gives
+For equally likely Pauli axes, measurement probability $`0.70`$ and reporting error $`0.10`$, every one-use input has nonpositive coherent information and pure inputs attain zero. A balanced eight-use repetition input gives
 
-$$I_8/8>7.47\times10^{-5}\ \text{bits per physical use}.$$
+```math
+I_8/8>7.47\times10^{-5}\ \text{bits per physical use}.
+```
 
 The [channel guide](channel.md#eight-use-witness) explains the coherent encoder, its purified test input and every measured-count contribution, including the negative all-measured term. [Figure 1](figures.md#figure-1) shows this comparison. A finite positive inner block is chosen before outer coding gives it an asymptotic rate interpretation; an isolated eight-use decoding fidelity is not established.
 

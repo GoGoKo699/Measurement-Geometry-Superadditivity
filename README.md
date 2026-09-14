@@ -2,11 +2,13 @@
 
 A qubit either arrives intact or is destructively measured along a randomly chosen, known axis. In the measured branch, the receiver gets the axis label and an imperfect outcome record, but not the measured qubit or the hidden true sign.
 
-This project establishes a geometric sufficient condition for a collective-coding advantage: for **every finite measurement ensemble spanning all three Bloch directions**, and every **common symmetric reporting error** $0<\epsilon<1/2$, there is a nonempty measurement-probability interval with
+This project establishes a geometric sufficient condition for a collective-coding advantage: for **every finite measurement ensemble spanning all three Bloch directions**, and every **common symmetric reporting error** $`0<\epsilon<1/2`$, there is a nonempty measurement-probability interval with
 
-$$Q^{(1)}(\mathcal N)=0<Q(\mathcal N).$$
+```math
+Q^{(1)}(\mathcal N)=0<Q(\mathcal N).
+```
 
-Here $Q^{(1)}$ is coherent information optimized over every single-qubit input state. $Q$ is unassisted asymptotic quantum capacity. The result is a sufficient region, not an exact capacity formula or a practical finite-block decoding guarantee. The scalar inequality is partly computer assisted; all required certificates and separate verification implementations are included directly.
+Here $`Q^{(1)}`$ is coherent information optimized over every single-qubit input state. $`Q`$ is unassisted asymptotic quantum capacity. The result is a sufficient region, not an exact capacity formula or a practical finite-block decoding guarantee. The scalar inequality is partly computer assisted; all required certificates and separate verification implementations are included directly.
 
 **[Read the project overview](reader/README.md)** · [Selected Preskill background and crosswalk](reader/background.md) · [Channel and eight-use illustration](reader/channel.md)
 
@@ -20,17 +22,21 @@ These pages use ordinary GitHub Markdown and need no installation or ZIP downloa
 
 ![Channel and retained coding witness](reader/assets/figure_01_channel_and_witness.svg)
 
-For equal Pauli-axis weights, $p=0.70$ and $\epsilon=0.10$, the globally optimized one-use coherent information is zero. The included balanced eight-use construction has $I_8/8>7.47\times10^{-5}$ bits per physical use. Every mask and record contributes, including the all-measured loss. An outer coding theorem provides the asymptotic rate interpretation; one inner block alone is not a near-perfect decoder. [Model and claims](docs/MODEL_AND_CLAIMS.md#m05) · [Complete witness argument](docs/COMPLETE_PROOF.md#p13)
+For equal Pauli-axis weights, $`p=0.70`$ and $`\epsilon=0.10`$, the globally optimized one-use coherent information is zero. The included balanced eight-use construction has $`I_8/8>7.47\times10^{-5}`$ bits per physical use. Every mask and record contributes, including the all-measured loss. An outer coding theorem provides the asymptotic rate interpretation; one inner block alone is not a near-perfect decoder. [Model and claims](docs/MODEL_AND_CLAIMS.md#m05) · [Complete witness argument](docs/COMPLETE_PROOF.md#p13)
 
 ## The geometric guarantee
 
-With $a=(1-2\epsilon)^2$, $c=1-a$, define
+With $`a=(1-2\epsilon)^2`$, $`c=1-a`$, define
 
-$$T=\sum_b w_b\mathbf n_b\mathbf n_b^{\mathsf T},\qquad \lambda=\lambda_{\min}(T),\qquad L=\min_{\|\mathbf u\|=1}\sum_b\frac{w_b c}{\sqrt{1-a(\mathbf n_b\cdot\mathbf u)^2}}.$$
+```math
+T=\sum_b w_b\mathbf n_b\mathbf n_b^{\mathsf T},\qquad \lambda=\lambda_{\min}(T),\qquad L=\min_{\|\mathbf u\|=1}\sum_b\frac{w_b c}{\sqrt{1-a(\mathbf n_b\cdot\mathbf u)^2}}.
+```
 
-For $\lambda>0$, the theorem gives
+For $`\lambda>0`$, the theorem gives
 
-$$\frac{1}{1+L+(3ca/35)\lambda}\leq p<\frac{1}{1+L} \quad\Longrightarrow\quad Q^{(1)}=0<Q.$$
+```math
+\frac{1}{1+L+(3ca/35)\lambda}\leq p<\frac{1}{1+L} \quad\Longrightarrow\quad Q^{(1)}=0<Q.
+```
 
 The coding direction and finite block length may depend on the known channel parameters, never on future realized measurement choices. The gap can shrink to zero near a coplanar ensemble or a reporting-noise endpoint. Coplanarity excludes this strict long-balanced-repetition comparison, not every possible collective code. [Precise theorem and quantifiers](docs/MODEL_AND_CLAIMS.md#m04) · [Complete proof](docs/COMPLETE_PROOF.md)
 

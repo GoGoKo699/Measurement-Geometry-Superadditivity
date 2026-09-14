@@ -100,12 +100,14 @@ def test_required_routes_and_existing_canonical_sources_are_enforced():
 
 
 def test_generated_native_map_tracks_its_single_editorial_source():
+    from markdown_math import to_dollar_math
     manifest = json.loads((ROOT / 'reader/PREVIEW_MANIFEST.json').read_text())
     assert manifest['source_hashes'][bridge.METADATA] == hashlib.sha256((ROOT / bridge.METADATA).read_bytes()).hexdigest()
     data = bridge.load_bridge()
     expanded = bridge.expand_background((ROOT / 'website/pages/background.md').read_text(),
                                         'website/pages/background.md', data)
-    native = (ROOT / 'reader/background.md').read_text()
+    expanded = to_dollar_math(expanded)
+    native = to_dollar_math((ROOT / 'reader/background.md').read_text())
     assert '<!-- SITE:' not in expanded and '<!-- SITE:' not in native
     for passage in data['passages']:
         assert passage['question'] in native

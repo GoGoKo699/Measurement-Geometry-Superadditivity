@@ -6,15 +6,15 @@ The [geometric guarantee](proof-guide.md#geometric-guarantee) is broad in measur
 
 ## Coplanarity is a construction boundary
 
-If all supported axes lie in a plane, a common perpendicular direction attains repetition loss $c$ and approaches single-use cost $c$ with nearly pure inputs. The global lower bound matches it, giving $\Gamma=L=c$. Full span is therefore necessary and sufficient for the **strict threshold comparison of this long balanced-repetition construction**. Two noncommuting axes can still be coplanar. This statement does not exclude other codes or exceptional finite-block improvements for a coplanar channel. [Exact statement and proof](../../docs/COMPLETE_PROOF.md#p11)
+If all supported axes lie in a plane, a common perpendicular direction attains repetition loss $`c`$ and approaches single-use cost $`c`$ with nearly pure inputs. The global lower bound matches it, giving $`\Gamma=L=c`$. Full span is therefore necessary and sufficient for the **strict threshold comparison of this long balanced-repetition construction**. Two noncommuting axes can still be coplanar. This statement does not exclude other codes or exceptional finite-block improvements for a coplanar channel. [Exact statement and proof](../../docs/COMPLETE_PROOF.md#p11)
 
 <a id="noise-endpoints"></a>
 
 ## The two record-noise endpoints are different
 
-At $\epsilon=0$, the reported sign is the true sign, so each measured conditional reference state is pure. The flagged identity becomes $I_c=(1-p)S(\rho)$. Single-use coherent information is already positive for mixed inputs whenever $p<1$; at $p=1$ the output is classical and has zero quantum capacity.
+At $`\epsilon=0`$, the reported sign is the true sign, so each measured conditional reference state is pure. The flagged identity becomes $`I_c=(1-p)S(\rho)`$. Single-use coherent information is already positive for mixed inputs whenever $`p<1`$; at $`p=1`$ the output is classical and has zero quantum capacity.
 
-At $\epsilon=1/2$, the reported sign is input independent. The channel is an erasure channel up to independent flags, with $Q=Q^{(1)}=\max(0,1-2p)$. Neither endpoint has a zero-one-use/positive-capacity region. These are direct physical endpoint arguments, separate from interior formulas that divide by $a$ or $c$. [P11: endpoint arguments](../../docs/COMPLETE_PROOF.md#p11)
+At $`\epsilon=1/2`$, the reported sign is input independent. The channel is an erasure channel up to independent flags, with $`Q=Q^{(1)}=\max(0,1-2p)`$. Neither endpoint has a zero-one-use/positive-capacity region. These are direct physical endpoint arguments, separate from interior formulas that divide by $`a`$ or $`c`$. [P11: endpoint arguments](../../docs/COMPLETE_PROOF.md#p11)
 
 ## A nonzero gap need not be useful in practice
 
@@ -24,17 +24,21 @@ The guaranteed interval can shrink near a plane or near a noise endpoint. The th
 
 <a id="cone-domain"></a>
 
-[Figure 3](figures.md#figure-3) makes the approach to a plane concrete. Three equally weighted axes have azimuths $0,2\pi/3,4\pi/3$ and common vertical component $\sqrt\lambda$. Over $0\leq\lambda\leq1/3$, that parameter is the frame's smallest eigenvalue. The plot fixes $\epsilon=0.1$ and uses $0\leq\lambda\leq1/4$, where the exact formulas hold for every common interior error:
+[Figure 3](figures.md#figure-3) makes the approach to a plane concrete. Three equally weighted axes have azimuths $`0,2\pi/3,4\pi/3`$ and common vertical component $`\sqrt\lambda`$. Over $`0\leq\lambda\leq1/3`$, that parameter is the frame's smallest eigenvalue. The plot fixes $`\epsilon=0.1`$ and uses $`0\leq\lambda\leq1/4`$, where the exact formulas hold for every common interior error:
 
-$$\Gamma=\frac{c}{1-a\lambda},\qquad L=\frac{c}{\sqrt{1-a\lambda}}.$$
+```math
+\Gamma=\frac{c}{1-a\lambda},\qquad L=\frac{c}{\sqrt{1-a\lambda}}.
+```
 
-The larger established domain is $0\leq\lambda\leq\min\{1/3,W(a)/P(a)\}$, with $P,W$ defined in the [scalar lemma](../../docs/COMPLETE_PROOF.md#p04). Extending beyond $1/4$ requires checking this parameter-specific condition; no such extension is needed to read the figure. The exact gap is between the one-use frontier $p_1$ and the construction frontier $p_{\mathrm{rep}}$, not an exact all-code capacity threshold.
+The larger established domain is $`0\leq\lambda\leq\min\{1/3,W(a)/P(a)\}`$, with $`P,W`$ defined in the [scalar lemma](../../docs/COMPLETE_PROOF.md#p04). Extending beyond $`1/4`$ requires checking this parameter-specific condition; no such extension is needed to read the figure. The exact gap is between the one-use frontier $`p_1`$ and the construction frontier $`p_{\mathrm{rep}}`$, not an exact all-code capacity threshold.
 
 At fixed interior error, the small-geometry expansion is
 
-$$p_{\mathrm{rep}}-p_1=\frac{ca}{2(1+c)^2}\lambda+O(\lambda^2)\qquad(\lambda\downarrow0).$$
+```math
+p_{\mathrm{rep}}-p_1=\frac{ca}{2(1+c)^2}\lambda+O(\lambda^2)\qquad(\lambda\downarrow0).
+```
 
-For the plotted error, the dashed line is $(18/289)\lambda$. It is an analytical asymptote, not a fitted curve or an equality across the plot. The zero at coplanarity has the construction-specific meaning above. This cone family differs from the equal-Pauli witness geometry over the plotted range, so the eight-use witness is not transferred to it. [P12: exact family, domain and expansion](../../docs/COMPLETE_PROOF.md#p12)
+For the plotted error, the dashed line is $`(18/289)\lambda`$. It is an analytical asymptote, not a fitted curve or an equality across the plot. The zero at coplanarity has the construction-specific meaning above. This cone family differs from the equal-Pauli witness geometry over the plotted range, so the eight-use witness is not transferred to it. [P12: exact family, domain and expansion](../../docs/COMPLETE_PROOF.md#p12)
 
 ## No silent extension of the noise model
 
