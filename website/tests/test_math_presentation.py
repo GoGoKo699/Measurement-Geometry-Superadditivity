@@ -5,6 +5,8 @@ They permit spacing, delimiter sizing, aligned layout and the two stated operato
 aliases. One exact P07.2 factorization is expanded before comparison and also
 checked directly below. P7.1's exact horizontal quotients are restored to their
 stacked forms before comparison and independently checked below as well.
+The 23 external equation numbers are put back in their original tag positions
+before fingerprinting, so label loss, renumbering or reassignment still fails.
 These tests do not establish scientific validity.
 Pandoc's GFM test exercises Markdown structure, not GitHub's authenticated renderer.
 """
@@ -23,6 +25,12 @@ import pytest
 REPO = Path(__file__).resolve().parents[2]
 MATH = re.compile(r"(?<!\\)\$\$([\s\S]*?)(?<!\\)\$\$|(?<!\\)\$([^\n$]*?)(?<!\\)\$")
 DISPLAY = re.compile(r"(?<!\\)\$\$([\s\S]*?)(?<!\\)\$\$")
+LABELED_DISPLAY = re.compile(r"(?<!\\)\$\$((?:(?!\$\$)[\s\S])*?)(?<!\\)\$\$\n\n\*\*\((P\d+\.\d+)\)\*\*")
+PROOF_LABELS = (
+    "P1.1", "P1.2", "P2.1", "P2.2", "P3.1", "P3.2", "P3.3", "P4.1", "P4.2",
+    "P7.1", "P7.2", "P7.3", "P8.1", "P8.2", "P8.3", "P9.1", "P9.2", "P9.3",
+    "P9.4", "P10.1", "P12.1", "P12.2", "P12.3",
+)
 TOKENS = re.compile(r"\\(?:begin|end)\{[^}]+\}|\\[A-Za-z]+|\\.|[^\s]")
 SPACING = {r"\,", r"\;", r"\:", r"\!", "\\ ", r"\quad", r"\qquad",
            r"\enspace", r"\thinspace", r"\medspace", r"\thickspace"}
@@ -49,6 +57,7 @@ ORIGINAL_P08 = r"""$$P(a)-\frac{\arcsin\sqrt a}{\sqrt a}
 >a\left(\frac1{12}+\frac{7a}{40}-\frac{193a^2}{840}\right)\geq\frac a{35}.$$"""
 ORIGINAL_P71 = r"\frac{\mathscr D}{ca}=V(a)\frac{C_\perp(t,c)}c+W(a)C_\parallel(t,c)-P(a)h_2(t). \tag{P7.1}"
 HORIZONTAL_P71 = r"\mathscr D/(ca)=V(a)\bigl[C_\perp(t,c)/c\bigr]+W(a)C_\parallel(t,c)-P(a)h_2(t). \tag{P7.1}"
+CURRENT_P71 = HORIZONTAL_P71.replace(r" \tag{P7.1}", "")
 ORIGINAL_P73 = r"""\mu(c)=(1-c\bar P(c))\left[(1-\delta_{\mathrm{cert}})\ln(1/c)-\delta_{\mathrm{cert}}\ln(1/\delta_{\mathrm{cert}})-(1+c)\delta_{\mathrm{cert}}\right]
 -(\bar P(c)-1)\eta\ln\frac{1-\epsilon}{\epsilon}. \tag{P7.3}"""
 TAIL_BRACKET = r"B_d(c):=(1-d)\ln(1/c)-d\ln(1/d)-(1+c)d."
@@ -114,10 +123,23 @@ def replace_once(source, old, new):
     return source.replace(old, new)
 
 
+def restore_external_labels(source):
+    labels = [m[2] for m in LABELED_DISPLAY.finditer(source)]
+    assert tuple(labels) == PROOF_LABELS
+
+    def restore(match):
+        body, label = match.groups()
+        trimmed = body.rstrip()
+        return "$$" + trimmed + r" \tag{" + label + "}" + body[len(trimmed):] + "$$"
+
+    return LABELED_DISPLAY.sub(restore, source)
+
+
 def baseline_equivalent_source(path, source):
     """Undo only the exact P07.1 and P07.2 presentation refactors."""
     if path != "docs/COMPLETE_PROOF.md":
         return source
+    source = restore_external_labels(source)
     source = replace_once(source, HORIZONTAL_P71, ORIGINAL_P71)
     source = replace_once(
         source,
@@ -182,6 +204,8 @@ def test_every_tracked_markdown_file_has_safe_display_source():
         relative = path.relative_to(REPO).as_posix()
         if re.search(r"\\operatorname\b", source):
             errors.append((relative, "unsupported operatorname macro"))
+        if re.search(r"\\tag\b", source):
+            errors.append((relative, "equation tag creates unsupported native MathML labeled rows"))
         errors.extend((relative, line, reason) for line, reason in display_hazards(source))
         # Keep editable public reading documents on GitHub's least ambiguous
         # dollar form: one physical source line per display. Immutable source
@@ -290,14 +314,14 @@ def test_reported_p08_inequality_is_one_safe_unchanged_chain():
 
 
 def test_normalized_deficit_uses_equivalent_single_row_horizontal_quotients():
-    current = proof_expression(r"\tag{P7.1}")
-    assert current == HORIZONTAL_P71
+    current = proof_expression(r"\mathscr D/(ca)")
+    assert current == CURRENT_P71
     assert r"\frac" not in current and r"\begin" not in current
     assert r"\\" not in current and "\n" not in current
     assert current.count("/") == 2
     restored = replace_once(current, r"\mathscr D/(ca)", r"\frac{\mathscr D}{ca}")
     restored = replace_once(restored, r"\bigl[C_\perp(t,c)/c\bigr]", r"\frac{C_\perp(t,c)}c")
-    assert normalized_math(restored) == normalized_math(ORIGINAL_P71)
+    assert normalized_math(restored) == normalized_math(ORIGINAL_P71.replace(r" \tag{P7.1}", ""))
 
 
 @pytest.mark.parametrize("old,new", [
@@ -307,7 +331,15 @@ def test_normalized_deficit_uses_equivalent_single_row_horizontal_quotients():
 ])
 def test_p71_inverse_rejects_changes_to_denominators_and_signs(old, new):
     source = (REPO / "docs/COMPLETE_PROOF.md").read_text()
-    changed = replace_once(source, HORIZONTAL_P71, HORIZONTAL_P71.replace(old, new))
+    changed = replace_once(source, CURRENT_P71, CURRENT_P71.replace(old, new))
+    with pytest.raises(AssertionError):
+        baseline_equivalent_source("docs/COMPLETE_PROOF.md", changed)
+
+
+@pytest.mark.parametrize("replacement", ["", "**(P7.4)**", "**(P7.2)**"])
+def test_external_equation_number_loss_or_reassignment_is_rejected(replacement):
+    source = (REPO / "docs/COMPLETE_PROOF.md").read_text()
+    changed = replace_once(source, "**(P7.1)**", replacement)
     with pytest.raises(AssertionError):
         baseline_equivalent_source("docs/COMPLETE_PROOF.md", changed)
 
@@ -316,15 +348,15 @@ def test_lower_input_tail_uses_exact_factored_two_row_form():
     assert r"\begin{aligned}" not in ORIGINAL_P73 and r"\\" not in ORIGINAL_P73
     proof = (REPO / "docs/COMPLETE_PROOF.md").read_text()
     assert r"$d:=\delta_{\mathrm{cert}}=10^{-6}$" in proof
-    current = proof_expression(r"\tag{P7.3}")
+    current = proof_expression(r"B_d(c)&:=")
     rows = nonempty_aligned_rows(current)
     assert len(rows) == 3
-    assert normalized_math(current) == normalized_math(FACTORED_P73)
+    assert normalized_math(current) == normalized_math(FACTORED_P73.replace(r" \tag{P7.3}", ""))
     assert normalized_math(rows[0].replace("&", "")) == normalized_math(TAIL_BRACKET.replace(".", ","))
     expanded = replace_once(current, rows[0] + r"\\", "")
     expanded = expanded.replace("B_d(c)", r"\left[(1-d)\ln(1/c)-d\ln(1/d)-(1+c)d\right]")
     expanded = re.sub(r"(?<![A-Za-z])d(?![A-Za-z])", r"\\delta_{\\mathrm{cert}}", expanded)
-    assert normalized_math(expanded) == normalized_math(ORIGINAL_P73)
+    assert normalized_math(expanded) == normalized_math(ORIGINAL_P73.replace(r" \tag{P7.3}", ""))
 
 
 def test_gfm_block_structure_catches_original_inequality_regression():
@@ -360,11 +392,15 @@ def test_changed_sources_convert_to_mathml_without_tex_fallback(path):
     assert len(soup.find_all("math")) == RENDER_COUNTS[path]["math_count"]
     assert len(soup.select('math[display="block"]')) == RENDER_COUNTS[path]["display"]
     if path == "docs/COMPLETE_PROOF.md":
-        matches = [m for m in soup.find_all("math") if r"\tag{P7.1}" in m.annotation.get_text()]
+        assert not soup.find("mlabeledtr")
+        labels = [p.get_text() for p in soup.find_all("p") if p.find("strong")
+                  and re.fullmatch(r"\(P\d+\.\d+\)", p.get_text())]
+        assert labels == ["(" + label + ")" for label in PROOF_LABELS]
+        matches = [m for m in soup.find_all("math") if r"\mathscr D/(ca)" in m.annotation.get_text()]
         assert len(matches) == 1
         assert matches[0].find(["mtable", "mfrac"]) is None
         assert [token.get_text() for token in matches[0].find_all(["mi", "mo"])].count("/") == 2
-        for marker, rows in [(r"\tag{P7.3}", 3)]:
+        for marker, rows in [(r"B_d(c)&:=", 3)]:
             matches = [m for m in soup.find_all("math") if marker in m.annotation.get_text()]
             assert len(matches) == 1
             assert len(matches[0].mtable.find_all("mtr", recursive=False)) == rows

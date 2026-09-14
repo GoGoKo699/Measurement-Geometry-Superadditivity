@@ -52,7 +52,7 @@ def configured_pages(site):
     return pages
 
 
-def run(site, out, executable, base_url=None):
+def run(site, out, executable, base_url=None, native_mathml=False):
     site = site.resolve()
     out.mkdir(parents=True, exist_ok=True)
     errors, external, failed, records, sources, navigation = [], [], [], [], [], []
@@ -105,20 +105,62 @@ def run(site, out, executable, base_url=None):
                 actual = set(page.locator('#site-navigation a.nav-link').evaluate_all('(links)=>links.map(x=>x.getAttribute("href"))'))
                 assert actual == nav_targets, ('Navigation does not cover configured routes', actual ^ nav_targets)
 
+            if native_mathml:
+                fixture = site / 'mathml-regression/index.html'
+                assert fixture.is_file(), 'Generate the native MathML regression fixture first'
+                native = ctx.new_page()
+                native.on('pageerror', lambda e: errors.append(str(e)))
+                native.on('requestfailed', lambda request: failed.append({'url': request.url, 'error': request.failure}))
+                result['native_mathml_layout'] = []
+                for view, size in [('desktop', {'width': 1440, 'height': 1000}),
+                                   ('mobile', {'width': 390, 'height': 844})]:
+                    native.set_viewport_size(size)
+                    if base_url:
+                        response = native.goto(base_url.rstrip('/') + '/mathml-regression/index.html', wait_until='networkidle')
+                        assert response.ok, 'Native MathML fixture failed to load'
+                    else:
+                        native.set_content(fixture.read_text(), wait_until='load')
+                    native.evaluate('document.fonts.ready')
+                    current = native.locator('#current-p71 .formula math')
+                    control = native.locator('#tagged-p71-control .formula math')
+                    assert current.count() == control.count() == 1
+                    assert current.locator('mlabeledtr, mtable, merror').count() == 0
+                    assert control.locator('mlabeledtr').count() == 1, 'Failure control does not exercise equation numbering'
+                    bounds, old_bounds = current.bounding_box(), control.bounding_box()
+                    font_size = current.evaluate('(x)=>parseFloat(getComputedStyle(x).fontSize)')
+                    assert bounds and 0 < bounds['height'] <= 2 * font_size, ('Vertical native MathML layout', view, bounds)
+                    wrapper = native.locator('#current-p71 .formula')
+                    metrics = wrapper.evaluate('(x)=>({width:x.clientWidth, content_width:x.scrollWidth, overflow:getComputedStyle(x).overflowX})')
+                    if metrics['content_width'] > metrics['width'] + 2:
+                        assert metrics['overflow'] in ('auto', 'scroll')
+                        wrapper.evaluate('(x)=>{x.scrollLeft=x.scrollWidth}')
+                        assert wrapper.evaluate('(x)=>x.scrollLeft') > 0
+                        wrapper.evaluate('(x)=>{x.scrollLeft=0}')
+                    assert native.evaluate('document.documentElement.scrollWidth <= innerWidth+2')
+                    native.screenshot(path=str(out / ('native-mathml-' + view + '.png')), full_page=True)
+                    result['native_mathml_layout'].append({
+                        'viewport': view, 'current_height': bounds['height'],
+                        'tagged_control_height': old_bounds['height'],
+                        'tagged_vertical_failure_reproduced': old_bounds['height'] > 2 * bounds['height'],
+                        'current_has_no_labeled_rows': True, 'horizontal_access': True, **metrics,
+                    })
+                native.close()
+
             def check_proof_math(view):
                 targets = [
-                    ('normalized-deficit', r'\tag{P7.1}', 1),
-                    ('lower-input-tail', r'\tag{P7.3}', 3),
+                    ('normalized-deficit', r'\mathscr D/(ca)', 1),
+                    ('lower-input-tail', r'B_d(c)&:=', 3),
                     ('geometric-inequality', r'P(a)-\frac{\arcsin', 1),
                     ('reported-records', r'\mathsf p_\pm(\omega)', 4),
-                    ('block-information', r'\tag{P9.2}', 2),
-                    ('polynomial-bounds', r'\tag{P9.4}', 2),
+                    ('block-information', r'\mathcal I_n&:=', 2),
+                    ('polynomial-bounds', r'\frac{c_A}{(m+1)^J}', 2),
                     ('eight-use-rate', r'\frac{\mathcal I_8}{8}', 2),
                 ]
                 for key, marker, expected_rows in targets:
                     expression = page.locator('math').filter(
                         has=page.locator('annotation', has_text=marker))
                     assert expression.count() == 1, ('Missing or repeated proof equation', key)
+                    assert expression.locator('mlabeledtr').count() == 0, (key, 'Unsupported native equation label')
                     table = expression.locator('mtable').first
                     if expected_rows == 1:
                         assert table.count() == 0, (key, 'Unexpected multiline layout')
@@ -134,6 +176,9 @@ def run(site, out, executable, base_url=None):
                         assert bounds['height'] <= 2 * font_size, (key, 'Unexpected vertical expansion', bounds)
                     wrapper = expression.locator('xpath=..')
                     assert 'display' in wrapper.get_attribute('class').split()
+                    if key == 'normalized-deficit':
+                        label = wrapper.locator('xpath=../following-sibling::p[1]')
+                        assert label.inner_text() == '(P7.1)', 'Missing external equation number'
                     wrapper.scroll_into_view_if_needed()
                     metrics = wrapper.evaluate('(x)=>({width:x.clientWidth, content_width:x.scrollWidth, overflow:getComputedStyle(x).overflowX})')
                     if metrics['content_width'] > metrics['width'] + 2:
@@ -222,6 +267,7 @@ def run(site, out, executable, base_url=None):
                         fragment = unquote(urlsplit(href).fragment)
                         if fragment:
                             anchors = page.locator('[id=' + json.dumps(fragment) + '], a[name=' + json.dumps(fragment) + ']')
+                            anchors.first.wait_for(state='attached')
                             assert anchors.count() > 0, ('Bridge anchor absent', href)
                         navigation.append({'from': 'background', 'to': href, 'control': 'bridge-link'})
                 result['real_link_navigation_tested'] = True
@@ -309,7 +355,8 @@ if __name__ == '__main__':
     ap.add_argument('--output', type=Path, required=True)
     ap.add_argument('--chromium', default=shutil.which('chromium') or None)
     ap.add_argument('--base-url', help='Optional loopback HTTP server for actual navigation tests.')
+    ap.add_argument('--native-mathml', action='store_true', help='Also check the generated native MathJax MathML regression fixture.')
     args = ap.parse_args()
     if args.base_url and (urlsplit(args.base_url).scheme != 'http' or urlsplit(args.base_url).hostname != '127.0.0.1'):
         ap.error('Use an HTTP review server bound to 127.0.0.1, not a public site.')
-    print(json.dumps(run(args.site, args.output, args.chromium, args.base_url), indent=2))
+    print(json.dumps(run(args.site, args.output, args.chromium, args.base_url, args.native_mathml), indent=2))
