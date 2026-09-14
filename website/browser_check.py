@@ -107,6 +107,7 @@ def run(site, out, executable, base_url=None):
 
             def check_proof_math(view):
                 targets = [
+                    ('normalized-deficit', r'\tag{P7.1}', 1),
                     ('lower-input-tail', r'\tag{P7.3}', 3),
                     ('geometric-inequality', r'P(a)-\frac{\arcsin', 1),
                     ('reported-records', r'\mathsf p_\pm(\omega)', 4),
@@ -127,6 +128,10 @@ def run(site, out, executable, base_url=None):
                         layout = table
                     bounds = layout.bounding_box()
                     assert bounds and bounds['width'] > 0 and bounds['height'] > 0, (key, 'Invisible mathematics')
+                    if key == 'normalized-deficit':
+                        assert expression.locator('mfrac').count() == 0, (key, 'Stacked fraction returned')
+                        font_size = expression.evaluate('(x)=>parseFloat(getComputedStyle(x).fontSize)')
+                        assert bounds['height'] <= 2 * font_size, (key, 'Unexpected vertical expansion', bounds)
                     wrapper = expression.locator('xpath=..')
                     assert 'display' in wrapper.get_attribute('class').split()
                     wrapper.scroll_into_view_if_needed()
@@ -139,6 +144,7 @@ def run(site, out, executable, base_url=None):
                     wrapper.screenshot(path=str(out / ('proof-' + key + '-' + view + '.png')))
                     result.setdefault('proof_math_layout', []).append({
                         'equation': key, 'viewport': view, 'rows': expected_rows,
+                        'height': bounds['height'],
                         'visible': True, 'horizontal_access': True, **metrics,
                     })
 
