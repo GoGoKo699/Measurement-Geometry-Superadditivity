@@ -3,13 +3,13 @@
   "date": "2026-09-08",
   "source": {
     "root": "baseline",
-    "manifest_sha256": "6fc51098f715b0daba55dd17f03be053e64669ba62e609dbe04b922964448b66",
+    "manifest_sha256": "ed54ff674b0f2958e28c3f9bd12867d703dc45adff42f05fbe12dfa4f3363ff8",
     "verified_manifest_entries": 5,
     "selected_members": {
-      "docs/MODEL_AND_CLAIMS.md": "02d9a34156d41f985df3bbcf8a728e9d2e550a498bb4e6d75c68366506c37b60",
-      "docs/COMPLETE_PROOF.md": "dbc758b3d26d57815a70ac89d58a3996f9b3c7eb781a1de7d74e386e185033fa",
+      "docs/MODEL_AND_CLAIMS.md": "d3c91dbb4f007a17f4d61e4933baa5c4f6ccc2fc0d11b25c1deeeb0c51ebc2c5",
+      "docs/COMPLETE_PROOF.md": "f8a1aca3b45ed7c9148210a8f047b0ac9f25889e19d97bcbe14a0f773e61708c",
       "docs/FROZEN_ARGUMENT.md": "bdada1edb06c814ea563068317e38c09c3d96dfe539bbddf7523bd0a49ca2ad7",
-      "provenance/SOURCE_REGISTER.json": "0d0a9eb677bb3f274dba5d83767970cea6d6756e9e0a2a73b87f4c596e66fd00",
+      "provenance/SOURCE_REGISTER.json": "7af71a2682b5965aac7a25346b01b9893845471f040c613413a04dc523f8ff17",
       "data/figures/figure1_original_witness140.json": "3aa5681b911b6b63dac8ddc9eb23ea6fb4882308315607b0b15b56a51eb1e2f8"
     },
     "source_claims_reaudited": false,

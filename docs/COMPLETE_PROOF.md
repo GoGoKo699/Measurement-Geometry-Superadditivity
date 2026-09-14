@@ -27,7 +27,12 @@ $$E_{b,s}=\sum_r\Pr(s\mid r)\Pi_{b,r}
 
 The channel is
 
-$$\mathcal N_{p,\epsilon}(\rho)=(1-p)\rho\oplus p\sum_{b,s}w_b\,\mathrm{Tr}(E_{b,s}\rho)|b,s\rangle\langle b,s|.$$
+$$
+\begin{aligned}
+\mathcal N_{p,\epsilon}(\rho)&=(1-p)\rho\oplus\\
+&\quad p\sum_{b,s}w_b\,\mathrm{Tr}(E_{b,s}\rho)|b,s\rangle\langle b,s|.
+\end{aligned}
+$$
 
 The encoder knows the channel parameters, not the future branch, axis or outcomes. There is no assistance, postselection or rereading. The two receiver branches have orthogonal flags, and the axis probability sits outside each fixed-axis effect.
 
@@ -36,7 +41,7 @@ Write $a=\eta^2$ and $c=1-a=4\epsilon(1-\epsilon)$. An arbitrary input has eigen
 $$|\Psi_{t,\mathbf u}\rangle=\sqrt{1-t}|0\rangle_{\mathsf R}|\mathbf u_+\rangle
 +\sqrt t|1\rangle_{\mathsf R}|\mathbf u_-\rangle.$$
 
-In this input eigenbasis, put $D_t=\operatorname{diag}(\sqrt{1-t},\sqrt t)$. The fixed-axis subnormalized reference state for reported outcome $s$ is
+In this input eigenbasis, put $D_t=\mathrm{diag}(\sqrt{1-t},\sqrt t)$. The fixed-axis subnormalized reference state for reported outcome $s$ is
 
 $$\tau_{b,s}=D_t(E_{b,s}^{(\mathbf u)})^{\mathsf T}D_t.$$
 
@@ -55,9 +60,13 @@ $$C(t,\mathbf u)=\sum_{b,s}w_b F(q_{b,s},\Delta_t).$$
 
 Equivalently, with $x=(\mathbf n\cdot\mathbf u)^2$ and $\mathcal H(z)=h_2((1-\sqrt{1-z})/2)$,
 
-$$q_\pm=\frac{1\pm\eta(1-2t)\sqrt x}{2},\quad
-C_\epsilon(t,x)=\sum_{\pm}q_\pm\mathcal H(4\Delta_t/q_\pm^2),\quad
-C(t,\mathbf u)=\sum_b w_b C_\epsilon(t,(\mathbf n_b\cdot\mathbf u)^2).$$
+$$
+\begin{aligned}
+q_\pm&=\frac{1\pm\eta(1-2t)\sqrt x}{2},\\
+C_\epsilon(t,x)&=\sum_{\pm}q_\pm\mathcal H(4\Delta_t/q_\pm^2),\\
+C(t,\mathbf u)&=\sum_b w_b C_\epsilon(t,(\mathbf n_b\cdot\mathbf u)^2).
+\end{aligned}
+$$
 
 These are entropies conditioned on the **reported** bit, not on the hidden true bit. Because the two main flags and classical measured records are shared in the entropy difference, their Shannon entropies cancel. The intact branch contributes $h_2(t)$ and the measured branch contributes $-C(t,\mathbf u)$:
 
@@ -138,8 +147,13 @@ $$\ln(\mathsf A_v g+\zeta_t)-\ln(\mathsf B_v g+\zeta_t),$$
 
 where
 
-$$\mathsf A_v=(v+1/2+\Delta_t/v)^2-r_t^2/4,\quad
-\mathsf B_v=(v+1/2)^2-r_t^2/4,\quad \zeta_t=r_t^2c/4.$$
+$$
+\begin{aligned}
+\mathsf A_v&=(v+1/2+\Delta_t/v)^2-r_t^2/4,\\
+\mathsf B_v&=(v+1/2)^2-r_t^2/4,\\
+\zeta_t&=r_t^2c/4.
+\end{aligned}
+$$
 
 For interior inputs and $v>0$, $\mathsf A_v>\mathsf B_v>0$, $\zeta_t\geq0$. Its second derivative in $g$ is
 
@@ -150,8 +164,14 @@ Thus $C_\epsilon(t,x)$ is concave as a function of $g$. At $t=1/2$ the integrand
 
 In the original squared-projection variable, the paired integrand instead has the form
 
-$$\ln\frac{A_v-\omega_x/4}{B_v-\omega_x/4},\quad
-A_v=(v+1/2+\Delta_t/v)^2,\ B_v=(v+1/2)^2,\ \omega_x=ar_t^2x.$$
+$$
+\begin{aligned}
+&\ln\frac{A_v-\omega_x/4}{B_v-\omega_x/4},\\
+A_v&=(v+1/2+\Delta_t/v)^2,\\
+B_v&=(v+1/2)^2,\\
+\omega_x&=ar_t^2x.
+\end{aligned}
+$$
 
 Its first derivative in $\omega_x$ is nonnegative and its second is
 
@@ -163,8 +183,12 @@ Therefore the paired cost is increasing and convex in $x$. The two statements do
 
 Define the endpoint costs, with $\epsilon$ fixed,
 
-$$C_\perp(t)=\mathcal H(4ct(1-t)),\qquad
-C_\parallel(t)=h_2(t)+h_2(\epsilon)-h_2(\epsilon+\eta t).$$
+$$
+\begin{aligned}
+C_\perp(t)&=\mathcal H(4ct(1-t)),\\
+C_\parallel(t)&=h_2(t)+h_2(\epsilon)-h_2(\epsilon+\eta t).
+\end{aligned}
+$$
 
 The second expression is classical conditional entropy for a noisy binary record of an input aligned with its measurement axis. Concavity in $g$ gives
 
@@ -348,14 +372,20 @@ This is an enclosure over the **whole noise band**, not evaluation at two putati
 
 ### P07.2 Lower input tail in every band
 
-With $\delta_{\mathrm{cert}}=10^{-6}$, the same elementary input-tail argument as P05.2 gives
+With $d:=\delta_{\mathrm{cert}}=10^{-6}$, the same elementary input-tail argument as P05.2 gives
 
-$$\mathscr D(t,c)\geq\frac{ct}{\ln2}\mu(c),\qquad 0<t\leq\delta_{\mathrm{cert}},$$
+$$\mathscr D(t,c)\geq\frac{ct}{\ln2}\mu(c),\qquad 0<t\leq\delta_{\mathrm{cert}}.$$
 
-where an outward lower enclosure is formed for
+Define the tail bracket and the resulting outward lower enclosure by
 
-$$\mu(c)=(1-c\bar P(c))\left[(1-\delta_{\mathrm{cert}})\ln(1/c)-\delta_{\mathrm{cert}}\ln(1/\delta_{\mathrm{cert}})-(1+c)\delta_{\mathrm{cert}}\right]
--(\bar P(c)-1)\eta\ln\frac{1-\epsilon}{\epsilon}. \tag{P7.3}$$
+$$
+\begin{aligned}
+B_d(c)&:=(1-d)\ln(1/c)-d\ln(1/d)-(1+c)d,\\
+\mu(c)&=(1-c\bar P(c))B_d(c)\\
+&\quad-(\bar P(c)-1)\eta\ln\frac{1-\epsilon}{\epsilon}.
+\end{aligned}
+\tag{P7.3}
+$$
 
 The saved checks certify $\mu>0$ throughout every noise band. Thus the compact computation omits no arbitrarily nearly pure input. The value $10^{-6}$ is a junction between two proofs, not a lower cutoff on admissible inputs. The margin called `tail` in the source code is this normalized expression; it is not a physical communication rate.
 
@@ -418,8 +448,7 @@ $$\frac{\arcsin\sqrt a}{\sqrt a}\leq1+\frac a6+\frac{3a^2}{40}
 
 Using $\pi<22/7$,
 
-$$P(a)-\frac{\arcsin\sqrt a}{\sqrt a}
->a\left(\frac1{12}+\frac{7a}{40}-\frac{193a^2}{840}\right)\geq\frac a{35}.$$
+$$P(a)-\frac{\arcsin\sqrt a}{\sqrt a}>a\left(\frac1{12}+\frac{7a}{40}-\frac{193a^2}{840}\right)\geq\frac a{35}.$$
 
 The quadratic is concave and its smaller endpoint value on $[0,1]$ is $1/35$. The exact positive integral
 
@@ -437,9 +466,13 @@ If the supported axes span $\mathbb R^3$, positive weights give $\lambda>0$; int
 
 The width of the guaranteed overlap interval is
 
-$$\Delta p_{\mathrm{cert}}
-=\frac{d_\epsilon\lambda}{(1+L)(1+L+d_\epsilon\lambda)}
-\geq\frac{d_\epsilon}{(1+A_\epsilon)(1+A_\epsilon+d_\epsilon/3)}\lambda.$$
+$$
+\begin{aligned}
+\Delta p_{\mathrm{cert}}
+&=\frac{d_\epsilon\lambda}{(1+L)(1+L+d_\epsilon\lambda)}\\
+&\geq\frac{d_\epsilon}{(1+A_\epsilon)(1+A_\epsilon+d_\epsilon/3)}\lambda.
+\end{aligned}
+$$
 
 This is a width bound, not a rate. Its uniform coefficient can tend to zero near either noise endpoint, just as the width can vanish when the frame approaches a plane.
 
@@ -464,8 +497,12 @@ Its average density matrix is separable but correlated. The purified reference/c
 
 For axis $b$, define
 
-$$s_b(\mathbf u)=\sqrt{1-a(\mathbf n_b\cdot\mathbf u)^2},\qquad
-\kappa_b(\mathbf u)=\frac{a[1-(\mathbf n_b\cdot\mathbf u)^2]}{1-a(\mathbf n_b\cdot\mathbf u)^2},$$
+$$
+\begin{aligned}
+s_b(\mathbf u)&=\sqrt{1-a(\mathbf n_b\cdot\mathbf u)^2},\\
+\kappa_b(\mathbf u)&=\frac{a[1-(\mathbf n_b\cdot\mathbf u)^2]}{1-a(\mathbf n_b\cdot\mathbf u)^2},
+\end{aligned}
+$$
 
 $$B(\mathbf u)=\sum_b w_b s_b,\qquad K(\mathbf u)=\sum_b w_b s_b\kappa_b.$$
 
@@ -487,10 +524,14 @@ These record coefficients have a classical discrimination interpretation in the 
 
 For $m$ reported measured sites, let $\omega=(y_1,\ldots,y_m)$, with $y_j=(b_j,s_j)$, and define
 
-$$\mathsf p_\pm(\omega)=\prod_{j=1}^mP_\pm(y_j),\quad
-q_\omega=\frac{\mathsf p_+(\omega)+\mathsf p_-(\omega)}2,\quad
-x_\omega=\frac{\mathsf p_-(\omega)}{\mathsf p_+(\omega)+\mathsf p_-(\omega)},\quad
-\chi_\omega=\prod_{j=1}^m\kappa_{b_j}.$$
+$$
+\begin{aligned}
+\mathsf p_\pm(\omega)&=\prod_{j=1}^mP_\pm(y_j),\\
+q_\omega&=\frac{\mathsf p_+(\omega)+\mathsf p_-(\omega)}2,\\
+x_\omega&=\frac{\mathsf p_-(\omega)}{\mathsf p_+(\omega)+\mathsf p_-(\omega)},\\
+\chi_\omega&=\prod_{j=1}^m\kappa_{b_j}.
+\end{aligned}
+$$
 
 When at least one code qubit survives, its two conditional codeword states remain orthogonal. In the two-dimensional support spanned by the matching reference/codeword states, the joint conditional density matrix has diagonal $(1-x_\omega,x_\omega)$ and off-diagonal magnitude
 
@@ -509,8 +550,13 @@ with $\mathcal A_0=\mathcal R_0=1$ and $\mathcal C_0=0$. For at least one surviv
 
 Every mask and reported record therefore contributes to the exact block identity
 
-$$\boxed{\mathcal I_n:=I_c(\rho_n(\mathbf u),\mathcal N_{p,\epsilon}^{\otimes n})
-=\sum_{m=0}^n{n\choose m}(1-p)^{n-m}p^m\mathcal R_m-p^n\mathcal A_n.} \tag{P9.2}$$
+$$
+\boxed{\begin{aligned}
+\mathcal I_n&:=I_c(\rho_n(\mathbf u),\mathcal N_{p,\epsilon}^{\otimes n})\\
+&=\sum_{m=0}^n{n\choose m}(1-p)^{n-m}p^m\mathcal R_m-p^n\mathcal A_n.
+\end{aligned}}
+\tag{P9.2}
+$$
 
 The $m=n$ terms combine to $-p^n\mathcal C_n$. The favorable-branch interpretation of the first sum does not delete this negative term.
 
@@ -554,8 +600,13 @@ c_R\prod_b\frac{(s_b\kappa_b)^{m_b}}{m_b+1}$$
 
 to $\mathcal A_m$ and $\mathcal R_m$, respectively. The axis probabilities are then included through their multinomial weights. Since $\prod_b(m_b+1)\leq(m+1)^J$, their sum gives
 
-$$\boxed{\frac{c_A}{(m+1)^J}B^m\leq\mathcal A_m\leq B^m,\qquad
-\frac{c_R}{(m+1)^J}K^m\leq\mathcal R_m\leq K^m.} \tag{P9.4}$$
+$$
+\boxed{\begin{aligned}
+\frac{c_A}{(m+1)^J}B^m&\leq\mathcal A_m\leq B^m,\\
+\frac{c_R}{(m+1)^J}K^m&\leq\mathcal R_m\leq K^m.
+\end{aligned}}
+\tag{P9.4}
+$$
 
 The selection of central classes is only a lower bound on a sum of nonnegative entropy contributions. It does **not** change the channel or permit the decoder to postselect those events. The complete coherent-information identity remains (P9.2).
 
@@ -636,7 +687,7 @@ $$\mathbf n_j=(\sqrt{1-\lambda}\cos(2\pi j/3),\sqrt{1-\lambda}\sin(2\pi j/3),\sq
 
 For $0\leq\lambda\leq1/3$,
 
-$$T=\operatorname{diag}\left(\frac{1-\lambda}{2},\frac{1-\lambda}{2},\lambda\right),$$
+$$T=\mathrm{diag}\left(\frac{1-\lambda}{2},\frac{1-\lambda}{2},\lambda\right),$$
 
 so the cone parameter is the smallest frame eigenvalue. The increasing-convex scalar functions $(1-ax)^{-1}$ and $(1-ax)^{-1/2}$, Jensen's inequality, and $\mathbf u^{\mathsf T}T\mathbf u\geq\lambda$ give minima attained by the vertical direction:
 
@@ -692,8 +743,14 @@ $$\alpha=\frac{1+\eta/\sqrt3}{2},\quad\bar\alpha=1-\alpha,\quad
 
 The axis-conditioned diagonal probabilities and coherence magnitudes coincide for the three Pauli labels. Summing their probabilities therefore leaves, at each measured count $m$, the $m+1$ sign-count classes
 
-$$v_j=\alpha^j\bar\alpha^{m-j},\quad w_j=\bar\alpha^j\alpha^{m-j},\quad
-q_j=(v_j+w_j)/2,\quad x_j=w_j/(v_j+w_j).$$
+$$
+\begin{aligned}
+v_j&=\alpha^j\bar\alpha^{m-j},\\
+w_j&=\bar\alpha^j\alpha^{m-j},\\
+q_j&=(v_j+w_j)/2,\\
+x_j&=w_j/(v_j+w_j).
+\end{aligned}
+$$
 
 Their contributions to $\mathcal A_m$ and $\mathcal C_m$ are
 
@@ -713,8 +770,13 @@ Source **W1**, the final audit's `witness140.json`, is the selected record for s
 
 The stored enclosure supports
 
-$$\frac{\mathcal I_8}{8}
-=0.0000747747658815596371016563672617787\ldots>7.47\times10^{-5}.$$
+$$
+\begin{aligned}
+\frac{\mathcal I_8}{8}
+&=0.0000747747658815596371016563672617787\ldots\\
+&>7.47\times10^{-5}.
+\end{aligned}
+$$
 
 The total block value is approximately $0.0005981981270524771$ bits. The exactly stored all-measured probability is $p^8=0.05764801$ and its weighted contribution is approximately $-0.01653160578649$ bits. All nine measured-count entries are present in W1.
 

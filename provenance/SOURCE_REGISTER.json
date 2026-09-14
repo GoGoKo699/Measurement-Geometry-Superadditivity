@@ -207,10 +207,10 @@
       "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md",
       "current_pass_execution": "not executed; immutable identity and documentary usage checked",
       "archive_path_is_provenance_only": true,
-      "baseline_path": "provenance/text_sources/S4__THEORY.md",
+      "baseline_path": "provenance/text_sources/S4__THEORY.md.txt",
       "operational_status": "retained local source",
       "baseline_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
-      "original_local_path": "provenance/text_sources/S4__THEORY.md"
+      "original_local_path": "provenance/text_sources/S4__THEORY.md.txt"
     },
     {
       "id": "S5",
@@ -430,10 +430,10 @@
       "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/THEORY.md",
       "current_pass_execution": "not executed; immutable identity and documentary usage checked",
       "archive_path_is_provenance_only": true,
-      "baseline_path": "provenance/text_sources/S8__THEORY.md",
+      "baseline_path": "provenance/text_sources/S8__THEORY.md.txt",
       "operational_status": "retained local source",
       "baseline_sha256": "6d7f5d34d3918627656c32ebbb9da46311bc71ac82b04e342609f87a605593a8",
-      "original_local_path": "provenance/text_sources/S8__THEORY.md"
+      "original_local_path": "provenance/text_sources/S8__THEORY.md.txt"
     },
     {
       "id": "S9",
@@ -503,10 +503,10 @@
       "archive_member": "Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/PROOF_AUDIT.md",
       "current_pass_execution": "not executed; immutable identity and documentary usage checked",
       "archive_path_is_provenance_only": true,
-      "baseline_path": "provenance/text_sources/S9__PROOF_AUDIT.md",
+      "baseline_path": "provenance/text_sources/S9__PROOF_AUDIT.md.txt",
       "operational_status": "retained local source",
       "baseline_sha256": "adb5355ad73a05cb1422a11925da628ed35cc025d1461bca5dad1a1f65aec7f1",
-      "original_local_path": "provenance/text_sources/S9__PROOF_AUDIT.md"
+      "original_local_path": "provenance/text_sources/S9__PROOF_AUDIT.md.txt"
     },
     {
       "id": "V1",
