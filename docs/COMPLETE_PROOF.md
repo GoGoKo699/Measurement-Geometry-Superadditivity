@@ -55,7 +55,9 @@ $$\begin{aligned} q_\pm&=\frac{1\pm\eta(1-2t)\sqrt x}{2},\\ C_\epsilon(t,x)&=\su
 
 These are entropies conditioned on the **reported** bit, not on the hidden true bit. Because the two main flags and classical measured records are shared in the entropy difference, their Shannon entropies cancel. The intact branch contributes $h_2(t)$ and the measured branch contributes $-C(t,\mathbf u)$:
 
-$$\boxed{I_c(\rho_{t,\mathbf u},\mathcal N_{p,\epsilon})=(1-p)h_2(t)-pC(t,\mathbf u).} \tag{P1.1}$$
+$$\boxed{I_c(\rho_{t,\mathbf u},\mathcal N_{p,\epsilon})=(1-p)h_2(t)-pC(t,\mathbf u).}$$
+
+**(P1.1)**
 
 For $t=0$, the reference is one dimensional and the coherent information is exactly zero. For all mixed inputs define
 
@@ -63,7 +65,9 @@ $$\Gamma=\inf_{\|\mathbf u\|=1,\ 0<t\leq1/2}\frac{C(t,\mathbf u)}{h_2(t)}.$$
 
 If $p\geq1/(1+\Gamma)$, every mixed input has nonpositive coherent information, while pure inputs attain zero. Conversely, if $0<p<1/(1+\Gamma)$, the definition of the infimum supplies a positive $t$ and direction with $C/h_2<(1-p)/p$. At $p=0$ any mixed input gives positive coherent information directly. Hence
 
-$$\boxed{Q^{(1)}(\mathcal N_{p,\epsilon})=0\quad\Longleftrightarrow\quad p\geq p_1:=\frac1{1+\Gamma}.} \tag{P1.2}$$
+$$\boxed{Q^{(1)}(\mathcal N_{p,\epsilon})=0\quad\Longleftrightarrow\quad p\geq p_1:=\frac1{1+\Gamma}.}$$
+
+**(P1.2)**
 
 No optimizing direction or input weight has been presumed. For later use, the full-rank fixed-error posterior expansion gives the directional nearly pure ratio
 
@@ -84,13 +88,17 @@ $$D_\chi(x)=h_2(x)-\mathcal H(4(1-\chi)x(1-x)).$$
 
 This is the entropy decrease when a qubit's diagonal $(1-x,x)$ gains squared normalized coherence $\chi$. The source uses
 
-$$h_2(x)\leq2\sqrt{x(1-x)},\qquad \frac2{\ln2}\chi x(1-x)\leq D_\chi(x)\leq\chi h_2(x). \tag{P2.1}$$
+$$h_2(x)\leq2\sqrt{x(1-x)},\qquad \frac2{\ln2}\chi x(1-x)\leq D_\chi(x)\leq\chi h_2(x).$$
+
+**(P2.1)**
 
 For the lower bound, diagonal dephasing gives a relative-entropy difference $D_\chi(x)$. Pinsker's inequality and the trace norm $2\sqrt{\chi x(1-x)}$ of the off-diagonal difference give the displayed coefficient in bits. For the upper bound, $D_\chi(x)$ is convex in $\chi$ with endpoint values $0,h_2(x)$; its endpoint chord bounds it above. This follows from the concavity of the square-root form of binary entropy used in the source. The first inequality is the inherited binary-entropy overlap bound. Its role is to convert a sum of conditional entropies to a product of record overlaps.
 
 The determinant-entropy function $\mathcal H$ is increasing and concave on $[0,1]$, with $\mathcal H(0)=0$. In particular,
 
-$$\mathcal H(cy)\geq c\mathcal H(y),\qquad 0\leq c,y\leq1. \tag{P2.2}$$
+$$\mathcal H(cy)\geq c\mathcal H(y),\qquad 0\leq c,y\leq1.$$
+
+**(P2.2)**
 
 For fixed measurement effects and a fixed input direction, the cost $C_\epsilon(t,x)$ is concave in $t$. The source's correct justification is an affine classical–quantum representation: the blocks $\sqrt{E_s}\rho_t\sqrt{E_s}$ depend affinely on $t$, and have the same nonzero spectra and traces as the conditional-reference blocks. The average conditional entropy is concave on this affine family. This is **not** an inference from subtracting arbitrary concave scalar entropies. It will justify the lower secants in [P07](#p07).
 
@@ -113,7 +121,9 @@ $$\int_0^\infty\ln\left(1+\frac{\Delta}{v(v+q)}\right)dv =q\ln q-r_1\ln r_1-r_2\
 
 Consequently,
 
-$$\boxed{F(q,\Delta)=\frac1{\ln2}\int_0^\infty\ln\left(1+\frac{\Delta}{v(v+q)}\right)dv.} \tag{P3.1}$$
+$$\boxed{F(q,\Delta)=\frac1{\ln2}\int_0^\infty\ln\left(1+\frac{\Delta}{v(v+q)}\right)dv.}$$
+
+**(P3.1)**
 
 Zero determinant is handled by continuity; it is not evaluated by an undefined logarithm expression.
 
@@ -155,7 +165,9 @@ $$\begin{aligned} C_\perp(t)&=\mathcal H(4ct(1-t)),\\ C_\parallel(t)&=h_2(t)+h_2
 
 The second expression is classical conditional entropy for a noisy binary record of an input aligned with its measurement axis. Concavity in $g$ gives
 
-$$C_\epsilon(t,x)\geq\frac{1-g}{a}C_\perp(t)+\frac{g-c}{a}C_\parallel(t). \tag{P3.2}$$
+$$C_\epsilon(t,x)\geq\frac{1-g}{a}C_\perp(t)+\frac{g-c}{a}C_\parallel(t).$$
+
+**(P3.2)**
 
 The previous facts imply
 
@@ -167,7 +179,9 @@ $$\beta(t,\epsilon)=\frac{C_\parallel(t)-C_\perp(t)}{a h_2(t)}\in[0,1].$$
 
 Rearranging the chord,
 
-$$\frac{C_\epsilon(t,x)}{h_2(t)} \geq\beta g+\frac{C_\perp(t)-c\beta h_2(t)}{h_2(t)}. \tag{P3.3}$$
+$$\frac{C_\epsilon(t,x)}{h_2(t)} \geq\beta g+\frac{C_\perp(t)-c\beta h_2(t)}{h_2(t)}.$$
+
+**(P3.3)**
 
 The next scalar inequality controls this intercept for all interior errors and all input weights. The same $\beta$ will apply to every axis precisely because the error is common.
 
@@ -188,7 +202,9 @@ $$1-\ell=aV(a),\quad \ell-c=caW(a),\quad P=V+W$$
 
 show that $c<\ell<1$ for $0<c<1$. The submitted computer-assisted entropy lemma is
 
-$$\boxed{\mathscr D(t,c):=(1-\ell)C_\perp(t)+(\ell-c)C_\parallel(t)-\ell a h_2(t)\geq0} \tag{P4.1}$$
+$$\boxed{\mathscr D(t,c):=(1-\ell)C_\perp(t)+(\ell-c)C_\parallel(t)-\ell a h_2(t)\geq0}$$
+
+**(P4.1)**
 
 for every $0<c<1$ and $0\leq t\leq1/2$. The proof has three domains: [P05](#p05) handles $0<c\leq2^{-28}$, [P06](#p06) handles $0<a\leq1/25$, and [P07](#p07) covers the remaining compact noise domain and its entire input range. These arguments jointly cover the whole open error interval; no sampling interpolation is used.
 
@@ -202,7 +218,9 @@ $$\frac{C_\epsilon(t,x)}{h_2(t)}\geq\beta g+(1-\beta)\ell.$$
 
 For each input weight, $\beta(t,\epsilon)$ is independent of the axis label. Summing over $b$ and taking the global infimum gives
 
-$$\boxed{\Gamma\geq\min\{G_{\min},\ell\}.} \tag{P4.2}$$
+$$\boxed{\Gamma\geq\min\{G_{\min},\ell\}.}$$
+
+**(P4.2)**
 
 The bound is not the equality $\Gamma=G_{\min}$. Nor does this common-coefficient step prove the same result for independently varied axis-dependent errors.
 
@@ -307,7 +325,9 @@ $$c_*:=2^{-28}\leq c\leq\frac{24}{25},\qquad 0<t\leq\frac12,$$
 
 divide (P4.1) by the positive factor $ca$:
 
-$$\mathscr D/(ca)=V(a)\bigl[C_\perp(t,c)/c\bigr]+W(a)C_\parallel(t,c)-P(a)h_2(t). \tag{P7.1}$$
+$$\mathscr D/(ca)=V(a)\bigl[C_\perp(t,c)/c\bigr]+W(a)C_\parallel(t,c)-P(a)h_2(t).$$
+
+**(P7.1)**
 
 Here $C(t,c)$ means the endpoint cost evaluated at the unique $\epsilon=(1-\sqrt{1-c})/2$ in $[0,1/2]$. To make the source code's coefficient argument explicit, define
 
@@ -317,7 +337,9 @@ Each barred coefficient decreases with $c$. By concavity of $\mathcal H$ with $\
 
 For every complete noise band $[c_l,c_h]$, a lower bound on the positive cost terms in (P7.1) is
 
-$$S_-(t)=\bar V(c_h)\frac{C_\perp(t,c_h)}{c_h}+\bar W(c_h)C_\parallel(t,c_l). \tag{P7.2}$$
+$$S_-(t)=\bar V(c_h)\frac{C_\perp(t,c_h)}{c_h}+\bar W(c_h)C_\parallel(t,c_l).$$
+
+**(P7.2)**
 
 For all $c$ in that band, the quantity to bound above is
 
@@ -333,7 +355,9 @@ $$\mathscr D(t,c)\geq\frac{ct}{\ln2}\mu(c),\qquad 0<t\leq\delta_{\mathrm{cert}}.
 
 Define the tail bracket and the resulting outward lower enclosure by
 
-$$\begin{aligned} B_d(c)&:=(1-d)\ln(1/c)-d\ln(1/d)-(1+c)d,\\ \mu(c)&=(1-c\bar P(c))B_d(c)\\ &\quad-(\bar P(c)-1)\eta\ln\frac{1-\epsilon}{\epsilon}. \end{aligned} \tag{P7.3} $$
+$$\begin{aligned} B_d(c)&:=(1-d)\ln(1/c)-d\ln(1/d)-(1+c)d,\\ \mu(c)&=(1-c\bar P(c))B_d(c)\\ &\quad-(\bar P(c)-1)\eta\ln\frac{1-\epsilon}{\epsilon}. \end{aligned} $$
+
+**(P7.3)**
 
 The saved checks certify $\mu>0$ throughout every noise band. Thus the compact computation omits no arbitrarily nearly pure input. The value $10^{-6}$ is a junction between two proofs, not a lower cutoff on admissible inputs. The margin called `tail` in the source code is this normalized expression; it is not a physical communication rate.
 
@@ -380,7 +404,9 @@ it yields
 
 $$G(\mathbf u)-\Lambda(\mathbf u)\geq\frac{ca}{2}\mathbf u^{\mathsf T}T\mathbf u\geq\frac{ca}{2}\lambda,$$
 
-$$G_{\min}\geq L+\frac{ca}{2}\lambda. \tag{P8.1}$$
+$$G_{\min}\geq L+\frac{ca}{2}\lambda.$$
+
+**(P8.1)**
 
 The continuous directional losses have positive denominators for interior error, so compactness of the unit sphere gives an attained minimum $L$.
 
@@ -402,11 +428,15 @@ $$\frac{22}{7}-\pi=\int_0^1\frac{x^4(1-x)^4}{1+x^2}\,dx>0$$
 
 is the source's elementary certification of the bound on $\pi$. Since $\mathrm{Tr}(T)=1$, $0\leq\lambda\leq1/3$. Therefore
 
-$$\ell>L+\frac{ca}{35}\geq L+\frac3{35}ca\lambda. \tag{P8.2}$$
+$$\ell>L+\frac{ca}{35}\geq L+\frac3{35}ca\lambda.$$
+
+**(P8.2)**
 
 Combine (P4.2), (P8.1) and (P8.2):
 
-$$\boxed{\Gamma\geq L+d_\epsilon\lambda,\qquad d_\epsilon=\frac3{35}ca.} \tag{P8.3}$$
+$$\boxed{\Gamma\geq L+d_\epsilon\lambda,\qquad d_\epsilon=\frac3{35}ca.}$$
+
+**(P8.3)**
 
 If the supported axes span $\mathbb R^3$, positive weights give $\lambda>0$; interior error gives $ca>0$. No lower bound on $\lambda$ beyond positivity has been imposed.
 
@@ -449,7 +479,9 @@ $$\sum_{b,s}\sqrt{P_+(b,s)P_-(b,s)}=B(\mathbf u),$$
 
 and insertion of $\kappa_b$ gives $K(\mathbf u)$. Direct subtraction yields
 
-$$B(\mathbf u)-K(\mathbf u)=\Lambda(\mathbf u). \tag{P9.1}$$
+$$B(\mathbf u)-K(\mathbf u)=\Lambda(\mathbf u).$$
+
+**(P9.1)**
 
 These record coefficients have a classical discrimination interpretation in the source. No separate discrimination theorem is required for the explicit finite-axis bounds below.
 
@@ -475,7 +507,9 @@ with $\mathcal A_0=\mathcal R_0=1$ and $\mathcal C_0=0$. For at least one surviv
 
 Every mask and reported record therefore contributes to the exact block identity
 
-$$\boxed{\begin{aligned} \mathcal I_n&:=I_c(\rho_n(\mathbf u),\mathcal N_{p,\epsilon}^{\otimes n})\\ &=\sum_{m=0}^n{n\choose m}(1-p)^{n-m}p^m\mathcal R_m-p^n\mathcal A_n. \end{aligned}} \tag{P9.2} $$
+$$\boxed{\begin{aligned} \mathcal I_n&:=I_c(\rho_n(\mathbf u),\mathcal N_{p,\epsilon}^{\otimes n})\\ &=\sum_{m=0}^n{n\choose m}(1-p)^{n-m}p^m\mathcal R_m-p^n\mathcal A_n. \end{aligned}} $$
+
+**(P9.2)**
 
 The $m=n$ terms combine to $-p^n\mathcal C_n$. The favorable-branch interpretation of the first sum does not delete this negative term.
 
@@ -489,7 +523,9 @@ $$q_\omega D_{\chi_\omega}(x_\omega) \leq\chi_\omega\sqrt{\mathsf p_+(\omega)\ma
 
 Summing complete records factorizes into products of single-record sums:
 
-$$\mathcal A_m\leq B^m,\qquad\mathcal R_m\leq K^m. \tag{P9.3}$$
+$$\mathcal A_m\leq B^m,\qquad\mathcal R_m\leq K^m.$$
+
+**(P9.3)**
 
 ### P09.4 Polynomial lower envelopes without postselection
 
@@ -515,7 +551,9 @@ $$c_A\prod_b\frac{s_b^{m_b}}{m_b+1},\qquad c_R\prod_b\frac{(s_b\kappa_b)^{m_b}}{
 
 to $\mathcal A_m$ and $\mathcal R_m$, respectively. The axis probabilities are then included through their multinomial weights. Since $\prod_b(m_b+1)\leq(m+1)^J$, their sum gives
 
-$$\boxed{\begin{aligned} \frac{c_A}{(m+1)^J}B^m&\leq\mathcal A_m\leq B^m,\\ \frac{c_R}{(m+1)^J}K^m&\leq\mathcal R_m\leq K^m. \end{aligned}} \tag{P9.4} $$
+$$\boxed{\begin{aligned} \frac{c_A}{(m+1)^J}B^m&\leq\mathcal A_m\leq B^m,\\ \frac{c_R}{(m+1)^J}K^m&\leq\mathcal R_m\leq K^m. \end{aligned}} $$
+
+**(P9.4)**
 
 The selection of central classes is only a lower bound on a sum of nonnegative entropy contributions. It does **not** change the channel or permit the decoder to postselect those events. The complete coherent-information identity remains (P9.2).
 
@@ -532,7 +570,9 @@ $$\nu_+=1-p+pK(\mathbf u),\qquad\nu_-=pB(\mathbf u).$$
 
 Insert (P9.4) into (P9.2), using $(m+1)^J\leq(n+1)^J$, to obtain
 
-$$\boxed{\frac{c_R}{(n+1)^J}\nu_+^n-\nu_-^n \leq\mathcal I_n\leq \nu_+^n-\frac{c_A}{(n+1)^J}\nu_-^n.} \tag{P10.1}$$
+$$\boxed{\frac{c_R}{(n+1)^J}\nu_+^n-\nu_-^n \leq\mathcal I_n\leq \nu_+^n-\frac{c_A}{(n+1)^J}\nu_-^n.}$$
+
+**(P10.1)**
 
 If $\nu_+>\nu_-$, their exponential ratio eventually dominates the polynomial factor and $\mathcal I_n>0$ for every sufficiently large finite $n$. This strict condition is exactly
 
@@ -598,11 +638,15 @@ $$T=\mathrm{diag}\left(\frac{1-\lambda}{2},\frac{1-\lambda}{2},\lambda\right),$$
 
 so the cone parameter is the smallest frame eigenvalue. The increasing-convex scalar functions $(1-ax)^{-1}$ and $(1-ax)^{-1/2}$, Jensen's inequality, and $\mathbf u^{\mathsf T}T\mathbf u\geq\lambda$ give minima attained by the vertical direction:
 
-$$G_{\min}=\frac{c}{1-a\lambda},\qquad L=\frac{c}{\sqrt{1-a\lambda}}. \tag{P12.1}$$
+$$G_{\min}=\frac{c}{1-a\lambda},\qquad L=\frac{c}{\sqrt{1-a\lambda}}.$$
+
+**(P12.1)**
 
 If $\lambda\leq W(a)/P(a)$, then $G_{\min}\leq\ell$. The global lower bound (P4.2) and the axial nearly pure upper bound from P01 therefore agree:
 
-$$\boxed{\Gamma=\frac{c}{1-a\lambda}\quad\text{for}\quad 0\leq\lambda\leq\min\{1/3,W(a)/P(a)\}.} \tag{P12.2}$$
+$$\boxed{\Gamma=\frac{c}{1-a\lambda}\quad\text{for}\quad 0\leq\lambda\leq\min\{1/3,W(a)/P(a)\}.}$$
+
+**(P12.2)**
 
 The source identities imply $W/P\geq1/4$. Thus every common interior error has the exact cone formulas on $0\leq\lambda\leq1/4$. The larger domain must be justified for the chosen error; it cannot be inferred from the older one-percent example. Also
 
@@ -612,7 +656,9 @@ so $a\geq1/2$ suffices to extend the exact formulas through $\lambda=1/3$. This 
 
 The source's fixed-error expansion gives
 
-$$\boxed{p_{\mathrm{rep}}-p_1 =\frac{ca}{2(1+c)^2}\lambda+O(\lambda^2),\qquad\lambda\downarrow0.} \tag{P12.3}$$
+$$\boxed{p_{\mathrm{rep}}-p_1 =\frac{ca}{2(1+c)^2}\lambda+O(\lambda^2),\qquad\lambda\downarrow0.}$$
+
+**(P12.3)**
 
 Here $p_1$ is the exact single-use boundary for this valid cone range, while $p_{\mathrm{rep}}$ is the construction frontier. Neither is asserted to be the optimal capacity phase boundary. The gap can be arbitrarily small and does not promise a bounded working block or useful rate. This section consolidates the retained limiting family; it does not freeze a new plot range or add a resource-scaling investigation.
 

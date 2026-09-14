@@ -1,0 +1,14 @@
+{
+  "name": "measurement-geometry-mathml-check",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Native MathML regression checks for the proof reader",
+  "dependencies": {
+    "mathjax-full": "3.2.2"
+  },
+  "overrides": {
+    "speech-rule-engine": {
+      "@xmldom/xmldom": "0.9.12"
+    }
+  }
+}

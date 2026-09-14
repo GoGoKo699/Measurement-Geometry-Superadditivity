@@ -1,11 +1,11 @@
 {
-  "data/figures/BUILD_RECORD.json": "9b5a06d57ae32e4511dc08c87c7dbe1b7599af485722a98d3d87a72605922693",
+  "data/figures/BUILD_RECORD.json": "1e67a6680c94fa2e6e8dadca1c1f9ab6625c5f9e9e70e477c394e698f9829d39",
   "data/figures/figure2_pauli_guaranteed_region.csv": "2a65b808133a2b0b6c8a58ae01b5df28637ad8ba5fa05f15cdd50682ab9e8fd2",
   "data/figures/figure3_small_lambda_controls_not_for_display.csv": "7ef6fd3feeca5de381e289e5423d186cc1c661507f3d3af528ff26257f6c7c86",
   "data/figures/figure1_all_masks_not_for_display.csv": "3737b1f525e51aeb6b85c84a5e7b96c50d9066fc499d5c5498af4fec09f4a09c",
   "data/figures/figure1_comparison.csv": "e56d9bf2817f2f535fcfd92d8d21d4f0c6be34c5c8dee9667d3e192e9d2e30bd",
   "data/figures/cross_figure_witness_bound_check.json": "26953a2cc3b2c60fc23cdc177211265ffaf5a801e1b598f211f96076bf373bf8",
-  "data/figures/SOURCE_IDENTITY.json": "5cf480a7e00172c460e2ed02dacbb91577b65ed32f7e2356cee054cc10ab474f",
+  "data/figures/SOURCE_IDENTITY.json": "385b4ce163d8ae4c9897055cc54e912a9aa14f8b73fa74a02556185dcc29f342",
   "data/figures/figure1_original_witness140.json": "3aa5681b911b6b63dac8ddc9eb23ea6fb4882308315607b0b15b56a51eb1e2f8",
   "data/figures/figure3_cone_gap.csv": "e4b6855d428ff645e9a15439dad70035b698df13324c75c922c5ab1904f8bd2d",
   "data/figures/figure3_cone_geometry.csv": "b8a2620053f48dea8bb10c68ee97a4cb77a64028782cd8023dd42bc66c96b294",
