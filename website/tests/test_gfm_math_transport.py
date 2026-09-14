@@ -1,9 +1,9 @@
 """Check TeX survival through the actual GFM parser before math rendering.
 
-Disabling Pandoc's dollar-math extension deliberately exposes CommonMark's
-handling of unprotected math. Protected inline code and math fences must carry
-the exact source TeX through this stage. This is a Markdown transport check,
-not a claim to reproduce every GitHub MathJax error or to validate the proof.
+Disabling Pandoc's math extensions deliberately exposes CommonMark's handling
+of unprotected math. Protected inline code and math fences must carry the exact
+source TeX through this stage. This is a Markdown transport check, not a claim
+to reproduce every GitHub MathJax error or to validate the proof.
 """
 from __future__ import annotations
 
@@ -23,13 +23,32 @@ from markdown_math import math_spans, to_github_math
 
 
 @lru_cache(maxsize=None)
+def transport_reader(pandoc):
+    """Disable every available math parser while retaining GFM structure."""
+    result = subprocess.run(
+        [pandoc, "--list-extensions=gfm"],
+        text=True, capture_output=True, check=True,
+    )
+    available = {line.lstrip("+-") for line in result.stdout.splitlines()}
+    assert "tex_math_dollars" in available
+    # Since 3.1.9, the separate tex_math_gfm postprocessor turns math fences
+    # into Math nodes even if tex_math_dollars is disabled. Older versions do
+    # not recognize that extension, so query support rather than guessing it.
+    return "gfm" + "".join(
+        "-" + extension
+        for extension in ("tex_math_dollars", "tex_math_gfm")
+        if extension in available
+    )
+
+
+@lru_cache(maxsize=None)
 def parse_gfm(source):
-    """Run the real parser with TeX dollars explicitly disabled."""
+    """Run the real GFM parser with its TeX processing explicitly disabled."""
     pandoc = shutil.which("pandoc")
     if pandoc is None:
         pytest.skip("Pandoc is required for the GFM transport check")
     result = subprocess.run(
-        [pandoc, "--from=gfm-tex_math_dollars", "--to=json"],
+        [pandoc, "--from=" + transport_reader(pandoc), "--to=json"],
         input=source, text=True, capture_output=True, check=True,
     )
     assert not result.stderr.strip(), result.stderr
@@ -90,7 +109,7 @@ def test_reader_math_survives_real_gfm_without_tex_dollar_extension(path):
     assert all(span.protected for span in spans), path
     expected = [(span.display, span.tex) for span in spans]
     ast = parse_gfm(source)
-    assert "Math" not in set(node_types(ast)), "Dollar-math parser was not disabled"
+    assert "Math" not in set(node_types(ast)), "Pandoc math processing was not disabled"
     assert list(recover_math(ast)) == expected, path
 
 
