@@ -9,7 +9,7 @@
       "canonical_anchor": "m01",
       "canonical_line_start": 8,
       "canonical_line_end": 44,
-      "canonical_fragment_sha256": "f1a6e72aec771a5cc70598e37003fca3005c7394cd7f1a453bc0b95f7b8ee1d9",
+      "canonical_fragment_sha256": "963ba12f931d840d70806ef843aaa53c516f4fcb3314c86865147fdd847d420c",
       "claims": [
         "C1",
         "C2",
@@ -134,7 +134,7 @@
       "canonical_anchor": "m03",
       "canonical_line_start": 81,
       "canonical_line_end": 119,
-      "canonical_fragment_sha256": "a17777f25fb482c06a0d34b38413e8575b659a9ca37dcdc5eaf1e6b680bca035",
+      "canonical_fragment_sha256": "2b61ce4ac0a2b6e72b64947ad4a5cd8f23de79d53f7d93a19df285ce0182f97a",
       "claims": [
         "C1",
         "C2",
@@ -189,7 +189,7 @@
       "canonical_anchor": "m04",
       "canonical_line_start": 120,
       "canonical_line_end": 140,
-      "canonical_fragment_sha256": "520333d79738f2ae6e51f96c28fe503d225caba64dfe60831bb652a182380086",
+      "canonical_fragment_sha256": "de614a2df717fc27a82697c4ce02ac8af5d08c5dd9830c627dc9e641457efcc7",
       "claims": [
         "C1",
         "C2",
@@ -257,7 +257,7 @@
       "canonical_anchor": "m05",
       "canonical_line_start": 141,
       "canonical_line_end": 155,
-      "canonical_fragment_sha256": "78180e7ce2b6e57dfcb7f2de289fbc68989d8b97f88451c0fd657426ee588acc",
+      "canonical_fragment_sha256": "b21a9f6bf8447778161eccedb24a0c7f1ecf62a2cb77c60821ea09c700117f13",
       "claims": [
         "C5"
       ],
@@ -310,7 +310,7 @@
       "canonical_anchor": "m06",
       "canonical_line_start": 156,
       "canonical_line_end": 188,
-      "canonical_fragment_sha256": "6d654c331afe043771cf6193ce4257887f939b85c4ee0f0588aee7a04f6aba9a",
+      "canonical_fragment_sha256": "82ef67c4b0ccab0ffee7d3ea352d129e4e6fd0d5692e70e6f28a4e008a8e55cc",
       "claims": [
         "C6"
       ],
@@ -363,7 +363,7 @@
       "canonical_anchor": "m07",
       "canonical_line_start": 189,
       "canonical_line_end": 205,
-      "canonical_fragment_sha256": "f50f324a7945178b4eed66be383348babd52c4e3601b95578e5bec97b8626c0d",
+      "canonical_fragment_sha256": "990026490308f399df88b0531d881c36ef7db23e0694541f941d271349c222d7",
       "claims": [
         "C1",
         "C2",
@@ -487,7 +487,7 @@
       "canonical_anchor": "p01",
       "canonical_line_start": 13,
       "canonical_line_end": 103,
-      "canonical_fragment_sha256": "455ded0b7bd0afa76ba0bed872d3afffad8de3c03851260eb7479dd3a14aedba",
+      "canonical_fragment_sha256": "ad1253b0d033ffb39e50e2d3e7687a1dcd810dfcda867d816bd7a40ab45b32d6",
       "claims": [
         "C1",
         "C2",
@@ -621,7 +621,7 @@
       "canonical_anchor": "p03",
       "canonical_line_start": 139,
       "canonical_line_end": 247,
-      "canonical_fragment_sha256": "1bf5bb247d7126c3a2ff4c152e7e81dc4a115e0137b48f81d6a8677614b48d99",
+      "canonical_fragment_sha256": "87dd4a4fe711b4f11caf7429b17a40d31e3e7954f1bbba92fc7dce02d465da86",
       "claims": [
         "C2",
         "C4"
@@ -711,7 +711,7 @@
       "canonical_anchor": "p04",
       "canonical_line_start": 248,
       "canonical_line_end": 300,
-      "canonical_fragment_sha256": "c36a89620465161ae6b473ccdf079fe479b072177f818d6676d987a247e02153",
+      "canonical_fragment_sha256": "ed0da7fd079084d1a30301f6792d5868bbc940a9b626edd5c16fe7516f2d0382",
       "claims": [
         "C2",
         "C4"
@@ -765,7 +765,7 @@
       "canonical_anchor": "p05",
       "canonical_line_start": 301,
       "canonical_line_end": 361,
-      "canonical_fragment_sha256": "b04eb75b24762681008db2c2a44158cc43e418b979a868e0f3cad37fb2018301",
+      "canonical_fragment_sha256": "e4d7d85c59079450bdf874cc015fbf9a9f4897eaebdfacbb8813143172950e2e",
       "claims": [
         "C4"
       ],
@@ -830,7 +830,7 @@
       "canonical_anchor": "p06",
       "canonical_line_start": 362,
       "canonical_line_end": 422,
-      "canonical_fragment_sha256": "6188a7adb18acaa99640fd0f6263a6ef866f22993715b90d5d7a184823742a62",
+      "canonical_fragment_sha256": "dc0070b2574489a7fd354e741b48e0428890816dadf038e601eaed8cb4edbd2b",
       "claims": [
         "C4"
       ],
@@ -895,7 +895,7 @@
       "canonical_anchor": "p07",
       "canonical_line_start": 423,
       "canonical_line_end": 513,
-      "canonical_fragment_sha256": "44f20ef896e53d3fd15bf826b97d8b38f0f4105fb4bea12c1fdd81db63b26800",
+      "canonical_fragment_sha256": "d678e0a6c403bc985bf1a1482d74e6be88856229e309cfac037cc096660d7898",
       "claims": [
         "C2",
         "C4"
@@ -1081,7 +1081,7 @@
       "canonical_anchor": "p08",
       "canonical_line_start": 514,
       "canonical_line_end": 594,
-      "canonical_fragment_sha256": "50e4831c8693dfc6bfbbd79ce9723271e4f45e8d664304facc0fe284d777addf",
+      "canonical_fragment_sha256": "f89cbc9d5d51e1dc905db8dd631e8cfc2005d518cd392c2370faff9f3bd601fa",
       "claims": [
         "C1",
         "C4"
@@ -1147,7 +1147,7 @@
       "canonical_anchor": "p09",
       "canonical_line_start": 595,
       "canonical_line_end": 749,
-      "canonical_fragment_sha256": "15e449fce566b271d322f3af7512a818800541b5c6c2b913567a96959524b5c8",
+      "canonical_fragment_sha256": "99a23541140ded6d8880d75ecab6d74081ffa7f44cbc013e3c826f03c29c2f08",
       "claims": [
         "C3"
       ],
@@ -1224,7 +1224,7 @@
       "canonical_anchor": "p10",
       "canonical_line_start": 750,
       "canonical_line_end": 790,
-      "canonical_fragment_sha256": "9f32ffdf86d883f9579fced92dd50fd4b50d381ea04f2b8e649b24d0f9c445da",
+      "canonical_fragment_sha256": "345f714c736598890275cb97935fda98c7e90d4e42624497e8ada2a176fb3617",
       "claims": [
         "C1",
         "C3"
@@ -1302,7 +1302,7 @@
       "canonical_anchor": "p11",
       "canonical_line_start": 791,
       "canonical_line_end": 831,
-      "canonical_fragment_sha256": "30c00c9b05e908c711698009ae1b42dcb7a953120866859d7b6c7a5a9f02da08",
+      "canonical_fragment_sha256": "1f739ba6321e8f87018685495a90de3acc04e79259b04bee6a750ada4f17928f",
       "claims": [
         "C6"
       ],
@@ -1432,7 +1432,7 @@
       "canonical_anchor": "p13",
       "canonical_line_start": 883,
       "canonical_line_end": 968,
-      "canonical_fragment_sha256": "3b686197eb595c4b83434984cd133e4ec940d883a1787d37c6d0f2d3f433ca5f",
+      "canonical_fragment_sha256": "88b65dd979d23270229f73435b13287c331475f2578941448dccbeaf804563c7",
       "claims": [
         "C5",
         "C2"

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "name": "proof-gamma",
+      "source_path": "docs/COMPLETE_PROOF.md",
+      "selector": "\\Gamma=\\inf_",
+      "original_tex": "\\Gamma=\\inf_{\\|\\mathbf u\\|=1,\\ 0<t\\leq1/2}\\frac{C(t,\\mathbf u)}{h_2(t)}.",
+      "html_payload": "\\Gamma=\\inf_{\\|\\mathbf u\\|=1,\\ 0",
+      "error": "Extra open brace or missing close brace"
+    },
+    {
+      "name": "model-rho",
+      "source_path": "docs/MODEL_AND_CLAIMS.md",
+      "selector": "\\rho_{t,\\mathbf u}=",
+      "original_tex": "\\rho_{t,\\mathbf u}=\\frac{I+(1-2t)\\mathbf u\\cdot\\boldsymbol\\sigma}{2},\\qquad 0<t\\leq\\frac12.",
+      "html_payload": "\\rho_{t,\\mathbf u}=\\frac{I+(1-2t)\\mathbf u\\cdot\\boldsymbol\\sigma}{2},\\qquad 0",
+      "error": null
+    },
+    {
+      "name": "model-gamma",
+      "source_path": "docs/MODEL_AND_CLAIMS.md",
+      "selector": "\\Gamma&=\\inf_",
+      "original_tex": "\\begin{aligned} I_c&=(1-p)h_2(t)-pC(t,\\mathbf u),\\\\ \\Gamma&=\\inf_{\\|\\mathbf u\\|=1,\\ 0<t\\leq1/2}\\frac{C(t,\\mathbf u)}{h_2(t)}. \\end{aligned} ",
+      "html_payload": "\\begin{aligned} I_c&=(1-p)h_2(t)-pC(t,\\mathbf u),\\\\ \\Gamma&=\\inf_{\\|\\mathbf u\\|=1,\\ 0",
+      "error": "Extra open brace or missing close brace"
+    },
+    {
+      "name": "model-range",
+      "source_path": "docs/MODEL_AND_CLAIMS.md",
+      "selector": "\\boxed{\\begin{aligned} &\\frac1{1+L+d_\\epsilon\\lambda}",
+      "original_tex": "\\boxed{\\begin{aligned} &\\frac1{1+L+d_\\epsilon\\lambda}\\leq p<\\frac1{1+L}\\\\ &\\quad\\Longrightarrow\\quad Q^{(1)}(\\mathcal N_{p,\\epsilon})=0<Q(\\mathcal N_{p,\\epsilon}). \\end{aligned}} ",
+      "html_payload": "\\boxed{\\begin{aligned} &\\frac1{1+L+d_\\epsilon\\lambda}\\leq p<\\frac1{1+L}\\\\ &\\quad\\Longrightarrow\\quad Q^{(1)}(\\mathcal N_{p,\\epsilon})=0",
+      "error": "Missing close brace"
+    }
+  ]
+}

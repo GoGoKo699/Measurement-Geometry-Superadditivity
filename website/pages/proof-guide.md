@@ -1,6 +1,6 @@
 # Three steps from the channel to the theorem
 
-The [channel and eight-use example](channel.md#eight-use-witness) show what a separation means. The theorem must do more: for every allowed finite full-span ensemble and every common $`0<\epsilon<1/2`$, it must supply a nonempty interval of measurement probabilities with $`Q^{(1)}=0<Q`$. The proof joins three ingredients: **an obstruction for every single-use input**, **a sufficient finite-block construction**, and **a geometric inequality separating their costs**.
+The [channel and eight-use example](channel.md#eight-use-witness) show what a separation means. The theorem must do more: for every allowed finite full-span ensemble and every common $`0\lt \epsilon\lt 1/2`$, it must supply a nonempty interval of measurement probabilities with $`Q^{(1)}=0\lt Q`$. The proof joins three ingredients: **an obstruction for every single-use input**, **a sufficient finite-block construction**, and **a geometric inequality separating their costs**.
 
 The exact [theorem](../../docs/MODEL_AND_CLAIMS.md#m04), [complete proof](../../docs/COMPLETE_PROOF.md#p01) and [verification guide](verification.md) are available directly. The explanation here is specific to this project; the [selected tutorial](background.md#reading-map) supplies the information-theoretic background.
 
@@ -8,7 +8,7 @@ The exact [theorem](../../docs/MODEL_AND_CLAIMS.md#m04), [complete proof](../../
 
 ## 1. Bound every single-use input
 
-Write a qubit input using its smaller eigenvalue $`0<t\leq1/2`$ and a Bloch direction $`\mathbf u`$. Let $`C(t,\mathbf u)`$ be the measured branch's average reference entropy conditional on the **reported** record. The flagged channel has
+Write a qubit input using its smaller eigenvalue $`0\lt t\leq1/2`$ and a Bloch direction $`\mathbf u`$. Let $`C(t,\mathbf u)`$ be the measured branch's average reference entropy conditional on the **reported** record. The flagged channel has
 
 ```math
 I_c=(1-p)h_2(t)-pC(t,\mathbf u).
@@ -34,7 +34,7 @@ I_n=\sum_{m=0}^{n}{n\choose m}(1-p)^{n-m}p^m\mathcal R_m-p^n\mathcal A_n.
 
 At $`m=n`$, the terms combine into the negative conditional-reference entropy of the all-measured branch. The final subtraction is essential. Record-overlap bounds control both the surviving-quantum contribution and this loss. For any fixed finite number of axes, their exponential rates determine the eventual sign because the accompanying factors grow or decay only polynomially in the block length. This is an all-record bound, not a decoder that selects favorable outcomes.
 
-The resulting sufficient condition is $`p<1/(1+L)`$. Here $`L`$ is the smallest directional loss available to this repetition construction:
+The resulting sufficient condition is $`p\lt 1/(1+L)`$. Here $`L`$ is the smallest directional loss available to this repetition construction:
 
 ```math
 L=\min_{\|\mathbf u\|=1}\sum_b\frac{w_b c}{\sqrt{1-a(\mathbf n_b\cdot\mathbf u)^2}},\qquad a=(1-2\epsilon)^2,\quad c=1-a.
@@ -42,7 +42,7 @@ L=\min_{\|\mathbf u\|=1}\sum_b\frac{w_b c}{\sqrt{1-a(\mathbf n_b\cdot\mathbf u)^
 
 Thus $`\Gamma`$ controls the best possible **single-use input**, while $`L`$ controls this **specified block construction**. They optimize different quantities and need not have the same minimizing direction. The repetition frontier $`p_{\mathrm{rep}}=1/(1+L)`$ concerns the strict eventual sign. The equality case and exceptional shorter blocks above it are not classified by these bounds, and it is not an exact capacity boundary.
 
-Fix the channel parameters and a suitable $`p`$, choose a direction from those known parameters, and then choose a finite $`n`$ with positive $`I_n`$. Only after fixing that inner block does the asymptotic coding theorem apply to repeated uses of the block channel, giving $`Q\geq I_n/n>0`$. There is no requirement that $`I_n/n`$ have a positive limit as the inner length grows. The inner-block selection and outer-coding limit are separate steps. [P09: all-record bounds and polynomial factors](../../docs/COMPLETE_PROOF.md#p09) · [P10: operational conclusion](../../docs/COMPLETE_PROOF.md#p10) · [Tutorial achievability statement](background.md#reading-map)
+Fix the channel parameters and a suitable $`p`$, choose a direction from those known parameters, and then choose a finite $`n`$ with positive $`I_n`$. Only after fixing that inner block does the asymptotic coding theorem apply to repeated uses of the block channel, giving $`Q\geq I_n/n\gt 0`$. There is no requirement that $`I_n/n`$ have a positive limit as the inner length grows. The inner-block selection and outer-coding limit are separate steps. [P09: all-record bounds and polynomial factors](../../docs/COMPLETE_PROOF.md#p09) · [P10: operational conclusion](../../docs/COMPLETE_PROOF.md#p10) · [Tutorial achievability statement](background.md#reading-map)
 
 <a id="geometric-guarantee"></a>
 
@@ -56,10 +56,10 @@ The quantitative step combines the global entropy comparison with directional mi
 \Gamma\geq L+\frac{3}{35}ca\lambda.
 ```
 
-For full span, $`\lambda>0`$; for every interior error, $`ca>0`$. Thus the two regions overlap:
+For full span, $`\lambda\gt 0`$; for every interior error, $`ca\gt 0`$. Thus the two regions overlap:
 
 ```math
-\frac{1}{1+L+(3ca/35)\lambda}\leq p<\frac{1}{1+L}.
+\frac{1}{1+L+(3ca/35)\lambda}\leq p\lt \frac{1}{1+L}.
 ```
 
 The lower equality is included and the upper equality excluded. This is a guaranteed subinterval, not the exact quantum-capacity boundary. Its width is a range of measurement probabilities, not a communication rate. [P08: geometric gap](../../docs/COMPLETE_PROOF.md#p08) · [P10: composition into the theorem](../../docs/COMPLETE_PROOF.md#p10)

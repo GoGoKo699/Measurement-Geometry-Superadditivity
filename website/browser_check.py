@@ -146,8 +146,9 @@ def run(site, out, executable, base_url=None, native_mathml=False):
                     })
                 native.close()
 
-            def check_proof_math(view):
+            def check_math_layout(view, document_name):
                 targets = [
+                    ('global-infimum', r'\Gamma=\inf_', 1),
                     ('normalized-deficit', r'\mathscr D/(ca)', 1),
                     ('lower-input-tail', r'B_d(c)&:=', 3),
                     ('geometric-inequality', r'P(a)-\frac{\arcsin', 1),
@@ -156,10 +157,21 @@ def run(site, out, executable, base_url=None, native_mathml=False):
                     ('polynomial-bounds', r'\frac{c_A}{(m+1)^J}', 2),
                     ('eight-use-rate', r'\frac{\mathcal I_8}{8}', 2),
                 ]
+                if document_name == 'model':
+                    targets = [
+                        ('mixed-input', r'\rho_{t,\mathbf u}=', 1),
+                        ('global-cost', r'\Gamma&=\inf_', 2),
+                        ('positive-capacity-range', r'\boxed{\begin{aligned} &\frac1{1+L+d_\epsilon\lambda}', 2),
+                    ]
                 for key, marker, expected_rows in targets:
                     expression = page.locator('math').filter(
                         has=page.locator('annotation', has_text=marker))
-                    assert expression.count() == 1, ('Missing or repeated proof equation', key)
+                    assert expression.count() == 1, ('Missing or repeated equation', document_name, key)
+                    assert expression.locator('merror').count() == 0, (key, 'MathML error')
+                    comparisons = {'global-infimum': 1, 'mixed-input': 1,
+                                   'global-cost': 1, 'positive-capacity-range': 2}
+                    if key in comparisons:
+                        assert expression.locator('mo').all_text_contents().count('<') == comparisons[key], (key, 'Truncated inequality')
                     assert expression.locator('mlabeledtr').count() == 0, (key, 'Unsupported native equation label')
                     table = expression.locator('mtable').first
                     if expected_rows == 1:
@@ -186,8 +198,8 @@ def run(site, out, executable, base_url=None, native_mathml=False):
                         wrapper.evaluate('(x)=>{x.scrollLeft=x.scrollWidth}')
                         assert wrapper.evaluate('(x)=>x.scrollLeft') > 0, (key, 'Equation cannot scroll')
                         wrapper.evaluate('(x)=>{x.scrollLeft=0}')
-                    wrapper.screenshot(path=str(out / ('proof-' + key + '-' + view + '.png')))
-                    result.setdefault('proof_math_layout', []).append({
+                    wrapper.screenshot(path=str(out / (document_name + '-' + key + '-' + view + '.png')))
+                    result.setdefault(document_name + '_math_layout', []).append({
                         'equation': key, 'viewport': view, 'rows': expected_rows,
                         'height': bounds['height'],
                         'visible': True, 'horizontal_access': True, **metrics,
@@ -198,8 +210,8 @@ def run(site, out, executable, base_url=None, native_mathml=False):
                 assert page.evaluate('document.documentElement.scrollWidth <= innerWidth+2'), (name, 'desktop page overflow')
                 assert page.locator('img').evaluate_all('(imgs)=>imgs.filter(x=>!x.complete || x.naturalWidth===0).length') == 0, (name, 'image failed')
                 check_navigation()
-                if name == 'proof':
-                    check_proof_math('desktop')
+                if name in ('proof', 'model'):
+                    check_math_layout('desktop', name)
                 records.append({'page': name, 'desktop_no_page_overflow': True, 'images_loaded': True, 'configured_navigation_complete': True})
                 if name in ('index', 'background', 'channel', 'figures', 'proof-guide', 'visual-design'):
                     page.screenshot(path=str(out / (name + '-desktop.png')), full_page=True)
@@ -291,8 +303,8 @@ def run(site, out, executable, base_url=None, native_mathml=False):
                 assert not page.locator('.sidebar').is_visible()
                 record['mobile_no_page_overflow'] = True
                 record['mobile_menu_keyboard_controls'] = True
-                if name == 'proof':
-                    check_proof_math('mobile')
+                if name in ('proof', 'model'):
+                    check_math_layout('mobile', name)
                 if name in ('index', 'background', 'channel', 'proof-guide', 'model', 'proof', 'figures', 'materials', 'visual-design'):
                     page.screenshot(path=str(out / (name + '-mobile.png')), full_page=name in ('index', 'background', 'channel', 'proof-guide', 'figures', 'visual-design'))
 

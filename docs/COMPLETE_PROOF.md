@@ -15,7 +15,7 @@ This is a consolidation of the supplied theorem and its final author-side audit,
 
 **Sources:** [S3](SOURCE_TO_CANONICAL.md#s3); [S4](SOURCE_TO_CANONICAL.md#s4) §§1–2; [S5](SOURCE_TO_CANONICAL.md#s5) §1. **Claims:** C1–C3.
 
-Fix finitely many unit axes $`\mathbf n_b`$, positive probabilities $`w_b`$, a common $`0<\epsilon<1/2`$, and independent channel uses. Let $`r`$ denote the true projective bit and $`s`$ the reported bit. The projectors and reporting probabilities are
+Fix finitely many unit axes $`\mathbf n_b`$, positive probabilities $`w_b`$, a common $`0\lt \epsilon\lt 1/2`$, and independent channel uses. Let $`r`$ denote the true projective bit and $`s`$ the reported bit. The projectors and reporting probabilities are
 
 ```math
 \Pi_{b,r}=\frac{I+(-1)^r\mathbf n_b\cdot\boldsymbol\sigma}{2},\qquad \Pr(s\mid r)=\begin{cases}1-\epsilon,&s=r,\\\epsilon,&s\ne r.\end{cases}
@@ -82,10 +82,10 @@ These are entropies conditioned on the **reported** bit, not on the hidden true 
 For $`t=0`$, the reference is one dimensional and the coherent information is exactly zero. For all mixed inputs define
 
 ```math
-\Gamma=\inf_{\|\mathbf u\|=1,\ 0<t\leq1/2}\frac{C(t,\mathbf u)}{h_2(t)}.
+\Gamma=\inf_{\|\mathbf u\|=1,\ 0\lt t\leq1/2}\frac{C(t,\mathbf u)}{h_2(t)}.
 ```
 
-If $`p\geq1/(1+\Gamma)`$, every mixed input has nonpositive coherent information, while pure inputs attain zero. Conversely, if $`0<p<1/(1+\Gamma)`$, the definition of the infimum supplies a positive $`t`$ and direction with $`C/h_2<(1-p)/p`$. At $`p=0`$ any mixed input gives positive coherent information directly. Hence
+If $`p\geq1/(1+\Gamma)`$, every mixed input has nonpositive coherent information, while pure inputs attain zero. Conversely, if $`0\lt p\lt 1/(1+\Gamma)`$, the definition of the infimum supplies a positive $`t`$ and direction with $`C/h_2\lt (1-p)/p`$. At $`p=0`$ any mixed input gives positive coherent information directly. Hence
 
 ```math
 \boxed{Q^{(1)}(\mathcal N_{p,\epsilon})=0\quad\Longleftrightarrow\quad p\geq p_1:=\frac1{1+\Gamma}.}
@@ -185,7 +185,7 @@ where
 \begin{aligned} \mathsf A_v&=(v+1/2+\Delta_t/v)^2-r_t^2/4,\\ \mathsf B_v&=(v+1/2)^2-r_t^2/4,\\ \zeta_t&=r_t^2c/4. \end{aligned} 
 ```
 
-For interior inputs and $`v>0`$, $`\mathsf A_v>\mathsf B_v>0`$, $`\zeta_t\geq0`$. Its second derivative in $`g`$ is
+For interior inputs and $`v\gt 0`$, $`\mathsf A_v\gt \mathsf B_v\gt 0`$, $`\zeta_t\geq0`$. Its second derivative in $`g`$ is
 
 ```math
 -\left(\frac{\mathsf A_v}{\mathsf A_vg+\zeta_t}\right)^2 +\left(\frac{\mathsf B_v}{\mathsf B_vg+\zeta_t}\right)^2\leq0.
@@ -229,7 +229,7 @@ The previous facts imply
 C_\perp(t)\geq c h_2(t),\qquad C_\perp(t)\leq C_\parallel(t)\leq h_2(t).
 ```
 
-For $`t>0`$ define
+For $`t\gt 0`$ define
 
 ```math
 \beta(t,\epsilon)=\frac{C_\parallel(t)-C_\perp(t)}{a h_2(t)}\in[0,1].
@@ -266,7 +266,7 @@ The exact identities
 1-\ell=aV(a),\quad \ell-c=caW(a),\quad P=V+W
 ```
 
-show that $`c<\ell<1`$ for $`0<c<1`$. The submitted computer-assisted entropy lemma is
+show that $`c\lt \ell\lt 1`$ for $`0\lt c\lt 1`$. The submitted computer-assisted entropy lemma is
 
 ```math
 \boxed{\mathscr D(t,c):=(1-\ell)C_\perp(t)+(\ell-c)C_\parallel(t)-\ell a h_2(t)\geq0}
@@ -274,7 +274,7 @@ show that $`c<\ell<1`$ for $`0<c<1`$. The submitted computer-assisted entropy le
 
 **(P4.1)**
 
-for every $`0<c<1`$ and $`0\leq t\leq1/2`$. The proof has three domains: [P05](#p05) handles $`0<c\leq2^{-28}`$, [P06](#p06) handles $`0<a\leq1/25`$, and [P07](#p07) covers the remaining compact noise domain and its entire input range. These arguments jointly cover the whole open error interval; no sampling interpolation is used.
+for every $`0\lt c\lt 1`$ and $`0\leq t\leq1/2`$. The proof has three domains: [P05](#p05) handles $`0\lt c\leq2^{-28}`$, [P06](#p06) handles $`0\lt a\leq1/25`$, and [P07](#p07) covers the remaining compact noise domain and its entire input range. These arguments jointly cover the whole open error interval; no sampling interpolation is used.
 
 When (P4.1) is combined with (P3.3),
 
@@ -303,10 +303,10 @@ The bound is not the equality $`\Gamma=G_{\min}`$. Nor does this common-coeffici
 
 **Sources:** [S4](SOURCE_TO_CANONICAL.md#s4) §3.1; [S5](SOURCE_TO_CANONICAL.md#s5) §3; source [C1](SOURCE_TO_CANONICAL.md#c1)–[C2](SOURCE_TO_CANONICAL.md#c2). **Claim:** C4.
 
-Let $`0<c\leq c_*=2^{-28}`$, $`\zeta=\ln(1/c)`$ and $`\delta_0=1/100`$. The source uses
+Let $`0\lt c\leq c_*=2^{-28}`$, $`\zeta=\ln(1/c)`$ and $`\delta_0=1/100`$. The source uses
 
 ```math
-\ell\leq\frac85c,\quad \ell-c\leq\frac35c,\quad \ln2>\frac{69}{100},\quad\ln100<5,\quad\ln4<2.
+\ell\leq\frac85c,\quad \ell-c\leq\frac35c,\quad \ln2\gt \frac{69}{100},\quad\ln100\lt 5,\quad\ln4\lt 2.
 ```
 
 The logarithm bounds have elementary rational certificates: three positive terms in the atanh series for $`\ln2`$, and finite lower exponential sums for $`\exp(5)`$ and $`\exp(2)`$, suffice. Their recorded exact checks are source C2, not recomputed here.
@@ -319,17 +319,17 @@ The smaller eigenvalue for $`C_\perp`$ is at least $`y=ct(1-t)`$ and lies below 
 C_\perp(t)\geq\frac{ct(1-t)\zeta}{\ln2},\qquad h_2(t)\leq\frac{t[\ln(1/t)+1]}{\ln2}.
 ```
 
-Since $`\zeta\geq28\ln2>19.32`$, $`1-t\geq1/2`$ and $`\ln(1/t)<5`$, the ratio exceeds $`1.61c`$. On the other hand,
+Since $`\zeta\geq28\ln2\gt 19.32`$, $`1-t\geq1/2`$ and $`\ln(1/t)\lt 5`$, the ratio exceeds $`1.61c`$. On the other hand,
 
 ```math
-\frac{\ell a}{1-\ell}\leq\frac{(8/5)c}{1-(8/5)c_*}<1.61c.
+\frac{\ell a}{1-\ell}\leq\frac{(8/5)c}{1-(8/5)c_*}\lt 1.61c.
 ```
 
 The $`C_\perp`$ term alone proves (P4.1); the nonnegative $`C_\parallel`$ term need not be used.
 
 ### P05.2 Arbitrarily nearly pure inputs
 
-For $`0<t\leq\delta_0`$, the source entropy bounds give
+For $`0\lt t\leq\delta_0`$, the source entropy bounds give
 
 ```math
 C_\perp(t)-c h_2(t)\geq\frac{ct}{\ln2} \left[(1-\delta_0)\zeta-\delta_0\ln(1/\delta_0)-(1+c)\delta_0\right],
@@ -345,7 +345,7 @@ Use $`\eta\ln((1-\epsilon)/\epsilon)\leq\ln(4/c)`$ and the exact cancellation
 \mathscr D=(1-\ell)(C_\perp-c h_2)- (\ell-c)(h_2-C_\parallel).
 ```
 
-After applying the conservative bounds above, the coefficient of $`\zeta`$ is positive. Substitution at $`c=c_*`$ and $`\zeta>19.32`$ gives the recorded strictly positive lower margin
+After applying the conservative bounds above, the coefficient of $`\zeta`$ is positive. Substitution at $`c=c_*`$ and $`\zeta\gt 19.32`$ gives the recorded strictly positive lower margin
 
 ```math
 \frac{706479660745902522393}{112589990684262400000}
@@ -354,17 +354,17 @@ After applying the conservative bounds above, the coefficient of $`\zeta`$ is po
 for the normalized low-noise tail expression. The exact compact-input comparison margin used in P05.1 is
 
 ```math
-\frac{167771999}{16777215900}>0.
+\frac{167771999}{16777215900}\gt 0.
 ```
 
-These rational values are read from source C2; their functional use is the argument just given. The proof covers all positive $`c`$ in this range and all $`t>0`$, however small. At $`t=0`$, (P4.1) is equality.
+These rational values are read from source C2; their functional use is the argument just given. The proof covers all positive $`c`$ in this range and all $`t\gt 0`$, however small. At $`t=0`$, (P4.1) is equality.
 
 <a id="p06"></a>
 ## P06. Analytical high-noise endpoint
 
 **Sources:** [S4](SOURCE_TO_CANONICAL.md#s4) §3.2; [S5](SOURCE_TO_CANONICAL.md#s5) §3; source [C1](SOURCE_TO_CANONICAL.md#c1)–[C2](SOURCE_TO_CANONICAL.md#c2). **Claim:** C4.
 
-Let $`0<a\leq1/25`$, equivalently $`2/5\leq\epsilon<1/2`$, and set
+Let $`0\lt a\leq1/25`$, equivalently $`2/5\leq\epsilon\lt 1/2`$, and set
 
 ```math
 z=(1-2t)^2,\qquad\phi(z)=h_2\left(\frac{1-\sqrt z}{2}\right).
@@ -406,10 +406,10 @@ Also $`-\phi'(v)\leq1/[2\ln2(1-a)]`$ for $`0\leq v\leq a`$, hence
 H_\phi\leq\frac{a(1-z)}{2\ln2(1-a)}.
 ```
 
-For $`t>0`$ the required ratio is controlled by
+For $`t\gt 0`$ the required ratio is controlled by
 
 ```math
-\frac{J_\phi}{H_\phi}\geq(1-a)(2\ln2-1)-\frac a4>\frac{887}{2500},
+\frac{J_\phi}{H_\phi}\geq(1-a)(2\ln2-1)-\frac a4\gt \frac{887}{2500},
 ```
 
 while
@@ -418,7 +418,7 @@ while
 \frac{\ell-c}{1-\ell}=\frac{cW(a)}{V(a)}\leq\frac{1084}{3125}.
 ```
 
-The gap is $`99/12500>0`$, proving (P4.1) on the whole high-noise region. These coefficient identities and rational constants are recorded in source C2. At $`t=0`$, one uses equality rather than dividing by a vanishing entropy difference. This argument reaches arbitrarily close to $`\epsilon=1/2`$; the endpoint itself is addressed physically in [P11](#p11).
+The gap is $`99/12500\gt 0`$, proving (P4.1) on the whole high-noise region. These coefficient identities and rational constants are recorded in source C2. At $`t=0`$, one uses equality rather than dividing by a vanishing entropy difference. This argument reaches arbitrarily close to $`\epsilon=1/2`$; the endpoint itself is addressed physically in [P11](#p11).
 
 <a id="p07"></a>
 ## P07. Complete compact-domain certificate and its verification boundary
@@ -430,7 +430,7 @@ The gap is $`99/12500>0`$, proving (P4.1) on the whole high-noise region. These 
 For
 
 ```math
-c_*:=2^{-28}\leq c\leq\frac{24}{25},\qquad 0<t\leq\frac12,
+c_*:=2^{-28}\leq c\leq\frac{24}{25},\qquad 0\lt t\leq\frac12,
 ```
 
 divide (P4.1) by the positive factor $`ca`$:
@@ -470,7 +470,7 @@ This is an enclosure over the **whole noise band**, not evaluation at two putati
 With $`d:=\delta_{\mathrm{cert}}=10^{-6}`$, the same elementary input-tail argument as P05.2 gives
 
 ```math
-\mathscr D(t,c)\geq\frac{ct}{\ln2}\mu(c),\qquad 0<t\leq\delta_{\mathrm{cert}}.
+\mathscr D(t,c)\geq\frac{ct}{\ln2}\mu(c),\qquad 0\lt t\leq\delta_{\mathrm{cert}}.
 ```
 
 Define the tail bracket and the resulting outward lower enclosure by
@@ -481,7 +481,7 @@ Define the tail bracket and the resulting outward lower enclosure by
 
 **(P7.3)**
 
-The saved checks certify $`\mu>0`$ throughout every noise band. Thus the compact computation omits no arbitrarily nearly pure input. The value $`10^{-6}`$ is a junction between two proofs, not a lower cutoff on admissible inputs. The margin called `tail` in the source code is this normalized expression; it is not a physical communication rate.
+The saved checks certify $`\mu\gt 0`$ throughout every noise band. Thus the compact computation omits no arbitrarily nearly pure input. The value $`10^{-6}`$ is a junction between two proofs, not a lower cutoff on admissible inputs. The margin called `tail` in the source code is this normalized expression; it is not a physical communication rate.
 
 ### P07.3 Every remaining rectangle
 
@@ -516,7 +516,7 @@ The analytical domains of P05 and P06 meet this complete compact domain at their
 
 **Sources:** [S4](SOURCE_TO_CANONICAL.md#s4) §4; [S5](SOURCE_TO_CANONICAL.md#s5) §5; source [C1](SOURCE_TO_CANONICAL.md#c1)–[C2](SOURCE_TO_CANONICAL.md#c2). **Claims:** C1, C4.
 
-For $`0\leq y<1`$,
+For $`0\leq y\lt 1`$,
 
 ```math
 (1-y)^{-1}-(1-y)^{-1/2}\geq y/2.
@@ -554,22 +554,22 @@ This is an existence bound for a fixed encoding direction, not permission to ada
 \frac{\arcsin\sqrt a}{\sqrt a}\leq1+\frac a6+\frac{3a^2}{40} +\left(\frac\pi2-\frac{149}{120}\right)a^3.
 ```
 
-Using $`\pi<22/7`$,
+Using $`\pi\lt 22/7`$,
 
 ```math
-P(a)-\frac{\arcsin\sqrt a}{\sqrt a}>a\left(\frac1{12}+\frac{7a}{40}-\frac{193a^2}{840}\right)\geq\frac a{35}.
+P(a)-\frac{\arcsin\sqrt a}{\sqrt a}\gt a\left(\frac1{12}+\frac{7a}{40}-\frac{193a^2}{840}\right)\geq\frac a{35}.
 ```
 
 The quadratic is concave and its smaller endpoint value on $`[0,1]`$ is $`1/35`$. The exact positive integral
 
 ```math
-\frac{22}{7}-\pi=\int_0^1\frac{x^4(1-x)^4}{1+x^2}\,dx>0
+\frac{22}{7}-\pi=\int_0^1\frac{x^4(1-x)^4}{1+x^2}\,dx\gt 0
 ```
 
 is the source's elementary certification of the bound on $`\pi`$. Since $`\mathrm{Tr}(T)=1`$, $`0\leq\lambda\leq1/3`$. Therefore
 
 ```math
-\ell>L+\frac{ca}{35}\geq L+\frac3{35}ca\lambda.
+\ell\gt L+\frac{ca}{35}\geq L+\frac3{35}ca\lambda.
 ```
 
 **(P8.2)**
@@ -582,7 +582,7 @@ Combine (P4.2), (P8.1) and (P8.2):
 
 **(P8.3)**
 
-If the supported axes span $`\mathbb R^3`$, positive weights give $`\lambda>0`$; interior error gives $`ca>0`$. No lower bound on $`\lambda`$ beyond positivity has been imposed.
+If the supported axes span $`\mathbb R^3`$, positive weights give $`\lambda\gt 0`$; interior error gives $`ca\gt 0`$. No lower bound on $`\lambda`$ beyond positivity has been imposed.
 
 The width of the guaranteed overlap interval is
 
@@ -708,19 +708,19 @@ Summing complete records factorizes into products of single-record sums:
 For a proof bound only, relabel outcome signs so that
 
 ```math
-\pi_b^+=\frac{1+|\eta\mathbf n_b\cdot\mathbf u|}{2}\geq \pi_b^-=1-\pi_b^+>0.
+\pi_b^+=\frac{1+|\eta\mathbf n_b\cdot\mathbf u|}{2}\geq \pi_b^-=1-\pi_b^+\gt 0.
 ```
 
 Full-rank noisy effects make the finite likelihood bound
 
 ```math
-\mathcal L_{\mathrm{rec}}=\sum_{b=1}^J\ln(\pi_b^+/\pi_b^-),\qquad x_*=(1+e^{\mathcal L_{\mathrm{rec}}})^{-1}>0
+\mathcal L_{\mathrm{rec}}=\sum_{b=1}^J\ln(\pi_b^+/\pi_b^-),\qquad x_*=(1+e^{\mathcal L_{\mathrm{rec}}})^{-1}\gt 0
 ```
 
 well defined. Set
 
 ```math
-c_A=h_2(x_*)>0,\qquad c_R=\frac2{\ln2}x_*(1-x_*)>0.
+c_A=h_2(x_*)\gt 0,\qquad c_R=\frac2{\ln2}x_*(1-x_*)\gt 0.
 ```
 
 Condition first on counts $`m_b`$ of each measurement axis, where $`\sum_bm_b=m`$. For each axis retain one central binomial sign class: its positive and negative counts differ by at most one, and its multiplicity is at least $`2^{m_b}/(m_b+1)`$. Consequently the entire retained record log-likelihood ratio has absolute value at most $`\mathcal L_{\mathrm{rec}}`$, independently of $`m`$. Thus its posterior satisfies
@@ -745,7 +745,7 @@ to $`\mathcal A_m`$ and $`\mathcal R_m`$, respectively. The axis probabilities a
 
 The selection of central classes is only a lower bound on a sum of nonnegative entropy contributions. It does **not** change the channel or permit the decoder to postselect those events. The complete coherent-information identity remains (P9.2).
 
-If an individual $`\kappa_b=0`$, the corresponding lower contribution is zero whenever that axis occurs; this agrees with the formula. If $`K=0`$, then $`\mathcal R_m=0`$ for $`m>0`$ and the no-measurement term is handled directly. Under full span $`K>0`$ for every fixed code direction. The $`m=0`$ convention is consistent with the bounds because $`c_A,c_R\leq1`$. Finitely many axes and strictly interior error are substantive here: the constants can depend strongly on the chosen channel and direction, but not on $`m`$.
+If an individual $`\kappa_b=0`$, the corresponding lower contribution is zero whenever that axis occurs; this agrees with the formula. If $`K=0`$, then $`\mathcal R_m=0`$ for $`m\gt 0`$ and the no-measurement term is handled directly. Under full span $`K\gt 0`$ for every fixed code direction. The $`m=0`$ convention is consistent with the bounds because $`c_A,c_R\leq1`$. Finitely many axes and strictly interior error are substantive here: the constants can depend strongly on the chosen channel and direction, but not on $`m`$.
 
 <a id="p10"></a>
 ## P10. Finite inner blocks, outer coding and the main theorem
@@ -766,24 +766,24 @@ Insert (P9.4) into (P9.2), using $`(m+1)^J\leq(n+1)^J`$, to obtain
 
 **(P10.1)**
 
-If $`\nu_+>\nu_-`$, their exponential ratio eventually dominates the polynomial factor and $`\mathcal I_n>0`$ for every sufficiently large finite $`n`$. This strict condition is exactly
+If $`\nu_+\gt \nu_-`$, their exponential ratio eventually dominates the polynomial factor and $`\mathcal I_n\gt 0`$ for every sufficiently large finite $`n`$. This strict condition is exactly
 
 ```math
-p<\frac1{1+\Lambda(\mathbf u)}.
+p\lt \frac1{1+\Lambda(\mathbf u)}.
 ```
 
-If $`\nu_+<\nu_-`$, sufficiently large blocks in that fixed direction are negative. The equality case and exceptional shorter blocks above that frontier are not settled by (P10.1).
+If $`\nu_+\lt \nu_-`$, sufficiently large blocks in that fixed direction are negative. The equality case and exceptional shorter blocks above that frontier are not settled by (P10.1).
 
 For the headline theorem, first fix the channel ensemble, $`\epsilon`$ and a measurement probability
 
 ```math
-\frac1{1+L+d_\epsilon\lambda}\leq p<\frac1{1+L},\qquad\lambda>0.
+\frac1{1+L+d_\epsilon\lambda}\leq p\lt \frac1{1+L},\qquad\lambda\gt 0.
 ```
 
-The global cost inequality (P8.3) and (P1.2) give $`Q^{(1)}=0`$. Choose a unit direction attaining $`L`$ and then a sufficiently large finite inner length $`n`$ so that $`\mathcal I_n>0`$. This is a code fixed from known channel parameters, not from the realized future record. Apply the standard coding theorem to repeated uses of the superchannel $`\mathcal N_{p,\epsilon}^{\otimes n}`$:
+The global cost inequality (P8.3) and (P1.2) give $`Q^{(1)}=0`$. Choose a unit direction attaining $`L`$ and then a sufficiently large finite inner length $`n`$ so that $`\mathcal I_n\gt 0`$. This is a code fixed from known channel parameters, not from the realized future record. Apply the standard coding theorem to repeated uses of the superchannel $`\mathcal N_{p,\epsilon}^{\otimes n}`$:
 
 ```math
-Q(\mathcal N_{p,\epsilon})\geq\frac{\mathcal I_n}{n}>0.
+Q(\mathcal N_{p,\epsilon})\geq\frac{\mathcal I_n}{n}\gt 0.
 ```
 
 This concludes the source-derived full-span theorem. The proof does not require a positive limit of $`\mathcal I_n/n`$ as the inner block length itself diverges. It chooses a useful positive finite inner block and then takes the distinct outer coding limit. The constant, selected direction, sufficient inner length and achievable rate may depend on the fixed ensemble, error and measurement probability. No practical uniform rate or efficient outer code has been supplied.
@@ -804,7 +804,7 @@ C_\epsilon(t,x)\geq C_\perp(t)\geq c h_2(t).
 Thus $`\Gamma\geq c`$; the perpendicular nearly pure input approaches $`c`$, so $`\Gamma=c`$. The directional loss is always at least $`c`$ and reaches it perpendicularly, so $`L=c`$. Combining with the strict full-span bound proves
 
 ```math
-L<\Gamma\quad\Longleftrightarrow\quad\mathrm{rank}(T)=3
+L\lt \Gamma\quad\Longleftrightarrow\quad\mathrm{rank}(T)=3
 ```
 
 for the defined long-balanced-repetition comparison throughout the common interior-error range. This is not a zero-capacity theorem for all coplanar channels above their one-use threshold, and does not exclude other codes or exceptional finite blocks. Two noncommuting axes can still be coplanar; incompatibility alone is not the criterion.
@@ -817,7 +817,7 @@ The measurement effects have rank one and the conditional reference state for ev
 I_c=(1-p)S(\rho).
 ```
 
-A mixed input has positive one-use coherent information whenever $`p<1`$. At $`p=1`$ the channel is quantum-to-classical and cannot transmit unknown quantum information. Thus there is no $`Q^{(1)}=0<Q`$ region at this endpoint. This reasoning is direct from the physical channel, not a substitution into formulas with $`c`$ in a denominator.
+A mixed input has positive one-use coherent information whenever $`p\lt 1`$. At $`p=1`$ the channel is quantum-to-classical and cannot transmit unknown quantum information. Thus there is no $`Q^{(1)}=0\lt Q`$ region at this endpoint. This reasoning is direct from the physical channel, not a substitution into formulas with $`c`$ in a denominator.
 
 ### P11.3 Completely random records, $`\epsilon=1/2`$
 
@@ -893,7 +893,7 @@ For equal Pauli axes and $`\epsilon=1/10`$,
 a=\frac{16}{25},\qquad c=\frac9{25},\qquad G_{\min}=\frac{c}{1-a/3}=\frac{27}{59}.
 ```
 
-The source has $`\ell>27/59`$; equivalently the cone-family equality condition applies since $`a>1/2`$. Therefore $`\Gamma=27/59`$ and
+The source has $`\ell\gt 27/59`$; equivalently the cone-family equality condition applies since $`a\gt 1/2`$. Therefore $`\Gamma=27/59`$ and
 
 ```math
 p_1=\frac{59}{86}.
@@ -902,7 +902,7 @@ p_1=\frac{59}{86}.
 At $`p=7/10`$, the mixed-input bound is
 
 ```math
-\frac{I_c(t,\mathbf u)}{h_2(t)}\leq\frac3{10}-\frac7{10}\frac{27}{59} =-\frac6{295}<0.
+\frac{I_c(t,\mathbf u)}{h_2(t)}\leq\frac3{10}-\frac7{10}\frac{27}{59} =-\frac6{295}\lt 0.
 ```
 
 Together with pure-input value zero, this proves a globally optimized $`Q^{(1)}=0`$. It is not just the value of the maximally mixed state. The witness is justified by this sharper intermediate inequality, not necessarily by membership in the most conservative uniform $`3/35`$ subinterval.
@@ -946,7 +946,7 @@ Source **W1**, the final audit's `witness140.json`, is the selected record for s
 The stored enclosure supports
 
 ```math
-\begin{aligned} \frac{\mathcal I_8}{8} &=0.0000747747658815596371016563672617787\ldots\\ &>7.47\times10^{-5}. \end{aligned} 
+\begin{aligned} \frac{\mathcal I_8}{8} &=0.0000747747658815596371016563672617787\ldots\\ &\gt 7.47\times10^{-5}. \end{aligned} 
 ```
 
 The total block value is approximately $`0.0005981981270524771`$ bits. The exactly stored all-measured probability is $`p^8=0.05764801`$ and its weighted contribution is approximately $`-0.01653160578649`$ bits. All nine measured-count entries are present in W1.
@@ -959,7 +959,7 @@ These figures are the retained source enclosures and approximations. The current
 At equal Pauli axes with $`\epsilon=1/5`$, the directional nearly pure optimum would be $`G_{\min}=8/11`$. At its implied boundary $`p=11/19`$, the maximally mixed input instead has
 
 ```math
-I_c=\frac{8-11h_2(1/5)}{19}>0.
+I_c=\frac{8-11h_2(1/5)}{19}\gt 0.
 ```
 
 Source C3 stores a directed enclosure of this control. It demonstrates why $`\Gamma=G_{\min}`$ cannot be assumed at larger error without proof.

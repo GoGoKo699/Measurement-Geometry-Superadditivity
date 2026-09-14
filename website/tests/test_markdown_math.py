@@ -6,7 +6,7 @@ import pytest
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "website"))
-from markdown_math import math_spans, to_dollar_math, to_github_math
+from markdown_math import html_safe_math, math_spans, to_dollar_math, to_github_math
 
 
 @pytest.mark.parametrize("body", [
@@ -83,3 +83,12 @@ def test_pandoc_receives_normalized_wrappers_and_intact_anchors():
     assert prepare_markdown(source) == (
         '<a id="example"></a>\n\n## Example\n\n$x_{a}$\n\n$$\\frac{a}{b}$$\n'
     )
+
+
+def test_html_safe_relations_leave_prose_code_and_wrappers_untouched():
+    outside = '<a id="test"></a>\n\n> A quote with `x<y` and normal text < 3.\n\n'
+    source = outside + '$`0<t`$\n\n```math\n\\inf_{0<t}x>0\n```\n'
+    expected = outside + '$`0\\lt t`$\n\n```math\n\\inf_{0\\lt t}x\\gt 0\n```\n'
+    assert html_safe_math(source) == expected
+    assert html_safe_math(expected) == expected
+    assert to_dollar_math(expected).endswith('$$\\inf_{0\\lt t}x\\gt 0$$\n')
