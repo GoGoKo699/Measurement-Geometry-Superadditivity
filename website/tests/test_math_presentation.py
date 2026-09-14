@@ -213,7 +213,17 @@ def test_mathematics_and_surrounding_prose_preserved(path):
 def test_presentation_encodings_preserve_exact_previous_document_bytes(path):
     # These hashes precede the wrapper migration; changing any TeX or prose
     # byte, including whitespace or equation labels, must fail this check.
-    restored = to_dollar_math(restore_literal_relations((REPO / path).read_text())).encode()
+    source = (REPO / path).read_text()
+    # Undo the exact release-navigation edit before checking the earlier math
+    # migration baseline. Do not replace the original mathematical fingerprints.
+    if path == 'README.md':
+        source = replace_once(source, 'Read [the project overview](reader/README.md)',
+                              'Read [the short scientific story](docs/FROZEN_ARGUMENT.md)')
+    elif path.startswith('reader/'):
+        marker = '- [Visual design](visual-design.md)\n'
+        source = replace_once(source, marker,
+                              '- [Frozen scientific argument](../docs/FROZEN_ARGUMENT.md)\n' + marker)
+    restored = to_dollar_math(restore_literal_relations(source)).encode()
     assert hashlib.sha256(restored).hexdigest() == WRAPPER_BASELINE[path]
 
 

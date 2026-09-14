@@ -19,7 +19,6 @@
 - [Source materials](materials.md)
 - [Notation crosswalk](../docs/NOTATION_CROSSWALK.md)
 - [Source and proof ledger](../docs/SOURCE_TO_CANONICAL.md)
-- [Frozen scientific argument](../docs/FROZEN_ARGUMENT.md)
 - [Visual design](visual-design.md)
 - [Project status](status.md)
 

@@ -124,21 +124,12 @@
       "previous": "notation"
     },
     {
-      "slug": "argument",
-      "source": "docs/FROZEN_ARGUMENT.md",
-      "title": "Frozen scientific argument",
-      "group": "Use the materials",
-      "canonical": true,
-      "next": "materials",
-      "previous": "provenance"
-    },
-    {
       "slug": "visual-design",
       "source": "website/pages/visual-design.md",
       "title": "Visual design",
       "group": "About this site",
       "next": "status",
-      "previous": "argument"
+      "previous": "provenance"
     },
     {
       "slug": "status",

@@ -19,7 +19,6 @@
 - [Source materials](materials.md)
 - [Notation crosswalk](../docs/NOTATION_CROSSWALK.md)
 - [Source and proof ledger](../docs/SOURCE_TO_CANONICAL.md)
-- [Frozen scientific argument](../docs/FROZEN_ARGUMENT.md)
 - [Visual design](visual-design.md)
 - [Project status](status.md)
 
@@ -65,6 +64,6 @@ The canonical technical documents are rendered directly. New reader-facing parag
 
 ---
 
-[Previous: Frozen scientific argument](../docs/FROZEN_ARGUMENT.md) · [Continue: Project status](status.md)
+[Previous: Source and proof ledger](../docs/SOURCE_TO_CANONICAL.md) · [Continue: Project status](status.md)
 
 GitHub reading view generated from [the website source](../website/pages/visual-design.md). The equations, figure data and canonical captions retain their source meaning. Custom website navigation, local search and interactive color switching are not executed in this GitHub view.

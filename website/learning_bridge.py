@@ -16,7 +16,7 @@ PIN = '1604.07450v5'
 REQUIRED_ROUTES = {
     'index', 'background', 'channel', 'proof-guide', 'figures', 'limits',
     'model', 'proof', 'verification', 'reproduce', 'references', 'materials',
-    'notation', 'provenance', 'argument', 'visual-design', 'status',
+    'notation', 'provenance', 'visual-design', 'status',
 }
 LEARNING_ROUTE = ('index', 'background', 'channel', 'proof-guide', 'model',
                   'proof', 'limits', 'verification')
