@@ -43,7 +43,7 @@ Start with Sections 10.7.1–10.7.2, printed pp. 51–56, then 10.7.4, printed p
 | [§10.7.4; printed pp. 58–60](https://arxiv.org/pdf/1604.07450v5#page=64). Eq. (10.310), p. 58; Eq. (10.316), p. 60 | How can a repetition inner code help? A coherent code subspace can be combined with an outer code. | [Channel: coherent repetition](channel.md#coherent-repetition); [P09](../docs/COMPLETE_PROOF.md#p09), [P13](../docs/COMPLETE_PROOF.md#p13) |
 | [§10.9.4; printed pp. 75–76](https://arxiv.org/pdf/1604.07450v5#page=81). Eq. (10.366), p. 75; Eq. (10.367), p. 75; Eq. (10.368), p. 76 | Operational statement. Why does a positive block value give an unassisted rate? Read the unassisted-achievability statement; its full derivation is optional. | [Proof route: fixed inner block, then outer coding](proof-guide.md#finite-before-asymptotic); [P10](../docs/COMPLETE_PROOF.md#p10), [REFERENCES.md](../docs/REFERENCES.md) |
 
-Page numbers are **printed pages**. In this v5 PDF, printed page $k$ is viewer page $k+6$ (zero-based PDF index $k+5$). The PDF links in the map use viewer numbers. The arXiv version is dated 8 July 2025; the title page says updated June 2025.
+Page numbers are **printed pages**. In this v5 PDF, printed page $`k`$ is viewer page $`k+6`$ (zero-based PDF index $`k+5`$). The PDF links in the map use viewer numbers. The arXiv version is dated 8 July 2025; the title page says updated June 2025.
 
 <a name="notation"></a>
 
@@ -51,12 +51,12 @@ Page numbers are **printed pages**. In this v5 PDF, printed page $k$ is viewer p
 
 | Preskill | This project | Meaning |
 |---|---|---|
-| $H$ | $S$, with $h_2$ for binary entropy | Information entropies are in bits; the project reserves $\ln$ for natural logarithms in estimates. |
-| $Q_1(\mathcal N)$, Eq. (10.273) | $Q^{(1)}(\mathcal N)$ | The maximum of coherent information over all one-use input states. Preskill calls it “one-shot”; here it is not an operational finite-error one-shot capacity. |
-| Input $A$, reference $R$ | Input qubit (state $\rho$), reference $\mathsf R$ | The reference purifies the chosen input and is not sent through the channel. |
-| Receiver $B$, environment $E$ | Receiver $\mathsf B$; environment of a dilation | With a pure $RBE$ dilation, $H(RB)=H(E)$. A classical output flag does not give access to the environment. |
-| $p$ in Eq. (10.310) | $p$ and $\epsilon$ in M01 | Preskill uses total Pauli-error probability, $p/3$ per error. Here $p$ selects destructive measurement and $\epsilon$ flips its report. These are different channels. |
-| $\epsilon,\delta$ in the capacity definition, p. 52 | Physical reporting error $\epsilon$ | The tutorial symbols are accuracy/rate tolerances, not this fixed noise parameter. |
+| $`H`$ | $`S`$, with $`h_2`$ for binary entropy | Information entropies are in bits; the project reserves $`\ln`$ for natural logarithms in estimates. |
+| $`Q_1(\mathcal N)`$, Eq. (10.273) | $`Q^{(1)}(\mathcal N)`$ | The maximum of coherent information over all one-use input states. Preskill calls it “one-shot”; here it is not an operational finite-error one-shot capacity. |
+| Input $`A`$, reference $`R`$ | Input qubit (state $`\rho`$), reference $`\mathsf R`$ | The reference purifies the chosen input and is not sent through the channel. |
+| Receiver $`B`$, environment $`E`$ | Receiver $`\mathsf B`$; environment of a dilation | With a pure $`RBE`$ dilation, $`H(RB)=H(E)`$. A classical output flag does not give access to the environment. |
+| $`p`$ in Eq. (10.310) | $`p`$ and $`\epsilon`$ in M01 | Preskill uses total Pauli-error probability, $`p/3`$ per error. Here $`p`$ selects destructive measurement and $`\epsilon`$ flips its report. These are different channels. |
+| $`\epsilon,\delta`$ in the capacity definition, p. 52 | Physical reporting error $`\epsilon`$ | The tutorial symbols are accuracy/rate tolerances, not this fixed noise parameter. |
 
 The repository's [canonical notation crosswalk](../docs/NOTATION_CROSSWALK.md) connects the symbols used across the project's source materials. The tutorial crosswalk above explains how Preskill's notation relates to those symbols without renaming the canonical mathematics.
 
@@ -74,7 +74,7 @@ Incomplete-erasure channels, repetition and superadditivity are established idea
 
 ## One v5 sign note
 
-In the rendered PDF, [Eq. (10.368), printed p. 76](https://arxiv.org/pdf/1604.07450v5#page=82), reverses the entropy difference. Read its rate as $H(B)-H(E)-o(1)$, consistent with [definition (10.275), p. 53](https://arxiv.org/pdf/1604.07450v5#page=59). The exponent in [bound (10.367), p. 75](https://arxiv.org/pdf/1604.07450v5#page=81), has the opposite order, so decay requires a rate below $H(B)-H(E)$. This note follows visual inspection of the actual v5 pages; it does not change the source.
+In the rendered PDF, [Eq. (10.368), printed p. 76](https://arxiv.org/pdf/1604.07450v5#page=82), reverses the entropy difference. Read its rate as $`H(B)-H(E)-o(1)`$, consistent with [definition (10.275), p. 53](https://arxiv.org/pdf/1604.07450v5#page=59). The exponent in [bound (10.367), p. 75](https://arxiv.org/pdf/1604.07450v5#page=81), has the opposite order, so decay requires a rate below $`H(B)-H(E)`$. This note follows visual inspection of the actual v5 pages; it does not change the source.
 
 <a name="optional-refreshers"></a>
 

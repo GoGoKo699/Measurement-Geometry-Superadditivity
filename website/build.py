@@ -14,6 +14,7 @@ ROOT=Path(__file__).resolve().parents[1]
 WEB=ROOT/'website'
 sys.path.insert(0,str(WEB))
 from learning_bridge import METADATA, expand_background, load_bridge, validate_routes
+from markdown_math import to_dollar_math
 # Download inventory only. The operative root license defines reuse scope.
 REUSE_DOWNLOADS=(
  'LICENSE.md','LICENSES/MIT.txt','LICENSES/CC-BY-4.0.txt',
@@ -33,6 +34,7 @@ def load(p):return json.loads(p.read_text())
 def dump(p,x):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n')
 def digest_string(s):return hashlib.sha256(s.encode()).hexdigest()
 def prepare_markdown(text):
+ text=to_dollar_math(text)
  # A blank line keeps an empty explicit anchor from swallowing the next heading
  # in Pandoc. This changes only rendering input, never the source or its math.
  return re.sub(r'(?m)^(<a (?:id|name)="[^"]+"></a>)\n(?=#{1,6}\s)',r'\1\n\n',text)

@@ -29,13 +29,15 @@ def test_native_no_site_placeholders_or_html_destinations():
             assert (p.parent/base).resolve().is_file(),(p,dest)
 
 def test_all_source_math_preserved_in_native_pages():
+    from markdown_math import math_spans
     config=json.loads((ROOT/'website/site.json').read_text())
     for page in config['pages']:
         if page.get('canonical'):continue
         source=(ROOT/page['source']).read_text()
         target=(ROOT/preview.page_path(page)).read_text()
-        for equation in re.findall(r'\$\$(.*?)\$\$|(?<!\$)\$([^$\n]+)\$(?!\$)',source,re.S):
-            assert next(x for x in equation if x) in target
+        target_math=[(span.display,span.tex) for span in math_spans(target)]
+        for equation in math_spans(source):
+            assert (equation.display,equation.tex) in target_math
 
 def test_only_three_color_derivatives():
     p=json.loads((ROOT/'website/palette.json').read_text())['svg_mapping']

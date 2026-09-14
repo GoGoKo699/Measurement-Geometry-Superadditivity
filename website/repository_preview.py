@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 WEB = ROOT / 'website'
 sys.path.insert(0, str(WEB))
 from learning_bridge import METADATA, expand_background, load_bridge, validate_routes
+from markdown_math import to_github_math
 
 def read_json(p):
     return json.loads(p.read_text(encoding='utf-8'))
@@ -154,7 +155,7 @@ def expected_files():
         body += 'GitHub reading view generated from '+linked('the website source',page['source'],origin)+'. '
         body += 'The equations, figure data and canonical captions retain their source meaning. '
         body += 'Custom website navigation, local search and interactive color switching are not executed in this GitHub view.\n'
-        outputs[origin] = body.encode('utf-8')
+        outputs[origin] = to_github_math(body).encode('utf-8')
     record = {'format':'GitHub Markdown with linked canonical technical documents','public_deployment':False,
               'canonical_technical_documents_duplicated':False,'routes':{p['slug']:page_path(p) for p in pages},
               'source_hashes':dict(sorted(source_hashes.items())),

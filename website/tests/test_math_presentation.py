@@ -18,11 +18,16 @@ from pathlib import Path
 import re
 import shutil
 import subprocess
+import sys
 
 import pytest
 
 
 REPO = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO / "website"))
+from markdown_math import math_spans, to_dollar_math
+
+WRAPPER_BASELINE = json.loads((Path(__file__).with_name("math_source_baseline.json")).read_text())
 MATH = re.compile(r"(?<!\\)\$\$([\s\S]*?)(?<!\\)\$\$|(?<!\\)\$([^\n$]*?)(?<!\\)\$")
 DISPLAY = re.compile(r"(?<!\\)\$\$([\s\S]*?)(?<!\\)\$\$")
 LABELED_DISPLAY = re.compile(r"(?<!\\)\$\$((?:(?!\$\$)[\s\S])*?)(?<!\\)\$\$\n\n\*\*\((P\d+\.\d+)\)\*\*")
@@ -137,6 +142,7 @@ def restore_external_labels(source):
 
 def baseline_equivalent_source(path, source):
     """Undo only the exact P07.1 and P07.2 presentation refactors."""
+    source = to_dollar_math(source)
     if path != "docs/COMPLETE_PROOF.md":
         return source
     source = restore_external_labels(source)
@@ -192,6 +198,14 @@ def test_mathematics_and_surrounding_prose_preserved(path):
     assert fingerprint(source) == BASELINE[path]
 
 
+@pytest.mark.parametrize("path", WRAPPER_BASELINE)
+def test_protected_wrappers_preserve_exact_previous_document_bytes(path):
+    # These hashes precede the wrapper migration; changing any TeX or prose
+    # byte, including whitespace or equation labels, must fail this check.
+    restored = to_dollar_math((REPO / path).read_text()).encode()
+    assert hashlib.sha256(restored).hexdigest() == WRAPPER_BASELINE[path]
+
+
 def test_every_tracked_markdown_file_has_safe_display_source():
     paths = reading_paths()
     site_sources = {REPO / page["source"] for page in
@@ -207,9 +221,12 @@ def test_every_tracked_markdown_file_has_safe_display_source():
         if re.search(r"\\tag\b", source):
             errors.append((relative, "equation tag creates unsupported native MathML labeled rows"))
         errors.extend((relative, line, reason) for line, reason in display_hazards(source))
-        # Keep editable public reading documents on GitHub's least ambiguous
-        # dollar form: one physical source line per display. Immutable source
-        # records retain their original bytes and are excluded from this rule.
+        if relative in WRAPPER_BASELINE:
+            for span in math_spans(source):
+                if not span.protected:
+                    errors.append((relative, "math must use GitHub's protected wrappers"))
+        # Legacy dollar displays outside the migration must remain on one
+        # physical line. Immutable source records retain their original bytes.
         immutable = relative == "docs/FROZEN_ARGUMENT.md" or relative.startswith(
             "provenance/text_sources/"
         )
@@ -290,7 +307,8 @@ def test_unmatched_display_delimiter_is_rejected():
 
 
 def proof_expression(fragment):
-    matches = [item.group(1) for item in DISPLAY.finditer((REPO / "docs/COMPLETE_PROOF.md").read_text())
+    source = to_dollar_math((REPO / "docs/COMPLETE_PROOF.md").read_text())
+    matches = [item.group(1) for item in DISPLAY.finditer(source)
                if fragment in item.group(1)]
     assert len(matches) == 1
     return matches[0]
@@ -346,7 +364,7 @@ def test_external_equation_number_loss_or_reassignment_is_rejected(replacement):
 
 def test_lower_input_tail_uses_exact_factored_two_row_form():
     assert r"\begin{aligned}" not in ORIGINAL_P73 and r"\\" not in ORIGINAL_P73
-    proof = (REPO / "docs/COMPLETE_PROOF.md").read_text()
+    proof = to_dollar_math((REPO / "docs/COMPLETE_PROOF.md").read_text())
     assert r"$d:=\delta_{\mathrm{cert}}=10^{-6}$" in proof
     current = proof_expression(r"B_d(c)&:=")
     rows = nonempty_aligned_rows(current)
@@ -385,7 +403,7 @@ def test_changed_sources_convert_to_mathml_without_tex_fallback(path):
     assert pandoc, "Install the recorded website dependency Pandoc"
     result = subprocess.run(
         [pandoc, "--from=markdown+tex_math_dollars+raw_html", "--to=html5", "--mathml"],
-        input=(REPO / path).read_text(), text=True, capture_output=True, check=True,
+        input=to_dollar_math((REPO / path).read_text()), text=True, capture_output=True, check=True,
     )
     assert not result.stderr.strip(), result.stderr
     soup = BeautifulSoup(result.stdout, "html.parser")
