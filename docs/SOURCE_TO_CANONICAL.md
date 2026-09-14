@@ -90,7 +90,7 @@ Original member: `Noisy-record-PRL-final-audit/source/common_noise_range/THEOREM
 
 Original SHA-256: `79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86`.
 
-Current retained file: [provenance/text_sources/S4__THEORY.md](../provenance/text_sources/S4__THEORY.md).
+Current retained file: [provenance/text_sources/S4__THEORY.md.txt](../provenance/text_sources/S4__THEORY.md.txt).
 
 Original member: `Noisy-record-PRL-final-audit/source/common_noise_range/THEORY.md`.
 
@@ -132,7 +132,7 @@ Original member: `Noisy-record-PRL-final-audit/results/AUDIT_SUMMARY.json`.
 
 Original SHA-256: `6d7f5d34d3918627656c32ebbb9da46311bc71ac82b04e342609f87a605593a8`.
 
-Current retained file: [provenance/text_sources/S8__THEORY.md](../provenance/text_sources/S8__THEORY.md).
+Current retained file: [provenance/text_sources/S8__THEORY.md.txt](../provenance/text_sources/S8__THEORY.md.txt).
 
 Original member: `Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/THEORY.md`.
 
@@ -142,7 +142,7 @@ Original member: `Noisy-record-PRL-final-audit/source/common_noise_range/source/
 
 Original SHA-256: `adb5355ad73a05cb1422a11925da628ed35cc025d1461bca5dad1a1f65aec7f1`.
 
-Current retained file: [provenance/text_sources/S9__PROOF_AUDIT.md](../provenance/text_sources/S9__PROOF_AUDIT.md).
+Current retained file: [provenance/text_sources/S9__PROOF_AUDIT.md.txt](../provenance/text_sources/S9__PROOF_AUDIT.md.txt).
 
 Original member: `Noisy-record-PRL-final-audit/source/common_noise_range/source/full_span_audit/PROOF_AUDIT.md`.
 

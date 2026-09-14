@@ -372,18 +372,17 @@ This is an enclosure over the **whole noise band**, not evaluation at two putati
 
 ### P07.2 Lower input tail in every band
 
-With $\delta_{\mathrm{cert}}=10^{-6}$, the same elementary input-tail argument as P05.2 gives
+With $d:=\delta_{\mathrm{cert}}=10^{-6}$, the same elementary input-tail argument as P05.2 gives
 
-$$\mathscr D(t,c)\geq\frac{ct}{\ln2}\mu(c),\qquad 0<t\leq\delta_{\mathrm{cert}},$$
+$$\mathscr D(t,c)\geq\frac{ct}{\ln2}\mu(c),\qquad 0<t\leq\delta_{\mathrm{cert}}.$$
 
-where an outward lower enclosure is formed for
+Define the tail bracket and the resulting outward lower enclosure by
 
 $$
 \begin{aligned}
-\mu(c)=&(1-c\bar P(c))[(1-\delta_{\mathrm{cert}})\ln(1/c)\\
-&\qquad-\delta_{\mathrm{cert}}\ln(1/\delta_{\mathrm{cert}})\\
-&\qquad-(1+c)\delta_{\mathrm{cert}}]\\
-&-(\bar P(c)-1)\eta\ln\frac{1-\epsilon}{\epsilon}.
+B_d(c)&:=(1-d)\ln(1/c)-d\ln(1/d)-(1+c)d,\\
+\mu(c)&=(1-c\bar P(c))B_d(c)\\
+&\quad-(\bar P(c)-1)\eta\ln\frac{1-\epsilon}{\epsilon}.
 \end{aligned}
 \tag{P7.3}
 $$
@@ -449,13 +448,7 @@ $$\frac{\arcsin\sqrt a}{\sqrt a}\leq1+\frac a6+\frac{3a^2}{40}
 
 Using $\pi<22/7$,
 
-$$
-\begin{aligned}
-P(a)-\frac{\arcsin\sqrt a}{\sqrt a}
-&>a\left(\frac1{12}+\frac{7a}{40}-\frac{193a^2}{840}\right)\\
-&\geq\frac a{35}.
-\end{aligned}
-$$
+$$P(a)-\frac{\arcsin\sqrt a}{\sqrt a}>a\left(\frac1{12}+\frac{7a}{40}-\frac{193a^2}{840}\right)\geq\frac a{35}.$$
 
 The quadratic is concave and its smaller endpoint value on $[0,1]$ is $1/35$. The exact positive integral
 

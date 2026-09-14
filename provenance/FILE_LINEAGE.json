@@ -748,7 +748,7 @@
         "member_relative_to_root": "source/common_noise_range/THEORY.md"
       },
       "source_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
-      "destination": "provenance/text_sources/S4__THEORY.md",
+      "destination": "provenance/text_sources/S4__THEORY.md.txt",
       "destination_sha256": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
       "unchanged": true,
       "purpose": "Historical attribution and exact original proof-fragment source; not the operational proof or a runtime archive."
@@ -792,7 +792,7 @@
         "member_relative_to_root": "source/common_noise_range/source/full_span_audit/submitted/noisy_record_full_span/source/record_geometry_criterion/THEORY.md"
       },
       "source_sha256": "6d7f5d34d3918627656c32ebbb9da46311bc71ac82b04e342609f87a605593a8",
-      "destination": "provenance/text_sources/S8__THEORY.md",
+      "destination": "provenance/text_sources/S8__THEORY.md.txt",
       "destination_sha256": "6d7f5d34d3918627656c32ebbb9da46311bc71ac82b04e342609f87a605593a8",
       "unchanged": true,
       "purpose": "Historical attribution and exact original proof-fragment source; not the operational proof or a runtime archive."
@@ -803,7 +803,7 @@
         "member_relative_to_root": "source/common_noise_range/source/full_span_audit/PROOF_AUDIT.md"
       },
       "source_sha256": "adb5355ad73a05cb1422a11925da628ed35cc025d1461bca5dad1a1f65aec7f1",
-      "destination": "provenance/text_sources/S9__PROOF_AUDIT.md",
+      "destination": "provenance/text_sources/S9__PROOF_AUDIT.md.txt",
       "destination_sha256": "adb5355ad73a05cb1422a11925da628ed35cc025d1461bca5dad1a1f65aec7f1",
       "unchanged": true,
       "purpose": "Historical attribution and exact original proof-fragment source; not the operational proof or a runtime archive."

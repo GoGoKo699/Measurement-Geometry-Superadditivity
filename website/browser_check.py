@@ -107,8 +107,8 @@ def run(site, out, executable, base_url=None):
 
             def check_proof_math(view):
                 targets = [
-                    ('lower-input-tail', r'\tag{P7.3}', 4),
-                    ('geometric-inequality', r'P(a)-\frac{\arcsin', 2),
+                    ('lower-input-tail', r'\tag{P7.3}', 3),
+                    ('geometric-inequality', r'P(a)-\frac{\arcsin', 1),
                     ('reported-records', r'\mathsf p_\pm(\omega)', 4),
                     ('block-information', r'\tag{P9.2}', 2),
                     ('polynomial-bounds', r'\tag{P9.4}', 2),
@@ -119,8 +119,13 @@ def run(site, out, executable, base_url=None):
                         has=page.locator('annotation', has_text=marker))
                     assert expression.count() == 1, ('Missing or repeated proof equation', key)
                     table = expression.locator('mtable').first
-                    assert table.locator(':scope > mtr').count() == expected_rows, (key, 'Missing mathematical rows')
-                    bounds = table.bounding_box()
+                    if expected_rows == 1:
+                        assert table.count() == 0, (key, 'Unexpected multiline layout')
+                        layout = expression
+                    else:
+                        assert table.locator(':scope > mtr').count() == expected_rows, (key, 'Missing mathematical rows')
+                        layout = table
+                    bounds = layout.bounding_box()
                     assert bounds and bounds['width'] > 0 and bounds['height'] > 0, (key, 'Invisible mathematics')
                     wrapper = expression.locator('xpath=..')
                     assert 'display' in wrapper.get_attribute('class').split()

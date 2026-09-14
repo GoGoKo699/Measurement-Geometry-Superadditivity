@@ -1,8 +1,9 @@
-"""Presentation regressions and a narrow fingerprint of the unchanged mathematics.
+"""Presentation regressions and narrow checks on unchanged mathematics.
 
 The fingerprints were computed from commit 49c2434e3f5bc04a031fea21b32c0eaf363886d6.
 They permit spacing, delimiter sizing, aligned layout and the two stated operator
-aliases only. They do not establish the scientific validity of an expression.
+aliases. One exact P07.2 factorization is expanded before comparison and also
+checked directly below. These tests do not establish scientific validity.
 Pandoc's GFM test exercises Markdown structure, not GitHub's authenticated renderer.
 """
 from __future__ import annotations
@@ -37,6 +38,22 @@ BASELINE = {
                                   "math": "04e85684dbd25ac3c24d346b489ee57bca6558fb4d9e7435de73806ff4ecebff",
                                   "prose": "f69342fa76479f4e88207d7cec1a4396e787e1bad1cb7a867a57df372bce9403"},
 }
+RENDER_COUNTS = {
+    path: {"display": row["display"], "math_count": row["math_count"]}
+    for path, row in BASELINE.items()
+}
+
+ORIGINAL_P08 = r"""$$P(a)-\frac{\arcsin\sqrt a}{\sqrt a}
+>a\left(\frac1{12}+\frac{7a}{40}-\frac{193a^2}{840}\right)\geq\frac a{35}.$$"""
+ORIGINAL_P73 = r"""\mu(c)=(1-c\bar P(c))\left[(1-\delta_{\mathrm{cert}})\ln(1/c)-\delta_{\mathrm{cert}}\ln(1/\delta_{\mathrm{cert}})-(1+c)\delta_{\mathrm{cert}}\right]
+-(\bar P(c)-1)\eta\ln\frac{1-\epsilon}{\epsilon}. \tag{P7.3}"""
+TAIL_BRACKET = r"B_d(c):=(1-d)\ln(1/c)-d\ln(1/d)-(1+c)d."
+FACTORED_P73 = r"""\begin{aligned}
+B_d(c)&:=(1-d)\ln(1/c)-d\ln(1/d)-(1+c)d,\\
+\mu(c)&=(1-c\bar P(c))B_d(c)\\
+&\quad-(\bar P(c)-1)\eta\ln\frac{1-\epsilon}{\epsilon}.
+\end{aligned}
+\tag{P7.3}"""
 
 
 def normalized_math(expression):
@@ -93,6 +110,33 @@ def fingerprint(source):
     }
 
 
+def replace_once(source, old, new):
+    assert source.count(old) == 1, old
+    return source.replace(old, new)
+
+
+def baseline_equivalent_source(path, source):
+    """Expand the one expressly authorized P07.2 presentation refactor."""
+    if path != "docs/COMPLETE_PROOF.md":
+        return source
+    source = replace_once(
+        source,
+        r"$d:=\delta_{\mathrm{cert}}=10^{-6}$",
+        r"$\delta_{\mathrm{cert}}=10^{-6}$",
+    )
+    source = replace_once(
+        source,
+        r"$$\mathscr D(t,c)\geq\frac{ct}{\ln2}\mu(c),\qquad 0<t\leq\delta_{\mathrm{cert}}.$$",
+        r"$$\mathscr D(t,c)\geq\frac{ct}{\ln2}\mu(c),\qquad 0<t\leq\delta_{\mathrm{cert}},$$",
+    )
+    source = replace_once(
+        source,
+        "Define the tail bracket and the resulting outward lower enclosure by",
+        "where an outward lower enclosure is formed for",
+    )
+    return replace_once(source, FACTORED_P73, ORIGINAL_P73)
+
+
 def display_hazards(source):
     """Find Markdown block starts and paragraph breaks inside display bodies."""
     hazards = []
@@ -113,28 +157,25 @@ def display_hazards(source):
 
 
 def reading_paths():
-    site = json.loads((REPO / "website/site.json").read_text())
-    paths = {REPO / page["source"] for page in site["pages"]}
-    paths.update(REPO.glob("*.md"))
-    paths.update((REPO / "docs").glob("*.md"))
-    paths.update((REPO / "reader").rglob("*.md"))
-    paths.update((REPO / "website/pages").glob("*.md"))
-    paths.update((REPO / "figures").glob("*.md"))
-    return sorted(paths)
+    result = subprocess.run(
+        ["git", "-C", str(REPO), "ls-files", "-z", "--", "*.md"],
+        capture_output=True, check=True,
+    )
+    return sorted(REPO / path.decode() for path in result.stdout.split(b"\0") if path)
 
 
 @pytest.mark.parametrize("path", BASELINE)
 def test_mathematics_and_surrounding_prose_preserved(path):
-    assert fingerprint((REPO / path).read_text()) == BASELINE[path]
+    source = baseline_equivalent_source(path, (REPO / path).read_text())
+    assert fingerprint(source) == BASELINE[path]
 
 
-def test_all_current_reading_interfaces_have_safe_display_source():
+def test_every_tracked_markdown_file_has_safe_display_source():
     paths = reading_paths()
     site_sources = {REPO / page["source"] for page in
                     json.loads((REPO / "website/site.json").read_text())["pages"]}
     assert site_sources <= set(paths)
     assert REPO / "reader/channel.md" in paths
-    assert not any("text_sources" in path.parts for path in paths)
     errors = []
     for path in paths:
         source = path.read_text()
@@ -143,6 +184,20 @@ def test_all_current_reading_interfaces_have_safe_display_source():
             errors.append((relative, "unsupported operatorname macro"))
         errors.extend((relative, line, reason) for line, reason in display_hazards(source))
     assert not errors, errors
+
+
+def test_affected_exact_source_snapshots_are_raw_text_with_unchanged_bytes():
+    expected = {
+        "S4__THEORY.md.txt": "79e35f2ae2330c7f613d5d7af4ef9d19bc5aafd99da75ae0efe2eefbb55b4b86",
+        "S8__THEORY.md.txt": "6d7f5d34d3918627656c32ebbb9da46311bc71ac82b04e342609f87a605593a8",
+        "S9__PROOF_AUDIT.md.txt": "adb5355ad73a05cb1422a11925da628ed35cc025d1461bca5dad1a1f65aec7f1",
+    }
+    directory = REPO / "provenance/text_sources"
+    for name, digest in expected.items():
+        path = directory / name
+        assert path.is_file()
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == digest
+        assert not path.with_name(name.removesuffix(".txt")).exists()
 
 
 @pytest.mark.parametrize("old,new", [
@@ -199,12 +254,6 @@ def test_unmatched_display_delimiter_is_rejected():
     assert display_hazards("$$x+y")
 
 
-ORIGINAL_P08 = r"""$$P(a)-\frac{\arcsin\sqrt a}{\sqrt a}
->a\left(\frac1{12}+\frac{7a}{40}-\frac{193a^2}{840}\right)\geq\frac a{35}.$$"""
-ORIGINAL_P73 = r"""\mu(c)=(1-c\bar P(c))\left[(1-\delta_{\mathrm{cert}})\ln(1/c)-\delta_{\mathrm{cert}}\ln(1/\delta_{\mathrm{cert}})-(1+c)\delta_{\mathrm{cert}}\right]
--(\bar P(c)-1)\eta\ln\frac{1-\epsilon}{\epsilon}. \tag{P7.3}"""
-
-
 def proof_expression(fragment):
     matches = [item.group(1) for item in DISPLAY.finditer((REPO / "docs/COMPLETE_PROOF.md").read_text())
                if fragment in item.group(1)]
@@ -221,19 +270,27 @@ def nonempty_aligned_rows(expression):
     return rows
 
 
-def test_reported_p08_inequality_is_aligned_and_mathematically_unchanged():
+def test_reported_p08_inequality_is_one_safe_unchanged_chain():
     assert display_hazards(ORIGINAL_P08)
     current = proof_expression(r"P(a)-\frac{\arcsin")
-    nonempty_aligned_rows(current)
+    assert r"\begin{aligned}" not in current and r"\\" not in current
+    assert not display_hazards("$$" + current + "$$")
     assert normalized_math(current) == normalized_math(DISPLAY.search(ORIGINAL_P08).group(1))
 
 
-def test_lower_input_tail_has_real_rows_instead_of_source_newlines_only():
+def test_lower_input_tail_uses_exact_factored_two_row_form():
     assert r"\begin{aligned}" not in ORIGINAL_P73 and r"\\" not in ORIGINAL_P73
+    proof = (REPO / "docs/COMPLETE_PROOF.md").read_text()
+    assert r"$d:=\delta_{\mathrm{cert}}=10^{-6}$" in proof
     current = proof_expression(r"\tag{P7.3}")
     rows = nonempty_aligned_rows(current)
-    assert len(rows) >= 3
-    assert normalized_math(current) == normalized_math(ORIGINAL_P73)
+    assert len(rows) == 3
+    assert normalized_math(current) == normalized_math(FACTORED_P73)
+    assert normalized_math(rows[0].replace("&", "")) == normalized_math(TAIL_BRACKET.replace(".", ","))
+    expanded = replace_once(current, rows[0] + r"\\", "")
+    expanded = expanded.replace("B_d(c)", r"\left[(1-d)\ln(1/c)-d\ln(1/d)-(1+c)d\right]")
+    expanded = re.sub(r"(?<![A-Za-z])d(?![A-Za-z])", r"\\delta_{\\mathrm{cert}}", expanded)
+    assert normalized_math(expanded) == normalized_math(ORIGINAL_P73)
 
 
 def test_gfm_block_structure_catches_original_inequality_regression():
@@ -266,10 +323,14 @@ def test_changed_sources_convert_to_mathml_without_tex_fallback(path):
     )
     assert not result.stderr.strip(), result.stderr
     soup = BeautifulSoup(result.stdout, "html.parser")
-    assert len(soup.find_all("math")) == BASELINE[path]["math_count"]
-    assert len(soup.select('math[display="block"]')) == BASELINE[path]["display"]
+    assert len(soup.find_all("math")) == RENDER_COUNTS[path]["math_count"]
+    assert len(soup.select('math[display="block"]')) == RENDER_COUNTS[path]["display"]
     if path == "docs/COMPLETE_PROOF.md":
-        for marker, rows in [(r"\tag{P7.3}", 4), (r"P(a)-\frac{\arcsin", 2)]:
+        for marker, rows in [(r"\tag{P7.3}", 3)]:
             matches = [m for m in soup.find_all("math") if marker in m.annotation.get_text()]
             assert len(matches) == 1
             assert len(matches[0].mtable.find_all("mtr", recursive=False)) == rows
+        matches = [m for m in soup.find_all("math")
+                   if r"P(a)-\frac{\arcsin" in m.annotation.get_text()]
+        assert len(matches) == 1
+        assert matches[0].find("mtable") is None
