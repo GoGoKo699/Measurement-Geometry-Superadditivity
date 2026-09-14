@@ -18,12 +18,7 @@ The code may depend on the known axes, weights, $p$ and $\epsilon$, but is chose
 
 With $\eta=1-2\epsilon$ and $E_{b,s}=[I+(-1)^s\eta\mathbf n_b\cdot\boldsymbol\sigma]/2$,
 
-$$
-\begin{aligned}
-\mathcal N_{p,\epsilon}(\rho)&=(1-p)\rho\ \oplus\\
-&\quad p\sum_{b,s}w_b\mathrm{Tr}(E_{b,s}\rho)|b,s\rangle\langle b,s|.
-\end{aligned}
-$$
+$$\begin{aligned} \mathcal N_{p,\epsilon}(\rho)&=(1-p)\rho\ \oplus\\ &\quad p\sum_{b,s}w_b\mathrm{Tr}(E_{b,s}\rho)|b,s\rangle\langle b,s|. \end{aligned} $$
 
 The effects $E_{b,s}$ already average over the hidden true sign and the reporting error. For each fixed axis they sum to the identity; the separate weight $w_b$ supplies the axis probability. The direct sum keeps the intact and measured branches distinguishable. The measured-only channel is quantum-to-classical and cannot transmit an unknown quantum state. The capacity claim concerns its mixture with intact transmission. This is an instance of the established incomplete-erasure framework. [Physical derivation and attribution](../../docs/COMPLETE_PROOF.md#p01)
 
@@ -59,8 +54,7 @@ Choose an orthonormal pair $|\mathbf u_+\rangle,|\mathbf u_-\rangle$ before tran
 
 The coherent-information test uses the balanced input marginal
 
-$$\rho_n(\mathbf u)=\frac12|\mathbf u_+\rangle\langle\mathbf u_+|^{\otimes n}
-+\frac12|\mathbf u_-\rangle\langle\mathbf u_-|^{\otimes n}.$$
+$$\rho_n(\mathbf u)=\frac12|\mathbf u_+\rangle\langle\mathbf u_+|^{\otimes n} +\frac12|\mathbf u_-\rangle\langle\mathbf u_-|^{\otimes n}.$$
 
 Its purification is the normalized equal superposition of $|0\rangle_{\mathsf R}|\mathbf u_+\rangle^{\otimes n}$ and $|1\rangle_{\mathsf R}|\mathbf u_-\rangle^{\otimes n}$. Tracing out the reference produces the displayed separable but correlated mixture. That test marginal is distinct from the encoder's coherent action on an unknown logical state. [Code and conditional-state reduction, P09](../../docs/COMPLETE_PROOF.md#p09)
 

@@ -26,13 +26,11 @@ For equal Pauli-axis weights, $p=0.70$ and $\epsilon=0.10$, the globally optimiz
 
 With $a=(1-2\epsilon)^2$, $c=1-a$, define
 
-$$T=\sum_b w_b\mathbf n_b\mathbf n_b^{\mathsf T},\qquad \lambda=\lambda_{\min}(T),\qquad
-L=\min_{\|\mathbf u\|=1}\sum_b\frac{w_b c}{\sqrt{1-a(\mathbf n_b\cdot\mathbf u)^2}}.$$
+$$T=\sum_b w_b\mathbf n_b\mathbf n_b^{\mathsf T},\qquad \lambda=\lambda_{\min}(T),\qquad L=\min_{\|\mathbf u\|=1}\sum_b\frac{w_b c}{\sqrt{1-a(\mathbf n_b\cdot\mathbf u)^2}}.$$
 
 For $\lambda>0$, the theorem gives
 
-$$\frac{1}{1+L+(3ca/35)\lambda}\leq p<\frac{1}{1+L}
-\quad\Longrightarrow\quad Q^{(1)}=0<Q.$$
+$$\frac{1}{1+L+(3ca/35)\lambda}\leq p<\frac{1}{1+L} \quad\Longrightarrow\quad Q^{(1)}=0<Q.$$
 
 The coding direction and finite block length may depend on the known channel parameters, never on future realized measurement choices. The gap can shrink to zero near a coplanar ensemble or a reporting-noise endpoint. Coplanarity excludes this strict long-balanced-repetition comparison, not every possible collective code. [Precise theorem and quantifiers](docs/MODEL_AND_CLAIMS.md#m04) · [Complete proof](docs/COMPLETE_PROOF.md)
 

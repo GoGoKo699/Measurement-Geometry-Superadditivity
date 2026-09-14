@@ -79,8 +79,7 @@ $$a=(1-2\epsilon)^2,\quad c=1-a,\quad L=\frac{c}{\sqrt{1-a/3}},\quad d_\epsilon=
 
 Draw exactly two boundary curves:
 
-$$p_{\mathrm{cert}}(\epsilon)=\frac{1}{1+L+d_\epsilon/3},\qquad
-p_{\mathrm{rep}}(\epsilon)=\frac{1}{1+L}.$$
+$$p_{\mathrm{cert}}(\epsilon)=\frac{1}{1+L+d_\epsilon/3},\qquad p_{\mathrm{rep}}(\epsilon)=\frac{1}{1+L}.$$
 
 Here $p_{\mathrm{cert}}$ is a **new display-only name** for the lower endpoint already present in canonical M04/P10. It is a sufficient zero-one-use bound, not the exact $p_1$. $p_{\mathrm{rep}}$ is the construction's strict eventual-sign frontier, not an exact capacity boundary.
 
@@ -92,8 +91,7 @@ Outside the band, leave the background neutral. It must not be labeled “no cap
 
 Because the strip is narrow, include an inset of
 
-$$\Delta p_{\mathrm{cert}}=p_{\mathrm{rep}}-p_{\mathrm{cert}}
-=\frac{d_\epsilon/3}{(1+L)(1+L+d_\epsilon/3)}.$$
+$$\Delta p_{\mathrm{cert}}=p_{\mathrm{rep}}-p_{\mathrm{cert}} =\frac{d_\epsilon/3}{(1+L)(1+L+d_\epsilon/3)}.$$
 
 Use the same horizontal error range and vertical label **Certified interval width** with a $\times10^{-3}$ scale. This is probability width, not a transmission rate. A preliminary vertical range of $0$ to $4\times10^{-3}$ contains all chosen samples with margin. Do not thicken the band or normalize it differently without disclosure. The inset has no fitted peak, inferred phase transition, or extra parameter sweep.
 
@@ -109,8 +107,7 @@ The expressions come from canonical M03–M04, P08 and P12.1. **Only $L$ is eval
 
 At $\epsilon=0.1$ the two plotted boundaries are approximately
 
-$$p_{\mathrm{cert}}=0.70797878025951\ldots,\qquad
-p_{\mathrm{rep}}=0.71129378140889\ldots.$$
+$$p_{\mathrm{cert}}=0.70797878025951\ldots,\qquad p_{\mathrm{rep}}=0.71129378140889\ldots.$$
 
 The Figure 1 witness has $p=0.7$, **below the conservative shaded strip**. It is valid because canonical P13 uses the sharper exact one-use threshold $59/86$. Do not move its marker into the strip, truncate the band to include it, or imply it is proved by this particular conservative bound. By default do **not** overlay the witness on Figure 2. The caption should say that the Figure 1 point uses a sharper bound and that this strip need not exhaust the separation region. The relationship is machine-checked in `data/figures/cross_figure_witness_bound_check.json`.
 
@@ -128,8 +125,7 @@ What happens as a full-span measurement ensemble approaches coplanarity?
 
 Show three snapshots of the equally weighted cone family at $\lambda=0,1/16,1/4$:
 
-$$n_j=(\sqrt{1-\lambda}\cos(2\pi j/3),
-\sqrt{1-\lambda}\sin(2\pi j/3),\sqrt\lambda),\quad j=0,1,2.$$
+$$n_j=(\sqrt{1-\lambda}\cos(2\pi j/3), \sqrt{1-\lambda}\sin(2\pi j/3),\sqrt\lambda),\quad j=0,1,2.$$
 
 Each measurement axis should be drawn as a line through the origin, with both representative directions $\pm n_j$, not as six independently selected bases. The positive representatives lie on the cone. A dashed vertical guide may mark the axial coding direction $u=(0,0,1)$; it is **not a fourth measurement axis**. Use the same viewing direction and geometric scale in all snapshots.
 
@@ -141,8 +137,7 @@ Fix **$\epsilon=0.1$**, matching Figure 1's record error without implying the en
 
 Draw
 
-$$p_1(\lambda)=\frac{1-a\lambda}{1-a\lambda+c},\qquad
-p_{\mathrm{rep}}(\lambda)=\frac{\sqrt{1-a\lambda}}{\sqrt{1-a\lambda}+c},$$
+$$p_1(\lambda)=\frac{1-a\lambda}{1-a\lambda+c},\qquad p_{\mathrm{rep}}(\lambda)=\frac{\sqrt{1-a\lambda}}{\sqrt{1-a\lambda}+c},$$
 
 through their difference
 
@@ -168,9 +163,7 @@ Include the exact zero point at $\lambda=0$. Its interpretation is coincidence o
 
 Gap values are evaluated stably as
 
-$$\Delta p_{\mathrm{cone}}=
-\frac{ca\lambda\sqrt{1-a\lambda}}
-{(1+\sqrt{1-a\lambda})(\sqrt{1-a\lambda}+c)(1-a\lambda+c)},$$
+$$\Delta p_{\mathrm{cone}}= \frac{ca\lambda\sqrt{1-a\lambda}} {(1+\sqrt{1-a\lambda})(\sqrt{1-a\lambda}+c)(1-a\lambda+c)},$$
 
 an algebraic rewriting of the canonical exact formulas. This avoids subtracting nearly equal thresholds near the plane. It is an implementation identity, not a new scientific result. At the selected endpoint $\lambda=1/4$, $p_1=0.7$ and $\Delta p_{\mathrm{cone}}\simeq0.01798219308$. This coincidence of $p_1$ with the Figure 1 measurement probability does not transfer the eight-use witness to the cone ensemble.
 

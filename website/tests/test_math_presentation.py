@@ -48,12 +48,7 @@ ORIGINAL_P08 = r"""$$P(a)-\frac{\arcsin\sqrt a}{\sqrt a}
 ORIGINAL_P73 = r"""\mu(c)=(1-c\bar P(c))\left[(1-\delta_{\mathrm{cert}})\ln(1/c)-\delta_{\mathrm{cert}}\ln(1/\delta_{\mathrm{cert}})-(1+c)\delta_{\mathrm{cert}}\right]
 -(\bar P(c)-1)\eta\ln\frac{1-\epsilon}{\epsilon}. \tag{P7.3}"""
 TAIL_BRACKET = r"B_d(c):=(1-d)\ln(1/c)-d\ln(1/d)-(1+c)d."
-FACTORED_P73 = r"""\begin{aligned}
-B_d(c)&:=(1-d)\ln(1/c)-d\ln(1/d)-(1+c)d,\\
-\mu(c)&=(1-c\bar P(c))B_d(c)\\
-&\quad-(\bar P(c)-1)\eta\ln\frac{1-\epsilon}{\epsilon}.
-\end{aligned}
-\tag{P7.3}"""
+FACTORED_P73 = r"""\begin{aligned} B_d(c)&:=(1-d)\ln(1/c)-d\ln(1/d)-(1+c)d,\\ \mu(c)&=(1-c\bar P(c))B_d(c)\\ &\quad-(\bar P(c)-1)\eta\ln\frac{1-\epsilon}{\epsilon}. \end{aligned} \tag{P7.3} """
 
 
 def normalized_math(expression):
@@ -183,6 +178,17 @@ def test_every_tracked_markdown_file_has_safe_display_source():
         if re.search(r"\\operatorname\b", source):
             errors.append((relative, "unsupported operatorname macro"))
         errors.extend((relative, line, reason) for line, reason in display_hazards(source))
+        # Keep editable public reading documents on GitHub's least ambiguous
+        # dollar form: one physical source line per display. Immutable source
+        # records retain their original bytes and are excluded from this rule.
+        immutable = relative == "docs/FROZEN_ARGUMENT.md" or relative.startswith(
+            "provenance/text_sources/"
+        )
+        if not immutable:
+            for display in DISPLAY.finditer(source):
+                if "\n" in display.group(1).strip():
+                    line = source[:display.start()].count("\n") + 1
+                    errors.append((relative, line, "multiline dollar display"))
     assert not errors, errors
 
 
