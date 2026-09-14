@@ -28,7 +28,12 @@ $$E_{b,s}=\frac{I+(-1)^s\eta\,\mathbf n_b\cdot\boldsymbol\sigma}{2},\qquad s\in\
 
 These effects sum to $I$ **for each fixed axis**. The axis weight is not included in $E_{b,s}$: the complete measured-branch POVM has effects $w_bE_{b,s}$. The receiver channel is
 
-$$\boxed{\mathcal N_{p,\epsilon}(\rho)=(1-p)\rho\ \oplus\ p\sum_{b,s}w_b\,\mathrm{Tr}(E_{b,s}\rho)\,|b,s\rangle\langle b,s|.}$$
+$$
+\boxed{\begin{aligned}
+\mathcal N_{p,\epsilon}(\rho)&=(1-p)\rho\ \oplus\\
+&\quad p\sum_{b,s}w_b\,\mathrm{Tr}(E_{b,s}\rho)\,|b,s\rangle\langle b,s|.
+\end{aligned}}
+$$
 
 The direct sum distinguishes the intact quantum branch from the classical record branch. Independent uses are represented by tensor powers of this channel. The measurement branch itself is quantum-to-classical; the claimed quantum transmission concerns its flagged mixture with intact transmission, not a capacity of the measured-only channel.
 
@@ -39,8 +44,12 @@ This is a specialization of the supplied incomplete-erasure framework attributio
 
 All von Neumann and binary entropies are in **bits**; $\ln$ denotes the natural logarithm in analytic estimates. A reference register is denoted $\mathsf R$ and the receiver register $\mathsf B$. For any input $\rho$ purified by $\mathsf R$,
 
-$$I_c(\rho,\mathcal N)=S(\mathsf B)-S(\mathsf R\mathsf B),\qquad
-Q^{(1)}(\mathcal N)=\max_\rho I_c(\rho,\mathcal N).$$
+$$
+\begin{aligned}
+I_c(\rho,\mathcal N)&=S(\mathsf B)-S(\mathsf R\mathsf B),\\
+Q^{(1)}(\mathcal N)&=\max_\rho I_c(\rho,\mathcal N).
+\end{aligned}
+$$
 
 $Q(\mathcal N)$ is the unassisted asymptotic quantum capacity. $Q^{(1)}$ is **not** defined here as an operational one-shot capacity. In particular, $Q^{(1)}=0$ does not mean that every conceivable single-use task is useless.
 
@@ -78,8 +87,12 @@ $$\rho_{t,\mathbf u}=\frac{I+(1-2t)\mathbf u\cdot\boldsymbol\sigma}{2},\qquad 0<
 
 The flagged coherent-information identity and its global cost are
 
-$$I_c=(1-p)h_2(t)-pC(t,\mathbf u),\qquad
-\Gamma=\inf_{\|\mathbf u\|=1,\ 0<t\leq1/2}\frac{C(t,\mathbf u)}{h_2(t)}.$$
+$$
+\begin{aligned}
+I_c&=(1-p)h_2(t)-pC(t,\mathbf u),\\
+\Gamma&=\inf_{\|\mathbf u\|=1,\ 0<t\leq1/2}\frac{C(t,\mathbf u)}{h_2(t)}.
+\end{aligned}
+$$
 
 Pure inputs have zero coherent information. Consequently the **exact one-use positivity boundary** is
 
@@ -89,7 +102,12 @@ Define
 
 $$T=\sum_b w_b\mathbf n_b\mathbf n_b^{\mathsf T},\quad\lambda=\lambda_{\min}(T),$$
 
-$$\Lambda(\mathbf u)=\sum_b\frac{w_b c}{\sqrt{1-a(\mathbf n_b\cdot\mathbf u)^2}},\qquad L=\min_{\|\mathbf u\|=1}\Lambda(\mathbf u).$$
+$$
+\begin{aligned}
+\Lambda(\mathbf u)&=\sum_b\frac{w_b c}{\sqrt{1-a(\mathbf n_b\cdot\mathbf u)^2}},\\
+L&=\min_{\|\mathbf u\|=1}\Lambda(\mathbf u).
+\end{aligned}
+$$
 
 The balanced antipodal repetition construction has a **strict eventual-sign frontier**, optimized over its fixed direction,
 
@@ -106,8 +124,12 @@ $$\boxed{\Gamma\geq L+d_\epsilon\lambda,\qquad d_\epsilon=\frac3{35}ca.}$$
 
 If the axes span $\mathbb R^3$, then $\lambda>0$ and
 
-$$\boxed{\frac1{1+L+d_\epsilon\lambda}\leq p<\frac1{1+L}
-\quad\Longrightarrow\quad Q^{(1)}(\mathcal N_{p,\epsilon})=0<Q(\mathcal N_{p,\epsilon}).}$$
+$$
+\boxed{\begin{aligned}
+&\frac1{1+L+d_\epsilon\lambda}\leq p<\frac1{1+L}\\
+&\quad\Longrightarrow\quad Q^{(1)}(\mathcal N_{p,\epsilon})=0<Q(\mathcal N_{p,\epsilon}).
+\end{aligned}}
+$$
 
 The endpoints certify a nonempty subinterval, not the complete capacity-positive/negative boundary. The constant is conservative, not optimized. The lower endpoint is included and the upper endpoint is excluded.
 
@@ -122,8 +144,13 @@ Use equally likely $X,Y,Z$ axes, common error $\epsilon=1/10$, measurement proba
 
 The source establishes $\Gamma=27/59$ and therefore the exact one-use positivity boundary $p_1=59/86$. Since $p=7/10>p_1$, the globally optimized one-use value is zero. The source's final 140-digit interval record gives
 
-$$\frac{I_c(\rho_8,\mathcal N^{\otimes8})}{8}
-=0.0000747747658815596371016563672617787\ldots>7.47\times10^{-5}.$$
+$$
+\begin{aligned}
+\frac{I_c(\rho_8,\mathcal N^{\otimes8})}{8}
+&=0.0000747747658815596371016563672617787\ldots\\
+&>7.47\times10^{-5}.
+\end{aligned}
+$$
 
 The total block value is approximately $0.0005981981270524771$ bits. The all-measured event has probability $0.05764801$ and a negative weighted contribution approximately $-0.01653160578649$ bits. All nine measured-count contributions are retained. These numbers are **read from the stored certificate**, not recomputed by this consolidation.
 

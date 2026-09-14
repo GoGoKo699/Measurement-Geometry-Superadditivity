@@ -18,7 +18,12 @@ The code may depend on the known axes, weights, $p$ and $\epsilon$, but is chose
 
 With $\eta=1-2\epsilon$ and $E_{b,s}=[I+(-1)^s\eta\mathbf n_b\cdot\boldsymbol\sigma]/2$,
 
-$$\mathcal N_{p,\epsilon}(\rho)=(1-p)\rho\ \oplus\ p\sum_{b,s}w_b\operatorname{Tr}(E_{b,s}\rho)|b,s\rangle\langle b,s|.$$
+$$
+\begin{aligned}
+\mathcal N_{p,\epsilon}(\rho)&=(1-p)\rho\ \oplus\\
+&\quad p\sum_{b,s}w_b\mathrm{Tr}(E_{b,s}\rho)|b,s\rangle\langle b,s|.
+\end{aligned}
+$$
 
 The effects $E_{b,s}$ already average over the hidden true sign and the reporting error. For each fixed axis they sum to the identity; the separate weight $w_b$ supplies the axis probability. The direct sum keeps the intact and measured branches distinguishable. The measured-only channel is quantum-to-classical and cannot transmit an unknown quantum state. The capacity claim concerns its mixture with intact transmission. This is an instance of the established incomplete-erasure framework. [Physical derivation and attribution](../../docs/COMPLETE_PROOF.md#p01)
 

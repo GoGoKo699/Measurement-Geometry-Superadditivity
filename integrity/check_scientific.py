@@ -15,7 +15,7 @@ from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parents[1]
 INVENTORY = "integrity/SCIENTIFIC_FILES.json"
-INVENTORY_SHA256 = "444bfc526ec09cdd5eebdef055e22679a505caaef43662e8ffb8b36cb78b7729"
+INVENTORY_SHA256 = "9f8ac0902e80944808deee69fdd1cd2895e55c8aabf262733bd41c0a72364465"
 FILE_KEYS_SHA256 = "c8a602ed0782af7298fd749fdfadfdf54ae6dcff31d78e2276bb2f5e667deea6"
 PROTECTED_FILE_COUNT = 174
 ADDITIONAL_FILES = frozenset({
