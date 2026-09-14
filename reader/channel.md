@@ -58,13 +58,13 @@ To test transmission of quantum information, purify the input using a reference 
 
 If the input/reference state is pure and the channel is represented by an isometry into receiver and environment registers, the final $`\mathsf R\mathsf B\mathsf E`$ state is pure. Then $`S(\mathsf R\mathsf B)=S(\mathsf E)`$ and the same quantity is $`S(\mathsf B)-S(\mathsf E)`$. The environment in that representation includes everything needed to purify the channel's action. This equality does not make those systems accessible to the decoder. [Preskill notation and sign convention](background.md#notation) · [Project definitions](../docs/MODEL_AND_CLAIMS.md#m02)
 
-The maximum over every single-qubit density matrix is $`Q^{(1)}`$. The quantity $`Q`$ is the unassisted asymptotic quantum capacity, allowing coherent encoding across many independent uses. The statement $`Q^{(1)}=0<Q`$ says that globally optimized single-use coherent information misses an achievable positive asymptotic quantum rate. It does not identify $`Q^{(1)}`$ with an operational one-shot capacity or declare every single-use task useless.
+The maximum over every single-qubit density matrix is $`Q^{(1)}`$. The quantity $`Q`$ is the unassisted asymptotic quantum capacity, allowing coherent encoding across many independent uses. The statement $`Q^{(1)}=0\lt Q`$ says that globally optimized single-use coherent information misses an achievable positive asymptotic quantum rate. It does not identify $`Q^{(1)}`$ with an operational one-shot capacity or declare every single-use task useless.
 
 <a name="flagged-information"></a>
 
 ## How do the classical records enter the entropy difference?
 
-Write an arbitrary mixed input using its smaller eigenvalue $`0<t\leq1/2`$ and direction $`\mathbf u`$. Its input entropy is $`h_2(t)`$. In the intact branch, the reference and received qubit remain in their pure joint state, so that branch contributes $`h_2(t)`$ to coherent information.
+Write an arbitrary mixed input using its smaller eigenvalue $`0\lt t\leq1/2`$ and direction $`\mathbf u`$. Its input entropy is $`h_2(t)`$. In the intact branch, the reference and received qubit remain in their pure joint state, so that branch contributes $`h_2(t)`$ to coherent information.
 
 In a measured branch, conditioning on the **reported** axis and sign leaves a conditional state of the reference. The receiver has only that classical record, while the reference generally remains mixed because the true outcome is hidden. Let $`C(t,\mathbf u)`$ be the reference entropy averaged over both reported signs and all axis probabilities. The canonical calculation forms each subnormalized reference state from the noisy effect $`E_{b,s}`$, then weights its normalized entropy by the probability of that report.
 
@@ -97,12 +97,12 @@ Its purification is the normalized equal superposition of $`|0\rangle_{\mathsf R
 For equally likely $`X,Y,Z`$ axes, take $`p=7/10`$, $`\epsilon=1/10`$, $`n=8`$ and $`\mathbf u=(1,1,1)/\sqrt3`$. The retained calculation gives approximately $`0.0005981981270524771`$ bits **per block**, or
 
 ```math
-\frac{\mathcal I_8}{8}>7.47\times10^{-5}\quad\text{bits per physical use}.
+\frac{\mathcal I_8}{8}\gt 7.47\times10^{-5}\quad\text{bits per physical use}.
 ```
 
 All nine measured-count branches, from zero through eight measured qubits, are included. The all-measured event has probability $`0.05764801`$ and contributes approximately $`-0.01653160578649`$ bits to the block value. Its loss is included in the positive total. The small positive number is supported by deterministic arithmetic enclosures, not a statistical confidence interval.
 
-At the same parameters, a bound valid for every one-use input gives $`\Gamma=27/59`$ and the exact one-use positivity boundary $`p_1=59/86<7/10`$. Pure inputs attain zero and every mixed input is bounded above by a negative value. Thus the comparison uses a genuinely global single-use zero, alongside one constructive eight-use value. A successful trial input alone could establish only the latter. [Witness, global bound and numerical records, P13](../docs/COMPLETE_PROOF.md#p13)
+At the same parameters, a bound valid for every one-use input gives $`\Gamma=27/59`$ and the exact one-use positivity boundary $`p_1=59/86\lt 7/10`$. Pure inputs attain zero and every mixed input is bounded above by a negative value. Thus the comparison uses a genuinely global single-use zero, alongside one constructive eight-use value. A successful trial input alone could establish only the latter. [Witness, global bound and numerical records, P13](../docs/COMPLETE_PROOF.md#p13)
 
 [Figure 1](figures.md#figure-1) brings the channel and this comparison together. Its witness uses a sharper one-use bound than the conservative universal strip shown in Figure 2; the witness lies below that strip. This is a difference in the sufficient bounds, not an inconsistency between the figures.
 

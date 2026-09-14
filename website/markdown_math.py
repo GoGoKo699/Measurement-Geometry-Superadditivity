@@ -146,3 +146,18 @@ def to_github_math(text: str) -> str:
 def to_dollar_math(text: str) -> str:
     """Normalize protected wrappers for Pandoc and source-preservation checks."""
     return _replace(text, protected=False)
+
+
+def html_safe_math(text: str) -> str:
+    """Use equivalent TeX relations that cannot start HTML tags.
+
+    Protected Markdown wrappers do not prevent later HTML parsing of the TeX
+    payload. In particular, ``0<t`` can swallow a closing brace or silently
+    truncate an expression. A space terminates each replacement control word.
+    Ordinary prose, HTML, code and all math wrappers retain their exact bytes.
+    """
+    for span in reversed(math_spans(text)):
+        original = text[span.start:span.end]
+        safe = original.replace("<", r"\lt ").replace(">", r"\gt ")
+        text = text[:span.start] + safe + text[span.end:]
+    return text

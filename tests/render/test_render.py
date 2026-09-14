@@ -68,7 +68,7 @@ def test_hidden_receiver_semantics():
 
 def test_caption_protects_boundary_meanings():
  txt=(ROOT/'figures/CAPTIONS.md').read_text()
- for fragment in ['not the optimal eight-use','p_{\\mathrm{cert}}\\leq p<p_{\\mathrm{rep}}','below this conservative strip','not a fit','not transferred here']:
+ for fragment in ['not the optimal eight-use','p_{\\mathrm{cert}}\\leq p\\lt p_{\\mathrm{rep}}','below this conservative strip','not a fit','not transferred here']:
   assert fragment in txt
 
 def test_source_contract_stays_historical():

@@ -8,14 +8,14 @@ The latest source reports that final mathematical audit obligations A–D passed
 <a id="m01"></a>
 ## 1. The channel and its operation budget
 
-There are $`J<\infty`$ unit Bloch axes $`\mathbf n_b\in\mathbb R^3`$, indexed by $`b=1,\ldots,J`$, with probabilities $`w_b>0`$ and $`\sum_b w_b=1`$. All these channel parameters are known when the code is designed. Repeated or sign-reversed axes may be represented as separately labeled outcomes; the theorem concerns their supported span and positive weights.
+There are $`J\lt \infty`$ unit Bloch axes $`\mathbf n_b\in\mathbb R^3`$, indexed by $`b=1,\ldots,J`$, with probabilities $`w_b\gt 0`$ and $`\sum_b w_b=1`$. All these channel parameters are known when the code is designed. Repeated or sign-reversed axes may be represented as separately labeled outcomes; the theorem concerns their supported span and positive weights.
 
 Each physical use independently does one of two things. With probability $`1-p`$, the qubit arrives intact. With probability $`p`$, axis $`b`$ is drawn according to $`w_b`$, the qubit is projectively measured, and the quantum system becomes inaccessible. If the true outcome bit is $`r`$, the receiver sees $`s=r\oplus z`$, with $`z`$ an independent Bernoulli bit of **common** probability $`\epsilon`$ for every axis and use.
 
 The principal theorem assumes
 
 ```math
-0\leq p\leq1,\qquad 0<\epsilon<\frac12.
+0\leq p\leq1,\qquad 0\lt \epsilon\lt \frac12.
 ```
 
 The mask distinguishing the branches and the measurement-axis label are delivered correctly. The receiver never learns the hidden true bit or whether acquisition error occurred, and cannot reread a discarded qubit. Encoding precedes all realized branch, axis and outcome choices. Gates for encoding and decoding are otherwise unrestricted and noiseless. There is no postselection, feedback, preshared entanglement, or measurement-dependent alteration of the encoder.
@@ -84,13 +84,13 @@ The exact source-to-canonical renaming is recorded in [NOTATION_CROSSWALK.md](NO
 Every mixed qubit density matrix can be written
 
 ```math
-\rho_{t,\mathbf u}=\frac{I+(1-2t)\mathbf u\cdot\boldsymbol\sigma}{2},\qquad 0<t\leq\frac12.
+\rho_{t,\mathbf u}=\frac{I+(1-2t)\mathbf u\cdot\boldsymbol\sigma}{2},\qquad 0\lt t\leq\frac12.
 ```
 
 The flagged coherent-information identity and its global cost are
 
 ```math
-\begin{aligned} I_c&=(1-p)h_2(t)-pC(t,\mathbf u),\\ \Gamma&=\inf_{\|\mathbf u\|=1,\ 0<t\leq1/2}\frac{C(t,\mathbf u)}{h_2(t)}. \end{aligned} 
+\begin{aligned} I_c&=(1-p)h_2(t)-pC(t,\mathbf u),\\ \Gamma&=\inf_{\|\mathbf u\|=1,\ 0\lt t\leq1/2}\frac{C(t,\mathbf u)}{h_2(t)}. \end{aligned} 
 ```
 
 Pure inputs have zero coherent information. Consequently the **exact one-use positivity boundary** is
@@ -120,16 +120,16 @@ Below that frontier, some sufficiently large finite block has positive coherent 
 <a id="m04"></a>
 ## 4. The retained theorem and quantifier order (C1–C4)
 
-For every fixed allowed ensemble and every common $`0<\epsilon<1/2`$,
+For every fixed allowed ensemble and every common $`0\lt \epsilon\lt 1/2`$,
 
 ```math
 \boxed{\Gamma\geq L+d_\epsilon\lambda,\qquad d_\epsilon=\frac3{35}ca.}
 ```
 
-If the axes span $`\mathbb R^3`$, then $`\lambda>0`$ and
+If the axes span $`\mathbb R^3`$, then $`\lambda\gt 0`$ and
 
 ```math
-\boxed{\begin{aligned} &\frac1{1+L+d_\epsilon\lambda}\leq p<\frac1{1+L}\\ &\quad\Longrightarrow\quad Q^{(1)}(\mathcal N_{p,\epsilon})=0<Q(\mathcal N_{p,\epsilon}). \end{aligned}} 
+\boxed{\begin{aligned} &\frac1{1+L+d_\epsilon\lambda}\leq p\lt \frac1{1+L}\\ &\quad\Longrightarrow\quad Q^{(1)}(\mathcal N_{p,\epsilon})=0\lt Q(\mathcal N_{p,\epsilon}). \end{aligned}} 
 ```
 
 The endpoints certify a nonempty subinterval, not the complete capacity-positive/negative boundary. The constant is conservative, not optimized. The lower endpoint is included and the upper endpoint is excluded.
@@ -143,10 +143,10 @@ The proof is the composition of a global one-use bound, a constructive all-recor
 
 Use equally likely $`X,Y,Z`$ axes, common error $`\epsilon=1/10`$, measurement probability $`p=7/10`$, and a balanced eight-use input formed from the eigenstates of $`(X+Y+Z)/\sqrt3`$.
 
-The source establishes $`\Gamma=27/59`$ and therefore the exact one-use positivity boundary $`p_1=59/86`$. Since $`p=7/10>p_1`$, the globally optimized one-use value is zero. The source's final 140-digit interval record gives
+The source establishes $`\Gamma=27/59`$ and therefore the exact one-use positivity boundary $`p_1=59/86`$. Since $`p=7/10\gt p_1`$, the globally optimized one-use value is zero. The source's final 140-digit interval record gives
 
 ```math
-\begin{aligned} \frac{I_c(\rho_8,\mathcal N^{\otimes8})}{8} &=0.0000747747658815596371016563672617787\ldots\\ &>7.47\times10^{-5}. \end{aligned} 
+\begin{aligned} \frac{I_c(\rho_8,\mathcal N^{\otimes8})}{8} &=0.0000747747658815596371016563672617787\ldots\\ &\gt 7.47\times10^{-5}. \end{aligned} 
 ```
 
 The total block value is approximately $`0.0005981981270524771`$ bits. The all-measured event has probability $`0.05764801`$ and a negative weighted contribution approximately $`-0.01653160578649`$ bits. All nine measured-count contributions are retained. These numbers are **read from the stored certificate**, not recomputed by this consolidation.
@@ -159,12 +159,12 @@ This example uses a sharper single-use bound than the most conservative uniform 
 **Coplanar axes.** A common perpendicular direction gives $`\Gamma=L=c`$. Thus, for this strict long-balanced-repetition criterion and the declared common-noise model,
 
 ```math
-L<\Gamma\quad\Longleftrightarrow\quad\mathrm{rank}(T)=3.
+L\lt \Gamma\quad\Longleftrightarrow\quad\mathrm{rank}(T)=3.
 ```
 
 This is not an all-code converse against coplanar channels. It does not exclude exceptional finite blocks or a different encoding family. [P11](COMPLETE_PROOF.md#p11)
 
-**Noise endpoints.** At $`\epsilon=0`$, $`I_c=(1-p)S(\rho)`$ is positive for mixed inputs when $`p<1`$, while the all-measured channel has zero capacity. At $`\epsilon=1/2`$, the record is input independent and the channel is an erasure channel up to independent flags, with $`Q=Q^{(1)}=\max\{0,1-2p\}`$. Neither endpoint has a $`Q^{(1)}=0<Q`$ region in this model. The endpoint arguments are separate from formulas that divide by $`a`$ or $`c`$ in the interior. [P11](COMPLETE_PROOF.md#p11)
+**Noise endpoints.** At $`\epsilon=0`$, $`I_c=(1-p)S(\rho)`$ is positive for mixed inputs when $`p\lt 1`$, while the all-measured channel has zero capacity. At $`\epsilon=1/2`$, the record is input independent and the channel is an erasure channel up to independent flags, with $`Q=Q^{(1)}=\max\{0,1-2p\}`$. Neither endpoint has a $`Q^{(1)}=0\lt Q`$ region in this model. The endpoint arguments are separate from formulas that divide by $`a`$ or $`c`$ in the interior. [P11](COMPLETE_PROOF.md#p11)
 
 **Cone family.** For three equally probable axes at azimuths $`2\pi j/3`$ and common vertical component $`\sqrt\lambda`$,
 
@@ -191,7 +191,7 @@ The exact larger domain supplied by the source is $`0\leq\lambda\leq\min\{1/3,W(
 
 | Frozen ID | Canonical scientific content | Complete justification |
 |:--|:--|:--|
-| C1 | Full span gives the nonempty $`Q^{(1)}=0<Q`$ interval for every common interior error. | P01–P10. |
+| C1 | Full span gives the nonempty $`Q^{(1)}=0\lt Q`$ interval for every common interior error. | P01–P10. |
 | C2 | The one-use obstruction applies to every qubit input. | P01, P03–P08; computational evidence in P07 and P14. |
 | C3 | An all-record collective construction produces a positive finite block and asymptotic rate. | P02, P09–P10. |
 | C4 | A uniform entropy inequality and geometry separate the two costs. | P03–P08. |

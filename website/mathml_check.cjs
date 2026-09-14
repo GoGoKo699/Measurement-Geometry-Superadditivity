@@ -87,6 +87,48 @@ if (current && current.tex !== OLD_P71.replace(/\s*\\tag\{P7\.1\}$/, '')) {
   failures.push('P7.1 must retain the exact expression from the tagged control, with only its label moved');
 }
 
+// These payloads are independently bound to actual HTMLParser output by
+// test_html_math_transport.py. Feeding the damaged strings to MathJax must
+// reproduce the two exact messages reported in the screenshots. The rho case
+// is equally important: it loses its interval while still compiling normally.
+const htmlCases = JSON.parse(fs.readFileSync(
+  path.join(ROOT, 'website/tests/html_math_cases.json'), 'utf8',
+)).cases;
+const htmlTransport = [];
+for (const entry of htmlCases) {
+  const originalMml = nativeMathML(entry.original_tex);
+  assert(!/<merror(?:\s|>)/.test(originalMml), `${entry.name}: original TeX is invalid`);
+  let actualError = null;
+  let damagedMml = null;
+  try {
+    damagedMml = nativeMathML(entry.html_payload);
+  } catch (error) {
+    actualError = error.message;
+  }
+  assert.equal(actualError, entry.error, `${entry.name}: screenshot error control changed`);
+  if (entry.error === null) {
+    assert.notEqual(damagedMml, originalMml, `${entry.name}: silent truncation was not detected`);
+  }
+  const caseSource = entry.source_path === 'docs/COMPLETE_PROOF.md'
+    ? source : fs.readFileSync(path.join(ROOT, entry.source_path), 'utf8');
+  const caseMatches = [...caseSource.matchAll(/^```math\r?\n([\s\S]*?)\r?\n```[ \t]*(?=\r?$)/gm)]
+    .map(match => match[1]).filter(tex => tex.includes(entry.selector));
+  assert.equal(caseMatches.length, 1, `${entry.name}: current protected expression is missing or ambiguous`);
+  const currentTex = caseMatches[0];
+  const expectedTex = entry.original_tex.replaceAll('<', '\\lt ').replaceAll('>', '\\gt ');
+  assert.equal(currentTex, expectedTex, `${entry.name}: current TeX differs beyond the relation aliases`);
+  const currentMml = nativeMathML(currentTex);
+  assert.equal(currentMml, originalMml, `${entry.name}: relation aliases changed the mathematical tree`);
+  htmlTransport.push({
+    name: entry.name,
+    expected_error: entry.error,
+    observed_error: actualError,
+    silent_truncation_detected: entry.error === null,
+    current_mathml_matches_original: true,
+    current_mathml_sha256: sha256(currentMml),
+  });
+}
+
 const report = {
   schema_version: 1,
   source: path.relative(ROOT, sourcePath).split(path.sep).join('/'),
@@ -95,6 +137,7 @@ const report = {
   display_count: expressions.length,
   labeled_equation_count: expressions.filter(entry => entry.label).length,
   negative_control: {label: 'P7.1', mlabeledtr_count: labeledRows(control)},
+  html_transport: {case_count: htmlTransport.length, results: htmlTransport},
   results: expressions.map(({index, label, line, mathml, mlabeledtr_count}) => ({
     index, label, line, mlabeledtr_count,
     mathml_sha256: mathml ? sha256(mathml) : null,

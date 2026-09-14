@@ -38,7 +38,7 @@ If all supported axes lie in a plane, a common perpendicular direction attains r
 
 ## The two record-noise endpoints are different
 
-At $`\epsilon=0`$, the reported sign is the true sign, so each measured conditional reference state is pure. The flagged identity becomes $`I_c=(1-p)S(\rho)`$. Single-use coherent information is already positive for mixed inputs whenever $`p<1`$; at $`p=1`$ the output is classical and has zero quantum capacity.
+At $`\epsilon=0`$, the reported sign is the true sign, so each measured conditional reference state is pure. The flagged identity becomes $`I_c=(1-p)S(\rho)`$. Single-use coherent information is already positive for mixed inputs whenever $`p\lt 1`$; at $`p=1`$ the output is classical and has zero quantum capacity.
 
 At $`\epsilon=1/2`$, the reported sign is input independent. The channel is an erasure channel up to independent flags, with $`Q=Q^{(1)}=\max(0,1-2p)`$. Neither endpoint has a zero-one-use/positive-capacity region. These are direct physical endpoint arguments, separate from interior formulas that divide by $`a`$ or $`c`$. [P11: endpoint arguments](../docs/COMPLETE_PROOF.md#p11)
 

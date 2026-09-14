@@ -7,6 +7,7 @@ checked directly below. P7.1's exact horizontal quotients are restored to their
 stacked forms before comparison and independently checked below as well.
 The 23 external equation numbers are put back in their original tag positions
 before fingerprinting, so label loss, renumbering or reassignment still fails.
+The exact HTML-safe relation aliases are restored before source comparison.
 These tests do not establish scientific validity.
 Pandoc's GFM test exercises Markdown structure, not GitHub's authenticated renderer.
 """
@@ -77,6 +78,7 @@ def normalized_math(expression):
     output, environments = [], []
     depth = 0
     for token in TOKENS.findall(expression):
+        token = {r"\lt": "<", r"\gt": ">"}.get(token, token)
         if token.startswith(r"\begin{"):
             name = token[7:-1]
             environments.append((name, depth))
@@ -128,6 +130,15 @@ def replace_once(source, old, new):
     return source.replace(old, new)
 
 
+def restore_literal_relations(source):
+    """Undo only the exact aliases introduced to avoid HTML tag parsing."""
+    for span in reversed(math_spans(source)):
+        original = source[span.start:span.end]
+        restored = original.replace(r"\lt ", "<").replace(r"\gt ", ">")
+        source = source[:span.start] + restored + source[span.end:]
+    return source
+
+
 def restore_external_labels(source):
     labels = [m[2] for m in LABELED_DISPLAY.finditer(source)]
     assert tuple(labels) == PROOF_LABELS
@@ -142,7 +153,7 @@ def restore_external_labels(source):
 
 def baseline_equivalent_source(path, source):
     """Undo only the exact P07.1 and P07.2 presentation refactors."""
-    source = to_dollar_math(source)
+    source = to_dollar_math(restore_literal_relations(source))
     if path != "docs/COMPLETE_PROOF.md":
         return source
     source = restore_external_labels(source)
@@ -199,10 +210,10 @@ def test_mathematics_and_surrounding_prose_preserved(path):
 
 
 @pytest.mark.parametrize("path", WRAPPER_BASELINE)
-def test_protected_wrappers_preserve_exact_previous_document_bytes(path):
+def test_presentation_encodings_preserve_exact_previous_document_bytes(path):
     # These hashes precede the wrapper migration; changing any TeX or prose
     # byte, including whitespace or equation labels, must fail this check.
-    restored = to_dollar_math((REPO / path).read_text()).encode()
+    restored = to_dollar_math(restore_literal_relations((REPO / path).read_text())).encode()
     assert hashlib.sha256(restored).hexdigest() == WRAPPER_BASELINE[path]
 
 
@@ -255,6 +266,8 @@ def test_affected_exact_source_snapshots_are_raw_text_with_unchanged_bytes():
 @pytest.mark.parametrize("old,new", [
     (r"\operatorname{diag}(a,b)", r"\mathrm{diag}(a,b)"),
     (r"\operatorname{Tr}(A)", r"\mathrm{Tr}(A)"),
+    (r"0<t<x", r"0\lt t\lt x"),
+    (r"x>y", r"x\gt y"),
     (r"x=a+b", r"\begin{aligned}x&=a\\&+b\end{aligned}"),
     (r"\left[a+b\right]", r"\Bigl[a+b\Bigr]"),
     (r"\boxed{x=a+b}", r"\boxed{\begin{aligned}x&=a\\&+b\end{aligned}}"),
