@@ -26,7 +26,7 @@ The [figure atlas](figures.md) gives each panel's question, exact caption, sourc
 
 ## Canonical scientific account
 
-The [model](../../docs/MODEL_AND_CLAIMS.md) fixes definitions, assumptions and notation. The [complete proof](../../docs/COMPLETE_PROOF.md) supplies the entire internal argument. The [short argument](../../docs/FROZEN_ARGUMENT.md) gives a compact route through the result. The [notation crosswalk](../../docs/NOTATION_CROSSWALK.md) and [source ledger](../../docs/SOURCE_TO_CANONICAL.md) explain how source fragments became the canonical account.
+The [model](../../docs/MODEL_AND_CLAIMS.md) fixes definitions, assumptions and notation. The [complete proof](../../docs/COMPLETE_PROOF.md) supplies the entire internal argument. The [project overview](index.md) gives a compact route through the result. The [notation crosswalk](../../docs/NOTATION_CROSSWALK.md) and [source ledger](../../docs/SOURCE_TO_CANONICAL.md) explain how source fragments became the canonical account.
 
 The [reference record](../../docs/REFERENCES.md) distinguishes standard tools, closest antecedents, and the bounded priority assessment. It does not certify an absolute-first claim.
 

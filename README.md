@@ -50,7 +50,7 @@ The PDF/SVG/PNG downloads and separate vector panels are available with [their i
 
 ## Read and reproduce
 
-Read [the short scientific story](docs/FROZEN_ARGUMENT.md), [model and claim scope](docs/MODEL_AND_CLAIMS.md), [complete proof](docs/COMPLETE_PROOF.md), and [references with their roles](docs/REFERENCES.md). The channel is an established incomplete-erasure form; the construction uses known coherent-information coding principles. The asserted new content and priority limits are distinguished in those documents and the source record, not promoted to an absolute-first claim.
+Read [the project overview](reader/README.md), [model and claim scope](docs/MODEL_AND_CLAIMS.md), [complete proof](docs/COMPLETE_PROOF.md), and [references with their roles](docs/REFERENCES.md). The channel is an established incomplete-erasure form; the construction uses known coherent-information coding principles. The asserted new content and priority limits are distinguished in those documents and the source record, not promoted to an absolute-first claim.
 
 ```bash
 python -m venv .venv
