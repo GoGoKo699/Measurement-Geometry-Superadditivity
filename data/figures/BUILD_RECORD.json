@@ -3,11 +3,11 @@
   "date": "2026-09-08",
   "source": {
     "root": "baseline",
-    "manifest_sha256": "8c5fc6b2cdd9a2a3dc4c359b0d95bfb9310d63a828cf8d9c4a942e1ef4bf3666",
+    "manifest_sha256": "5409112a94e89df973c1ab2f2678b002948c57f200275ba8c593ed0d3881edea",
     "verified_manifest_entries": 5,
     "selected_members": {
       "docs/MODEL_AND_CLAIMS.md": "49faf18792663cb87aadd27dd4e0663fbf77f776a841575bd4932375a9163a2f",
-      "docs/COMPLETE_PROOF.md": "ef434fff312a1306189c02fa5697ee74e0244883f4012be62110d2e4630e4ed9",
+      "docs/COMPLETE_PROOF.md": "d1908800a362e5449cf2cbd0aab91e62f887945cd2d7d67262af1c030bb8af79",
       "docs/FROZEN_ARGUMENT.md": "bdada1edb06c814ea563068317e38c09c3d96dfe539bbddf7523bd0a49ca2ad7",
       "provenance/SOURCE_REGISTER.json": "7af71a2682b5965aac7a25346b01b9893845471f040c613413a04dc523f8ff17",
       "data/figures/figure1_original_witness140.json": "3aa5681b911b6b63dac8ddc9eb23ea6fb4882308315607b0b15b56a51eb1e2f8"

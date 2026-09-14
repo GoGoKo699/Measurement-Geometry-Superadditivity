@@ -3,7 +3,9 @@
 The fingerprints were computed from commit 49c2434e3f5bc04a031fea21b32c0eaf363886d6.
 They permit spacing, delimiter sizing, aligned layout and the two stated operator
 aliases. One exact P07.2 factorization is expanded before comparison and also
-checked directly below. These tests do not establish scientific validity.
+checked directly below. P7.1's exact horizontal quotients are restored to their
+stacked forms before comparison and independently checked below as well.
+These tests do not establish scientific validity.
 Pandoc's GFM test exercises Markdown structure, not GitHub's authenticated renderer.
 """
 from __future__ import annotations
@@ -45,6 +47,8 @@ RENDER_COUNTS = {
 
 ORIGINAL_P08 = r"""$$P(a)-\frac{\arcsin\sqrt a}{\sqrt a}
 >a\left(\frac1{12}+\frac{7a}{40}-\frac{193a^2}{840}\right)\geq\frac a{35}.$$"""
+ORIGINAL_P71 = r"\frac{\mathscr D}{ca}=V(a)\frac{C_\perp(t,c)}c+W(a)C_\parallel(t,c)-P(a)h_2(t). \tag{P7.1}"
+HORIZONTAL_P71 = r"\mathscr D/(ca)=V(a)\bigl[C_\perp(t,c)/c\bigr]+W(a)C_\parallel(t,c)-P(a)h_2(t). \tag{P7.1}"
 ORIGINAL_P73 = r"""\mu(c)=(1-c\bar P(c))\left[(1-\delta_{\mathrm{cert}})\ln(1/c)-\delta_{\mathrm{cert}}\ln(1/\delta_{\mathrm{cert}})-(1+c)\delta_{\mathrm{cert}}\right]
 -(\bar P(c)-1)\eta\ln\frac{1-\epsilon}{\epsilon}. \tag{P7.3}"""
 TAIL_BRACKET = r"B_d(c):=(1-d)\ln(1/c)-d\ln(1/d)-(1+c)d."
@@ -111,9 +115,10 @@ def replace_once(source, old, new):
 
 
 def baseline_equivalent_source(path, source):
-    """Expand the one expressly authorized P07.2 presentation refactor."""
+    """Undo only the exact P07.1 and P07.2 presentation refactors."""
     if path != "docs/COMPLETE_PROOF.md":
         return source
+    source = replace_once(source, HORIZONTAL_P71, ORIGINAL_P71)
     source = replace_once(
         source,
         r"$d:=\delta_{\mathrm{cert}}=10^{-6}$",
@@ -284,6 +289,29 @@ def test_reported_p08_inequality_is_one_safe_unchanged_chain():
     assert normalized_math(current) == normalized_math(DISPLAY.search(ORIGINAL_P08).group(1))
 
 
+def test_normalized_deficit_uses_equivalent_single_row_horizontal_quotients():
+    current = proof_expression(r"\tag{P7.1}")
+    assert current == HORIZONTAL_P71
+    assert r"\frac" not in current and r"\begin" not in current
+    assert r"\\" not in current and "\n" not in current
+    assert current.count("/") == 2
+    restored = replace_once(current, r"\mathscr D/(ca)", r"\frac{\mathscr D}{ca}")
+    restored = replace_once(restored, r"\bigl[C_\perp(t,c)/c\bigr]", r"\frac{C_\perp(t,c)}c")
+    assert normalized_math(restored) == normalized_math(ORIGINAL_P71)
+
+
+@pytest.mark.parametrize("old,new", [
+    ("/(ca)", "/c"),
+    (r"C_\perp(t,c)/c", r"C_\perp(t,c)/a"),
+    ("-P(a)", "+P(a)"),
+])
+def test_p71_inverse_rejects_changes_to_denominators_and_signs(old, new):
+    source = (REPO / "docs/COMPLETE_PROOF.md").read_text()
+    changed = replace_once(source, HORIZONTAL_P71, HORIZONTAL_P71.replace(old, new))
+    with pytest.raises(AssertionError):
+        baseline_equivalent_source("docs/COMPLETE_PROOF.md", changed)
+
+
 def test_lower_input_tail_uses_exact_factored_two_row_form():
     assert r"\begin{aligned}" not in ORIGINAL_P73 and r"\\" not in ORIGINAL_P73
     proof = (REPO / "docs/COMPLETE_PROOF.md").read_text()
@@ -332,6 +360,10 @@ def test_changed_sources_convert_to_mathml_without_tex_fallback(path):
     assert len(soup.find_all("math")) == RENDER_COUNTS[path]["math_count"]
     assert len(soup.select('math[display="block"]')) == RENDER_COUNTS[path]["display"]
     if path == "docs/COMPLETE_PROOF.md":
+        matches = [m for m in soup.find_all("math") if r"\tag{P7.1}" in m.annotation.get_text()]
+        assert len(matches) == 1
+        assert matches[0].find(["mtable", "mfrac"]) is None
+        assert [token.get_text() for token in matches[0].find_all(["mi", "mo"])].count("/") == 2
         for marker, rows in [(r"\tag{P7.3}", 3)]:
             matches = [m for m in soup.find_all("math") if marker in m.annotation.get_text()]
             assert len(matches) == 1

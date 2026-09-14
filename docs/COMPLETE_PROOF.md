@@ -307,7 +307,7 @@ $$c_*:=2^{-28}\leq c\leq\frac{24}{25},\qquad 0<t\leq\frac12,$$
 
 divide (P4.1) by the positive factor $ca$:
 
-$$\frac{\mathscr D}{ca}=V(a)\frac{C_\perp(t,c)}c+W(a)C_\parallel(t,c)-P(a)h_2(t). \tag{P7.1}$$
+$$\mathscr D/(ca)=V(a)\bigl[C_\perp(t,c)/c\bigr]+W(a)C_\parallel(t,c)-P(a)h_2(t). \tag{P7.1}$$
 
 Here $C(t,c)$ means the endpoint cost evaluated at the unique $\epsilon=(1-\sqrt{1-c})/2$ in $[0,1/2]$. To make the source code's coefficient argument explicit, define
 

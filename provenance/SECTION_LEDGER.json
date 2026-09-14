@@ -895,7 +895,7 @@
       "canonical_anchor": "p07",
       "canonical_line_start": 297,
       "canonical_line_end": 365,
-      "canonical_fragment_sha256": "7df59308a98687c102bbf2373cd49a70decfc4a570d2ffb5f7009ab1130709ab",
+      "canonical_fragment_sha256": "a170ec725fb202b29f8a8682b1bc75bc527cd43031e7d11ef7c88338f108cce6",
       "claims": [
         "C2",
         "C4"
