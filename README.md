@@ -72,6 +72,10 @@ Use new output directories. The default reproduction rebuilds the plotting input
 
 `docs/` contains the canonical scientific account; `certificates/` holds the rational proof input; `verification/` contains the independent arithmetic implementations; `data/figures/` contains plotting inputs; and `figures/` contains the figures, captions and renderer. The [evidence guide](reader/verification.md) explains how to inspect and reproduce the computational results.
 
+## Manuscript and collaboration
+
+Manuscript preparation is currently on hold. Researchers interested in collaborating on this work or its manuscript are welcome to contact **Ruge Lin** at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
+
 ## Reuse, citation and contact
 
 Original code is licensed under **MIT**. Original prose, figures and data are licensed under **CC BY 4.0**, where the relevant rights exist. [LICENSE.md](LICENSE.md) defines the scope; [third-party notices](THIRD_PARTY_NOTICES.md) retain the separate terms of external components. Cite the repository using [CITATION.cff](CITATION.cff) and identify the exact commit used.
