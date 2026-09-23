@@ -16,6 +16,8 @@ Here $`Q^{(1)}`$ is coherent information optimized over every single-qubit input
 
 The learning route connects the result to selected passages from **John Preskill, Quantum Shannon Theory, arXiv:1604.07450v5**, then supplies this project's channel, coding and geometric explanations. It does not require the whole chapter or another tutorial. [Start at the focused reading map](reader/background.md), or bypass it and follow [the proof guide](reader/proof-guide.md).
 
+**For search and AI-assisted reading:** [Topic and source guide (`llms.txt`)](llms.txt) describes when this repository is relevant and links its exact claims, proof, verification evidence, and citation.
+
 These pages use ordinary GitHub Markdown and need no installation or ZIP download. The optional HTML site has its own navigation, local search and color controls; those controls are not executed by GitHub's file renderer. Both views are generated from `website/pages/`, with shared tutorial metadata in `website/learning_bridge.json`. [Build and maintenance instructions](WEBSITE.md)
 
 ## One finite illustration

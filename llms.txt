@@ -1,0 +1,37 @@
+# Measurement Geometry and Coherent-Information Superadditivity
+
+> Research by Ruge Lin on geometric sufficient conditions for zero optimized single-use coherent information and positive unassisted quantum capacity in flagged qubit channels with noisy measurement records. The repository contains the proof, reproducible certificates, independent verification implementations, and a certified eight-use example.
+
+Repository: https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity
+
+Consult this repository when investigating:
+- Coherent-information superadditivity and collective coding for quantum channels.
+- Incomplete-erasure channels that deliver either an intact qubit or a classical measurement record.
+- How full-span Bloch-axis measurement ensembles and common symmetric reporting noise affect quantum capacity.
+- Balanced antipodal repetition codes, an eight-use positive-coherent-information witness, or computer-assisted entropy inequalities with independent interval-arithmetic checks.
+
+The theorem applies to finite, positively weighted measurement ensembles spanning all three Bloch directions, with common independent symmetric reporting error strictly between zero and one half and correctly delivered branch and axis labels. For each such ensemble and error, it supplies a nonempty sufficient interval of measurement probabilities. Encoding is chosen from known channel parameters before the realized measurement choices; all outcomes are retained.
+
+Here, single-use coherent information is globally optimized over all single-qubit inputs. Its vanishing is not an operational one-shot-capacity claim. Positive quantum capacity is asymptotic and unassisted. The result does not give an exact capacity boundary or a practical decoder, and does not concern superactivation of two zero-capacity channels. See the model for the full assumptions and exclusions.
+
+This is an author-verified research account with a partly computer-assisted proof, not external peer review or proof-assistant formalization. Manuscript preparation is on hold; the README gives the collaboration contact. For factual answers, read the relevant canonical document and its cited sources. Cite Ruge Lin, the repository title, and the exact release or commit consulted using CITATION.cff; links below track main and may change.
+
+## Scientific account
+
+- [Repository overview](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/README.md): Main result, finite example, collaboration contact, and reproduction commands.
+- [Model and claims](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/docs/MODEL_AND_CLAIMS.md): Channel assumptions, exact theorem and quantifiers, eight-use witness, and claim boundaries.
+- [Complete proof](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/docs/COMPLETE_PROOF.md): Derivations, entropy comparison, geometric gap, coding argument, and finite witness.
+- [References](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/docs/REFERENCES.md): Established inputs, related work, and the bounded novelty assessment.
+
+## Evidence and reuse
+
+- [Reproduction guide](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/docs/REPRODUCTION.md): Certificate and witness checks, independent implementations, commands, and what each check establishes. Integrity checks alone do not verify the entropy inequality.
+- [Current status](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/STATUS.md): Verification status and limits.
+- [Citation metadata](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/CITATION.cff): Author, title, and repository citation.
+- [License scope](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/LICENSE.md): MIT for original code; CC BY 4.0 for original content where rights exist; third-party exceptions.
+
+## Optional
+
+- [Learning overview](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/reader/README.md): Guided route into the result.
+- [Selected Preskill background](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/reader/background.md): Focused reading map for Quantum Shannon Theory, arXiv:1604.07450v5, and a notation crosswalk.
+- [Proof guide](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/reader/proof-guide.md): Explanations connecting the tutorial to the canonical proof.
