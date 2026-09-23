@@ -214,9 +214,24 @@ def test_presentation_encodings_preserve_exact_previous_document_bytes(path):
     # These hashes precede the wrapper migration; changing any TeX or prose
     # byte, including whitespace or equation labels, must fail this check.
     source = (REPO / path).read_text()
-    # Undo the exact release-navigation edit before checking the earlier math
-    # migration baseline. Do not replace the original mathematical fingerprints.
+    # Undo the exact editorial additions and release-navigation edit before
+    # checking the earlier math migration baseline. Keep its original hashes.
     if path == 'README.md':
+        source = replace_once(
+            source,
+            '## Manuscript and collaboration\n\n'
+            'Manuscript preparation is currently on hold. Researchers interested in '
+            'collaborating on this work or its manuscript are welcome to contact '
+            '**Ruge Lin** at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).\n\n',
+            '',
+        )
+        source = replace_once(
+            source,
+            '\n**For search and AI-assisted reading:** [Topic and source guide (`llms.txt`)](llms.txt) '
+            'describes when this repository is relevant and links its exact claims, proof, '
+            'verification evidence, and citation.\n',
+            '',
+        )
         source = replace_once(source, 'Read [the project overview](reader/README.md)',
                               'Read [the short scientific story](docs/FROZEN_ARGUMENT.md)')
     elif path.startswith('reader/'):
