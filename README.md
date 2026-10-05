@@ -74,9 +74,9 @@ Use new output directories. The default reproduction rebuilds the plotting input
 
 `docs/` contains the canonical scientific account; `certificates/` holds the rational proof input; `verification/` contains the independent arithmetic implementations; `data/figures/` contains plotting inputs; and `figures/` contains the figures, captions and renderer. The [evidence guide](reader/verification.md) explains how to inspect and reproduce the computational results.
 
-## Manuscript and collaboration
+## Purpose and contact
 
-Manuscript preparation is currently on hold. Researchers interested in collaborating on this work or its manuscript are welcome to contact **Ruge Lin** at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
+This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact **Ruge Lin** at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
 
 ## Reuse, citation and contact
 
