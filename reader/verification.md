@@ -20,7 +20,6 @@
 - [Notation crosswalk](../docs/NOTATION_CROSSWALK.md)
 - [Proof and evidence index](../docs/SOURCE_TO_CANONICAL.md)
 - [Visual design](visual-design.md)
-- [Repository guide](status.md)
 
 </details>
 
@@ -42,10 +41,13 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python verify.py
+python integrity/check_scientific.py
 python -m pytest -q -p no:cacheprovider tests
 ```
 
 `verify.py` checks integrity, protected figures, provenance, source links, and verifier boundaries. It does **not** verify the entropy inequality. The unit tests include method and rejection controls, but they are not the complete-domain certificate.
+
+`integrity/check_scientific.py` compares the current scientific files and figure exports with their protected SHA-256 identities without Git history. [Protected file identities](../integrity/SCIENTIFIC_FILES.json) · [Integrity checker source](../integrity/check_scientific.py)
 
 ## Rebuild the figures
 
@@ -71,11 +73,7 @@ The canonical cover has 512 noise bands and 29,635 input leaves. Evidence record
 
 To return to the explanation, see [the all-record witness](channel.md#eight-use-witness) and [where the scalar proof enters](proof-guide.md#scalar-proof). The [selected background](background.md) explains the coding quantities; it is not an additional certificate or a software dependency.
 
-## Check the current revision
-
-Run `python integrity/check_scientific.py` to compare the current scientific files and figure exports with their protected SHA-256 identities. This check is direct and works without Git history. It does not execute a certificate verifier.
-
-[Protected file identities](../integrity/SCIENTIFIC_FILES.json) · [Integrity checker source](../integrity/check_scientific.py)
+## Check automated results
 
 [GitHub Actions](https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity/actions) shows the workflows for each commit. Open the run for the revision you are using and inspect its commands and result; a configured, skipped or running check is not a pass. Fresh local output directories let you inspect the same obligations yourself. The [website guide](../WEBSITE.md) includes the separate Markdown, HTML and loopback browser checks.
 

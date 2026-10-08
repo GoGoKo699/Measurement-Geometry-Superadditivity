@@ -20,7 +20,6 @@
 - [Notation crosswalk](../docs/NOTATION_CROSSWALK.md)
 - [Proof and evidence index](../docs/SOURCE_TO_CANONICAL.md)
 - [Visual design](visual-design.md)
-- [Repository guide](status.md)
 
 </details>
 
@@ -75,11 +74,11 @@ The [reference record](../docs/REFERENCES.md) identifies standard tools and the 
 
 The project uses MIT for original code and CC BY 4.0 for original prose, figures and data where rights exist. See the [license scope](../LICENSE.md), [MIT terms](../LICENSES/MIT.txt), [CC BY 4.0 terms](../LICENSES/CC-BY-4.0.txt), [third-party notices](../THIRD_PARTY_NOTICES.md) and [repository citation](../CITATION.cff). Preskill's external tutorial and other cited sources retain their own terms.
 
-Contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com). [Repository guide](status.md)
+Contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
 
 
 ---
 
-[Previous: References and their roles](../docs/REFERENCES.md) · [Continue: Repository guide](status.md)
+[Previous: References and their roles](../docs/REFERENCES.md) · [Return to the overview](README.md)
 
 [Page source](../website/pages/materials.md)

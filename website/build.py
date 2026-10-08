@@ -15,6 +15,7 @@ WEB=ROOT/'website'
 sys.path.insert(0,str(WEB))
 from learning_bridge import METADATA, expand_background, load_bridge, validate_routes
 from markdown_math import to_dollar_math
+from repository_preview import page_path
 # Download inventory only. The operative root license defines reuse scope.
 REUSE_DOWNLOADS=(
  'LICENSE.md','LICENSES/MIT.txt','LICENSES/CC-BY-4.0.txt',
@@ -142,7 +143,7 @@ def site_html(page,body,title,toc,config):
   links.append(f'<a class="nav-link" href="{p["slug"]}.html"{current}>{html.escape(p["title"])}</a>')
  toc_html=''.join(f'<a href="#{html.escape(i)}">{html.escape(t)}</a>' for i,t in toc)
  source=f'files/{page["source"]}'
- canonical='<p class="source-note">Canonical scientific source. <a href="status.html">Repository guide</a>.</p>' if page.get('canonical') else ''
+ canonical='<p class="source-note">Canonical scientific source.</p>' if page.get('canonical') else ''
  previous=next((p for p in config['pages'] if p['slug']==page.get('previous')),None)
  nextpage=next((p for p in config['pages'] if p['slug']==page.get('next')),None)
  next_html=f'<a class="next-link" href="{nextpage["slug"]}.html"><small>Continue reading</small>{html.escape(nextpage["title"])}</a>' if nextpage else '<a class="next-link" href="index.html"><small>Return to</small>The project</a>'
@@ -157,7 +158,7 @@ def site_html(page,body,title,toc,config):
  return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="color-scheme" content="light"><meta name="description" content="Measurement geometry, noisy classical records, and a geometric guarantee of coherent-information superadditivity. Scientific source, proof, figures, and reproducibility."><title>{html.escape(page['title'])} | Measurement Geometry</title><link rel="stylesheet" href="assets/style.css"><script src="assets/search-index.js" defer></script><script src="assets/site.js" defer></script></head>
 <body><noscript><style>.search-open,.menu-open,.figure-controls button{{display:none!important}}@media(max-width:780px){{.sidebar{{display:block!important;position:static;width:100%;max-height:none;box-shadow:none;columns:2}}.sidebar a,.nav-label{{break-inside:avoid}}.nav-note{{column-span:all}}}}</style></noscript><a class="skip" href="#main">Skip to content</a><header class="topbar"><a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span><span><strong>Measurement Geometry</strong><small>Coherent-information superadditivity</small></span></a><div class="top-actions"><a href="materials.html">Source materials</a><a href="{config['repository']}" rel="noreferrer">GitHub</a><button class="search-open" type="button" aria-haspopup="dialog">Search <kbd>/</kbd></button><button class="menu-open" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button></div></header>
-<div class="shell"><nav id="site-navigation" class="sidebar" aria-label="Project navigation">{''.join(links)}<p class="nav-note">Local reading edition.</p></nav><main id="main" class="content {'home' if page['slug']=='index' else ''}"><div class="eyebrow">{html.escape(page['group'])}</div><h1>{html.escape(title or page['title'])}</h1><div class="page-meta"><a href="{source}">Read source Markdown</a><a href="status.html">Repository guide</a></div>{canonical}<article class="document">{body}</article><footer class="article-footer">{next_html}<p class="fineprint"><a href="references.html">References</a> · <a href="visual-design.html">Visual design</a> · <a href="files/BUILD_RECORD.json">Build record</a><br><a href="files/LICENSE.md">License scope</a> · <a href="files/CITATION.cff">Citation</a> · <a href="files/THIRD_PARTY_NOTICES.md">Third-party notices</a></p></footer></main><aside class="toc" aria-label="On this page"><div class="toc-label">On this page</div>{toc_html}</aside></div>
+<div class="shell"><nav id="site-navigation" class="sidebar" aria-label="Project navigation">{''.join(links)}<p class="nav-note">Local reading edition.</p></nav><main id="main" class="content {'home' if page['slug']=='index' else ''}"><div class="eyebrow">{html.escape(page['group'])}</div><h1>{html.escape(title or page['title'])}</h1><div class="page-meta"><a href="{source}">Read source Markdown</a><a href="materials.html">Supporting materials</a></div>{canonical}<article class="document">{body}</article><footer class="article-footer">{next_html}<p class="fineprint"><a href="references.html">References</a> · <a href="visual-design.html">Visual design</a> · <a href="files/BUILD_RECORD.json">Build record</a><br><a href="files/LICENSE.md">License scope</a> · <a href="files/CITATION.cff">Citation</a> · <a href="files/THIRD_PARTY_NOTICES.md">Third-party notices</a></p></footer></main><aside class="toc" aria-label="On this page"><div class="toc-label">On this page</div>{toc_html}</aside></div>
 <dialog class="search-dialog" aria-labelledby="search-heading"><div class="search-heading"><h2 id="search-heading">Search the project</h2><button class="search-close" aria-label="Close search" type="button">Close</button></div><label class="visually-hidden" for="search-input">Words or quantities</label><input id="search-input" class="search-input" type="search" placeholder="Try: coplanar, eight-use, certificate" autocomplete="off"><p class="search-message" aria-live="polite">Search the explanations, proof sections, and figure captions.</p><ul class="search-results"></ul></dialog><noscript><p>JavaScript is disabled. Every page, equation, figure and download remains available through the navigation; search and color switching are optional enhancements.</p></noscript></body></html>'''
 
 def build(out):
@@ -165,7 +166,8 @@ def build(out):
  require(not out.exists(),'Use a fresh output directory: '+str(out));out.mkdir(parents=True)
  checked=verify_baseline();config=load(WEB/'site.json');palette=load(WEB/'palette.json')
  validate_routes(config);bridge=load_bridge()
- page_map={p['source']:p['slug']+'.html' for p in config['pages']};page_map.update({'README.md':'index.html','STATUS.md':'status.html'})
+ page_map={p['source']:p['slug']+'.html' for p in config['pages']};page_map.update({'README.md':'index.html'})
+ page_map.update({page_path(p):p['slug']+'.html' for p in config['pages']})
  shutil.copytree(WEB/'assets',out/'assets')
  # Explicit allowlist: scientific sources, current reader sources and reuse terms.
  baseline=load(ROOT/'BASELINE_MANIFEST.json')['files'];sources=set(baseline)|{'BASELINE_MANIFEST.json'}

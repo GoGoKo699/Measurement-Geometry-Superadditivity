@@ -26,7 +26,7 @@ The proof combines analytical bounds with a reproducible interval-arithmetic cer
 ## Evidence and reuse
 
 - [Reproduction guide](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/docs/REPRODUCTION.md): Certificate and witness checks, independent implementations, commands, and what each check establishes. Integrity checks alone do not verify the entropy inequality.
-- [Repository guide](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/STATUS.md): Reading routes, repository contents and verification evidence.
+- [Supporting materials](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/reader/materials.md): Claim-to-evidence map, verification sources and numerical inputs.
 - [Citation metadata](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/CITATION.cff): Author, title, and repository citation.
 - [License scope](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/LICENSE.md): MIT for original code; CC BY 4.0 for original content where rights exist; third-party exceptions.
 
