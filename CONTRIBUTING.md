@@ -1,6 +1,6 @@
 # Contributing
 
-This repository documents a bounded channel-theory result, its proof, independent numerical checks and three scientific figures. Start with [the overview](README.md), [current status](STATUS.md) and [the model and claim boundaries](docs/MODEL_AND_CLAIMS.md). A proposed extension should be discussed separately from a correction to an existing claim.
+This repository documents a bounded channel-theory result, its proof, independent numerical checks and three scientific figures. Start with [the overview](README.md), [supporting materials](reader/materials.md) and [the model and claim boundaries](docs/MODEL_AND_CLAIMS.md). A proposed extension should be discussed separately from a correction to an existing claim.
 
 ## Report a problem
 

@@ -100,15 +100,6 @@
       "comment": "Reader explanation traced to canonical sources; no scientific additions."
     },
     {
-      "path": "website/pages/status.md",
-      "source_anchors": [
-        "docs/MODEL_AND_CLAIMS.md#m07",
-        "docs/MODEL_AND_CLAIMS.md#m08"
-      ],
-      "scientific_additions_authorized": false,
-      "comment": "Reader explanation traced to canonical sources; no scientific additions."
-    },
-    {
       "path": "website/pages/visual-design.md",
       "source_anchors": [
         "website/palette.json",

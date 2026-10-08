@@ -3,15 +3,15 @@
   "math_reference_commit": "2f13fce20d8ff8bd9519c3878e3403dc7b9fe402",
   "documents": {
     "README.md": {
-      "document": "4b9b863d1a1dff45a1b1feaa3b3fc3bc761a621a122b675b46227105d12f067b",
+      "document": "afe63f6b8968d96ea36d12675ef4fb8bb4ad3b5f205bffccd48d082bfa8abd8e",
       "math_sequence": "5627003e5b3a0e4ae9931ef0aacdec57b9c7c5dbcccb6b4b646a342a3f5a237a"
     },
     "docs/COMPLETE_PROOF.md": {
-      "document": "f64fea78a379e993a46f00a5be1fe80f046945904354a75295192f53c2c065fa",
+      "document": "5f3a5b59709a66a5944df8384fe171729ee421e5cc5262d8377b667215fcf6eb",
       "math_sequence": "c31ffa8f321826e9ebe9512eeee4cffb344ae96108b19647bfd3df9af935806c"
     },
     "docs/MODEL_AND_CLAIMS.md": {
-      "document": "a370aaea79216562b9e4c7de3ef6c429d72e7ef9aba2f9c6a0c7e8812c3d6563",
+      "document": "25023affa63d6c88d529ef7b621897ee3af680b2d78de118f8bc0ce76c851600",
       "math_sequence": "0051b8ca28d223a68520c6b7716c31547f5e9aed7673732eda1c15171d18a7a2"
     },
     "docs/NOTATION_CROSSWALK.md": {
@@ -35,27 +35,27 @@
       "math_sequence": "8b9dc8b163e93bc79578dc34db55f9aa4a21a0e0c49df6a5851086f7e3275e8c"
     },
     "reader/README.md": {
-      "document": "d3b476fc58dab1092e497287d69017ff2e65e7f384276af5d44e811fc3870b1d",
+      "document": "f9168af76bc2b64866aa0ec7ba27792c405f7edddb41af192d2d048f57015715",
       "math_sequence": "350ac6eef94131be701ba0220ce761e96e2132f6ed1a9c921ae51dc3e5eb1937"
     },
     "reader/background.md": {
-      "document": "e67d4de245a3b1f13087df15d586d6d15e47e5c3e4a27a39ed31f1959bcb6233",
+      "document": "479a35882a4dbff119b1f3c80589e0f1ff65e7941700576ff62586d1dcb7bfcb",
       "math_sequence": "13940f3e46231290c57ef82ace971e41a4c06ec137602797969ad419c10ea578"
     },
     "reader/channel.md": {
-      "document": "91a3025001ba58b5c06af8b827427ace0d6c694ab9a0a9a165b799d59322963a",
+      "document": "4afe7fe328c57f5df8c4471c1f332591a61497100749a5fae48a6a6b43e49801",
       "math_sequence": "ac07dd5dcdaff488aed3edba41436988a453c179f08b554d4599ca2c6c2818c2"
     },
     "reader/figures.md": {
-      "document": "237a6296e8e559f3c5673c73bc8fa80c9c71e68dfae58fb519ed43d7aa5a9ccb",
+      "document": "84c39eb70026e78e27561536320b832446dcb13f763d4ffa751767a2294d1a49",
       "math_sequence": "3ea51f8fcc88fbac6091119eb76583c6b8f4fd4e780f0eecf2647f6a4e0e00a3"
     },
     "reader/limits.md": {
-      "document": "376845dbbd1ab13ee1964b31a55a7520d9bea2f4df6f6b7ff3caacda12aaa4eb",
+      "document": "f68c86638afd82c18fb181c066291de3469df3be099e1c2ee546b0c19db7f7dc",
       "math_sequence": "6054ef53fcb1cafadf51ecf6d3b568ba27dc387addfec6afbc55649562696a25"
     },
     "reader/proof-guide.md": {
-      "document": "cab4de9c04cbb2c482b60b128a0b18748a7cfca7c60ad1f6d640ebb22c9dfb72",
+      "document": "0f249bf18a1fe9d9ab9f6e2b8a64e43609da4c720fb9ad4213a8ffd10a6328b4",
       "math_sequence": "f4c13a442011c0caecc098f649b15ca130b5638bcce818d4ef4f8e190cb757f0"
     },
     "website/pages/background.md": {
@@ -67,7 +67,7 @@
       "math_sequence": "ac07dd5dcdaff488aed3edba41436988a453c179f08b554d4599ca2c6c2818c2"
     },
     "website/pages/index.md": {
-      "document": "34d4b69d9ba5409be6c5cbbdf1d523be27923ccf8eb89a7b68b2abd941b64a06",
+      "document": "e2248b22812409499cf5097edd4da6f6f127134135f0bdfb9359d5030ab6ee5f",
       "math_sequence": "350ac6eef94131be701ba0220ce761e96e2132f6ed1a9c921ae51dc3e5eb1937"
     },
     "website/pages/limits.md": {
@@ -80,8 +80,8 @@
     }
   },
   "surrounding_prose": {
-    "docs/COMPLETE_PROOF.md": "85cc0a05a2ed90d8b8c68efaf8604da6ec52536b9cec41b57b0da325ab97395a",
-    "docs/MODEL_AND_CLAIMS.md": "160f647b6f1af6bd9e997b2c434b5df38e626926b080b7505d96a074b7e0ee50",
+    "docs/COMPLETE_PROOF.md": "ea0f5a33091f6973e8e744b0f8770f5f2c0b00afc85eebcc7c9f4f51891c3bdf",
+    "docs/MODEL_AND_CLAIMS.md": "0996ad4440c3a4f5b1438ccd8967280464e82e7b0e847f69259c1bd8bdb711a2",
     "website/pages/channel.md": "d96cbd71af9f1982e09bda5dda97be002eddc12b9fe03136f3045aea245231fb"
   }
 }

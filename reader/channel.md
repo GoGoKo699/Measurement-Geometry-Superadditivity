@@ -20,7 +20,6 @@
 - [Notation crosswalk](../docs/NOTATION_CROSSWALK.md)
 - [Proof and evidence index](../docs/SOURCE_TO_CANONICAL.md)
 - [Visual design](visual-design.md)
-- [Repository guide](status.md)
 
 </details>
 

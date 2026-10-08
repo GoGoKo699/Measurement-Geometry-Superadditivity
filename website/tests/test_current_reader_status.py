@@ -6,21 +6,22 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def test_current_completion_pages_keep_local_scope_and_expert_routes():
-    for name in ('README.md', 'STATUS.md', 'website/pages/status.md'):
+    for name in ('README.md', 'website/pages/index.md'):
         text = (ROOT / name).read_text()
-        assert 'certificate' in text
         assert 'verification' in text.lower()
         assert 'manuscript' not in text.lower()
         assert 'external peer review' not in text.lower()
-        assert 'mailto:gogoko699@gmail.com' in text
         assert 'COMPLETE_PROOF.md' in text
         assert 'MODEL_AND_CLAIMS.md#m04' in text
         assert 'release/public-readiness-v1' not in text
         assert 'authorized integration' not in text
+    readme = (ROOT / 'README.md').read_text()
+    assert 'certificate' in readme
+    assert 'mailto:gogoko699@gmail.com' in readme
 
 
 def test_reader_pages_do_not_depend_on_administrative_history():
-    for name in ('status', 'materials', 'verification'):
+    for name in ('materials', 'verification'):
         text = (ROOT / f'website/pages/{name}.md').read_text()
         assert 'publication/' not in text
         assert 'Provenance and maintenance records' not in text

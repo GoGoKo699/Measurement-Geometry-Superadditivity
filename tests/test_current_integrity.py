@@ -215,7 +215,7 @@ def test_symlinked_parent_directory_fails(checkout):
 def test_current_editorial_identity_has_no_historical_value_dependency(checkout):
     path = checkout / "BASELINE_MANIFEST.json"
     record = json.loads(path.read_text())
-    for relative in ("README.md", "STATUS.md"):
+    for relative in ("README.md",):
         current = checkout / relative
         current.write_text("Current editorial account.\n")
         record["files"][relative] = hashlib.sha256(current.read_bytes()).hexdigest()

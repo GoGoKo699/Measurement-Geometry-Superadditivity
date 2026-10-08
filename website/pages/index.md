@@ -36,10 +36,8 @@ The [proof guide](proof-guide.md#geometric-guarantee) joins an obstruction for e
 
 ## Read, inspect, reproduce
 
-The [repository guide](status.md) connects the model, proof, computational evidence and figures.
-
 The learning route is **selected background → channel and witness → geometric proof guide → exact theorem and proof → limits and verification**. Every stage can be opened directly. You do not need to run software to read the argument.
 
 Incomplete-erasure channels, repetition coding and superadditivity are established. This repository develops a [sufficient geometric condition over the stated family](../../docs/MODEL_AND_CLAIMS.md#m07). The [primary citations](../../docs/REFERENCES.md) identify the underlying frameworks and closest related results.
 
-[Source materials](materials.md) · [Repository guide](status.md) · [GitHub and optional HTML instructions](../../WEBSITE.md)
+[Source materials](materials.md) · [GitHub and optional HTML instructions](../../WEBSITE.md)

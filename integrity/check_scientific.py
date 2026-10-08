@@ -15,7 +15,7 @@ from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parents[1]
 INVENTORY = "integrity/SCIENTIFIC_FILES.json"
-INVENTORY_SHA256 = "e49c497a26a35203e1ec2d9756621eacc5fd23e66887837706ae3274416d27b1"
+INVENTORY_SHA256 = "9274722e70cb6a00499af47fc9dd7249dc15c8be6aff1b585a10fee1a4fd0222"
 FILE_KEYS_SHA256 = "b22e5286ac29b8b7e7ea4b9c9fb52141e45073c9b5c672267643244374515484"
 PROTECTED_FILE_COUNT = 174
 ADDITIONAL_FILES = frozenset({
@@ -108,12 +108,12 @@ def check_current_manifest(root, entries):
             "Malformed current manifest")
     current = record["files"]
     scientific = set(entries) - ADDITIONAL_FILES
-    require(set(current) == scientific | {"README.md", "STATUS.md"},
+    require(set(current) == scientific | {"README.md"},
             "Current manifest path coverage changed")
     for relative in scientific:
         require(current[relative] == entries[relative],
                 "Current manifest scientific identity changed: " + relative)
-    # verify.py checks the current README/STATUS bytes. Their historical values
+    # verify.py checks the current README bytes. Its historical values
     # are deliberately not a dependency of this scientific identity check.
     return len(scientific)
 

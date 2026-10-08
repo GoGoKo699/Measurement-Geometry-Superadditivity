@@ -70,8 +70,6 @@ Use new output directories. The default reproduction rebuilds the plotting input
 
 ## Repository contents
 
-The repository contains the channel model, theorem, complete proof, computational certificate, independent verification implementations, eight-use witness and three figures. The [repository guide](STATUS.md) links these materials and their verification evidence.
-
 `docs/` contains the canonical scientific account; `certificates/` holds the rational proof input; `verification/` contains the independent arithmetic implementations; `data/figures/` contains plotting inputs; and `figures/` contains the figures, captions and renderer. The [evidence guide](reader/verification.md) explains how to inspect and reproduce the computational results.
 
 ## Purpose and contact

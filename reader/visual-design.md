@@ -20,7 +20,6 @@
 - [Notation crosswalk](../docs/NOTATION_CROSSWALK.md)
 - [Proof and evidence index](../docs/SOURCE_TO_CANONICAL.md)
 - [Visual design](visual-design.md)
-- [Repository guide](status.md)
 
 </details>
 
@@ -62,6 +61,6 @@ The technical documents are rendered directly. Explanatory paragraphs link to th
 
 ---
 
-[Previous: Proof and evidence index](../docs/SOURCE_TO_CANONICAL.md) · [Continue: Repository guide](status.md)
+[Previous: Proof and evidence index](../docs/SOURCE_TO_CANONICAL.md) · [Return to the overview](README.md)
 
 [Page source](../website/pages/visual-design.md)

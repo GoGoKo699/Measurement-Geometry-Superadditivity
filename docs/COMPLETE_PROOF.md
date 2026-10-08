@@ -981,25 +981,7 @@ The three paths share the mathematical statement and, where indicated, the ratio
 
 All runtime certificate inputs and evaluators are included in the repository. The provenance ledger identifies their source paths and hashes.
 
-From the package root, use:
-
-```bash
-python verify.py
-python reproduce.py --output /path/to/new-output
-python reproduce.py --output /path/to/new-full-output --full
-```
-
-`verify.py` checks package identity, claim/source coverage, local links, and approved artifact hashes; it does not certify an entropy inequality. The ordinary reproduction command checks numerical figure inputs and redraws the approved figures in a new output directory. `--full` additionally runs the distinct integer, mpmath, and Decimal compact-certificate paths, the endpoint checks, the witness and numerical controls, and direct small physical checks. `--rebuild-certificate` may be added to reconstruct the rational cover as well. Output directories must not already exist and no command overwrites approved figures or reference evidence.
-
-Target a single substantive checker without changing the model:
-
-```bash
-python verification/decimal/verify_certificate.py \
-  --certificate certificates/common_noise_compact_certificate.json \
-  --output /path/to/independent-certificate.json --precision 130
-```
-
-The three certificate algorithms and their arithmetic engines occupy separate directories. Code identities and execution records are in `provenance/FILE_LINEAGE.json` and `validation/BASELINE_VALIDATION.json`. See [REPRODUCTION.md](REPRODUCTION.md) for dependencies, expected outputs, and scope of each check.
+Code identities and execution records are in `provenance/FILE_LINEAGE.json` and `validation/BASELINE_VALIDATION.json`. [REPRODUCTION.md](REPRODUCTION.md) gives the commands, dependencies, expected outputs and scopes for each check. File-integrity checks and complete entropy-certificate verification serve distinct roles.
 
 <a id="p15"></a>
 ## P15. Proof dependencies and attribution
