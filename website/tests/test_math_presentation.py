@@ -1,6 +1,7 @@
 """Presentation regressions and narrow checks on unchanged mathematics.
 
-The fingerprints were computed from commit 49c2434e3f5bc04a031fea21b32c0eaf363886d6.
+The original normalized mathematical fingerprints were computed from commit
+49c2434e3f5bc04a031fea21b32c0eaf363886d6 and remain unchanged.
 They permit spacing, delimiter sizing, aligned layout and the two stated operator
 aliases. One exact P07.2 factorization is expanded before comparison and also
 checked directly below. P7.1's exact horizontal quotients are restored to their
@@ -8,6 +9,9 @@ stacked forms before comparison and independently checked below as well.
 The 23 external equation numbers are put back in their original tag positions
 before fingerprinting, so label loss, renumbering or reassignment still fails.
 The exact HTML-safe relation aliases are restored before source comparison.
+Reviewed reader prose and whole documents have separate exact fingerprints in
+reader_source_baseline.json. Its ordered raw-TeX fingerprints also preserve the
+mathematics from the recorded reference commit across every wrapper baseline path.
 These tests do not establish scientific validity.
 Pandoc's GFM test exercises Markdown structure, not GitHub's authenticated renderer.
 """
@@ -29,6 +33,7 @@ sys.path.insert(0, str(REPO / "website"))
 from markdown_math import math_spans, to_dollar_math
 
 WRAPPER_BASELINE = json.loads((Path(__file__).with_name("math_source_baseline.json")).read_text())
+READER_BASELINE = json.loads((Path(__file__).with_name("reader_source_baseline.json")).read_text())
 MATH = re.compile(r"(?<!\\)\$\$([\s\S]*?)(?<!\\)\$\$|(?<!\\)\$([^\n$]*?)(?<!\\)\$")
 DISPLAY = re.compile(r"(?<!\\)\$\$([\s\S]*?)(?<!\\)\$\$")
 LABELED_DISPLAY = re.compile(r"(?<!\\)\$\$((?:(?!\$\$)[\s\S])*?)(?<!\\)\$\$\n\n\*\*\((P\d+\.\d+)\)\*\*")
@@ -125,6 +130,12 @@ def fingerprint(source):
     }
 
 
+def raw_math_fingerprint(source):
+    """Preserve expression order, display/inline kind and every TeX byte."""
+    expressions = [[span.display, span.tex] for span in math_spans(source)]
+    return hashlib.sha256(json.dumps(expressions, separators=(",", ":")).encode()).hexdigest()
+
+
 def replace_once(source, old, new):
     assert source.count(old) == 1, old
     return source.replace(old, new)
@@ -204,42 +215,28 @@ def reading_paths():
 
 
 @pytest.mark.parametrize("path", BASELINE)
-def test_mathematics_and_surrounding_prose_preserved(path):
+def test_original_mathematics_and_reviewed_surrounding_prose_preserved(path):
     source = baseline_equivalent_source(path, (REPO / path).read_text())
-    assert fingerprint(source) == BASELINE[path]
+    expected = {**BASELINE[path], "prose": READER_BASELINE["surrounding_prose"][path]}
+    assert fingerprint(source) == expected
+
+
+def test_reviewed_baseline_covers_exactly_the_original_documents():
+    assert READER_BASELINE["version"] == 1
+    assert set(READER_BASELINE["documents"]) == set(WRAPPER_BASELINE)
+    assert set(READER_BASELINE["surrounding_prose"]) == set(BASELINE)
 
 
 @pytest.mark.parametrize("path", WRAPPER_BASELINE)
-def test_presentation_encodings_preserve_exact_previous_document_bytes(path):
-    # These hashes precede the wrapper migration; changing any TeX or prose
-    # byte, including whitespace or equation labels, must fail this check.
+def test_presentation_encodings_preserve_reviewed_document_and_original_math_bytes(path):
+    # The reviewed document snapshot pins every prose, TeX and equation-label
+    # byte after the existing wrapper/relation normalization. The separate raw
+    # math digest is preserved from the reference commit, not refreshed prose.
     source = (REPO / path).read_text()
-    # Undo the exact editorial additions and release-navigation edit before
-    # checking the earlier math migration baseline. Keep its original hashes.
-    if path == 'README.md':
-        source = replace_once(
-            source,
-            '## Manuscript and collaboration\n\n'
-            'Manuscript preparation is currently on hold. Researchers interested in '
-            'collaborating on this work or its manuscript are welcome to contact '
-            '**Ruge Lin** at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).\n\n',
-            '',
-        )
-        source = replace_once(
-            source,
-            '\n**For search and AI-assisted reading:** [Topic and source guide (`llms.txt`)](llms.txt) '
-            'describes when this repository is relevant and links its exact claims, proof, '
-            'verification evidence, and citation.\n',
-            '',
-        )
-        source = replace_once(source, 'Read [the project overview](reader/README.md)',
-                              'Read [the short scientific story](docs/FROZEN_ARGUMENT.md)')
-    elif path.startswith('reader/'):
-        marker = '- [Visual design](visual-design.md)\n'
-        source = replace_once(source, marker,
-                              '- [Frozen scientific argument](../docs/FROZEN_ARGUMENT.md)\n' + marker)
+    expected = READER_BASELINE["documents"][path]
+    assert raw_math_fingerprint(source) == expected["math_sequence"]
     restored = to_dollar_math(restore_literal_relations(source)).encode()
-    assert hashlib.sha256(restored).hexdigest() == WRAPPER_BASELINE[path]
+    assert hashlib.sha256(restored).hexdigest() == expected["document"]
 
 
 def test_every_tracked_markdown_file_has_safe_display_source():

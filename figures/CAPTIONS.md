@@ -1,6 +1,6 @@
-# Scientific captions for rendered figures, version 1
+# Scientific figure captions
 
-8 September 2026. These captions implement `figures/FIGURE_SPECIFICATIONS.md`. They add no numerical claim or model assumption and are supplied for figure review, not as a manuscript draft. The original specification and its source references remain unchanged.
+The captions describe the figures in `figures/approved/`, with scientific definitions and numerical inputs specified in `figures/FIGURE_SPECIFICATIONS.md`.
 
 ## Figure 1. The channel and a concrete collective separation
 
@@ -16,4 +16,4 @@ The theorem gives a nonempty separation interval for every finite full-span meas
 
 ## Source anchors
 
-Figure 1: canonical M01, M02, M05, P01, P13 and witness W1. Figure 2: M03, M04, P08, P10, P11 and P12.1. Figure 3: M06, P11 and P12. The current baseline records these canonical identities in `provenance/SOURCE_REGISTER.json` and the original specification archives in `provenance/INPUT_ARCHIVES.json`. The approved rendering itself does not certify the theorem; current scientific replay results are recorded separately in `validation/BASELINE_VALIDATION.json`.
+Figure 1: canonical M01, M02, M05, P01, P13 and witness W1. Figure 2: M03, M04, P08, P10, P11 and P12.1. Figure 3: M06, P11 and P12. Technical references are identified in `provenance/SOURCE_REGISTER.json`, input identities in `provenance/INPUT_ARCHIVES.json`, and numerical verification records in `validation/BASELINE_VALIDATION.json`.

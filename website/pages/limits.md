@@ -1,6 +1,6 @@
-# What the result does not claim
+# Theorem scope and controlled limits
 
-The [geometric guarantee](proof-guide.md#geometric-guarantee) is broad in measurement geometry, but its physical model and boundary statements are specific. These controls show how the separation can close and what remains unclassified. They can be read directly from the proof without running software.
+The [geometric guarantee](proof-guide.md#geometric-guarantee) applies to finite ensembles of unit Bloch measurement axes with positive weights, common symmetric reporting noise, independent channel uses, intact surviving qubits, and correct branch and axis flags. Within this model, the theorem supplies a sufficient interval of measurement probabilities. The controls below show how its geometric separation closes at coplanarity and at the noise endpoints. They can be read directly from the proof without running software.
 
 <a id="coplanar-control"></a>
 
@@ -16,11 +16,11 @@ At $`\epsilon=0`$, the reported sign is the true sign, so each measured conditio
 
 At $`\epsilon=1/2`$, the reported sign is input independent. The channel is an erasure channel up to independent flags, with $`Q=Q^{(1)}=\max(0,1-2p)`$. Neither endpoint has a zero-one-use/positive-capacity region. These are direct physical endpoint arguments, separate from interior formulas that divide by $`a`$ or $`c`$. [P11: endpoint arguments](../../docs/COMPLETE_PROOF.md#p11)
 
-## A nonzero gap need not be useful in practice
+## Rates and block lengths depend on the channel
 
-The guaranteed interval can shrink near a plane or near a noise endpoint. The theorem does not provide a fixed minimum rate or block length uniformly across all these channels. Its positive-capacity statement invokes an asymptotic outer code, not an efficient decoder for the retained eight-qubit example. [Quantifier order](../../docs/MODEL_AND_CLAIMS.md#m04)
+The guaranteed interval can shrink near a plane or near a noise endpoint. For each fixed channel in the interval, the proof chooses a finite block with positive coherent information; outer coding then gives a positive asymptotic rate. The guaranteed block length and rate depend on the chosen channel. [Quantifier order](../../docs/MODEL_AND_CLAIMS.md#m04)
 
-## An exact special case is not an exact capacity formula
+## Exact thresholds for a cone family
 
 <a id="cone-domain"></a>
 
@@ -30,7 +30,7 @@ The guaranteed interval can shrink near a plane or near a noise endpoint. The th
 \Gamma=\frac{c}{1-a\lambda},\qquad L=\frac{c}{\sqrt{1-a\lambda}}.
 ```
 
-The larger established domain is $`0\leq\lambda\leq\min\{1/3,W(a)/P(a)\}`$, with $`P,W`$ defined in the [scalar lemma](../../docs/COMPLETE_PROOF.md#p04). Extending beyond $`1/4`$ requires checking this parameter-specific condition; no such extension is needed to read the figure. The exact gap is between the one-use frontier $`p_1`$ and the construction frontier $`p_{\mathrm{rep}}`$, not an exact all-code capacity threshold.
+The larger established domain is $`0\leq\lambda\leq\min\{1/3,W(a)/P(a)\}`$, with $`P,W`$ defined in the [scalar lemma](../../docs/COMPLETE_PROOF.md#p04). Values beyond $`1/4`$ require this parameter-specific condition. The exact gap is between the one-use frontier $`p_1`$ and the construction frontier $`p_{\mathrm{rep}}`$, not an exact all-code capacity threshold.
 
 At fixed interior error, the small-geometry expansion is
 
@@ -40,8 +40,8 @@ p_{\mathrm{rep}}-p_1=\frac{ca}{2(1+c)^2}\lambda+O(\lambda^2)\qquad(\lambda\downa
 
 For the plotted error, the dashed line is $`(18/289)\lambda`$. It is an analytical asymptote, not a fitted curve or an equality across the plot. The zero at coplanarity has the construction-specific meaning above. This cone family differs from the equal-Pauli witness geometry over the plotted range, so the eight-use witness is not transferred to it. [P12: exact family, domain and expansion](../../docs/COMPLETE_PROOF.md#p12)
 
-## No silent extension of the noise model
+## Trace the assumptions and evidence
 
-The headline theorem does not cover arbitrary axis-dependent, asymmetric, correlated, or basis-label errors. Surviving qubits arrive intact. The source does not claim external peer review, proof-assistant formalization, exhaustive priority clearance, or a practical fault-tolerant protocol. [Complete claim register](../../docs/MODEL_AND_CLAIMS.md#m07)
+The [channel model](../../docs/MODEL_AND_CLAIMS.md#m01) fixes the shared noise assumptions; the [threshold definitions](../../docs/MODEL_AND_CLAIMS.md#m03) distinguish the single-use threshold, the repetition-construction threshold and quantum capacity.
 
-To trace these statements, the [figure atlas](figures.md) joins unchanged captions to formulas and inputs. The [verification guide](verification.md) distinguishes file-integrity tests, complete certificate checks, finite-witness evaluation and graphical reproduction. Each checks a different part of the evidence; none changes the theorem's scope.
+To trace these statements, the [figure atlas](figures.md) joins captions to formulas and inputs. The [verification guide](verification.md) distinguishes file-integrity tests, complete certificate checks, finite-witness evaluation and graphical reproduction. Each checks a different part of the evidence; none changes the theorem's scope.

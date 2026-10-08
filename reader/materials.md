@@ -10,7 +10,7 @@
 - [The channel](channel.md)
 - [The proof route](proof-guide.md)
 - [Figure atlas](figures.md)
-- [Scope and limits](limits.md)
+- [Scope and controlled limits](limits.md)
 - [Exact model and theorem](../docs/MODEL_AND_CLAIMS.md)
 - [Complete proof](../docs/COMPLETE_PROOF.md)
 - [Verification guide](verification.md)
@@ -18,9 +18,9 @@
 - [References and their roles](../docs/REFERENCES.md)
 - [Source materials](materials.md)
 - [Notation crosswalk](../docs/NOTATION_CROSSWALK.md)
-- [Source and proof ledger](../docs/SOURCE_TO_CANONICAL.md)
+- [Proof and evidence index](../docs/SOURCE_TO_CANONICAL.md)
 - [Visual design](visual-design.md)
-- [Project status](status.md)
+- [Repository guide](status.md)
 
 </details>
 
@@ -33,7 +33,7 @@ The [focused Preskill map](background.md) is the one external educational route.
 
 ## Claim-to-evidence inventory
 
-[Canonical claim map](../provenance/CLAIM_COVERAGE.json) · [Full source-to-proof ledger](../docs/SOURCE_TO_CANONICAL.md)
+[Claim-to-evidence map](../provenance/CLAIM_COVERAGE.json) · [Proof and computation index](../docs/SOURCE_TO_CANONICAL.md)
 
 | Claim | Exact statement | Proof | Role |
 |---|---|---|---|
@@ -47,9 +47,9 @@ The [focused Preskill map](background.md) is the one external educational route.
 
 ## Figure and numerical inputs
 
-The [figure atlas](figures.md) gives each panel's question, exact caption, source data, proof anchors, and approved downloads. The all-measured terms behind Figure 1 remain available even though they are not another main-text panel.
+The [figure atlas](figures.md) gives each panel's question, exact caption, source data, proof anchors, and downloads. Figure 1's numerical records include every measured-count contribution.
 
-[Original eight-use interval record](../data/figures/figure1_original_witness140.json) · [All measured-count terms](../data/figures/figure1_all_masks_not_for_display.csv) · [Figure 2 bounds](../data/figures/figure2_pauli_guaranteed_region.csv) · [Figure 3 gap](../data/figures/figure3_cone_gap.csv)
+[Eight-use interval record](../data/figures/figure1_original_witness140.json) · [All measured-count terms](../data/figures/figure1_all_masks_not_for_display.csv) · [Figure 2 bounds](../data/figures/figure2_pauli_guaranteed_region.csv) · [Figure 3 gap](../data/figures/figure3_cone_gap.csv)
 
 ## Proof certificate and separate checkers
 
@@ -67,19 +67,19 @@ The [figure atlas](figures.md) gives each panel's question, exact caption, sourc
 
 ## Canonical scientific account
 
-The [model](../docs/MODEL_AND_CLAIMS.md) fixes definitions, assumptions and notation. The [complete proof](../docs/COMPLETE_PROOF.md) supplies the entire internal argument. The [project overview](README.md) gives a compact route through the result. The [notation crosswalk](../docs/NOTATION_CROSSWALK.md) and [source ledger](../docs/SOURCE_TO_CANONICAL.md) explain how source fragments became the canonical account.
+The [model](../docs/MODEL_AND_CLAIMS.md) fixes definitions, assumptions and notation. The [complete proof](../docs/COMPLETE_PROOF.md) supplies the full argument. The [project overview](README.md) gives a compact route through the result. The [notation crosswalk](../docs/NOTATION_CROSSWALK.md) and [proof and computation index](../docs/SOURCE_TO_CANONICAL.md) connect definitions and claims to their derivations and evidence.
 
-The [reference record](../docs/REFERENCES.md) distinguishes standard tools, closest antecedents, and the bounded priority assessment. It does not certify an absolute-first claim.
+The [reference record](../docs/REFERENCES.md) identifies standard tools and the closest antecedents, and compares their results with the geometric guarantee.
 
 ## Reuse and citation
 
 The project uses MIT for original code and CC BY 4.0 for original prose, figures and data where rights exist. See the [license scope](../LICENSE.md), [MIT terms](../LICENSES/MIT.txt), [CC BY 4.0 terms](../LICENSES/CC-BY-4.0.txt), [third-party notices](../THIRD_PARTY_NOTICES.md) and [repository citation](../CITATION.cff). Preskill's external tutorial and other cited sources retain their own terms.
 
-Contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com). [Current project status](status.md)
+Contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com). [Repository guide](status.md)
 
 
 ---
 
-[Previous: References and their roles](../docs/REFERENCES.md) · [Continue: Project status](status.md)
+[Previous: References and their roles](../docs/REFERENCES.md) · [Continue: Repository guide](status.md)
 
-GitHub reading view generated from [the website source](../website/pages/materials.md). The equations, figure data and canonical captions retain their source meaning. Custom website navigation, local search and interactive color switching are not executed in this GitHub view.
+[Page source](../website/pages/materials.md)

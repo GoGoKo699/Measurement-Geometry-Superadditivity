@@ -48,7 +48,7 @@
     {
       "slug": "limits",
       "source": "website/pages/limits.md",
-      "title": "Scope and limits",
+      "title": "Scope and controlled limits",
       "group": "Understand",
       "next": "verification",
       "previous": "proof"
@@ -117,7 +117,7 @@
     {
       "slug": "provenance",
       "source": "docs/SOURCE_TO_CANONICAL.md",
-      "title": "Source and proof ledger",
+      "title": "Proof and evidence index",
       "group": "Use the materials",
       "canonical": true,
       "next": "materials",
@@ -134,7 +134,7 @@
     {
       "slug": "status",
       "source": "website/pages/status.md",
-      "title": "Project status",
+      "title": "Repository guide",
       "group": "About this site",
       "next": null,
       "previous": "materials"

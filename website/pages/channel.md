@@ -68,7 +68,7 @@ Its purification is the normalized equal superposition of $`|0\rangle_{\mathsf R
 
 ## What does the eight-use example establish?
 
-For equally likely $`X,Y,Z`$ axes, take $`p=7/10`$, $`\epsilon=1/10`$, $`n=8`$ and $`\mathbf u=(1,1,1)/\sqrt3`$. The retained calculation gives approximately $`0.0005981981270524771`$ bits **per block**, or
+For equally likely $`X,Y,Z`$ axes, take $`p=7/10`$, $`\epsilon=1/10`$, $`n=8`$ and $`\mathbf u=(1,1,1)/\sqrt3`$. The calculation gives approximately $`0.0005981981270524771`$ bits **per block**, or
 
 ```math
 \frac{\mathcal I_8}{8}\gt 7.47\times10^{-5}\quad\text{bits per physical use}.
@@ -80,8 +80,8 @@ At the same parameters, a bound valid for every one-use input gives $`\Gamma=27/
 
 [Figure 1](figures.md#figure-1) brings the channel and this comparison together. Its witness uses a sharper one-use bound than the conservative universal strip shown in Figure 2; the witness lies below that strip. This is a difference in the sufficient bounds, not an inconsistency between the figures.
 
-Once this positive finite inner block is fixed, the coding theorem applied to many independent uses of that block gives a positive asymptotic rate per physical use. It does not establish a practical decoder, near-perfect recovery from an isolated eight-use block or an optimal inner block length. The [next page](proof-guide.md#finite-before-asymptotic) explains how the theorem guarantees some positive finite block throughout its stated family.
+Once this positive finite inner block is fixed, the coding theorem applied to many independent uses of that block gives a positive asymptotic rate per physical use. The eight-use block is the inner construction in that asymptotic coding argument. The [next page](proof-guide.md#finite-before-asymptotic) explains how the theorem guarantees some positive finite block throughout its stated family.
 
 ## Why use a common error?
 
-The main proof compares conditional entropies using a coefficient shared by all measurement axes. A common error makes that coefficient common. Independently assigning different errors to different axes is not covered by the headline theorem. [Where the assumption enters](../../docs/COMPLETE_PROOF.md#p04)
+The main proof compares conditional entropies using a coefficient shared by all measurement axes. The common symmetric error supplies that shared coefficient and allows the weighted comparison across the ensemble. [Where the assumption enters](../../docs/COMPLETE_PROOF.md#p04)

@@ -8,7 +8,7 @@ For every permitted finite measurement ensemble spanning all three Bloch directi
 Q^{(1)}(\mathcal N)=0\lt Q(\mathcal N).
 ```
 
-Here $`Q^{(1)}`$ maximizes coherent information over every single-qubit input state. $`Q`$ is unassisted asymptotic quantum capacity. A suitable collective encoding certifies a positive asymptotic rate where this fully optimized single-use quantity is zero. The theorem gives a sufficient region, not an exact capacity formula or a practical finite-block decoder.
+Here $`Q^{(1)}`$ maximizes coherent information over every single-qubit input state. $`Q`$ is unassisted asymptotic quantum capacity. A suitable collective encoding certifies a positive asymptotic rate where this fully optimized single-use quantity is zero. The theorem identifies a sufficient region for this separation.
 
 **Expert bypass:** [exact theorem and assumptions](../../docs/MODEL_AND_CLAIMS.md#m04) · [complete proof](../../docs/COMPLETE_PROOF.md) · [figure atlas and downloads](figures.md) · [verification and evidence](verification.md).
 
@@ -26,7 +26,7 @@ For equally likely Pauli axes, measurement probability $`0.70`$ and reporting er
 I_8/8\gt 7.47\times10^{-5}\ \text{bits per physical use}.
 ```
 
-The [channel guide](channel.md#eight-use-witness) explains the coherent encoder, its purified test input and every measured-count contribution, including the negative all-measured term. [Figure 1](figures.md#figure-1) shows this comparison. A finite positive inner block is chosen before outer coding gives it an asymptotic rate interpretation; an isolated eight-use decoding fidelity is not established.
+The [channel guide](channel.md#eight-use-witness) explains the coherent encoder, its purified test input and every measured-count contribution, including the negative all-measured term. [Figure 1](figures.md#figure-1) shows this comparison. A finite positive inner block is chosen before outer coding gives it an asymptotic rate interpretation.
 
 ## What geometry guarantees
 
@@ -36,10 +36,10 @@ The [proof guide](proof-guide.md#geometric-guarantee) joins an obstruction for e
 
 ## Read, inspect, reproduce
 
-The repository contains the complete scientific account for the stated result, including its proof, computational evidence and figures. [Project status and scope](status.md)
+The [repository guide](status.md) connects the model, proof, computational evidence and figures.
 
 The learning route is **selected background → channel and witness → geometric proof guide → exact theorem and proof → limits and verification**. Every stage can be opened directly. You do not need to run software to read the argument.
 
-Incomplete-erasure channels, repetition coding and superadditivity are established. The working contribution is the sufficient geometric condition over the stated family, subject to the [canonical priority qualifiers](../../docs/MODEL_AND_CLAIMS.md#m07). [Primary citations](../../docs/REFERENCES.md) serve attribution, not an additional prerequisite list.
+Incomplete-erasure channels, repetition coding and superadditivity are established. This repository develops a [sufficient geometric condition over the stated family](../../docs/MODEL_AND_CLAIMS.md#m07). The [primary citations](../../docs/REFERENCES.md) identify the underlying frameworks and closest related results.
 
-[Source materials](materials.md) · [Current project status](status.md) · [GitHub and optional HTML instructions](../../WEBSITE.md)
+[Source materials](materials.md) · [Repository guide](status.md) · [GitHub and optional HTML instructions](../../WEBSITE.md)

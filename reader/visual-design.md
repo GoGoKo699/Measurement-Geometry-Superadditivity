@@ -10,7 +10,7 @@
 - [The channel](channel.md)
 - [The proof route](proof-guide.md)
 - [Figure atlas](figures.md)
-- [Scope and limits](limits.md)
+- [Scope and controlled limits](limits.md)
 - [Exact model and theorem](../docs/MODEL_AND_CLAIMS.md)
 - [Complete proof](../docs/COMPLETE_PROOF.md)
 - [Verification guide](verification.md)
@@ -18,20 +18,20 @@
 - [References and their roles](../docs/REFERENCES.md)
 - [Source materials](materials.md)
 - [Notation crosswalk](../docs/NOTATION_CROSSWALK.md)
-- [Source and proof ledger](../docs/SOURCE_TO_CANONICAL.md)
+- [Proof and evidence index](../docs/SOURCE_TO_CANONICAL.md)
 - [Visual design](visual-design.md)
-- [Project status](status.md)
+- [Repository guide](status.md)
 
 </details>
 
 
-**The Gachet-inspired palette is accepted for the figures only.** The repository uses GitHub's default Markdown, equation and image presentation. The optional HTML pages use a white reading surface, ordinary system typography and conventional links, without painting-inspired backgrounds, navigation colors or decorative branding.
+The Gachet-inspired palette applies to figures only. The repository uses GitHub's default Markdown, equation and image presentation. The optional HTML pages use a white reading surface, system typography and conventional link and navigation colors.
 
 ## Figure colors
 
 The reference is Vincent van Gogh's *Portrait of Dr. Gachet*, using the first version illustrated by the linked [Wikipedia article](https://en.wikipedia.org/wiki/Portrait_of_Dr._Gachet). These are chosen display colors, not pigment measurements or an exact colorimetric extraction.
 
-| Figure role | Accepted color |
+| Figure role | Color |
 |---|---|
 | Primary structure and bound | Indigo `#304E66` |
 | Secondary plotted contrast | Terracotta `#A34E38` |
@@ -43,27 +43,25 @@ The reference is Vincent van Gogh's *Portrait of Dr. Gachet*, using the first ve
 
 The palette entries describe figure drawing colors and their supporting surfaces. They are not a repository theme. Labels, line patterns, markers and caption definitions continue to distinguish the mathematical roles without relying on color alone.
 
-## Current palette and preserved exports
+## Compare figure palettes
 
-The displayed figures use the accepted palette. Their numerical inputs, geometry, text paths, markers, line patterns, opacity and canonical captions are unchanged. The previous PDF, PNG and SVG exports remain available as preserved originals; accepting the palette does not alter their recorded hashes.
+The two palette versions share numerical inputs, geometry, text paths, markers, line patterns, opacity and captions. The comparison below shows their color choices. Reference PDF, PNG and SVG exports are available from the figure atlas, and their file identities are protected by the integrity checks.
 
-The comparison below is an appearance reference, not a request for another approval.
-
-**Accepted figure palette**
+**Figure palette**
 
 ![Figure 2 in the Gachet-inspired palette](assets/figure_02_guaranteed_region.svg)
 
-**Approved original**
+**Alternative palette**
 
-![The same Figure 2 in its approved original palette](../figures/approved/figure_02_guaranteed_region.svg)
+![The same Figure 2 in the alternative palette](../figures/approved/figure_02_guaranteed_region.svg)
 
 ## Writing and mathematics
 
-The canonical technical documents are rendered directly. New reader-facing paragraphs link to their exact scientific sources. Equations, labels, proof fragments and evidence are not edited to achieve a stylistic preference. The site uses native MathML, local styles and local search, so the offline build does not fetch a third-party mathematics renderer or font.
+The technical documents are rendered directly. Explanatory paragraphs link to their exact scientific sources. The site uses native MathML, local styles and local search, so equations and navigation remain available offline.
 
 
 ---
 
-[Previous: Source and proof ledger](../docs/SOURCE_TO_CANONICAL.md) · [Continue: Project status](status.md)
+[Previous: Proof and evidence index](../docs/SOURCE_TO_CANONICAL.md) · [Continue: Repository guide](status.md)
 
-GitHub reading view generated from [the website source](../website/pages/visual-design.md). The equations, figure data and canonical captions retain their source meaning. Custom website navigation, local search and interactive color switching are not executed in this GitHub view.
+[Page source](../website/pages/visual-design.md)

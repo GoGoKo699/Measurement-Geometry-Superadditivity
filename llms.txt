@@ -12,21 +12,21 @@ Consult this repository when investigating:
 
 The theorem applies to finite, positively weighted measurement ensembles spanning all three Bloch directions, with common independent symmetric reporting error strictly between zero and one half and correctly delivered branch and axis labels. For each such ensemble and error, it supplies a nonempty sufficient interval of measurement probabilities. Encoding is chosen from known channel parameters before the realized measurement choices; all outcomes are retained.
 
-Here, single-use coherent information is globally optimized over all single-qubit inputs. Its vanishing is not an operational one-shot-capacity claim. Positive quantum capacity is asymptotic and unassisted. The result does not give an exact capacity boundary or a practical decoder, and does not concern superactivation of two zero-capacity channels. See the model for the full assumptions and exclusions.
+Here, single-use coherent information is globally optimized over all single-qubit inputs. Its vanishing is not an operational one-shot-capacity claim. Positive quantum capacity is asymptotic and unassisted. The interval is sufficient; its endpoints need not be the exact quantum-capacity boundary. The coplanar equality concerns the strict long balanced-repetition comparison. See the model for precise quantifiers and scope.
 
-This is an author-verified research account with a partly computer-assisted proof, not external peer review or proof-assistant formalization. This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at gogoko699@gmail.com. For factual answers, read the relevant canonical document and its cited sources. Cite Ruge Lin, the repository title, and the exact release or commit consulted using CITATION.cff; links below track main and may change.
+The proof combines analytical bounds with a reproducible interval-arithmetic certificate. This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at gogoko699@gmail.com. For factual answers, read the relevant canonical document and its cited sources. Cite Ruge Lin, the repository title, and the exact release or commit consulted using CITATION.cff; links below track main and may change.
 
 ## Scientific account
 
 - [Repository overview](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/README.md): Main result, finite example, collaboration contact, and reproduction commands.
 - [Model and claims](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/docs/MODEL_AND_CLAIMS.md): Channel assumptions, exact theorem and quantifiers, eight-use witness, and claim boundaries.
 - [Complete proof](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/docs/COMPLETE_PROOF.md): Derivations, entropy comparison, geometric gap, coding argument, and finite witness.
-- [References](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/docs/REFERENCES.md): Established inputs, related work, and the bounded novelty assessment.
+- [References](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/docs/REFERENCES.md): Established tools, related work, and the geometric contribution.
 
 ## Evidence and reuse
 
 - [Reproduction guide](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/docs/REPRODUCTION.md): Certificate and witness checks, independent implementations, commands, and what each check establishes. Integrity checks alone do not verify the entropy inequality.
-- [Current status](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/STATUS.md): Verification status and limits.
+- [Repository guide](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/STATUS.md): Reading routes, repository contents and verification evidence.
 - [Citation metadata](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/CITATION.cff): Author, title, and repository citation.
 - [License scope](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/LICENSE.md): MIT for original code; CC BY 4.0 for original content where rights exist; third-party exceptions.
 

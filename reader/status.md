@@ -1,4 +1,4 @@
-# Project status
+# Repository guide
 
 [Overview](README.md) · [Background](background.md) · [Channel](channel.md) · [Proof route](proof-guide.md) · [Figures](figures.md) · [Exact theorem](../docs/MODEL_AND_CLAIMS.md) · [Complete proof](../docs/COMPLETE_PROOF.md) · [Materials](materials.md)
 
@@ -10,7 +10,7 @@
 - [The channel](channel.md)
 - [The proof route](proof-guide.md)
 - [Figure atlas](figures.md)
-- [Scope and limits](limits.md)
+- [Scope and controlled limits](limits.md)
 - [Exact model and theorem](../docs/MODEL_AND_CLAIMS.md)
 - [Complete proof](../docs/COMPLETE_PROOF.md)
 - [Verification guide](verification.md)
@@ -18,28 +18,26 @@
 - [References and their roles](../docs/REFERENCES.md)
 - [Source materials](materials.md)
 - [Notation crosswalk](../docs/NOTATION_CROSSWALK.md)
-- [Source and proof ledger](../docs/SOURCE_TO_CANONICAL.md)
+- [Proof and evidence index](../docs/SOURCE_TO_CANONICAL.md)
 - [Visual design](visual-design.md)
-- [Project status](status.md)
+- [Repository guide](status.md)
 
 </details>
 
 
-**The repository is complete for its stated scientific result.** The channel model, exact theorem, complete internal proof, computational certificate, three independent verification implementations, eight-use witness and all three figures are available here.
+The repository connects a geometric condition on qubit measurements to positive quantum capacity beyond the optimized single-use coherent-information benchmark. It includes the channel model, exact theorem, complete proof, computational certificate, three independent verification implementations, eight-use witness and three scientific figures.
 
 [Read the result](README.md) · [Exact theorem and assumptions](../docs/MODEL_AND_CLAIMS.md#m04) · [Complete proof](../docs/COMPLETE_PROOF.md) · [Figures and downloads](figures.md)
 
-## What supports the result?
+## Follow the argument
 
-The repository provides the complete certificate checks, witness and control calculations, graphical reproduction, integrity checks, tests and browser checks. The [verification guide](verification.md#verification-roles) explains what each command establishes and how to inspect its outputs.
+The overview introduces the physical question. The channel guide specifies the receiver's accessible records and the eight-use example; the proof guide connects the single-use entropy bound, repetition construction and geometric gap. The exact theorem and complete proof supply the definitions and derivation behind that route.
 
-These are author-side analytical and computer-assisted checks. They do not constitute external peer review or proof-assistant formalization. The written proof identifies the background coding theorems and the computational inequality on which the result depends.
+The theorem applies to finite measurement ensembles with common symmetric reporting noise and correct branch and axis flags. Positive finite-block coherent information supplies an achievable asymptotic rate through outer coding. The [precise scope](../docs/MODEL_AND_CLAIMS.md#m07) and [controlled limits](limits.md) explain the sufficient band, coplanarity and noise endpoints.
 
-## What does completion mean here?
+## Inspect the evidence
 
-The result establishes a sufficient geometric condition over the stated finite-axis, common-error family. Exact capacity, efficient decoding, arbitrary heterogeneous or correlated reporting errors, and noisy axis labels remain outside the claim. A positive finite-block coherent information certifies a positive asymptotic rate through outer coding; it does not establish high-fidelity recovery from an isolated eight-use block. [Precise scope](../docs/MODEL_AND_CLAIMS.md#m07) · [Controlled limits](limits.md)
-
-A manuscript is not included. Its preparation is a separate writing stage, and is not needed to read or check the scientific argument supplied here.
+The analytical proof identifies its coding-theorem inputs and the scalar entropy inequality checked by the computational certificate. The [verification guide](verification.md#verification-roles) distinguishes complete certificate verification, witness and control calculations, figure reproduction, and file-integrity checks, and explains how to inspect their outputs.
 
 ## Reading, reuse and contact
 
@@ -54,4 +52,4 @@ Original code is licensed under MIT; original prose, figures and data use CC BY 
 
 [Previous: Source materials](materials.md) · [Return to the overview](README.md)
 
-GitHub reading view generated from [the website source](../website/pages/status.md). The equations, figure data and canonical captions retain their source meaning. Custom website navigation, local search and interactive color switching are not executed in this GitHub view.
+[Page source](../website/pages/status.md)

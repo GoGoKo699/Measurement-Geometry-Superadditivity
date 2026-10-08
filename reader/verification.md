@@ -10,7 +10,7 @@
 - [The channel](channel.md)
 - [The proof route](proof-guide.md)
 - [Figure atlas](figures.md)
-- [Scope and limits](limits.md)
+- [Scope and controlled limits](limits.md)
 - [Exact model and theorem](../docs/MODEL_AND_CLAIMS.md)
 - [Complete proof](../docs/COMPLETE_PROOF.md)
 - [Verification guide](verification.md)
@@ -18,9 +18,9 @@
 - [References and their roles](../docs/REFERENCES.md)
 - [Source materials](materials.md)
 - [Notation crosswalk](../docs/NOTATION_CROSSWALK.md)
-- [Source and proof ledger](../docs/SOURCE_TO_CANONICAL.md)
+- [Proof and evidence index](../docs/SOURCE_TO_CANONICAL.md)
 - [Visual design](visual-design.md)
-- [Project status](status.md)
+- [Repository guide](status.md)
 
 </details>
 
@@ -47,13 +47,13 @@ python -m pytest -q -p no:cacheprovider tests
 
 `verify.py` checks integrity, protected figures, provenance, source links, and verifier boundaries. It does **not** verify the entropy inequality. The unit tests include method and rejection controls, but they are not the complete-domain certificate.
 
-## Rebuild the approved figures
+## Rebuild the figures
 
 ```bash
 python reproduce.py --output build/figures-check
 ```
 
-Use a new output directory. The default command regenerates plotting inputs and reproduces approved graphical files in the recorded environment. It does not recalculate the entire mathematical certificate. The accepted figure palette remains separate from the protected original exports.
+Use a new output directory. The default command regenerates plotting inputs and reproduces the reference graphical files in the recorded environment. Complete certificate verification uses the separate command below. Both figure palettes have protected reference exports.
 
 ## Recheck the mathematical evidence
 
@@ -61,15 +61,13 @@ Use a new output directory. The default command regenerates plotting inputs and 
 python reproduce.py --output build/full-check --full
 ```
 
-This runs the three complete compact-certificate verifiers, analytical endpoint constants, independent witness calculations, retained safeguards, direct small physical checks, and figure reproduction. Adding `--rebuild-certificate` also reconstructs the rational covering; it is not needed merely to check each inequality on the included cover.
+This runs the three complete compact-certificate verifiers, analytical endpoint constants, independent witness calculations, numerical safeguards, direct small physical checks, and figure reproduction. Adding `--rebuild-certificate` also reconstructs the rational covering; it is not needed merely to check each inequality on the included cover.
 
 The integer, mpmath, and Decimal routes remain separate. Their agreement supports the computational result, but shared analytical assumptions still require the written proof. The physical controls check the actual noisy-report calculation; they do not replace the universal entropy bound. [Exact commands, output contracts, and limitations](../docs/REPRODUCTION.md)
 
 ## Inspect the outputs before claiming a result
 
-The canonical cover has 512 noise bands and 29,635 input leaves. Evidence records and comparisons are in [the material inventory](materials.md). Ordinary floating-point physical controls use declared tolerances; exact certificates and approved graphical files have stronger identity contracts. Fresh results belong in a new build directory, not on top of reference evidence.
-
-The stored records do not establish external peer review or proof-assistant formalization. No stronger assurance is implied by the reading interface.
+The canonical cover has 512 noise bands and 29,635 input leaves. Evidence records and comparisons are in [the material inventory](materials.md). Ordinary floating-point physical controls use declared tolerances; exact certificates and reference graphical files have stronger identity contracts. Fresh results belong in a new build directory, not on top of reference evidence.
 
 To return to the explanation, see [the all-record witness](channel.md#eight-use-witness) and [where the scalar proof enters](proof-guide.md#scalar-proof). The [selected background](background.md) explains the coding quantities; it is not an additional certificate or a software dependency.
 
@@ -84,6 +82,6 @@ Run `python integrity/check_scientific.py` to compare the current scientific fil
 
 ---
 
-[Previous: Scope and limits](limits.md) · [Continue: Exact reproduction commands](../docs/REPRODUCTION.md)
+[Previous: Scope and controlled limits](limits.md) · [Continue: Exact reproduction commands](../docs/REPRODUCTION.md)
 
-GitHub reading view generated from [the website source](../website/pages/verification.md). The equations, figure data and canonical captions retain their source meaning. Custom website navigation, local search and interactive color switching are not executed in this GitHub view.
+[Page source](../website/pages/verification.md)

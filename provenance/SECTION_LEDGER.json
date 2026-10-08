@@ -7,9 +7,9 @@
       "canonical_id": "M01",
       "canonical_file": "docs/MODEL_AND_CLAIMS.md",
       "canonical_anchor": "m01",
-      "canonical_line_start": 8,
-      "canonical_line_end": 44,
-      "canonical_fragment_sha256": "963ba12f931d840d70806ef843aaa53c516f4fcb3314c86865147fdd847d420c",
+      "canonical_line_start": 6,
+      "canonical_line_end": 42,
+      "canonical_fragment_sha256": "c1236c6fc9aa295898856ccb7406f98a1e7761036244c55bdb241d5441a755e8",
       "claims": [
         "C1",
         "C2",
@@ -74,9 +74,9 @@
       "canonical_id": "M02",
       "canonical_file": "docs/MODEL_AND_CLAIMS.md",
       "canonical_anchor": "m02",
-      "canonical_line_start": 45,
-      "canonical_line_end": 80,
-      "canonical_fragment_sha256": "54fa2588c4556bf2b8f6411c1990edc4e7a358f55e04db508c0fc31ed9fd16eb",
+      "canonical_line_start": 43,
+      "canonical_line_end": 78,
+      "canonical_fragment_sha256": "5f66769d234c78a19fd464ad6ce35458ea65268fcac2014248dfbc789116b9a5",
       "claims": [
         "C1",
         "C2",
@@ -132,8 +132,8 @@
       "canonical_id": "M03",
       "canonical_file": "docs/MODEL_AND_CLAIMS.md",
       "canonical_anchor": "m03",
-      "canonical_line_start": 81,
-      "canonical_line_end": 119,
+      "canonical_line_start": 79,
+      "canonical_line_end": 117,
       "canonical_fragment_sha256": "2b61ce4ac0a2b6e72b64947ad4a5cd8f23de79d53f7d93a19df285ce0182f97a",
       "claims": [
         "C1",
@@ -187,9 +187,9 @@
       "canonical_id": "M04",
       "canonical_file": "docs/MODEL_AND_CLAIMS.md",
       "canonical_anchor": "m04",
-      "canonical_line_start": 120,
-      "canonical_line_end": 140,
-      "canonical_fragment_sha256": "de614a2df717fc27a82697c4ce02ac8af5d08c5dd9830c627dc9e641457efcc7",
+      "canonical_line_start": 118,
+      "canonical_line_end": 138,
+      "canonical_fragment_sha256": "1e60a4b8f729c976ff35dfab0c49d67bbd3f91a3c2c2d459669183763a1d76dd",
       "claims": [
         "C1",
         "C2",
@@ -255,9 +255,9 @@
       "canonical_id": "M05",
       "canonical_file": "docs/MODEL_AND_CLAIMS.md",
       "canonical_anchor": "m05",
-      "canonical_line_start": 141,
-      "canonical_line_end": 155,
-      "canonical_fragment_sha256": "b21a9f6bf8447778161eccedb24a0c7f1ecf62a2cb77c60821ea09c700117f13",
+      "canonical_line_start": 139,
+      "canonical_line_end": 153,
+      "canonical_fragment_sha256": "d619c50ece55a95912fbbe4fe396d58b5756cf6096f4d315a00200e1e8579afb",
       "claims": [
         "C5"
       ],
@@ -308,9 +308,9 @@
       "canonical_id": "M06",
       "canonical_file": "docs/MODEL_AND_CLAIMS.md",
       "canonical_anchor": "m06",
-      "canonical_line_start": 156,
-      "canonical_line_end": 188,
-      "canonical_fragment_sha256": "82ef67c4b0ccab0ffee7d3ea352d129e4e6fd0d5692e70e6f28a4e008a8e55cc",
+      "canonical_line_start": 154,
+      "canonical_line_end": 186,
+      "canonical_fragment_sha256": "ecff1e3fccab3d55d0c9189f8ac420a7eda8126cda98f311adafc50ca5df43ee",
       "claims": [
         "C6"
       ],
@@ -361,9 +361,9 @@
       "canonical_id": "M07",
       "canonical_file": "docs/MODEL_AND_CLAIMS.md",
       "canonical_anchor": "m07",
-      "canonical_line_start": 189,
-      "canonical_line_end": 205,
-      "canonical_fragment_sha256": "990026490308f399df88b0531d881c36ef7db23e0694541f941d271349c222d7",
+      "canonical_line_start": 187,
+      "canonical_line_end": 201,
+      "canonical_fragment_sha256": "085991e9cedc97fc4fd00abdfe14ef11bf589b03cf2b9315fd399f90be2813a6",
       "claims": [
         "C1",
         "C2",
@@ -420,13 +420,18 @@
       "canonical_id": "M08",
       "canonical_file": "docs/MODEL_AND_CLAIMS.md",
       "canonical_anchor": "m08",
-      "canonical_line_start": 206,
-      "canonical_line_end": 213,
-      "canonical_fragment_sha256": "d3cb55e32ab91b5086560496f2c388af0aafb33744b2a16164772ce1eb211992",
+      "canonical_line_start": 202,
+      "canonical_line_end": 207,
+      "canonical_fragment_sha256": "d2708abbe3d4fa80931740de670ee3ed9b79badcc71f3d7dc05aa22f6f8445af",
       "claims": [
-        "C7"
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
       ],
-      "transformation": "explicit authority and status update, no historical source edits",
+      "transformation": "verification and reproduction guide for the mathematical claims; original source fragments retained below",
       "sources": [
         {
           "source_id": "H1",
@@ -485,9 +490,9 @@
       "canonical_id": "P01",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p01",
-      "canonical_line_start": 13,
-      "canonical_line_end": 103,
-      "canonical_fragment_sha256": "ad1253b0d033ffb39e50e2d3e7687a1dcd810dfcda867d816bd7a40ab45b32d6",
+      "canonical_line_start": 11,
+      "canonical_line_end": 101,
+      "canonical_fragment_sha256": "3f3e997254e0add6e25e0b76cd3508afaca7f5ddfd440e1ae46e1876c67f0cdd",
       "claims": [
         "C1",
         "C2",
@@ -552,9 +557,9 @@
       "canonical_id": "P02",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p02",
-      "canonical_line_start": 104,
-      "canonical_line_end": 138,
-      "canonical_fragment_sha256": "1ae53337fcd77cece6dd1a3a69277b09582b5f60f4549a8b9f6d5ff192ff2a9f",
+      "canonical_line_start": 102,
+      "canonical_line_end": 136,
+      "canonical_fragment_sha256": "b1fecae128e82245a54ffa6dc8569e008b4c0703f4fae93d6e027aa45300158a",
       "claims": [
         "C2",
         "C3",
@@ -619,8 +624,8 @@
       "canonical_id": "P03",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p03",
-      "canonical_line_start": 139,
-      "canonical_line_end": 247,
+      "canonical_line_start": 137,
+      "canonical_line_end": 245,
       "canonical_fragment_sha256": "87dd4a4fe711b4f11caf7429b17a40d31e3e7954f1bbba92fc7dce02d465da86",
       "claims": [
         "C2",
@@ -709,9 +714,9 @@
       "canonical_id": "P04",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p04",
-      "canonical_line_start": 248,
-      "canonical_line_end": 300,
-      "canonical_fragment_sha256": "ed0da7fd079084d1a30301f6792d5868bbc940a9b626edd5c16fe7516f2d0382",
+      "canonical_line_start": 246,
+      "canonical_line_end": 298,
+      "canonical_fragment_sha256": "447063b0fe303a6cdf66325b575a862a3d43563d25f5d08dcf7e56a4e9b3d163",
       "claims": [
         "C2",
         "C4"
@@ -763,9 +768,9 @@
       "canonical_id": "P05",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p05",
-      "canonical_line_start": 301,
-      "canonical_line_end": 361,
-      "canonical_fragment_sha256": "e4d7d85c59079450bdf874cc015fbf9a9f4897eaebdfacbb8813143172950e2e",
+      "canonical_line_start": 299,
+      "canonical_line_end": 359,
+      "canonical_fragment_sha256": "6e9a77b6f854b9ff0e2f2248bede9688294d84a37fa0f05c437e9244f4bec0e8",
       "claims": [
         "C4"
       ],
@@ -828,9 +833,9 @@
       "canonical_id": "P06",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p06",
-      "canonical_line_start": 362,
-      "canonical_line_end": 422,
-      "canonical_fragment_sha256": "dc0070b2574489a7fd354e741b48e0428890816dadf038e601eaed8cb4edbd2b",
+      "canonical_line_start": 360,
+      "canonical_line_end": 420,
+      "canonical_fragment_sha256": "e6e73beef7854d4db793a22daa0c30b201356f8bf14c8790ff76f9c4a17b9f39",
       "claims": [
         "C4"
       ],
@@ -893,9 +898,9 @@
       "canonical_id": "P07",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p07",
-      "canonical_line_start": 423,
-      "canonical_line_end": 513,
-      "canonical_fragment_sha256": "d678e0a6c403bc985bf1a1482d74e6be88856229e309cfac037cc096660d7898",
+      "canonical_line_start": 421,
+      "canonical_line_end": 511,
+      "canonical_fragment_sha256": "ebff0f293dca7e14946a091e1e54ea062359236f9246df67e2c63bed7d838db3",
       "claims": [
         "C2",
         "C4"
@@ -1079,9 +1084,9 @@
       "canonical_id": "P08",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p08",
-      "canonical_line_start": 514,
-      "canonical_line_end": 594,
-      "canonical_fragment_sha256": "f89cbc9d5d51e1dc905db8dd631e8cfc2005d518cd392c2370faff9f3bd601fa",
+      "canonical_line_start": 512,
+      "canonical_line_end": 592,
+      "canonical_fragment_sha256": "7358db0a14fa04d4b566c73808e0a32ccbcdb4e4d631ac5a31f72f49bf1f693f",
       "claims": [
         "C1",
         "C4"
@@ -1145,9 +1150,9 @@
       "canonical_id": "P09",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p09",
-      "canonical_line_start": 595,
-      "canonical_line_end": 749,
-      "canonical_fragment_sha256": "99a23541140ded6d8880d75ecab6d74081ffa7f44cbc013e3c826f03c29c2f08",
+      "canonical_line_start": 593,
+      "canonical_line_end": 747,
+      "canonical_fragment_sha256": "ab40206ee7ba4a34add457d3e2f8992b28071e9da5a0fe4abc39ebf33f70cd8b",
       "claims": [
         "C3"
       ],
@@ -1222,9 +1227,9 @@
       "canonical_id": "P10",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p10",
-      "canonical_line_start": 750,
-      "canonical_line_end": 790,
-      "canonical_fragment_sha256": "345f714c736598890275cb97935fda98c7e90d4e42624497e8ada2a176fb3617",
+      "canonical_line_start": 748,
+      "canonical_line_end": 788,
+      "canonical_fragment_sha256": "db2e4f48a3b98070ddc039b879bc3718b6a22f907644bf0c9ee743f42f3f59bc",
       "claims": [
         "C1",
         "C3"
@@ -1300,9 +1305,9 @@
       "canonical_id": "P11",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p11",
-      "canonical_line_start": 791,
-      "canonical_line_end": 831,
-      "canonical_fragment_sha256": "1f739ba6321e8f87018685495a90de3acc04e79259b04bee6a750ada4f17928f",
+      "canonical_line_start": 789,
+      "canonical_line_end": 829,
+      "canonical_fragment_sha256": "e191bf36cd6a03ef0eef974d2e0e33e50a6ecd2a1963519017a72688dbca6944",
       "claims": [
         "C6"
       ],
@@ -1377,9 +1382,9 @@
       "canonical_id": "P12",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p12",
-      "canonical_line_start": 832,
-      "canonical_line_end": 882,
-      "canonical_fragment_sha256": "730ae6bd9a4b9de4d357eaca1cf703d0893ad52eb48d2277ea921c4f51e0383e",
+      "canonical_line_start": 830,
+      "canonical_line_end": 880,
+      "canonical_fragment_sha256": "f30ed3e52a01bc97e887e78821057fb9344583af8543b49ab74d251146fd76ce",
       "claims": [
         "C6"
       ],
@@ -1430,9 +1435,9 @@
       "canonical_id": "P13",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p13",
-      "canonical_line_start": 883,
-      "canonical_line_end": 968,
-      "canonical_fragment_sha256": "88b65dd979d23270229f73435b13287c331475f2578941448dccbeaf804563c7",
+      "canonical_line_start": 881,
+      "canonical_line_end": 966,
+      "canonical_fragment_sha256": "38855e4acccc2a9aa7c0192b1a65c667955ff1255800164d1ada9685ccfa59f8",
       "claims": [
         "C5",
         "C2"
@@ -1640,9 +1645,9 @@
       "canonical_id": "P14",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p14",
-      "canonical_line_start": 969,
-      "canonical_line_end": 1005,
-      "canonical_fragment_sha256": "64ed276114fef27f372710fe0d465694af9043068975d53a24f8fe9cb7a06ec9",
+      "canonical_line_start": 967,
+      "canonical_line_end": 1003,
+      "canonical_fragment_sha256": "e3e0491637a00d13e48e9ac8196e8bca2ae4bd4dfcc4f832a962b97b58db4e53",
       "claims": [
         "C2",
         "C4",
@@ -1839,9 +1844,9 @@
       "canonical_id": "P15",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p15",
-      "canonical_line_start": 1006,
-      "canonical_line_end": 1022,
-      "canonical_fragment_sha256": "63ddd596c07fd6da434f047b5fdaa36b7125632de1ef2835dd176a7c56a415cd",
+      "canonical_line_start": 1004,
+      "canonical_line_end": 1018,
+      "canonical_fragment_sha256": "814d06583de0ae4a31b8b2378331f1e407a3768d09ba7db2f51d81eb934cc108",
       "claims": [
         "C1",
         "C2",
