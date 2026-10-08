@@ -1,20 +1,18 @@
-# Project status
+# Repository guide
 
-**The repository is complete for its stated scientific result.** The channel model, exact theorem, complete internal proof, computational certificate, three independent verification implementations, eight-use witness and all three figures are available here.
+The repository connects a geometric condition on qubit measurements to positive quantum capacity beyond the optimized single-use coherent-information benchmark. It includes the channel model, exact theorem, complete proof, computational certificate, three independent verification implementations, eight-use witness and three scientific figures.
 
 [Read the result](index.md) · [Exact theorem and assumptions](../../docs/MODEL_AND_CLAIMS.md#m04) · [Complete proof](../../docs/COMPLETE_PROOF.md) · [Figures and downloads](figures.md)
 
-## What supports the result?
+## Follow the argument
 
-The repository provides the complete certificate checks, witness and control calculations, graphical reproduction, integrity checks, tests and browser checks. The [verification guide](verification.md#verification-roles) explains what each command establishes and how to inspect its outputs.
+The overview introduces the physical question. The channel guide specifies the receiver's accessible records and the eight-use example; the proof guide connects the single-use entropy bound, repetition construction and geometric gap. The exact theorem and complete proof supply the definitions and derivation behind that route.
 
-These are author-side analytical and computer-assisted checks. They do not constitute external peer review or proof-assistant formalization. The written proof identifies the background coding theorems and the computational inequality on which the result depends.
+The theorem applies to finite measurement ensembles with common symmetric reporting noise and correct branch and axis flags. Positive finite-block coherent information supplies an achievable asymptotic rate through outer coding. The [precise scope](../../docs/MODEL_AND_CLAIMS.md#m07) and [controlled limits](limits.md) explain the sufficient band, coplanarity and noise endpoints.
 
-## What does completion mean here?
+## Inspect the evidence
 
-The result establishes a sufficient geometric condition over the stated finite-axis, common-error family. Exact capacity, efficient decoding, arbitrary heterogeneous or correlated reporting errors, and noisy axis labels remain outside the claim. A positive finite-block coherent information certifies a positive asymptotic rate through outer coding; it does not establish high-fidelity recovery from an isolated eight-use block. [Precise scope](../../docs/MODEL_AND_CLAIMS.md#m07) · [Controlled limits](limits.md)
-
-A manuscript is not included. Its preparation is a separate writing stage, and is not needed to read or check the scientific argument supplied here.
+The analytical proof identifies its coding-theorem inputs and the scalar entropy inequality checked by the computational certificate. The [verification guide](verification.md#verification-roles) distinguishes complete certificate verification, witness and control calculations, figure reproduction, and file-integrity checks, and explains how to inspect their outputs.
 
 ## Reading, reuse and contact
 

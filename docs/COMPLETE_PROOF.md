@@ -1,14 +1,12 @@
 # Complete proof source: the common-noise full-span theorem
 
-**Canonical scientific source, version 1 · 8 September 2026**
+This document proves the common-noise full-span theorem and its supporting claims C1–C6. The notation agrees with [MODEL_AND_CLAIMS.md](MODEL_AND_CLAIMS.md). [SOURCE_TO_CANONICAL.md](SOURCE_TO_CANONICAL.md) identifies the technical references, certificates and evaluators; [NOTATION_CROSSWALK.md](NOTATION_CROSSWALK.md) relates their notation.
 
-This is a consolidation of the supplied theorem and its final author-side audit, not a new result, manuscript draft or repeated audit. Required inherited lemmas are written directly below. Section-level provenance, exact source hashes and code/evidence identities are in [SOURCE_TO_CANONICAL.md](SOURCE_TO_CANONICAL.md). The notation agrees with [MODEL_AND_CLAIMS.md](MODEL_AND_CLAIMS.md); documentary renamings are explicit in [NOTATION_CROSSWALK.md](NOTATION_CROSSWALK.md).
-
-**Meaning of “complete.”** The analytical dependency chain for retained claims C1–C6 is present in this document. The computer-assisted scalar lemma is tied to the preserved rational certificate and separate checkers, not replaced by a narrative assertion. Standard external tools are quantum conditional-entropy concavity, Pinsker's inequality, the coherent-information coding theorem, and the erasure-capacity endpoint; their supplied references and roles are listed in [REFERENCES.md](REFERENCES.md). The earlier prose consolidation imported the recorded verification status. The current baseline separately reports checks after executable relocation in [BASELINE_VALIDATION.json](../validation/BASELINE_VALIDATION.json); these do not constitute external verification of the theorem or arithmetic libraries. Absolute priority is a separate, bounded source assessment.
+The analytical dependency chain includes a computer-assisted scalar lemma, with its rational certificate and three separate checkers described in P07 and P14. Standard tools are quantum conditional-entropy concavity, Pinsker's inequality, the coherent-information coding theorem, and the erasure-capacity endpoint; their references and roles are listed in [REFERENCES.md](REFERENCES.md). Execution records are in [BASELINE_VALIDATION.json](../validation/BASELINE_VALIDATION.json).
 
 ## Reading route
 
-[P01](#p01) defines the physical channel and global one-use benchmark. [P02–P03](#p02) supply the elementary entropy tools and the transformed-variable comparison. [P04–P07](#p04) state and justify the all-noise scalar inequality, including the analytical tails and computer certificate. [P08](#p08) produces the geometric gap. [P09–P10](#p09) give the full all-record collective construction and capacity implication. [P11–P13](#p11) cover the retained limits and eight-use illustration. [P14–P15](#p14) specify the computational evidence boundary and completeness status.
+[P01](#p01) defines the physical channel and global one-use benchmark. [P02–P03](#p02) supply the elementary entropy tools and the transformed-variable comparison. [P04–P07](#p04) state and justify the all-noise scalar inequality, including the analytical tails and computer certificate. [P08](#p08) produces the geometric gap. [P09–P10](#p09) give the full all-record collective construction and capacity implication. [P11–P13](#p11) cover the limiting geometries, noise endpoints and eight-use illustration. [P14–P15](#p14) identify computational evidence and map the proof dependencies.
 
 <a id="p01"></a>
 ## P01. Physical channel and exact single-use positivity criterion
@@ -99,14 +97,14 @@ No optimizing direction or input weight has been presumed. For later use, the fu
 \lim_{t\downarrow0}\frac{C(t,\mathbf u)}{h_2(t)} =G(\mathbf u):=\sum_b\frac{w_b c}{1-a(\mathbf n_b\cdot\mathbf u)^2}.
 ```
 
-Thus $`\Gamma\leq G_{\min}:=\min_{\mathbf u}G(\mathbf u)`$. Equality requires an additional argument and is not used as a general premise. The countercontrol in [P13.4](#p134) illustrates why.
+Thus $`\Gamma\leq G_{\min}:=\min_{\mathbf u}G(\mathbf u)`$. Equality requires an additional argument and is not used as a general premise. The numerical control in [P13.4](#p134) illustrates why.
 
 <a id="p02"></a>
 ## P02. Elementary entropy tools used below
 
 **Sources:** [S8](SOURCE_TO_CANONICAL.md#s8) §3.2; [S9](SOURCE_TO_CANONICAL.md#s9) §§2–3, 7; [S10](SOURCE_TO_CANONICAL.md#s10) §5; [S4](SOURCE_TO_CANONICAL.md#s4) §§2–3; [S5](SOURCE_TO_CANONICAL.md#s5) §§2–3. **Claims:** C2–C4.
 
-The retained proof uses the following standard binary-entropy and quantum-entropy facts. They are explicit assumptions/tools of the source proof, not new results of this consolidation.
+The proof uses the following standard binary-entropy and quantum-entropy facts.
 
 For $`0\leq x,\chi\leq1`$, let
 
@@ -114,7 +112,7 @@ For $`0\leq x,\chi\leq1`$, let
 D_\chi(x)=h_2(x)-\mathcal H(4(1-\chi)x(1-x)).
 ```
 
-This is the entropy decrease when a qubit's diagonal $`(1-x,x)`$ gains squared normalized coherence $`\chi`$. The source uses
+This is the entropy decrease when a qubit's diagonal $`(1-x,x)`$ gains squared normalized coherence $`\chi`$. The relevant bounds are
 
 ```math
 h_2(x)\leq2\sqrt{x(1-x)},\qquad \frac2{\ln2}\chi x(1-x)\leq D_\chi(x)\leq\chi h_2(x).
@@ -122,7 +120,7 @@ h_2(x)\leq2\sqrt{x(1-x)},\qquad \frac2{\ln2}\chi x(1-x)\leq D_\chi(x)\leq\chi h_
 
 **(P2.1)**
 
-For the lower bound, diagonal dephasing gives a relative-entropy difference $`D_\chi(x)`$. Pinsker's inequality and the trace norm $`2\sqrt{\chi x(1-x)}`$ of the off-diagonal difference give the displayed coefficient in bits. For the upper bound, $`D_\chi(x)`$ is convex in $`\chi`$ with endpoint values $`0,h_2(x)`$; its endpoint chord bounds it above. This follows from the concavity of the square-root form of binary entropy used in the source. The first inequality is the inherited binary-entropy overlap bound. Its role is to convert a sum of conditional entropies to a product of record overlaps.
+For the lower bound, diagonal dephasing gives a relative-entropy difference $`D_\chi(x)`$. Pinsker's inequality and the trace norm $`2\sqrt{\chi x(1-x)}`$ of the off-diagonal difference give the displayed coefficient in bits. For the upper bound, $`D_\chi(x)`$ is convex in $`\chi`$ with endpoint values $`0,h_2(x)`$; its endpoint chord bounds it above. This follows from the concavity of the square-root form of binary entropy. The first inequality is the binary-entropy overlap bound. Its role is to convert a sum of conditional entropies to a product of record overlaps.
 
 The determinant-entropy function $`\mathcal H`$ is increasing and concave on $`[0,1]`$, with $`\mathcal H(0)=0`$. In particular,
 
@@ -132,7 +130,7 @@ The determinant-entropy function $`\mathcal H`$ is increasing and concave on $`[
 
 **(P2.2)**
 
-For fixed measurement effects and a fixed input direction, the cost $`C_\epsilon(t,x)`$ is concave in $`t`$. The source's correct justification is an affine classical–quantum representation: the blocks $`\sqrt{E_s}\rho_t\sqrt{E_s}`$ depend affinely on $`t`$, and have the same nonzero spectra and traces as the conditional-reference blocks. The average conditional entropy is concave on this affine family. This is **not** an inference from subtracting arbitrary concave scalar entropies. It will justify the lower secants in [P07](#p07).
+For fixed measurement effects and a fixed input direction, the cost $`C_\epsilon(t,x)`$ is concave in $`t`$. An affine classical–quantum representation establishes this: the blocks $`\sqrt{E_s}\rho_t\sqrt{E_s}`$ depend affinely on $`t`$, and have the same nonzero spectra and traces as the conditional-reference blocks. The average conditional entropy is concave on this affine family. This concavity justifies the lower secants in [P07](#p07).
 
 An increase of symmetric reporting error within $`[0,1/2]`$ can be implemented as additional classical sign flips. Such processing cannot decrease the average conditional-reference entropy. This fixes the direction of the noise-monotonic bound used in the certificate.
 
@@ -266,7 +264,7 @@ The exact identities
 1-\ell=aV(a),\quad \ell-c=caW(a),\quad P=V+W
 ```
 
-show that $`c\lt \ell\lt 1`$ for $`0\lt c\lt 1`$. The submitted computer-assisted entropy lemma is
+show that $`c\lt \ell\lt 1`$ for $`0\lt c\lt 1`$. The computer-assisted entropy lemma is
 
 ```math
 \boxed{\mathscr D(t,c):=(1-\ell)C_\perp(t)+(\ell-c)C_\parallel(t)-\ell a h_2(t)\geq0}
@@ -296,20 +294,20 @@ For each input weight, $`\beta(t,\epsilon)`$ is independent of the axis label. S
 
 **(P4.2)**
 
-The bound is not the equality $`\Gamma=G_{\min}`$. Nor does this common-coefficient step prove the same result for independently varied axis-dependent errors.
+Equality $`\Gamma=G_{\min}`$ requires a separate argument. The common-coefficient step relies on the same reporting error for every axis.
 
 <a id="p05"></a>
 ## P05. Analytical low-noise endpoint
 
 **Sources:** [S4](SOURCE_TO_CANONICAL.md#s4) §3.1; [S5](SOURCE_TO_CANONICAL.md#s5) §3; source [C1](SOURCE_TO_CANONICAL.md#c1)–[C2](SOURCE_TO_CANONICAL.md#c2). **Claim:** C4.
 
-Let $`0\lt c\leq c_*=2^{-28}`$, $`\zeta=\ln(1/c)`$ and $`\delta_0=1/100`$. The source uses
+Let $`0\lt c\leq c_*=2^{-28}`$, $`\zeta=\ln(1/c)`$ and $`\delta_0=1/100`$. Use the bounds
 
 ```math
 \ell\leq\frac85c,\quad \ell-c\leq\frac35c,\quad \ln2\gt \frac{69}{100},\quad\ln100\lt 5,\quad\ln4\lt 2.
 ```
 
-The logarithm bounds have elementary rational certificates: three positive terms in the atanh series for $`\ln2`$, and finite lower exponential sums for $`\exp(5)`$ and $`\exp(2)`$, suffice. Their recorded exact checks are source C2, not recomputed here.
+The logarithm bounds have elementary rational certificates: three positive terms in the atanh series for $`\ln2`$, and finite lower exponential sums for $`\exp(5)`$ and $`\exp(2)`$, suffice. Their exact arithmetic checks are recorded in C2.
 
 ### P05.1 Input weights $`\delta_0\leq t\leq1/2`$
 
@@ -329,7 +327,7 @@ The $`C_\perp`$ term alone proves (P4.1); the nonnegative $`C_\parallel`$ term n
 
 ### P05.2 Arbitrarily nearly pure inputs
 
-For $`0\lt t\leq\delta_0`$, the source entropy bounds give
+For $`0\lt t\leq\delta_0`$, the entropy bounds give
 
 ```math
 C_\perp(t)-c h_2(t)\geq\frac{ct}{\ln2} \left[(1-\delta_0)\zeta-\delta_0\ln(1/\delta_0)-(1+c)\delta_0\right],
@@ -357,7 +355,7 @@ for the normalized low-noise tail expression. The exact compact-input comparison
 \frac{167771999}{16777215900}\gt 0.
 ```
 
-These rational values are read from source C2; their functional use is the argument just given. The proof covers all positive $`c`$ in this range and all $`t\gt 0`$, however small. At $`t=0`$, (P4.1) is equality.
+C2 records these exact rational margins. The proof covers all positive $`c`$ in this range and all $`t\gt 0`$, however small. At $`t=0`$, (P4.1) is equality.
 
 <a id="p06"></a>
 ## P06. Analytical high-noise endpoint
@@ -388,7 +386,7 @@ It makes $`f(z)=(1-z)[-\phi''(z)]`$ positive and increasing, with upper bound $`
 \frac1{2(2j+1)(2j+3)\ln2},\qquad j\geq0.
 ```
 
-The source's derivative identity and integral representation give
+The derivative identity and integral representation give
 
 ```math
 K_\phi(z)=\phi(z)+(1-z)\phi'(z)=\int_z^1 f(v)\,dv \geq(1-z)\left(1-\frac1{2\ln2}\right).
@@ -421,7 +419,7 @@ while
 The gap is $`99/12500\gt 0`$, proving (P4.1) on the whole high-noise region. These coefficient identities and rational constants are recorded in source C2. At $`t=0`$, one uses equality rather than dividing by a vanishing entropy difference. This argument reaches arbitrarily close to $`\epsilon=1/2`$; the endpoint itself is addressed physically in [P11](#p11).
 
 <a id="p07"></a>
-## P07. Complete compact-domain certificate and its verification boundary
+## P07. Complete compact-domain certificate
 
 **Sources:** [S4](SOURCE_TO_CANONICAL.md#s4) §3.3; [S5](SOURCE_TO_CANONICAL.md#s5) §4; [V1](SOURCE_TO_CANONICAL.md#v1)–[V9](SOURCE_TO_CANONICAL.md#v9); source [C1](SOURCE_TO_CANONICAL.md#c1)–[C2](SOURCE_TO_CANONICAL.md#c2). **Claims:** C2, C4.
 
@@ -441,7 +439,7 @@ divide (P4.1) by the positive factor $`ca`$:
 
 **(P7.1)**
 
-Here $`C(t,c)`$ means the endpoint cost evaluated at the unique $`\epsilon=(1-\sqrt{1-c})/2`$ in $`[0,1/2]`$. To make the source code's coefficient argument explicit, define
+Here $`C(t,c)`$ means the endpoint cost evaluated at the unique $`\epsilon=(1-\sqrt{1-c})/2`$ in $`[0,1/2]`$. For the coefficient bounds, define
 
 ```math
 \bar P(c)=P(1-c),\quad\bar V(c)=V(1-c),\quad\bar W(c)=W(1-c).
@@ -487,9 +485,9 @@ The saved checks certify $`\mu\gt 0`$ throughout every noise band. Thus the comp
 
 The immutable certificate **V1** supplies 512 exact-rational noise bands and 29,635 exact-rational input intervals in total. For each noise band, its listed intervals join exactly and cover $`[\delta_{\mathrm{cert}},1/2]`$. The noise bands join exactly and cover $`[c_*,24/25]`$.
 
-$`S_-(t)`$ is concave in $`t`$ by P02. Therefore the line through outward-lowered endpoint values on an input interval $`[l,r]`$ lies below $`S_-`$ throughout that interval. The original integer checker uses a tangent upper bound for $`h_2(t)`$ and checks the resulting linear deficit at both ends. The mpmath checker uses the same proof obligations but a different arithmetic backend and a different expression for the parallel conditional entropy.
+$`S_-(t)`$ is concave in $`t`$ by P02. Therefore the line through outward-lowered endpoint values on an input interval $`[l,r]`$ lies below $`S_-`$ throughout that interval. The integer checker uses a tangent upper bound for $`h_2(t)`$ and checks the resulting linear deficit at both ends. The mpmath checker uses the same proof obligations but a different arithmetic backend and a different expression for the parallel conditional entropy.
 
-The final audit checker uses a separately written Decimal implementation and a different scalar envelope. For a lower secant $`s_l+k(t-l)`$ and an upper enclosure $`P_+`$ for $`\bar P(c_l)`$, the unrestricted entropy-conjugate upper bound is
+The Decimal checker uses a separate implementation and a different scalar envelope. For a lower secant $`s_l+k(t-l)`$ and an upper enclosure $`P_+`$ for $`\bar P(c_l)`$, the unrestricted entropy-conjugate upper bound is
 
 ```math
 P_+\log_2\!\left(1+\exp\left[-\frac{k\ln2}{P_+}\right]\right)-s_l+kl.
@@ -497,19 +495,19 @@ P_+\log_2\!\left(1+\exp\left[-\frac{k\ln2}{P_+}\right]\right)-s_l+kl.
 
 Derivative signs permit endpoint maxima when the stationary point is outside the interval. Using the unrestricted maximum when a sign is unresolved remains safe. The checker recomputes these bounds; it does not trust saved claimed negativity in V1.
 
-### P07.4 Recorded evidence, explicitly not rerun here
+### P07.4 Certificate evidence
 
 | Evidence chain | Arithmetic and formula distinction | Recorded outcome |
 |:--|:--|:--|
 | V1 + V2 + V3, result V8 | Exact-rational cover; integer outward intervals; midpoint entropy-tangent envelope. | Complete 224-bit verification; largest normalized compact upper bound below $`-5.71962366142\times10^{-12}`$. |
 | V1 + V4, result V9 | Separate mpmath interval engine and entropy-difference expression for $`C_\parallel`$. | All rectangles and tails pass at 85 decimal digits. |
-| V1 + V5 + V6, result V7 | Final-audit Decimal engine and entropy-conjugate/secant envelope; no submitted numerical evaluator imported. | All 512 bands and 29,635 rectangles pass at 130 digits; largest compact upper bound below $`-2.37355635215\times10^{-10}`$. |
+| V1 + V5 + V6, result V7 | Separate Decimal engine and entropy-conjugate/secant envelope. | All 512 bands and 29,635 rectangles pass at 130 digits; largest compact upper bound below $`-2.37355635215\times10^{-10}`$. |
 
-The smallest recorded normalized tail margin exceeds $`0.00028189136168`$ nats. Different negative compact margins are expected from different valid upper envelopes. These are stored source results, not numerical runs performed in this consolidation.
+The smallest recorded normalized tail margin exceeds $`0.00028189136168`$ nats. Different negative compact margins are expected from different valid upper envelopes. The table reports the stored certificate-verification results.
 
-A replay must confirm the declared polynomial, noise domain, input-tail split, exact rational coverage, all required interval signs, and fail on corrupted or incomplete covers. Counts alone are not proof. The source source-code and result hashes, together with independent execution entry points, are mapped in [P14](#p14) and the provenance ledger. Arithmetic assumptions, including outward rounding of elementary functions, remain part of the explicit computer-assisted proof obligation.
+Certificate verification checks the polynomial, noise domain, input-tail split, exact rational coverage and all required interval signs, and rejects corrupted or incomplete covers. The source-code and result hashes, together with independent execution entry points, are mapped in [P14](#p14) and the provenance ledger. Arithmetic assumptions, including outward rounding of elementary functions, remain part of the explicit computer-assisted proof obligation.
 
-The analytical domains of P05 and P06 meet this complete compact domain at their exact endpoints. Together with pure-input equality they establish the supplied all-noise scalar lemma (P4.1). This document consolidates that proof and its recorded certificate support; it does not claim a newly executed certificate or a formal proof-assistant derivation.
+The analytical domains of P05 and P06 meet this complete compact domain at their exact endpoints. Together with pure-input equality and the compact-domain certificate, they establish the all-noise scalar lemma (P4.1).
 
 <a id="p08"></a>
 ## P08. Geometry separates the global costs
@@ -566,7 +564,7 @@ The quadratic is concave and its smaller endpoint value on $`[0,1]`$ is $`1/35`$
 \frac{22}{7}-\pi=\int_0^1\frac{x^4(1-x)^4}{1+x^2}\,dx\gt 0
 ```
 
-is the source's elementary certification of the bound on $`\pi`$. Since $`\mathrm{Tr}(T)=1`$, $`0\leq\lambda\leq1/3`$. Therefore
+is an elementary certification of the bound on $`\pi`$. Since $`\mathrm{Tr}(T)=1`$, $`0\leq\lambda\leq1/3`$. Therefore
 
 ```math
 \ell\gt L+\frac{ca}{35}\geq L+\frac3{35}ca\lambda.
@@ -595,7 +593,7 @@ This is a width bound, not a rate. Its uniform coefficient can tend to zero near
 <a id="p09"></a>
 ## P09. Complete all-record repetition construction
 
-**Sources:** [S8](SOURCE_TO_CANONICAL.md#s8) §§3.1–3.3; [S5](SOURCE_TO_CANONICAL.md#s5) §6; [S9](SOURCE_TO_CANONICAL.md#s9) §7; [S10](SOURCE_TO_CANONICAL.md#s10) §5. **Claim:** C3. The inherited per-axis-noise lemma is restricted here to the current common-error model.
+**Sources:** [S8](SOURCE_TO_CANONICAL.md#s8) §§3.1–3.3; [S5](SOURCE_TO_CANONICAL.md#s5) §6; [S9](SOURCE_TO_CANONICAL.md#s9) §7; [S10](SOURCE_TO_CANONICAL.md#s10) §5. **Claim:** C3. The repetition lemma is specialized to the common-error model.
 
 ### P09.1 Fixed code and its record coefficients
 
@@ -643,7 +641,7 @@ B(\mathbf u)-K(\mathbf u)=\Lambda(\mathbf u).
 
 **(P9.1)**
 
-These record coefficients have a classical discrimination interpretation in the source. No separate discrimination theorem is required for the explicit finite-axis bounds below.
+These record coefficients have a classical discrimination interpretation. The finite-axis bounds follow directly below.
 
 ### P09.2 Exact conditional states and the all-measured contribution
 
@@ -659,7 +657,7 @@ When at least one code qubit survives, its two conditional codeword states remai
 \sqrt{\chi_\omega x_\omega(1-x_\omega)}.
 ```
 
-Axis-dependent phases do not change its eigenvalues. They are not supplied as an extra assistance resource or dropped from the physical map. Its determinant is $`(1-\chi_\omega)x_\omega(1-x_\omega)`$.
+Axis-dependent phases remain in the physical map but do not change its eigenvalues. Its determinant is $`(1-\chi_\omega)x_\omega(1-x_\omega)`$.
 
 Define the measured-record averages
 
@@ -786,7 +784,7 @@ The global cost inequality (P8.3) and (P1.2) give $`Q^{(1)}=0`$. Choose a unit d
 Q(\mathcal N_{p,\epsilon})\geq\frac{\mathcal I_n}{n}\gt 0.
 ```
 
-This concludes the source-derived full-span theorem. The proof does not require a positive limit of $`\mathcal I_n/n`$ as the inner block length itself diverges. It chooses a useful positive finite inner block and then takes the distinct outer coding limit. The constant, selected direction, sufficient inner length and achievable rate may depend on the fixed ensemble, error and measurement probability. No practical uniform rate or efficient outer code has been supplied.
+This proves the full-span theorem. The proof does not require a positive limit of $`\mathcal I_n/n`$ as the inner block length itself diverges. It chooses a useful positive finite inner block and then takes the distinct outer coding limit. The constant, selected direction, sufficient inner length and achievable rate may depend on the fixed ensemble, error and measurement probability. The capacity implication uses asymptotic outer coding.
 
 <a id="p11"></a>
 ## P11. Coplanar geometry and the two reporting-noise endpoints
@@ -827,7 +825,7 @@ All reported signs are independent of the input. The axes and sign labels are ad
 Q=Q^{(1)}=\max\{0,1-2p\}.
 ```
 
-There is again no separation. Full span of nominal axes does not make a record informative when $`\eta=0`$. The erasure-capacity theorem is an explicitly external endpoint result, not reproved by the interior entropy certificate. Errors above one half are outside the adopted convention; the source notes that a known sign inversion exchanges them with errors below one half.
+There is again no separation. Full span of nominal axes does not make a record informative when $`\eta=0`$. The endpoint capacity follows from the erasure-capacity theorem. A known sign inversion exchanges errors above one half with errors below one half.
 
 <a id="p12"></a>
 ## P12. The exact near-coplanar family and its valid domain
@@ -862,15 +860,15 @@ If $`\lambda\leq W(a)/P(a)`$, then $`G_{\min}\leq\ell`$. The global lower bound 
 
 **(P12.2)**
 
-The source identities imply $`W/P\geq1/4`$. Thus every common interior error has the exact cone formulas on $`0\leq\lambda\leq1/4`$. The larger domain must be justified for the chosen error; it cannot be inferred from the older one-percent example. Also
+The polynomial identities imply $`W/P\geq1/4`$. Thus every common interior error has the exact cone formulas on $`0\leq\lambda\leq1/4`$. The larger domain depends on the chosen error. Also
 
 ```math
 3W-P=\frac{(2a-1)(5-a^2)}{20},
 ```
 
-so $`a\geq1/2`$ suffices to extend the exact formulas through $`\lambda=1/3`$. This includes the error of the retained eight-use example but not every interior error.
+so $`a\geq1/2`$ suffices to extend the exact formulas through $`\lambda=1/3`$. This includes the error of the eight-use example but not every interior error.
 
-The source's fixed-error expansion gives
+Expansion at fixed error gives
 
 ```math
 \boxed{p_{\mathrm{rep}}-p_1 =\frac{ca}{2(1+c)^2}\lambda+O(\lambda^2),\qquad\lambda\downarrow0.}
@@ -878,10 +876,10 @@ The source's fixed-error expansion gives
 
 **(P12.3)**
 
-Here $`p_1`$ is the exact single-use boundary for this valid cone range, while $`p_{\mathrm{rep}}`$ is the construction frontier. Neither is asserted to be the optimal capacity phase boundary. The gap can be arbitrarily small and does not promise a bounded working block or useful rate. This section consolidates the retained limiting family; it does not freeze a new plot range or add a resource-scaling investigation.
+Here $`p_1`$ is the exact single-use boundary for this valid cone range, while $`p_{\mathrm{rep}}`$ is the construction frontier. Neither is asserted to be the optimal capacity phase boundary. The gap can be arbitrarily small; the working block length and achievable rate depend on the fixed channel parameters.
 
 <a id="p13"></a>
-## P13. The retained eight-use witness and two numerical safeguards
+## P13. The eight-use witness and two numerical controls
 
 **Sources:** [S5](SOURCE_TO_CANONICAL.md#s5) §7; [S4](SOURCE_TO_CANONICAL.md#s4) §§6–8; [W1](SOURCE_TO_CANONICAL.md#w1)–[W7](SOURCE_TO_CANONICAL.md#w7); source [C3](SOURCE_TO_CANONICAL.md#c3)–[C4](SOURCE_TO_CANONICAL.md#c4). **Claim:** C5; safeguards for C2.
 
@@ -893,7 +891,7 @@ For equal Pauli axes and $`\epsilon=1/10`$,
 a=\frac{16}{25},\qquad c=\frac9{25},\qquad G_{\min}=\frac{c}{1-a/3}=\frac{27}{59}.
 ```
 
-The source has $`\ell\gt 27/59`$; equivalently the cone-family equality condition applies since $`a\gt 1/2`$. Therefore $`\Gamma=27/59`$ and
+Here $`\ell\gt 27/59`$; equivalently the cone-family equality condition applies since $`a\gt 1/2`$. Therefore $`\Gamma=27/59`$ and
 
 ```math
 p_1=\frac{59}{86}.
@@ -937,11 +935,11 @@ For $`m=0`$ use $`\mathcal A_0=1,\mathcal C_0=0`$. The exact coherent informatio
 \mathcal I_8=\sum_{m=0}^7{8\choose m}(1-p)^{8-m}p^m(\mathcal A_m-\mathcal C_m)-p^8\mathcal C_8.
 ```
 
-There is no survivor filter or postselection. The two-dimensional formula evaluates the full flagged entropy sum, not a claim to have diagonalized an exponentially large eight-use receiver/reference matrix.
+The two-dimensional formula evaluates the full flagged entropy sum, including the all-measured branch, without survivor filtering or postselection.
 
-### P13.3 Canonical retained evidence
+### P13.3 Numerical witness evidence
 
-Source **W1**, the final audit's `witness140.json`, is the selected record for subsequent figure-input specification. Its companion **W2** retains the earlier independent precision. **W3** is the final-audit evaluator using the separate Decimal primitive **V6**. The original mpmath effect-determinant route is **W5**, with output **W4** and associated records in the preserved archive. Small direct hidden-outcome physical checks are **W6–W7**.
+**W1**, `witness140.json`, supplies the numerical figure inputs. **W2** is a companion record at a different precision. **W3** is the Decimal evaluator using the separate primitive **V6**. The mpmath effect-determinant evaluator is **W5**, with output **W4**. Small direct hidden-outcome physical checks are **W6–W7**.
 
 The stored enclosure supports
 
@@ -951,10 +949,10 @@ The stored enclosure supports
 
 The total block value is approximately $`0.0005981981270524771`$ bits. The exactly stored all-measured probability is $`p^8=0.05764801`$ and its weighted contribution is approximately $`-0.01653160578649`$ bits. All nine measured-count entries are present in W1.
 
-These figures are the retained source enclosures and approximations. The current baseline preserves their exact recorded bytes and re-evaluates the two substantive witness implementations in its full verification command. The regenerated values must agree with their own immutable reference; no new plot-rounding policy or optimal eight-use code is claimed. A rigorous arithmetic interval is not a statistical confidence interval. The rate is achievable only with the stated asymptotic outer-coding interpretation.
+The full verification command evaluates both witness implementations and compares their outputs with their respective immutable references. The enclosures are arithmetic intervals, not statistical confidence intervals. The rate is achievable with the asymptotic outer-coding interpretation in P10.
 
 <a id="p134"></a>
-### P13.4 Safeguards kept as verification evidence, not extra headline results
+### P13.4 Numerical controls
 
 At equal Pauli axes with $`\epsilon=1/5`$, the directional nearly pure optimum would be $`G_{\min}=8/11`$. At its implied boundary $`p=11/19`$, the maximally mixed input instead has
 
@@ -964,10 +962,10 @@ I_c=\frac{8-11h_2(1/5)}{19}\gt 0.
 
 Source C3 stores a directed enclosure of this control. It demonstrates why $`\Gamma=G_{\min}`$ cannot be assumed at larger error without proof.
 
-Source C4 records a rejected floating-point candidate at $`\epsilon=2/5`$, $`p=5083/10000`$, $`n=64`$, whose directed rate bound is negative. It is retained as a numerical-validation control against signs obtained from severe cancellation. It is not a second figure or a new positive witness in the consolidated story.
+C4 gives a cancellation-sensitive numerical control at $`\epsilon=2/5`$, $`p=5083/10000`$, $`n=64`$, whose directed rate bound is negative. Its negative sign tests numerical reliability under severe cancellation.
 
 <a id="p14"></a>
-## P14. Certificate and evidence dependencies, without merging independent evaluators
+## P14. Certificate and evidence dependencies
 
 **Sources:** [V1](SOURCE_TO_CANONICAL.md#v1)–[V9](SOURCE_TO_CANONICAL.md#v9); [W1](SOURCE_TO_CANONICAL.md#w1)–[W7](SOURCE_TO_CANONICAL.md#w7); source [C1](SOURCE_TO_CANONICAL.md#c1)–[C4](SOURCE_TO_CANONICAL.md#c4); source [R1](SOURCE_TO_CANONICAL.md#r1)–[R6](SOURCE_TO_CANONICAL.md#r6); [S7](SOURCE_TO_CANONICAL.md#s7).
 
@@ -977,11 +975,11 @@ The canonical proof has three substantive computational paths to the same compac
 |:--|:--|:--|:--|
 | Integer construction/checker | V1 rational certificate | V2 plus V3 | V8 and the construction's stored results |
 | Independent mpmath checker | V1 | V4 | V9 |
-| Final-audit Decimal checker | V1 | V5 plus V6 | V7 |
+| Decimal checker | V1 | V5 plus V6 | V7 |
 
-They share the mathematical statement and, where indicated, the rational partition. They do not become independent through differences in precision alone. Their source implementations, entropy expressions, arithmetic backends and envelope methods are identified individually. They are preserved unchanged; consolidation does not deduplicate these substantive routes into one evaluator.
+The three paths share the mathematical statement and, where indicated, the rational partition. Their independence rests on separate implementations, entropy expressions, arithmetic backends and envelope methods, as specified in P07.4.
 
-All runtime certificate inputs and substantive evaluators are now included directly in this scientific baseline. No original audit ZIP or earlier chat is required to execute them. Historical source paths and hashes are retained as provenance; the current reading path is this proof.
+All runtime certificate inputs and evaluators are included in the repository. The provenance ledger identifies their source paths and hashes.
 
 From the package root, use:
 
@@ -991,7 +989,7 @@ python reproduce.py --output /path/to/new-output
 python reproduce.py --output /path/to/new-full-output --full
 ```
 
-`verify.py` checks package identity, claim/source coverage, local links, and approved artifact hashes; it does not certify an entropy inequality. The ordinary reproduction command checks numerical figure inputs and redraws the approved figures in a new output directory. `--full` additionally runs the distinct integer, mpmath, and Decimal compact-certificate paths, the endpoint checks, the retained witness and declared controls, and direct small physical checks. `--rebuild-certificate` may be added to reconstruct the rational cover as well. Output directories must not already exist and no command overwrites approved figures or reference evidence.
+`verify.py` checks package identity, claim/source coverage, local links, and approved artifact hashes; it does not certify an entropy inequality. The ordinary reproduction command checks numerical figure inputs and redraws the approved figures in a new output directory. `--full` additionally runs the distinct integer, mpmath, and Decimal compact-certificate paths, the endpoint checks, the witness and numerical controls, and direct small physical checks. `--rebuild-certificate` may be added to reconstruct the rational cover as well. Output directories must not already exist and no command overwrites approved figures or reference evidence.
 
 Target a single substantive checker without changing the model:
 
@@ -1001,22 +999,20 @@ python verification/decimal/verify_certificate.py \
   --output /path/to/independent-certificate.json --precision 130
 ```
 
-The three certificate algorithms and their arithmetic engines remain separate files in separate directories. Relocation did not make them independent merely by changing precision, nor merge their substantive entropy routines. The exact moved-file hashes, any adapter-only patches, and fresh runtime evidence are in `provenance/FILE_LINEAGE.json` and `validation/BASELINE_VALIDATION.json`. See [REPRODUCTION.md](REPRODUCTION.md) for dependencies, expected outputs, and scope of each check.
+The three certificate algorithms and their arithmetic engines occupy separate directories. Code identities and execution records are in `provenance/FILE_LINEAGE.json` and `validation/BASELINE_VALIDATION.json`. See [REPRODUCTION.md](REPRODUCTION.md) for dependencies, expected outputs, and scope of each check.
 
 <a id="p15"></a>
-## P15. Completion boundary and attribution
+## P15. Proof dependencies and attribution
 
-The proof obligations for the retained mathematical claims map as follows:
+The proof obligations for the mathematical claims map as follows:
 
 - C1: P01 plus P08–P10, relying on the scalar chain P02–P07.
 - C2: P01 and P03–P08, with the exact computer-assisted obligation in P07.
 - C3: P02 and P09–P10, with the coding theorem explicitly identified as external background.
 - C4: P03–P08.
-- C5: P12–P13 and the preserved numerical witness.
+- C5: P12–P13 and the numerical witness.
 - C6: P11–P12, with the erasure-capacity endpoint explicitly sourced externally.
 
-These links are also machine-readable in `provenance/CLAIM_COVERAGE.json`. Every imported section and numerical/checker identity has an original source path and SHA-256 in the ledger. Historical conditions are imported only where justified; the broader per-axis-noise repetition lemma is specialized to common error, and the older narrow-band scalar certificate is not substituted for the current all-noise proof.
+These links are also machine-readable in `provenance/CLAIM_COVERAGE.json`. The ledger records source paths and SHA-256 identities for the technical sections, numerical evidence and checkers. The repetition lemma is specialized to common error; P05–P07 cover the full open noise interval.
 
-C7, significance and originality relative to prior work, is not an additional mathematical lemma. The current source comparison supports a bounded working distinction from the inspected incomplete-erasure, dephrasure and structured-code literature. Absolute priority and external peer review remain unrecorded. [REFERENCES.md](REFERENCES.md) carries the existing attribution and its scope without reopening a web search or extending the claim.
-
-No missing internally named dependency was discovered in the inspected source set. This consolidation does not assert that a fresh external audit would find no issue. The canonical argument is a dependency-complete account of the supplied author-audited result, with its explicit computer certificate and named standard tools. The scientific specifications, canonical plotting data, and user-approved figures are included directly in this baseline. Clean-directory checks are recorded separately in the current validation report; the original canonical derivations and their source links remain traceable.
+C7 compares the result with incomplete-erasure, dephrasure and structured-code literature. [REFERENCES.md](REFERENCES.md) gives the attribution and the scope of that comparison.

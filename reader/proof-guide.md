@@ -10,7 +10,7 @@
 - [The channel](channel.md)
 - [The proof route](proof-guide.md)
 - [Figure atlas](figures.md)
-- [Scope and limits](limits.md)
+- [Scope and controlled limits](limits.md)
 - [Exact model and theorem](../docs/MODEL_AND_CLAIMS.md)
 - [Complete proof](../docs/COMPLETE_PROOF.md)
 - [Verification guide](verification.md)
@@ -18,9 +18,9 @@
 - [References and their roles](../docs/REFERENCES.md)
 - [Source materials](materials.md)
 - [Notation crosswalk](../docs/NOTATION_CROSSWALK.md)
-- [Source and proof ledger](../docs/SOURCE_TO_CANONICAL.md)
+- [Proof and evidence index](../docs/SOURCE_TO_CANONICAL.md)
 - [Visual design](visual-design.md)
-- [Project status](status.md)
+- [Repository guide](status.md)
 
 </details>
 
@@ -65,7 +65,7 @@ The resulting sufficient condition is $`p\lt 1/(1+L)`$. Here $`L`$ is the smalle
 L=\min_{\|\mathbf u\|=1}\sum_b\frac{w_b c}{\sqrt{1-a(\mathbf n_b\cdot\mathbf u)^2}},\qquad a=(1-2\epsilon)^2,\quad c=1-a.
 ```
 
-Thus $`\Gamma`$ controls the best possible **single-use input**, while $`L`$ controls this **specified block construction**. They optimize different quantities and need not have the same minimizing direction. The repetition frontier $`p_{\mathrm{rep}}=1/(1+L)`$ concerns the strict eventual sign. The equality case and exceptional shorter blocks above it are not classified by these bounds, and it is not an exact capacity boundary.
+Thus $`\Gamma`$ controls the best possible **single-use input**, while $`L`$ controls this **specified block construction**. They optimize different quantities and need not have the same minimizing direction. The repetition frontier $`p_{\mathrm{rep}}=1/(1+L)`$ concerns the strict eventual sign for long balanced-repetition blocks. It is a construction threshold, rather than an all-code capacity boundary.
 
 Fix the channel parameters and a suitable $`p`$, choose a direction from those known parameters, and then choose a finite $`n`$ with positive $`I_n`$. Only after fixing that inner block does the asymptotic coding theorem apply to repeated uses of the block channel, giving $`Q\geq I_n/n\gt 0`$. There is no requirement that $`I_n/n`$ have a positive limit as the inner length grows. The inner-block selection and outer-coding limit are separate steps. [P09: all-record bounds and polynomial factors](../docs/COMPLETE_PROOF.md#p09) · [P10: operational conclusion](../docs/COMPLETE_PROOF.md#p10) · [Tutorial achievability statement](background.md#reading-map)
 
@@ -89,13 +89,13 @@ For full span, $`\lambda\gt 0`$; for every interior error, $`ca\gt 0`$. Thus the
 
 The lower equality is included and the upper equality excluded. This is a guaranteed subinterval, not the exact quantum-capacity boundary. Its width is a range of measurement probabilities, not a communication rate. [P08: geometric gap](../docs/COMPLETE_PROOF.md#p08) · [P10: composition into the theorem](../docs/COMPLETE_PROOF.md#p10)
 
-[Figure 2](figures.md#figure-2) shows this sufficient strip for one explicit slice: equally weighted Pauli axes, for which $`T=I/3`$. It is not a phase diagram for arbitrary ensembles. Outside the strip the plotted theorem makes no classification. Figure 1's point at $`p=0.7`$, $`\epsilon=0.1`$ uses the sharper bound in [P13](../docs/COMPLETE_PROOF.md#p13) and lies below the conservative strip shown here.
+[Figure 2](figures.md#figure-2) shows this sufficient strip for one explicit slice: equally weighted Pauli axes, for which $`T=I/3`$. Figure 1's point at $`p=0.7`$, $`\epsilon=0.1`$ uses the sharper bound in [P13](../docs/COMPLETE_PROOF.md#p13) and lies below the conservative strip shown here.
 
 <a name="scalar-proof"></a>
 
 ## Where the computer-assisted proof enters
 
-The textbook framework does not establish the new global entropy inequality. The project compares each axis's conditional entropy using an endpoint chord. Its coefficient depends on the input weight and reporting error; the **common error** makes that coefficient identical for all axes, allowing the weighted comparison before global minimization. This is the step that prevents silently extending the result to arbitrary heterogeneous errors.
+The global entropy inequality compares each axis's conditional entropy using an endpoint chord. Its coefficient depends on the input weight and reporting error; the **common error** makes that coefficient identical for all axes, allowing the weighted comparison before global minimization.
 
 The scalar comparison uses $`\ell=c(1+a/4+a^2/4+a^3/10)`$. Analytical arguments cover the low- and high-noise regions and every nearly pure input tail. A complete rational covering handles the remaining compact noise/input domain. The three numerical verifiers check that covering with separate implementations and outward bounds; a grid of sampled inputs or an ordinary unit-test suite would not replace those obligations. These are deterministic mathematical enclosures, not statistical confidence statements.
 
@@ -105,13 +105,13 @@ The scalar comparison uses $`\ell=c(1+a/4+a^2/4+a^3/10)`$. Analytical arguments 
 
 ## What is added to the familiar superadditivity story?
 
-Incomplete-erasure channels, repetition coding and coherent-information superadditivity are established ingredients. Preskill's selected example already illustrates a qualitative threshold improvement using repetition and outer coding for a different channel. The project's proposed contribution is the geometric sufficient condition across every permitted finite full-span ensemble and the entire common interior-error range, with the stated controlled limits. It is more than the isolated eight-use numerical illustration.
+Incomplete-erasure channels, repetition coding and coherent-information superadditivity are established ingredients. Preskill's selected example already illustrates a qualitative threshold improvement using repetition and outer coding for a different channel. The result here supplies a geometric sufficient condition across every permitted finite full-span ensemble and the entire common interior-error range, together with controlled limits. The eight-use example illustrates one channel within that family.
 
-The precise attribution remains a bounded comparison with the cited primary research, not an absolute priority certificate. Those citations identify inherited frameworks and techniques; they do not create a second tutorial requirement. [Canonical claim and nonclaims](../docs/MODEL_AND_CLAIMS.md#m07) · [Primary references and their roles](../docs/REFERENCES.md) · [Controlled limits](limits.md#coplanar-control)
+The primary references identify the inherited frameworks and techniques and compare the closest related results. [Claim scope](../docs/MODEL_AND_CLAIMS.md#m07) · [Primary references and their roles](../docs/REFERENCES.md) · [Controlled limits](limits.md#coplanar-control)
 
 
 ---
 
 [Previous: The channel](channel.md) · [Continue: Exact model and theorem](../docs/MODEL_AND_CLAIMS.md)
 
-GitHub reading view generated from [the website source](../website/pages/proof-guide.md). The equations, figure data and canonical captions retain their source meaning. Custom website navigation, local search and interactive color switching are not executed in this GitHub view.
+[Page source](../website/pages/proof-guide.md)

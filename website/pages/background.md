@@ -30,13 +30,13 @@ Preskill's Section 10.7.4 already explains a qualitative threshold improvement u
 
 The repository supplies the remaining steps. [The channel page](channel.md#channel-operation) specifies everything the receiver can access, derives the reported-record entropy average, and explains the [eight-use witness](channel.md#eight-use-witness). [The proof guide](proof-guide.md#geometric-guarantee) then compares a bound valid for every one-use input with a sufficient block construction. Its full-span gap and computer-assisted scalar inequality are **project-specific mathematics**, not consequences supplied by Preskill's example. The [limits page](limits.md) fixes where the geometric picture applies.
 
-Incomplete-erasure channels, repetition and superadditivity are established ideas. The project's working contribution is its sufficient geometric condition over the stated finite-axis, common-error family. [Primary research attribution](../../docs/REFERENCES.md) remains available for that distinction; those papers are not another required tutorial. No absolute-priority claim is added here.
+Incomplete-erasure channels, repetition and superadditivity are established ideas. This repository develops a sufficient geometric condition over the stated finite-axis, common-error family. [Primary research attribution](../../docs/REFERENCES.md) identifies the underlying frameworks and compares the closest related results; the focused tutorial route remains within Preskill's chapter.
 
 <a id="edition-note"></a>
 
 ## One v5 sign note
 
-In the rendered PDF, [Eq. (10.368), printed p. 76](https://arxiv.org/pdf/1604.07450v5#page=82), reverses the entropy difference. Read its rate as $`H(B)-H(E)-o(1)`$, consistent with [definition (10.275), p. 53](https://arxiv.org/pdf/1604.07450v5#page=59). The exponent in [bound (10.367), p. 75](https://arxiv.org/pdf/1604.07450v5#page=81), has the opposite order, so decay requires a rate below $`H(B)-H(E)`$. This note follows visual inspection of the actual v5 pages; it does not change the source.
+In the rendered PDF, [Eq. (10.368), printed p. 76](https://arxiv.org/pdf/1604.07450v5#page=82), reverses the entropy difference. Read its rate as $`H(B)-H(E)-o(1)`$, consistent with [definition (10.275), p. 53](https://arxiv.org/pdf/1604.07450v5#page=59). The exponent in [bound (10.367), p. 75](https://arxiv.org/pdf/1604.07450v5#page=81), has the opposite order, so decay requires a rate below $`H(B)-H(E)`$.
 
 <a id="optional-refreshers"></a>
 

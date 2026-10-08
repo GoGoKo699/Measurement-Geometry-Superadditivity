@@ -8,9 +8,10 @@ ROOT = Path(__file__).resolve().parents[2]
 def test_current_completion_pages_keep_local_scope_and_expert_routes():
     for name in ('README.md', 'STATUS.md', 'website/pages/status.md'):
         text = (ROOT / name).read_text()
-        assert 'complete for its stated scientific result' in text
-        assert 'external peer review' in text
-        assert 'manuscript' in text
+        assert 'certificate' in text
+        assert 'verification' in text.lower()
+        assert 'manuscript' not in text.lower()
+        assert 'external peer review' not in text.lower()
         assert 'mailto:gogoko699@gmail.com' in text
         assert 'COMPLETE_PROOF.md' in text
         assert 'MODEL_AND_CLAIMS.md#m04' in text

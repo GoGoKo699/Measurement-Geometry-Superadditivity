@@ -46,8 +46,8 @@ document.querySelectorAll('[data-figure-toggle]').forEach(button => {
     const original=button.getAttribute('aria-pressed')==='true';
     img.src=original ? img.dataset.themed : img.dataset.original;
     button.setAttribute('aria-pressed', String(!original));
-    button.textContent=original ? 'Show approved colors' : 'Show accepted figure palette';
-    document.getElementById(img.id+'-status').textContent=original ? 'Accepted figure palette; scientific content unchanged.' : 'Approved original colors; protected export.';
+    button.textContent=original ? 'Show alternative colors' : 'Show figure palette';
+    document.getElementById(img.id+'-status').textContent=original ? 'Gachet-inspired figure palette.' : 'Alternative figure palette.';
   });
 });
 document.querySelectorAll('pre').forEach(pre => {

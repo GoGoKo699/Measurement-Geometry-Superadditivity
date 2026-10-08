@@ -108,7 +108,7 @@ def expected_files():
         body = parts[0] + intro + (parts[1] if len(parts)>1 else '')
         if page['slug'] == 'index':
             body = body.replace('## Start with the channel',
-                '![The channel and retained coding witness in the Gachet-inspired palette](assets/figure_01_channel_and_witness.svg)\n\n'
+                '![The channel and coding witness in the Gachet-inspired palette](assets/figure_01_channel_and_witness.svg)\n\n'
                 '[Read the full figure and its sources](figures.md#figure-1) · [Compare the original colors](../figures/approved/figure_01_channel_and_witness.svg)\n\n'
                 '## Start with the channel', 1)
         if page['slug'] == 'figures':
@@ -119,14 +119,14 @@ def expected_files():
                 if match is None:
                     raise ValueError('Missing canonical caption')
                 caption = rewrite(match.group(1).strip(), 'figures/CAPTIONS.md', origin)
-                download = ' · '.join(linked('Approved '+ext.upper(),'figures/approved/'+stem+'.'+ext,origin) for ext in ('pdf','svg','png'))
-                palette_download = linked('Accepted-palette SVG','reader/assets/'+stem+'.svg',origin)
+                download = ' · '.join(linked(ext.upper(),'figures/approved/'+stem+'.'+ext,origin) for ext in ('pdf','svg','png'))
+                palette_download = linked('Figure-palette SVG','reader/assets/'+stem+'.svg',origin)
                 data = ' · '.join(linked(n,'data/figures/'+n,origin) for n in inputs)
                 proof = ' · '.join(linked(p.upper(),'docs/COMPLETE_PROOF.md',origin,p) for p in proofs)
                 atlas.append(f'<a name="figure-{number}"></a>\n\n## Figure {number}. {title}\n\n'
-                    f'![Figure {number}: {title}; only the colors differ from the approved original](assets/{stem}.svg)\n\n'
-                    f'Accepted figure palette: {palette_download}. Protected originals: {download}.\n\n{caption}\n\n'
-                    f'**Proof:** {proof}. **Unchanged caption source:** '
+                    f'![Figure {number}: {title}; Gachet-inspired palette](assets/{stem}.svg)\n\n'
+                    f'Figure palette: {palette_download}. Downloads in the alternative palette: {download}.\n\n{caption}\n\n'
+                    f'**Proof:** {proof}. **Caption source:** '
                     f'{linked("CAPTIONS.md","figures/CAPTIONS.md",origin)}.\n\n**Numerical inputs:** {data}.\n')
             body = body.replace('<!-- SITE:FIGURE_ATLAS -->', '\n'.join(atlas))
         rows = ['| Claim | Exact statement | Proof | Role |','|---|---|---|---|']
@@ -142,8 +142,8 @@ def expected_files():
         palette_rows = ['| Color role | Display value |','|---|---|'] + ['| '+name+' | `'+value+'` |' for name,value in palette['roles'].items()]
         body = body.replace('<!-- SITE:PALETTE -->', '\n'.join(palette_rows))
         body = body.replace('<!-- SITE:FIGURE_COMPARISON -->',
-            '**Accepted figure palette**\n\n![Figure 2 in the Gachet-inspired palette](assets/figure_02_guaranteed_region.svg)\n\n'
-            '**Approved original**\n\n![The same Figure 2 in its approved original palette](../figures/approved/figure_02_guaranteed_region.svg)')
+            '**Figure palette**\n\n![Figure 2 in the Gachet-inspired palette](assets/figure_02_guaranteed_region.svg)\n\n'
+            '**Alternative palette**\n\n![The same Figure 2 in the alternative palette](../figures/approved/figure_02_guaranteed_region.svg)')
         if '<!-- SITE:' in body:
             raise ValueError('Unexpanded website content marker in '+origin)
         previous = by_slug.get(page.get('previous'))
@@ -152,9 +152,7 @@ def expected_files():
         if previous:
             tail = linked('Previous: '+previous['title'], page_path(previous), origin) + ' · ' + tail
         body += '\n\n---\n\n'+tail+'\n\n'
-        body += 'GitHub reading view generated from '+linked('the website source',page['source'],origin)+'. '
-        body += 'The equations, figure data and canonical captions retain their source meaning. '
-        body += 'Custom website navigation, local search and interactive color switching are not executed in this GitHub view.\n'
+        body += linked('Page source',page['source'],origin)+'\n'
         outputs[origin] = html_safe_math(to_github_math(body)).encode('utf-8')
     record = {'format':'GitHub Markdown with linked canonical technical documents','public_deployment':False,
               'canonical_technical_documents_duplicated':False,'routes':{p['slug']:page_path(p) for p in pages},
