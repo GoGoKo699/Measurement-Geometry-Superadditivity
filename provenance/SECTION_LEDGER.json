@@ -309,12 +309,12 @@
       "canonical_file": "docs/MODEL_AND_CLAIMS.md",
       "canonical_anchor": "m06",
       "canonical_line_start": 154,
-      "canonical_line_end": 186,
-      "canonical_fragment_sha256": "ecff1e3fccab3d55d0c9189f8ac420a7eda8126cda98f311adafc50ca5df43ee",
+      "canonical_line_end": 200,
+      "canonical_fragment_sha256": "c3342d91d6e2cdcdba460cfac89eb05fb34f7473d0cd3f82dae4338700b9b16a",
       "claims": [
         "C6"
       ],
-      "transformation": "controls and exact cone-domain restrictions preserved",
+      "transformation": "controls and exact cone-domain restrictions preserved; universal linear-closure summary derived from the internal P08 corollary",
       "sources": [
         {
           "source_id": "S4",
@@ -361,9 +361,9 @@
       "canonical_id": "M07",
       "canonical_file": "docs/MODEL_AND_CLAIMS.md",
       "canonical_anchor": "m07",
-      "canonical_line_start": 187,
-      "canonical_line_end": 201,
-      "canonical_fragment_sha256": "085991e9cedc97fc4fd00abdfe14ef11bf589b03cf2b9315fd399f90be2813a6",
+      "canonical_line_start": 201,
+      "canonical_line_end": 215,
+      "canonical_fragment_sha256": "82e9e27232c55c249185b0e6638552bded6155ea351d5c7b168840d06fd90585",
       "claims": [
         "C1",
         "C2",
@@ -420,8 +420,8 @@
       "canonical_id": "M08",
       "canonical_file": "docs/MODEL_AND_CLAIMS.md",
       "canonical_anchor": "m08",
-      "canonical_line_start": 202,
-      "canonical_line_end": 207,
+      "canonical_line_start": 216,
+      "canonical_line_end": 221,
       "canonical_fragment_sha256": "c16570f8411b98fe11c6104d4ec4a4d8762fb7ee34ee37d46d7e6edcebf107f0",
       "claims": [
         "C1",
@@ -1085,13 +1085,14 @@
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p08",
       "canonical_line_start": 512,
-      "canonical_line_end": 592,
-      "canonical_fragment_sha256": "7358db0a14fa04d4b566c73808e0a32ccbcdb4e4d631ac5a31f72f49bf1f693f",
+      "canonical_line_end": 662,
+      "canonical_fragment_sha256": "b2ddacf51c8b6948ef8c73895e618a20388a3face5ca5a2ccfc47d54c7f998d8",
       "claims": [
         "C1",
-        "C4"
+        "C4",
+        "C6"
       ],
-      "transformation": "pointwise comparison precedes minimization; threshold width status preserved",
+      "transformation": "pointwise comparison precedes minimization; elementary linear-closure upper bound derived internally from P01 and the frame eigenvector chord, with the lower bound inherited from P8.3",
       "sources": [
         {
           "source_id": "S4",
@@ -1150,8 +1151,8 @@
       "canonical_id": "P09",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p09",
-      "canonical_line_start": 593,
-      "canonical_line_end": 747,
+      "canonical_line_start": 663,
+      "canonical_line_end": 817,
       "canonical_fragment_sha256": "ab40206ee7ba4a34add457d3e2f8992b28071e9da5a0fe4abc39ebf33f70cd8b",
       "claims": [
         "C3"
@@ -1227,8 +1228,8 @@
       "canonical_id": "P10",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p10",
-      "canonical_line_start": 748,
-      "canonical_line_end": 788,
+      "canonical_line_start": 818,
+      "canonical_line_end": 858,
       "canonical_fragment_sha256": "db2e4f48a3b98070ddc039b879bc3718b6a22f907644bf0c9ee743f42f3f59bc",
       "claims": [
         "C1",
@@ -1305,8 +1306,8 @@
       "canonical_id": "P11",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p11",
-      "canonical_line_start": 789,
-      "canonical_line_end": 829,
+      "canonical_line_start": 859,
+      "canonical_line_end": 899,
       "canonical_fragment_sha256": "e191bf36cd6a03ef0eef974d2e0e33e50a6ecd2a1963519017a72688dbca6944",
       "claims": [
         "C6"
@@ -1382,8 +1383,8 @@
       "canonical_id": "P12",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p12",
-      "canonical_line_start": 830,
-      "canonical_line_end": 880,
+      "canonical_line_start": 900,
+      "canonical_line_end": 950,
       "canonical_fragment_sha256": "f30ed3e52a01bc97e887e78821057fb9344583af8543b49ab74d251146fd76ce",
       "claims": [
         "C6"
@@ -1435,8 +1436,8 @@
       "canonical_id": "P13",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p13",
-      "canonical_line_start": 881,
-      "canonical_line_end": 966,
+      "canonical_line_start": 951,
+      "canonical_line_end": 1036,
       "canonical_fragment_sha256": "38855e4acccc2a9aa7c0192b1a65c667955ff1255800164d1ada9685ccfa59f8",
       "claims": [
         "C5",
@@ -1645,8 +1646,8 @@
       "canonical_id": "P14",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p14",
-      "canonical_line_start": 967,
-      "canonical_line_end": 985,
+      "canonical_line_start": 1037,
+      "canonical_line_end": 1055,
       "canonical_fragment_sha256": "b921f73b1d3c55642c93bf8be85656205db58bb8076d11bc653060e03d340860",
       "claims": [
         "C2",
@@ -1844,9 +1845,9 @@
       "canonical_id": "P15",
       "canonical_file": "docs/COMPLETE_PROOF.md",
       "canonical_anchor": "p15",
-      "canonical_line_start": 986,
-      "canonical_line_end": 1000,
-      "canonical_fragment_sha256": "814d06583de0ae4a31b8b2378331f1e407a3768d09ba7db2f51d81eb934cc108",
+      "canonical_line_start": 1056,
+      "canonical_line_end": 1070,
+      "canonical_fragment_sha256": "314e8df87b4982eef4daf4dd1489946c81feca720a052048ad71623fd3f805e1",
       "claims": [
         "C1",
         "C2",

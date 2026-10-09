@@ -1,5 +1,5 @@
 {
-  "note": "Edges are proof-result dependencies; polynomial definitions can be stated before their lemma. Named external tools and certificate evidence are explicit in the proof/ledger.",
+  "note": "Edges are proof-result dependencies; polynomial definitions can be stated before their lemma. Named external tools and certificate evidence are explicit in the proof/ledger. P08 derives bounds on the defined thresholds from P01 and P8.3; its downstream coding interpretation is supplied by P09\u2013P10.",
   "dependencies": {
     "P01": [],
     "P02": [],
@@ -26,6 +26,7 @@
       "P07"
     ],
     "P08": [
+      "P01",
       "P04"
     ],
     "P09": [

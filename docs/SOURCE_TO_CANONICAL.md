@@ -15,7 +15,7 @@ The [complete proof](COMPLETE_PROOF.md) links its derivations to the source IDs 
 
 - [M05](MODEL_AND_CLAIMS.md#m05): C5; sources S5, W1, W2.
 
-- [M06](MODEL_AND_CLAIMS.md#m06): C6; sources S4, S5.
+- [M06](MODEL_AND_CLAIMS.md#m06): C6; sources S4, S5 for the limiting controls and cone family; universal linear closure from the internal [P08 corollary](COMPLETE_PROOF.md#p08-linear-closure).
 
 - [M07](MODEL_AND_CLAIMS.md#m07): C1, C2, C3, C4, C5, C6, C7; sources S2, S3, S6.
 
@@ -35,7 +35,7 @@ The [complete proof](COMPLETE_PROOF.md) links its derivations to the source IDs 
 
 - [P07](COMPLETE_PROOF.md#p07): C2, C4; sources S4, S5, V1, V2, V3, V4, V5, V6, V7, V8, V9, V10, V11, V12.
 
-- [P08](COMPLETE_PROOF.md#p08): C1, C4; sources S4, S5, C1, C2.
+- [P08](COMPLETE_PROOF.md#p08): C1, C4, C6; sources S4, S5, C1, C2 for the geometric lower bound; the linear-closure corollary is derived here from P01 and (P8.3).
 
 - [P09](COMPLETE_PROOF.md#p09): C3; sources S8, S5, S10.
 

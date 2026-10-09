@@ -40,7 +40,7 @@ For $`\lambda\gt 0`$, the theorem gives
 \frac{1}{1+L+(3ca/35)\lambda}\leq p\lt \frac{1}{1+L} \quad\Longrightarrow\quad Q^{(1)}=0\lt Q.
 ```
 
-The coding direction and finite block length may depend on the known channel parameters, never on future realized measurement choices. The gap can shrink to zero near a coplanar ensemble or a reporting-noise endpoint. Coplanarity excludes this strict long-balanced-repetition comparison, not every possible collective code. [Precise theorem and quantifiers](docs/MODEL_AND_CLAIMS.md#m04) · [Complete proof](docs/COMPLETE_PROOF.md)
+The coding direction and finite block length may depend on the known channel parameters, never on future realized measurement choices. At each fixed interior reporting error, the one-use/repetition threshold gap closes linearly with the smallest frame eigenvalue, uniformly over all allowed finite ensembles. [Two-sided bounds and proof](docs/COMPLETE_PROOF.md#p08-linear-closure). Coplanarity excludes this strict long-balanced-repetition comparison, not every possible collective code. [Precise theorem and quantifiers](docs/MODEL_AND_CLAIMS.md#m04) · [Complete proof](docs/COMPLETE_PROOF.md)
 
 ## Figures
 
