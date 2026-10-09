@@ -3,15 +3,15 @@
   "math_reference_commit": "2f13fce20d8ff8bd9519c3878e3403dc7b9fe402",
   "documents": {
     "README.md": {
-      "document": "afe63f6b8968d96ea36d12675ef4fb8bb4ad3b5f205bffccd48d082bfa8abd8e",
+      "document": "8eb3a2257548d410794d8ad73c3758f3b1a7d21cca20175dbe6dfef67b207b59",
       "math_sequence": "5627003e5b3a0e4ae9931ef0aacdec57b9c7c5dbcccb6b4b646a342a3f5a237a"
     },
     "docs/COMPLETE_PROOF.md": {
-      "document": "5f3a5b59709a66a5944df8384fe171729ee421e5cc5262d8377b667215fcf6eb",
+      "document": "50e774893abbb6ea886610576e766c7aea9179547d697f912de6613dfc026b1e",
       "math_sequence": "c31ffa8f321826e9ebe9512eeee4cffb344ae96108b19647bfd3df9af935806c"
     },
     "docs/MODEL_AND_CLAIMS.md": {
-      "document": "25023affa63d6c88d529ef7b621897ee3af680b2d78de118f8bc0ce76c851600",
+      "document": "e48285097cec8b91f37d343615bd50f9205c1632deef41b2af9e966ea322d671",
       "math_sequence": "0051b8ca28d223a68520c6b7716c31547f5e9aed7673732eda1c15171d18a7a2"
     },
     "docs/NOTATION_CROSSWALK.md": {
@@ -80,8 +80,8 @@
     }
   },
   "surrounding_prose": {
-    "docs/COMPLETE_PROOF.md": "ea0f5a33091f6973e8e744b0f8770f5f2c0b00afc85eebcc7c9f4f51891c3bdf",
-    "docs/MODEL_AND_CLAIMS.md": "0996ad4440c3a4f5b1438ccd8967280464e82e7b0e847f69259c1bd8bdb711a2",
+    "docs/COMPLETE_PROOF.md": "a5a70e4bfebeac8d07e3e7479a3f076f80bbe3e63bdd1f5be836df63c28a51e7",
+    "docs/MODEL_AND_CLAIMS.md": "ebb147a76ee5c4f52242724e974ea952da74e7203be4909bdd4b1e897d708baa",
     "website/pages/channel.md": "d96cbd71af9f1982e09bda5dda97be002eddc12b9fe03136f3045aea245231fb"
   }
 }

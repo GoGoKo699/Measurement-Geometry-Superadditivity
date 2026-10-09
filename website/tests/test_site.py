@@ -25,7 +25,9 @@ def test_complete_site(site):
     assert r['source_preservation']['approved_graphical_artifacts_unchanged']==27
 
 def test_canonical_equations(site):
-    for slug,n in [('model',18),('proof',119)]:
+    additions=json.loads((Path(__file__).with_name('approved_math_additions.json')).read_text())['documents']
+    for slug,path,original_count in [('model','docs/MODEL_AND_CLAIMS.md',18),('proof','docs/COMPLETE_PROOF.md',119)]:
+        n=original_count+sum(row['display'] for row in additions.get(path,[]))
         html=BeautifulSoup((site/(slug+'.html')).read_text(),'html.parser')
         assert len(html.select('math[display="block"]'))==n
         assert len(html.select('.math.display'))==n

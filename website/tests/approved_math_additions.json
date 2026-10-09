@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "preserved_math_reference": "Existing mathematical fingerprints remain unchanged; only the exact reviewed additions below are projected out for legacy-math comparison.",
+  "documents": {
+    "docs/COMPLETE_PROOF.md": [
+      {
+        "id": "linear-threshold-closure",
+        "start_marker": "<!-- BEGIN linear-threshold-closure -->",
+        "end_marker": "<!-- END linear-threshold-closure -->",
+        "sha256": "7bdb535ecd7d9680510d751e1e7f56e2779549ab1b8bb905fae14da766876448",
+        "math_sequence": "44340e0c746d202c33e897598935a63eb6330393415f874caaf03ae4c06982d4",
+        "math_count": 41,
+        "display": 8
+      }
+    ],
+    "docs/MODEL_AND_CLAIMS.md": [
+      {
+        "id": "linear-threshold-closure",
+        "start_marker": "<!-- BEGIN linear-threshold-closure -->",
+        "end_marker": "<!-- END linear-threshold-closure -->",
+        "sha256": "7e9f419f606c4f0f69469b3a7bacf4741fb138520b36c6287291a9720a32bb0d",
+        "math_sequence": "648085cfb3ea89f641b5bba360ced4a4103f9c7218f36f1953726a8ca440c78a",
+        "math_count": 5,
+        "display": 1
+      }
+    ]
+  }
+}

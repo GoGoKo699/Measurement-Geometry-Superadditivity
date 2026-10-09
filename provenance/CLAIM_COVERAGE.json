@@ -77,11 +77,13 @@
       "id": "C6",
       "canonical_model_anchor": "m06",
       "canonical_proof_sections": [
+        "P01",
+        "P08",
         "P11",
         "P12"
       ],
-      "role": "Coplanar criterion, physical noise endpoints, domain-restricted cone formulas.",
-      "status": "Source-derived mathematical content consolidated; recorded final audit adopted, not rerun."
+      "role": "Universal linear threshold-gap closure; coplanar criterion, physical noise endpoints and domain-restricted cone formulas.",
+      "status": "Linear closure derived analytically from P01 and P8.3; its lower bound inherits the computer-assisted scalar lemma. Source-derived limiting controls and exact cone formulas retained."
     },
     {
       "id": "C7",

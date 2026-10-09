@@ -164,6 +164,18 @@ This is not an all-code converse against coplanar channels. It does not exclude 
 
 **Noise endpoints.** At $`\epsilon=0`$, $`I_c=(1-p)S(\rho)`$ is positive for mixed inputs when $`p\lt 1`$, while the all-measured channel has zero capacity. At $`\epsilon=1/2`$, the record is input independent and the channel is an erasure channel up to independent flags, with $`Q=Q^{(1)}=\max\{0,1-2p\}`$. Neither endpoint has a $`Q^{(1)}=0\lt Q`$ region in this model. The endpoint arguments are separate from formulas that divide by $`a`$ or $`c`$ in the interior. [P11](COMPLETE_PROOF.md#p11)
 
+<!-- BEGIN linear-threshold-closure -->
+<a id="m06-linear-closure"></a>
+**Universal linear closure.** For every allowed finite ensemble at each fixed common interior error,
+
+```math
+\frac{d_\epsilon\lambda}{(1+c+a\lambda)^2}
+\leq p_{\mathrm{rep}}-p_1\leq\frac{(1-\sqrt c)\lambda}{(1+c)^2}.
+```
+
+Consequently $`p_{\mathrm{rep}}-p_1=\Theta_\epsilon(\lambda)`$ as $`\lambda\downarrow0`$, with positive comparison constants depending only on the fixed reporting error. This measures the closing of the one-use/repetition threshold gap under weighted departure from coplanarity. For full span, $`[p_1,p_{\mathrm{rep}})`$ is a sufficient interval with $`Q^{(1)}=0\lt Q`$; its width is distinct from an achievable rate. The lower bound inherits the entropy certificate. [Proof and uniform constants](COMPLETE_PROOF.md#p08-linear-closure)
+<!-- END linear-threshold-closure -->
+
 **Cone family.** For three equally probable axes at azimuths $`2\pi j/3`$ and common vertical component $`\sqrt\lambda`$,
 
 ```math
@@ -182,7 +194,9 @@ p_{\mathrm{rep}}-p_1=\frac{ca}{2(1+c)^2}\lambda+O(\lambda^2)\qquad(\lambda\downa
 
 The exact larger domain is $`0\leq\lambda\leq\min\{1/3,W(a)/P(a)\}`$. The all-error interval through $`1/4`$ is the uniform domain used in the figure. Extension to $`1/3`$ requires the parameter-specific inequality. Neither curve is an exact all-code capacity boundary. [P12](COMPLETE_PROOF.md#p12)
 
-**Sources:** [S4](SOURCE_TO_CANONICAL.md#s4) §§5–6; [S5](SOURCE_TO_CANONICAL.md#s5) §8.
+The cone calculation supplies a particular exact leading coefficient; the general corollary establishes linear scaling for every allowed ensemble.
+
+**Sources:** [S4](SOURCE_TO_CANONICAL.md#s4) §§5–6; [S5](SOURCE_TO_CANONICAL.md#s5) §8. The general linear-closure corollary is derived in P08 from P01 and (P8.3).
 
 <a id="m07"></a>
 ## 7. Claim register
@@ -194,7 +208,7 @@ The exact larger domain is $`0\leq\lambda\leq\min\{1/3,W(a)/P(a)\}`$. The all-er
 | C3 | An all-record collective construction produces a positive finite block and asymptotic rate. | P02, P09–P10. |
 | C4 | A uniform entropy inequality and geometry separate the two costs. | P03–P08. |
 | C5 | The eight-use example has a global one-use zero and certified positive per-use block value. | P13 and preserved W-series records. |
-| C6 | Coplanar, noise-endpoint and cone-family controls have the stated restricted meanings. | P11–P12. |
+| C6 | Universal linear threshold-gap closure, with the stated coplanar, noise-endpoint and exact cone-family controls. | P01, P08, P11–P12. |
 | C7 | The geometric guarantee distinguishes the result from the closest prior work discussed here. | [References and comparison](REFERENCES.md), including the corrected S6 comparison; a literature assessment separate from the mathematical claims. |
 
 The averaged repetition input is separable but correlated; coherent logical superpositions and its reference purification can be entangled. The comparison concerns repeated uses of the same channel, rather than superactivation of two zero-capacity channels.

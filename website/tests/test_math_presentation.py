@@ -12,6 +12,8 @@ The exact HTML-safe relation aliases are restored before source comparison.
 Reviewed reader prose and whole documents have separate exact fingerprints in
 reader_source_baseline.json. Its ordered raw-TeX fingerprints also preserve the
 mathematics from the recorded reference commit across every wrapper baseline path.
+New mathematical additions are pinned separately in approved_math_additions.json;
+only their exact, uniquely marked bytes are removed for the original-math checks.
 These tests do not establish scientific validity.
 Pandoc's GFM test exercises Markdown structure, not GitHub's authenticated renderer.
 """
@@ -34,6 +36,7 @@ from markdown_math import math_spans, to_dollar_math
 
 WRAPPER_BASELINE = json.loads((Path(__file__).with_name("math_source_baseline.json")).read_text())
 READER_BASELINE = json.loads((Path(__file__).with_name("reader_source_baseline.json")).read_text())
+APPROVED_ADDITIONS = json.loads((Path(__file__).with_name("approved_math_additions.json")).read_text())
 MATH = re.compile(r"(?<!\\)\$\$([\s\S]*?)(?<!\\)\$\$|(?<!\\)\$([^\n$]*?)(?<!\\)\$")
 DISPLAY = re.compile(r"(?<!\\)\$\$([\s\S]*?)(?<!\\)\$\$")
 LABELED_DISPLAY = re.compile(r"(?<!\\)\$\$((?:(?!\$\$)[\s\S])*?)(?<!\\)\$\$\n\n\*\*\((P\d+\.\d+)\)\*\*")
@@ -60,7 +63,9 @@ BASELINE = {
                                   "prose": "f69342fa76479f4e88207d7cec1a4396e787e1bad1cb7a867a57df372bce9403"},
 }
 RENDER_COUNTS = {
-    path: {"display": row["display"], "math_count": row["math_count"]}
+    path: {key: row[key] + sum(addition[key] for addition in
+                              APPROVED_ADDITIONS["documents"].get(path, []))
+           for key in ("display", "math_count")}
     for path, row in BASELINE.items()
 }
 
@@ -134,6 +139,24 @@ def raw_math_fingerprint(source):
     """Preserve expression order, display/inline kind and every TeX byte."""
     expressions = [[span.display, span.tex] for span in math_spans(source)]
     return hashlib.sha256(json.dumps(expressions, separators=(",", ":")).encode()).hexdigest()
+
+
+def original_math_source(path, source):
+    """Remove only uniquely delimited additions with exact reviewed bytes."""
+    for addition in APPROVED_ADDITIONS["documents"].get(path, []):
+        start_marker, end_marker = addition["start_marker"], addition["end_marker"]
+        assert source.count(start_marker) == source.count(end_marker) == 1, "addition markers"
+        start, end = source.index(start_marker), source.index(end_marker)
+        assert start < end, "addition marker order"
+        end += len(end_marker)
+        block = source[start:end]
+        assert hashlib.sha256(block.encode()).hexdigest() == addition["sha256"], "addition bytes"
+        assert raw_math_fingerprint(block) == addition["math_sequence"], "addition math"
+        spans = math_spans(block)
+        assert len(spans) == addition["math_count"], "addition math count"
+        assert sum(span.display for span in spans) == addition["display"], "addition displays"
+        source = source[:start] + source[end:]
+    return source
 
 
 def replace_once(source, old, new):
@@ -216,7 +239,8 @@ def reading_paths():
 
 @pytest.mark.parametrize("path", BASELINE)
 def test_original_mathematics_and_reviewed_surrounding_prose_preserved(path):
-    source = baseline_equivalent_source(path, (REPO / path).read_text())
+    source = original_math_source(path, (REPO / path).read_text())
+    source = baseline_equivalent_source(path, source)
     expected = {**BASELINE[path], "prose": READER_BASELINE["surrounding_prose"][path]}
     assert fingerprint(source) == expected
 
@@ -227,6 +251,53 @@ def test_reviewed_baseline_covers_exactly_the_original_documents():
     assert set(READER_BASELINE["surrounding_prose"]) == set(BASELINE)
 
 
+def test_approved_additions_cover_only_the_reviewed_insertions():
+    assert APPROVED_ADDITIONS["version"] == 1
+    assert set(APPROVED_ADDITIONS["documents"]) == {
+        "docs/COMPLETE_PROOF.md", "docs/MODEL_AND_CLAIMS.md",
+    }
+    for additions in APPROVED_ADDITIONS["documents"].values():
+        assert len(additions) == 1
+        addition = additions[0]
+        assert addition["id"] == "linear-threshold-closure"
+        assert addition["start_marker"] == "<!-- BEGIN linear-threshold-closure -->"
+        assert addition["end_marker"] == "<!-- END linear-threshold-closure -->"
+        assert addition["math_count"] >= addition["display"] > 0
+
+
+@pytest.mark.parametrize("path", APPROVED_ADDITIONS["documents"])
+@pytest.mark.parametrize("change", ["math", "missing", "duplicate", "reversed"])
+def test_changed_or_ambiguous_approved_additions_fail(path, change):
+    source = (REPO / path).read_text()
+    addition = APPROVED_ADDITIONS["documents"][path][0]
+    start_marker, end_marker = addition["start_marker"], addition["end_marker"]
+    start = source.index(start_marker)
+    end = source.index(end_marker) + len(end_marker)
+    block = source[start:end]
+    if change == "math":
+        assert r"\lambda" in block
+        changed = block.replace(r"\lambda", r"\lambda^2", 1)
+    elif change == "missing":
+        changed = ""
+    elif change == "duplicate":
+        changed = block + "\n" + block
+    else:
+        changed = end_marker + block[len(start_marker):-len(end_marker)] + start_marker
+    with pytest.raises(AssertionError, match="addition"):
+        original_math_source(path, source[:start] + changed + source[end:])
+
+
+@pytest.mark.parametrize("path", APPROVED_ADDITIONS["documents"])
+def test_addition_projection_preserves_original_math_changes(path):
+    source = (REPO / path).read_text()
+    original = original_math_source(path, source)
+    first_math = math_spans(source)[0]
+    changed = source[:first_math.start] + source[first_math.start:first_math.end].replace(
+        first_math.tex, first_math.tex + " + 1", 1,
+    ) + source[first_math.end:]
+    assert raw_math_fingerprint(original_math_source(path, changed)) != raw_math_fingerprint(original)
+
+
 @pytest.mark.parametrize("path", WRAPPER_BASELINE)
 def test_presentation_encodings_preserve_reviewed_document_and_original_math_bytes(path):
     # The reviewed document snapshot pins every prose, TeX and equation-label
@@ -234,7 +305,7 @@ def test_presentation_encodings_preserve_reviewed_document_and_original_math_byt
     # math digest is preserved from the reference commit, not refreshed prose.
     source = (REPO / path).read_text()
     expected = READER_BASELINE["documents"][path]
-    assert raw_math_fingerprint(source) == expected["math_sequence"]
+    assert raw_math_fingerprint(original_math_source(path, source)) == expected["math_sequence"]
     restored = to_dollar_math(restore_literal_relations(source)).encode()
     assert hashlib.sha256(restored).hexdigest() == expected["document"]
 
