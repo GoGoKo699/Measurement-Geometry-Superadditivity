@@ -1,0 +1,440 @@
+{
+  "schema_version": 1,
+  "source_commit": "fc58026e40491c90b872764c0682b5064774cc50",
+  "scope": "Deterministic topic presentation of retained sources; not a new scientific proof or approval.",
+  "allowed_unit_transformations": [
+    "relative Markdown link transport"
+  ],
+  "scientific_editing_authority": [
+    "docs/MODEL_AND_CLAIMS.md",
+    "docs/COMPLETE_PROOF.md"
+  ],
+  "canonical_units": 23,
+  "canonical_displayed_expressions": 146,
+  "canonical_math_expressions": 527,
+  "protected_scientific_files": 174,
+  "unit_projection": [
+    {
+      "unit": "M01",
+      "source": "docs/MODEL_AND_CLAIMS.md",
+      "source_lines": [
+        6,
+        42
+      ],
+      "source_sha256": "c1236c6fc9aa295898856ccb7406f98a1e7761036244c55bdb241d5441a755e8",
+      "destination": "science/model.md#m01",
+      "transported_sha256": "ae17f3b3266c63eeba472d440d5b6316689fa933238ad5e98fa7183223bee5a1",
+      "math_expressions": 20,
+      "displayed_expressions": 4,
+      "equation_labels": []
+    },
+    {
+      "unit": "M02",
+      "source": "docs/MODEL_AND_CLAIMS.md",
+      "source_lines": [
+        43,
+        78
+      ],
+      "source_sha256": "5f66769d234c78a19fd464ad6ce35458ea65268fcac2014248dfbc789116b9a5",
+      "destination": "science/model.md#m02",
+      "transported_sha256": "52307db3dd8062ef20b649a38ec881a286809ead00c2aa2d81d0b1d6eeb406b9",
+      "math_expressions": 42,
+      "displayed_expressions": 1,
+      "equation_labels": []
+    },
+    {
+      "unit": "M03",
+      "source": "docs/MODEL_AND_CLAIMS.md",
+      "source_lines": [
+        79,
+        117
+      ],
+      "source_sha256": "2b61ce4ac0a2b6e72b64947ad4a5cd8f23de79d53f7d93a19df285ce0182f97a",
+      "destination": "science/single-use.md#m03",
+      "transported_sha256": "f52c785f9be7611b5ad1a4d69c8eba550932025e3df7d6122ad79a7f04957b55",
+      "math_expressions": 7,
+      "displayed_expressions": 6,
+      "equation_labels": []
+    },
+    {
+      "unit": "M04",
+      "source": "docs/MODEL_AND_CLAIMS.md",
+      "source_lines": [
+        118,
+        138
+      ],
+      "source_sha256": "1e60a4b8f729c976ff35dfab0c49d67bbd3f91a3c2c2d459669183763a1d76dd",
+      "destination": "science/geometric-gap.md#m04",
+      "transported_sha256": "0b86d992d81a6dd642c3f510b510ae900f80cef382168d7bd1f0da7fa426df59",
+      "math_expressions": 7,
+      "displayed_expressions": 2,
+      "equation_labels": []
+    },
+    {
+      "unit": "M05",
+      "source": "docs/MODEL_AND_CLAIMS.md",
+      "source_lines": [
+        139,
+        153
+      ],
+      "source_sha256": "d619c50ece55a95912fbbe4fe396d58b5756cf6096f4d315a00200e1e8579afb",
+      "destination": "science/eight-use-witness.md#m05",
+      "transported_sha256": "2261328ba86fa4876b7df86d27d3ee7b48be9a41ba6a26d29f832ba8b05e461e",
+      "math_expressions": 12,
+      "displayed_expressions": 1,
+      "equation_labels": []
+    },
+    {
+      "unit": "M06",
+      "source": "docs/MODEL_AND_CLAIMS.md",
+      "source_lines": [
+        154,
+        200
+      ],
+      "source_sha256": "c3342d91d6e2cdcdba460cfac89eb05fb34f7473d0cd3f82dae4338700b9b16a",
+      "destination": "science/limiting-geometries.md#m06",
+      "transported_sha256": "dc8cdd15dcfcd55db144d946b8623d823295f61eb9b90389e228a0962e840aec",
+      "math_expressions": 24,
+      "displayed_expressions": 5,
+      "equation_labels": []
+    },
+    {
+      "unit": "M07",
+      "source": "docs/MODEL_AND_CLAIMS.md",
+      "source_lines": [
+        201,
+        215
+      ],
+      "source_sha256": "82e9e27232c55c249185b0e6638552bded6155ea351d5c7b168840d06fd90585",
+      "destination": "science/proof-map.md#m07",
+      "transported_sha256": "4319c5264eae28ba6d5cf4e5533645cc82bb3721b3beb2e5469b402b6f7adf3f",
+      "math_expressions": 1,
+      "displayed_expressions": 0,
+      "equation_labels": []
+    },
+    {
+      "unit": "M08",
+      "source": "docs/MODEL_AND_CLAIMS.md",
+      "source_lines": [
+        216,
+        221
+      ],
+      "source_sha256": "c16570f8411b98fe11c6104d4ec4a4d8762fb7ee34ee37d46d7e6edcebf107f0",
+      "destination": "science/proof-map.md#m08",
+      "transported_sha256": "1768051b2345c7d703e742b95e056ae0e599e5715c0311a5aa4b3f907d66cc23",
+      "math_expressions": 0,
+      "displayed_expressions": 0,
+      "equation_labels": []
+    },
+    {
+      "unit": "P01",
+      "source": "docs/COMPLETE_PROOF.md",
+      "source_lines": [
+        11,
+        101
+      ],
+      "source_sha256": "3f3e997254e0add6e25e0b76cd3508afaca7f5ddfd440e1ae46e1876c67f0cdd",
+      "destination": "science/single-use.md#p01",
+      "transported_sha256": "a56cfe8e385fa313bdc6fbaf64a4906e1e3dfcac1409e208eda07a44ac769e93",
+      "math_expressions": 39,
+      "displayed_expressions": 13,
+      "equation_labels": [
+        "P1.1",
+        "P1.2"
+      ]
+    },
+    {
+      "unit": "P02",
+      "source": "docs/COMPLETE_PROOF.md",
+      "source_lines": [
+        102,
+        136
+      ],
+      "source_sha256": "b1fecae128e82245a54ffa6dc8569e008b4c0703f4fae93d6e027aa45300158a",
+      "destination": "science/entropy-tools.md#p02",
+      "transported_sha256": "9d6fc0e327541cc92dfeadc6c92d7fc2e86e807e7a616e72f1a95d1a1870a7de",
+      "math_expressions": 19,
+      "displayed_expressions": 3,
+      "equation_labels": [
+        "P2.1",
+        "P2.2"
+      ]
+    },
+    {
+      "unit": "P03",
+      "source": "docs/COMPLETE_PROOF.md",
+      "source_lines": [
+        137,
+        245
+      ],
+      "source_sha256": "87dd4a4fe711b4f11caf7429b17a40d31e3e7954f1bbba92fc7dce02d465da86",
+      "destination": "science/entropy-tools.md#p03",
+      "transported_sha256": "833badaa2bf33dcebb986a04032acb85cfbfa17b65e83a4fd9596780f161b211",
+      "math_expressions": 38,
+      "displayed_expressions": 14,
+      "equation_labels": [
+        "P3.1",
+        "P3.2",
+        "P3.3"
+      ]
+    },
+    {
+      "unit": "P04",
+      "source": "docs/COMPLETE_PROOF.md",
+      "source_lines": [
+        246,
+        298
+      ],
+      "source_sha256": "447063b0fe303a6cdf66325b575a862a3d43563d25f5d08dcf7e56a4e9b3d163",
+      "destination": "science/scalar-inequality.md#p04",
+      "transported_sha256": "84c7c7e1c94b543b73fc9bc7217d08405a6f192b57f288d04b79327b73891e22",
+      "math_expressions": 16,
+      "displayed_expressions": 7,
+      "equation_labels": [
+        "P4.1",
+        "P4.2"
+      ]
+    },
+    {
+      "unit": "P05",
+      "source": "docs/COMPLETE_PROOF.md",
+      "source_lines": [
+        299,
+        359
+      ],
+      "source_sha256": "6e9a77b6f854b9ff0e2f2248bede9688294d84a37fa0f05c437e9244f4bec0e8",
+      "destination": "science/scalar-inequality.md#p05",
+      "transported_sha256": "325df5968b80972a8152815190c1457caeae98b997ce3ca06b9bc8957d8afb9e",
+      "math_expressions": 31,
+      "displayed_expressions": 8,
+      "equation_labels": []
+    },
+    {
+      "unit": "P06",
+      "source": "docs/COMPLETE_PROOF.md",
+      "source_lines": [
+        360,
+        420
+      ],
+      "source_sha256": "e6e73beef7854d4db793a22daa0c30b201356f8bf14c8790ff76f9c4a17b9f39",
+      "destination": "science/scalar-inequality.md#p06",
+      "transported_sha256": "59e16ac94595207f9d6906843b0724c62c81f058f0c426acf0672eba1f802def",
+      "math_expressions": 22,
+      "displayed_expressions": 9,
+      "equation_labels": []
+    },
+    {
+      "unit": "P07",
+      "source": "docs/COMPLETE_PROOF.md",
+      "source_lines": [
+        421,
+        511
+      ],
+      "source_sha256": "ebff0f293dca7e14946a091e1e54ea062359236f9246df67e2c63bed7d838db3",
+      "destination": "science/scalar-inequality.md#p07",
+      "transported_sha256": "2a0f8b798670728cf15434408517e96b72294c038ec7dc5d2489c9048144df77",
+      "math_expressions": 38,
+      "displayed_expressions": 8,
+      "equation_labels": [
+        "P7.1",
+        "P7.2",
+        "P7.3"
+      ]
+    },
+    {
+      "unit": "P08",
+      "source": "docs/COMPLETE_PROOF.md",
+      "source_lines": [
+        512,
+        662
+      ],
+      "source_sha256": "b2ddacf51c8b6948ef8c73895e618a20388a3face5ca5a2ccfc47d54c7f998d8",
+      "destination": "science/geometric-gap.md#p08",
+      "transported_sha256": "57c2fe1521c172bba3787d17c379562cbdd9466834cbf84394c471814a613aae",
+      "math_expressions": 66,
+      "displayed_expressions": 19,
+      "equation_labels": [
+        "P8.1",
+        "P8.2",
+        "P8.3"
+      ]
+    },
+    {
+      "unit": "P09",
+      "source": "docs/COMPLETE_PROOF.md",
+      "source_lines": [
+        663,
+        817
+      ],
+      "source_sha256": "ab40206ee7ba4a34add457d3e2f8992b28071e9da5a0fe4abc39ebf33f70cd8b",
+      "destination": "science/repetition-coding.md#p09",
+      "transported_sha256": "4399eb42e3e04ea35714de7c34e8e0b16dbb8f591686644d9b718d8b7157dc1b",
+      "math_expressions": 56,
+      "displayed_expressions": 21,
+      "equation_labels": [
+        "P9.1",
+        "P9.2",
+        "P9.3",
+        "P9.4"
+      ]
+    },
+    {
+      "unit": "P10",
+      "source": "docs/COMPLETE_PROOF.md",
+      "source_lines": [
+        818,
+        858
+      ],
+      "source_sha256": "db2e4f48a3b98070ddc039b879bc3718b6a22f907644bf0c9ee743f42f3f59bc",
+      "destination": "science/repetition-coding.md#p10",
+      "transported_sha256": "95cf223a452015f1642f88b06fa0be1d85b0cd3e5132bdd2b62286b5640283c5",
+      "math_expressions": 17,
+      "displayed_expressions": 5,
+      "equation_labels": [
+        "P10.1"
+      ]
+    },
+    {
+      "unit": "P11",
+      "source": "docs/COMPLETE_PROOF.md",
+      "source_lines": [
+        859,
+        899
+      ],
+      "source_sha256": "e191bf36cd6a03ef0eef974d2e0e33e50a6ecd2a1963519017a72688dbca6944",
+      "destination": "science/limiting-geometries.md#p11",
+      "transported_sha256": "1a1ccc38ddf75e2e910c0be0ebaf206f157aadc3799706f19d8f2118c97f9397",
+      "math_expressions": 18,
+      "displayed_expressions": 4,
+      "equation_labels": []
+    },
+    {
+      "unit": "P12",
+      "source": "docs/COMPLETE_PROOF.md",
+      "source_lines": [
+        900,
+        950
+      ],
+      "source_sha256": "f30ed3e52a01bc97e887e78821057fb9344583af8543b49ab74d251146fd76ce",
+      "destination": "science/limiting-geometries.md#p12",
+      "transported_sha256": "c611397428f141faf331ae0fefbe0db232c805fcde548e2d5ffa7852c29bfee5",
+      "math_expressions": 19,
+      "displayed_expressions": 6,
+      "equation_labels": [
+        "P12.1",
+        "P12.2",
+        "P12.3"
+      ]
+    },
+    {
+      "unit": "P13",
+      "source": "docs/COMPLETE_PROOF.md",
+      "source_lines": [
+        951,
+        1036
+      ],
+      "source_sha256": "38855e4acccc2a9aa7c0192b1a65c667955ff1255800164d1ada9685ccfa59f8",
+      "destination": "science/eight-use-witness.md#p13",
+      "transported_sha256": "165e1eead4a2bf1a2aed0e4ee97d87b5270d32f3b6b6106ec689205c72faf858",
+      "math_expressions": 35,
+      "displayed_expressions": 10,
+      "equation_labels": []
+    },
+    {
+      "unit": "P14",
+      "source": "docs/COMPLETE_PROOF.md",
+      "source_lines": [
+        1037,
+        1055
+      ],
+      "source_sha256": "b921f73b1d3c55642c93bf8be85656205db58bb8076d11bc653060e03d340860",
+      "destination": "science/proof-map.md#p14",
+      "transported_sha256": "aef03cb93bcd4ce87a5cee24b79e96f024d683a92941d2fab325ba22b6d3a14a",
+      "math_expressions": 0,
+      "displayed_expressions": 0,
+      "equation_labels": []
+    },
+    {
+      "unit": "P15",
+      "source": "docs/COMPLETE_PROOF.md",
+      "source_lines": [
+        1056,
+        1070
+      ],
+      "source_sha256": "314e8df87b4982eef4daf4dd1489946c81feca720a052048ad71623fd3f805e1",
+      "destination": "science/proof-map.md#p15",
+      "transported_sha256": "b010be14235deb1d1456265516a79ca344b5a6e0d04753fd240838e33386e5fa",
+      "math_expressions": 0,
+      "displayed_expressions": 0,
+      "equation_labels": []
+    }
+  ],
+  "companion_projection": [
+    {
+      "source": "website/pages/channel.md",
+      "destination": "science/physical-picture.md",
+      "source_sha256": "c1723d16669f346f84ca7264d9b65420ae49af1441f69fa7ce9a3f236949af8f",
+      "expanded_background": false
+    },
+    {
+      "source": "website/pages/proof-guide.md",
+      "destination": "science/proof-strategy.md",
+      "source_sha256": "6d0acc28d66b9027893ea90cffaafb1f370086bf18682f165be589061e71fd7c",
+      "expanded_background": false
+    },
+    {
+      "source": "docs/NOTATION_CROSSWALK.md",
+      "destination": "science/notation.md",
+      "source_sha256": "196f200860d4b482a601223779c0a04e14ed801a8385b7a482e701daf6fd2968",
+      "expanded_background": false
+    },
+    {
+      "source": "website/pages/background.md",
+      "destination": "learning/preskill-bridge.md",
+      "source_sha256": "d43e1b106ad554f31c7027f84c12faf17620cfd4fe8cf82c937809383ed5099d",
+      "expanded_background": true
+    },
+    {
+      "source": "docs/REFERENCES.md",
+      "destination": "references/README.md",
+      "source_sha256": "3884e83e36c27dc5c20be7306c36768981759df9e943c3764eb9a3f7a27c55fc",
+      "expanded_background": false
+    },
+    {
+      "source": "docs/REPRODUCTION.md",
+      "destination": "verification/README.md",
+      "source_sha256": "da613a57311253e10cc8df9be5f12b87a2a301c53da43a53440be64b4c7bfd70",
+      "expanded_background": false
+    }
+  ],
+  "source_hashes": {
+    "docs/COMPLETE_PROOF.md": "4cabf15544babbc256c6c7c405271c07acf2007c85f1c3da24d030723dd8d289",
+    "docs/MODEL_AND_CLAIMS.md": "8155c401ae64f8e263a8bce9f49dafa2f4b84206396a35f74655ae2d3a7c316e",
+    "docs/NOTATION_CROSSWALK.md": "196f200860d4b482a601223779c0a04e14ed801a8385b7a482e701daf6fd2968",
+    "docs/REFERENCES.md": "3884e83e36c27dc5c20be7306c36768981759df9e943c3764eb9a3f7a27c55fc",
+    "docs/REPRODUCTION.md": "da613a57311253e10cc8df9be5f12b87a2a301c53da43a53440be64b4c7bfd70",
+    "website/learning_bridge.json": "366a452b9647dbbfa388fc1eb7db2c9475c54efbc36731da534a4d268692e700",
+    "website/pages/background.md": "d43e1b106ad554f31c7027f84c12faf17620cfd4fe8cf82c937809383ed5099d",
+    "website/pages/channel.md": "c1723d16669f346f84ca7264d9b65420ae49af1441f69fa7ce9a3f236949af8f",
+    "website/pages/proof-guide.md": "6d0acc28d66b9027893ea90cffaafb1f370086bf18682f165be589061e71fd7c"
+  },
+  "generated_files": {
+    "learning/preskill-bridge.md": "d9b11245fcbf623fc5051ea2d4f33e6ff145314e17fb481f11413e3c71dcff84",
+    "references/README.md": "de9061039f21167a7aab3884b8c56f574587a12bc13d0137ec717fe38549f4a2",
+    "science/eight-use-witness.md": "35114abc01f23618527ea67c5fe951f3203c1e2a2116d29f6f3215b2bc8b6eb5",
+    "science/entropy-tools.md": "3cf9342989c5b9a9f409fa9a11368e6dc5a90686f3e931e793892336d91aa9bd",
+    "science/geometric-gap.md": "3ac2b9d2483d81082ad1d9e8fbe6243ef4c61edea0ec7a2bbbd5f6ec6a90e5b1",
+    "science/limiting-geometries.md": "274fe39e076c3d752b056c8cad93809382dbee9c37674553fbb1994126009391",
+    "science/model.md": "ef0838ff83882a1a2d8e6119f474a73d598dfaad0083c3ac0878e833f4378401",
+    "science/notation.md": "41a17b4b1728424ff9da2b97f46d225678e30c58ac406f35471074b46a4efcff",
+    "science/physical-picture.md": "7f55c4163a049cd2060fa6d853788df55179bb7a0bc938fe31c4f4ad6727b66c",
+    "science/proof-map.md": "91f650a2b46160f3579c0bd658e2a85613ede5951a6ae4b5c50d5a366bcf8847",
+    "science/proof-strategy.md": "0b2ca9c32939f92afc31ee08c42bc44964c54bf7fd92043284f78f7cb0338d49",
+    "science/repetition-coding.md": "05a7706f0f7ed73897e716680edd551c3896fc4e6db33e0121552751f8b1ea31",
+    "science/scalar-inequality.md": "099d5e3e17273b20113ed4b5fd4fdc26bf7579715e7d6a27aec49fcec7afc48f",
+    "science/single-use.md": "d37793a2d01dd9fd814fd4ccfa3ef60248c11b665fe4750b82c8493f3504c1a8",
+    "verification/README.md": "eefbac8bff23a93fa9c52516c7e3d9b26812f409efb0d3e9f09df57b0a1c90ae"
+  },
+  "generate_command": "python website/furnish.py --write",
+  "check_command": "python website/furnish.py --check"
+}

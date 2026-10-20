@@ -1,10 +1,34 @@
 # Build and maintain the reading pages
 
-The repository provides a complete scientific account through GitHub-native Markdown and an optional local HTML site. Both use **`website/pages/` as the editorial source**. Canonical technical documents and captions are rendered or linked directly, so there is no second editable proof or caption set.
+The primary GitHub reading route is the complete topic-based [scientific account](science/README.md), with the shared [learning route](learning/README.md), [references](references/README.md) and [verification guide](verification/README.md). An illustrated introduction and an optional local HTML site retain their established editorial sources in `website/pages/`.
+
+The topic edition is generated from protected scientific source sections and the existing explanations. Each proof has one editing authority. Canonical technical documents, source ledgers, captions and protected evidence remain in their existing locations.
 
 GitHub provides its own Markdown and mathematics renderer. The HTML site adds local search, navigation and figure-color comparison. It uses native MathML, local styles and scripts, with no analytics, CDN, remote tutorial fetch or external font requests. Building it does not deploy a public website.
 
-## Maintain one source
+<a id="topic-edition"></a>
+## Generate and validate the topic edition
+
+`website/furnishing.json` assigns every model unit M01–M08 and proof unit P01–P15 to exactly one topic. `website/furnish.py` verifies the existing scientific inventory and fragment ledger before generating the topic pages. It transports links without changing unit prose, TeX, numerical literals or equation labels. `website/furnishing-map.json` records each unit's source identity, destination and mathematical-expression counts.
+
+The generator also carries the existing channel explanation, proof strategy, notation crosswalk, reference account, reproduction commands and selected Preskill bridge into the new reading routes. Source-edition locators and the Preskill sign note remain tied to the original bridge. The two authored learning files contain the shared 30-milestone map and its reading guide.
+
+```bash
+python website/repository_preview.py --check
+python website/furnish.py --write
+python website/furnish.py --check
+python integrity/check_scientific.py
+python verify.py
+python -m pytest -q -p no:cacheprovider tests website/tests
+```
+
+Generation and its check use the Python standard library. The test suites use the recorded requirements below. Only the current editorial README hash in `BASELINE_MANIFEST.json` may be refreshed for a README edit. Retain scientific hashes, original mathematical fingerprints, approved additions, certificate inputs and evidence.
+
+The current model and proof contain **146 displayed mathematical expressions**, including the nine displays in the linear-closure addition. The protected mathematical-content record describes its earlier 137-display snapshot. The new edition map records the current count without rewriting that source record.
+
+Before declaring the edition checked, inspect the hosted README, learning route and representative mathematical pages at the revision being reviewed. Local Markdown, TeX and HTML checks address different properties and do not substitute for that hosted rendering inspection.
+
+## Maintain the illustrated reader and optional HTML edition
 
 Edit `website/pages/` for reader prose, `website/site.json` for routes, and `website/learning_bridge.json` for the selected Preskill v5 passages, crosswalk and return links. `website/editorial_map.json` records the current project-source anchors. The tutorial map is a learning aid, not a proof certificate.
 

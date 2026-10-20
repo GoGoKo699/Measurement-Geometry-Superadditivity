@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "scope": "Structured companion to docs/REFERENCES.md and the selected Preskill source in website/learning_bridge.json. Imported ingredients, related-work comparisons, and educational background remain distinct. This bibliography is not a comprehensive literature or priority audit.",
+  "path_convention": "Repository-relative paths; fragment identifiers refer to the existing canonical source files.",
+  "version_convention": "A version is recorded only where the canonical source specifies one. An unversioned citation is not silently replaced by the latest arXiv revision.",
+  "metadata_verification": {
+    "checked_date": "2026-10-20",
+    "scope": "Identifiers, titles, and author lists checked against the official arXiv abstract or versioned HTML pages recorded for each entry. The channel identification in EXT2, the dephrasure rate-versus-threshold comparison, and the entanglement-assisted reliability distinction received focused source checks. Other proof roles and source locators are retained from the canonical repository account.",
+    "limits": "No broad novelty audit, independent reproof of cited results, or full audit of the Preskill chapter was performed. The existing Preskill edition sign note and PDF identity are retained from website/learning_bridge.json; its PDF was not downloaded or visually reinspected in this metadata check. No publication venue or publication-year field has been inferred."
+  },
+  "entries": [
+    {
+      "id": "EXT1",
+      "authors": ["Igor Devetak"],
+      "title": "The private classical capacity and quantum capacity of a quantum channel",
+      "arxiv_id": "quant-ph/0304127",
+      "primary_url": "https://arxiv.org/abs/quant-ph/0304127",
+      "category": "imported_theorem",
+      "role": "Coherent-information coding theorem: a chosen finite block with positive coherent information gives a positive asymptotic unassisted quantum rate.",
+      "distinctions": [
+        "The finite inner block is fixed before the asymptotic outer coding argument.",
+        "This use does not supply an efficient decoder or high-fidelity recovery from the inner repetition block alone."
+      ],
+      "canonical_location": "docs/REFERENCES.md#standard-results-used-in-the-proof",
+      "canonical_label": "EXT1",
+      "project_proof_locations": ["docs/COMPLETE_PROOF.md#p10"],
+      "source_locators": ["Source S4", "Source S6, section 3"],
+      "metadata_source_url": "https://arxiv.org/abs/quant-ph/0304127"
+    },
+    {
+      "id": "EXT2",
+      "authors": ["Vikesh Siddhu", "Robert B. Griffiths"],
+      "title": "Positivity and nonadditivity of quantum capacities using generalized erasure channels",
+      "arxiv_id": "2003.00583",
+      "arxiv_version": "v2",
+      "primary_url": "https://arxiv.org/abs/2003.00583v2",
+      "category": "established_channel_framework",
+      "role": "Generalized/incomplete erasure framework. Equation (35) yields the present receiver channel when the auxiliary channel is the noisy classical measurement map and the intact probability is 1-p.",
+      "distinctions": [
+        "The channel class and direct-sum structure are established prior work.",
+        "The present contribution is a full-span sufficient guarantee under its specified common-error model."
+      ],
+      "canonical_location": "docs/REFERENCES.md#closest-channel-frameworks",
+      "canonical_label": "EXT2",
+      "project_proof_locations": ["docs/MODEL_AND_CLAIMS.md#m01", "docs/MODEL_AND_CLAIMS.md#m07"],
+      "source_locators": ["Equation (35)", "Source S6, section 1"],
+      "metadata_source_url": "https://arxiv.org/html/2003.00583v2"
+    },
+    {
+      "id": "EXT3",
+      "authors": ["Felix Leditzky", "Debbie Leung", "Graeme Smith"],
+      "title": "Dephrasure channel and superadditivity of coherent information",
+      "arxiv_id": "1806.08327",
+      "primary_url": "https://arxiv.org/abs/1806.08327",
+      "category": "established_coding_construction",
+      "role": "Weighted repetition construction and its positivity-threshold behavior, as identified by Equation (15) and Appendix F in the canonical comparison.",
+      "distinctions": [
+        "Repetition coding and coherent-information superadditivity are established ingredients.",
+        "The dephrasure output structure differs from the present receiver channel."
+      ],
+      "canonical_location": "docs/REFERENCES.md#closest-channel-frameworks",
+      "canonical_label": "EXT3",
+      "project_proof_locations": ["docs/COMPLETE_PROOF.md#p09", "docs/MODEL_AND_CLAIMS.md#m07"],
+      "source_locators": ["Equation (15)", "Appendix F", "Source S6, section 2"],
+      "metadata_source_url": "https://arxiv.org/abs/1806.08327"
+    },
+    {
+      "id": "EXT4",
+      "authors": ["Charles H. Bennett", "David P. DiVincenzo", "John A. Smolin"],
+      "title": "Capacities of Quantum Erasure Channels",
+      "arxiv_id": "quant-ph/9701015",
+      "primary_url": "https://arxiv.org/abs/quant-ph/9701015",
+      "category": "imported_endpoint_result",
+      "role": "Erasure-channel capacity, used together with EXT5 for the completely random reporting endpoint Q = Q^(1) = max(0, 1-2p).",
+      "distinctions": [
+        "The reporting-noise endpoint is treated separately from the interior entropy certificate.",
+        "This endpoint formula is not an exact capacity formula for the interior common-error channel."
+      ],
+      "canonical_location": "docs/REFERENCES.md#standard-results-used-in-the-proof",
+      "canonical_label": "EXT4-EXT5",
+      "project_proof_locations": ["docs/COMPLETE_PROOF.md#p11"],
+      "source_locators": ["Canonical EXT4-EXT5 endpoint comparison"],
+      "metadata_source_url": "https://arxiv.org/abs/quant-ph/9701015"
+    },
+    {
+      "id": "EXT5",
+      "authors": ["H. Barnum", "J. A. Smolin", "B. M. Terhal"],
+      "title": "The quantum capacity is properly defined without encodings",
+      "arxiv_id": "quant-ph/9711032",
+      "primary_url": "https://arxiv.org/abs/quant-ph/9711032",
+      "category": "imported_endpoint_converse",
+      "role": "Quantum-capacity converse and erasure-channel coherent-information evaluation, used with EXT4 for the completely random reporting endpoint.",
+      "distinctions": [
+        "The joint canonical endpoint conclusion is Q = Q^(1) = max(0, 1-2p).",
+        "The endpoint converse does not replace the separate proof for interior reporting error."
+      ],
+      "canonical_location": "docs/REFERENCES.md#standard-results-used-in-the-proof",
+      "canonical_label": "EXT4-EXT5",
+      "project_proof_locations": ["docs/COMPLETE_PROOF.md#p11"],
+      "source_locators": ["Canonical EXT4-EXT5 endpoint comparison"],
+      "metadata_source_url": "https://arxiv.org/abs/quant-ph/9711032"
+    },
+    {
+      "id": "EXT6",
+      "authors": ["Christoph Hirche", "David Reeb"],
+      "title": "Bounds on Information Combining With Quantum Side Information",
+      "arxiv_id": "1706.09752",
+      "primary_url": "https://arxiv.org/abs/1706.09752",
+      "category": "related_entropy_comparison",
+      "role": "Adjacent literature on entropy comparisons with quantum side information.",
+      "distinctions": [
+        "The project's specific polynomial inequality has its own certificate.",
+        "This related-work citation is not a substitute for that certificate or its independent verification."
+      ],
+      "canonical_location": "docs/REFERENCES.md#closest-channel-frameworks",
+      "canonical_label": "EXT6",
+      "project_proof_locations": ["docs/COMPLETE_PROOF.md#p07"],
+      "source_locators": ["Source S11"],
+      "metadata_source_url": "https://arxiv.org/abs/1706.09752"
+    },
+    {
+      "id": "bhalerao-leditzky-2508.09978v1",
+      "authors": ["Sujeet Bhalerao", "Felix Leditzky"],
+      "title": "Improving quantum communication rates with permutation-invariant codes",
+      "arxiv_id": "2508.09978",
+      "arxiv_version": "v1",
+      "primary_url": "https://arxiv.org/abs/2508.09978v1",
+      "category": "related_coding_comparison",
+      "role": "Permutation-invariant-code comparison: the cited dephrasure results improve communication rates without demonstrating an extension of the weighted-repetition positivity threshold.",
+      "distinctions": [
+        "A rate improvement and a positivity-threshold improvement are different claims.",
+        "The comparison with neural-network codes is a separate benchmark.",
+        "The preserved source S6, section 4, incorrectly describes this result as a threshold improvement; docs/REFERENCES.md#s6-correction supplies the canonical correction."
+      ],
+      "canonical_location": "docs/REFERENCES.md#s6-correction",
+      "canonical_label": "Permutation-invariant codes",
+      "project_proof_locations": ["docs/MODEL_AND_CLAIMS.md#m07"],
+      "source_locators": ["Section 5.2, after Equation (5.34)", "Section 6.1", "Source S6, section 4, with the canonical correction"],
+      "metadata_source_url": "https://arxiv.org/html/2508.09978v1"
+    },
+    {
+      "id": "cheng-berta-2607.15151v1",
+      "authors": ["Hao-Chung Cheng", "Mario Berta"],
+      "title": "Superadditivity for Entanglement-Assisted Communication",
+      "arxiv_id": "2607.15151",
+      "arxiv_version": "v1",
+      "primary_url": "https://arxiv.org/abs/2607.15151v1",
+      "category": "related_assisted_communication",
+      "role": "Adjacent superadditivity result for entanglement-assisted communication reliability.",
+      "distinctions": [
+        "Entanglement-assisted reliability differs from the unassisted quantum-capacity guarantee proved here.",
+        "Its reliability enhancement does not make the entanglement-assisted capacity nonadditive."
+      ],
+      "canonical_location": "docs/REFERENCES.md#related-coding-and-communication-results",
+      "canonical_label": "Entanglement-assisted communication",
+      "project_proof_locations": ["docs/MODEL_AND_CLAIMS.md#m07"],
+      "source_locators": ["Source S6, section 4"],
+      "metadata_source_url": "https://arxiv.org/html/2607.15151v1"
+    },
+    {
+      "id": "preskill-qst-v5",
+      "authors": ["John Preskill"],
+      "title": "Quantum Shannon Theory",
+      "source_description": "Chapter 10 of Quantum Information",
+      "arxiv_id": "1604.07450",
+      "arxiv_version": "v5",
+      "primary_url": "https://arxiv.org/abs/1604.07450v5",
+      "category": "selected_educational_anchor",
+      "role": "The single educational anchor: coherent information, decoupling, repetition inner codes, and unassisted quantum-coding achievability. The project supplies the channel-specific geometry and entropy comparison.",
+      "distinctions": [
+        "Preskill's Q_1 corresponds to optimized one-use coherent information, not operational finite-error one-shot capacity.",
+        "His depolarizing-channel p and capacity-definition accuracy parameters are not this project's measurement probability p and physical reporting error epsilon.",
+        "Textbook foundations do not establish the project's full-span inequality or certify its numerical proof input.",
+        "The source is linked for personal use; its PDF, extracts, screenshots, and textbook figures are not redistributed."
+      ],
+      "canonical_location": "website/learning_bridge.json",
+      "canonical_label": "source.id = preskill-qst-v5",
+      "project_proof_locations": ["docs/COMPLETE_PROOF.md#p01", "docs/COMPLETE_PROOF.md#p09", "docs/COMPLETE_PROOF.md#p10", "docs/COMPLETE_PROOF.md#p13"],
+      "source_locators": ["Core: sections 10.7.1, 10.7.2, 10.7.4", "Completion: section 10.9.4", "Optional prerequisites and exact page/equation crosswalks: website/learning_bridge.json"],
+      "edition_note": {
+        "canonical_record": "website/learning_bridge.json: edition_note",
+        "source_equation": "10.368",
+        "printed_page": 76,
+        "pdf_viewer_page": 82,
+        "correct_entropy_difference": "H(B)-H(E)",
+        "supporting_equations": ["10.275", "10.367"],
+        "scope": "Existing source-edition sign note, retained from the canonical bridge. It is not a chapter audit or a new visual inspection."
+      },
+      "metadata_source_url": "https://arxiv.org/abs/1604.07450"
+    }
+  ],
+  "background_ingredients": [
+    {
+      "id": "entropy-background",
+      "canonical_location": "docs/REFERENCES.md#standard-results-used-in-the-proof",
+      "canonical_label": "Entropy background",
+      "ingredients": [
+        "Quantum conditional-entropy concavity under mixing",
+        "Relative-entropy identity for dephasing",
+        "Pinsker's inequality in bits",
+        "Binary entropy overlap bound"
+      ],
+      "project_proof_location": "docs/COMPLETE_PROOF.md#p02",
+      "source_locators": ["Source S8, section 3.2", "Source S10, section 5", "Source S5, sections 2 and 6"],
+      "scope": "The exact forms and their applications are stated in the canonical proof. This ingredient note preserves the existing account without inventing an additional bibliographic attribution."
+    }
+  ]
+}
