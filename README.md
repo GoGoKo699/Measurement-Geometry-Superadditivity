@@ -2,6 +2,8 @@
 
 A qubit either arrives intact or is destructively measured along a randomly chosen, known axis. In the measured branch, the receiver gets the axis label and an imperfect outcome record, but not the measured qubit or the hidden true sign.
 
+**Can the geometry of those measurements guarantee quantum communication beyond the globally optimized one-use coherent-information benchmark?**
+
 This project establishes a geometric sufficient condition for a collective-coding advantage: for **every finite measurement ensemble spanning all three Bloch directions**, and every **common symmetric reporting error** $`0\lt \epsilon\lt 1/2`$, there is a nonempty measurement-probability interval with
 
 ```math
@@ -10,11 +12,18 @@ Q^{(1)}(\mathcal N)=0\lt Q(\mathcal N).
 
 Here $`Q^{(1)}`$ is coherent information optimized over every single-qubit input state. $`Q`$ is unassisted asymptotic quantum capacity. The theorem identifies a sufficient region through a finite positive-coherent-information block and asymptotic outer coding. The scalar inequality is partly computer assisted; all required certificates and separate verification implementations are included directly.
 
-**[Read the project overview](reader/README.md)** · [Selected Preskill background and crosswalk](reader/background.md) · [Channel and eight-use illustration](reader/channel.md)
+**[Read the scientific account](science/README.md)** · **[Follow the 30-milestone learning route](learning/README.md)** · [Channel and eight-use illustration](science/physical-picture.md)
 
-**Expert bypass:** [exact theorem](docs/MODEL_AND_CLAIMS.md#m04) · [complete proof](docs/COMPLETE_PROOF.md) · [figures and downloads](reader/figures.md) · [verification and evidence](reader/verification.md).
+**Expert bypass:** [exact theorem](science/geometric-gap.md#m04) · [proof route](science/README.md#proof-route) · [figures and downloads](reader/figures.md) · [verification and evidence](verification/README.md).
 
-The learning route connects selected passages from **John Preskill, Quantum Shannon Theory, arXiv:1604.07450v5** to this project's channel, coding and geometric arguments. [Start at the focused reading map](reader/background.md), or bypass it and follow [the proof guide](reader/proof-guide.md).
+The learning route connects selected passages from **John Preskill, Quantum Shannon Theory, arXiv:1604.07450v5** to this project's channel, coding and geometric arguments. [The source bridge](learning/preskill-bridge.md) preserves the passage map, notation translations and edition sign note. [The 30 milestones](learning/milestones.md) organize the whole scientific story into 12 background and 18 narrative milestones.
+
+| Reading intention | Direct route |
+|---|---|
+| Understand the physical mechanism | [Accessible records and coherent coding](science/physical-picture.md) → [proof strategy](science/proof-strategy.md) |
+| Check the full theorem | [Exact model](science/model.md) → [global one-use bound](science/single-use.md) → [geometry](science/geometric-gap.md) → [all-record coding](science/repetition-coding.md) |
+| Understand the approach to rank deficiency | [Universal linear closure](science/geometric-gap.md#p08-linear-closure) → [coplanar and cone controls](science/limiting-geometries.md) |
+| Inspect attribution and computational evidence | [References](references/README.md) → [claim dependencies](science/proof-map.md) → [reproduction commands](verification/README.md) |
 
 **For search and AI-assisted reading:** [Topic and source guide (`llms.txt`)](llms.txt) describes when this repository is relevant and links its exact claims, proof, verification evidence, and citation.
 
@@ -24,7 +33,7 @@ Read the pages directly on GitHub, or use the optional local HTML edition with n
 
 ![Channel and coding witness](reader/assets/figure_01_channel_and_witness.svg)
 
-For equal Pauli-axis weights, $`p=0.70`$ and $`\epsilon=0.10`$, the globally optimized one-use coherent information is zero. The included balanced eight-use construction has $`I_8/8\gt 7.47\times10^{-5}`$ bits per physical use. Every mask and record contributes, including the all-measured loss. An outer coding theorem converts the positive block value into an achievable asymptotic rate. [Model and claims](docs/MODEL_AND_CLAIMS.md#m05) · [Complete witness argument](docs/COMPLETE_PROOF.md#p13)
+For equal Pauli-axis weights, $`p=0.70`$ and $`\epsilon=0.10`$, the globally optimized one-use coherent information is zero. The included balanced eight-use construction has $`I_8/8\gt 7.47\times10^{-5}`$ bits per physical use. Every mask and record contributes, including the all-measured loss. An outer coding theorem converts the positive block value into an achievable asymptotic rate. [Model and claims](science/eight-use-witness.md#m05) · [Complete witness argument](science/eight-use-witness.md#p13)
 
 ## The geometric guarantee
 
@@ -40,7 +49,7 @@ For $`\lambda\gt 0`$, the theorem gives
 \frac{1}{1+L+(3ca/35)\lambda}\leq p\lt \frac{1}{1+L} \quad\Longrightarrow\quad Q^{(1)}=0\lt Q.
 ```
 
-The coding direction and finite block length may depend on the known channel parameters, never on future realized measurement choices. At each fixed interior reporting error, the one-use/repetition threshold gap closes linearly with the smallest frame eigenvalue, uniformly over all allowed finite ensembles. [Two-sided bounds and proof](docs/COMPLETE_PROOF.md#p08-linear-closure). Coplanarity excludes this strict long-balanced-repetition comparison, not every possible collective code. [Precise theorem and quantifiers](docs/MODEL_AND_CLAIMS.md#m04) · [Complete proof](docs/COMPLETE_PROOF.md)
+The coding direction and finite block length may depend on the known channel parameters, never on future realized measurement choices. At each fixed interior reporting error, the one-use/repetition threshold gap closes linearly with the smallest frame eigenvalue, uniformly over all allowed finite ensembles. [Two-sided bounds and proof](science/geometric-gap.md#p08-linear-closure). Coplanarity excludes this strict long-balanced-repetition comparison, not every possible collective code. [Precise theorem and quantifiers](science/geometric-gap.md#m04) · [Complete proof route](science/README.md#proof-route)
 
 ## Figures
 
@@ -52,7 +61,7 @@ The downloads include PDF, SVG and PNG versions and separate vector panels. Figu
 
 ## Read and reproduce
 
-Read [the project overview](reader/README.md), [model and claim scope](docs/MODEL_AND_CLAIMS.md), [complete proof](docs/COMPLETE_PROOF.md), and [references with their roles](docs/REFERENCES.md). The references connect the geometric theorem to incomplete-erasure channels, repetition codes and the coherent-information coding theorem.
+Read [the connected scientific account](science/README.md), [model and claim scope](science/model.md), [proof dependencies](science/proof-map.md), and [references with their roles](references/README.md). The references connect the geometric theorem to incomplete-erasure channels, repetition codes and the coherent-information coding theorem.
 
 ```bash
 python -m venv .venv
@@ -70,11 +79,13 @@ Use new output directories. The default reproduction rebuilds the plotting input
 
 ## Repository contents
 
-`docs/` contains the canonical scientific account; `certificates/` holds the rational proof input; `verification/` contains the independent arithmetic implementations; `data/figures/` contains plotting inputs; and `figures/` contains the figures, captions and renderer. The [evidence guide](reader/verification.md) explains how to inspect and reproduce the computational results.
+`science/` contains the complete topic-based account, including every model and proof unit. `learning/` contains the shared milestone map and selected Preskill bridge; `references/` contains the related-work account and structured bibliography. `certificates/` holds the rational proof input, `verification/` the commands and independent arithmetic implementations, and `data/figures/` and `figures/` the numerical inputs and graphical material.
+
+The [model source](docs/MODEL_AND_CLAIMS.md#m04) and [complete proof source](docs/COMPLETE_PROOF.md) retain their protected identities in `docs/`. The topic pages are generated from those sources, with [one mapped home per scientific unit](website/furnishing-map.json). The [evidence guide](verification/README.md) distinguishes scientific verification from integrity checks. [Maintenance instructions](CONTRIBUTING.md#scientific-source-ownership) explain source ownership and regeneration.
 
 ## Purpose and contact
 
-This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact **Ruge Lin** at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
+This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
 
 ## Reuse and citation
 

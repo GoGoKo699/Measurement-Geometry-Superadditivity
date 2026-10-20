@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "source_commit": "fc58026e40491c90b872764c0682b5064774cc50",
+  "scope": "Topic edition of the preserved scientific sources. This map changes navigation and presentation, not scientific editing authority or approval hashes.",
+  "topics": [
+    {
+      "path": "science/model.md",
+      "title": "The channel, resources and information quantities",
+      "units": ["M01", "M02"],
+      "introduction": "The receiver can distinguish intact transmission from destructive measurement. In the measured branch it receives an axis label and a noisy sign. The distinction between accessible records and hidden outcomes fixes the channel whose capacity is studied.\n\nThe definitions below specify the operation budget before introducing the information quantities. The same reporting error applies to every axis and every use; this assumption is used later in the scalar entropy comparison. [The physical picture](physical-picture.md) gives a gentler explanation, and [the notation crosswalk](notation.md) connects the proof to its sources and implementations.",
+      "continuation": "With the channel fixed, [the global one-use criterion](single-use.md) determines exactly when its optimized coherent information becomes zero."
+    },
+    {
+      "path": "science/single-use.md",
+      "title": "The exact one-use boundary and the repetition frontier",
+      "units": ["M03", "P01"],
+      "introduction": "The comparison begins with every single-qubit density matrix, including mixed inputs arbitrarily close to purity. Conditioning on the reported records gives an exact coherent-information identity and a global minimization problem.\n\nThe one-use positivity boundary is exact. The repetition frontier refers to a specified family of sufficiently long balanced blocks; [its coding proof](repetition-coding.md) establishes that separate statement. The nearly pure directional cost supplies an upper bound on the global minimum. [The mixed-input control](eight-use-witness.md#p134) explains why it cannot generally be substituted for that minimum.",
+      "continuation": "The next step is to bound the global cost for every input. [Entropy tools and the endpoint chord](entropy-tools.md) provide the reduction used by the scalar inequality."
+    },
+    {
+      "path": "science/entropy-tools.md",
+      "title": "Entropy tools and the common-error comparison",
+      "units": ["P02", "P03"],
+      "introduction": "Two parts of the proof use the same conditional-state entropies in different ways. The one-use argument compares costs over all input eigenvalues and directions; the repetition argument bounds the entropy carried by complete classical records.\n\nThe elementary tools are stated first. An integral representation then reveals two compatible curvature properties in different variables. Its endpoint chord has one coefficient shared by all axes because their reporting error is common. [The scalar inequality](scalar-inequality.md) bounds the remaining intercept uniformly.",
+      "continuation": "Use [the scalar lemma and its complete domain coverage](scalar-inequality.md) for the global one-use obstruction. The overlap bounds return in [the all-record repetition construction](repetition-coding.md#p09)."
+    },
+    {
+      "path": "science/scalar-inequality.md",
+      "title": "The scalar entropy inequality and its certificate",
+      "units": ["P04", "P05", "P06", "P07"],
+      "introduction": "The geometric theorem needs an entropy comparison valid throughout the open reporting-error interval and for every input eigenvalue. This page gives the full scalar statement and its proof obligations.\n\nAnalytical arguments cover regions approaching both noise endpoints and arbitrarily nearly pure inputs. The remaining compact domain is covered by an exact rational certificate, checked by three separate arithmetic implementations. The computational intervals enclose complete regions; the result is not inferred from a grid of sampled channels. [Verification commands and expected outputs](../verification/README.md) explain how to inspect the evidence.",
+      "continuation": "With the scalar inequality established, [the geometric argument](geometric-gap.md#p08) separates the global one-use cost from the repetition loss."
+    },
+    {
+      "path": "science/geometric-gap.md",
+      "title": "Full-span separation and universal linear closure",
+      "units": ["M04", "P08"],
+      "introduction": "The smallest frame eigenvalue measures the least weighted squared projection onto a possible plane normal. Full span makes this quantity positive and removes a common perpendicular direction. The argument below turns that geometric fact into a strict separation between two entropy costs.\n\nThe theorem states the quantifiers and the conservative sufficient interval. The corollary then gives two-sided linear bounds on the gap between the exact one-use boundary and the balanced-repetition frontier, uniformly over finite ensembles at each fixed interior error. A threshold width does not determine a communication rate or a uniform block length. Capacity positivity also uses [the finite-block and outer-coding argument](repetition-coding.md#p10).",
+      "continuation": "[Repetition coding](repetition-coding.md) supplies the positive finite block required by the theorem. [Limiting geometries](limiting-geometries.md) gives the restricted coplanar converse and an exactly soluble cone family."
+    },
+    {
+      "path": "science/repetition-coding.md",
+      "title": "All-record repetition coding and positive capacity",
+      "units": ["P09", "P10"],
+      "introduction": "A fixed isometry encodes a logical qubit into the span of two antipodal product codewords. The balanced average input is separable but correlated, while its purification retains the logical coherence relevant to quantum transmission.\n\nEvery mask and reported record contributes to the coherent information, including the negative all-measured term. Polynomial prefactors and competing exponential bases determine the strict eventual sign. A positive finite inner block is selected before taking the separate asymptotic outer-coding limit. This order does not require the inner-block rate to have a positive limit as its length grows.",
+      "continuation": "[The eight-use witness](eight-use-witness.md) evaluates one explicit positive block. [The limiting cases](limiting-geometries.md) delimit what the repetition argument establishes."
+    },
+    {
+      "path": "science/limiting-geometries.md",
+      "title": "Coplanarity, noise endpoints and the exact cone family",
+      "units": ["M06", "P11", "P12"],
+      "introduction": "The boundary cases clarify the content of the full-span guarantee. Coplanarity closes the strict comparison for long balanced repetitions, while the two noise endpoints follow from direct channel arguments. The coplanar statement is scoped to that coding comparison.\n\nThe universal closure result controls every allowed sequence of weighted ensembles at a fixed interior error. The cone family supplies a particular exact leading coefficient and has its own stated validity domain. Small frame eigenvalue can arise from small weights on out-of-plane axes as well as from axes moving toward a plane.",
+      "continuation": "The Pauli witness uses a sharper equality case within the valid cone domain. See [its complete calculation and numerical controls](eight-use-witness.md)."
+    },
+    {
+      "path": "science/eight-use-witness.md",
+      "title": "The eight-use witness and numerical controls",
+      "units": ["M05", "P13"],
+      "introduction": "This example makes the theorem's coding interpretation concrete. A global bound proves that every one-use input has nonpositive coherent information, while a directed arithmetic enclosure certifies a positive value for one balanced eight-use block.\n\nThe calculation includes all measured-count classes and the loss when all qubits are measured. Its per-use value becomes an achievable rate through outer coding; it does not specify recovery fidelity for an isolated block. The accompanying mixed-input and cancellation controls guard against two tempting but invalid shortcuts. [Figure 1](../reader/figures.md#figure-1) presents the same retained numerical inputs.",
+      "continuation": "[The proof and evidence map](proof-map.md) connects this witness, the general theorem and the limiting cases to their exact dependencies and source records."
+    },
+    {
+      "path": "science/proof-map.md",
+      "title": "Claim dependencies, evidence and attribution",
+      "units": ["M07", "M08", "P14", "P15"],
+      "introduction": "The mathematical claims share a connected proof with one explicit computer-assisted scalar component. The claim register below identifies what each result requires. The three certificate routes share a rational partition while retaining separate numerical implementations.\n\nThe literature comparison is a separate assessment. [References and their roles](../references/README.md) distinguish established channel frameworks, coding and entropy ingredients from this project's geometric arguments. [The source ledger](../docs/SOURCE_TO_CANONICAL.md) retains the exact source identities, including historical statements whose current corrections are given beside their citations.",
+      "continuation": "Return to [the scientific reading route](README.md), use [the shared learning map](../learning/milestones.md), or follow [the reproduction guide](../verification/README.md) for a specific evidence check."
+    }
+  ],
+  "copies": [
+    {
+      "path": "science/physical-picture.md",
+      "source": "website/pages/channel.md",
+      "introduction": "This introduction explains the accessible records, coherent encoder and finite witness before the formal bounds. Continue to [the exact model](model.md) and [the proof strategy](proof-strategy.md) when those objects are familiar."
+    },
+    {
+      "path": "science/proof-strategy.md",
+      "source": "website/pages/proof-guide.md",
+      "introduction": "This conceptual route connects the two costs to the complete arguments in the topic pages. The later [universal linear-closure corollary](geometric-gap.md#p08-linear-closure) gives a two-sided statement for every allowed finite ensemble at fixed interior error, beyond the exact cone illustration."
+    },
+    {
+      "path": "science/notation.md",
+      "source": "docs/NOTATION_CROSSWALK.md",
+      "introduction": "For the channel and its operation budget, start with [the model](model.md). This crosswalk preserves the distinctions needed when moving between the scientific argument, original sources and independent verification code."
+    },
+    {
+      "path": "learning/preskill-bridge.md",
+      "source": "website/pages/background.md",
+      "expand_background": true,
+      "introduction": "Use this source bridge with [the 30 shared milestones](milestones.md). Preskill v5 remains the single educational anchor. The passage map, notation translations and source-edition sign note below are retained from the established project route."
+    },
+    {
+      "path": "references/README.md",
+      "source": "docs/REFERENCES.md",
+      "introduction": "[Structured bibliography](bibliography.json) records the nine cited works, their identifiers and scientific roles, including the separate Preskill educational anchor. The related-work account below preserves the source-specific rate-versus-threshold correction. It is a comparison with these cited works, not a claim of an exhaustive literature search."
+    },
+    {
+      "path": "verification/README.md",
+      "source": "docs/REPRODUCTION.md",
+      "introduction": "Start with the check whose scope matches your question. Integrity verifies the retained artifacts; the entropy certificate covers a continuous domain; the witness evaluates a finite block; figure reproduction checks numerical inputs and approved graphics. Their roles are distinct.\n\nFor the topic edition, run python website/furnish.py --check. It verifies generation against all 23 retained model/proof units and their source ledger, along with navigation and the learning-map structure. The current model and proof contain 146 displayed expressions. The 137-expression count in the preserved mathematical-content record below refers to its earlier snapshot; the separately recorded linear-closure addition accounts for the remaining nine. [The complete proof map](../science/proof-map.md) identifies the scientific dependencies.\n\n[Edition maintenance and validation](../WEBSITE.md#topic-edition) describes the current commands. Passing an integrity or formatting check is not a new proof of the entropy inequality."
+    }
+  ]
+}

@@ -29,3 +29,4 @@ jobs:
           python3 integrity/check_scientific.py
           python3 verify.py
           python3 website/repository_preview.py --check
+          python3 website/furnish.py --check

@@ -12,7 +12,14 @@ Do not post live credentials, tokens or other sensitive information in an issue 
 
 Use a branch and pull request. Keep proposed repairs separate from the findings they address, and explain what changed, why and how it was checked.
 
-Reader prose is maintained in `website/pages/`; the selected tutorial map is in `website/learning_bridge.json`. Generate `reader/` from those sources rather than editing generated pages. Keep canonical mathematics and captions in their existing source files. See [the website guide](WEBSITE.md).
+<a id="scientific-source-ownership"></a>
+### Scientific source ownership
+
+The complete reader-facing argument is organized by topic under `science/`. Its 23 model/proof units are generated from the protected scientific editing sources in `docs/`, with one topic owner per unit. The generator changes relative Markdown links and preserves the scientific text, TeX, equation labels and numerical literals. The [source-to-topic map](website/furnishing-map.json) records the exact correspondence. Keep canonical mathematics and captions in their existing source files.
+
+Edit topic introductions and the section allocation in `website/furnishing.json`, then run `python website/furnish.py --write`. Generally useful learning material is maintained in `learning/README.md` and `learning/milestones.md`; retain exactly 30 project-defined milestones and the settled Preskill v5 anchor. The detailed source bridge is generated from `website/pages/background.md` and the protected `website/learning_bridge.json`.
+
+The illustrated introduction and optional HTML edition retain their editorial sources in `website/pages/`. Generate `reader/` from those sources rather than editing its outputs. The topic edition also carries the complete channel introduction and proof-strategy explanation from those sources. See [the website and edition guide](WEBSITE.md).
 
 Treat canonical equations, numerical inputs, reference evidence, certificates, independent verification implementations and approved figure bytes as protected scientific artifacts. Do not replace expected results, relax tolerances, refresh scientific approval hashes or merge independent evaluators to obtain a pass. A necessary scientific change needs an explicit review plan and supporting evidence. The accepted palette applies only to figures; older approved exports remain preserved.
 
@@ -25,6 +32,8 @@ For reader changes, follow [WEBSITE.md](WEBSITE.md), including generation before
 ```bash
 python website/repository_preview.py --write
 python website/repository_preview.py --check
+python website/furnish.py --write
+python website/furnish.py --check
 python verify.py
 python -m pytest -q -p no:cacheprovider tests website/tests
 ```

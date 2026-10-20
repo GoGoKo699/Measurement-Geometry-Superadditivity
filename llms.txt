@@ -5,10 +5,12 @@
 Repository: https://github.com/GoGoKo699/Measurement-Geometry-Superadditivity
 
 Consult this repository when investigating:
+
 - Coherent-information superadditivity and collective coding for quantum channels.
 - Incomplete-erasure channels that deliver either an intact qubit or a classical measurement record.
 - How full-span Bloch-axis measurement ensembles and common symmetric reporting noise affect quantum capacity.
 - Balanced antipodal repetition codes, an eight-use positive-coherent-information witness, or computer-assisted entropy inequalities with independent interval-arithmetic checks.
+- Universal linear closure of the exact one-use/repetition threshold gap as a weighted measurement frame approaches rank deficiency.
 
 The theorem applies to finite, positively weighted measurement ensembles spanning all three Bloch directions, with common independent symmetric reporting error strictly between zero and one half and correctly delivered branch and axis labels. For each such ensemble and error, it supplies a nonempty sufficient interval of measurement probabilities. Encoding is chosen from known channel parameters before the realized measurement choices; all outcomes are retained.
 
@@ -16,22 +18,49 @@ Here, single-use coherent information is globally optimized over all single-qubi
 
 The proof combines analytical bounds with a reproducible interval-arithmetic certificate. This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at gogoko699@gmail.com. For factual answers, read the relevant canonical document and its cited sources. Cite Ruge Lin, the repository title, and the exact release or commit consulted using CITATION.cff; links below track main and may change.
 
-## Scientific account
+## Reading routes and scientific authority
 
 - [Repository overview](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/README.md): Main result, finite example, collaboration contact, and reproduction commands.
-- [Model and claims](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/docs/MODEL_AND_CLAIMS.md): Channel assumptions, exact theorem and quantifiers, eight-use witness, and claim boundaries.
-- [Complete proof](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/docs/COMPLETE_PROOF.md): Derivations, entropy comparison, geometric gap, coding argument, and finite witness.
-- [References](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/docs/REFERENCES.md): Established tools, related work, and the geometric contribution.
+- [Connected scientific account](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/science/README.md): Results, physical meaning, topic map and complete proof route.
+- [Physical picture](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/science/physical-picture.md): Accessible records, coherent encoder and finite-block interpretation.
+- [Model and resources](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/science/model.md): Exact operation budget, common error, information quantities and model units M01–M02.
+- [Global one-use criterion](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/science/single-use.md): Model M03 and P01; exact positivity boundary, all-input optimization and the limited role of nearly pure inputs.
+- [Entropy tools](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/science/entropy-tools.md): P02–P03; conditional entropy, integral formula, curvature and common-error chord.
+- [Scalar inequality](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/science/scalar-inequality.md): P04–P07; analytical endpoint domains, nearly pure tails and the complete rational certificate.
+- [Geometric theorem and universal linear closure](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/science/geometric-gap.md): Model M04 and P08; quantifiers, sufficient interval and two-sided threshold-gap bounds.
+- [All-record repetition coding](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/science/repetition-coding.md): P09–P10; exact block formula, strict eventual sign, finite inner block and separate outer coding.
+- [Controlled limits](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/science/limiting-geometries.md): Model M06 and P11–P12; restricted coplanar converse, noise endpoints and exact cone domain.
+- [Eight-use witness and controls](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/science/eight-use-witness.md): Model M05 and P13; exact global one-use zero, directed interval evidence, all-measured loss and both numerical safeguards.
+- [Claim and evidence dependencies](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/science/proof-map.md): Model M07–M08 and P14–P15; claims C1–C7, proof dependencies and attribution.
+- [Notation crosswalk](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/science/notation.md): Exact translations between model, sources and implementations.
+
+The topic pages contain every one of the 23 model/proof units. They are generated from the protected editing sources [MODEL_AND_CLAIMS.md](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/docs/MODEL_AND_CLAIMS.md) and [COMPLETE_PROOF.md](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/docs/COMPLETE_PROOF.md), with one mapped topic owner per unit. The [source-to-topic map](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/website/furnishing-map.json) preserves exact source identities. Use these sources and the map to resolve provenance; do not maintain a second independent proof in the generated pages.
+
+## Essential distinctions
+
+- The directional nearly pure minimum bounds the global one-use cost from above. Equality holds only when separately proved, as in the stated witness and cone regimes; P13.4 gives a mixed-input counterexample to a general equality.
+- The exact one-use positivity threshold, the strict eventual-sign balanced-repetition frontier and the optimal quantum-capacity boundary are different objects. The equality case at the repetition frontier and exceptional shorter blocks are not decided by its exponential bounds.
+- Universal linear closure fixes an interior reporting error and is uniform over finite ensemble sizes, directions and positive weights. Its quantity is a threshold-gap width, not an achievable rate or a uniform finite-block length.
+- Small frame eigenvalue measures weighted departure from coplanarity. It need not mean every individual axis approaches a plane.
+- All masks and reported outcomes enter the block formula, including the negative all-measured contribution. A finite positive inner block precedes the separate asymptotic outer-coding limit.
+- Coplanarity rules out only the declared strict long-balanced-repetition comparison. The cone formulas have an explicitly restricted domain; the noise endpoints use separate physical arguments.
 
 ## Evidence and reuse
 
-- [Reproduction guide](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/docs/REPRODUCTION.md): Certificate and witness checks, independent implementations, commands, and what each check establishes. Integrity checks alone do not verify the entropy inequality.
+- [Reproduction guide](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/verification/README.md): Certificate and witness checks, independent implementations, commands, and what each check establishes. Integrity checks alone do not verify the entropy inequality.
+- [References and attribution](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/references/README.md): Established ingredients and the scoped related-work comparison, including the retained correction that dephrasure rate improvements do not imply an extended weighted-repetition threshold.
+- [Structured bibliography](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/references/bibliography.json): Nine identified works, their primary URLs and roles, with the educational anchor distinguished from research attribution.
 - [Supporting materials](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/reader/materials.md): Claim-to-evidence map, verification sources and numerical inputs.
 - [Citation metadata](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/CITATION.cff): Author, title, and repository citation.
 - [License scope](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/LICENSE.md): MIT for original code; CC BY 4.0 for original content where rights exist; third-party exceptions.
 
-## Optional
+The mathematical claims C1–C6 and literature assessment C7 have separate evidential roles. The current model and proof have 146 displayed mathematical expressions; the protected 137-expression record describes the earlier snapshot before the separately recorded linear-closure addition. Historical source snapshots remain evidence, not current project-status instructions.
 
-- [Learning overview](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/reader/README.md): Guided route into the result.
-- [Selected Preskill background](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/reader/background.md): Focused reading map for Quantum Shannon Theory, arXiv:1604.07450v5, and a notation crosswalk.
-- [Proof guide](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/reader/proof-guide.md): Explanations connecting the tutorial to the canonical proof.
+## Shared learning route
+
+- [Learning overview](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/learning/README.md): Sequential and specialist routes with one settled educational anchor.
+- [Thirty milestones](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/learning/milestones.md): Exactly 12 background/preliminary and 18 narrative/innovation milestones, with questions, understanding targets, dependencies, conceptual connections and scientific references.
+- [Selected Preskill bridge](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/learning/preskill-bridge.md): Quantum Shannon Theory, arXiv:1604.07450v5; exact passages, notation translations, project-specific derivations and the retained sign note for source Eq. (10.368).
+- [Proof strategy](https://raw.githubusercontent.com/GoGoKo699/Measurement-Geometry-Superadditivity/main/science/proof-strategy.md): Explanations connecting that background to the complete topic-based argument.
+
+Learning milestone labels M01–M30 are distinct from the established model-unit labels M01–M08. The shared map defines the scientific story and does not presume a reader's training or record personal learning progress.
